@@ -1,0 +1,362 @@
+\hypertarget{simpleio_8c}{}\section{D\+N\+S/src/util/simpleio.c File Reference}
+\label{simpleio_8c}\index{D\+N\+S/src/util/simpleio.\+c@{D\+N\+S/src/util/simpleio.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_ae79f63b2f67f66092f870303c6f9b0cf}{print\+\_\+title} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a0571d3ec98474978671b225805014e4f}{print\+\_\+machine\+\_\+parameters} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a29af006769c1f49d170cad905ffa8d55}{stripcomm} (char $\ast$scfname, const char $\ast$fname)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} uint64\+\_\+t \hyperlink{simpleio_8c_a5c3f9955f61e11eceb36e238da5349f0}{u\+\_\+ptr2ull} (void $\ast$p)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_acf0c3f2b2d148c55e54c3f97333f1a3a}{fprint\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int n, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a56fed85d3efb6accefc24bec3a7cb014}{fprint\+\_\+vector\+\_\+as\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int length, int cols, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_afa738b8250be11fa0d8dc80cc53eacde}{fprint\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int rows, int cols, double $\ast$$\ast$\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a898eef7371329deb93cbb3da500ed782}{fprint\+\_\+float\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int n, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a4c3182d52e315d72e6bdc2c2f8bd4ba2}{fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int length, int cols, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a0996f08b5a7c08d187ea2cb0561a3794}{fprint\+\_\+float\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int rows, int cols, double $\ast$$\ast$\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_af82de547555395969009191046ebe8ff}{fprint\+\_\+double\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int n, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a702cb6482c6e84182bf38baeceb9e68d}{fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int length, int cols, double $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_ae677e3d0d18c51f1bfc245caa9ae358a}{fprint\+\_\+double\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int rows, int cols, double $\ast$$\ast$\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a37fbf20a84228c731edc78ef47ba1f41}{fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int length, int cols, int $\ast$\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_ad17eef937298a1be3ada722c9ef3ed80}{fprint\+\_\+int\+\_\+matrix} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$\hyperlink{cdecs_8h_a2700445a53354d4b488c062948c2a027}{title}, int rows, int cols, int $\ast$$\ast$\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}, const char $\ast$format)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a794ddfac3d25c0354fe8fcb5944cd415}{set\+\_\+binary\+\_\+output} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} yes\+\_\+no)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{simpleio_8c_aad65818e4390642140531274e816189e}{is\+\_\+binary\+\_\+output} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a46649f38375c54b06c680155a7eae612}{fwrite\+\_\+float} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$msg, double x, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} bio, const char $\ast$fmt, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} size\+\_\+t \hyperlink{simpleio_8c_ab7b437407c21eacd4692cfea275161bf}{read\+\_\+binary\+\_\+real\+\_\+array} (double $\ast$a, size\+\_\+t len, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} size\+\_\+t \hyperlink{simpleio_8c_ac9d800f81258c9d64dbe979ac5ff657b}{read\+\_\+binary\+\_\+int\+\_\+array} (int $\ast$a, size\+\_\+t len, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} size\+\_\+t \hyperlink{simpleio_8c_a6ec4cb1d2804f402d62ddea78b1d0416}{read\+\_\+binary\+\_\+uint\+\_\+array} (unsigned int $\ast$a, size\+\_\+t len, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} size\+\_\+t \hyperlink{simpleio_8c_a349fe33ff0e3c73ea99f1fc8f82dca59}{read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array} (uint64\+\_\+t $\ast$a, size\+\_\+t len, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{simpleio_8c_ae0daa5107ada2561bd1122dc496cf58a}{fread\+\_\+float} (const char $\ast$\hyperlink{plotdecs_8h_a9e59d95c67708a047ef8b79e4732e47e}{label}, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_a4eeca66233ec44cd91e0056ea21531a3}{fprint\+\_\+vector\+\_\+of\+\_\+floats} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int number, double $\ast$f)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{simpleio_8c_a647ef37df0f5fe9baf8861c9ee3a4612}{sscan\+\_\+float} (const char $\ast$s, double $\ast$px)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{simpleio_8c_a6771e6524e68feda69bfe4128593f0f7}{fscan\+\_\+float} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$px)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{simpleio_8c_aa464b314ad7bb7bc6f218002be783a91}{fread\+\_\+boolean} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{simpleio_8c_af6b13416eee75eb1b3efdc4676b8579b}{fprint\+\_\+float} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$mesg, double value, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{simpleio_8c_a51c8d8c40787158f35783378440b0b47}{read\+\_\+print\+\_\+float} (const char $\ast$search\+\_\+string, double dflt\+\_\+value, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{simpleio_8c_adc9430e5341463ad79667fde203657b2}{binary\+\_\+output} = \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{Y\+ES}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+double\+\_\+matrix@{fprint\+\_\+double\+\_\+matrix}}
+\index{fprint\+\_\+double\+\_\+matrix@{fprint\+\_\+double\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+double\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int rows, int cols, double $\ast$$\ast$bi\+\_\+array, const char $\ast$format)}{fprint_double_matrix(FILE *file, const char *title, int rows, int cols, double **bi_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+double\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{rows, }
+\item[{int}]{cols, }
+\item[{double $\ast$$\ast$}]{bi\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ae677e3d0d18c51f1bfc245caa9ae358a}{}\label{simpleio_8c_ae677e3d0d18c51f1bfc245caa9ae358a}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+double\+\_\+vector@{fprint\+\_\+double\+\_\+vector}}
+\index{fprint\+\_\+double\+\_\+vector@{fprint\+\_\+double\+\_\+vector}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+double\+\_\+vector(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int n, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_double_vector(FILE *file, const char *title, int n, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+double\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{n, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_af82de547555395969009191046ebe8ff}{}\label{simpleio_8c_af82de547555395969009191046ebe8ff}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix}}
+\index{fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int length, int cols, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_double_vector_as_matrix(FILE *file, const char *title, int length, int cols, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+double\+\_\+vector\+\_\+as\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{length, }
+\item[{int}]{cols, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a702cb6482c6e84182bf38baeceb9e68d}{}\label{simpleio_8c_a702cb6482c6e84182bf38baeceb9e68d}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+float@{fprint\+\_\+float}}
+\index{fprint\+\_\+float@{fprint\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+float(\+F\+I\+L\+E $\ast$file, const char $\ast$mesg, double value, const char $\ast$end)}{fprint_float(FILE *file, const char *mesg, double value, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{mesg, }
+\item[{double}]{value, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_af6b13416eee75eb1b3efdc4676b8579b}{}\label{simpleio_8c_af6b13416eee75eb1b3efdc4676b8579b}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+float\+\_\+matrix@{fprint\+\_\+float\+\_\+matrix}}
+\index{fprint\+\_\+float\+\_\+matrix@{fprint\+\_\+float\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+float\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int rows, int cols, double $\ast$$\ast$bi\+\_\+array, const char $\ast$format)}{fprint_float_matrix(FILE *file, const char *title, int rows, int cols, double **bi_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+float\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{rows, }
+\item[{int}]{cols, }
+\item[{double $\ast$$\ast$}]{bi\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a0996f08b5a7c08d187ea2cb0561a3794}{}\label{simpleio_8c_a0996f08b5a7c08d187ea2cb0561a3794}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+float\+\_\+vector@{fprint\+\_\+float\+\_\+vector}}
+\index{fprint\+\_\+float\+\_\+vector@{fprint\+\_\+float\+\_\+vector}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+float\+\_\+vector(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int n, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_float_vector(FILE *file, const char *title, int n, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+float\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{n, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a898eef7371329deb93cbb3da500ed782}{}\label{simpleio_8c_a898eef7371329deb93cbb3da500ed782}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix}}
+\index{fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int length, int cols, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_float_vector_as_matrix(FILE *file, const char *title, int length, int cols, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+float\+\_\+vector\+\_\+as\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{length, }
+\item[{int}]{cols, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a4c3182d52e315d72e6bdc2c2f8bd4ba2}{}\label{simpleio_8c_a4c3182d52e315d72e6bdc2c2f8bd4ba2}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+int\+\_\+matrix@{fprint\+\_\+int\+\_\+matrix}}
+\index{fprint\+\_\+int\+\_\+matrix@{fprint\+\_\+int\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+int\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int rows, int cols, int $\ast$$\ast$bi\+\_\+array, const char $\ast$format)}{fprint_int_matrix(FILE *file, const char *title, int rows, int cols, int **bi_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+int\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{rows, }
+\item[{int}]{cols, }
+\item[{int $\ast$$\ast$}]{bi\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ad17eef937298a1be3ada722c9ef3ed80}{}\label{simpleio_8c_ad17eef937298a1be3ada722c9ef3ed80}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix}}
+\index{fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int length, int cols, int $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_int_vector_as_matrix(FILE *file, const char *title, int length, int cols, int *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+int\+\_\+vector\+\_\+as\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{length, }
+\item[{int}]{cols, }
+\item[{int $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a37fbf20a84228c731edc78ef47ba1f41}{}\label{simpleio_8c_a37fbf20a84228c731edc78ef47ba1f41}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+matrix@{fprint\+\_\+matrix}}
+\index{fprint\+\_\+matrix@{fprint\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int rows, int cols, double $\ast$$\ast$bi\+\_\+array, const char $\ast$format)}{fprint_matrix(FILE *file, const char *title, int rows, int cols, double **bi_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{rows, }
+\item[{int}]{cols, }
+\item[{double $\ast$$\ast$}]{bi\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_afa738b8250be11fa0d8dc80cc53eacde}{}\label{simpleio_8c_afa738b8250be11fa0d8dc80cc53eacde}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+vector@{fprint\+\_\+vector}}
+\index{fprint\+\_\+vector@{fprint\+\_\+vector}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+vector(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int n, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_vector(FILE *file, const char *title, int n, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{n, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_acf0c3f2b2d148c55e54c3f97333f1a3a}{}\label{simpleio_8c_acf0c3f2b2d148c55e54c3f97333f1a3a}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+vector\+\_\+as\+\_\+matrix}}
+\index{fprint\+\_\+vector\+\_\+as\+\_\+matrix@{fprint\+\_\+vector\+\_\+as\+\_\+matrix}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+vector\+\_\+as\+\_\+matrix(\+F\+I\+L\+E $\ast$file, const char $\ast$title, int length, int cols, double $\ast$uni\+\_\+array, const char $\ast$format)}{fprint_vector_as_matrix(FILE *file, const char *title, int length, int cols, double *uni_array, const char *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+vector\+\_\+as\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title, }
+\item[{int}]{length, }
+\item[{int}]{cols, }
+\item[{double $\ast$}]{uni\+\_\+array, }
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a56fed85d3efb6accefc24bec3a7cb014}{}\label{simpleio_8c_a56fed85d3efb6accefc24bec3a7cb014}
+\index{simpleio.\+c@{simpleio.\+c}!fprint\+\_\+vector\+\_\+of\+\_\+floats@{fprint\+\_\+vector\+\_\+of\+\_\+floats}}
+\index{fprint\+\_\+vector\+\_\+of\+\_\+floats@{fprint\+\_\+vector\+\_\+of\+\_\+floats}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+vector\+\_\+of\+\_\+floats(\+F\+I\+L\+E $\ast$file, int number, double $\ast$f)}{fprint_vector_of_floats(FILE *file, int number, double *f)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+vector\+\_\+of\+\_\+floats (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{number, }
+\item[{double $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a4eeca66233ec44cd91e0056ea21531a3}{}\label{simpleio_8c_a4eeca66233ec44cd91e0056ea21531a3}
+\index{simpleio.\+c@{simpleio.\+c}!fread\+\_\+boolean@{fread\+\_\+boolean}}
+\index{fread\+\_\+boolean@{fread\+\_\+boolean}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fread\+\_\+boolean(\+F\+I\+L\+E $\ast$file)}{fread_boolean(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} fread\+\_\+boolean (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_aa464b314ad7bb7bc6f218002be783a91}{}\label{simpleio_8c_aa464b314ad7bb7bc6f218002be783a91}
+\index{simpleio.\+c@{simpleio.\+c}!fread\+\_\+float@{fread\+\_\+float}}
+\index{fread\+\_\+float@{fread\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fread\+\_\+float(const char $\ast$label, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{fread_float(const char *label, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double fread\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{label, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ae0daa5107ada2561bd1122dc496cf58a}{}\label{simpleio_8c_ae0daa5107ada2561bd1122dc496cf58a}
+\index{simpleio.\+c@{simpleio.\+c}!fscan\+\_\+float@{fscan\+\_\+float}}
+\index{fscan\+\_\+float@{fscan\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fscan\+\_\+float(\+F\+I\+L\+E $\ast$file, double $\ast$px)}{fscan_float(FILE *file, double *px)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int fscan\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{px}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a6771e6524e68feda69bfe4128593f0f7}{}\label{simpleio_8c_a6771e6524e68feda69bfe4128593f0f7}
+\index{simpleio.\+c@{simpleio.\+c}!fwrite\+\_\+float@{fwrite\+\_\+float}}
+\index{fwrite\+\_\+float@{fwrite\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{fwrite\+\_\+float(\+F\+I\+L\+E $\ast$file, const char $\ast$msg, double x, boolean bio, const char $\ast$fmt, const char $\ast$end)}{fwrite_float(FILE *file, const char *msg, double x, boolean bio, const char *fmt, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fwrite\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{msg, }
+\item[{double}]{x, }
+\item[{{\bf boolean}}]{bio, }
+\item[{const char $\ast$}]{fmt, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a46649f38375c54b06c680155a7eae612}{}\label{simpleio_8c_a46649f38375c54b06c680155a7eae612}
+\index{simpleio.\+c@{simpleio.\+c}!is\+\_\+binary\+\_\+output@{is\+\_\+binary\+\_\+output}}
+\index{is\+\_\+binary\+\_\+output@{is\+\_\+binary\+\_\+output}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+binary\+\_\+output(void)}{is_binary_output(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} is\+\_\+binary\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_aad65818e4390642140531274e816189e}{}\label{simpleio_8c_aad65818e4390642140531274e816189e}
+\index{simpleio.\+c@{simpleio.\+c}!print\+\_\+machine\+\_\+parameters@{print\+\_\+machine\+\_\+parameters}}
+\index{print\+\_\+machine\+\_\+parameters@{print\+\_\+machine\+\_\+parameters}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+machine\+\_\+parameters(\+F\+I\+L\+E $\ast$file)}{print_machine_parameters(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+machine\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a0571d3ec98474978671b225805014e4f}{}\label{simpleio_8c_a0571d3ec98474978671b225805014e4f}
+\index{simpleio.\+c@{simpleio.\+c}!print\+\_\+title@{print\+\_\+title}}
+\index{print\+\_\+title@{print\+\_\+title}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+title(\+F\+I\+L\+E $\ast$file, const char $\ast$title)}{print_title(FILE *file, const char *title)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+title (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ae79f63b2f67f66092f870303c6f9b0cf}{}\label{simpleio_8c_ae79f63b2f67f66092f870303c6f9b0cf}
+\index{simpleio.\+c@{simpleio.\+c}!read\+\_\+binary\+\_\+int\+\_\+array@{read\+\_\+binary\+\_\+int\+\_\+array}}
+\index{read\+\_\+binary\+\_\+int\+\_\+array@{read\+\_\+binary\+\_\+int\+\_\+array}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+binary\+\_\+int\+\_\+array(int $\ast$a, size\+\_\+t len, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{read_binary_int_array(int *a, size_t len, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} size\+\_\+t read\+\_\+binary\+\_\+int\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{a, }
+\item[{size\+\_\+t}]{len, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ac9d800f81258c9d64dbe979ac5ff657b}{}\label{simpleio_8c_ac9d800f81258c9d64dbe979ac5ff657b}
+\index{simpleio.\+c@{simpleio.\+c}!read\+\_\+binary\+\_\+real\+\_\+array@{read\+\_\+binary\+\_\+real\+\_\+array}}
+\index{read\+\_\+binary\+\_\+real\+\_\+array@{read\+\_\+binary\+\_\+real\+\_\+array}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+binary\+\_\+real\+\_\+array(double $\ast$a, size\+\_\+t len, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{read_binary_real_array(double *a, size_t len, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} size\+\_\+t read\+\_\+binary\+\_\+real\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{a, }
+\item[{size\+\_\+t}]{len, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_ab7b437407c21eacd4692cfea275161bf}{}\label{simpleio_8c_ab7b437407c21eacd4692cfea275161bf}
+\index{simpleio.\+c@{simpleio.\+c}!read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array@{read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array}}
+\index{read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array@{read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array(uint64\+\_\+t $\ast$a, size\+\_\+t len, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{read_binary_uint64_t_array(uint64_t *a, size_t len, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} size\+\_\+t read\+\_\+binary\+\_\+uint64\+\_\+t\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t $\ast$}]{a, }
+\item[{size\+\_\+t}]{len, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a349fe33ff0e3c73ea99f1fc8f82dca59}{}\label{simpleio_8c_a349fe33ff0e3c73ea99f1fc8f82dca59}
+\index{simpleio.\+c@{simpleio.\+c}!read\+\_\+binary\+\_\+uint\+\_\+array@{read\+\_\+binary\+\_\+uint\+\_\+array}}
+\index{read\+\_\+binary\+\_\+uint\+\_\+array@{read\+\_\+binary\+\_\+uint\+\_\+array}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+binary\+\_\+uint\+\_\+array(unsigned int $\ast$a, size\+\_\+t len, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{read_binary_uint_array(unsigned int *a, size_t len, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} size\+\_\+t read\+\_\+binary\+\_\+uint\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{a, }
+\item[{size\+\_\+t}]{len, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a6ec4cb1d2804f402d62ddea78b1d0416}{}\label{simpleio_8c_a6ec4cb1d2804f402d62ddea78b1d0416}
+\index{simpleio.\+c@{simpleio.\+c}!read\+\_\+print\+\_\+float@{read\+\_\+print\+\_\+float}}
+\index{read\+\_\+print\+\_\+float@{read\+\_\+print\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+print\+\_\+float(const char $\ast$search\+\_\+string, double dflt\+\_\+value, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type)}{read_print_float(const char *search_string, double dflt_value, const IO_TYPE *io_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double read\+\_\+print\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{search\+\_\+string, }
+\item[{double}]{dflt\+\_\+value, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a51c8d8c40787158f35783378440b0b47}{}\label{simpleio_8c_a51c8d8c40787158f35783378440b0b47}
+\index{simpleio.\+c@{simpleio.\+c}!set\+\_\+binary\+\_\+output@{set\+\_\+binary\+\_\+output}}
+\index{set\+\_\+binary\+\_\+output@{set\+\_\+binary\+\_\+output}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+binary\+\_\+output(boolean yes\+\_\+no)}{set_binary_output(boolean yes_no)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+binary\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{yes\+\_\+no}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a794ddfac3d25c0354fe8fcb5944cd415}{}\label{simpleio_8c_a794ddfac3d25c0354fe8fcb5944cd415}
+\index{simpleio.\+c@{simpleio.\+c}!sscan\+\_\+float@{sscan\+\_\+float}}
+\index{sscan\+\_\+float@{sscan\+\_\+float}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{sscan\+\_\+float(const char $\ast$s, double $\ast$px)}{sscan_float(const char *s, double *px)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int sscan\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{double $\ast$}]{px}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a647ef37df0f5fe9baf8861c9ee3a4612}{}\label{simpleio_8c_a647ef37df0f5fe9baf8861c9ee3a4612}
+\index{simpleio.\+c@{simpleio.\+c}!stripcomm@{stripcomm}}
+\index{stripcomm@{stripcomm}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{stripcomm(char $\ast$scfname, const char $\ast$fname)}{stripcomm(char *scfname, const char *fname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void stripcomm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{scfname, }
+\item[{const char $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a29af006769c1f49d170cad905ffa8d55}{}\label{simpleio_8c_a29af006769c1f49d170cad905ffa8d55}
+\index{simpleio.\+c@{simpleio.\+c}!u\+\_\+ptr2ull@{u\+\_\+ptr2ull}}
+\index{u\+\_\+ptr2ull@{u\+\_\+ptr2ull}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{u\+\_\+ptr2ull(void $\ast$p)}{u_ptr2ull(void *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} uint64\+\_\+t u\+\_\+ptr2ull (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{simpleio_8c_a5c3f9955f61e11eceb36e238da5349f0}{}\label{simpleio_8c_a5c3f9955f61e11eceb36e238da5349f0}
+
+
+\subsection{Variable Documentation}
+\index{simpleio.\+c@{simpleio.\+c}!binary\+\_\+output@{binary\+\_\+output}}
+\index{binary\+\_\+output@{binary\+\_\+output}!simpleio.\+c@{simpleio.\+c}}
+\subsubsection[{\texorpdfstring{binary\+\_\+output}{binary_output}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} binary\+\_\+output = {\bf Y\+ES}}\hypertarget{simpleio_8c_adc9430e5341463ad79667fde203657b2}{}\label{simpleio_8c_adc9430e5341463ad79667fde203657b2}

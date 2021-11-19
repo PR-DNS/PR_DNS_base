@@ -1,0 +1,367 @@
+\hypertarget{frp_8h}{}\section{D\+N\+S/src/front/frp.h File Reference}
+\label{frp_8h}\index{D\+N\+S/src/front/frp.\+h@{D\+N\+S/src/front/frp.\+h}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE}
+\item 
+struct \hyperlink{frp_8h_d0/dfa/struct___r_p_r_o_b_l_e_m}{\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\item 
+struct \hyperlink{struct___f___u_s_e_r___r_p_r_o_b_l_e_m}{\+\_\+\+F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\item 
+struct \hyperlink{frp_8h_d0/de3/struct___f___r_p_r_o_b_l_e_m}{\+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{frp_8h_a65923f8eb8e6ab24cfa166cc0c07a5ff}{rp\+\_\+node}(rpn)~((\hyperlink{frp_8h_ad37baa973dc0759df1cd3e455f890ddf}{R\+P\+\_\+\+N\+O\+DE} $\ast$) (rpn))
+\item 
+\#define \hyperlink{frp_8h_ad7c8d1deafadba960efa57074850b8cc}{rpn\+\_\+reflected1}(rpn)      ~(\hyperlink{frp_8h_a65923f8eb8e6ab24cfa166cc0c07a5ff}{rp\+\_\+node}(rpn)-\/$>$\+\_\+reflected1)
+\item 
+\#define \hyperlink{frp_8h_ad46552633a4d06a3dc738dcca232e958}{rpn\+\_\+reflected2}(rpn)      ~(\hyperlink{frp_8h_a65923f8eb8e6ab24cfa166cc0c07a5ff}{rp\+\_\+node}(rpn)-\/$>$\+\_\+reflected2)
+\item 
+\#define \hyperlink{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}{f\+\_\+rproblem}(rp)~((\hyperlink{frp_8h_adc837ca6ae871c5c7fe870eb83adaaef}{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM} $\ast$) (rp))
+\item 
+\#define \hyperlink{frp_8h_ad4fc5abd1b2cbb3dd1a97408d64769a6}{rp\+\_\+num\+\_\+incident}(rp)                      ~(\hyperlink{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}{f\+\_\+rproblem}(rp)-\/$>$\+\_\+num\+\_\+incident)
+\item 
+\#define \hyperlink{frp_8h_a627bb4d869bd1e90afc2ca238e0a6ac2}{rp\+\_\+num\+\_\+refl}(rp)                              ~(\hyperlink{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}{f\+\_\+rproblem}(rp)-\/$>$\+\_\+num\+\_\+refl)
+\item 
+\#define \hyperlink{frp_8h_aa62eabe0e0fc6ad39e106b82817b5a5b}{f\+\_\+user\+\_\+rproblem}(rp)~(\hyperlink{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}{f\+\_\+rproblem}(rp)-\/$>$f\+\_\+user\+\_\+rp)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE} \hyperlink{frp_8h_ad37baa973dc0759df1cd3e455f890ddf}{R\+P\+\_\+\+N\+O\+DE}
+\item 
+typedef struct \hyperlink{frp_8h_d0/dfa/struct___r_p_r_o_b_l_e_m}{\+\_\+\+R\+P\+R\+O\+B\+L\+EM} \hyperlink{frp_8h_a8e39ec4bf8bcc03a2e164b2ab39b9b33}{R\+P\+R\+O\+B\+L\+EM}
+\item 
+typedef struct \hyperlink{struct___f___u_s_e_r___r_p_r_o_b_l_e_m}{\+\_\+\+F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM} \hyperlink{frp_8h_acdc9d9b0735bd368650ef89248c9ae99}{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\item 
+typedef struct \hyperlink{frp_8h_d0/de3/struct___f___r_p_r_o_b_l_e_m}{\+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM} \hyperlink{frp_8h_adc837ca6ae871c5c7fe870eb83adaaef}{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+R\+P\+\_\+\+N\+O\+DE@{\+\_\+\+R\+P\+\_\+\+N\+O\+DE}}\label{struct___r_p___n_o_d_e}
+\hypertarget{frp_8h_struct___r_p___n_o_d_e}{}
+\subsubsection{struct \+\_\+\+R\+P\+\_\+\+N\+O\+DE}
+\begin{DoxyFields}{Class Members}
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_a15a692a992c8d3ba72963b0e15bbe61b}{}\label{frp_8h_a15a692a992c8d3ba72963b0e15bbe61b}
+&
+\+\_\+reflected1&
+\\
+\hline
+
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_aa2d46b7ead6d2ece8394b0e639989d5c}{}\label{frp_8h_aa2d46b7ead6d2ece8394b0e639989d5c}
+&
+\+\_\+reflected2&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_a80cf0b301a74bbf66454f7d4502df113}{}\label{frp_8h_a80cf0b301a74bbf66454f7d4502df113}
+&
+dirichlet1&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_acb47ff0b7f427ea121a9a4249300eb5d}{}\label{frp_8h_acb47ff0b7f427ea121a9a4249300eb5d}
+&
+dirichlet2&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_a25ea9f34982366b69648c212f5717b44}{}\label{frp_8h_a25ea9f34982366b69648c212f5717b44}
+&
+neumann1&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_abb9c865bc61b58de4b1a88ce0bfea86f}{}\label{frp_8h_abb9c865bc61b58de4b1a88ce0bfea86f}
+&
+neumann2&
+\\
+\hline
+
+struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE} $\ast$\hypertarget{frp_8h_aa3176d4a6d54df9476af81369531197a}{}\label{frp_8h_aa3176d4a6d54df9476af81369531197a}
+&
+next&
+\\
+\hline
+
+\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$\hypertarget{frp_8h_a35ec05eb4803703aa49db705edcaf8a0}{}\label{frp_8h_a35ec05eb4803703aa49db705edcaf8a0}
+&
+node&
+\\
+\hline
+
+\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$\hypertarget{frp_8h_ab2ab0ac5c0a608679d4a4fce91088f2f}{}\label{frp_8h_ab2ab0ac5c0a608679d4a4fce91088f2f}
+&
+old\+\_\+node&
+\\
+\hline
+
+struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE} $\ast$\hypertarget{frp_8h_a0a3775bd0f78fea2a52c7c24a7772067}{}\label{frp_8h_a0a3775bd0f78fea2a52c7c24a7772067}
+&
+prev&
+\\
+\hline
+
+int\hypertarget{frp_8h_a4bfc08a41a51fdaaf0a28cec8bf82e4d}{}\label{frp_8h_a4bfc08a41a51fdaaf0a28cec8bf82e4d}
+&
+states\+\_\+assigned\+\_\+at\+\_\+node&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_a8696d1691490552c7e99eb8291ce010c}{}\label{frp_8h_a8696d1691490552c7e99eb8291ce010c}
+&
+subdomain1&
+\\
+\hline
+
+struct \hyperlink{int_8h_d4/ddf/struct___o___c_u_r_v_e}{\+\_\+\+O\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{frp_8h_a09ca505c32f57695491483caffe3ff88}{}\label{frp_8h_a09ca505c32f57695491483caffe3ff88}
+&
+subdomain2&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}\label{struct___r_p_r_o_b_l_e_m}
+\hypertarget{frp_8h_struct___r_p_r_o_b_l_e_m}{}
+\subsubsection{struct \+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\begin{DoxyFields}{Class Members}
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_acd21c6075b3acecf088aeb612aab60f7}{}\label{frp_8h_acd21c6075b3acecf088aeb612aab60f7}
+&
+ang\+\_\+ordered\+\_\+curves&
+\\
+\hline
+
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_ad0ec9b3ee998fac8de66f17dd8fc55cd}{}\label{frp_8h_ad0ec9b3ee998fac8de66f17dd8fc55cd}
+&
+bdry\+\_\+curves&
+\\
+\hline
+
+int\hypertarget{frp_8h_a83b9ca20f9915cb22f4d380183b4b280}{}\label{frp_8h_a83b9ca20f9915cb22f4d380183b4b280}
+&
+bdry\+\_\+type1&
+\\
+\hline
+
+int\hypertarget{frp_8h_a4646afb8d2461dbd5fd4fc68002c6455}{}\label{frp_8h_a4646afb8d2461dbd5fd4fc68002c6455}
+&
+bdry\+\_\+type2&
+\\
+\hline
+
+double\hypertarget{frp_8h_a3c371e6c04188ff877d66bc26cd8fad3}{}\label{frp_8h_a3c371e6c04188ff877d66bc26cd8fad3}
+&
+dt&
+\\
+\hline
+
+double\hypertarget{frp_8h_ae6f2279bf890bd451bb58c79fd886ff8}{}\label{frp_8h_ae6f2279bf890bd451bb58c79fd886ff8}
+&
+dt\+\_\+frac&
+\\
+\hline
+
+struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE} $\ast$\hypertarget{frp_8h_ac8051a3fbb5ef3da44819cf51062ef1b}{}\label{frp_8h_ac8051a3fbb5ef3da44819cf51062ef1b}
+&
+first\+\_\+rp\+\_\+node&
+\\
+\hline
+
+struct \hyperlink{struct___front}{\+\_\+\+Front} $\ast$\hypertarget{frp_8h_a9d9117b4a6b0a3304397febf53eb6a44}{}\label{frp_8h_a9d9117b4a6b0a3304397febf53eb6a44}
+&
+fr&
+\\
+\hline
+
+struct \hyperlink{frp_8h_de/d50/struct___r_p___n_o_d_e}{\+\_\+\+R\+P\+\_\+\+N\+O\+DE} $\ast$\hypertarget{frp_8h_a3b872a1f507e8633761aab31324026c2}{}\label{frp_8h_a3b872a1f507e8633761aab31324026c2}
+&
+last\+\_\+rp\+\_\+node&
+\\
+\hline
+
+\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$\hypertarget{frp_8h_ab43a030f0df726414eb9ee0572497bf8}{}\label{frp_8h_ab43a030f0df726414eb9ee0572497bf8}
+&
+new\+\_\+intfc&
+\\
+\hline
+
+struct \hyperlink{frp_8h_d0/dfa/struct___r_p_r_o_b_l_e_m}{\+\_\+\+R\+P\+R\+O\+B\+L\+EM} $\ast$\hypertarget{frp_8h_ae49ebfbd32d125a242099908af1a1297}{}\label{frp_8h_ae49ebfbd32d125a242099908af1a1297}
+&
+next&
+\\
+\hline
+
+int\hypertarget{frp_8h_aa1fbe02c89d255d5c8341f3e8f2c8d66}{}\label{frp_8h_aa1fbe02c89d255d5c8341f3e8f2c8d66}
+&
+num\+\_\+ang\+\_\+ordered\+\_\+curves&
+\\
+\hline
+
+int\hypertarget{frp_8h_a77e5f2a3037ddfe7e8a7d17255adce9e}{}\label{frp_8h_a77e5f2a3037ddfe7e8a7d17255adce9e}
+&
+num\+\_\+bdry\+\_\+nod&
+\\
+\hline
+
+int\hypertarget{frp_8h_a44504fcca6f51becac76cb59c67f5459}{}\label{frp_8h_a44504fcca6f51becac76cb59c67f5459}
+&
+num\+\_\+fxd&
+\\
+\hline
+
+int\hypertarget{frp_8h_ad1e633fda9d391052dca9a6e4b78c70a}{}\label{frp_8h_ad1e633fda9d391052dca9a6e4b78c70a}
+&
+num\+\_\+nd&
+\\
+\hline
+
+int\hypertarget{frp_8h_ab2911fecd3787e07515d7586c2e4ff0e}{}\label{frp_8h_ab2911fecd3787e07515d7586c2e4ff0e}
+&
+num\+\_\+nod&
+\\
+\hline
+
+int\hypertarget{frp_8h_ae85b5c125a88974b768eab6b845cc052}{}\label{frp_8h_ae85b5c125a88974b768eab6b845cc052}
+&
+num\+\_\+phys&
+\\
+\hline
+
+int\hypertarget{frp_8h_ad6b15822c4b04429fa1bb240dc013abc}{}\label{frp_8h_ad6b15822c4b04429fa1bb240dc013abc}
+&
+num\+\_\+srce&
+\\
+\hline
+
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_aff3e525bb5b5bd2c5b4a2bc794e90b24}{}\label{frp_8h_aff3e525bb5b5bd2c5b4a2bc794e90b24}
+&
+old\+\_\+ang\+\_\+ordered\+\_\+curves&
+\\
+\hline
+
+struct \hyperlink{int_8h_d0/d66/struct___o___c_u_r_v_e___f_a_m_i_l_y}{\+\_\+\+O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$\hypertarget{frp_8h_a3a324717fedc79cbc41e80693e2921aa}{}\label{frp_8h_a3a324717fedc79cbc41e80693e2921aa}
+&
+old\+\_\+bdry\+\_\+curves&
+\\
+\hline
+
+\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$\hypertarget{frp_8h_a0564eb379aaa8a628ccab3d61810aafd}{}\label{frp_8h_a0564eb379aaa8a628ccab3d61810aafd}
+&
+old\+\_\+intfc&
+\\
+\hline
+
+struct \hyperlink{frp_8h_d0/dfa/struct___r_p_r_o_b_l_e_m}{\+\_\+\+R\+P\+R\+O\+B\+L\+EM} $\ast$\hypertarget{frp_8h_a6579942b31ae6f787121a26a755bd7a3}{}\label{frp_8h_a6579942b31ae6f787121a26a755bd7a3}
+&
+prev&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}\hypertarget{frp_8h_aaf5399d4f57b327cf3eeffb8b3914b0a}{}\label{frp_8h_aaf5399d4f57b327cf3eeffb8b3914b0a}
+&
+wave&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{\+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}\label{struct___f___r_p_r_o_b_l_e_m}
+\hypertarget{frp_8h_struct___f___r_p_r_o_b_l_e_m}{}
+\subsubsection{struct \+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{frp_8h_a417933174d84b6f9ee7cc1793c3be6e8}{}\label{frp_8h_a417933174d84b6f9ee7cc1793c3be6e8}
+&
+\+\_\+num\+\_\+incident&
+\\
+\hline
+
+int\hypertarget{frp_8h_aebb49744797172ccb0ade109053b6e88}{}\label{frp_8h_aebb49744797172ccb0ade109053b6e88}
+&
+\+\_\+num\+\_\+refl&
+\\
+\hline
+
+\hyperlink{frp_8h_acdc9d9b0735bd368650ef89248c9ae99}{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}\hypertarget{frp_8h_a72253e9a45b1f37aaae3737dccdeaa25}{}\label{frp_8h_a72253e9a45b1f37aaae3737dccdeaa25}
+&
+f\+\_\+user\+\_\+rp&
+\\
+\hline
+
+\hyperlink{frp_8h_a8e39ec4bf8bcc03a2e164b2ab39b9b33}{R\+P\+R\+O\+B\+L\+EM}\hypertarget{frp_8h_a1478ee711120a6bce089e3252e303af2}{}\label{frp_8h_a1478ee711120a6bce089e3252e303af2}
+&
+rproblem&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{frp.\+h@{frp.\+h}!f\+\_\+rproblem@{f\+\_\+rproblem}}
+\index{f\+\_\+rproblem@{f\+\_\+rproblem}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{f\+\_\+rproblem}{f_rproblem}}]{\setlength{\rightskip}{0pt plus 5cm}\#define f\+\_\+rproblem(
+\begin{DoxyParamCaption}
+\item[{}]{rp}
+\end{DoxyParamCaption}
+)~(({\bf F\+\_\+\+R\+P\+R\+O\+B\+L\+EM} $\ast$) (rp))}\hypertarget{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}{}\label{frp_8h_adbc8bcb1238a6b5dac12c2c81cfd807b}
+\index{frp.\+h@{frp.\+h}!f\+\_\+user\+\_\+rproblem@{f\+\_\+user\+\_\+rproblem}}
+\index{f\+\_\+user\+\_\+rproblem@{f\+\_\+user\+\_\+rproblem}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{f\+\_\+user\+\_\+rproblem}{f_user_rproblem}}]{\setlength{\rightskip}{0pt plus 5cm}\#define f\+\_\+user\+\_\+rproblem(
+\begin{DoxyParamCaption}
+\item[{}]{rp}
+\end{DoxyParamCaption}
+)~({\bf f\+\_\+rproblem}(rp)-\/$>$f\+\_\+user\+\_\+rp)}\hypertarget{frp_8h_aa62eabe0e0fc6ad39e106b82817b5a5b}{}\label{frp_8h_aa62eabe0e0fc6ad39e106b82817b5a5b}
+\index{frp.\+h@{frp.\+h}!rp\+\_\+node@{rp\+\_\+node}}
+\index{rp\+\_\+node@{rp\+\_\+node}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{rp\+\_\+node}{rp_node}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rp\+\_\+node(
+\begin{DoxyParamCaption}
+\item[{}]{rpn}
+\end{DoxyParamCaption}
+)~(({\bf R\+P\+\_\+\+N\+O\+DE} $\ast$) (rpn))}\hypertarget{frp_8h_a65923f8eb8e6ab24cfa166cc0c07a5ff}{}\label{frp_8h_a65923f8eb8e6ab24cfa166cc0c07a5ff}
+\index{frp.\+h@{frp.\+h}!rp\+\_\+num\+\_\+incident@{rp\+\_\+num\+\_\+incident}}
+\index{rp\+\_\+num\+\_\+incident@{rp\+\_\+num\+\_\+incident}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{rp\+\_\+num\+\_\+incident}{rp_num_incident}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rp\+\_\+num\+\_\+incident(
+\begin{DoxyParamCaption}
+\item[{}]{rp}
+\end{DoxyParamCaption}
+)~({\bf f\+\_\+rproblem}(rp)-\/$>$\+\_\+num\+\_\+incident)}\hypertarget{frp_8h_ad4fc5abd1b2cbb3dd1a97408d64769a6}{}\label{frp_8h_ad4fc5abd1b2cbb3dd1a97408d64769a6}
+\index{frp.\+h@{frp.\+h}!rp\+\_\+num\+\_\+refl@{rp\+\_\+num\+\_\+refl}}
+\index{rp\+\_\+num\+\_\+refl@{rp\+\_\+num\+\_\+refl}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{rp\+\_\+num\+\_\+refl}{rp_num_refl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rp\+\_\+num\+\_\+refl(
+\begin{DoxyParamCaption}
+\item[{}]{rp}
+\end{DoxyParamCaption}
+)~({\bf f\+\_\+rproblem}(rp)-\/$>$\+\_\+num\+\_\+refl)}\hypertarget{frp_8h_a627bb4d869bd1e90afc2ca238e0a6ac2}{}\label{frp_8h_a627bb4d869bd1e90afc2ca238e0a6ac2}
+\index{frp.\+h@{frp.\+h}!rpn\+\_\+reflected1@{rpn\+\_\+reflected1}}
+\index{rpn\+\_\+reflected1@{rpn\+\_\+reflected1}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{rpn\+\_\+reflected1}{rpn_reflected1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rpn\+\_\+reflected1(
+\begin{DoxyParamCaption}
+\item[{}]{rpn}
+\end{DoxyParamCaption}
+)~({\bf rp\+\_\+node}(rpn)-\/$>$\+\_\+reflected1)}\hypertarget{frp_8h_ad7c8d1deafadba960efa57074850b8cc}{}\label{frp_8h_ad7c8d1deafadba960efa57074850b8cc}
+\index{frp.\+h@{frp.\+h}!rpn\+\_\+reflected2@{rpn\+\_\+reflected2}}
+\index{rpn\+\_\+reflected2@{rpn\+\_\+reflected2}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{rpn\+\_\+reflected2}{rpn_reflected2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rpn\+\_\+reflected2(
+\begin{DoxyParamCaption}
+\item[{}]{rpn}
+\end{DoxyParamCaption}
+)~({\bf rp\+\_\+node}(rpn)-\/$>$\+\_\+reflected2)}\hypertarget{frp_8h_ad46552633a4d06a3dc738dcca232e958}{}\label{frp_8h_ad46552633a4d06a3dc738dcca232e958}
+
+
+\subsection{Typedef Documentation}
+\index{frp.\+h@{frp.\+h}!F\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}
+\index{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}{F_RPROBLEM}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+F\+\_\+\+R\+P\+R\+O\+B\+L\+EM} {\bf F\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}\hypertarget{frp_8h_adc837ca6ae871c5c7fe870eb83adaaef}{}\label{frp_8h_adc837ca6ae871c5c7fe870eb83adaaef}
+\index{frp.\+h@{frp.\+h}!F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}
+\index{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM@{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}{F_USER_RPROBLEM}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM} {\bf F\+\_\+\+U\+S\+E\+R\+\_\+\+R\+P\+R\+O\+B\+L\+EM}}\hypertarget{frp_8h_acdc9d9b0735bd368650ef89248c9ae99}{}\label{frp_8h_acdc9d9b0735bd368650ef89248c9ae99}
+\index{frp.\+h@{frp.\+h}!R\+P\+\_\+\+N\+O\+DE@{R\+P\+\_\+\+N\+O\+DE}}
+\index{R\+P\+\_\+\+N\+O\+DE@{R\+P\+\_\+\+N\+O\+DE}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{R\+P\+\_\+\+N\+O\+DE}{RP_NODE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+R\+P\+\_\+\+N\+O\+DE} {\bf R\+P\+\_\+\+N\+O\+DE}}\hypertarget{frp_8h_ad37baa973dc0759df1cd3e455f890ddf}{}\label{frp_8h_ad37baa973dc0759df1cd3e455f890ddf}
+\index{frp.\+h@{frp.\+h}!R\+P\+R\+O\+B\+L\+EM@{R\+P\+R\+O\+B\+L\+EM}}
+\index{R\+P\+R\+O\+B\+L\+EM@{R\+P\+R\+O\+B\+L\+EM}!frp.\+h@{frp.\+h}}
+\subsubsection[{\texorpdfstring{R\+P\+R\+O\+B\+L\+EM}{RPROBLEM}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+R\+P\+R\+O\+B\+L\+EM} {\bf R\+P\+R\+O\+B\+L\+EM}}\hypertarget{frp_8h_a8e39ec4bf8bcc03a2e164b2ab39b9b33}{}\label{frp_8h_a8e39ec4bf8bcc03a2e164b2ab39b9b33}

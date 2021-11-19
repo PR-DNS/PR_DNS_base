@@ -1,0 +1,301 @@
+\hypertarget{i_fsub_8cpp}{}\section{D\+N\+S/i\+Fluid/i\+Fsub.cpp File Reference}
+\label{i_fsub_8cpp}\index{D\+N\+S/i\+Fluid/i\+Fsub.\+cpp@{D\+N\+S/i\+Fluid/i\+Fsub.\+cpp}}
+{\ttfamily \#include \char`\"{}i\+Fluid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ifluid\+\_\+basic.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i_fsub_8cpp_a990e243e259c2a724389ed7c4c0540d9}{M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{i_fsub_8cpp_a350d71eff9e537661c424cc9205ac122}{get\+State\+Pres} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_a8ac64ba57e94d45123528c214e187f21}{get\+State\+Phi} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_a8a84c8745eed0c954950ab6add9b0b27}{get\+State\+Vort} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_aa9d4d1edafb5173182e6a6e0726af407}{get\+State\+Xvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_abb5f81af8e48ab2ae3117bae3654f93a}{get\+State\+Yvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_a02602f67aac9fd8b3fe28e56e0851223}{get\+State\+Zvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_a96bd5ddade3d44571af8133390adc9f1}{get\+State\+Ximp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_aa4a4bff9c94a1fad8c7228c546402313}{get\+State\+Yimp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{i_fsub_8cpp_a1cd9d5fbc6764266c98f597161d4d2c2}{get\+State\+Zimp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{i_fsub_8cpp_aa67756ec717aa33de9eaab720ccc66fd}{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data} (char $\ast$inname, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} f\+\_\+basic)
+\item 
+void \hyperlink{i_fsub_8cpp_a7537882d4d75bf776d90f63d82b8c71e}{restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{i_fsub_8cpp_a37172aef488b784d74207c825ccc62bc}{i\+F\+\_\+time\+Depend\+Boundary\+State} (double $\ast$p0, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{i_fsub_8cpp_abf203fffb3ff28169427158824c6dace}{i\+F\+\_\+flow\+Through\+Boundary\+State} (double $\ast$p0, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{i_fsub_8cpp_a85dc9c50381f4c68b9a7107ff79d57c7}{ifluid\+\_\+point\+\_\+propagate} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} wave, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$oldp, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$newp, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$oldhse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$oldhs, double dt, double $\ast$V)
+\item 
+void \hyperlink{i_fsub_8cpp_a95424354f857fb65e22cd93637f3be63}{fluid\+\_\+print\+\_\+front\+\_\+states} (F\+I\+LE $\ast$outfile, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{i_fsub_8cpp_af620cc087444dcc376cbc23cbabd1d54}{fluid\+\_\+read\+\_\+front\+\_\+states} (F\+I\+LE $\ast$infile, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{i_fsub_8cpp_a2a186af8929217b2541c3b65d8b12d2a}{read\+\_\+i\+Fparams} (char $\ast$inname, \hyperlink{i_fluid_8h_d8/d1e/struct_i_f___p_a_r_a_m_s}{I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$i\+Fparams)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fsub_8cpp_a7cab6d2b2152614e67311f2c4814442e}{is\+Dirichlet\+Preset\+Bdry} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp)
+\item 
+void \hyperlink{i_fsub_8cpp_a857ca8d15e0d4a8e2333b5a5cb2ab5c3}{record\+Bdry\+Energy\+Flux} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{testfront_8c_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name})
+\item 
+double \hyperlink{i_fsub_8cpp_a3cd1723c33b05308f6da303b74590497}{p\+\_\+jump} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, int D, double $\ast$coords)
+\item 
+double \hyperlink{i_fsub_8cpp_afadbdba58ba7151299ebf57d6c332e18}{grad\+\_\+p\+\_\+jump\+\_\+n} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, int D, double $\ast$N, double $\ast$coords)
+\item 
+double \hyperlink{i_fsub_8cpp_a22b3d0fdb3683137c7fe80743025f796}{grad\+\_\+p\+\_\+jump\+\_\+t} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, int D, int i, double $\ast$N, double $\ast$coords)
+\item 
+double \hyperlink{i_fsub_8cpp_a7690546e6c0fe484671ccc600b81cd65}{get\+Phi\+From\+Pres} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double pres)
+\item 
+double \hyperlink{i_fsub_8cpp_a0bf890d61af4f9adbf251a094204823d}{get\+Pressure} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$coords, double $\ast$base\+\_\+coords)
+\item 
+int \hyperlink{i_fsub_8cpp_a87862104fdeea5e87edc4466d168810f}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\item 
+void \hyperlink{i_fsub_8cpp_a23f8c942824d2ebba24d17429844fe8b}{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double dt, double $\ast$force, double $\ast$torque)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL@{M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL}}
+\index{M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL@{M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL}{MAX_TRI_FOR_INTEGRAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+T\+R\+I\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+R\+AL~100}\hypertarget{i_fsub_8cpp_a990e243e259c2a724389ed7c4c0540d9}{}\label{i_fsub_8cpp_a990e243e259c2a724389ed7c4c0540d9}
+
+
+\subsection{Function Documentation}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!fluid\+\_\+print\+\_\+front\+\_\+states@{fluid\+\_\+print\+\_\+front\+\_\+states}}
+\index{fluid\+\_\+print\+\_\+front\+\_\+states@{fluid\+\_\+print\+\_\+front\+\_\+states}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{fluid\+\_\+print\+\_\+front\+\_\+states(\+F\+I\+L\+E $\ast$outfile, Front $\ast$front)}{fluid_print_front_states(FILE *outfile, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void fluid\+\_\+print\+\_\+front\+\_\+states (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{outfile, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a95424354f857fb65e22cd93637f3be63}{}\label{i_fsub_8cpp_a95424354f857fb65e22cd93637f3be63}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!fluid\+\_\+read\+\_\+front\+\_\+states@{fluid\+\_\+read\+\_\+front\+\_\+states}}
+\index{fluid\+\_\+read\+\_\+front\+\_\+states@{fluid\+\_\+read\+\_\+front\+\_\+states}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{fluid\+\_\+read\+\_\+front\+\_\+states(\+F\+I\+L\+E $\ast$infile, Front $\ast$front)}{fluid_read_front_states(FILE *infile, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void fluid\+\_\+read\+\_\+front\+\_\+states (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{infile, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_af620cc087444dcc376cbc23cbabd1d54}{}\label{i_fsub_8cpp_af620cc087444dcc376cbc23cbabd1d54}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+Phi\+From\+Pres@{get\+Phi\+From\+Pres}}
+\index{get\+Phi\+From\+Pres@{get\+Phi\+From\+Pres}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Phi\+From\+Pres(\+Front $\ast$front, double pres)}{getPhiFromPres(Front *front, double pres)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Phi\+From\+Pres (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double}]{pres}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a7690546e6c0fe484671ccc600b81cd65}{}\label{i_fsub_8cpp_a7690546e6c0fe484671ccc600b81cd65}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Pressure(\+Front $\ast$front, double $\ast$coords, double $\ast$base\+\_\+coords)}{getPressure(Front *front, double *coords, double *base_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{base\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a0bf890d61af4f9adbf251a094204823d}{}\label{i_fsub_8cpp_a0bf890d61af4f9adbf251a094204823d}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Phi@{get\+State\+Phi}}
+\index{get\+State\+Phi@{get\+State\+Phi}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Phi(\+P\+O\+I\+N\+T\+E\+R state)}{getStatePhi(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Phi (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a8ac64ba57e94d45123528c214e187f21}{}\label{i_fsub_8cpp_a8ac64ba57e94d45123528c214e187f21}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Pres@{get\+State\+Pres}}
+\index{get\+State\+Pres@{get\+State\+Pres}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Pres(\+P\+O\+I\+N\+T\+E\+R state)}{getStatePres(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Pres (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a350d71eff9e537661c424cc9205ac122}{}\label{i_fsub_8cpp_a350d71eff9e537661c424cc9205ac122}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Vort@{get\+State\+Vort}}
+\index{get\+State\+Vort@{get\+State\+Vort}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Vort(\+P\+O\+I\+N\+T\+E\+R state)}{getStateVort(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Vort (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a8a84c8745eed0c954950ab6add9b0b27}{}\label{i_fsub_8cpp_a8a84c8745eed0c954950ab6add9b0b27}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Ximp@{get\+State\+Ximp}}
+\index{get\+State\+Ximp@{get\+State\+Ximp}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Ximp(\+P\+O\+I\+N\+T\+E\+R state)}{getStateXimp(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Ximp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a96bd5ddade3d44571af8133390adc9f1}{}\label{i_fsub_8cpp_a96bd5ddade3d44571af8133390adc9f1}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Xvel@{get\+State\+Xvel}}
+\index{get\+State\+Xvel@{get\+State\+Xvel}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Xvel(\+P\+O\+I\+N\+T\+E\+R state)}{getStateXvel(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Xvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_aa9d4d1edafb5173182e6a6e0726af407}{}\label{i_fsub_8cpp_aa9d4d1edafb5173182e6a6e0726af407}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Yimp@{get\+State\+Yimp}}
+\index{get\+State\+Yimp@{get\+State\+Yimp}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Yimp(\+P\+O\+I\+N\+T\+E\+R state)}{getStateYimp(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Yimp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_aa4a4bff9c94a1fad8c7228c546402313}{}\label{i_fsub_8cpp_aa4a4bff9c94a1fad8c7228c546402313}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Yvel@{get\+State\+Yvel}}
+\index{get\+State\+Yvel@{get\+State\+Yvel}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Yvel(\+P\+O\+I\+N\+T\+E\+R state)}{getStateYvel(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Yvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_abb5f81af8e48ab2ae3117bae3654f93a}{}\label{i_fsub_8cpp_abb5f81af8e48ab2ae3117bae3654f93a}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Zimp@{get\+State\+Zimp}}
+\index{get\+State\+Zimp@{get\+State\+Zimp}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Zimp(\+P\+O\+I\+N\+T\+E\+R state)}{getStateZimp(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Zimp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a1cd9d5fbc6764266c98f597161d4d2c2}{}\label{i_fsub_8cpp_a1cd9d5fbc6764266c98f597161d4d2c2}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!get\+State\+Zvel@{get\+State\+Zvel}}
+\index{get\+State\+Zvel@{get\+State\+Zvel}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Zvel(\+P\+O\+I\+N\+T\+E\+R state)}{getStateZvel(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Zvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a02602f67aac9fd8b3fe28e56e0851223}{}\label{i_fsub_8cpp_a02602f67aac9fd8b3fe28e56e0851223}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!grad\+\_\+p\+\_\+jump\+\_\+n@{grad\+\_\+p\+\_\+jump\+\_\+n}}
+\index{grad\+\_\+p\+\_\+jump\+\_\+n@{grad\+\_\+p\+\_\+jump\+\_\+n}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{grad\+\_\+p\+\_\+jump\+\_\+n(\+P\+O\+I\+N\+T\+E\+R params, int D, double $\ast$\+N, double $\ast$coords)}{grad_p_jump_n(POINTER params, int D, double *N, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}double grad\+\_\+p\+\_\+jump\+\_\+n (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{int}]{D, }
+\item[{double $\ast$}]{N, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_afadbdba58ba7151299ebf57d6c332e18}{}\label{i_fsub_8cpp_afadbdba58ba7151299ebf57d6c332e18}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!grad\+\_\+p\+\_\+jump\+\_\+t@{grad\+\_\+p\+\_\+jump\+\_\+t}}
+\index{grad\+\_\+p\+\_\+jump\+\_\+t@{grad\+\_\+p\+\_\+jump\+\_\+t}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{grad\+\_\+p\+\_\+jump\+\_\+t(\+P\+O\+I\+N\+T\+E\+R params, int D, int i, double $\ast$\+N, double $\ast$coords)}{grad_p_jump_t(POINTER params, int D, int i, double *N, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}double grad\+\_\+p\+\_\+jump\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{int}]{D, }
+\item[{int}]{i, }
+\item[{double $\ast$}]{N, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a22b3d0fdb3683137c7fe80743025f796}{}\label{i_fsub_8cpp_a22b3d0fdb3683137c7fe80743025f796}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!i\+F\+\_\+flow\+Through\+Boundary\+State@{i\+F\+\_\+flow\+Through\+Boundary\+State}}
+\index{i\+F\+\_\+flow\+Through\+Boundary\+State@{i\+F\+\_\+flow\+Through\+Boundary\+State}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+F\+\_\+flow\+Through\+Boundary\+State(double $\ast$p0, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, Front $\ast$front, P\+O\+I\+N\+T\+E\+R params, P\+O\+I\+N\+T\+E\+R state)}{iF_flowThroughBoundaryState(double *p0, HYPER_SURF *hs, Front *front, POINTER params, POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+F\+\_\+flow\+Through\+Boundary\+State (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p0, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_abf203fffb3ff28169427158824c6dace}{}\label{i_fsub_8cpp_abf203fffb3ff28169427158824c6dace}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!i\+F\+\_\+time\+Depend\+Boundary\+State@{i\+F\+\_\+time\+Depend\+Boundary\+State}}
+\index{i\+F\+\_\+time\+Depend\+Boundary\+State@{i\+F\+\_\+time\+Depend\+Boundary\+State}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+F\+\_\+time\+Depend\+Boundary\+State(double $\ast$p0, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, Front $\ast$front, P\+O\+I\+N\+T\+E\+R params, P\+O\+I\+N\+T\+E\+R state)}{iF_timeDependBoundaryState(double *p0, HYPER_SURF *hs, Front *front, POINTER params, POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+F\+\_\+time\+Depend\+Boundary\+State (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p0, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a37172aef488b784d74207c825ccc62bc}{}\label{i_fsub_8cpp_a37172aef488b784d74207c825ccc62bc}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque@{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque}}
+\index{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque@{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque(\+Front $\ast$fr, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double dt, double $\ast$force, double $\ast$torque)}{ifluid_compute_force_and_torque(Front *fr, HYPER_SURF *hs, double dt, double *force, double *torque)}}]{\setlength{\rightskip}{0pt plus 5cm}void ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double}]{dt, }
+\item[{double $\ast$}]{force, }
+\item[{double $\ast$}]{torque}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a23f8c942824d2ebba24d17429844fe8b}{}\label{i_fsub_8cpp_a23f8c942824d2ebba24d17429844fe8b}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, P\+O\+I\+N\+T\+E\+R $\ast$state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)}{ifluid_find_state_at_dual_crossing(Front *front, int *icoords, GRID_DIRECTION dir, int comp, POINTER *state, HYPER_SURF **hs, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a87862104fdeea5e87edc4466d168810f}{}\label{i_fsub_8cpp_a87862104fdeea5e87edc4466d168810f}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!ifluid\+\_\+point\+\_\+propagate@{ifluid\+\_\+point\+\_\+propagate}}
+\index{ifluid\+\_\+point\+\_\+propagate@{ifluid\+\_\+point\+\_\+propagate}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+point\+\_\+propagate(\+Front $\ast$front, P\+O\+I\+N\+T\+E\+R wave, P\+O\+I\+N\+T $\ast$oldp, P\+O\+I\+N\+T $\ast$newp, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$oldhse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$oldhs, double dt, double $\ast$\+V)}{ifluid_point_propagate(Front *front, POINTER wave, POINT *oldp, POINT *newp, HYPER_SURF_ELEMENT *oldhse, HYPER_SURF *oldhs, double dt, double *V)}}]{\setlength{\rightskip}{0pt plus 5cm}void ifluid\+\_\+point\+\_\+propagate (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{wave, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{oldp, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{newp, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{oldhse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{oldhs, }
+\item[{double}]{dt, }
+\item[{double $\ast$}]{V}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a85dc9c50381f4c68b9a7107ff79d57c7}{}\label{i_fsub_8cpp_a85dc9c50381f4c68b9a7107ff79d57c7}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!is\+Dirichlet\+Preset\+Bdry@{is\+Dirichlet\+Preset\+Bdry}}
+\index{is\+Dirichlet\+Preset\+Bdry@{is\+Dirichlet\+Preset\+Bdry}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{is\+Dirichlet\+Preset\+Bdry(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, C\+O\+M\+P\+O\+N\+E\+N\+T comp)}{isDirichletPresetBdry(Front *front, int *icoords, GRID_DIRECTION dir, COMPONENT comp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} is\+Dirichlet\+Preset\+Bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a7cab6d2b2152614e67311f2c4814442e}{}\label{i_fsub_8cpp_a7cab6d2b2152614e67311f2c4814442e}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!p\+\_\+jump@{p\+\_\+jump}}
+\index{p\+\_\+jump@{p\+\_\+jump}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{p\+\_\+jump(\+P\+O\+I\+N\+T\+E\+R params, int D, double $\ast$coords)}{p_jump(POINTER params, int D, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}double p\+\_\+jump (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{int}]{D, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a3cd1723c33b05308f6da303b74590497}{}\label{i_fsub_8cpp_a3cd1723c33b05308f6da303b74590497}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data}}
+\index{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data(char $\ast$inname, Front $\ast$front, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A f\+\_\+basic)}{read_iF_dirichlet_bdry_data(char *inname, Front *front, F_BASIC_DATA f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{inname, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA}}]{f\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_aa67756ec717aa33de9eaab720ccc66fd}{}\label{i_fsub_8cpp_aa67756ec717aa33de9eaab720ccc66fd}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!read\+\_\+i\+Fparams@{read\+\_\+i\+Fparams}}
+\index{read\+\_\+i\+Fparams@{read\+\_\+i\+Fparams}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+\_\+i\+Fparams(char $\ast$inname, I\+F\+\_\+\+P\+A\+R\+A\+M\+S $\ast$i\+Fparams)}{read_iFparams(char *inname, IF_PARAMS *iFparams)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+i\+Fparams (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{inname, }
+\item[{{\bf I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{i\+Fparams}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a2a186af8929217b2541c3b65d8b12d2a}{}\label{i_fsub_8cpp_a2a186af8929217b2541c3b65d8b12d2a}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!record\+Bdry\+Energy\+Flux@{record\+Bdry\+Energy\+Flux}}
+\index{record\+Bdry\+Energy\+Flux@{record\+Bdry\+Energy\+Flux}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{record\+Bdry\+Energy\+Flux(\+Front $\ast$front, char $\ast$out\+\_\+name)}{recordBdryEnergyFlux(Front *front, char *out_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void record\+Bdry\+Energy\+Flux (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{char $\ast$}]{out\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a857ca8d15e0d4a8e2333b5a5cb2ab5c3}{}\label{i_fsub_8cpp_a857ca8d15e0d4a8e2333b5a5cb2ab5c3}
+\index{i\+Fsub.\+cpp@{i\+Fsub.\+cpp}!restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function@{restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function}}
+\index{restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function@{restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function}!i\+Fsub.\+cpp@{i\+Fsub.\+cpp}}
+\subsubsection[{\texorpdfstring{restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function(\+Front $\ast$front)}{restart_set_dirichlet_bdry_function(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void restart\+\_\+set\+\_\+dirichlet\+\_\+bdry\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fsub_8cpp_a7537882d4d75bf776d90f63d82b8c71e}{}\label{i_fsub_8cpp_a7537882d4d75bf776d90f63d82b8c71e}

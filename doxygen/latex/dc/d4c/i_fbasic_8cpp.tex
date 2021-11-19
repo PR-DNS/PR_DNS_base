@@ -1,0 +1,72 @@
+\hypertarget{i_fbasic_8cpp}{}\section{D\+N\+S/i\+Fluid/i\+Fbasic.cpp File Reference}
+\label{i_fbasic_8cpp}\index{D\+N\+S/i\+Fluid/i\+Fbasic.\+cpp@{D\+N\+S/i\+Fluid/i\+Fbasic.\+cpp}}
+{\ttfamily \#include \char`\"{}i\+Fluid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}solver.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{i_fbasic_8cpp_a3bc7cc40f8543c64b4ed8e6e81bd280a}{burger\+\_\+flux} (double ul, double um, double ur)
+\item 
+double \hyperlink{i_fbasic_8cpp_a9f1b473d7ba0aa17f62924f7c9781931}{linear\+\_\+flux} (double a, double ul, double um, double ur)
+\item 
+int \hyperlink{i_fbasic_8cpp_a25ccda12a981f18a17124e4e8222ad0e}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\item 
+int \hyperlink{i_fbasic_8cpp_abb8a59e537f0fed7c9d90135decc8ddc}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fbasic_8cpp_a778225e33e5603e45a42bbada6a88236}{neumann\+\_\+type\+\_\+bdry} (int w\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}!burger\+\_\+flux@{burger\+\_\+flux}}
+\index{burger\+\_\+flux@{burger\+\_\+flux}!i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}}
+\subsubsection[{\texorpdfstring{burger\+\_\+flux(double ul, double um, double ur)}{burger_flux(double ul, double um, double ur)}}]{\setlength{\rightskip}{0pt plus 5cm}double burger\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{double}]{ul, }
+\item[{double}]{um, }
+\item[{double}]{ur}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fbasic_8cpp_a3bc7cc40f8543c64b4ed8e6e81bd280a}{}\label{i_fbasic_8cpp_a3bc7cc40f8543c64b4ed8e6e81bd280a}
+\index{i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing}!i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, P\+O\+I\+N\+T\+E\+R $\ast$state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)}{ifluid_find_state_at_cg_crossing(Front *front, int *icoords, GRID_DIRECTION dir, int comp, POINTER *state, HYPER_SURF **hs, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fbasic_8cpp_abb8a59e537f0fed7c9d90135decc8ddc}{}\label{i_fbasic_8cpp_abb8a59e537f0fed7c9d90135decc8ddc}
+\index{i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing}!i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, P\+O\+I\+N\+T\+E\+R $\ast$state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)}{ifluid_find_state_at_crossing(Front *front, int *icoords, GRID_DIRECTION dir, int comp, POINTER *state, HYPER_SURF **hs, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fbasic_8cpp_a25ccda12a981f18a17124e4e8222ad0e}{}\label{i_fbasic_8cpp_a25ccda12a981f18a17124e4e8222ad0e}
+\index{i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}!linear\+\_\+flux@{linear\+\_\+flux}}
+\index{linear\+\_\+flux@{linear\+\_\+flux}!i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}}
+\subsubsection[{\texorpdfstring{linear\+\_\+flux(double a, double ul, double um, double ur)}{linear_flux(double a, double ul, double um, double ur)}}]{\setlength{\rightskip}{0pt plus 5cm}double linear\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{ul, }
+\item[{double}]{um, }
+\item[{double}]{ur}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fbasic_8cpp_a9f1b473d7ba0aa17f62924f7c9781931}{}\label{i_fbasic_8cpp_a9f1b473d7ba0aa17f62924f7c9781931}
+\index{i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}!neumann\+\_\+type\+\_\+bdry@{neumann\+\_\+type\+\_\+bdry}}
+\index{neumann\+\_\+type\+\_\+bdry@{neumann\+\_\+type\+\_\+bdry}!i\+Fbasic.\+cpp@{i\+Fbasic.\+cpp}}
+\subsubsection[{\texorpdfstring{neumann\+\_\+type\+\_\+bdry(int w\+\_\+type)}{neumann_type_bdry(int w_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} neumann\+\_\+type\+\_\+bdry (
+\begin{DoxyParamCaption}
+\item[{int}]{w\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fbasic_8cpp_a778225e33e5603e45a42bbada6a88236}{}\label{i_fbasic_8cpp_a778225e33e5603e45a42bbada6a88236}

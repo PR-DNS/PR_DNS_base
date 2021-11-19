@@ -1,0 +1,401 @@
+\hypertarget{geomutils_8c}{}\section{D\+N\+S/src/intfc/geomutils.c File Reference}
+\label{geomutils_8c}\index{D\+N\+S/src/intfc/geomutils.\+c@{D\+N\+S/src/intfc/geomutils.\+c}}
+{\ttfamily \#include $<$intfc/geom.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_ad2c46901fcad00a1304406e3c158846e}{vector\+\_\+product\+\_\+on\+\_\+points} (const double $\ast$p0, const double $\ast$p1, const double $\ast$p2, int dim, double $\ast$Pout)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_abec5b1c43e67125cd0c1adb03b325ba9}{vector\+\_\+product} (const double $\ast$v1, const double $\ast$v2, double $\ast$vprod, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_ad9f32ae83959bc5c9060577afd161300}{scalar\+\_\+product} (const double $\ast$v1, const double $\ast$v2, const int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a8968988053b35926073fdfeac3acbea5}{triple\+\_\+product} (const double $\ast$v1, const double $\ast$v2, const double $\ast$v3, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a1ef7b0bd2568ab0711c1ad3a6365a507}{mag\+\_\+vector} (const double $\ast$v, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{geomutils_8c_a2809c27c784ad6f36eebb42428d8e47f}{outside\+\_\+point} (const double $\ast$p, const double $\ast$L, const double $\ast$U, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_aab70368f46c502da19bb9db45f329cde}{distance\+\_\+between\+\_\+positions} (const double $\ast$p, const double $\ast$q, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_aed30d08845acc9f05db1f0fae63574ff}{dscalar\+\_\+product} (const double $\ast$v1, const double $\ast$v2, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a144dfd993e1ed942d0379ce317c9eb8e}{grid\+\_\+size\+\_\+in\+\_\+direction} (const double $\ast$t, const double $\ast$h, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_aa77b544ca5a41a6b869ac0d0d2cf52b7}{scaled\+\_\+hypot} (const double $\ast$p, const double $\ast$h, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_ae4ba0f96773287529285cde000ccf21f}{dscaled\+\_\+hypot} (const double $\ast$p, const double $\ast$h, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_ace6db84278dd795616c12e45ea0a5c75}{\+\_\+scaled\+\_\+separation} (const double $\ast$p, const double $\ast$q, const double $\ast$h, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_ad299540f133a17cc6cb235050f9dfb14}{direction\+\_\+vector} (double $\ast$p1, double $\ast$p2, double $\ast$vdir, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a7cee80bfaab2488a0b4235c7f684aede}{cal\+\_\+angle} (const double $\ast$p0, const double $\ast$p1, const double $\ast$p2, int branch\+\_\+cut, int dim, const double $\ast$nor)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a1a5ca93682b6e4829cc243258bfaaa2a}{normalized\+\_\+angle} (double ang)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a4b8abec0e982c576be0b266f1f6f0d79}{avg\+\_\+angle\+\_\+and\+\_\+normalize} (double a1, double a2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle} (double vx, double vy)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{geomutils_8c_a9fd3bb35faeb418d6e5d4c2ea5d367dc}{is\+\_\+new\+\_\+angle\+\_\+smaller} (double \+\_\+sin, double \+\_\+cos, double oldsin, double oldcos, int dir)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_ad217758f26327b129b76c673c9c044bf}{print\+\_\+angle\+\_\+direction} (const char $\ast$message, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} ang\+\_\+dir, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_afb0e24767872b1e3a3b40a71f6c39e89}{fprint\+\_\+angle\+\_\+direction} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$mesg, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} ang\+\_\+dir, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{geomutils_8c_a08ee91aae16576da2be1f9fdba32a69a}{angle\+\_\+direction\+\_\+name} (\hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} ang\+\_\+dir)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_a6d602d68303337fd91408bcb9d670119}{print\+\_\+orientation} (const char $\ast$message, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_acd6e9c5ecb814475df2e539987eeaad0}{fprint\+\_\+orientation} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$message, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{geomutils_8c_a535b5e120e56a1b9ebda34cc926eff13}{orientation\+\_\+name} (\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} \hyperlink{geomutils_8c_a2fc6b9bbd21039156c443587da84390e}{Opposite\+\_\+side} (const \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_a0cf25a4d41ba0a679e6e93c44063654f}{print\+\_\+side} (const char $\ast$message, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{geomutils_8c_a45deceada4fdfc0812548743499b28b7}{side\+\_\+name} (\hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_abd5f87953e545f118370e52668e61bcb}{print\+\_\+general\+\_\+vector} (const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_a6a1687eb3f6c70d2e5b453ab23eb9f57}{fprint\+\_\+general\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_ac703b9cc497124cdeeb5a36ea786e8b2}{sprint\+\_\+general\+\_\+vector} (char $\ast$s, const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a05a561eb62557a2217ef99d72921c77f}{random\+\_\+gaussian} (double mu, double sigma, unsigned short int xsubi\mbox{[}3\mbox{]})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} \hyperlink{geomutils_8c_add861f7b4c7190ec77c40b8f376d843c}{fread\+\_\+angle\+\_\+direction} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{geomutils_8c_ac82e352e1039902d7ea2ef50ea255c22}{affine\+\_\+fit} (const double $\ast$const $\ast$p, int dim, int N, const double $\ast$ndir, double $\ast$pbar, double $\ast$$\ast$r, double $\ast$lambda)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a1bd08fbe58481956a03b6c357ceba188}{plane\+\_\+angle} (double $\ast$cen, double $\ast$coords)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}{E\+P\+S\+I\+L\+ON} = 1.e-\/4
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{geomutils.\+c@{geomutils.\+c}!\+\_\+scaled\+\_\+separation@{\+\_\+scaled\+\_\+separation}}
+\index{\+\_\+scaled\+\_\+separation@{\+\_\+scaled\+\_\+separation}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+scaled\+\_\+separation(const double $\ast$p, const double $\ast$q, const double $\ast$h, int dim)}{_scaled_separation(const double *p, const double *q, const double *h, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double \+\_\+scaled\+\_\+separation (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{q, }
+\item[{const double $\ast$}]{h, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ace6db84278dd795616c12e45ea0a5c75}{}\label{geomutils_8c_ace6db84278dd795616c12e45ea0a5c75}
+\index{geomutils.\+c@{geomutils.\+c}!affine\+\_\+fit@{affine\+\_\+fit}}
+\index{affine\+\_\+fit@{affine\+\_\+fit}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{affine\+\_\+fit(const double $\ast$const $\ast$p, int dim, int N, const double $\ast$ndir, double $\ast$pbar, double $\ast$$\ast$r, double $\ast$lambda)}{affine_fit(const double *const *p, int dim, int N, const double *ndir, double *pbar, double **r, double *lambda)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void affine\+\_\+fit (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$const $\ast$}]{p, }
+\item[{int}]{dim, }
+\item[{int}]{N, }
+\item[{const double $\ast$}]{ndir, }
+\item[{double $\ast$}]{pbar, }
+\item[{double $\ast$$\ast$}]{r, }
+\item[{double $\ast$}]{lambda}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ac82e352e1039902d7ea2ef50ea255c22}{}\label{geomutils_8c_ac82e352e1039902d7ea2ef50ea255c22}
+\index{geomutils.\+c@{geomutils.\+c}!angle@{angle}}
+\index{angle@{angle}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{angle(double vx, double vy)}{angle(double vx, double vy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double angle (
+\begin{DoxyParamCaption}
+\item[{double}]{vx, }
+\item[{double}]{vy}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{}\label{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}
+\index{geomutils.\+c@{geomutils.\+c}!angle\+\_\+direction\+\_\+name@{angle\+\_\+direction\+\_\+name}}
+\index{angle\+\_\+direction\+\_\+name@{angle\+\_\+direction\+\_\+name}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{angle\+\_\+direction\+\_\+name(\+A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N ang\+\_\+dir)}{angle_direction_name(ANGLE_DIRECTION ang_dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ angle\+\_\+direction\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{ang\+\_\+dir}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a08ee91aae16576da2be1f9fdba32a69a}{}\label{geomutils_8c_a08ee91aae16576da2be1f9fdba32a69a}
+\index{geomutils.\+c@{geomutils.\+c}!avg\+\_\+angle\+\_\+and\+\_\+normalize@{avg\+\_\+angle\+\_\+and\+\_\+normalize}}
+\index{avg\+\_\+angle\+\_\+and\+\_\+normalize@{avg\+\_\+angle\+\_\+and\+\_\+normalize}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{avg\+\_\+angle\+\_\+and\+\_\+normalize(double a1, double a2)}{avg_angle_and_normalize(double a1, double a2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double avg\+\_\+angle\+\_\+and\+\_\+normalize (
+\begin{DoxyParamCaption}
+\item[{double}]{a1, }
+\item[{double}]{a2}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a4b8abec0e982c576be0b266f1f6f0d79}{}\label{geomutils_8c_a4b8abec0e982c576be0b266f1f6f0d79}
+\index{geomutils.\+c@{geomutils.\+c}!cal\+\_\+angle@{cal\+\_\+angle}}
+\index{cal\+\_\+angle@{cal\+\_\+angle}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{cal\+\_\+angle(const double $\ast$p0, const double $\ast$p1, const double $\ast$p2, int branch\+\_\+cut, int dim, const double $\ast$nor)}{cal_angle(const double *p0, const double *p1, const double *p2, int branch_cut, int dim, const double *nor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double cal\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p0, }
+\item[{const double $\ast$}]{p1, }
+\item[{const double $\ast$}]{p2, }
+\item[{int}]{branch\+\_\+cut, }
+\item[{int}]{dim, }
+\item[{const double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a7cee80bfaab2488a0b4235c7f684aede}{}\label{geomutils_8c_a7cee80bfaab2488a0b4235c7f684aede}
+\index{geomutils.\+c@{geomutils.\+c}!direction\+\_\+vector@{direction\+\_\+vector}}
+\index{direction\+\_\+vector@{direction\+\_\+vector}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{direction\+\_\+vector(double $\ast$p1, double $\ast$p2, double $\ast$vdir, int dim)}{direction_vector(double *p1, double *p2, double *vdir, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void direction\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p1, }
+\item[{double $\ast$}]{p2, }
+\item[{double $\ast$}]{vdir, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ad299540f133a17cc6cb235050f9dfb14}{}\label{geomutils_8c_ad299540f133a17cc6cb235050f9dfb14}
+\index{geomutils.\+c@{geomutils.\+c}!distance\+\_\+between\+\_\+positions@{distance\+\_\+between\+\_\+positions}}
+\index{distance\+\_\+between\+\_\+positions@{distance\+\_\+between\+\_\+positions}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{distance\+\_\+between\+\_\+positions(const double $\ast$p, const double $\ast$q, int dim)}{distance_between_positions(const double *p, const double *q, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double distance\+\_\+between\+\_\+positions (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{q, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_aab70368f46c502da19bb9db45f329cde}{}\label{geomutils_8c_aab70368f46c502da19bb9db45f329cde}
+\index{geomutils.\+c@{geomutils.\+c}!dscalar\+\_\+product@{dscalar\+\_\+product}}
+\index{dscalar\+\_\+product@{dscalar\+\_\+product}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{dscalar\+\_\+product(const double $\ast$v1, const double $\ast$v2, int dim)}{dscalar_product(const double *v1, const double *v2, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double dscalar\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v1, }
+\item[{const double $\ast$}]{v2, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_aed30d08845acc9f05db1f0fae63574ff}{}\label{geomutils_8c_aed30d08845acc9f05db1f0fae63574ff}
+\index{geomutils.\+c@{geomutils.\+c}!dscaled\+\_\+hypot@{dscaled\+\_\+hypot}}
+\index{dscaled\+\_\+hypot@{dscaled\+\_\+hypot}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{dscaled\+\_\+hypot(const double $\ast$p, const double $\ast$h, int dim)}{dscaled_hypot(const double *p, const double *h, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double dscaled\+\_\+hypot (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{h, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ae4ba0f96773287529285cde000ccf21f}{}\label{geomutils_8c_ae4ba0f96773287529285cde000ccf21f}
+\index{geomutils.\+c@{geomutils.\+c}!fprint\+\_\+angle\+\_\+direction@{fprint\+\_\+angle\+\_\+direction}}
+\index{fprint\+\_\+angle\+\_\+direction@{fprint\+\_\+angle\+\_\+direction}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+angle\+\_\+direction(\+F\+I\+L\+E $\ast$file, const char $\ast$mesg, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N ang\+\_\+dir, const char $\ast$end)}{fprint_angle_direction(FILE *file, const char *mesg, ANGLE_DIRECTION ang_dir, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{mesg, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{ang\+\_\+dir, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_afb0e24767872b1e3a3b40a71f6c39e89}{}\label{geomutils_8c_afb0e24767872b1e3a3b40a71f6c39e89}
+\index{geomutils.\+c@{geomutils.\+c}!fprint\+\_\+general\+\_\+vector@{fprint\+\_\+general\+\_\+vector}}
+\index{fprint\+\_\+general\+\_\+vector@{fprint\+\_\+general\+\_\+vector}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+general\+\_\+vector(\+F\+I\+L\+E $\ast$file, const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)}{fprint_general_vector(FILE *file, const char *mesg, const double *v, int dim, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{mesg, }
+\item[{const double $\ast$}]{v, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a6a1687eb3f6c70d2e5b453ab23eb9f57}{}\label{geomutils_8c_a6a1687eb3f6c70d2e5b453ab23eb9f57}
+\index{geomutils.\+c@{geomutils.\+c}!fprint\+\_\+orientation@{fprint\+\_\+orientation}}
+\index{fprint\+\_\+orientation@{fprint\+\_\+orientation}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+orientation(\+F\+I\+L\+E $\ast$file, const char $\ast$message, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient, const char $\ast$end)}{fprint_orientation(FILE *file, const char *message, ORIENTATION orient, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{message, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_acd6e9c5ecb814475df2e539987eeaad0}{}\label{geomutils_8c_acd6e9c5ecb814475df2e539987eeaad0}
+\index{geomutils.\+c@{geomutils.\+c}!fread\+\_\+angle\+\_\+direction@{fread\+\_\+angle\+\_\+direction}}
+\index{fread\+\_\+angle\+\_\+direction@{fread\+\_\+angle\+\_\+direction}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{fread\+\_\+angle\+\_\+direction(\+F\+I\+L\+E $\ast$file)}{fread_angle_direction(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} fread\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_add861f7b4c7190ec77c40b8f376d843c}{}\label{geomutils_8c_add861f7b4c7190ec77c40b8f376d843c}
+\index{geomutils.\+c@{geomutils.\+c}!grid\+\_\+size\+\_\+in\+\_\+direction@{grid\+\_\+size\+\_\+in\+\_\+direction}}
+\index{grid\+\_\+size\+\_\+in\+\_\+direction@{grid\+\_\+size\+\_\+in\+\_\+direction}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{grid\+\_\+size\+\_\+in\+\_\+direction(const double $\ast$t, const double $\ast$h, int dim)}{grid_size_in_direction(const double *t, const double *h, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double grid\+\_\+size\+\_\+in\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{t, }
+\item[{const double $\ast$}]{h, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a144dfd993e1ed942d0379ce317c9eb8e}{}\label{geomutils_8c_a144dfd993e1ed942d0379ce317c9eb8e}
+\index{geomutils.\+c@{geomutils.\+c}!is\+\_\+new\+\_\+angle\+\_\+smaller@{is\+\_\+new\+\_\+angle\+\_\+smaller}}
+\index{is\+\_\+new\+\_\+angle\+\_\+smaller@{is\+\_\+new\+\_\+angle\+\_\+smaller}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+new\+\_\+angle\+\_\+smaller(double \+\_\+sin, double \+\_\+cos, double oldsin, double oldcos, int dir)}{is_new_angle_smaller(double _sin, double _cos, double oldsin, double oldcos, int dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int is\+\_\+new\+\_\+angle\+\_\+smaller (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+sin, }
+\item[{double}]{\+\_\+cos, }
+\item[{double}]{oldsin, }
+\item[{double}]{oldcos, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a9fd3bb35faeb418d6e5d4c2ea5d367dc}{}\label{geomutils_8c_a9fd3bb35faeb418d6e5d4c2ea5d367dc}
+\index{geomutils.\+c@{geomutils.\+c}!mag\+\_\+vector@{mag\+\_\+vector}}
+\index{mag\+\_\+vector@{mag\+\_\+vector}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{mag\+\_\+vector(const double $\ast$v, int dim)}{mag_vector(const double *v, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double mag\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a1ef7b0bd2568ab0711c1ad3a6365a507}{}\label{geomutils_8c_a1ef7b0bd2568ab0711c1ad3a6365a507}
+\index{geomutils.\+c@{geomutils.\+c}!normalized\+\_\+angle@{normalized\+\_\+angle}}
+\index{normalized\+\_\+angle@{normalized\+\_\+angle}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{normalized\+\_\+angle(double ang)}{normalized_angle(double ang)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double normalized\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{double}]{ang}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a1a5ca93682b6e4829cc243258bfaaa2a}{}\label{geomutils_8c_a1a5ca93682b6e4829cc243258bfaaa2a}
+\index{geomutils.\+c@{geomutils.\+c}!Opposite\+\_\+side@{Opposite\+\_\+side}}
+\index{Opposite\+\_\+side@{Opposite\+\_\+side}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{Opposite\+\_\+side(const S\+I\+D\+E side)}{Opposite_side(const SIDE side)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf S\+I\+DE} Opposite\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+I\+DE}}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a2fc6b9bbd21039156c443587da84390e}{}\label{geomutils_8c_a2fc6b9bbd21039156c443587da84390e}
+\index{geomutils.\+c@{geomutils.\+c}!orientation\+\_\+name@{orientation\+\_\+name}}
+\index{orientation\+\_\+name@{orientation\+\_\+name}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{orientation\+\_\+name(\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient)}{orientation_name(ORIENTATION orient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ orientation\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a535b5e120e56a1b9ebda34cc926eff13}{}\label{geomutils_8c_a535b5e120e56a1b9ebda34cc926eff13}
+\index{geomutils.\+c@{geomutils.\+c}!outside\+\_\+point@{outside\+\_\+point}}
+\index{outside\+\_\+point@{outside\+\_\+point}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{outside\+\_\+point(const double $\ast$p, const double $\ast$\+L, const double $\ast$\+U, int dim)}{outside_point(const double *p, const double *L, const double *U, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int outside\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{L, }
+\item[{const double $\ast$}]{U, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a2809c27c784ad6f36eebb42428d8e47f}{}\label{geomutils_8c_a2809c27c784ad6f36eebb42428d8e47f}
+\index{geomutils.\+c@{geomutils.\+c}!plane\+\_\+angle@{plane\+\_\+angle}}
+\index{plane\+\_\+angle@{plane\+\_\+angle}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{plane\+\_\+angle(double $\ast$cen, double $\ast$coords)}{plane_angle(double *cen, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double plane\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{cen, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a1bd08fbe58481956a03b6c357ceba188}{}\label{geomutils_8c_a1bd08fbe58481956a03b6c357ceba188}
+\index{geomutils.\+c@{geomutils.\+c}!print\+\_\+angle\+\_\+direction@{print\+\_\+angle\+\_\+direction}}
+\index{print\+\_\+angle\+\_\+direction@{print\+\_\+angle\+\_\+direction}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+angle\+\_\+direction(const char $\ast$message, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N ang\+\_\+dir, const char $\ast$end)}{print_angle_direction(const char *message, ANGLE_DIRECTION ang_dir, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{ang\+\_\+dir, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ad217758f26327b129b76c673c9c044bf}{}\label{geomutils_8c_ad217758f26327b129b76c673c9c044bf}
+\index{geomutils.\+c@{geomutils.\+c}!print\+\_\+general\+\_\+vector@{print\+\_\+general\+\_\+vector}}
+\index{print\+\_\+general\+\_\+vector@{print\+\_\+general\+\_\+vector}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+general\+\_\+vector(const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)}{print_general_vector(const char *mesg, const double *v, int dim, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg, }
+\item[{const double $\ast$}]{v, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_abd5f87953e545f118370e52668e61bcb}{}\label{geomutils_8c_abd5f87953e545f118370e52668e61bcb}
+\index{geomutils.\+c@{geomutils.\+c}!print\+\_\+orientation@{print\+\_\+orientation}}
+\index{print\+\_\+orientation@{print\+\_\+orientation}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+orientation(const char $\ast$message, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient, const char $\ast$end)}{print_orientation(const char *message, ORIENTATION orient, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a6d602d68303337fd91408bcb9d670119}{}\label{geomutils_8c_a6d602d68303337fd91408bcb9d670119}
+\index{geomutils.\+c@{geomutils.\+c}!print\+\_\+side@{print\+\_\+side}}
+\index{print\+\_\+side@{print\+\_\+side}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+side(const char $\ast$message, S\+I\+D\+E side, const char $\ast$end)}{print_side(const char *message, SIDE side, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message, }
+\item[{{\bf S\+I\+DE}}]{side, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a0cf25a4d41ba0a679e6e93c44063654f}{}\label{geomutils_8c_a0cf25a4d41ba0a679e6e93c44063654f}
+\index{geomutils.\+c@{geomutils.\+c}!random\+\_\+gaussian@{random\+\_\+gaussian}}
+\index{random\+\_\+gaussian@{random\+\_\+gaussian}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{random\+\_\+gaussian(double mu, double sigma, unsigned short int xsubi[3])}{random_gaussian(double mu, double sigma, unsigned short int xsubi[3])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double random\+\_\+gaussian (
+\begin{DoxyParamCaption}
+\item[{double}]{mu, }
+\item[{double}]{sigma, }
+\item[{unsigned short int}]{xsubi\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a05a561eb62557a2217ef99d72921c77f}{}\label{geomutils_8c_a05a561eb62557a2217ef99d72921c77f}
+\index{geomutils.\+c@{geomutils.\+c}!scalar\+\_\+product@{scalar\+\_\+product}}
+\index{scalar\+\_\+product@{scalar\+\_\+product}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{scalar\+\_\+product(const double $\ast$v1, const double $\ast$v2, const int dim)}{scalar_product(const double *v1, const double *v2, const int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double scalar\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v1, }
+\item[{const double $\ast$}]{v2, }
+\item[{const int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ad9f32ae83959bc5c9060577afd161300}{}\label{geomutils_8c_ad9f32ae83959bc5c9060577afd161300}
+\index{geomutils.\+c@{geomutils.\+c}!scaled\+\_\+hypot@{scaled\+\_\+hypot}}
+\index{scaled\+\_\+hypot@{scaled\+\_\+hypot}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{scaled\+\_\+hypot(const double $\ast$p, const double $\ast$h, int dim)}{scaled_hypot(const double *p, const double *h, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double scaled\+\_\+hypot (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{h, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_aa77b544ca5a41a6b869ac0d0d2cf52b7}{}\label{geomutils_8c_aa77b544ca5a41a6b869ac0d0d2cf52b7}
+\index{geomutils.\+c@{geomutils.\+c}!side\+\_\+name@{side\+\_\+name}}
+\index{side\+\_\+name@{side\+\_\+name}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{side\+\_\+name(\+S\+I\+D\+E side)}{side_name(SIDE side)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ side\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+DE}}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a45deceada4fdfc0812548743499b28b7}{}\label{geomutils_8c_a45deceada4fdfc0812548743499b28b7}
+\index{geomutils.\+c@{geomutils.\+c}!sprint\+\_\+general\+\_\+vector@{sprint\+\_\+general\+\_\+vector}}
+\index{sprint\+\_\+general\+\_\+vector@{sprint\+\_\+general\+\_\+vector}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{sprint\+\_\+general\+\_\+vector(char $\ast$s, const char $\ast$mesg, const double $\ast$v, int dim, const char $\ast$end)}{sprint_general_vector(char *s, const char *mesg, const double *v, int dim, const char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void sprint\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{const char $\ast$}]{mesg, }
+\item[{const double $\ast$}]{v, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ac703b9cc497124cdeeb5a36ea786e8b2}{}\label{geomutils_8c_ac703b9cc497124cdeeb5a36ea786e8b2}
+\index{geomutils.\+c@{geomutils.\+c}!triple\+\_\+product@{triple\+\_\+product}}
+\index{triple\+\_\+product@{triple\+\_\+product}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{triple\+\_\+product(const double $\ast$v1, const double $\ast$v2, const double $\ast$v3, int dim)}{triple_product(const double *v1, const double *v2, const double *v3, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double triple\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v1, }
+\item[{const double $\ast$}]{v2, }
+\item[{const double $\ast$}]{v3, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_a8968988053b35926073fdfeac3acbea5}{}\label{geomutils_8c_a8968988053b35926073fdfeac3acbea5}
+\index{geomutils.\+c@{geomutils.\+c}!vector\+\_\+product@{vector\+\_\+product}}
+\index{vector\+\_\+product@{vector\+\_\+product}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{vector\+\_\+product(const double $\ast$v1, const double $\ast$v2, double $\ast$vprod, int dim)}{vector_product(const double *v1, const double *v2, double *vprod, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double vector\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v1, }
+\item[{const double $\ast$}]{v2, }
+\item[{double $\ast$}]{vprod, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_abec5b1c43e67125cd0c1adb03b325ba9}{}\label{geomutils_8c_abec5b1c43e67125cd0c1adb03b325ba9}
+\index{geomutils.\+c@{geomutils.\+c}!vector\+\_\+product\+\_\+on\+\_\+points@{vector\+\_\+product\+\_\+on\+\_\+points}}
+\index{vector\+\_\+product\+\_\+on\+\_\+points@{vector\+\_\+product\+\_\+on\+\_\+points}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{vector\+\_\+product\+\_\+on\+\_\+points(const double $\ast$p0, const double $\ast$p1, const double $\ast$p2, int dim, double $\ast$\+Pout)}{vector_product_on_points(const double *p0, const double *p1, const double *p2, int dim, double *Pout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double vector\+\_\+product\+\_\+on\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p0, }
+\item[{const double $\ast$}]{p1, }
+\item[{const double $\ast$}]{p2, }
+\item[{int}]{dim, }
+\item[{double $\ast$}]{Pout}
+\end{DoxyParamCaption}
+)}\hypertarget{geomutils_8c_ad2c46901fcad00a1304406e3c158846e}{}\label{geomutils_8c_ad2c46901fcad00a1304406e3c158846e}
+
+
+\subsection{Variable Documentation}
+\index{geomutils.\+c@{geomutils.\+c}!E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}}
+\index{E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}!geomutils.\+c@{geomutils.\+c}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+I\+L\+ON}{EPSILON}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double E\+P\+S\+I\+L\+ON = 1.e-\/4}\hypertarget{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}{}\label{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}

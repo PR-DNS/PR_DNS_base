@@ -1,0 +1,544 @@
+\hypertarget{vmalloc_8h}{}\section{D\+N\+S/src/util/vmalloc.h File Reference}
+\label{vmalloc_8h}\index{D\+N\+S/src/util/vmalloc.\+h@{D\+N\+S/src/util/vmalloc.\+h}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vmalloc_8h_a35cd67ba7bb0db8105eb6267467535d7}{C\+H\+AR}~sizeof(char)
+\item 
+\#define \hyperlink{vmalloc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{I\+NT}~sizeof(int)
+\item 
+\#define \hyperlink{vmalloc_8h_ae8690abbffa85934d64d545920e2b108}{F\+L\+O\+AT}~sizeof(double)
+\item 
+\#define \hyperlink{vmalloc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{D\+O\+U\+B\+LE}~sizeof(double)
+\item 
+\#define \hyperlink{vmalloc_8h_affb9fc32698fab7f7b36e0cf8e64c83e}{free}(x)~\hyperlink{vectormalloc_8c_a755477bc08784f606c88ade4f0b57cdd}{f\+\_\+ree}((\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})(x),\#x)/$\ast$ Avoids clash with C library free() $\ast$/
+\item 
+\#define \hyperlink{vmalloc_8h_a813d38b8de8f7b6ae737f9092c4f02af}{scalar}(a,  b)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)
+\item 
+\#define \hyperlink{vmalloc_8h_abce9d731d8a7447a2317d34a9dd70f29}{C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE}
+\item 
+\#define \hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\+\_\+array\+\_\+alloc\+\_\+size}(x,  sz,  str)
+\item 
+\#define \hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}(a,  b,  c)
+\item 
+\#define \hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}(a,  b,  c,  d)
+\item 
+\#define \hyperlink{vmalloc_8h_ae10ca141951fe745003aaf3d009db925}{tri\+\_\+array}(a,  b,  c,  d,  e)
+\item 
+\#define \hyperlink{vmalloc_8h_a2572511d8897bbf36e877b363e4e7d71}{quad\+\_\+array}(a,  b,  c,  d,  e,  f)
+\item 
+\#define \hyperlink{vmalloc_8h_ac2ad55ff122818d79d6e6cbc605e4883}{quin\+\_\+array}(a,  b,  c,  d,  e,  f,  g)
+\item 
+\#define \hyperlink{vmalloc_8h_a87421fec6075db77de27b5b6104b56ff}{sex\+\_\+array}(a,  b,  c,  d,  e,  f,  g,  h)
+\item 
+\#define \hyperlink{vmalloc_8h_adf2dcfa1fa35fb1b457d34e3bf617924}{free\+\_\+from}(a)~\hyperlink{vectormalloc_8c_aa99fc7c4fe780599f4acd869034c2822}{free\+\_\+from\+\_\+T}((\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})a)
+\item 
+\#define \hyperlink{vmalloc_8h_a83a38b9912cebc32f5bfffb3898ab61c}{vmalloc\+\_\+debug}~\hyperlink{vmalloc_8h_ade15873f8317cf2475ce9b7f4bb530e4}{set\+\_\+vmalloc\+\_\+debug}
+\item 
+\#define \hyperlink{vmalloc_8h_ade15873f8317cf2475ce9b7f4bb530e4}{set\+\_\+vmalloc\+\_\+debug}(value)~(\hyperlink{vmalloc_8h_a1facafa3cfe1b28f88dd974841758548}{vmalloc\+\_\+debug\+\_\+on} = value)
+\item 
+\#define \hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,  pointer)    ~((str)-\/$>$alloc.\+pointer=\hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{Y\+ES})
+\item 
+\#define \hyperlink{vmalloc_8h_ad44d09b51d1a144d647abc4dc85da059}{set\+\_\+no\+\_\+alloc}(str,  pointer)    ~((str)-\/$>$alloc.\+pointer=\hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO})
+\item 
+\#define \hyperlink{vmalloc_8h_a0e91aac026da16b0e053ef40fa1bfe74}{Set\+\_\+free}(str,  ptr)    ~if ((str)-\/$>$alloc.\+ptr) \hyperlink{vmalloc_8h_af26c6dff1cac6ddaa4197379c69f66e8}{set\+\_\+free}(str,ptr)
+\item 
+\#define \hyperlink{vmalloc_8h_af26c6dff1cac6ddaa4197379c69f66e8}{set\+\_\+free}(str,  pointer)    ~(\hyperlink{vmalloc_8h_affb9fc32698fab7f7b36e0cf8e64c83e}{free}((str)-\/$>$pointer),(str)-\/$>$alloc.\+pointer=\hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO})
+\item 
+\#define \hyperlink{vmalloc_8h_ae80030940093ca1f45807ae4bc05620f}{V\+E\+C\+T\+OR}(str,  var,  dim,  size)    ~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}(\&((str)-\/$>$var),dim,size))
+\item 
+\#define \hyperlink{vmalloc_8h_ae82c52154a5c7776d309f113d8ad3ce1}{M\+A\+T\+R\+IX}(str,  var,  dim1,  dim2,  size)    ~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}(\&((str)-\/$>$var),dim1,dim2,size))
+\item 
+\#define \hyperlink{vmalloc_8h_ab9f6dd24f4e215a9c41e55ce10d2d23c}{T\+R\+I\+\_\+\+A\+R\+R\+AY}(str,  var,  dim1,  dim2,  dim3,  size)    ~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_ae10ca141951fe745003aaf3d009db925}{tri\+\_\+array}(\&((str)-\/$>$var),dim1,dim2,dim3,size))
+\item 
+\#define \hyperlink{vmalloc_8h_af81ee4439950f094abad4c897de8778a}{A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER}(str,  var,  ptr)    ~(\hyperlink{vmalloc_8h_ad44d09b51d1a144d647abc4dc85da059}{set\+\_\+no\+\_\+alloc}(str,var),(str)-\/$>$var = ptr)
+\item 
+\#define \hyperlink{vmalloc_8h_a24c6fed8fb878b90435eeb80963ebec9}{scalar\+\_\+T}(a,  b,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)
+\item 
+\#define \hyperlink{vmalloc_8h_ae8fab64e5e3dbf6d3224149fb97f571d}{vector\+\_\+T}(a,  b,  c,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,1,b,c)
+\item 
+\#define \hyperlink{vmalloc_8h_a5f367bd4b5877c0f860cffeec876fcfa}{matrix\+\_\+T}(a,  b,  c,  d,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,2,b,c,d)
+\item 
+\#define \hyperlink{vmalloc_8h_a00689917d834106842ef33d97cdd5d7b}{tri\+\_\+array\+\_\+T}(a,  b,  c,  d,  e,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,3,b,c,d,e)
+\item 
+\#define \hyperlink{vmalloc_8h_a9e8fc471f7fa595bc9f4e6df576518f7}{quad\+\_\+array\+\_\+T}(a,  b,  c,  d,  e,  f,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,4,b,c,d,e,f)
+\item 
+\#define \hyperlink{vmalloc_8h_a4ba1d10e51ba6817e4d1b97359cf63f9}{quin\+\_\+array\+\_\+T}(a,  b,  c,  d,  e,  f,  g,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,5,b,c,d,e,f,g)
+\item 
+\#define \hyperlink{vmalloc_8h_a2277c8a82a63320bd4e1ed362eaeb18a}{sex\+\_\+array\+\_\+T}(a,  b,  c,  d,  e,  f,  g,  h,  t)~\hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,6,b,c,d,e,f,g,h)
+\item 
+\#define \hyperlink{vmalloc_8h_ad24dc71d554e2c060a8615e6ffc90d62}{stat\+\_\+scalar}(a,  b)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)
+\item 
+\#define \hyperlink{vmalloc_8h_af358ea01410144df6f50ee606044f2df}{stat\+\_\+vector}(a,  b,  c)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,1,b,c)
+\item 
+\#define \hyperlink{vmalloc_8h_a0bf8d58dccb13de17139b672477c0163}{stat\+\_\+matrix}(a,  b,  c,  d)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,2,b,c,d)
+\item 
+\#define \hyperlink{vmalloc_8h_a92bee361e57202af035b5de3399aea02}{stat\+\_\+tri\+\_\+array}(a,  b,  c,  d,  e)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,3,b,c,d,e)
+\item 
+\#define \hyperlink{vmalloc_8h_a6640a1b39f1905666cbec18a7bec4e8b}{stat\+\_\+quad\+\_\+array}(a,  b,  c,  d,  e,  f)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,4,b,c,d,e,f)
+\item 
+\#define \hyperlink{vmalloc_8h_aed507488bcffad3c7d5f47633eee3302}{stat\+\_\+quin\+\_\+array}(a,  b,  c,  d,  e,  f,  g)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,5,b,c,d,e,f,g)
+\item 
+\#define \hyperlink{vmalloc_8h_ab4cef862783fa049a93ff31d03538533}{stat\+\_\+sex\+\_\+array}(a,  b,  c,  d,  e,  f,  g,  h)~(void) \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T}(\#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}$\ast$)a,6,b,c,d,e,f,g,h)
+\item 
+\#define \hyperlink{vmalloc_8h_a31bff7ae0cc596cab05e16382ea18db9}{stat\+\_\+free\+\_\+from}(a)~\hyperlink{vectormalloc_8c_aa99fc7c4fe780599f4acd869034c2822}{free\+\_\+from\+\_\+T}((\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})a)
+\item 
+\#define \hyperlink{vmalloc_8h_a4baf8e5d3e58bbd71ad5ed78b256074d}{S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR}(str,  var,  dim,  size)~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{uni\+\_\+array}(\&(str-\/$>$var),dim,size))
+\item 
+\#define \hyperlink{vmalloc_8h_abfcec9e105c3a433439b7e27e897f92d}{S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX}(str,  var,  dim1,  dim2,  size)~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{bi\+\_\+array}(\&(str-\/$>$var),dim1,dim2,size))
+\item 
+\#define \hyperlink{vmalloc_8h_aaa63a6431cbec7b873852111cf23d9d6}{S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY}(str,  var,  dim1,  dim2,  dim3,  size)~(\hyperlink{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{set\+\_\+alloc}(str,var),\hyperlink{vmalloc_8h_ae10ca141951fe745003aaf3d009db925}{tri\+\_\+array}(\&(str-\/$>$var),dim1,dim2,dim3,size))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{vmalloc_8h_a1facafa3cfe1b28f88dd974841758548}{vmalloc\+\_\+debug\+\_\+on}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{vmalloc.\+h@{vmalloc.\+h}!A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER@{A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER}}
+\index{A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER@{A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER}{ASSIGN_ARRAY_POINTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+S\+I\+G\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+P\+O\+I\+N\+T\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+no\+\_\+alloc}(str,var),(str)-\/$>$var = ptr)}\hypertarget{vmalloc_8h_af81ee4439950f094abad4c897de8778a}{}\label{vmalloc_8h_af81ee4439950f094abad4c897de8778a}
+\index{vmalloc.\+h@{vmalloc.\+h}!bi\+\_\+array@{bi\+\_\+array}}
+\index{bi\+\_\+array@{bi\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{bi\+\_\+array}{bi_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bi\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}{}\label{vmalloc_8h_a4051624b4c09ab048eb3d14fe10c08b8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(***a,d,\textcolor{stringliteral}{"bi\_array"}),             \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,2,b,c,d))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!C\+H\+AR@{C\+H\+AR}}
+\index{C\+H\+AR@{C\+H\+AR}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{C\+H\+AR}{CHAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+AR~sizeof(char)}\hypertarget{vmalloc_8h_a35cd67ba7bb0db8105eb6267467535d7}{}\label{vmalloc_8h_a35cd67ba7bb0db8105eb6267467535d7}
+\index{vmalloc.\+h@{vmalloc.\+h}!C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE@{C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE}}
+\index{C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE@{C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE}{CHECK_ALLOC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+A\+L\+L\+O\+C\+\_\+\+S\+I\+ZE}\hypertarget{vmalloc_8h_abce9d731d8a7447a2317d34a9dd70f29}{}\label{vmalloc_8h_abce9d731d8a7447a2317d34a9dd70f29}
+\index{vmalloc.\+h@{vmalloc.\+h}!check\+\_\+array\+\_\+alloc\+\_\+size@{check\+\_\+array\+\_\+alloc\+\_\+size}}
+\index{check\+\_\+array\+\_\+alloc\+\_\+size@{check\+\_\+array\+\_\+alloc\+\_\+size}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{check\+\_\+array\+\_\+alloc\+\_\+size}{check_array_alloc_size}}]{\setlength{\rightskip}{0pt plus 5cm}\#define check\+\_\+array\+\_\+alloc\+\_\+size(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{sz, }
+\item[{}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{}\label{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((\textcolor{keyword}{sizeof}(x) > (sz)) ? printf(\textcolor{stringliteral}{"WARNING %s alloc in file %s line %d, "}    \(\backslash\)
+                               \textcolor{stringliteral}{"sizeof(%s) = %lu > %lu\(\backslash\)n"},      \(\backslash\)
+                           str,\_\_FILE\_\_,\_\_LINE\_\_,#x,        \(\backslash\)
+                   (\textcolor{keywordtype}{size\_t})\textcolor{keyword}{sizeof}(x),(\textcolor{keywordtype}{size\_t})(sz)) :    \(\backslash\)
+                   0)
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!D\+O\+U\+B\+LE@{D\+O\+U\+B\+LE}}
+\index{D\+O\+U\+B\+LE@{D\+O\+U\+B\+LE}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+LE}{DOUBLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+LE~sizeof(double)}\hypertarget{vmalloc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{}\label{vmalloc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}
+\index{vmalloc.\+h@{vmalloc.\+h}!F\+L\+O\+AT@{F\+L\+O\+AT}}
+\index{F\+L\+O\+AT@{F\+L\+O\+AT}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+AT}{FLOAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+AT~sizeof(double)}\hypertarget{vmalloc_8h_ae8690abbffa85934d64d545920e2b108}{}\label{vmalloc_8h_ae8690abbffa85934d64d545920e2b108}
+\index{vmalloc.\+h@{vmalloc.\+h}!free@{free}}
+\index{free@{free}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{free}{free}}]{\setlength{\rightskip}{0pt plus 5cm}\#define free(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf f\+\_\+ree}(({\bf P\+O\+I\+N\+T\+ER})(x),\#x)/$\ast$ Avoids clash with C library free() $\ast$/}\hypertarget{vmalloc_8h_affb9fc32698fab7f7b36e0cf8e64c83e}{}\label{vmalloc_8h_affb9fc32698fab7f7b36e0cf8e64c83e}
+\index{vmalloc.\+h@{vmalloc.\+h}!free\+\_\+from@{free\+\_\+from}}
+\index{free\+\_\+from@{free\+\_\+from}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{free\+\_\+from}{free_from}}]{\setlength{\rightskip}{0pt plus 5cm}\#define free\+\_\+from(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf free\+\_\+from\+\_\+T}(({\bf P\+O\+I\+N\+T\+ER})a)}\hypertarget{vmalloc_8h_adf2dcfa1fa35fb1b457d34e3bf617924}{}\label{vmalloc_8h_adf2dcfa1fa35fb1b457d34e3bf617924}
+\index{vmalloc.\+h@{vmalloc.\+h}!I\+NT@{I\+NT}}
+\index{I\+NT@{I\+NT}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{I\+NT}{INT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+NT~sizeof(int)}\hypertarget{vmalloc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{}\label{vmalloc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}
+\index{vmalloc.\+h@{vmalloc.\+h}!M\+A\+T\+R\+IX@{M\+A\+T\+R\+IX}}
+\index{M\+A\+T\+R\+IX@{M\+A\+T\+R\+IX}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+T\+R\+IX}{MATRIX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+R\+IX(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim1, }
+\item[{}]{dim2, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf bi\+\_\+array}(\&((str)-\/$>$var),dim1,dim2,size))}\hypertarget{vmalloc_8h_ae82c52154a5c7776d309f113d8ad3ce1}{}\label{vmalloc_8h_ae82c52154a5c7776d309f113d8ad3ce1}
+\index{vmalloc.\+h@{vmalloc.\+h}!matrix\+\_\+T@{matrix\+\_\+T}}
+\index{matrix\+\_\+T@{matrix\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{matrix\+\_\+T}{matrix_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define matrix\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,2,b,c,d)}\hypertarget{vmalloc_8h_a5f367bd4b5877c0f860cffeec876fcfa}{}\label{vmalloc_8h_a5f367bd4b5877c0f860cffeec876fcfa}
+\index{vmalloc.\+h@{vmalloc.\+h}!quad\+\_\+array@{quad\+\_\+array}}
+\index{quad\+\_\+array@{quad\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{quad\+\_\+array}{quad_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quad\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_a2572511d8897bbf36e877b363e4e7d71}{}\label{vmalloc_8h_a2572511d8897bbf36e877b363e4e7d71}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(*****a,f,\textcolor{stringliteral}{"quad\_array"}),     \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,4,b,c,d,e,f))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!quad\+\_\+array\+\_\+T@{quad\+\_\+array\+\_\+T}}
+\index{quad\+\_\+array\+\_\+T@{quad\+\_\+array\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{quad\+\_\+array\+\_\+T}{quad_array_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quad\+\_\+array\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,4,b,c,d,e,f)}\hypertarget{vmalloc_8h_a9e8fc471f7fa595bc9f4e6df576518f7}{}\label{vmalloc_8h_a9e8fc471f7fa595bc9f4e6df576518f7}
+\index{vmalloc.\+h@{vmalloc.\+h}!quin\+\_\+array@{quin\+\_\+array}}
+\index{quin\+\_\+array@{quin\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{quin\+\_\+array}{quin_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quin\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_ac2ad55ff122818d79d6e6cbc605e4883}{}\label{vmalloc_8h_ac2ad55ff122818d79d6e6cbc605e4883}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(******a,g,\textcolor{stringliteral}{"quin\_array"}),        \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,5,b,c,d,e,f,g))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!quin\+\_\+array\+\_\+T@{quin\+\_\+array\+\_\+T}}
+\index{quin\+\_\+array\+\_\+T@{quin\+\_\+array\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{quin\+\_\+array\+\_\+T}{quin_array_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define quin\+\_\+array\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,5,b,c,d,e,f,g)}\hypertarget{vmalloc_8h_a4ba1d10e51ba6817e4d1b97359cf63f9}{}\label{vmalloc_8h_a4ba1d10e51ba6817e4d1b97359cf63f9}
+\index{vmalloc.\+h@{vmalloc.\+h}!scalar@{scalar}}
+\index{scalar@{scalar}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{scalar}{scalar}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scalar(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)}\hypertarget{vmalloc_8h_a813d38b8de8f7b6ae737f9092c4f02af}{}\label{vmalloc_8h_a813d38b8de8f7b6ae737f9092c4f02af}
+\index{vmalloc.\+h@{vmalloc.\+h}!scalar\+\_\+T@{scalar\+\_\+T}}
+\index{scalar\+\_\+T@{scalar\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{scalar\+\_\+T}{scalar_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define scalar\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)}\hypertarget{vmalloc_8h_a24c6fed8fb878b90435eeb80963ebec9}{}\label{vmalloc_8h_a24c6fed8fb878b90435eeb80963ebec9}
+\index{vmalloc.\+h@{vmalloc.\+h}!set\+\_\+alloc@{set\+\_\+alloc}}
+\index{set\+\_\+alloc@{set\+\_\+alloc}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+alloc}{set_alloc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+alloc(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{pointer}
+\end{DoxyParamCaption}
+)~((str)-\/$>$alloc.\+pointer={\bf Y\+ES})}\hypertarget{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}{}\label{vmalloc_8h_ab9fe81fffa6cefabf7c85b468b4cbefa}
+\index{vmalloc.\+h@{vmalloc.\+h}!Set\+\_\+free@{Set\+\_\+free}}
+\index{Set\+\_\+free@{Set\+\_\+free}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{Set\+\_\+free}{Set_free}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Set\+\_\+free(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~if ((str)-\/$>$alloc.\+ptr) {\bf set\+\_\+free}(str,ptr)}\hypertarget{vmalloc_8h_a0e91aac026da16b0e053ef40fa1bfe74}{}\label{vmalloc_8h_a0e91aac026da16b0e053ef40fa1bfe74}
+\index{vmalloc.\+h@{vmalloc.\+h}!set\+\_\+free@{set\+\_\+free}}
+\index{set\+\_\+free@{set\+\_\+free}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+free}{set_free}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+free(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{pointer}
+\end{DoxyParamCaption}
+)~({\bf free}((str)-\/$>$pointer),(str)-\/$>$alloc.\+pointer={\bf NO})}\hypertarget{vmalloc_8h_af26c6dff1cac6ddaa4197379c69f66e8}{}\label{vmalloc_8h_af26c6dff1cac6ddaa4197379c69f66e8}
+\index{vmalloc.\+h@{vmalloc.\+h}!set\+\_\+no\+\_\+alloc@{set\+\_\+no\+\_\+alloc}}
+\index{set\+\_\+no\+\_\+alloc@{set\+\_\+no\+\_\+alloc}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+no\+\_\+alloc}{set_no_alloc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+no\+\_\+alloc(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{pointer}
+\end{DoxyParamCaption}
+)~((str)-\/$>$alloc.\+pointer={\bf NO})}\hypertarget{vmalloc_8h_ad44d09b51d1a144d647abc4dc85da059}{}\label{vmalloc_8h_ad44d09b51d1a144d647abc4dc85da059}
+\index{vmalloc.\+h@{vmalloc.\+h}!set\+\_\+vmalloc\+\_\+debug@{set\+\_\+vmalloc\+\_\+debug}}
+\index{set\+\_\+vmalloc\+\_\+debug@{set\+\_\+vmalloc\+\_\+debug}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+vmalloc\+\_\+debug}{set_vmalloc_debug}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+vmalloc\+\_\+debug(
+\begin{DoxyParamCaption}
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~({\bf vmalloc\+\_\+debug\+\_\+on} = value)}\hypertarget{vmalloc_8h_ade15873f8317cf2475ce9b7f4bb530e4}{}\label{vmalloc_8h_ade15873f8317cf2475ce9b7f4bb530e4}
+\index{vmalloc.\+h@{vmalloc.\+h}!sex\+\_\+array@{sex\+\_\+array}}
+\index{sex\+\_\+array@{sex\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{sex\+\_\+array}{sex_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sex\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_a87421fec6075db77de27b5b6104b56ff}{}\label{vmalloc_8h_a87421fec6075db77de27b5b6104b56ff}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(******a,h,\textcolor{stringliteral}{"sex\_array"}),     \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,6,b,c,d,e,f,g,h))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!sex\+\_\+array\+\_\+T@{sex\+\_\+array\+\_\+T}}
+\index{sex\+\_\+array\+\_\+T@{sex\+\_\+array\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{sex\+\_\+array\+\_\+T}{sex_array_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sex\+\_\+array\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{h, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,6,b,c,d,e,f,g,h)}\hypertarget{vmalloc_8h_a2277c8a82a63320bd4e1ed362eaeb18a}{}\label{vmalloc_8h_a2277c8a82a63320bd4e1ed362eaeb18a}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+free\+\_\+from@{stat\+\_\+free\+\_\+from}}
+\index{stat\+\_\+free\+\_\+from@{stat\+\_\+free\+\_\+from}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+free\+\_\+from}{stat_free_from}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+free\+\_\+from(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf free\+\_\+from\+\_\+T}(({\bf P\+O\+I\+N\+T\+ER})a)}\hypertarget{vmalloc_8h_a31bff7ae0cc596cab05e16382ea18db9}{}\label{vmalloc_8h_a31bff7ae0cc596cab05e16382ea18db9}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+matrix@{stat\+\_\+matrix}}
+\index{stat\+\_\+matrix@{stat\+\_\+matrix}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+matrix}{stat_matrix}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+matrix(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,2,b,c,d)}\hypertarget{vmalloc_8h_a0bf8d58dccb13de17139b672477c0163}{}\label{vmalloc_8h_a0bf8d58dccb13de17139b672477c0163}
+\index{vmalloc.\+h@{vmalloc.\+h}!S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX@{S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX}}
+\index{S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX@{S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX}{STAT_MATRIX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+M\+A\+T\+R\+IX(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim1, }
+\item[{}]{dim2, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf bi\+\_\+array}(\&(str-\/$>$var),dim1,dim2,size))}\hypertarget{vmalloc_8h_abfcec9e105c3a433439b7e27e897f92d}{}\label{vmalloc_8h_abfcec9e105c3a433439b7e27e897f92d}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+quad\+\_\+array@{stat\+\_\+quad\+\_\+array}}
+\index{stat\+\_\+quad\+\_\+array@{stat\+\_\+quad\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+quad\+\_\+array}{stat_quad_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+quad\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,4,b,c,d,e,f)}\hypertarget{vmalloc_8h_a6640a1b39f1905666cbec18a7bec4e8b}{}\label{vmalloc_8h_a6640a1b39f1905666cbec18a7bec4e8b}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+quin\+\_\+array@{stat\+\_\+quin\+\_\+array}}
+\index{stat\+\_\+quin\+\_\+array@{stat\+\_\+quin\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+quin\+\_\+array}{stat_quin_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+quin\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,5,b,c,d,e,f,g)}\hypertarget{vmalloc_8h_aed507488bcffad3c7d5f47633eee3302}{}\label{vmalloc_8h_aed507488bcffad3c7d5f47633eee3302}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+scalar@{stat\+\_\+scalar}}
+\index{stat\+\_\+scalar@{stat\+\_\+scalar}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+scalar}{stat_scalar}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+scalar(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,1,1,b)}\hypertarget{vmalloc_8h_ad24dc71d554e2c060a8615e6ffc90d62}{}\label{vmalloc_8h_ad24dc71d554e2c060a8615e6ffc90d62}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+sex\+\_\+array@{stat\+\_\+sex\+\_\+array}}
+\index{stat\+\_\+sex\+\_\+array@{stat\+\_\+sex\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+sex\+\_\+array}{stat_sex_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+sex\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f, }
+\item[{}]{g, }
+\item[{}]{h}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,6,b,c,d,e,f,g,h)}\hypertarget{vmalloc_8h_ab4cef862783fa049a93ff31d03538533}{}\label{vmalloc_8h_ab4cef862783fa049a93ff31d03538533}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+tri\+\_\+array@{stat\+\_\+tri\+\_\+array}}
+\index{stat\+\_\+tri\+\_\+array@{stat\+\_\+tri\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+tri\+\_\+array}{stat_tri_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+tri\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,3,b,c,d,e)}\hypertarget{vmalloc_8h_a92bee361e57202af035b5de3399aea02}{}\label{vmalloc_8h_a92bee361e57202af035b5de3399aea02}
+\index{vmalloc.\+h@{vmalloc.\+h}!S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY@{S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY}}
+\index{S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY@{S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY}{STAT_TRI_ARRAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+T\+R\+I\+\_\+\+A\+R\+R\+AY(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim1, }
+\item[{}]{dim2, }
+\item[{}]{dim3, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf tri\+\_\+array}(\&(str-\/$>$var),dim1,dim2,dim3,size))}\hypertarget{vmalloc_8h_aaa63a6431cbec7b873852111cf23d9d6}{}\label{vmalloc_8h_aaa63a6431cbec7b873852111cf23d9d6}
+\index{vmalloc.\+h@{vmalloc.\+h}!stat\+\_\+vector@{stat\+\_\+vector}}
+\index{stat\+\_\+vector@{stat\+\_\+vector}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{stat\+\_\+vector}{stat_vector}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\+\_\+vector(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(void) {\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,1,b,c)}\hypertarget{vmalloc_8h_af358ea01410144df6f50ee606044f2df}{}\label{vmalloc_8h_af358ea01410144df6f50ee606044f2df}
+\index{vmalloc.\+h@{vmalloc.\+h}!S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR@{S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR}}
+\index{S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR@{S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR}{STAT_VECTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+\_\+\+V\+E\+C\+T\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf uni\+\_\+array}(\&(str-\/$>$var),dim,size))}\hypertarget{vmalloc_8h_a4baf8e5d3e58bbd71ad5ed78b256074d}{}\label{vmalloc_8h_a4baf8e5d3e58bbd71ad5ed78b256074d}
+\index{vmalloc.\+h@{vmalloc.\+h}!tri\+\_\+array@{tri\+\_\+array}}
+\index{tri\+\_\+array@{tri\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{tri\+\_\+array}{tri_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tri\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_ae10ca141951fe745003aaf3d009db925}{}\label{vmalloc_8h_ae10ca141951fe745003aaf3d009db925}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(****a,e,\textcolor{stringliteral}{"tri\_array"}),           \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,3,b,c,d,e))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!T\+R\+I\+\_\+\+A\+R\+R\+AY@{T\+R\+I\+\_\+\+A\+R\+R\+AY}}
+\index{T\+R\+I\+\_\+\+A\+R\+R\+AY@{T\+R\+I\+\_\+\+A\+R\+R\+AY}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{T\+R\+I\+\_\+\+A\+R\+R\+AY}{TRI_ARRAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+I\+\_\+\+A\+R\+R\+AY(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim1, }
+\item[{}]{dim2, }
+\item[{}]{dim3, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf tri\+\_\+array}(\&((str)-\/$>$var),dim1,dim2,dim3,size))}\hypertarget{vmalloc_8h_ab9f6dd24f4e215a9c41e55ce10d2d23c}{}\label{vmalloc_8h_ab9f6dd24f4e215a9c41e55ce10d2d23c}
+\index{vmalloc.\+h@{vmalloc.\+h}!tri\+\_\+array\+\_\+T@{tri\+\_\+array\+\_\+T}}
+\index{tri\+\_\+array\+\_\+T@{tri\+\_\+array\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{tri\+\_\+array\+\_\+T}{tri_array_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tri\+\_\+array\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,3,b,c,d,e)}\hypertarget{vmalloc_8h_a00689917d834106842ef33d97cdd5d7b}{}\label{vmalloc_8h_a00689917d834106842ef33d97cdd5d7b}
+\index{vmalloc.\+h@{vmalloc.\+h}!uni\+\_\+array@{uni\+\_\+array}}
+\index{uni\+\_\+array@{uni\+\_\+array}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{uni\+\_\+array}{uni_array}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uni\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}{}\label{vmalloc_8h_a40a101b952e34c515d0804176ce37ded}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((void)\hyperlink{vmalloc_8h_acd9ec2fe13c8bb3385a3611db85d5f43}{check\_array\_alloc\_size}(**a,c,\textcolor{stringliteral}{"uni\_array"}),             \(\backslash\)
+     (void) \hyperlink{uprotos_8h_a4074be219bb783c44bb161a3b7e5ea5b}{array\_T}(#a,(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{POINTER}*)a,1,b,c))
+\end{DoxyCode}
+\index{vmalloc.\+h@{vmalloc.\+h}!V\+E\+C\+T\+OR@{V\+E\+C\+T\+OR}}
+\index{V\+E\+C\+T\+OR@{V\+E\+C\+T\+OR}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{V\+E\+C\+T\+OR}{VECTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+C\+T\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{str, }
+\item[{}]{var, }
+\item[{}]{dim, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~({\bf set\+\_\+alloc}(str,var),{\bf uni\+\_\+array}(\&((str)-\/$>$var),dim,size))}\hypertarget{vmalloc_8h_ae80030940093ca1f45807ae4bc05620f}{}\label{vmalloc_8h_ae80030940093ca1f45807ae4bc05620f}
+\index{vmalloc.\+h@{vmalloc.\+h}!vector\+\_\+T@{vector\+\_\+T}}
+\index{vector\+\_\+T@{vector\+\_\+T}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{vector\+\_\+T}{vector_T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vector\+\_\+T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf array\+\_\+T}(\#a,({\bf P\+O\+I\+N\+T\+ER}$\ast$)a,1,b,c)}\hypertarget{vmalloc_8h_ae8fab64e5e3dbf6d3224149fb97f571d}{}\label{vmalloc_8h_ae8fab64e5e3dbf6d3224149fb97f571d}
+\index{vmalloc.\+h@{vmalloc.\+h}!vmalloc\+\_\+debug@{vmalloc\+\_\+debug}}
+\index{vmalloc\+\_\+debug@{vmalloc\+\_\+debug}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{vmalloc\+\_\+debug}{vmalloc_debug}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vmalloc\+\_\+debug~{\bf set\+\_\+vmalloc\+\_\+debug}}\hypertarget{vmalloc_8h_a83a38b9912cebc32f5bfffb3898ab61c}{}\label{vmalloc_8h_a83a38b9912cebc32f5bfffb3898ab61c}
+
+
+\subsection{Variable Documentation}
+\index{vmalloc.\+h@{vmalloc.\+h}!vmalloc\+\_\+debug\+\_\+on@{vmalloc\+\_\+debug\+\_\+on}}
+\index{vmalloc\+\_\+debug\+\_\+on@{vmalloc\+\_\+debug\+\_\+on}!vmalloc.\+h@{vmalloc.\+h}}
+\subsubsection[{\texorpdfstring{vmalloc\+\_\+debug\+\_\+on}{vmalloc_debug_on}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} int vmalloc\+\_\+debug\+\_\+on}\hypertarget{vmalloc_8h_a1facafa3cfe1b28f88dd974841758548}{}\label{vmalloc_8h_a1facafa3cfe1b28f88dd974841758548}

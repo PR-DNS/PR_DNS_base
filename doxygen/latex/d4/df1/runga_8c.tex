@@ -1,0 +1,136 @@
+\hypertarget{runga_8c}{}\section{D\+N\+S/src/util/runga.c File Reference}
+\label{runga_8c}\index{D\+N\+S/src/util/runga.\+c@{D\+N\+S/src/util/runga.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{runga_8c_a5a184988e405c8504f1fb7f425b1f0c2}{rk\+\_\+warning}(s)
+\item 
+\#define \hyperlink{runga_8c_a2533d29c03f34195e34e0cf393f8a94d}{set\+\_\+error\+\_\+message}(mesg,  fname)
+\item 
+\#define \hyperlink{runga_8c_af738b6958d87eb50813239c3e4f08161}{adjust\+\_\+step\+\_\+for\+\_\+status1}(stat,  H,  H\+M\+IN)
+\item 
+\#define \hyperlink{runga_8c_a4e92257c9e6087bf1c3cec9b15155341}{adjust\+\_\+step\+\_\+for\+\_\+status2}(stat,  H,  H\+O\+LD,  H\+M\+IN)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{runga_8c_a43a64a0de80b4de67f16969e9daa787f}{rk1} (double, double $\ast$, double $\ast$, int, double, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$)(double, double $\ast$, double $\ast$, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{runga_8c_ac7801084eb70f824265ce1fa6b41fb28}{runga\+\_\+kutta} (double x0, double $\ast$y0, double x1, double $\ast$y1, double $\ast$H, int n, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$feval)(double, double $\ast$, double $\ast$, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double eps, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} parameters)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{runga.\+c@{runga.\+c}!adjust\+\_\+step\+\_\+for\+\_\+status1@{adjust\+\_\+step\+\_\+for\+\_\+status1}}
+\index{adjust\+\_\+step\+\_\+for\+\_\+status1@{adjust\+\_\+step\+\_\+for\+\_\+status1}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+step\+\_\+for\+\_\+status1}{adjust_step_for_status1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define adjust\+\_\+step\+\_\+for\+\_\+status1(
+\begin{DoxyParamCaption}
+\item[{}]{stat, }
+\item[{}]{H, }
+\item[{}]{H\+M\+IN}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_af738b6958d87eb50813239c3e4f08161}{}\label{runga_8c_af738b6958d87eb50813239c3e4f08161}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch} ((stat))                         \(\backslash\)
+    \{                               \(\backslash\)
+    case \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES}:                            \(\backslash\)
+        break;                          \(\backslash\)
+    case \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}:                          \(\backslash\)
+        if (fabs((H)) > HMIN)                   \(\backslash\)
+        \{                               \(\backslash\)
+            (H) *= 0.5;                     \(\backslash\)
+            goto restart\_loop;                  \(\backslash\)
+        \}                               \(\backslash\)
+        else                            \(\backslash\)
+            return \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO};                        \(\backslash\)
+    \}
+\end{DoxyCode}
+\index{runga.\+c@{runga.\+c}!adjust\+\_\+step\+\_\+for\+\_\+status2@{adjust\+\_\+step\+\_\+for\+\_\+status2}}
+\index{adjust\+\_\+step\+\_\+for\+\_\+status2@{adjust\+\_\+step\+\_\+for\+\_\+status2}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+step\+\_\+for\+\_\+status2}{adjust_step_for_status2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define adjust\+\_\+step\+\_\+for\+\_\+status2(
+\begin{DoxyParamCaption}
+\item[{}]{stat, }
+\item[{}]{H, }
+\item[{}]{H\+O\+LD, }
+\item[{}]{H\+M\+IN}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_a4e92257c9e6087bf1c3cec9b15155341}{}\label{runga_8c_a4e92257c9e6087bf1c3cec9b15155341}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch} ((stat))                         \(\backslash\)
+    \{                               \(\backslash\)
+    case \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES}:                            \(\backslash\)
+        break;                          \(\backslash\)
+    case \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}:                          \(\backslash\)
+        if (fabs((H)) > HMIN)                   \(\backslash\)
+        \{                               \(\backslash\)
+            (H) = (HOLD);                       \(\backslash\)
+            goto advance\_solution;                  \(\backslash\)
+        \}                               \(\backslash\)
+        else                            \(\backslash\)
+            return \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO};                        \(\backslash\)
+    \}
+\end{DoxyCode}
+\index{runga.\+c@{runga.\+c}!rk\+\_\+warning@{rk\+\_\+warning}}
+\index{rk\+\_\+warning@{rk\+\_\+warning}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{rk\+\_\+warning}{rk_warning}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rk\+\_\+warning(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_a5a184988e405c8504f1fb7f425b1f0c2}{}\label{runga_8c_a5a184988e405c8504f1fb7f425b1f0c2}
+\index{runga.\+c@{runga.\+c}!set\+\_\+error\+\_\+message@{set\+\_\+error\+\_\+message}}
+\index{set\+\_\+error\+\_\+message@{set\+\_\+error\+\_\+message}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+error\+\_\+message}{set_error_message}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+error\+\_\+message(
+\begin{DoxyParamCaption}
+\item[{}]{mesg, }
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_a2533d29c03f34195e34e0cf393f8a94d}{}\label{runga_8c_a2533d29c03f34195e34e0cf393f8a94d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                               \(\backslash\)
+        char s[80];                     \(\backslash\)
+        (void) sprintf(s,\textcolor{stringliteral}{"%s at line %d"},mesg,\_\_LINE\_\_);    \(\backslash\)
+        if (fname != NULL)                  \(\backslash\)
+        \{                           \(\backslash\)
+            (void) strcat(s,\textcolor{stringliteral}{" in "});            \(\backslash\)
+            (void) strcat(s,fname);             \(\backslash\)
+            (void) strcat(s,\textcolor{stringliteral}{"()"});              \(\backslash\)
+        \}                           \hyperlink{runga_8c_a5a184988e405c8504f1fb7f425b1f0c2}{\(\backslash\)}
+\hyperlink{runga_8c_a5a184988e405c8504f1fb7f425b1f0c2}{        rk\_warning}(s);                      \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{runga.\+c@{runga.\+c}!rk1@{rk1}}
+\index{rk1@{rk1}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{rk1(double, double $\ast$, double $\ast$, int, double, boolean($\ast$)(double, double $\ast$, double $\ast$, int, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R)}{rk1(double, double *, double *, int, double, boolean(*)(double, double *, double *, int, POINTER), POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} rk1 (
+\begin{DoxyParamCaption}
+\item[{double}]{x0, }
+\item[{double $\ast$}]{y0, }
+\item[{double $\ast$}]{eta, }
+\item[{int}]{n, }
+\item[{double}]{h, }
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, double $\ast$, int, {\bf P\+O\+I\+N\+T\+ER})}]{feval, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_a43a64a0de80b4de67f16969e9daa787f}{}\label{runga_8c_a43a64a0de80b4de67f16969e9daa787f}
+\index{runga.\+c@{runga.\+c}!runga\+\_\+kutta@{runga\+\_\+kutta}}
+\index{runga\+\_\+kutta@{runga\+\_\+kutta}!runga.\+c@{runga.\+c}}
+\subsubsection[{\texorpdfstring{runga\+\_\+kutta(double x0, double $\ast$y0, double x1, double $\ast$y1, double $\ast$\+H, int n, boolean($\ast$feval)(double, double $\ast$, double $\ast$, int, P\+O\+I\+N\+T\+E\+R), double eps, P\+O\+I\+N\+T\+E\+R parameters)}{runga_kutta(double x0, double *y0, double x1, double *y1, double *H, int n, boolean(*feval)(double, double *, double *, int, POINTER), double eps, POINTER parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} runga\+\_\+kutta (
+\begin{DoxyParamCaption}
+\item[{double}]{x0, }
+\item[{double $\ast$}]{y0, }
+\item[{double}]{x1, }
+\item[{double $\ast$}]{y1, }
+\item[{double $\ast$}]{H, }
+\item[{int}]{n, }
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, double $\ast$, int, {\bf P\+O\+I\+N\+T\+ER})}]{feval, }
+\item[{double}]{eps, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{runga_8c_ac7801084eb70f824265ce1fa6b41fb28}{}\label{runga_8c_ac7801084eb70f824265ce1fa6b41fb28}

@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['join_5fcfamilies',['join_cfamilies',['../d5/df9/fprotos_8h.html#a0e3e721140b5b9f9d03a6ec2ad5bb7c0',1,'join_cfamilies(O_CURVE_FAMILY **, O_CURVE_FAMILY *):&#160;frp1.c'],['../d4/d97/frp1_8c.html#a1638b5af12a507f3002703af46b57e8f',1,'join_cfamilies(O_CURVE_FAMILY **cf1, O_CURVE_FAMILY *cf2):&#160;frp1.c']]],
+  ['join_5fcurves',['join_curves',['../da/d3d/intfc_8c.html#aed1389c147e1402899b70bd82540ddf7',1,'join_curves(CURVE *curve1, CURVE *curve2, COMPONENT left, COMPONENT right, BOND **bond_at_join):&#160;intfc.c'],['../d5/d85/iprotos_8h.html#abb2dd48297394313a1d86e780bd262d1',1,'join_curves(CURVE *, CURVE *, COMPONENT, COMPONENT, BOND **):&#160;intfc.c']]],
+  ['join_5fcurves_5fat_5fclosed_5fnodes',['join_curves_at_closed_nodes',['../d5/df9/fprotos_8h.html#a0e3a855955736e8e0f0d13ad70cf1bd8',1,'join_curves_at_closed_nodes(INTERFACE *):&#160;fredist2d.c'],['../d4/dfa/fredist2d_8c.html#a8e37fc0f36e924554383d8517d8ec891',1,'join_curves_at_closed_nodes(INTERFACE *intfc):&#160;fredist2d.c']]],
+  ['join_5fpropagated_5fcurves',['join_propagated_curves',['../d5/df9/fprotos_8h.html#ad12c1417eed8e862ae59eacbf117e9e6',1,'join_propagated_curves(NODE **, CURVE **, O_CURVE **, O_CURVE **, int, Front *, Front *, POINTER, RPROBLEM *):&#160;frp2.c'],['../de/d1a/frp2_8c.html#a8413e68d1fd50e694ecdb3e2bd170c4f',1,'join_propagated_curves(NODE **newn, CURVE **newc, O_CURVE **oc, O_CURVE **oldoc, int add_new_node, Front *front, Front *newfront, POINTER wave, RPROBLEM *rp):&#160;frp2.c']]],
+  ['join_5fsurfaces',['join_surfaces',['../d5/d85/iprotos_8h.html#a4f38c86e6e52ab2c797ea5315902ca1d',1,'join_surfaces(CURVE *):&#160;userhooks.c'],['../d6/de9/userhooks_8c.html#af272fc06c5115cf4f27d73d3486ac690',1,'join_surfaces(CURVE *c):&#160;userhooks.c']]]
+];

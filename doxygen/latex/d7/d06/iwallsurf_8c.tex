@@ -1,0 +1,97 @@
+\hypertarget{iwallsurf_8c}{}\section{D\+N\+S/src/intfc/iwallsurf.c File Reference}
+\label{iwallsurf_8c}\index{D\+N\+S/src/intfc/iwallsurf.\+c@{D\+N\+S/src/intfc/iwallsurf.\+c}}
+{\ttfamily \#include $<$intfc/int.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{iwallsurf_8c_afe759d2b6c4ff043628d467079aa4539}{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}i\+\_\+wall\+\_\+surf\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iwallsurf_8c_a6bb9e9c29567a9430efb846d0c826cd4}{compare\+\_\+surf} (const void $\ast$, const void $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iwallsurf_8c_ab0ba01a5fd4945771576f9ff6e9abab0}{set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iwallsurf_8c_af930d0393bd48b23fff55c3deab9996f}{set\+\_\+is\+\_\+wall\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{iwallsurf_8c_a5fdc1751a24fef03d8a7e43797c7e86d}{is\+\_\+wall\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iwallsurf_8c_a1774a6c67a883e0b5a3071d48274a826}{get\+\_\+default\+\_\+fluid\+\_\+comp} (int $\ast$comp1, int $\ast$comp2, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iwallsurf_8c_aca3a1f21cf922c52028c4799e03f55c5}{reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iwallsurf_8c_a61210642ae57d74a5cba1e91b8987cbd}{set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{iwallsurf_8c_a310f01cf4f302e80f0656255b4a8c368}{add\+\_\+to\+\_\+o\+\_\+surfaces} (\hyperlink{int_8h_a95af32827016a9c45bc63bb98c11a75c}{O\+\_\+\+S\+U\+R\+F\+A\+CE} $\ast$$\ast$sarr, int $\ast$n, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$sp\mbox{[}4\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}{DEBUG_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}i\+\_\+wall\+\_\+surf\char`\"{}}\hypertarget{iwallsurf_8c_afe759d2b6c4ff043628d467079aa4539}{}\label{iwallsurf_8c_afe759d2b6c4ff043628d467079aa4539}
+
+
+\subsection{Function Documentation}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!add\+\_\+to\+\_\+o\+\_\+surfaces@{add\+\_\+to\+\_\+o\+\_\+surfaces}}
+\index{add\+\_\+to\+\_\+o\+\_\+surfaces@{add\+\_\+to\+\_\+o\+\_\+surfaces}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+to\+\_\+o\+\_\+surfaces(\+O\+\_\+\+S\+U\+R\+F\+A\+C\+E $\ast$$\ast$sarr, int $\ast$n, S\+U\+R\+F\+A\+C\+E $\ast$sp[4])}{add_to_o_surfaces(O_SURFACE **sarr, int *n, SURFACE *sp[4])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int add\+\_\+to\+\_\+o\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+\_\+\+S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{sarr, }
+\item[{int $\ast$}]{n, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{sp\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_a310f01cf4f302e80f0656255b4a8c368}{}\label{iwallsurf_8c_a310f01cf4f302e80f0656255b4a8c368}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!compare\+\_\+surf@{compare\+\_\+surf}}
+\index{compare\+\_\+surf@{compare\+\_\+surf}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{compare\+\_\+surf(const void $\ast$, const void $\ast$)}{compare_surf(const void *, const void *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int compare\+\_\+surf (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{a, }
+\item[{const void $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_a6bb9e9c29567a9430efb846d0c826cd4}{}\label{iwallsurf_8c_a6bb9e9c29567a9430efb846d0c826cd4}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!get\+\_\+default\+\_\+fluid\+\_\+comp@{get\+\_\+default\+\_\+fluid\+\_\+comp}}
+\index{get\+\_\+default\+\_\+fluid\+\_\+comp@{get\+\_\+default\+\_\+fluid\+\_\+comp}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+default\+\_\+fluid\+\_\+comp(int $\ast$comp1, int $\ast$comp2, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{get_default_fluid_comp(int *comp1, int *comp2, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void get\+\_\+default\+\_\+fluid\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{comp1, }
+\item[{int $\ast$}]{comp2, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_a1774a6c67a883e0b5a3071d48274a826}{}\label{iwallsurf_8c_a1774a6c67a883e0b5a3071d48274a826}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!is\+\_\+wall\+\_\+surface@{is\+\_\+wall\+\_\+surface}}
+\index{is\+\_\+wall\+\_\+surface@{is\+\_\+wall\+\_\+surface}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+wall\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$s)}{is_wall_surface(SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} is\+\_\+wall\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_a5fdc1751a24fef03d8a7e43797c7e86d}{}\label{iwallsurf_8c_a5fdc1751a24fef03d8a7e43797c7e86d}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface@{reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface}}
+\index{reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface@{reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{reset_wall_flag_for_surface(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void reset\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_aca3a1f21cf922c52028c4799e03f55c5}{}\label{iwallsurf_8c_aca3a1f21cf922c52028c4799e03f55c5}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface@{set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface}}
+\index{set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface@{set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$s)}{set_is_not_wall_surface(SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+is\+\_\+not\+\_\+wall\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_ab0ba01a5fd4945771576f9ff6e9abab0}{}\label{iwallsurf_8c_ab0ba01a5fd4945771576f9ff6e9abab0}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!set\+\_\+is\+\_\+wall\+\_\+surface@{set\+\_\+is\+\_\+wall\+\_\+surface}}
+\index{set\+\_\+is\+\_\+wall\+\_\+surface@{set\+\_\+is\+\_\+wall\+\_\+surface}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+is\+\_\+wall\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$s)}{set_is_wall_surface(SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+is\+\_\+wall\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_af930d0393bd48b23fff55c3deab9996f}{}\label{iwallsurf_8c_af930d0393bd48b23fff55c3deab9996f}
+\index{iwallsurf.\+c@{iwallsurf.\+c}!set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface@{set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface}}
+\index{set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface@{set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface}!iwallsurf.\+c@{iwallsurf.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{set_wall_flag_for_surface(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+wall\+\_\+flag\+\_\+for\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iwallsurf_8c_a61210642ae57d74a5cba1e91b8987cbd}{}\label{iwallsurf_8c_a61210642ae57d74a5cba1e91b8987cbd}

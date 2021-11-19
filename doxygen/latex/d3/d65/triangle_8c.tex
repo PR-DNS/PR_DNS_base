@@ -1,0 +1,2562 @@
+\hypertarget{triangle_8c}{}\section{D\+N\+S/src/intfc/triangle.c File Reference}
+\label{triangle_8c}\index{D\+N\+S/src/intfc/triangle.\+c@{D\+N\+S/src/intfc/triangle.\+c}}
+{\ttfamily \#include $<$intfc/triangledefs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{triangle_8c_de/df7/structtriedge}{triedge}
+\item 
+struct \hyperlink{triangle_8c_d3/d3a/structedge}{edge}
+\item 
+struct \hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block}
+\item 
+struct \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{triangle_8c_ad49beae4f708cdfe26352d865ed2eb95}{I\+N\+E\+X\+A\+CT}~/$\ast$ Nothing $\ast$/
+\item 
+\#define \hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{decode}(ptr,  \hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                
+\item 
+\#define \hyperlink{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}{encode}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                          ~(\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) ((size\+\_\+t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri $\vert$ (size\+\_\+t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient)
+\item 
+\#define \hyperlink{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{sym}(triedge1,  triedge2)                                                                                          
+\item 
+\#define \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                        
+\item 
+\#define \hyperlink{triangle_8c_a31e30636908af3702858bc5b6f964ba8}{lnext}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{lnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient = \hyperlink{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{plus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a8ce37842931d9d805178ac37901d039a}{lprev}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{lprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient = \hyperlink{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{minus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_aabf52b134c384f3d48f5c899a1f2bf20}{onext}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_ad3699dcb29af4054217ef41b8f5827f1}{onextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_a57dfee712cca8a7451a4352ce583173e}{oprev}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_af3b97e6093a67288a0786204e74eae80}{oprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_ad90e5a97af5b8c57360d5d30a139f90c}{dnext}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_af07c535d117a584aa2ae5a8e707ef22a}{dnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_aef925609e8f64898371c5fcd8ec1ece8}{dprev}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_a205e6b82876954d503233843f9336499}{dprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_ac075439d3f040df74aaa1f92c4d66380}{rnext}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_a0765a97837a08448bc05726a03359fbe}{rnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_aa02f505c93b335a273d922efc0b10372}{rprev}(triedge1,  triedge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_af107e50d94300055aca91c2c38355359}{rprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_a50c22cbb37a8d9a3a8d66470db05ba04}{org}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                            ~pointptr = (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}\hyperlink{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{plus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} + 3\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_abd15ba23266bc11eaad988f99b8c3b83}{dest}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                          ~pointptr = (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}\hyperlink{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{minus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} + 3\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a05c475afa9d5bec84ebf53ea4e528d42}{apex}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                          ~pointptr = (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient + 3\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a1657a454e5c0f0c429888a48809ee721}{setorg}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                      ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}\hyperlink{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{plus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} + 3\mbox{]} = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) pointptr
+\item 
+\#define \hyperlink{triangle_8c_a0eafec89d635ce5e37c70109959613c8}{setdest}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                    ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}\hyperlink{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{minus1mod3}\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} + 3\mbox{]} = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) pointptr
+\item 
+\#define \hyperlink{triangle_8c_a42041fcba0cf4e43b4caa15930c63019}{setapex}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  pointptr)                                                                                    ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient + 3\mbox{]} = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) pointptr
+\item 
+\#define \hyperlink{triangle_8c_afa79b29f40cf961ed3b71e52135aea92}{setvertices2null}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_a1479cb0d7d80d051fa683ce4e5cdacc9}{bond}(triedge1,  triedge2)                                                                                        
+\item 
+\#define \hyperlink{triangle_8c_a359d77a99e593f37bcdbc78b543c0939}{dissolve}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                      ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) \hyperlink{triangle_8c_a7fc99343ea2fd057f1673329a6261f5a}{dummytri}
+\item 
+\#define \hyperlink{triangle_8c_a05e4e221775f9d72e9ec7588a9c283be}{triedgecopy}(triedge1,  triedge2)                                                                          
+\item 
+\#define \hyperlink{triangle_8c_afde03cdc927abbc7efd9931119ca6167}{triedgeequal}(triedge1,  triedge2)                                                                        
+\item 
+\#define \hyperlink{triangle_8c_a731494d7b1b65f211c9a19d9770dad63}{infect}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                          
+\item 
+\#define \hyperlink{triangle_8c_a0d2888a6b323dd9543e58398bf76f532}{uninfect}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_a87f7a8fb789bfbede2447ebd3f06e36a}{infected}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                      ~(((size\+\_\+t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}6\mbox{]} \& (size\+\_\+t) 2l) != 0)
+\item 
+\#define \hyperlink{triangle_8c_ad0c53013d62cc7dde4df507e19f7f024}{elemattribute}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  attnum)                                                                            ~((double $\ast$) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri)\mbox{[}\hyperlink{triangle_8c_a0603ba09a289bfd396fa25c2fba5cacb}{elemattribindex} + (attnum)\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a99243d3e36a6db332e8702fa5856a25b}{setelemattribute}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  attnum,  value)                                                        ~((double $\ast$) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri)\mbox{[}\hyperlink{triangle_8c_a0603ba09a289bfd396fa25c2fba5cacb}{elemattribindex} + (attnum)\mbox{]} = value
+\item 
+\#define \hyperlink{triangle_8c_a24c7f09ef7ada9bdbb09dd9e18a17acf}{areabound}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})~((double $\ast$) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri)\mbox{[}\hyperlink{triangle_8c_a369e5df614c900920aa148f668cd8838}{areaboundindex}\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a7c8ce11becfd67e6522b94db27162d59}{setareabound}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  value)                                                                                ~((double $\ast$) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri)\mbox{[}\hyperlink{triangle_8c_a369e5df614c900920aa148f668cd8838}{areaboundindex}\mbox{]} = value
+\item 
+\#define \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{sdecode}(sptr,  \hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                  
+\item 
+\#define \hyperlink{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}{sencode}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                              ~(\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) ((size\+\_\+t) (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh $\vert$ (size\+\_\+t) (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient)
+\item 
+\#define \hyperlink{triangle_8c_a9c74b1f82d46522eb4ee9adee5970eac}{ssym}(edge1,  edge2)                                                                                                    
+\item 
+\#define \hyperlink{triangle_8c_a399d17c6cfbe2c26002592a668192b0d}{ssymself}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                            ~(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient = 1 -\/ (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient
+\item 
+\#define \hyperlink{triangle_8c_a23a4ad4b94dadcd1029a5205d5ed4d69}{spivot}(edge1,  edge2)                                                                                                
+\item 
+\#define \hyperlink{triangle_8c_a1e7a070c3760e7b1d1f76e066379131a}{spivotself}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                        
+\item 
+\#define \hyperlink{triangle_8c_a2d5804d3177a9a860ebbf5c6c37a3df1}{snext}(edge1,  edge2)                                                                                                  
+\item 
+\#define \hyperlink{triangle_8c_afd397143e79a679fa6c4512a2821cfb9}{snextself}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                          
+\item 
+\#define \hyperlink{triangle_8c_aad76f781d698bc5dfda9a19bb48e6823}{sorg}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  pointptr)                                                                                                ~pointptr = (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}) (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}2 + (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_ae87b060b69c5cfdbc6b2ab02b8bb52c2}{sdest}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  pointptr)                                                                                              ~pointptr = (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}) (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}3 -\/ (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a871f837fdcd1e4155ff21319d2d05d1d}{setsorg}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  pointptr)                                                                                          ~(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}2 + (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]} = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) pointptr
+\item 
+\#define \hyperlink{triangle_8c_a50b4f1c752847febcefb3ee5cbf63c26}{setsdest}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  pointptr)                                                                                        ~(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}3 -\/ (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]} = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) pointptr
+\item 
+\#define \hyperlink{triangle_8c_a9e7e7be9050129037c9b460ae98ebe39}{mark}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})~($\ast$ (int $\ast$) ((\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh + 6))
+\item 
+\#define \hyperlink{triangle_8c_ae2364751693fbbf3fde0f30f5bcd879f}{setmark}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  value)                                                                                                ~$\ast$ (int $\ast$) ((\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh + 6) = value
+\item 
+\#define \hyperlink{triangle_8c_a9c573ca0ed08bda493edc2914f369ea7}{sbond}(edge1,  edge2)                                                                                                  
+\item 
+\#define \hyperlink{triangle_8c_ace785db9401c0c1b6a7548a96df902bf}{sdissolve}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                          ~(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]} = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) \hyperlink{triangle_8c_a7766e0c1c9378a024fd540e2f46837d2}{dummysh}
+\item 
+\#define \hyperlink{triangle_8c_a440b28c4ab71ffa23ef65006576c37a4}{shellecopy}(edge1,  edge2)                                                                                        
+\item 
+\#define \hyperlink{triangle_8c_ae02c0bbf642ca2c172e9bb3dab0c379d}{shelleequal}(edge1,  edge2)                                                                                      
+\item 
+\#define \hyperlink{triangle_8c_ab2a7545a6efada17287890ae5a540b77}{tspivot}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  \hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                            
+\item 
+\#define \hyperlink{triangle_8c_ae71c461d205077bb9b8db8d6939d6d7d}{stpivot}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge},  \hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                            
+\item 
+\#define \hyperlink{triangle_8c_a72d5b020c5d8219d4147916ce1452daf}{tsbond}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge},  \hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                              
+\item 
+\#define \hyperlink{triangle_8c_a8ba1be3a58f673e9a139418df5a5d24a}{tsdissolve}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})                                                                                                  ~(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri\mbox{[}6 + (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient\mbox{]} = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) \hyperlink{triangle_8c_a7766e0c1c9378a024fd540e2f46837d2}{dummysh}
+\item 
+\#define \hyperlink{triangle_8c_ad0c03d4b4fa43d3a2354e1333ad0171d}{stdissolve}(\hyperlink{triangle_8c_d3/d3a/structedge}{edge})                                                                                                        ~(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh\mbox{[}4 + (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient\mbox{]} = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) \hyperlink{triangle_8c_a7fc99343ea2fd057f1673329a6261f5a}{dummytri}
+\item 
+\#define \hyperlink{triangle_8c_a7b5f073f36928e891adf15566b4f2b53}{pointmark}(pt)~((int $\ast$) (pt))\mbox{[}\hyperlink{triangle_8c_a66b10e056b9472cf5fbba2a55d240ac5}{pointmarkindex}\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_ad1a48bf8cbdbf39a4e86927be703b550}{setpointmark}(pt,  value)                                                                                          ~((int $\ast$) (pt))\mbox{[}\hyperlink{triangle_8c_a66b10e056b9472cf5fbba2a55d240ac5}{pointmarkindex}\mbox{]} = value
+\item 
+\#define \hyperlink{triangle_8c_ad700e9e4e1b79abbe3a85800aa2c231f}{point2tri}(pt)~((\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$) (pt))\mbox{[}\hyperlink{triangle_8c_a93cbadb2a0ada708189edb4aadd7ac92}{point2triindex}\mbox{]}
+\item 
+\#define \hyperlink{triangle_8c_a3440b3e6254fe6af732c683ec3286c2a}{setpoint2tri}(pt,  value)                                                                                          ~((\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$) (pt))\mbox{[}\hyperlink{triangle_8c_a93cbadb2a0ada708189edb4aadd7ac92}{point2triindex}\mbox{]} = value
+\item 
+\#define \hyperlink{triangle_8c_aef0ab760424f561c08ca685b4fd28a3f}{Absolute}(a)~((a) $>$= 0.\+0 ? (a) \+: -\/(a))
+\item 
+\#define \hyperlink{triangle_8c_afdb937df435c24d5c402eb0fdd97f6da}{Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_ae85afbfee038480d9baf7796514cb121}{Fast\+\_\+\+Two\+\_\+\+Sum}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a367e02bc95e29a48c4815fcd63806f64}{Two\+\_\+\+Sum\+\_\+\+Tail}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{Two\+\_\+\+Sum}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a636a9c6e1b1171cbf745575166954389}{Two\+\_\+\+Diff\+\_\+\+Tail}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_ac60bb459f7540f5717747fbef47e62b4}{Two\+\_\+\+Diff}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{Split}(a,  ahi,  alo)
+\item 
+\#define \hyperlink{triangle_8c_ac9dcc9500c883fdac1acdf11127ae886}{Two\+\_\+\+Product\+\_\+\+Tail}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a27f5145ac554d28b9c257ac0909d055b}{Two\+\_\+\+Product}(a,  b,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a4b7fb41ff1c60fa3b701bc405a5c5e46}{Two\+\_\+\+Product\+\_\+\+Presplit}(a,  b,  bhi,  blo,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a6e9ed62b93fa2a55ede246e85507de18}{Square\+\_\+\+Tail}(a,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_a0cce77b99432ef29e32ed7481e470f10}{Square}(a,  x,  y)
+\item 
+\#define \hyperlink{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}{Two\+\_\+\+One\+\_\+\+Sum}(a1,  a0,  b,  x2,  x1,  x0)
+\item 
+\#define \hyperlink{triangle_8c_a5315d6436a90d87938ae9df8a408de67}{Two\+\_\+\+One\+\_\+\+Diff}(a1,  a0,  b,  x2,  x1,  x0)
+\item 
+\#define \hyperlink{triangle_8c_ae3c61622ca0206f23311a66c864f8fff}{Two\+\_\+\+Two\+\_\+\+Sum}(a1,  a0,  b1,  b0,  x3,  x2,  x1,  x0)
+\item 
+\#define \hyperlink{triangle_8c_ab4f08ad5dba11bbdf27b64132824b3a3}{Two\+\_\+\+Two\+\_\+\+Diff}(a1,  a0,  b1,  b0,  x3,  x2,  x1,  x0)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391}{locateresult} \hyperlink{triangle_8c_a63ccbc6a1210a799febf7859d27db038}{locateresult}
+\item 
+typedef enum \hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1b}{insertsiteresult} \hyperlink{triangle_8c_a0bd5812cddb2c856c2aa11963635a42d}{insertsiteresult}
+\item 
+typedef enum \hyperlink{triangle_8c_a15c836267235f634792362d21484b054}{finddirectionresult} \hyperlink{triangle_8c_a5a4cec11360e3556e5d30c76713748f5}{finddirectionresult}
+\item 
+typedef enum \hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8}{circumcenterresult} \hyperlink{triangle_8c_a110c1346e3c4f113c35c5fa8ff33aa8e}{circumcenterresult}
+\item 
+typedef double $\ast$$\ast$ \hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}
+\item 
+typedef struct \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} \hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}
+\item 
+typedef double $\ast$$\ast$ \hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}
+\item 
+typedef struct \hyperlink{triangle_8c_d3/d3a/structedge}{edge} \hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}
+\item 
+typedef double $\ast$ \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}
+\item 
+typedef struct \hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} \hyperlink{triangle_8c_a8e612edc18cc3720e50d348ec89d2760}{Pool\+Block}
+\item 
+typedef struct \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_aa12dc42bc6d19d2d2fbf07abfb9f99c8}{memorypool}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391}{locateresult} \{ \hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391a48dc8926c9c725dddb0131078fc587b0}{I\+N\+T\+R\+I\+A\+N\+G\+LE}, 
+\hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391a85bbe5aca51647bc0595b4acba6ca1f7}{O\+N\+E\+D\+GE}, 
+\hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391a7b218649375f5b418124df2ef7d0e564}{O\+N\+V\+E\+R\+T\+EX}, 
+\hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391a3c0a64074de1af803bba09ed1870689d}{O\+U\+T\+S\+I\+DE}
+ \}
+\item 
+enum \hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1b}{insertsiteresult} \{ \hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba6c9fd2417e2f9cdba8bcf2218e344186}{S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT}, 
+\hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba9d3524267e6d7cd4831942b5541b0534}{E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT}, 
+\hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba2e923be1465e8a3cccc62c8d84e0bacd}{V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT}, 
+\hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1bafb156a5daa3f2a805bbdaf7fa509c4ce}{D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT}
+ \}
+\item 
+enum \hyperlink{triangle_8c_a15c836267235f634792362d21484b054}{finddirectionresult} \{ \hyperlink{triangle_8c_a15c836267235f634792362d21484b054aaf4f72867f549a6505e6ca054b27a1e6}{W\+I\+T\+H\+IN}, 
+\hyperlink{triangle_8c_a15c836267235f634792362d21484b054a004542c8c95d759feaf68dcef0150990}{L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR}, 
+\hyperlink{triangle_8c_a15c836267235f634792362d21484b054a7058a6bd01e1109312f1c78ea3669729}{R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR}
+ \}
+\item 
+enum \hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8}{circumcenterresult} \{ \hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a2724e59f5cce7f63b0a90f896445a48d}{O\+P\+P\+O\+S\+I\+T\+E\+O\+RG}, 
+\hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a310f690de9b7fd54ea5a4b9b80d880e2}{O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST}, 
+\hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8adde2064d929222eaa1c1a0474c3f71be}{O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a5c350c1a3941f275d407d337034d6380}{counterclockwise} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a22bcb691578b7d9df436c6588fc6b42d}{counterclockwiseadapt} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a86ce5774b2b28c8254b5c6e3af42b8c2}{estimate} (int, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_aa58109e5955b153dfb667ae3d3456677}{incircle} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a4345c877e31fccec3a66867968489031}{incircleadapt} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8}{circumcenterresult} \hyperlink{triangle_8c_a64ee8ceb8f9dbbb555aa16defefb92c8}{findcircumcenter} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a15c836267235f634792362d21484b054}{finddirectionresult} \hyperlink{triangle_8c_a0560bcfb98b09288992f361a0c599ffb}{finddirection} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a0125d35346befdb07b5f8395e4457c1b}{insertsiteresult} \hyperlink{triangle_8c_ab82803be8962afc759245f19477dbcb3}{insertsite} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_d3/d3a/structedge}{edge} $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391}{locateresult} \hyperlink{triangle_8c_a529451a72fbb284fef785cd1ca7da82b}{locate} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a780d12d8ee18a0060da76c91611d1391}{locateresult} \hyperlink{triangle_8c_a6b3c72689f7eb6ee97bc4268d1a97a81}{preciselocate} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_ad648b063b9de37e19533d20909731f72}{fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim} (int, double $\ast$, int, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a9f9d90a6067535e69f8abce2676f6551}{scale\+\_\+expansion\+\_\+zeroelim} (int, double $\ast$, double, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a4a32839142e7b5caf3a242006edfd612}{scoutsegment} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_a9cdc05bd7338eefb07edae881518314a}{delaunay} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_a904b10c0156b1d40a985d86ee092ddff}{divconqdelaunay} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_aa67bdc50f9746395ba8a366faad08269}{removeghosts} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} \hyperlink{triangle_8c_a95d40b4618663de88be78af118da1696}{getpoint} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} \hyperlink{triangle_8c_a99502b6e7ad026cdd7114d2d34473ae8}{pointtraverse} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} $\ast$ \hyperlink{triangle_8c_a8e6f1ede087197488f5c76adab3c155f}{shelletraverse} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a5d6ed2422e6b0b4d44f1e6a7247d5964}{Pool\+Block\+Size} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$p)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a3a805f3b72a887582cb9507d5cf4ce3e}{formskeleton} (int $\ast$, int $\ast$, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_aff92fb162493107c9f31e8e89e9230db}{randomnation} (size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$ \hyperlink{triangle_8c_a7078bc005809baf21b31984310085993}{triangletraverse} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void $\ast$ \hyperlink{triangle_8c_a10e3426e891ab6c30625c17344d689bd}{First\+Item\+In\+Block} (\hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void $\ast$ \hyperlink{triangle_8c_aef5412aca9ac3e8e040773b886128c3f}{Next\+Item} (void $\ast$, \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void $\ast$ \hyperlink{triangle_8c_ad5d350d82c6bc6bdc0bcfe85612d1982}{allocate\+\_\+storage} (void $\ast$, size\+\_\+t $\ast$, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void $\ast$ \hyperlink{triangle_8c_a62e1a5e265000a3442adc5ee9810b130}{poolalloc} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void $\ast$ \hyperlink{triangle_8c_ad741454a91b052d0e383771eeead5150}{traverse} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a90562e4105f83610360fb1aeaa1a0bd6}{alternateaxes} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a1dae8ff094c17ff1ca2138e99fd8f936}{carveholes} (double $\ast$, int, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a26df6ed848d53a3ecff88e7d295b0016}{constrainededge} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_aaebb7d6ad74ada1ba92d58c28d92d036}{delaunayfixup} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_af730c4197ec55f9bc2ad91e221b5aeda}{divconqrecurse} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} $\ast$, int, int, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_ab5473ac45231d2956ee37a575505b831}{dummyinit} (size\+\_\+t trianglewords, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_abf202e524d0ad0fa72b01965350acd64}{exactinit} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a2f351c096a6f624de40b200b0d5720e5}{flip} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a24fdbb80d0371eeced37edd95874c33d}{highorder} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a119139d4a121cfb5c20a683e0de30b8a}{infecthull} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_ab6f8445b5464d813440b8fcd25243dcb}{initializepointpool} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a8502f2e1b9cdd1e34605caac6c85c686}{initializetrisegpools} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_ad437f90d2c303f3e55f129dae5469694}{insertsegment} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a7f0e85cabde6d5ec1d2e91b38aaeeca0}{insertshelle} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a9c79aefd5b38ba429de080677aa4f321}{internalerror} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_abf60bb680a8371ffef6918071939b0d0}{makepointmap} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_af6e965fc8bf47f913f6668837838d841}{makeshelle} (\hyperlink{triangle_8c_d3/d3a/structedge}{edge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_af325d1287bffdffd7642b69c3424f69e}{maketriangle} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_afc95d09fb23c42df22b94f46f48c0e42}{markhull} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a6209fc14c38ee52d17546ea58d832af0}{mergehulls} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a1edf93fbd130bf1d1e53dc31050e4332}{numbernodes} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a54189c9380a34d2355f21faf05e5d995}{parsecommandline} (\hyperlink{triangledefs_8h_de/d23/struct_triangulate_opts}{Triangulate\+Opts} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a2dbc3c3d10a846880d8654f77744ad93}{plague} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a93bae789ec7bcbcda5375e1f54f157e1}{pointdealloc} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_abef450f2c8416f276a617cf3a8d856cb}{pointmedian} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} $\ast$, int, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_ac66a3e424f3640554897c95b7fb1715f}{pointsort} (\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} $\ast$, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a9ee1d8db03ec08d82a3632b6d2bec70c}{pooldealloc} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$, void $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a971b41091f64b748fd3bb97b2b02ce52}{pooldeinit} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_afe1a586a6c8e9ecab1de99f7ae2be620}{poolinit} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$, size\+\_\+t, int, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a82afef615abf363b7ed899fb78454283}{poolrestart} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a7fd26f58fa65d8e5d1b5a052712f778b}{regionplague} (double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a9386252e3614d6deaf43adc6727875b2}{segmentintersection} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_d3/d3a/structedge}{edge} $\ast$, \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a899909c6b1b503cdd36dc0c5bb3836c9}{shelledealloc} (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a75a8a9429fec31a1d70714e882a38c32}{transfernodes} (double $\ast$, double $\ast$, int $\ast$, size\+\_\+t, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a44ec6092bbc6ffbc7ea52774b6e7816c}{traversalinit} (\hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a57c53557aaf5494b784209448b9cb03f}{triangledealloc} (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a1bbdd9857ceb539bd1dcfb382773cc52}{triangledeinit} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_aa3a0b4161b7de188ee1aa9b930b2b9ba}{triangleinit} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a4b41120860e9720bbe0f242019e7ccd0}{triangulatepolygon} (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} $\ast$, int, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_ad683f200dc5900251b6a2e6332dda2e5}{writeedges} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_aec8dcbcc3bee35f376da5d87c28de859}{writeelements} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a1b01a0cf5874a4d6c51365193cfd3b22}{writeneighbors} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_adfd11d8adcdb43b3a768589b4585efba}{writenodes} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_abfd436c0ad93efc4b8a24e536fdf4f7f}{writepoly} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{triangle_8c_a44590050fbaf94344ab77afab465e93d}{writevoronoi} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{triangle_8c_a33da3580847ac285cbc53a94f1c3d6ca}{triangulate} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$in, \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$out, \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$vorout)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{triangle_8c_a0bc57372b2c8d542434466a467ae92d1}{print\+\_\+triangulateio} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$tio)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_afe5ab137cf18b06b497006b11c8437fc}{T\+R\+I\+P\+E\+R\+B\+L\+O\+CK} = 4092
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_a7876e70b694faf2cd2a48553a4d9f70f}{S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK} = 508
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_af3ceebd725bbb4f78b8876eda75acf6a}{P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK} = 4092
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_a7edb13185318330fab74d88eb5c2716f}{V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK} = 1020
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_a489f6bd79400f6a4fbdc819fc51ffdd0}{D\+E\+A\+D\+P\+O\+I\+NT} = I\+N\+T\+\_\+\+M\+IN
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{triangle_8c_acf573a5dae85d98e756876ff9ddef93b}{S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR} = 11
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const double \hyperlink{triangle_8c_a7f0f36d75cdaa4448768ee243a1bd589}{PI} = 3.\+141592653589793238462643383279502884197169399375105820974944592308
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_a9d6e2322ec4f0eacb2286606d1cdf462}{triangles}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_a0ea74aabbd8e2deb1ee6e7dbf5e9ecea}{shelles}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_aebe37dd03eb2fdc7fa7ee82618d6f849}{points}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_aaa23694005aab75a080556dbb9be018b}{viri}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_da/d47/structmemorypool}{memorypool} \hyperlink{triangle_8c_a59fba1697326ef956e00850be76eba48}{badsegments}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_aba741a529c231da12cd9b593ced09f85}{xmin}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{xmax}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a500b70732e049a9ba26bed5f07b93bed}{ymin}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{ymax}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a08a9d33c2582121a8e1f1cba5f270bc0}{inpoints}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_ac25c931e50240db8c4509335856eacf3}{holes}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a979e54d597c9c74c0448c0dcdc5c09cb}{regions}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_afe3bdecf56195ca34e11505af6a0284e}{edges}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a75be466f3c9af60b80a4f5977cd7383e}{mesh\+\_\+dim}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a360dd2e647472dd8f1e5f79da0262d12}{nextras}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_ab4bf68c495e21d049aedd71fc594490c}{eextras}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_abc7680b33d359391d50e5623634b786e}{hullsize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a2fe79262660b9c858ccdaf12dd475117}{triwords}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a70df2fdf43bc4c9e9ac7b6a20767f182}{shwords}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a66b10e056b9472cf5fbba2a55d240ac5}{pointmarkindex}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a93cbadb2a0ada708189edb4aadd7ac92}{point2triindex}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a9e46d42b157423bf2edc2d0ebfdf989e}{highorderindex}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a0603ba09a289bfd396fa25c2fba5cacb}{elemattribindex}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a369e5df614c900920aa148f668cd8838}{areaboundindex}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a081a2ffd4dbbe4ae7c1aea7893d618a6}{checksegments}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a307e120a4e8770ad513cb7f536692aa3}{readnodefile}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_af9c7925b181a93529fb8e544f83939d6}{samples}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a19f57340865407fc54da2fb4e34dbbf6}{randomseed}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a604d9fa6a20d20435119ad81b63ccf78}{splitter}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{epsilon}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_aec52ab841c0536221b8d39e1d37da05d}{resulterrbound}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a9d9e2c9370d14b351d73732a3b0f5a03}{ccwerrboundA}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a02e09f1226c61f5444ce4f00e3e0d52a}{ccwerrboundB}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a1ec83ad954007abddc1a98aac65f3fc6}{ccwerrboundC}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_afe229f493e0301c641257e2bf0d6847f}{iccerrboundA}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_adc1623e4efaa47875748201c7bb1d5f3}{iccerrboundB}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a871b1eacf950d66481493884bbaf4277}{iccerrboundC}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_aaff13c4c5814e348ecc4b3f3e1b3dd0d}{incirclecount}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_acaa5cb56cc5dd1ec90a6069b4c63e0e4}{counterclockcount}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} long \hyperlink{triangle_8c_a0cc9f58ba35a95274cee79610942ab64}{circumcentercount}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangledefs_8h_de/d23/struct_triangulate_opts}{Triangulate\+Opts} \hyperlink{triangle_8c_a1328fc95484e759389aed04011605cfb}{Tri\+Opts}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{triangle_8c_a4fecd89bd4488e176560e629b968de57}{dwyer}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_ae55519ae6865f0cd5e1b70302f7a47ce}{steinerleft}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a69edf349d9079e353f7c435ede23dab3}{useshelles}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a80adbd8c4abbb5a23a121d7c19e82c92}{order}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{triangle_8c_a0d7b6f96c03fc3c5e5a5a5fa9df4346c}{goodangle}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} \hyperlink{triangle_8c_a3fe2ac8b7458406f0187bd7c67f60fdf}{infpoint1}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} \hyperlink{triangle_8c_ad1a6c4c86c21664abc833900a8e777a5}{infpoint2}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point} \hyperlink{triangle_8c_aee9a0edafa91799ca98f700d47a22d11}{infpoint3}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$ \hyperlink{triangle_8c_a7fc99343ea2fd057f1673329a6261f5a}{dummytri} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$ \hyperlink{triangle_8c_a3678282db873fa9deb2768a16eca3b25}{dummytribase}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a64583d0d80e30d52fefddceb5af5f7a3}{size\+\_\+dummytribase}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} $\ast$ \hyperlink{triangle_8c_a7766e0c1c9378a024fd540e2f46837d2}{dummysh} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} $\ast$ \hyperlink{triangle_8c_a11a1a250ed42f09256d573154910489b}{dummyshbase}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} size\+\_\+t \hyperlink{triangle_8c_a3a32642746faedb38e585847a270277a}{size\+\_\+dummyshbase}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{triangle_8c_de/df7/structtriedge}{triedge} \hyperlink{triangle_8c_acd5749e7ce31826384dbb9b75930685e}{recenttri}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{plus1mod3} \mbox{[}3\mbox{]} = \{1, 2, 0\}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{minus1mod3} \mbox{[}3\mbox{]} = \{2, 0, 1\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{triedge@{triedge}}\label{structtriedge}
+\hypertarget{triangle_8c_structtriedge}{}
+\subsubsection{struct triedge}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{triangle_8c_a57c58c3c6e728bac60ab90c8945ab89a}{}\label{triangle_8c_a57c58c3c6e728bac60ab90c8945ab89a}
+&
+orient&
+\\
+\hline
+
+\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} $\ast$\hypertarget{triangle_8c_a04667ce3d4641ec3bb5125e95abda892}{}\label{triangle_8c_a04667ce3d4641ec3bb5125e95abda892}
+&
+tri&
+\\
+\hline
+
+\end{DoxyFields}
+\index{edge@{edge}}\label{structedge}
+\hypertarget{triangle_8c_structedge}{}
+\subsubsection{struct edge}
+\begin{DoxyFields}{Class Members}
+\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} $\ast$\hypertarget{triangle_8c_a35e27b88facb8e8e73b38d93c1da945c}{}\label{triangle_8c_a35e27b88facb8e8e73b38d93c1da945c}
+&
+sh&
+\\
+\hline
+
+int\hypertarget{triangle_8c_a28d4ccac245f62caae0059fd4d3f2368}{}\label{triangle_8c_a28d4ccac245f62caae0059fd4d3f2368}
+&
+shorient&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Pool\+Block@{Pool\+Block}}\label{struct_pool_block}
+\hypertarget{triangle_8c_struct_pool_block}{}
+\subsubsection{struct Pool\+Block}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN}\hypertarget{triangle_8c_aa4ac9e8c4d09ad7191fcbe5a38acdb0b}{}\label{triangle_8c_aa4ac9e8c4d09ad7191fcbe5a38acdb0b}
+&
+alignment&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangle_8c_a3f944251a734807a29b957618b8a66ef}{}\label{triangle_8c_a3f944251a734807a29b957618b8a66ef}
+&
+block\+\_\+size&
+\\
+\hline
+
+struct \hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$\hypertarget{triangle_8c_a453856c5067caeac743698890843479f}{}\label{triangle_8c_a453856c5067caeac743698890843479f}
+&
+next&
+\\
+\hline
+
+struct \hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$\hypertarget{triangle_8c_a9c9839676c66d0d21420c6bd1ae2193b}{}\label{triangle_8c_a9c9839676c66d0d21420c6bd1ae2193b}
+&
+prev&
+\\
+\hline
+
+\end{DoxyFields}
+\index{memorypool@{memorypool}}\label{structmemorypool}
+\hypertarget{triangle_8c_structmemorypool}{}
+\subsubsection{struct memorypool}
+\begin{DoxyFields}{Class Members}
+size\+\_\+t\hypertarget{triangle_8c_a7f1d326864a884fd5bf06d6fde1145d9}{}\label{triangle_8c_a7f1d326864a884fd5bf06d6fde1145d9}
+&
+alignbytes&
+\\
+\hline
+
+void $\ast$\hypertarget{triangle_8c_a39571a8249d19b86fc3f750f87580ba6}{}\label{triangle_8c_a39571a8249d19b86fc3f750f87580ba6}
+&
+deaditemstack&
+\\
+\hline
+
+\hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$\hypertarget{triangle_8c_a842b430444284caaf7ae4087133012c3}{}\label{triangle_8c_a842b430444284caaf7ae4087133012c3}
+&
+firstblock&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangle_8c_aa7dc38826863d3bb716b668ec29b1761}{}\label{triangle_8c_aa7dc38826863d3bb716b668ec29b1761}
+&
+itembytes&
+\\
+\hline
+
+int\hypertarget{triangle_8c_a5c8e496697623697f48d245696bb54c3}{}\label{triangle_8c_a5c8e496697623697f48d245696bb54c3}
+&
+items&
+\\
+\hline
+
+int\hypertarget{triangle_8c_a725760a5cc69917ea955ce4b64ed022f}{}\label{triangle_8c_a725760a5cc69917ea955ce4b64ed022f}
+&
+itemsperblock&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangle_8c_a5a07542180c167a6e3e84b04d3221dc3}{}\label{triangle_8c_a5a07542180c167a6e3e84b04d3221dc3}
+&
+itemwords&
+\\
+\hline
+
+int\hypertarget{triangle_8c_a1d02e1bba87edee4458e236886b72594}{}\label{triangle_8c_a1d02e1bba87edee4458e236886b72594}
+&
+maxitems&
+\\
+\hline
+
+void $\ast$\hypertarget{triangle_8c_a6ce86667712768fae67421a87213d5bb}{}\label{triangle_8c_a6ce86667712768fae67421a87213d5bb}
+&
+nextitem&
+\\
+\hline
+
+\hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$\hypertarget{triangle_8c_af8d76b9e10a490c3749257f3a076e04c}{}\label{triangle_8c_af8d76b9e10a490c3749257f3a076e04c}
+&
+nowblock&
+\\
+\hline
+
+\hyperlink{triangle_8c_d6/de1/struct_pool_block}{Pool\+Block} $\ast$\hypertarget{triangle_8c_a1966827fac6639924d69cc02b8597f90}{}\label{triangle_8c_a1966827fac6639924d69cc02b8597f90}
+&
+pathblock&
+\\
+\hline
+
+void $\ast$\hypertarget{triangle_8c_aeb83bdf9b4429675628e0757349e602d}{}\label{triangle_8c_aeb83bdf9b4429675628e0757349e602d}
+&
+pathitem&
+\\
+\hline
+
+int\hypertarget{triangle_8c_a34c47ac30b534652a93e9d3f742648ff}{}\label{triangle_8c_a34c47ac30b534652a93e9d3f742648ff}
+&
+pathitemsleft&
+\\
+\hline
+
+int\hypertarget{triangle_8c_ae407db4294305e97b4072f6117f2bfa9}{}\label{triangle_8c_ae407db4294305e97b4072f6117f2bfa9}
+&
+unallocateditems&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangle_8c_ae21b9d97613d58721622552af8dfdc6c}{}\label{triangle_8c_ae21b9d97613d58721622552af8dfdc6c}
+&
+wordsize&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{triangle.\+c@{triangle.\+c}!Absolute@{Absolute}}
+\index{Absolute@{Absolute}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Absolute}{Absolute}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Absolute(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~((a) $>$= 0.\+0 ? (a) \+: -\/(a))}\hypertarget{triangle_8c_aef0ab760424f561c08ca685b4fd28a3f}{}\label{triangle_8c_aef0ab760424f561c08ca685b4fd28a3f}
+\index{triangle.\+c@{triangle.\+c}!apex@{apex}}
+\index{apex@{apex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{apex}{apex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define apex(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~pointptr = ({\bf point}) ({\bf triedge}).tri\mbox{[}({\bf triedge}).orient + 3\mbox{]}}\hypertarget{triangle_8c_a05c475afa9d5bec84ebf53ea4e528d42}{}\label{triangle_8c_a05c475afa9d5bec84ebf53ea4e528d42}
+\index{triangle.\+c@{triangle.\+c}!areabound@{areabound}}
+\index{areabound@{areabound}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{areabound}{areabound}}]{\setlength{\rightskip}{0pt plus 5cm}\#define areabound(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~((double $\ast$) ({\bf triedge}).tri)\mbox{[}{\bf areaboundindex}\mbox{]}}\hypertarget{triangle_8c_a24c7f09ef7ada9bdbb09dd9e18a17acf}{}\label{triangle_8c_a24c7f09ef7ada9bdbb09dd9e18a17acf}
+\index{triangle.\+c@{triangle.\+c}!bond@{bond}}
+\index{bond@{bond}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{bond}{bond}}]{\setlength{\rightskip}{0pt plus 5cm}\#define bond(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1479cb0d7d80d051fa683ce4e5cdacc9}{}\label{triangle_8c_a1479cb0d7d80d051fa683ce4e5cdacc9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(triedge1).tri[(triedge1).orient] = \hyperlink{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}{encode}(triedge2);                       \(\backslash\)
+  (triedge2).tri[(triedge2).orient] = \hyperlink{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}{encode}(triedge1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!decode@{decode}}
+\index{decode@{decode}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{decode}{decode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define decode(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{}\label{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).orient = (\textcolor{keywordtype}{int}) ((size\_t) (ptr) & (size\_t) 3l);      \(\backslash\)
+  (\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle} *)                                                \(\backslash\)
+                  ((size\_t) (ptr) ^ (size\_t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!dest@{dest}}
+\index{dest@{dest}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dest}{dest}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dest(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~pointptr = ({\bf point}) ({\bf triedge}).tri\mbox{[}{\bf minus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]} + 3\mbox{]}}\hypertarget{triangle_8c_abd15ba23266bc11eaad988f99b8c3b83}{}\label{triangle_8c_abd15ba23266bc11eaad988f99b8c3b83}
+\index{triangle.\+c@{triangle.\+c}!dissolve@{dissolve}}
+\index{dissolve@{dissolve}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dissolve}{dissolve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dissolve(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~({\bf triedge}).tri\mbox{[}({\bf triedge}).orient\mbox{]} = ({\bf triangle}) {\bf dummytri}}\hypertarget{triangle_8c_a359d77a99e593f37bcdbc78b543c0939}{}\label{triangle_8c_a359d77a99e593f37bcdbc78b543c0939}
+\index{triangle.\+c@{triangle.\+c}!dnext@{dnext}}
+\index{dnext@{dnext}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dnext}{dnext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dnext(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad90e5a97af5b8c57360d5d30a139f90c}{}\label{triangle_8c_ad90e5a97af5b8c57360d5d30a139f90c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{sym}(triedge1, triedge2);                                                    \hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{\(\backslash\)}
+\hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{  lprevself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!dnextself@{dnextself}}
+\index{dnextself@{dnextself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dnextself}{dnextself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dnextself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af07c535d117a584aa2ae5a8e707ef22a}{}\label{triangle_8c_af07c535d117a584aa2ae5a8e707ef22a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                           
+      \hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{\(\backslash\)}
+\hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{  lprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!dprev@{dprev}}
+\index{dprev@{dprev}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dprev}{dprev}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dprev(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aef925609e8f64898371c5fcd8ec1ece8}{}\label{triangle_8c_aef925609e8f64898371c5fcd8ec1ece8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a31e30636908af3702858bc5b6f964ba8}{lnext}(triedge1, triedge2);                                                  
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!dprevself@{dprevself}}
+\index{dprevself@{dprevself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dprevself}{dprevself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dprevself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a205e6b82876954d503233843f9336499}{}\label{triangle_8c_a205e6b82876954d503233843f9336499}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{lnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                         
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!elemattribute@{elemattribute}}
+\index{elemattribute@{elemattribute}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{elemattribute}{elemattribute}}]{\setlength{\rightskip}{0pt plus 5cm}\#define elemattribute(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{attnum}
+\end{DoxyParamCaption}
+)~((double $\ast$) ({\bf triedge}).tri)\mbox{[}{\bf elemattribindex} + (attnum)\mbox{]}}\hypertarget{triangle_8c_ad0c53013d62cc7dde4df507e19f7f024}{}\label{triangle_8c_ad0c53013d62cc7dde4df507e19f7f024}
+\index{triangle.\+c@{triangle.\+c}!encode@{encode}}
+\index{encode@{encode}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{encode}{encode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define encode(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~({\bf triangle}) ((size\+\_\+t) ({\bf triedge}).tri $\vert$ (size\+\_\+t) ({\bf triedge}).orient)}\hypertarget{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}{}\label{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}
+\index{triangle.\+c@{triangle.\+c}!Fast\+\_\+\+Two\+\_\+\+Sum@{Fast\+\_\+\+Two\+\_\+\+Sum}}
+\index{Fast\+\_\+\+Two\+\_\+\+Sum@{Fast\+\_\+\+Two\+\_\+\+Sum}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Fast\+\_\+\+Two\+\_\+\+Sum}{Fast_Two_Sum}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Fast\+\_\+\+Two\+\_\+\+Sum(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ae85afbfee038480d9baf7796514cb121}{}\label{triangle_8c_ae85afbfee038480d9baf7796514cb121}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a + b); \hyperlink{triangle_8c_afdb937df435c24d5c402eb0fdd97f6da}{\(\backslash\)}
+\hyperlink{triangle_8c_afdb937df435c24d5c402eb0fdd97f6da}{  Fast\_Two\_Sum\_Tail}(a, b, x, y)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail@{Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail}}
+\index{Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail@{Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail}{Fast_Two_Sum_Tail}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Fast\+\_\+\+Two\+\_\+\+Sum\+\_\+\+Tail(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afdb937df435c24d5c402eb0fdd97f6da}{}\label{triangle_8c_afdb937df435c24d5c402eb0fdd97f6da}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+bvirt = x - a; \(\backslash\)
+  y = b - bvirt
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!I\+N\+E\+X\+A\+CT@{I\+N\+E\+X\+A\+CT}}
+\index{I\+N\+E\+X\+A\+CT@{I\+N\+E\+X\+A\+CT}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{I\+N\+E\+X\+A\+CT}{INEXACT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+E\+X\+A\+CT~/$\ast$ Nothing $\ast$/}\hypertarget{triangle_8c_ad49beae4f708cdfe26352d865ed2eb95}{}\label{triangle_8c_ad49beae4f708cdfe26352d865ed2eb95}
+\index{triangle.\+c@{triangle.\+c}!infect@{infect}}
+\index{infect@{infect}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infect}{infect}}]{\setlength{\rightskip}{0pt plus 5cm}\#define infect(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a731494d7b1b65f211c9a19d9770dad63}{}\label{triangle_8c_a731494d7b1b65f211c9a19d9770dad63}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[6] = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle})                                               \(\backslash\)
+                     ((size\_t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri[6] | (size\_t) 2l)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!infected@{infected}}
+\index{infected@{infected}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infected}{infected}}]{\setlength{\rightskip}{0pt plus 5cm}\#define infected(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~(((size\+\_\+t) ({\bf triedge}).tri\mbox{[}6\mbox{]} \& (size\+\_\+t) 2l) != 0)}\hypertarget{triangle_8c_a87f7a8fb789bfbede2447ebd3f06e36a}{}\label{triangle_8c_a87f7a8fb789bfbede2447ebd3f06e36a}
+\index{triangle.\+c@{triangle.\+c}!lnext@{lnext}}
+\index{lnext@{lnext}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{lnext}{lnext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lnext(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a31e30636908af3702858bc5b6f964ba8}{}\label{triangle_8c_a31e30636908af3702858bc5b6f964ba8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(triedge2).tri = (triedge1).tri;                                            \(\backslash\)
+  (triedge2).orient = \hyperlink{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{plus1mod3}[(triedge1).orient]
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!lnextself@{lnextself}}
+\index{lnextself@{lnextself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{lnextself}{lnextself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lnextself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~({\bf triedge}).orient = {\bf plus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]}}\hypertarget{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{}\label{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}
+\index{triangle.\+c@{triangle.\+c}!lprev@{lprev}}
+\index{lprev@{lprev}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{lprev}{lprev}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lprev(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a8ce37842931d9d805178ac37901d039a}{}\label{triangle_8c_a8ce37842931d9d805178ac37901d039a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(triedge2).tri = (triedge1).tri;                                            \(\backslash\)
+  (triedge2).orient = \hyperlink{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{minus1mod3}[(triedge1).orient]
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!lprevself@{lprevself}}
+\index{lprevself@{lprevself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{lprevself}{lprevself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define lprevself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~({\bf triedge}).orient = {\bf minus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]}}\hypertarget{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{}\label{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}
+\index{triangle.\+c@{triangle.\+c}!mark@{mark}}
+\index{mark@{mark}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{mark}{mark}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mark(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)~($\ast$ (int $\ast$) (({\bf edge}).sh + 6))}\hypertarget{triangle_8c_a9e7e7be9050129037c9b460ae98ebe39}{}\label{triangle_8c_a9e7e7be9050129037c9b460ae98ebe39}
+\index{triangle.\+c@{triangle.\+c}!onext@{onext}}
+\index{onext@{onext}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{onext}{onext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define onext(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aabf52b134c384f3d48f5c899a1f2bf20}{}\label{triangle_8c_aabf52b134c384f3d48f5c899a1f2bf20}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a8ce37842931d9d805178ac37901d039a}{lprev}(triedge1, triedge2);                                                  
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!onextself@{onextself}}
+\index{onextself@{onextself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{onextself}{onextself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define onextself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad3699dcb29af4054217ef41b8f5827f1}{}\label{triangle_8c_ad3699dcb29af4054217ef41b8f5827f1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{lprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                         
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!oprev@{oprev}}
+\index{oprev@{oprev}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{oprev}{oprev}}]{\setlength{\rightskip}{0pt plus 5cm}\#define oprev(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a57dfee712cca8a7451a4352ce583173e}{}\label{triangle_8c_a57dfee712cca8a7451a4352ce583173e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{sym}(triedge1, triedge2);                                                    \hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{\(\backslash\)}
+\hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{  lnextself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!oprevself@{oprevself}}
+\index{oprevself@{oprevself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{oprevself}{oprevself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define oprevself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af3b97e6093a67288a0786204e74eae80}{}\label{triangle_8c_af3b97e6093a67288a0786204e74eae80}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                           
+      \hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{\(\backslash\)}
+\hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{  lnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!org@{org}}
+\index{org@{org}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{org}{org}}]{\setlength{\rightskip}{0pt plus 5cm}\#define org(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~pointptr = ({\bf point}) ({\bf triedge}).tri\mbox{[}{\bf plus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]} + 3\mbox{]}}\hypertarget{triangle_8c_a50c22cbb37a8d9a3a8d66470db05ba04}{}\label{triangle_8c_a50c22cbb37a8d9a3a8d66470db05ba04}
+\index{triangle.\+c@{triangle.\+c}!point2tri@{point2tri}}
+\index{point2tri@{point2tri}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{point2tri}{point2tri}}]{\setlength{\rightskip}{0pt plus 5cm}\#define point2tri(
+\begin{DoxyParamCaption}
+\item[{}]{pt}
+\end{DoxyParamCaption}
+)~(({\bf triangle} $\ast$) (pt))\mbox{[}{\bf point2triindex}\mbox{]}}\hypertarget{triangle_8c_ad700e9e4e1b79abbe3a85800aa2c231f}{}\label{triangle_8c_ad700e9e4e1b79abbe3a85800aa2c231f}
+\index{triangle.\+c@{triangle.\+c}!pointmark@{pointmark}}
+\index{pointmark@{pointmark}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointmark}{pointmark}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pointmark(
+\begin{DoxyParamCaption}
+\item[{}]{pt}
+\end{DoxyParamCaption}
+)~((int $\ast$) (pt))\mbox{[}{\bf pointmarkindex}\mbox{]}}\hypertarget{triangle_8c_a7b5f073f36928e891adf15566b4f2b53}{}\label{triangle_8c_a7b5f073f36928e891adf15566b4f2b53}
+\index{triangle.\+c@{triangle.\+c}!rnext@{rnext}}
+\index{rnext@{rnext}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{rnext}{rnext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rnext(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ac075439d3f040df74aaa1f92c4d66380}{}\label{triangle_8c_ac075439d3f040df74aaa1f92c4d66380}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{sym}(triedge1, triedge2);                                                    \hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{\(\backslash\)}
+\hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{  lnextself}(triedge2);                                                        
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!rnextself@{rnextself}}
+\index{rnextself@{rnextself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{rnextself}{rnextself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rnextself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a0765a97837a08448bc05726a03359fbe}{}\label{triangle_8c_a0765a97837a08448bc05726a03359fbe}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                           
+      \hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{\(\backslash\)}
+\hyperlink{triangle_8c_a181a771e9bda1e2c324f50c3ae644cb9}{  lnextself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                         
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!rprev@{rprev}}
+\index{rprev@{rprev}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{rprev}{rprev}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rprev(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aa02f505c93b335a273d922efc0b10372}{}\label{triangle_8c_aa02f505c93b335a273d922efc0b10372}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{sym}(triedge1, triedge2);                                                    \hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{\(\backslash\)}
+\hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{  lprevself}(triedge2);                                                        
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!rprevself@{rprevself}}
+\index{rprevself@{rprevself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{rprevself}{rprevself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rprevself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af107e50d94300055aca91c2c38355359}{}\label{triangle_8c_af107e50d94300055aca91c2c38355359}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                           
+      \hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{\(\backslash\)}
+\hyperlink{triangle_8c_aac2d3b00992216a70a5fbbae0fa0b7e5}{  lprevself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});                                                         
+      \hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{\(\backslash\)}
+\hyperlink{triangle_8c_acab3d406a380be1673414a2ed36f264f}{  symself}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!sbond@{sbond}}
+\index{sbond@{sbond}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sbond}{sbond}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbond(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9c573ca0ed08bda493edc2914f369ea7}{}\label{triangle_8c_a9c573ca0ed08bda493edc2914f369ea7}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(edge1).sh[(edge1).shorient] = \hyperlink{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}{sencode}(edge2);                              \(\backslash\)
+  (edge2).sh[(edge2).shorient] = \hyperlink{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}{sencode}(edge1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!sdecode@{sdecode}}
+\index{sdecode@{sdecode}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sdecode}{sdecode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sdecode(
+\begin{DoxyParamCaption}
+\item[{}]{sptr, }
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a026bdcd177682827d6d49dbe99839427}{}\label{triangle_8c_a026bdcd177682827d6d49dbe99839427}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).shorient = (\textcolor{keywordtype}{int}) ((size\_t) (sptr) & (size\_t) 1l);      \(\backslash\)
+  (\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).sh = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle} *)                                                      \(\backslash\)
+              ((size\_t) (sptr) & ~ (size\_t) 3l)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!sdest@{sdest}}
+\index{sdest@{sdest}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sdest}{sdest}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sdest(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~pointptr = ({\bf point}) ({\bf edge}).sh\mbox{[}3 -\/ ({\bf edge}).shorient\mbox{]}}\hypertarget{triangle_8c_ae87b060b69c5cfdbc6b2ab02b8bb52c2}{}\label{triangle_8c_ae87b060b69c5cfdbc6b2ab02b8bb52c2}
+\index{triangle.\+c@{triangle.\+c}!sdissolve@{sdissolve}}
+\index{sdissolve@{sdissolve}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sdissolve}{sdissolve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sdissolve(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)~({\bf edge}).sh\mbox{[}({\bf edge}).shorient\mbox{]} = ({\bf shelle}) {\bf dummysh}}\hypertarget{triangle_8c_ace785db9401c0c1b6a7548a96df902bf}{}\label{triangle_8c_ace785db9401c0c1b6a7548a96df902bf}
+\index{triangle.\+c@{triangle.\+c}!sencode@{sencode}}
+\index{sencode@{sencode}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sencode}{sencode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sencode(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)~({\bf shelle}) ((size\+\_\+t) ({\bf edge}).sh $\vert$ (size\+\_\+t) ({\bf edge}).shorient)}\hypertarget{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}{}\label{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}
+\index{triangle.\+c@{triangle.\+c}!setapex@{setapex}}
+\index{setapex@{setapex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setapex}{setapex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setapex(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~({\bf triedge}).tri\mbox{[}({\bf triedge}).orient + 3\mbox{]} = ({\bf triangle}) pointptr}\hypertarget{triangle_8c_a42041fcba0cf4e43b4caa15930c63019}{}\label{triangle_8c_a42041fcba0cf4e43b4caa15930c63019}
+\index{triangle.\+c@{triangle.\+c}!setareabound@{setareabound}}
+\index{setareabound@{setareabound}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setareabound}{setareabound}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setareabound(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((double $\ast$) ({\bf triedge}).tri)\mbox{[}{\bf areaboundindex}\mbox{]} = value}\hypertarget{triangle_8c_a7c8ce11becfd67e6522b94db27162d59}{}\label{triangle_8c_a7c8ce11becfd67e6522b94db27162d59}
+\index{triangle.\+c@{triangle.\+c}!setdest@{setdest}}
+\index{setdest@{setdest}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setdest}{setdest}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setdest(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~({\bf triedge}).tri\mbox{[}{\bf minus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]} + 3\mbox{]} = ({\bf triangle}) pointptr}\hypertarget{triangle_8c_a0eafec89d635ce5e37c70109959613c8}{}\label{triangle_8c_a0eafec89d635ce5e37c70109959613c8}
+\index{triangle.\+c@{triangle.\+c}!setelemattribute@{setelemattribute}}
+\index{setelemattribute@{setelemattribute}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setelemattribute}{setelemattribute}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setelemattribute(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{attnum, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((double $\ast$) ({\bf triedge}).tri)\mbox{[}{\bf elemattribindex} + (attnum)\mbox{]} = value}\hypertarget{triangle_8c_a99243d3e36a6db332e8702fa5856a25b}{}\label{triangle_8c_a99243d3e36a6db332e8702fa5856a25b}
+\index{triangle.\+c@{triangle.\+c}!setmark@{setmark}}
+\index{setmark@{setmark}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setmark}{setmark}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setmark(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~$\ast$ (int $\ast$) (({\bf edge}).sh + 6) = value}\hypertarget{triangle_8c_ae2364751693fbbf3fde0f30f5bcd879f}{}\label{triangle_8c_ae2364751693fbbf3fde0f30f5bcd879f}
+\index{triangle.\+c@{triangle.\+c}!setorg@{setorg}}
+\index{setorg@{setorg}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setorg}{setorg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setorg(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~({\bf triedge}).tri\mbox{[}{\bf plus1mod3}\mbox{[}({\bf triedge}).orient\mbox{]} + 3\mbox{]} = ({\bf triangle}) pointptr}\hypertarget{triangle_8c_a1657a454e5c0f0c429888a48809ee721}{}\label{triangle_8c_a1657a454e5c0f0c429888a48809ee721}
+\index{triangle.\+c@{triangle.\+c}!setpoint2tri@{setpoint2tri}}
+\index{setpoint2tri@{setpoint2tri}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setpoint2tri}{setpoint2tri}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setpoint2tri(
+\begin{DoxyParamCaption}
+\item[{}]{pt, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~(({\bf triangle} $\ast$) (pt))\mbox{[}{\bf point2triindex}\mbox{]} = value}\hypertarget{triangle_8c_a3440b3e6254fe6af732c683ec3286c2a}{}\label{triangle_8c_a3440b3e6254fe6af732c683ec3286c2a}
+\index{triangle.\+c@{triangle.\+c}!setpointmark@{setpointmark}}
+\index{setpointmark@{setpointmark}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setpointmark}{setpointmark}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setpointmark(
+\begin{DoxyParamCaption}
+\item[{}]{pt, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~((int $\ast$) (pt))\mbox{[}{\bf pointmarkindex}\mbox{]} = value}\hypertarget{triangle_8c_ad1a48bf8cbdbf39a4e86927be703b550}{}\label{triangle_8c_ad1a48bf8cbdbf39a4e86927be703b550}
+\index{triangle.\+c@{triangle.\+c}!setsdest@{setsdest}}
+\index{setsdest@{setsdest}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setsdest}{setsdest}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setsdest(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~({\bf edge}).sh\mbox{[}3 -\/ ({\bf edge}).shorient\mbox{]} = ({\bf shelle}) pointptr}\hypertarget{triangle_8c_a50b4f1c752847febcefb3ee5cbf63c26}{}\label{triangle_8c_a50b4f1c752847febcefb3ee5cbf63c26}
+\index{triangle.\+c@{triangle.\+c}!setsorg@{setsorg}}
+\index{setsorg@{setsorg}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setsorg}{setsorg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setsorg(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~({\bf edge}).sh\mbox{[}2 + ({\bf edge}).shorient\mbox{]} = ({\bf shelle}) pointptr}\hypertarget{triangle_8c_a871f837fdcd1e4155ff21319d2d05d1d}{}\label{triangle_8c_a871f837fdcd1e4155ff21319d2d05d1d}
+\index{triangle.\+c@{triangle.\+c}!setvertices2null@{setvertices2null}}
+\index{setvertices2null@{setvertices2null}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{setvertices2null}{setvertices2null}}]{\setlength{\rightskip}{0pt plus 5cm}\#define setvertices2null(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afa79b29f40cf961ed3b71e52135aea92}{}\label{triangle_8c_afa79b29f40cf961ed3b71e52135aea92}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[3] = NULL;                                         \(\backslash\)
+  (\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[4] = NULL;                                         \(\backslash\)
+  (\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[5] = NULL;
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!shellecopy@{shellecopy}}
+\index{shellecopy@{shellecopy}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shellecopy}{shellecopy}}]{\setlength{\rightskip}{0pt plus 5cm}\#define shellecopy(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a440b28c4ab71ffa23ef65006576c37a4}{}\label{triangle_8c_a440b28c4ab71ffa23ef65006576c37a4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(edge2).sh = (edge1).sh;                                                    \(\backslash\)
+  (edge2).shorient = (edge1).shorient
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!shelleequal@{shelleequal}}
+\index{shelleequal@{shelleequal}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shelleequal}{shelleequal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define shelleequal(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ae02c0bbf642ca2c172e9bb3dab0c379d}{}\label{triangle_8c_ae02c0bbf642ca2c172e9bb3dab0c379d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((edge1).sh == (edge2).sh) &&                                              \(\backslash\)
+   ((edge1).shorient == (edge2).shorient))
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!snext@{snext}}
+\index{snext@{snext}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{snext}{snext}}]{\setlength{\rightskip}{0pt plus 5cm}\#define snext(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a2d5804d3177a9a860ebbf5c6c37a3df1}{}\label{triangle_8c_a2d5804d3177a9a860ebbf5c6c37a3df1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+sptr = (edge1).sh[1 - (edge1).shorient];                                    \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{\(\backslash\)}
+\hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{  sdecode}(sptr, edge2)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!snextself@{snextself}}
+\index{snextself@{snextself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{snextself}{snextself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define snextself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afd397143e79a679fa6c4512a2821cfb9}{}\label{triangle_8c_afd397143e79a679fa6c4512a2821cfb9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+sptr = (\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).sh[1 - (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient];                                      
+      \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{\(\backslash\)}
+\hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{  sdecode}(sptr, \hyperlink{triangle_8c_d3/d3a/structedge}{edge})
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!sorg@{sorg}}
+\index{sorg@{sorg}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sorg}{sorg}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sorg(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{pointptr}
+\end{DoxyParamCaption}
+)~pointptr = ({\bf point}) ({\bf edge}).sh\mbox{[}2 + ({\bf edge}).shorient\mbox{]}}\hypertarget{triangle_8c_aad76f781d698bc5dfda9a19bb48e6823}{}\label{triangle_8c_aad76f781d698bc5dfda9a19bb48e6823}
+\index{triangle.\+c@{triangle.\+c}!spivot@{spivot}}
+\index{spivot@{spivot}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{spivot}{spivot}}]{\setlength{\rightskip}{0pt plus 5cm}\#define spivot(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a23a4ad4b94dadcd1029a5205d5ed4d69}{}\label{triangle_8c_a23a4ad4b94dadcd1029a5205d5ed4d69}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+sptr = (edge1).sh[(edge1).shorient];                                        \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{\(\backslash\)}
+\hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{  sdecode}(sptr, edge2)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!spivotself@{spivotself}}
+\index{spivotself@{spivotself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{spivotself}{spivotself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define spivotself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1e7a070c3760e7b1d1f76e066379131a}{}\label{triangle_8c_a1e7a070c3760e7b1d1f76e066379131a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+sptr = (\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).sh[(\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient];                                          
+      \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{\(\backslash\)}
+\hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{  sdecode}(sptr, \hyperlink{triangle_8c_d3/d3a/structedge}{edge})
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Split@{Split}}
+\index{Split@{Split}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Split}{Split}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Split(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{ahi, }
+\item[{}]{alo}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{}\label{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+c = (double) (\hyperlink{triangle_8c_a604d9fa6a20d20435119ad81b63ccf78}{splitter} * a); \(\backslash\)
+  abig = (double) (c - a); \(\backslash\)
+  ahi = c - abig; \(\backslash\)
+  alo = a - ahi
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Square@{Square}}
+\index{Square@{Square}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Square}{Square}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Square(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a0cce77b99432ef29e32ed7481e470f10}{}\label{triangle_8c_a0cce77b99432ef29e32ed7481e470f10}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a * a); \hyperlink{triangle_8c_a6e9ed62b93fa2a55ede246e85507de18}{\(\backslash\)}
+\hyperlink{triangle_8c_a6e9ed62b93fa2a55ede246e85507de18}{  Square\_Tail}(a, x, y)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Square\+\_\+\+Tail@{Square\+\_\+\+Tail}}
+\index{Square\+\_\+\+Tail@{Square\+\_\+\+Tail}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Square\+\_\+\+Tail}{Square_Tail}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Square\+\_\+\+Tail(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a6e9ed62b93fa2a55ede246e85507de18}{}\label{triangle_8c_a6e9ed62b93fa2a55ede246e85507de18}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{Split}(a, ahi, alo); \(\backslash\)
+  err1 = x - (ahi * ahi); \(\backslash\)
+  err3 = err1 - ((ahi + ahi) * alo); \(\backslash\)
+  y = (alo * alo) - err3
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!ssym@{ssym}}
+\index{ssym@{ssym}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ssym}{ssym}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssym(
+\begin{DoxyParamCaption}
+\item[{}]{edge1, }
+\item[{}]{edge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9c74b1f82d46522eb4ee9adee5970eac}{}\label{triangle_8c_a9c74b1f82d46522eb4ee9adee5970eac}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(edge2).sh = (edge1).sh;                                                    \(\backslash\)
+  (edge2).shorient = 1 - (edge1).shorient
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!ssymself@{ssymself}}
+\index{ssymself@{ssymself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ssymself}{ssymself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ssymself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)~({\bf edge}).shorient = 1 -\/ ({\bf edge}).shorient}\hypertarget{triangle_8c_a399d17c6cfbe2c26002592a668192b0d}{}\label{triangle_8c_a399d17c6cfbe2c26002592a668192b0d}
+\index{triangle.\+c@{triangle.\+c}!stdissolve@{stdissolve}}
+\index{stdissolve@{stdissolve}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{stdissolve}{stdissolve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stdissolve(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)~({\bf edge}).sh\mbox{[}4 + ({\bf edge}).shorient\mbox{]} = ({\bf shelle}) {\bf dummytri}}\hypertarget{triangle_8c_ad0c03d4b4fa43d3a2354e1333ad0171d}{}\label{triangle_8c_ad0c03d4b4fa43d3a2354e1333ad0171d}
+\index{triangle.\+c@{triangle.\+c}!stpivot@{stpivot}}
+\index{stpivot@{stpivot}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{stpivot}{stpivot}}]{\setlength{\rightskip}{0pt plus 5cm}\#define stpivot(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf edge}, }
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ae71c461d205077bb9b8db8d6939d6d7d}{}\label{triangle_8c_ae71c461d205077bb9b8db8d6939d6d7d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+ptr = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).sh[4 + (\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).shorient];                            
+      \hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{\(\backslash\)}
+\hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{  decode}(ptr, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge})
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!sym@{sym}}
+\index{sym@{sym}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{sym}{sym}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sym(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}{}\label{triangle_8c_a9b3cdf7515fbb1d1690b78520dc3d571}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+ptr = (triedge1).tri[(triedge1).orient];                                    \hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{\(\backslash\)}
+\hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{  decode}(ptr, triedge2);
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!symself@{symself}}
+\index{symself@{symself}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{symself}{symself}}]{\setlength{\rightskip}{0pt plus 5cm}\#define symself(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_acab3d406a380be1673414a2ed36f264f}{}\label{triangle_8c_acab3d406a380be1673414a2ed36f264f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+ptr = (\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient];                                      
+      \hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{\(\backslash\)}
+\hyperlink{triangle_8c_acdedc13ce49a49e82e69e757f3a337a5}{  decode}(ptr, \hyperlink{triangle_8c_de/df7/structtriedge}{triedge});
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!triedgecopy@{triedgecopy}}
+\index{triedgecopy@{triedgecopy}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triedgecopy}{triedgecopy}}]{\setlength{\rightskip}{0pt plus 5cm}\#define triedgecopy(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a05e4e221775f9d72e9ec7588a9c283be}{}\label{triangle_8c_a05e4e221775f9d72e9ec7588a9c283be}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(triedge2).tri = (triedge1).tri;                                            \(\backslash\)
+  (triedge2).orient = (triedge1).orient
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!triedgeequal@{triedgeequal}}
+\index{triedgeequal@{triedgeequal}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triedgeequal}{triedgeequal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define triedgeequal(
+\begin{DoxyParamCaption}
+\item[{}]{triedge1, }
+\item[{}]{triedge2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afde03cdc927abbc7efd9931119ca6167}{}\label{triangle_8c_afde03cdc927abbc7efd9931119ca6167}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((triedge1).tri == (triedge2).tri) &&                                      \(\backslash\)
+   ((triedge1).orient == (triedge2).orient))
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!tsbond@{tsbond}}
+\index{tsbond@{tsbond}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{tsbond}{tsbond}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tsbond(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a72d5b020c5d8219d4147916ce1452daf}{}\label{triangle_8c_a72d5b020c5d8219d4147916ce1452daf}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[6 + (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).orient] = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle}) \hyperlink{triangle_8c_a68866904cb2258c05c12d0633ad02a2b}{sencode}(
+      \hyperlink{triangle_8c_d3/d3a/structedge}{edge});             \(\backslash\)
+  (\hyperlink{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{edge}).sh[4 + (\hyperlink{triangle_8c_d3/d3a/structedge}{edge}).shorient] = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) \hyperlink{triangle_8c_ae42a048af8c1a82024aac9311b18b6a3}{encode}(\hyperlink{triangle_8c_de/df7/structtriedge}{triedge})
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!tsdissolve@{tsdissolve}}
+\index{tsdissolve@{tsdissolve}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{tsdissolve}{tsdissolve}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tsdissolve(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)~({\bf triedge}).tri\mbox{[}6 + ({\bf triedge}).orient\mbox{]} = ({\bf triangle}) {\bf dummysh}}\hypertarget{triangle_8c_a8ba1be3a58f673e9a139418df5a5d24a}{}\label{triangle_8c_a8ba1be3a58f673e9a139418df5a5d24a}
+\index{triangle.\+c@{triangle.\+c}!tspivot@{tspivot}}
+\index{tspivot@{tspivot}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{tspivot}{tspivot}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tspivot(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}, }
+\item[{}]{{\bf edge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ab2a7545a6efada17287890ae5a540b77}{}\label{triangle_8c_ab2a7545a6efada17287890ae5a540b77}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+sptr = (\hyperlink{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{shelle}) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri[6 + (\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).orient];                        
+      \hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{\(\backslash\)}
+\hyperlink{triangle_8c_a026bdcd177682827d6d49dbe99839427}{  sdecode}(sptr, \hyperlink{triangle_8c_d3/d3a/structedge}{edge})
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Diff@{Two\+\_\+\+Diff}}
+\index{Two\+\_\+\+Diff@{Two\+\_\+\+Diff}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Diff}{Two_Diff}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Diff(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ac60bb459f7540f5717747fbef47e62b4}{}\label{triangle_8c_ac60bb459f7540f5717747fbef47e62b4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a - b); \hyperlink{triangle_8c_a636a9c6e1b1171cbf745575166954389}{\(\backslash\)}
+\hyperlink{triangle_8c_a636a9c6e1b1171cbf745575166954389}{  Two\_Diff\_Tail}(a, b, x, y)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Diff\+\_\+\+Tail@{Two\+\_\+\+Diff\+\_\+\+Tail}}
+\index{Two\+\_\+\+Diff\+\_\+\+Tail@{Two\+\_\+\+Diff\+\_\+\+Tail}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Diff\+\_\+\+Tail}{Two_Diff_Tail}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Diff\+\_\+\+Tail(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a636a9c6e1b1171cbf745575166954389}{}\label{triangle_8c_a636a9c6e1b1171cbf745575166954389}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+bvirt = (double) (a - x); \(\backslash\)
+  avirt = x + bvirt; \(\backslash\)
+  bround = bvirt - b; \(\backslash\)
+  around = a - avirt; \(\backslash\)
+  y = around + bround
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+One\+\_\+\+Diff@{Two\+\_\+\+One\+\_\+\+Diff}}
+\index{Two\+\_\+\+One\+\_\+\+Diff@{Two\+\_\+\+One\+\_\+\+Diff}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+One\+\_\+\+Diff}{Two_One_Diff}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+One\+\_\+\+Diff(
+\begin{DoxyParamCaption}
+\item[{}]{a1, }
+\item[{}]{a0, }
+\item[{}]{b, }
+\item[{}]{x2, }
+\item[{}]{x1, }
+\item[{}]{x0}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a5315d6436a90d87938ae9df8a408de67}{}\label{triangle_8c_a5315d6436a90d87938ae9df8a408de67}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_ac60bb459f7540f5717747fbef47e62b4}{Two\_Diff}(a0, b , \_i, x0); \hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{\(\backslash\)}
+\hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{  Two\_Sum}( a1, \_i, x2, x1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+One\+\_\+\+Sum@{Two\+\_\+\+One\+\_\+\+Sum}}
+\index{Two\+\_\+\+One\+\_\+\+Sum@{Two\+\_\+\+One\+\_\+\+Sum}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+One\+\_\+\+Sum}{Two_One_Sum}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+One\+\_\+\+Sum(
+\begin{DoxyParamCaption}
+\item[{}]{a1, }
+\item[{}]{a0, }
+\item[{}]{b, }
+\item[{}]{x2, }
+\item[{}]{x1, }
+\item[{}]{x0}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}{}\label{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{Two\_Sum}(a0, b , \_i, x0); \hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{\(\backslash\)}
+\hyperlink{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{  Two\_Sum}(a1, \_i, x2, x1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Product@{Two\+\_\+\+Product}}
+\index{Two\+\_\+\+Product@{Two\+\_\+\+Product}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Product}{Two_Product}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Product(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a27f5145ac554d28b9c257ac0909d055b}{}\label{triangle_8c_a27f5145ac554d28b9c257ac0909d055b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a * b); \hyperlink{triangle_8c_ac9dcc9500c883fdac1acdf11127ae886}{\(\backslash\)}
+\hyperlink{triangle_8c_ac9dcc9500c883fdac1acdf11127ae886}{  Two\_Product\_Tail}(a, b, x, y)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Product\+\_\+\+Presplit@{Two\+\_\+\+Product\+\_\+\+Presplit}}
+\index{Two\+\_\+\+Product\+\_\+\+Presplit@{Two\+\_\+\+Product\+\_\+\+Presplit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Product\+\_\+\+Presplit}{Two_Product_Presplit}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Product\+\_\+\+Presplit(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{bhi, }
+\item[{}]{blo, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a4b7fb41ff1c60fa3b701bc405a5c5e46}{}\label{triangle_8c_a4b7fb41ff1c60fa3b701bc405a5c5e46}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a * b); \hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{\(\backslash\)}
+\hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{  Split}(a, ahi, alo); \(\backslash\)
+  err1 = x - (ahi * bhi); \(\backslash\)
+  err2 = err1 - (alo * bhi); \(\backslash\)
+  err3 = err2 - (ahi * blo); \(\backslash\)
+  y = (alo * blo) - err3
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Product\+\_\+\+Tail@{Two\+\_\+\+Product\+\_\+\+Tail}}
+\index{Two\+\_\+\+Product\+\_\+\+Tail@{Two\+\_\+\+Product\+\_\+\+Tail}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Product\+\_\+\+Tail}{Two_Product_Tail}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Product\+\_\+\+Tail(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ac9dcc9500c883fdac1acdf11127ae886}{}\label{triangle_8c_ac9dcc9500c883fdac1acdf11127ae886}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{Split}(a, ahi, alo); \hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{\(\backslash\)}
+\hyperlink{triangle_8c_aeeb6165c4120f8480d2f92fa7e3061ab}{  Split}(b, bhi, blo); \(\backslash\)
+  err1 = x - (ahi * bhi); \(\backslash\)
+  err2 = err1 - (alo * bhi); \(\backslash\)
+  err3 = err2 - (ahi * blo); \(\backslash\)
+  y = (alo * blo) - err3
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Sum@{Two\+\_\+\+Sum}}
+\index{Two\+\_\+\+Sum@{Two\+\_\+\+Sum}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Sum}{Two_Sum}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Sum(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}{}\label{triangle_8c_aa559790796899b51e5f0afcb2dfb8ed7}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+x = (double) (a + b); \hyperlink{triangle_8c_a367e02bc95e29a48c4815fcd63806f64}{\(\backslash\)}
+\hyperlink{triangle_8c_a367e02bc95e29a48c4815fcd63806f64}{  Two\_Sum\_Tail}(a, b, x, y)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Sum\+\_\+\+Tail@{Two\+\_\+\+Sum\+\_\+\+Tail}}
+\index{Two\+\_\+\+Sum\+\_\+\+Tail@{Two\+\_\+\+Sum\+\_\+\+Tail}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Sum\+\_\+\+Tail}{Two_Sum_Tail}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Sum\+\_\+\+Tail(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a367e02bc95e29a48c4815fcd63806f64}{}\label{triangle_8c_a367e02bc95e29a48c4815fcd63806f64}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+bvirt = (double) (x - a); \(\backslash\)
+  avirt = x - bvirt; \(\backslash\)
+  bround = b - bvirt; \(\backslash\)
+  around = a - avirt; \(\backslash\)
+  y = around + bround
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Two\+\_\+\+Diff@{Two\+\_\+\+Two\+\_\+\+Diff}}
+\index{Two\+\_\+\+Two\+\_\+\+Diff@{Two\+\_\+\+Two\+\_\+\+Diff}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Two\+\_\+\+Diff}{Two_Two_Diff}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Two\+\_\+\+Diff(
+\begin{DoxyParamCaption}
+\item[{}]{a1, }
+\item[{}]{a0, }
+\item[{}]{b1, }
+\item[{}]{b0, }
+\item[{}]{x3, }
+\item[{}]{x2, }
+\item[{}]{x1, }
+\item[{}]{x0}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ab4f08ad5dba11bbdf27b64132824b3a3}{}\label{triangle_8c_ab4f08ad5dba11bbdf27b64132824b3a3}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_a5315d6436a90d87938ae9df8a408de67}{Two\_One\_Diff}(a1, a0, b0, \_j, \_0, x0); \hyperlink{triangle_8c_a5315d6436a90d87938ae9df8a408de67}{\(\backslash\)}
+\hyperlink{triangle_8c_a5315d6436a90d87938ae9df8a408de67}{  Two\_One\_Diff}(\_j, \_0, b1, x3, x2, x1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!Two\+\_\+\+Two\+\_\+\+Sum@{Two\+\_\+\+Two\+\_\+\+Sum}}
+\index{Two\+\_\+\+Two\+\_\+\+Sum@{Two\+\_\+\+Two\+\_\+\+Sum}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Two\+\_\+\+Two\+\_\+\+Sum}{Two_Two_Sum}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Two\+\_\+\+Two\+\_\+\+Sum(
+\begin{DoxyParamCaption}
+\item[{}]{a1, }
+\item[{}]{a0, }
+\item[{}]{b1, }
+\item[{}]{b0, }
+\item[{}]{x3, }
+\item[{}]{x2, }
+\item[{}]{x1, }
+\item[{}]{x0}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ae3c61622ca0206f23311a66c864f8fff}{}\label{triangle_8c_ae3c61622ca0206f23311a66c864f8fff}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}{Two\_One\_Sum}(a1, a0, b0, \_j, \_0, x0); \hyperlink{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}{\(\backslash\)}
+\hyperlink{triangle_8c_aac797f696ef3cee9ffd42c36f8990185}{  Two\_One\_Sum}(\_j, \_0, b1, x3, x2, x1)
+\end{DoxyCode}
+\index{triangle.\+c@{triangle.\+c}!uninfect@{uninfect}}
+\index{uninfect@{uninfect}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{uninfect}{uninfect}}]{\setlength{\rightskip}{0pt plus 5cm}\#define uninfect(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf triedge}}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a0d2888a6b323dd9543e58398bf76f532}{}\label{triangle_8c_a0d2888a6b323dd9543e58398bf76f532}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{triedge}).tri[6] = (\hyperlink{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{triangle})                                               \(\backslash\)
+                     ((size\_t) (\hyperlink{triangle_8c_de/df7/structtriedge}{triedge}).tri[6] & ~ (size\_t) 2l)
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\index{triangle.\+c@{triangle.\+c}!circumcenterresult@{circumcenterresult}}
+\index{circumcenterresult@{circumcenterresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{circumcenterresult}{circumcenterresult}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf circumcenterresult} {\bf circumcenterresult}}\hypertarget{triangle_8c_a110c1346e3c4f113c35c5fa8ff33aa8e}{}\label{triangle_8c_a110c1346e3c4f113c35c5fa8ff33aa8e}
+\index{triangle.\+c@{triangle.\+c}!edge@{edge}}
+\index{edge@{edge}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{edge}{edge}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf edge} {\bf edge}}\hypertarget{triangle_8c_a62e8ac20ad6459019691857781e5a4da}{}\label{triangle_8c_a62e8ac20ad6459019691857781e5a4da}
+\index{triangle.\+c@{triangle.\+c}!finddirectionresult@{finddirectionresult}}
+\index{finddirectionresult@{finddirectionresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{finddirectionresult}{finddirectionresult}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf finddirectionresult} {\bf finddirectionresult}}\hypertarget{triangle_8c_a5a4cec11360e3556e5d30c76713748f5}{}\label{triangle_8c_a5a4cec11360e3556e5d30c76713748f5}
+\index{triangle.\+c@{triangle.\+c}!insertsiteresult@{insertsiteresult}}
+\index{insertsiteresult@{insertsiteresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{insertsiteresult}{insertsiteresult}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf insertsiteresult} {\bf insertsiteresult}}\hypertarget{triangle_8c_a0bd5812cddb2c856c2aa11963635a42d}{}\label{triangle_8c_a0bd5812cddb2c856c2aa11963635a42d}
+\index{triangle.\+c@{triangle.\+c}!locateresult@{locateresult}}
+\index{locateresult@{locateresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{locateresult}{locateresult}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf locateresult} {\bf locateresult}}\hypertarget{triangle_8c_a63ccbc6a1210a799febf7859d27db038}{}\label{triangle_8c_a63ccbc6a1210a799febf7859d27db038}
+\index{triangle.\+c@{triangle.\+c}!memorypool@{memorypool}}
+\index{memorypool@{memorypool}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{memorypool}{memorypool}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf memorypool} {\bf memorypool}}\hypertarget{triangle_8c_aa12dc42bc6d19d2d2fbf07abfb9f99c8}{}\label{triangle_8c_aa12dc42bc6d19d2d2fbf07abfb9f99c8}
+\index{triangle.\+c@{triangle.\+c}!point@{point}}
+\index{point@{point}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{point}{point}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double$\ast$ {\bf point}}\hypertarget{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{}\label{triangle_8c_a27e17773e4939632f373e0938d62cc4f}
+\index{triangle.\+c@{triangle.\+c}!Pool\+Block@{Pool\+Block}}
+\index{Pool\+Block@{Pool\+Block}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Pool\+Block}{PoolBlock}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Pool\+Block} {\bf Pool\+Block}}\hypertarget{triangle_8c_a8e612edc18cc3720e50d348ec89d2760}{}\label{triangle_8c_a8e612edc18cc3720e50d348ec89d2760}
+\index{triangle.\+c@{triangle.\+c}!shelle@{shelle}}
+\index{shelle@{shelle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shelle}{shelle}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double$\ast$$\ast$ {\bf shelle}}\hypertarget{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}{}\label{triangle_8c_ab1a878ad2235d4eb9f35c946557801b5}
+\index{triangle.\+c@{triangle.\+c}!triangle@{triangle}}
+\index{triangle@{triangle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangle}{triangle}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double$\ast$$\ast$ {\bf triangle}}\hypertarget{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}{}\label{triangle_8c_ab0f457d3f93632ee8791793ff1ea62ae}
+\index{triangle.\+c@{triangle.\+c}!triedge@{triedge}}
+\index{triedge@{triedge}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triedge}{triedge}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf triedge} {\bf triedge}}\hypertarget{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}{}\label{triangle_8c_ad8082be5dce1f0a4e02d14bd711564b8}
+
+
+\subsection{Enumeration Type Documentation}
+\index{triangle.\+c@{triangle.\+c}!circumcenterresult@{circumcenterresult}}
+\index{circumcenterresult@{circumcenterresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{circumcenterresult}{circumcenterresult}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf circumcenterresult}}\hypertarget{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8}{}\label{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+P\+P\+O\+S\+I\+T\+E\+O\+RG@{O\+P\+P\+O\+S\+I\+T\+E\+O\+RG}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+P\+P\+O\+S\+I\+T\+E\+O\+RG@{O\+P\+P\+O\+S\+I\+T\+E\+O\+RG}}\item[{\em 
+O\+P\+P\+O\+S\+I\+T\+E\+O\+RG\hypertarget{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a2724e59f5cce7f63b0a90f896445a48d}{}\label{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a2724e59f5cce7f63b0a90f896445a48d}
+}]\index{O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST@{O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST@{O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST}}\item[{\em 
+O\+P\+P\+O\+S\+I\+T\+E\+D\+E\+ST\hypertarget{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a310f690de9b7fd54ea5a4b9b80d880e2}{}\label{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8a310f690de9b7fd54ea5a4b9b80d880e2}
+}]\index{O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX@{O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX@{O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX}}\item[{\em 
+O\+P\+P\+O\+S\+I\+T\+E\+A\+P\+EX\hypertarget{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8adde2064d929222eaa1c1a0474c3f71be}{}\label{triangle_8c_aeb2918b6e730d3ba91466808f181b0e8adde2064d929222eaa1c1a0474c3f71be}
+}]\end{description}
+\end{Desc}
+\index{triangle.\+c@{triangle.\+c}!finddirectionresult@{finddirectionresult}}
+\index{finddirectionresult@{finddirectionresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{finddirectionresult}{finddirectionresult}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf finddirectionresult}}\hypertarget{triangle_8c_a15c836267235f634792362d21484b054}{}\label{triangle_8c_a15c836267235f634792362d21484b054}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+I\+T\+H\+IN@{W\+I\+T\+H\+IN}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!W\+I\+T\+H\+IN@{W\+I\+T\+H\+IN}}\item[{\em 
+W\+I\+T\+H\+IN\hypertarget{triangle_8c_a15c836267235f634792362d21484b054aaf4f72867f549a6505e6ca054b27a1e6}{}\label{triangle_8c_a15c836267235f634792362d21484b054aaf4f72867f549a6505e6ca054b27a1e6}
+}]\index{L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR@{L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR@{L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR}}\item[{\em 
+L\+E\+F\+T\+C\+O\+L\+L\+I\+N\+E\+AR\hypertarget{triangle_8c_a15c836267235f634792362d21484b054a004542c8c95d759feaf68dcef0150990}{}\label{triangle_8c_a15c836267235f634792362d21484b054a004542c8c95d759feaf68dcef0150990}
+}]\index{R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR@{R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR@{R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR}}\item[{\em 
+R\+I\+G\+H\+T\+C\+O\+L\+L\+I\+N\+E\+AR\hypertarget{triangle_8c_a15c836267235f634792362d21484b054a7058a6bd01e1109312f1c78ea3669729}{}\label{triangle_8c_a15c836267235f634792362d21484b054a7058a6bd01e1109312f1c78ea3669729}
+}]\end{description}
+\end{Desc}
+\index{triangle.\+c@{triangle.\+c}!insertsiteresult@{insertsiteresult}}
+\index{insertsiteresult@{insertsiteresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{insertsiteresult}{insertsiteresult}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf insertsiteresult}}\hypertarget{triangle_8c_a0125d35346befdb07b5f8395e4457c1b}{}\label{triangle_8c_a0125d35346befdb07b5f8395e4457c1b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT@{S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT@{S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT}}\item[{\em 
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+P\+O\+I\+NT\hypertarget{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba6c9fd2417e2f9cdba8bcf2218e344186}{}\label{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba6c9fd2417e2f9cdba8bcf2218e344186}
+}]\index{E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT@{E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT@{E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT}}\item[{\em 
+E\+N\+C\+R\+O\+A\+C\+H\+I\+N\+G\+P\+O\+I\+NT\hypertarget{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba9d3524267e6d7cd4831942b5541b0534}{}\label{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba9d3524267e6d7cd4831942b5541b0534}
+}]\index{V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT@{V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT@{V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT}}\item[{\em 
+V\+I\+O\+L\+A\+T\+I\+N\+G\+P\+O\+I\+NT\hypertarget{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba2e923be1465e8a3cccc62c8d84e0bacd}{}\label{triangle_8c_a0125d35346befdb07b5f8395e4457c1ba2e923be1465e8a3cccc62c8d84e0bacd}
+}]\index{D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT@{D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT@{D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT}}\item[{\em 
+D\+U\+P\+L\+I\+C\+A\+T\+E\+P\+O\+I\+NT\hypertarget{triangle_8c_a0125d35346befdb07b5f8395e4457c1bafb156a5daa3f2a805bbdaf7fa509c4ce}{}\label{triangle_8c_a0125d35346befdb07b5f8395e4457c1bafb156a5daa3f2a805bbdaf7fa509c4ce}
+}]\end{description}
+\end{Desc}
+\index{triangle.\+c@{triangle.\+c}!locateresult@{locateresult}}
+\index{locateresult@{locateresult}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{locateresult}{locateresult}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf locateresult}}\hypertarget{triangle_8c_a780d12d8ee18a0060da76c91611d1391}{}\label{triangle_8c_a780d12d8ee18a0060da76c91611d1391}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+N\+T\+R\+I\+A\+N\+G\+LE@{I\+N\+T\+R\+I\+A\+N\+G\+LE}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!I\+N\+T\+R\+I\+A\+N\+G\+LE@{I\+N\+T\+R\+I\+A\+N\+G\+LE}}\item[{\em 
+I\+N\+T\+R\+I\+A\+N\+G\+LE\hypertarget{triangle_8c_a780d12d8ee18a0060da76c91611d1391a48dc8926c9c725dddb0131078fc587b0}{}\label{triangle_8c_a780d12d8ee18a0060da76c91611d1391a48dc8926c9c725dddb0131078fc587b0}
+}]\index{O\+N\+E\+D\+GE@{O\+N\+E\+D\+GE}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+N\+E\+D\+GE@{O\+N\+E\+D\+GE}}\item[{\em 
+O\+N\+E\+D\+GE\hypertarget{triangle_8c_a780d12d8ee18a0060da76c91611d1391a85bbe5aca51647bc0595b4acba6ca1f7}{}\label{triangle_8c_a780d12d8ee18a0060da76c91611d1391a85bbe5aca51647bc0595b4acba6ca1f7}
+}]\index{O\+N\+V\+E\+R\+T\+EX@{O\+N\+V\+E\+R\+T\+EX}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+N\+V\+E\+R\+T\+EX@{O\+N\+V\+E\+R\+T\+EX}}\item[{\em 
+O\+N\+V\+E\+R\+T\+EX\hypertarget{triangle_8c_a780d12d8ee18a0060da76c91611d1391a7b218649375f5b418124df2ef7d0e564}{}\label{triangle_8c_a780d12d8ee18a0060da76c91611d1391a7b218649375f5b418124df2ef7d0e564}
+}]\index{O\+U\+T\+S\+I\+DE@{O\+U\+T\+S\+I\+DE}!triangle.\+c@{triangle.\+c}}\index{triangle.\+c@{triangle.\+c}!O\+U\+T\+S\+I\+DE@{O\+U\+T\+S\+I\+DE}}\item[{\em 
+O\+U\+T\+S\+I\+DE\hypertarget{triangle_8c_a780d12d8ee18a0060da76c91611d1391a3c0a64074de1af803bba09ed1870689d}{}\label{triangle_8c_a780d12d8ee18a0060da76c91611d1391a3c0a64074de1af803bba09ed1870689d}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{triangle.\+c@{triangle.\+c}!allocate\+\_\+storage@{allocate\+\_\+storage}}
+\index{allocate\+\_\+storage@{allocate\+\_\+storage}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{allocate\+\_\+storage(void $\ast$, size\+\_\+t $\ast$, size\+\_\+t)}{allocate_storage(void *, size_t *, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void $\ast$ allocate\+\_\+storage (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{storage, }
+\item[{size\+\_\+t $\ast$}]{storage\+\_\+size, }
+\item[{size\+\_\+t}]{new\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad5d350d82c6bc6bdc0bcfe85612d1982}{}\label{triangle_8c_ad5d350d82c6bc6bdc0bcfe85612d1982}
+\index{triangle.\+c@{triangle.\+c}!alternateaxes@{alternateaxes}}
+\index{alternateaxes@{alternateaxes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{alternateaxes(point $\ast$, int, int)}{alternateaxes(point *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void alternateaxes (
+\begin{DoxyParamCaption}
+\item[{{\bf point} $\ast$}]{sortarray, }
+\item[{int}]{arraysize, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a90562e4105f83610360fb1aeaa1a0bd6}{}\label{triangle_8c_a90562e4105f83610360fb1aeaa1a0bd6}
+\index{triangle.\+c@{triangle.\+c}!carveholes@{carveholes}}
+\index{carveholes@{carveholes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{carveholes(double $\ast$, int, double $\ast$, int)}{carveholes(double *, int, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void carveholes (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{holelist, }
+\item[{int}]{holes, }
+\item[{double $\ast$}]{regionlist, }
+\item[{int}]{regions}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1dae8ff094c17ff1ca2138e99fd8f936}{}\label{triangle_8c_a1dae8ff094c17ff1ca2138e99fd8f936}
+\index{triangle.\+c@{triangle.\+c}!constrainededge@{constrainededge}}
+\index{constrainededge@{constrainededge}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{constrainededge(triedge $\ast$, point, int)}{constrainededge(triedge *, point, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void constrainededge (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{starttri, }
+\item[{{\bf point}}]{endpoint2, }
+\item[{int}]{newmark}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a26df6ed848d53a3ecff88e7d295b0016}{}\label{triangle_8c_a26df6ed848d53a3ecff88e7d295b0016}
+\index{triangle.\+c@{triangle.\+c}!counterclockwise@{counterclockwise}}
+\index{counterclockwise@{counterclockwise}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{counterclockwise(point, point, point)}{counterclockwise(point, point, point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double counterclockwise (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{pa, }
+\item[{{\bf point}}]{pb, }
+\item[{{\bf point}}]{pc}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a5c350c1a3941f275d407d337034d6380}{}\label{triangle_8c_a5c350c1a3941f275d407d337034d6380}
+\index{triangle.\+c@{triangle.\+c}!counterclockwiseadapt@{counterclockwiseadapt}}
+\index{counterclockwiseadapt@{counterclockwiseadapt}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{counterclockwiseadapt(point, point, point, double)}{counterclockwiseadapt(point, point, point, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double counterclockwiseadapt (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{pa, }
+\item[{{\bf point}}]{pb, }
+\item[{{\bf point}}]{pc, }
+\item[{double}]{detsum}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a22bcb691578b7d9df436c6588fc6b42d}{}\label{triangle_8c_a22bcb691578b7d9df436c6588fc6b42d}
+\index{triangle.\+c@{triangle.\+c}!delaunay@{delaunay}}
+\index{delaunay@{delaunay}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{delaunay(void)}{delaunay(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long delaunay (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9cdc05bd7338eefb07edae881518314a}{}\label{triangle_8c_a9cdc05bd7338eefb07edae881518314a}
+\index{triangle.\+c@{triangle.\+c}!delaunayfixup@{delaunayfixup}}
+\index{delaunayfixup@{delaunayfixup}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{delaunayfixup(triedge $\ast$, int)}{delaunayfixup(triedge *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void delaunayfixup (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{fixuptri, }
+\item[{int}]{leftside}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aaebb7d6ad74ada1ba92d58c28d92d036}{}\label{triangle_8c_aaebb7d6ad74ada1ba92d58c28d92d036}
+\index{triangle.\+c@{triangle.\+c}!divconqdelaunay@{divconqdelaunay}}
+\index{divconqdelaunay@{divconqdelaunay}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{divconqdelaunay(void)}{divconqdelaunay(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long divconqdelaunay (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a904b10c0156b1d40a985d86ee092ddff}{}\label{triangle_8c_a904b10c0156b1d40a985d86ee092ddff}
+\index{triangle.\+c@{triangle.\+c}!divconqrecurse@{divconqrecurse}}
+\index{divconqrecurse@{divconqrecurse}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{divconqrecurse(point $\ast$, int, int, triedge $\ast$, triedge $\ast$)}{divconqrecurse(point *, int, int, triedge *, triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void divconqrecurse (
+\begin{DoxyParamCaption}
+\item[{{\bf point} $\ast$}]{sortarray, }
+\item[{int}]{vertices, }
+\item[{int}]{axis, }
+\item[{{\bf triedge} $\ast$}]{farleft, }
+\item[{{\bf triedge} $\ast$}]{farright}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af730c4197ec55f9bc2ad91e221b5aeda}{}\label{triangle_8c_af730c4197ec55f9bc2ad91e221b5aeda}
+\index{triangle.\+c@{triangle.\+c}!dummyinit@{dummyinit}}
+\index{dummyinit@{dummyinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dummyinit(size\+\_\+t trianglewords, size\+\_\+t)}{dummyinit(size_t trianglewords, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void dummyinit (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{trianglewords, }
+\item[{size\+\_\+t}]{shellewords}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ab5473ac45231d2956ee37a575505b831}{}\label{triangle_8c_ab5473ac45231d2956ee37a575505b831}
+\index{triangle.\+c@{triangle.\+c}!estimate@{estimate}}
+\index{estimate@{estimate}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{estimate(int, double $\ast$)}{estimate(int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double estimate (
+\begin{DoxyParamCaption}
+\item[{int}]{elen, }
+\item[{double $\ast$}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a86ce5774b2b28c8254b5c6e3af42b8c2}{}\label{triangle_8c_a86ce5774b2b28c8254b5c6e3af42b8c2}
+\index{triangle.\+c@{triangle.\+c}!exactinit@{exactinit}}
+\index{exactinit@{exactinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{exactinit(void)}{exactinit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void exactinit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_abf202e524d0ad0fa72b01965350acd64}{}\label{triangle_8c_abf202e524d0ad0fa72b01965350acd64}
+\index{triangle.\+c@{triangle.\+c}!fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim@{fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim}}
+\index{fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim@{fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim(int, double $\ast$, int, double $\ast$, double $\ast$)}{fast_expansion_sum_zeroelim(int, double *, int, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int fast\+\_\+expansion\+\_\+sum\+\_\+zeroelim (
+\begin{DoxyParamCaption}
+\item[{int}]{elen, }
+\item[{double $\ast$}]{e, }
+\item[{int}]{flen, }
+\item[{double $\ast$}]{f, }
+\item[{double $\ast$}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad648b063b9de37e19533d20909731f72}{}\label{triangle_8c_ad648b063b9de37e19533d20909731f72}
+\index{triangle.\+c@{triangle.\+c}!findcircumcenter@{findcircumcenter}}
+\index{findcircumcenter@{findcircumcenter}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{findcircumcenter(point, point, point, point, double $\ast$, double $\ast$)}{findcircumcenter(point, point, point, point, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf circumcenterresult} findcircumcenter (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{torg, }
+\item[{{\bf point}}]{tdest, }
+\item[{{\bf point}}]{tapex, }
+\item[{{\bf point}}]{circumcenter, }
+\item[{double $\ast$}]{xi, }
+\item[{double $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a64ee8ceb8f9dbbb555aa16defefb92c8}{}\label{triangle_8c_a64ee8ceb8f9dbbb555aa16defefb92c8}
+\index{triangle.\+c@{triangle.\+c}!finddirection@{finddirection}}
+\index{finddirection@{finddirection}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{finddirection(triedge $\ast$, point)}{finddirection(triedge *, point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf finddirectionresult} finddirection (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{searchtri, }
+\item[{{\bf point}}]{endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a0560bcfb98b09288992f361a0c599ffb}{}\label{triangle_8c_a0560bcfb98b09288992f361a0c599ffb}
+\index{triangle.\+c@{triangle.\+c}!First\+Item\+In\+Block@{First\+Item\+In\+Block}}
+\index{First\+Item\+In\+Block@{First\+Item\+In\+Block}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{First\+Item\+In\+Block(\+Pool\+Block $\ast$)}{FirstItemInBlock(PoolBlock *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void $\ast$ First\+Item\+In\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf Pool\+Block} $\ast$}]{pb}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a10e3426e891ab6c30625c17344d689bd}{}\label{triangle_8c_a10e3426e891ab6c30625c17344d689bd}
+\index{triangle.\+c@{triangle.\+c}!flip@{flip}}
+\index{flip@{flip}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{flip(triedge $\ast$)}{flip(triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void flip (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{flipedge}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a2f351c096a6f624de40b200b0d5720e5}{}\label{triangle_8c_a2f351c096a6f624de40b200b0d5720e5}
+\index{triangle.\+c@{triangle.\+c}!formskeleton@{formskeleton}}
+\index{formskeleton@{formskeleton}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{formskeleton(int $\ast$, int $\ast$, size\+\_\+t)}{formskeleton(int *, int *, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t formskeleton (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{segmentlist, }
+\item[{int $\ast$}]{segmentmarkerlist, }
+\item[{size\+\_\+t}]{numberofsegments}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a3a805f3b72a887582cb9507d5cf4ce3e}{}\label{triangle_8c_a3a805f3b72a887582cb9507d5cf4ce3e}
+\index{triangle.\+c@{triangle.\+c}!getpoint@{getpoint}}
+\index{getpoint@{getpoint}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{getpoint(int)}{getpoint(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf point} getpoint (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a95d40b4618663de88be78af118da1696}{}\label{triangle_8c_a95d40b4618663de88be78af118da1696}
+\index{triangle.\+c@{triangle.\+c}!highorder@{highorder}}
+\index{highorder@{highorder}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{highorder(void)}{highorder(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void highorder (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a24fdbb80d0371eeced37edd95874c33d}{}\label{triangle_8c_a24fdbb80d0371eeced37edd95874c33d}
+\index{triangle.\+c@{triangle.\+c}!incircle@{incircle}}
+\index{incircle@{incircle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{incircle(point, point, point, point)}{incircle(point, point, point, point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double incircle (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{pa, }
+\item[{{\bf point}}]{pb, }
+\item[{{\bf point}}]{pc, }
+\item[{{\bf point}}]{pd}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aa58109e5955b153dfb667ae3d3456677}{}\label{triangle_8c_aa58109e5955b153dfb667ae3d3456677}
+\index{triangle.\+c@{triangle.\+c}!incircleadapt@{incircleadapt}}
+\index{incircleadapt@{incircleadapt}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{incircleadapt(point, point, point, point, double)}{incircleadapt(point, point, point, point, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double incircleadapt (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{pa, }
+\item[{{\bf point}}]{pb, }
+\item[{{\bf point}}]{pc, }
+\item[{{\bf point}}]{pd, }
+\item[{double}]{permanent}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a4345c877e31fccec3a66867968489031}{}\label{triangle_8c_a4345c877e31fccec3a66867968489031}
+\index{triangle.\+c@{triangle.\+c}!infecthull@{infecthull}}
+\index{infecthull@{infecthull}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infecthull(void)}{infecthull(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void infecthull (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a119139d4a121cfb5c20a683e0de30b8a}{}\label{triangle_8c_a119139d4a121cfb5c20a683e0de30b8a}
+\index{triangle.\+c@{triangle.\+c}!initializepointpool@{initializepointpool}}
+\index{initializepointpool@{initializepointpool}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{initializepointpool(void)}{initializepointpool(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void initializepointpool (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ab6f8445b5464d813440b8fcd25243dcb}{}\label{triangle_8c_ab6f8445b5464d813440b8fcd25243dcb}
+\index{triangle.\+c@{triangle.\+c}!initializetrisegpools@{initializetrisegpools}}
+\index{initializetrisegpools@{initializetrisegpools}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{initializetrisegpools(void)}{initializetrisegpools(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void initializetrisegpools (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a8502f2e1b9cdd1e34605caac6c85c686}{}\label{triangle_8c_a8502f2e1b9cdd1e34605caac6c85c686}
+\index{triangle.\+c@{triangle.\+c}!insertsegment@{insertsegment}}
+\index{insertsegment@{insertsegment}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{insertsegment(point, point, int)}{insertsegment(point, point, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void insertsegment (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{endpoint1, }
+\item[{{\bf point}}]{endpoint2, }
+\item[{int}]{newmark}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad437f90d2c303f3e55f129dae5469694}{}\label{triangle_8c_ad437f90d2c303f3e55f129dae5469694}
+\index{triangle.\+c@{triangle.\+c}!insertshelle@{insertshelle}}
+\index{insertshelle@{insertshelle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{insertshelle(triedge $\ast$, int)}{insertshelle(triedge *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void insertshelle (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{tri, }
+\item[{int}]{shellemark}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a7f0e85cabde6d5ec1d2e91b38aaeeca0}{}\label{triangle_8c_a7f0e85cabde6d5ec1d2e91b38aaeeca0}
+\index{triangle.\+c@{triangle.\+c}!insertsite@{insertsite}}
+\index{insertsite@{insertsite}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{insertsite(point, triedge $\ast$, edge $\ast$, int, int)}{insertsite(point, triedge *, edge *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf insertsiteresult} insertsite (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{insertpoint, }
+\item[{{\bf triedge} $\ast$}]{searchtri, }
+\item[{{\bf edge} $\ast$}]{splitedge, }
+\item[{int}]{segmentflaws, }
+\item[{int}]{triflaws}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ab82803be8962afc759245f19477dbcb3}{}\label{triangle_8c_ab82803be8962afc759245f19477dbcb3}
+\index{triangle.\+c@{triangle.\+c}!internalerror@{internalerror}}
+\index{internalerror@{internalerror}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{internalerror(void)}{internalerror(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void internalerror (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9c79aefd5b38ba429de080677aa4f321}{}\label{triangle_8c_a9c79aefd5b38ba429de080677aa4f321}
+\index{triangle.\+c@{triangle.\+c}!locate@{locate}}
+\index{locate@{locate}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{locate(point, triedge $\ast$)}{locate(point, triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf locateresult} locate (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{searchpoint, }
+\item[{{\bf triedge} $\ast$}]{searchtri}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a529451a72fbb284fef785cd1ca7da82b}{}\label{triangle_8c_a529451a72fbb284fef785cd1ca7da82b}
+\index{triangle.\+c@{triangle.\+c}!makepointmap@{makepointmap}}
+\index{makepointmap@{makepointmap}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{makepointmap(void)}{makepointmap(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void makepointmap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_abf60bb680a8371ffef6918071939b0d0}{}\label{triangle_8c_abf60bb680a8371ffef6918071939b0d0}
+\index{triangle.\+c@{triangle.\+c}!makeshelle@{makeshelle}}
+\index{makeshelle@{makeshelle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{makeshelle(edge $\ast$)}{makeshelle(edge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void makeshelle (
+\begin{DoxyParamCaption}
+\item[{{\bf edge} $\ast$}]{newedge}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af6e965fc8bf47f913f6668837838d841}{}\label{triangle_8c_af6e965fc8bf47f913f6668837838d841}
+\index{triangle.\+c@{triangle.\+c}!maketriangle@{maketriangle}}
+\index{maketriangle@{maketriangle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{maketriangle(triedge $\ast$)}{maketriangle(triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void maketriangle (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{newtriedge}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_af325d1287bffdffd7642b69c3424f69e}{}\label{triangle_8c_af325d1287bffdffd7642b69c3424f69e}
+\index{triangle.\+c@{triangle.\+c}!markhull@{markhull}}
+\index{markhull@{markhull}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{markhull(void)}{markhull(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void markhull (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afc95d09fb23c42df22b94f46f48c0e42}{}\label{triangle_8c_afc95d09fb23c42df22b94f46f48c0e42}
+\index{triangle.\+c@{triangle.\+c}!mergehulls@{mergehulls}}
+\index{mergehulls@{mergehulls}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{mergehulls(triedge $\ast$, triedge $\ast$, triedge $\ast$, triedge $\ast$, int)}{mergehulls(triedge *, triedge *, triedge *, triedge *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void mergehulls (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{farleft, }
+\item[{{\bf triedge} $\ast$}]{innerleft, }
+\item[{{\bf triedge} $\ast$}]{innerright, }
+\item[{{\bf triedge} $\ast$}]{farright, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a6209fc14c38ee52d17546ea58d832af0}{}\label{triangle_8c_a6209fc14c38ee52d17546ea58d832af0}
+\index{triangle.\+c@{triangle.\+c}!Next\+Item@{Next\+Item}}
+\index{Next\+Item@{Next\+Item}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Next\+Item(void $\ast$, memorypool $\ast$)}{NextItem(void *, memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void $\ast$ Next\+Item (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{nextitem, }
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aef5412aca9ac3e8e040773b886128c3f}{}\label{triangle_8c_aef5412aca9ac3e8e040773b886128c3f}
+\index{triangle.\+c@{triangle.\+c}!numbernodes@{numbernodes}}
+\index{numbernodes@{numbernodes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{numbernodes(void)}{numbernodes(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void numbernodes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1edf93fbd130bf1d1e53dc31050e4332}{}\label{triangle_8c_a1edf93fbd130bf1d1e53dc31050e4332}
+\index{triangle.\+c@{triangle.\+c}!parsecommandline@{parsecommandline}}
+\index{parsecommandline@{parsecommandline}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{parsecommandline(\+Triangulate\+Opts $\ast$)}{parsecommandline(TriangulateOpts *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void parsecommandline (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangulate\+Opts} $\ast$}]{opts}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a54189c9380a34d2355f21faf05e5d995}{}\label{triangle_8c_a54189c9380a34d2355f21faf05e5d995}
+\index{triangle.\+c@{triangle.\+c}!plague@{plague}}
+\index{plague@{plague}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{plague(void)}{plague(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void plague (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a2dbc3c3d10a846880d8654f77744ad93}{}\label{triangle_8c_a2dbc3c3d10a846880d8654f77744ad93}
+\index{triangle.\+c@{triangle.\+c}!pointdealloc@{pointdealloc}}
+\index{pointdealloc@{pointdealloc}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointdealloc(point)}{pointdealloc(point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pointdealloc (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{dyingpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a93bae789ec7bcbcda5375e1f54f157e1}{}\label{triangle_8c_a93bae789ec7bcbcda5375e1f54f157e1}
+\index{triangle.\+c@{triangle.\+c}!pointmedian@{pointmedian}}
+\index{pointmedian@{pointmedian}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointmedian(point $\ast$, int, int, int)}{pointmedian(point *, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pointmedian (
+\begin{DoxyParamCaption}
+\item[{{\bf point} $\ast$}]{sortarray, }
+\item[{int}]{arraysize, }
+\item[{int}]{median, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_abef450f2c8416f276a617cf3a8d856cb}{}\label{triangle_8c_abef450f2c8416f276a617cf3a8d856cb}
+\index{triangle.\+c@{triangle.\+c}!pointsort@{pointsort}}
+\index{pointsort@{pointsort}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointsort(point $\ast$, size\+\_\+t)}{pointsort(point *, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pointsort (
+\begin{DoxyParamCaption}
+\item[{{\bf point} $\ast$}]{sortarray, }
+\item[{size\+\_\+t}]{arraysize}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ac66a3e424f3640554897c95b7fb1715f}{}\label{triangle_8c_ac66a3e424f3640554897c95b7fb1715f}
+\index{triangle.\+c@{triangle.\+c}!pointtraverse@{pointtraverse}}
+\index{pointtraverse@{pointtraverse}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointtraverse(void)}{pointtraverse(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf point} pointtraverse (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a99502b6e7ad026cdd7114d2d34473ae8}{}\label{triangle_8c_a99502b6e7ad026cdd7114d2d34473ae8}
+\index{triangle.\+c@{triangle.\+c}!poolalloc@{poolalloc}}
+\index{poolalloc@{poolalloc}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{poolalloc(memorypool $\ast$)}{poolalloc(memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void $\ast$ poolalloc (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a62e1a5e265000a3442adc5ee9810b130}{}\label{triangle_8c_a62e1a5e265000a3442adc5ee9810b130}
+\index{triangle.\+c@{triangle.\+c}!Pool\+Block\+Size@{Pool\+Block\+Size}}
+\index{Pool\+Block\+Size@{Pool\+Block\+Size}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Pool\+Block\+Size(memorypool $\ast$p)}{PoolBlockSize(memorypool *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t Pool\+Block\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a5d6ed2422e6b0b4d44f1e6a7247d5964}{}\label{triangle_8c_a5d6ed2422e6b0b4d44f1e6a7247d5964}
+\index{triangle.\+c@{triangle.\+c}!pooldealloc@{pooldealloc}}
+\index{pooldealloc@{pooldealloc}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pooldealloc(memorypool $\ast$, void $\ast$)}{pooldealloc(memorypool *, void *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pooldealloc (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool, }
+\item[{void $\ast$}]{dyingitem}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9ee1d8db03ec08d82a3632b6d2bec70c}{}\label{triangle_8c_a9ee1d8db03ec08d82a3632b6d2bec70c}
+\index{triangle.\+c@{triangle.\+c}!pooldeinit@{pooldeinit}}
+\index{pooldeinit@{pooldeinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pooldeinit(memorypool $\ast$)}{pooldeinit(memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pooldeinit (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a971b41091f64b748fd3bb97b2b02ce52}{}\label{triangle_8c_a971b41091f64b748fd3bb97b2b02ce52}
+\index{triangle.\+c@{triangle.\+c}!poolinit@{poolinit}}
+\index{poolinit@{poolinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{poolinit(memorypool $\ast$, size\+\_\+t, int, size\+\_\+t)}{poolinit(memorypool *, size_t, int, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void poolinit (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool, }
+\item[{size\+\_\+t}]{bytecount, }
+\item[{int}]{itemcount, }
+\item[{size\+\_\+t}]{wordsize}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_afe1a586a6c8e9ecab1de99f7ae2be620}{}\label{triangle_8c_afe1a586a6c8e9ecab1de99f7ae2be620}
+\index{triangle.\+c@{triangle.\+c}!poolrestart@{poolrestart}}
+\index{poolrestart@{poolrestart}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{poolrestart(memorypool $\ast$)}{poolrestart(memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void poolrestart (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a82afef615abf363b7ed899fb78454283}{}\label{triangle_8c_a82afef615abf363b7ed899fb78454283}
+\index{triangle.\+c@{triangle.\+c}!preciselocate@{preciselocate}}
+\index{preciselocate@{preciselocate}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{preciselocate(point, triedge $\ast$)}{preciselocate(point, triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf locateresult} preciselocate (
+\begin{DoxyParamCaption}
+\item[{{\bf point}}]{searchpoint, }
+\item[{{\bf triedge} $\ast$}]{searchtri}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a6b3c72689f7eb6ee97bc4268d1a97a81}{}\label{triangle_8c_a6b3c72689f7eb6ee97bc4268d1a97a81}
+\index{triangle.\+c@{triangle.\+c}!print\+\_\+triangulateio@{print\+\_\+triangulateio}}
+\index{print\+\_\+triangulateio@{print\+\_\+triangulateio}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+triangulateio(triangulateio $\ast$tio)}{print_triangulateio(triangulateio *tio)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+triangulateio (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{tio}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a0bc57372b2c8d542434466a467ae92d1}{}\label{triangle_8c_a0bc57372b2c8d542434466a467ae92d1}
+\index{triangle.\+c@{triangle.\+c}!randomnation@{randomnation}}
+\index{randomnation@{randomnation}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{randomnation(size\+\_\+t)}{randomnation(size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t randomnation (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{choices}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aff92fb162493107c9f31e8e89e9230db}{}\label{triangle_8c_aff92fb162493107c9f31e8e89e9230db}
+\index{triangle.\+c@{triangle.\+c}!regionplague@{regionplague}}
+\index{regionplague@{regionplague}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{regionplague(double, double)}{regionplague(double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void regionplague (
+\begin{DoxyParamCaption}
+\item[{double}]{attribute, }
+\item[{double}]{area}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a7fd26f58fa65d8e5d1b5a052712f778b}{}\label{triangle_8c_a7fd26f58fa65d8e5d1b5a052712f778b}
+\index{triangle.\+c@{triangle.\+c}!removeghosts@{removeghosts}}
+\index{removeghosts@{removeghosts}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{removeghosts(triedge $\ast$)}{removeghosts(triedge *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long removeghosts (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{startghost}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aa67bdc50f9746395ba8a366faad08269}{}\label{triangle_8c_aa67bdc50f9746395ba8a366faad08269}
+\index{triangle.\+c@{triangle.\+c}!scale\+\_\+expansion\+\_\+zeroelim@{scale\+\_\+expansion\+\_\+zeroelim}}
+\index{scale\+\_\+expansion\+\_\+zeroelim@{scale\+\_\+expansion\+\_\+zeroelim}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{scale\+\_\+expansion\+\_\+zeroelim(int, double $\ast$, double, double $\ast$)}{scale_expansion_zeroelim(int, double *, double, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int scale\+\_\+expansion\+\_\+zeroelim (
+\begin{DoxyParamCaption}
+\item[{int}]{elen, }
+\item[{double $\ast$}]{e, }
+\item[{double}]{b, }
+\item[{double $\ast$}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9f9d90a6067535e69f8abce2676f6551}{}\label{triangle_8c_a9f9d90a6067535e69f8abce2676f6551}
+\index{triangle.\+c@{triangle.\+c}!scoutsegment@{scoutsegment}}
+\index{scoutsegment@{scoutsegment}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{scoutsegment(triedge $\ast$, point, int)}{scoutsegment(triedge *, point, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int scoutsegment (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{searchtri, }
+\item[{{\bf point}}]{endpoint2, }
+\item[{int}]{newmark}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a4a32839142e7b5caf3a242006edfd612}{}\label{triangle_8c_a4a32839142e7b5caf3a242006edfd612}
+\index{triangle.\+c@{triangle.\+c}!segmentintersection@{segmentintersection}}
+\index{segmentintersection@{segmentintersection}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{segmentintersection(triedge $\ast$, edge $\ast$, point)}{segmentintersection(triedge *, edge *, point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void segmentintersection (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{splittri, }
+\item[{{\bf edge} $\ast$}]{splitshelle, }
+\item[{{\bf point}}]{endpoint2}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a9386252e3614d6deaf43adc6727875b2}{}\label{triangle_8c_a9386252e3614d6deaf43adc6727875b2}
+\index{triangle.\+c@{triangle.\+c}!shelledealloc@{shelledealloc}}
+\index{shelledealloc@{shelledealloc}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shelledealloc(shelle $\ast$)}{shelledealloc(shelle *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void shelledealloc (
+\begin{DoxyParamCaption}
+\item[{{\bf shelle} $\ast$}]{dyingshelle}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a899909c6b1b503cdd36dc0c5bb3836c9}{}\label{triangle_8c_a899909c6b1b503cdd36dc0c5bb3836c9}
+\index{triangle.\+c@{triangle.\+c}!shelletraverse@{shelletraverse}}
+\index{shelletraverse@{shelletraverse}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shelletraverse(void)}{shelletraverse(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf shelle} $\ast$ shelletraverse (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a8e6f1ede087197488f5c76adab3c155f}{}\label{triangle_8c_a8e6f1ede087197488f5c76adab3c155f}
+\index{triangle.\+c@{triangle.\+c}!transfernodes@{transfernodes}}
+\index{transfernodes@{transfernodes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{transfernodes(double $\ast$, double $\ast$, int $\ast$, size\+\_\+t, int)}{transfernodes(double *, double *, int *, size_t, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void transfernodes (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{pointlist, }
+\item[{double $\ast$}]{pointattriblist, }
+\item[{int $\ast$}]{pointmarkerlist, }
+\item[{size\+\_\+t}]{numberofpoints, }
+\item[{int}]{numberofpointattribs}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a75a8a9429fec31a1d70714e882a38c32}{}\label{triangle_8c_a75a8a9429fec31a1d70714e882a38c32}
+\index{triangle.\+c@{triangle.\+c}!traversalinit@{traversalinit}}
+\index{traversalinit@{traversalinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{traversalinit(memorypool $\ast$)}{traversalinit(memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void traversalinit (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a44ec6092bbc6ffbc7ea52774b6e7816c}{}\label{triangle_8c_a44ec6092bbc6ffbc7ea52774b6e7816c}
+\index{triangle.\+c@{triangle.\+c}!traverse@{traverse}}
+\index{traverse@{traverse}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{traverse(memorypool $\ast$)}{traverse(memorypool *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void $\ast$ traverse (
+\begin{DoxyParamCaption}
+\item[{{\bf memorypool} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad741454a91b052d0e383771eeead5150}{}\label{triangle_8c_ad741454a91b052d0e383771eeead5150}
+\index{triangle.\+c@{triangle.\+c}!triangledealloc@{triangledealloc}}
+\index{triangledealloc@{triangledealloc}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangledealloc(triangle $\ast$)}{triangledealloc(triangle *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void triangledealloc (
+\begin{DoxyParamCaption}
+\item[{{\bf triangle} $\ast$}]{dyingtriangle}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a57c53557aaf5494b784209448b9cb03f}{}\label{triangle_8c_a57c53557aaf5494b784209448b9cb03f}
+\index{triangle.\+c@{triangle.\+c}!triangledeinit@{triangledeinit}}
+\index{triangledeinit@{triangledeinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangledeinit(void)}{triangledeinit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void triangledeinit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1bbdd9857ceb539bd1dcfb382773cc52}{}\label{triangle_8c_a1bbdd9857ceb539bd1dcfb382773cc52}
+\index{triangle.\+c@{triangle.\+c}!triangleinit@{triangleinit}}
+\index{triangleinit@{triangleinit}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangleinit(void)}{triangleinit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void triangleinit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aa3a0b4161b7de188ee1aa9b930b2b9ba}{}\label{triangle_8c_aa3a0b4161b7de188ee1aa9b930b2b9ba}
+\index{triangle.\+c@{triangle.\+c}!triangletraverse@{triangletraverse}}
+\index{triangletraverse@{triangletraverse}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangletraverse(void)}{triangletraverse(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf triangle} $\ast$ triangletraverse (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a7078bc005809baf21b31984310085993}{}\label{triangle_8c_a7078bc005809baf21b31984310085993}
+\index{triangle.\+c@{triangle.\+c}!triangulate@{triangulate}}
+\index{triangulate@{triangulate}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangulate(triangulateio $\ast$in, triangulateio $\ast$out, triangulateio $\ast$vorout)}{triangulate(triangulateio *in, triangulateio *out, triangulateio *vorout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void triangulate (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{in, }
+\item[{{\bf triangulateio} $\ast$}]{out, }
+\item[{{\bf triangulateio} $\ast$}]{vorout}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a33da3580847ac285cbc53a94f1c3d6ca}{}\label{triangle_8c_a33da3580847ac285cbc53a94f1c3d6ca}
+\index{triangle.\+c@{triangle.\+c}!triangulatepolygon@{triangulatepolygon}}
+\index{triangulatepolygon@{triangulatepolygon}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangulatepolygon(triedge $\ast$, triedge $\ast$, int, int, int)}{triangulatepolygon(triedge *, triedge *, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void triangulatepolygon (
+\begin{DoxyParamCaption}
+\item[{{\bf triedge} $\ast$}]{firstedge, }
+\item[{{\bf triedge} $\ast$}]{lastedge, }
+\item[{int}]{edgecount, }
+\item[{int}]{doflip, }
+\item[{int}]{triflaws}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a4b41120860e9720bbe0f242019e7ccd0}{}\label{triangle_8c_a4b41120860e9720bbe0f242019e7ccd0}
+\index{triangle.\+c@{triangle.\+c}!writeedges@{writeedges}}
+\index{writeedges@{writeedges}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writeedges(triangulateio $\ast$)}{writeedges(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writeedges (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_ad683f200dc5900251b6a2e6332dda2e5}{}\label{triangle_8c_ad683f200dc5900251b6a2e6332dda2e5}
+\index{triangle.\+c@{triangle.\+c}!writeelements@{writeelements}}
+\index{writeelements@{writeelements}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writeelements(triangulateio $\ast$)}{writeelements(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writeelements (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_aec8dcbcc3bee35f376da5d87c28de859}{}\label{triangle_8c_aec8dcbcc3bee35f376da5d87c28de859}
+\index{triangle.\+c@{triangle.\+c}!writeneighbors@{writeneighbors}}
+\index{writeneighbors@{writeneighbors}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writeneighbors(triangulateio $\ast$)}{writeneighbors(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writeneighbors (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a1b01a0cf5874a4d6c51365193cfd3b22}{}\label{triangle_8c_a1b01a0cf5874a4d6c51365193cfd3b22}
+\index{triangle.\+c@{triangle.\+c}!writenodes@{writenodes}}
+\index{writenodes@{writenodes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writenodes(triangulateio $\ast$)}{writenodes(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writenodes (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_adfd11d8adcdb43b3a768589b4585efba}{}\label{triangle_8c_adfd11d8adcdb43b3a768589b4585efba}
+\index{triangle.\+c@{triangle.\+c}!writepoly@{writepoly}}
+\index{writepoly@{writepoly}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writepoly(triangulateio $\ast$)}{writepoly(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writepoly (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_abfd436c0ad93efc4b8a24e536fdf4f7f}{}\label{triangle_8c_abfd436c0ad93efc4b8a24e536fdf4f7f}
+\index{triangle.\+c@{triangle.\+c}!writevoronoi@{writevoronoi}}
+\index{writevoronoi@{writevoronoi}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{writevoronoi(triangulateio $\ast$)}{writevoronoi(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void writevoronoi (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{vorout}
+\end{DoxyParamCaption}
+)}\hypertarget{triangle_8c_a44590050fbaf94344ab77afab465e93d}{}\label{triangle_8c_a44590050fbaf94344ab77afab465e93d}
+
+
+\subsection{Variable Documentation}
+\index{triangle.\+c@{triangle.\+c}!areaboundindex@{areaboundindex}}
+\index{areaboundindex@{areaboundindex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{areaboundindex}{areaboundindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t areaboundindex}\hypertarget{triangle_8c_a369e5df614c900920aa148f668cd8838}{}\label{triangle_8c_a369e5df614c900920aa148f668cd8838}
+\index{triangle.\+c@{triangle.\+c}!badsegments@{badsegments}}
+\index{badsegments@{badsegments}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{badsegments}{badsegments}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf memorypool} badsegments}\hypertarget{triangle_8c_a59fba1697326ef956e00850be76eba48}{}\label{triangle_8c_a59fba1697326ef956e00850be76eba48}
+\index{triangle.\+c@{triangle.\+c}!ccwerrboundA@{ccwerrboundA}}
+\index{ccwerrboundA@{ccwerrboundA}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ccwerrboundA}{ccwerrboundA}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ccwerrboundA}\hypertarget{triangle_8c_a9d9e2c9370d14b351d73732a3b0f5a03}{}\label{triangle_8c_a9d9e2c9370d14b351d73732a3b0f5a03}
+\index{triangle.\+c@{triangle.\+c}!ccwerrboundB@{ccwerrboundB}}
+\index{ccwerrboundB@{ccwerrboundB}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ccwerrboundB}{ccwerrboundB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ccwerrboundB}\hypertarget{triangle_8c_a02e09f1226c61f5444ce4f00e3e0d52a}{}\label{triangle_8c_a02e09f1226c61f5444ce4f00e3e0d52a}
+\index{triangle.\+c@{triangle.\+c}!ccwerrboundC@{ccwerrboundC}}
+\index{ccwerrboundC@{ccwerrboundC}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ccwerrboundC}{ccwerrboundC}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ccwerrboundC}\hypertarget{triangle_8c_a1ec83ad954007abddc1a98aac65f3fc6}{}\label{triangle_8c_a1ec83ad954007abddc1a98aac65f3fc6}
+\index{triangle.\+c@{triangle.\+c}!checksegments@{checksegments}}
+\index{checksegments@{checksegments}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{checksegments}{checksegments}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int checksegments}\hypertarget{triangle_8c_a081a2ffd4dbbe4ae7c1aea7893d618a6}{}\label{triangle_8c_a081a2ffd4dbbe4ae7c1aea7893d618a6}
+\index{triangle.\+c@{triangle.\+c}!circumcentercount@{circumcentercount}}
+\index{circumcentercount@{circumcentercount}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{circumcentercount}{circumcentercount}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long circumcentercount}\hypertarget{triangle_8c_a0cc9f58ba35a95274cee79610942ab64}{}\label{triangle_8c_a0cc9f58ba35a95274cee79610942ab64}
+\index{triangle.\+c@{triangle.\+c}!counterclockcount@{counterclockcount}}
+\index{counterclockcount@{counterclockcount}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{counterclockcount}{counterclockcount}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long counterclockcount}\hypertarget{triangle_8c_acaa5cb56cc5dd1ec90a6069b4c63e0e4}{}\label{triangle_8c_acaa5cb56cc5dd1ec90a6069b4c63e0e4}
+\index{triangle.\+c@{triangle.\+c}!D\+E\+A\+D\+P\+O\+I\+NT@{D\+E\+A\+D\+P\+O\+I\+NT}}
+\index{D\+E\+A\+D\+P\+O\+I\+NT@{D\+E\+A\+D\+P\+O\+I\+NT}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+A\+D\+P\+O\+I\+NT}{DEADPOINT}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int D\+E\+A\+D\+P\+O\+I\+NT = I\+N\+T\+\_\+\+M\+IN}\hypertarget{triangle_8c_a489f6bd79400f6a4fbdc819fc51ffdd0}{}\label{triangle_8c_a489f6bd79400f6a4fbdc819fc51ffdd0}
+\index{triangle.\+c@{triangle.\+c}!dummysh@{dummysh}}
+\index{dummysh@{dummysh}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dummysh}{dummysh}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf shelle}$\ast$ dummysh = N\+U\+LL}\hypertarget{triangle_8c_a7766e0c1c9378a024fd540e2f46837d2}{}\label{triangle_8c_a7766e0c1c9378a024fd540e2f46837d2}
+\index{triangle.\+c@{triangle.\+c}!dummyshbase@{dummyshbase}}
+\index{dummyshbase@{dummyshbase}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dummyshbase}{dummyshbase}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf shelle}$\ast$ dummyshbase}\hypertarget{triangle_8c_a11a1a250ed42f09256d573154910489b}{}\label{triangle_8c_a11a1a250ed42f09256d573154910489b}
+\index{triangle.\+c@{triangle.\+c}!dummytri@{dummytri}}
+\index{dummytri@{dummytri}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dummytri}{dummytri}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf triangle}$\ast$ dummytri = N\+U\+LL}\hypertarget{triangle_8c_a7fc99343ea2fd057f1673329a6261f5a}{}\label{triangle_8c_a7fc99343ea2fd057f1673329a6261f5a}
+\index{triangle.\+c@{triangle.\+c}!dummytribase@{dummytribase}}
+\index{dummytribase@{dummytribase}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dummytribase}{dummytribase}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf triangle}$\ast$ dummytribase}\hypertarget{triangle_8c_a3678282db873fa9deb2768a16eca3b25}{}\label{triangle_8c_a3678282db873fa9deb2768a16eca3b25}
+\index{triangle.\+c@{triangle.\+c}!dwyer@{dwyer}}
+\index{dwyer@{dwyer}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{dwyer}{dwyer}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} dwyer}\hypertarget{triangle_8c_a4fecd89bd4488e176560e629b968de57}{}\label{triangle_8c_a4fecd89bd4488e176560e629b968de57}
+\index{triangle.\+c@{triangle.\+c}!edges@{edges}}
+\index{edges@{edges}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{edges}{edges}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long edges}\hypertarget{triangle_8c_afe3bdecf56195ca34e11505af6a0284e}{}\label{triangle_8c_afe3bdecf56195ca34e11505af6a0284e}
+\index{triangle.\+c@{triangle.\+c}!eextras@{eextras}}
+\index{eextras@{eextras}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{eextras}{eextras}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int eextras}\hypertarget{triangle_8c_ab4bf68c495e21d049aedd71fc594490c}{}\label{triangle_8c_ab4bf68c495e21d049aedd71fc594490c}
+\index{triangle.\+c@{triangle.\+c}!elemattribindex@{elemattribindex}}
+\index{elemattribindex@{elemattribindex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{elemattribindex}{elemattribindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t elemattribindex}\hypertarget{triangle_8c_a0603ba09a289bfd396fa25c2fba5cacb}{}\label{triangle_8c_a0603ba09a289bfd396fa25c2fba5cacb}
+\index{triangle.\+c@{triangle.\+c}!epsilon@{epsilon}}
+\index{epsilon@{epsilon}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{epsilon}{epsilon}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double epsilon}\hypertarget{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{}\label{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}
+\index{triangle.\+c@{triangle.\+c}!goodangle@{goodangle}}
+\index{goodangle@{goodangle}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{goodangle}{goodangle}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double goodangle}\hypertarget{triangle_8c_a0d7b6f96c03fc3c5e5a5a5fa9df4346c}{}\label{triangle_8c_a0d7b6f96c03fc3c5e5a5a5fa9df4346c}
+\index{triangle.\+c@{triangle.\+c}!highorderindex@{highorderindex}}
+\index{highorderindex@{highorderindex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{highorderindex}{highorderindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int highorderindex}\hypertarget{triangle_8c_a9e46d42b157423bf2edc2d0ebfdf989e}{}\label{triangle_8c_a9e46d42b157423bf2edc2d0ebfdf989e}
+\index{triangle.\+c@{triangle.\+c}!holes@{holes}}
+\index{holes@{holes}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{holes}{holes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int holes}\hypertarget{triangle_8c_ac25c931e50240db8c4509335856eacf3}{}\label{triangle_8c_ac25c931e50240db8c4509335856eacf3}
+\index{triangle.\+c@{triangle.\+c}!hullsize@{hullsize}}
+\index{hullsize@{hullsize}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{hullsize}{hullsize}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long hullsize}\hypertarget{triangle_8c_abc7680b33d359391d50e5623634b786e}{}\label{triangle_8c_abc7680b33d359391d50e5623634b786e}
+\index{triangle.\+c@{triangle.\+c}!iccerrboundA@{iccerrboundA}}
+\index{iccerrboundA@{iccerrboundA}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{iccerrboundA}{iccerrboundA}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double iccerrboundA}\hypertarget{triangle_8c_afe229f493e0301c641257e2bf0d6847f}{}\label{triangle_8c_afe229f493e0301c641257e2bf0d6847f}
+\index{triangle.\+c@{triangle.\+c}!iccerrboundB@{iccerrboundB}}
+\index{iccerrboundB@{iccerrboundB}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{iccerrboundB}{iccerrboundB}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double iccerrboundB}\hypertarget{triangle_8c_adc1623e4efaa47875748201c7bb1d5f3}{}\label{triangle_8c_adc1623e4efaa47875748201c7bb1d5f3}
+\index{triangle.\+c@{triangle.\+c}!iccerrboundC@{iccerrboundC}}
+\index{iccerrboundC@{iccerrboundC}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{iccerrboundC}{iccerrboundC}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double iccerrboundC}\hypertarget{triangle_8c_a871b1eacf950d66481493884bbaf4277}{}\label{triangle_8c_a871b1eacf950d66481493884bbaf4277}
+\index{triangle.\+c@{triangle.\+c}!incirclecount@{incirclecount}}
+\index{incirclecount@{incirclecount}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{incirclecount}{incirclecount}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long incirclecount}\hypertarget{triangle_8c_aaff13c4c5814e348ecc4b3f3e1b3dd0d}{}\label{triangle_8c_aaff13c4c5814e348ecc4b3f3e1b3dd0d}
+\index{triangle.\+c@{triangle.\+c}!infpoint1@{infpoint1}}
+\index{infpoint1@{infpoint1}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infpoint1}{infpoint1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf point} infpoint1}\hypertarget{triangle_8c_a3fe2ac8b7458406f0187bd7c67f60fdf}{}\label{triangle_8c_a3fe2ac8b7458406f0187bd7c67f60fdf}
+\index{triangle.\+c@{triangle.\+c}!infpoint2@{infpoint2}}
+\index{infpoint2@{infpoint2}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infpoint2}{infpoint2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf point} infpoint2}\hypertarget{triangle_8c_ad1a6c4c86c21664abc833900a8e777a5}{}\label{triangle_8c_ad1a6c4c86c21664abc833900a8e777a5}
+\index{triangle.\+c@{triangle.\+c}!infpoint3@{infpoint3}}
+\index{infpoint3@{infpoint3}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{infpoint3}{infpoint3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf point} infpoint3}\hypertarget{triangle_8c_aee9a0edafa91799ca98f700d47a22d11}{}\label{triangle_8c_aee9a0edafa91799ca98f700d47a22d11}
+\index{triangle.\+c@{triangle.\+c}!inpoints@{inpoints}}
+\index{inpoints@{inpoints}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{inpoints}{inpoints}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t inpoints}\hypertarget{triangle_8c_a08a9d33c2582121a8e1f1cba5f270bc0}{}\label{triangle_8c_a08a9d33c2582121a8e1f1cba5f270bc0}
+\index{triangle.\+c@{triangle.\+c}!mesh\+\_\+dim@{mesh\+\_\+dim}}
+\index{mesh\+\_\+dim@{mesh\+\_\+dim}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+dim}{mesh_dim}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int mesh\+\_\+dim}\hypertarget{triangle_8c_a75be466f3c9af60b80a4f5977cd7383e}{}\label{triangle_8c_a75be466f3c9af60b80a4f5977cd7383e}
+\index{triangle.\+c@{triangle.\+c}!minus1mod3@{minus1mod3}}
+\index{minus1mod3@{minus1mod3}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{minus1mod3}{minus1mod3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int minus1mod3\mbox{[}3\mbox{]} = \{2, 0, 1\}}\hypertarget{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}{}\label{triangle_8c_af8688bc13bc55d309e5c2b1f1fa7cdb4}
+\index{triangle.\+c@{triangle.\+c}!nextras@{nextras}}
+\index{nextras@{nextras}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{nextras}{nextras}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int nextras}\hypertarget{triangle_8c_a360dd2e647472dd8f1e5f79da0262d12}{}\label{triangle_8c_a360dd2e647472dd8f1e5f79da0262d12}
+\index{triangle.\+c@{triangle.\+c}!order@{order}}
+\index{order@{order}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{order}{order}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int order}\hypertarget{triangle_8c_a80adbd8c4abbb5a23a121d7c19e82c92}{}\label{triangle_8c_a80adbd8c4abbb5a23a121d7c19e82c92}
+\index{triangle.\+c@{triangle.\+c}!PI@{PI}}
+\index{PI@{PI}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{PI}{PI}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const double PI = 3.\+141592653589793238462643383279502884197169399375105820974944592308}\hypertarget{triangle_8c_a7f0f36d75cdaa4448768ee243a1bd589}{}\label{triangle_8c_a7f0f36d75cdaa4448768ee243a1bd589}
+\index{triangle.\+c@{triangle.\+c}!plus1mod3@{plus1mod3}}
+\index{plus1mod3@{plus1mod3}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{plus1mod3}{plus1mod3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int plus1mod3\mbox{[}3\mbox{]} = \{1, 2, 0\}}\hypertarget{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}{}\label{triangle_8c_a5563a5acfcc0b0c3d1a67014c003f366}
+\index{triangle.\+c@{triangle.\+c}!point2triindex@{point2triindex}}
+\index{point2triindex@{point2triindex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{point2triindex}{point2triindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t point2triindex}\hypertarget{triangle_8c_a93cbadb2a0ada708189edb4aadd7ac92}{}\label{triangle_8c_a93cbadb2a0ada708189edb4aadd7ac92}
+\index{triangle.\+c@{triangle.\+c}!pointmarkindex@{pointmarkindex}}
+\index{pointmarkindex@{pointmarkindex}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{pointmarkindex}{pointmarkindex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t pointmarkindex}\hypertarget{triangle_8c_a66b10e056b9472cf5fbba2a55d240ac5}{}\label{triangle_8c_a66b10e056b9472cf5fbba2a55d240ac5}
+\index{triangle.\+c@{triangle.\+c}!P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK@{P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK}}
+\index{P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK@{P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK}{POINTPERBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int P\+O\+I\+N\+T\+P\+E\+R\+B\+L\+O\+CK = 4092}\hypertarget{triangle_8c_af3ceebd725bbb4f78b8876eda75acf6a}{}\label{triangle_8c_af3ceebd725bbb4f78b8876eda75acf6a}
+\index{triangle.\+c@{triangle.\+c}!points@{points}}
+\index{points@{points}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{points}{points}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf memorypool} points}\hypertarget{triangle_8c_aebe37dd03eb2fdc7fa7ee82618d6f849}{}\label{triangle_8c_aebe37dd03eb2fdc7fa7ee82618d6f849}
+\index{triangle.\+c@{triangle.\+c}!randomseed@{randomseed}}
+\index{randomseed@{randomseed}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{randomseed}{randomseed}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t randomseed}\hypertarget{triangle_8c_a19f57340865407fc54da2fb4e34dbbf6}{}\label{triangle_8c_a19f57340865407fc54da2fb4e34dbbf6}
+\index{triangle.\+c@{triangle.\+c}!readnodefile@{readnodefile}}
+\index{readnodefile@{readnodefile}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{readnodefile}{readnodefile}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int readnodefile}\hypertarget{triangle_8c_a307e120a4e8770ad513cb7f536692aa3}{}\label{triangle_8c_a307e120a4e8770ad513cb7f536692aa3}
+\index{triangle.\+c@{triangle.\+c}!recenttri@{recenttri}}
+\index{recenttri@{recenttri}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{recenttri}{recenttri}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf triedge} recenttri}\hypertarget{triangle_8c_acd5749e7ce31826384dbb9b75930685e}{}\label{triangle_8c_acd5749e7ce31826384dbb9b75930685e}
+\index{triangle.\+c@{triangle.\+c}!regions@{regions}}
+\index{regions@{regions}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{regions}{regions}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int regions}\hypertarget{triangle_8c_a979e54d597c9c74c0448c0dcdc5c09cb}{}\label{triangle_8c_a979e54d597c9c74c0448c0dcdc5c09cb}
+\index{triangle.\+c@{triangle.\+c}!resulterrbound@{resulterrbound}}
+\index{resulterrbound@{resulterrbound}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{resulterrbound}{resulterrbound}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double resulterrbound}\hypertarget{triangle_8c_aec52ab841c0536221b8d39e1d37da05d}{}\label{triangle_8c_aec52ab841c0536221b8d39e1d37da05d}
+\index{triangle.\+c@{triangle.\+c}!S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR@{S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR}}
+\index{S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR@{S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR}{SAMPLEFACTOR}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int S\+A\+M\+P\+L\+E\+F\+A\+C\+T\+OR = 11}\hypertarget{triangle_8c_acf573a5dae85d98e756876ff9ddef93b}{}\label{triangle_8c_acf573a5dae85d98e756876ff9ddef93b}
+\index{triangle.\+c@{triangle.\+c}!samples@{samples}}
+\index{samples@{samples}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{samples}{samples}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} long samples}\hypertarget{triangle_8c_af9c7925b181a93529fb8e544f83939d6}{}\label{triangle_8c_af9c7925b181a93529fb8e544f83939d6}
+\index{triangle.\+c@{triangle.\+c}!S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK@{S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK}}
+\index{S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK@{S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK}{SHELLEPERBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int S\+H\+E\+L\+L\+E\+P\+E\+R\+B\+L\+O\+CK = 508}\hypertarget{triangle_8c_a7876e70b694faf2cd2a48553a4d9f70f}{}\label{triangle_8c_a7876e70b694faf2cd2a48553a4d9f70f}
+\index{triangle.\+c@{triangle.\+c}!shelles@{shelles}}
+\index{shelles@{shelles}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shelles}{shelles}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf memorypool} shelles}\hypertarget{triangle_8c_a0ea74aabbd8e2deb1ee6e7dbf5e9ecea}{}\label{triangle_8c_a0ea74aabbd8e2deb1ee6e7dbf5e9ecea}
+\index{triangle.\+c@{triangle.\+c}!shwords@{shwords}}
+\index{shwords@{shwords}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{shwords}{shwords}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t shwords}\hypertarget{triangle_8c_a70df2fdf43bc4c9e9ac7b6a20767f182}{}\label{triangle_8c_a70df2fdf43bc4c9e9ac7b6a20767f182}
+\index{triangle.\+c@{triangle.\+c}!size\+\_\+dummyshbase@{size\+\_\+dummyshbase}}
+\index{size\+\_\+dummyshbase@{size\+\_\+dummyshbase}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{size\+\_\+dummyshbase}{size_dummyshbase}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t size\+\_\+dummyshbase}\hypertarget{triangle_8c_a3a32642746faedb38e585847a270277a}{}\label{triangle_8c_a3a32642746faedb38e585847a270277a}
+\index{triangle.\+c@{triangle.\+c}!size\+\_\+dummytribase@{size\+\_\+dummytribase}}
+\index{size\+\_\+dummytribase@{size\+\_\+dummytribase}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{size\+\_\+dummytribase}{size_dummytribase}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t size\+\_\+dummytribase}\hypertarget{triangle_8c_a64583d0d80e30d52fefddceb5af5f7a3}{}\label{triangle_8c_a64583d0d80e30d52fefddceb5af5f7a3}
+\index{triangle.\+c@{triangle.\+c}!splitter@{splitter}}
+\index{splitter@{splitter}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{splitter}{splitter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double splitter}\hypertarget{triangle_8c_a604d9fa6a20d20435119ad81b63ccf78}{}\label{triangle_8c_a604d9fa6a20d20435119ad81b63ccf78}
+\index{triangle.\+c@{triangle.\+c}!steinerleft@{steinerleft}}
+\index{steinerleft@{steinerleft}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{steinerleft}{steinerleft}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int steinerleft}\hypertarget{triangle_8c_ae55519ae6865f0cd5e1b70302f7a47ce}{}\label{triangle_8c_ae55519ae6865f0cd5e1b70302f7a47ce}
+\index{triangle.\+c@{triangle.\+c}!triangles@{triangles}}
+\index{triangles@{triangles}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triangles}{triangles}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf memorypool} triangles}\hypertarget{triangle_8c_a9d6e2322ec4f0eacb2286606d1cdf462}{}\label{triangle_8c_a9d6e2322ec4f0eacb2286606d1cdf462}
+\index{triangle.\+c@{triangle.\+c}!Tri\+Opts@{Tri\+Opts}}
+\index{Tri\+Opts@{Tri\+Opts}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{Tri\+Opts}{TriOpts}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Triangulate\+Opts} Tri\+Opts}\hypertarget{triangle_8c_a1328fc95484e759389aed04011605cfb}{}\label{triangle_8c_a1328fc95484e759389aed04011605cfb}
+\index{triangle.\+c@{triangle.\+c}!T\+R\+I\+P\+E\+R\+B\+L\+O\+CK@{T\+R\+I\+P\+E\+R\+B\+L\+O\+CK}}
+\index{T\+R\+I\+P\+E\+R\+B\+L\+O\+CK@{T\+R\+I\+P\+E\+R\+B\+L\+O\+CK}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{T\+R\+I\+P\+E\+R\+B\+L\+O\+CK}{TRIPERBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int T\+R\+I\+P\+E\+R\+B\+L\+O\+CK = 4092}\hypertarget{triangle_8c_afe5ab137cf18b06b497006b11c8437fc}{}\label{triangle_8c_afe5ab137cf18b06b497006b11c8437fc}
+\index{triangle.\+c@{triangle.\+c}!triwords@{triwords}}
+\index{triwords@{triwords}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{triwords}{triwords}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} size\+\_\+t triwords}\hypertarget{triangle_8c_a2fe79262660b9c858ccdaf12dd475117}{}\label{triangle_8c_a2fe79262660b9c858ccdaf12dd475117}
+\index{triangle.\+c@{triangle.\+c}!useshelles@{useshelles}}
+\index{useshelles@{useshelles}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{useshelles}{useshelles}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int useshelles}\hypertarget{triangle_8c_a69edf349d9079e353f7c435ede23dab3}{}\label{triangle_8c_a69edf349d9079e353f7c435ede23dab3}
+\index{triangle.\+c@{triangle.\+c}!viri@{viri}}
+\index{viri@{viri}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{viri}{viri}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf memorypool} viri}\hypertarget{triangle_8c_aaa23694005aab75a080556dbb9be018b}{}\label{triangle_8c_aaa23694005aab75a080556dbb9be018b}
+\index{triangle.\+c@{triangle.\+c}!V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK@{V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK}}
+\index{V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK@{V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK}{VIRUSPERBLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int V\+I\+R\+U\+S\+P\+E\+R\+B\+L\+O\+CK = 1020}\hypertarget{triangle_8c_a7edb13185318330fab74d88eb5c2716f}{}\label{triangle_8c_a7edb13185318330fab74d88eb5c2716f}
+\index{triangle.\+c@{triangle.\+c}!xmax@{xmax}}
+\index{xmax@{xmax}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{xmax}{xmax}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double xmax}\hypertarget{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{}\label{triangle_8c_ab6a00c528e568052f8c0569b6567768a}
+\index{triangle.\+c@{triangle.\+c}!xmin@{xmin}}
+\index{xmin@{xmin}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{xmin}{xmin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double xmin}\hypertarget{triangle_8c_aba741a529c231da12cd9b593ced09f85}{}\label{triangle_8c_aba741a529c231da12cd9b593ced09f85}
+\index{triangle.\+c@{triangle.\+c}!ymax@{ymax}}
+\index{ymax@{ymax}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ymax}{ymax}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ymax}\hypertarget{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{}\label{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}
+\index{triangle.\+c@{triangle.\+c}!ymin@{ymin}}
+\index{ymin@{ymin}!triangle.\+c@{triangle.\+c}}
+\subsubsection[{\texorpdfstring{ymin}{ymin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ymin}\hypertarget{triangle_8c_a500b70732e049a9ba26bed5f07b93bed}{}\label{triangle_8c_a500b70732e049a9ba26bed5f07b93bed}

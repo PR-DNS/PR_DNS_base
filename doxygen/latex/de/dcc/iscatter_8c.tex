@@ -1,0 +1,63 @@
+\hypertarget{iscatter_8c}{}\section{D\+N\+S/src/intfc/iscatter.c File Reference}
+\label{iscatter_8c}\index{D\+N\+S/src/intfc/iscatter.\+c@{D\+N\+S/src/intfc/iscatter.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iscatter_8c_aa33d473637b410292650c2d619984901}{find\+\_\+\+Cartesian\+\_\+coordinates} (int id, \hyperlink{int_8h_d3/d17/struct_p_p___g_r_i_d}{P\+P\+\_\+\+G\+R\+ID} $\ast$pp\+\_\+grid, int $\ast$icoords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{iscatter_8c_abe5e2cc1e6a6a5f408fa65d19e6110e4}{neighbor\+\_\+id} (int $\ast$him, int $\ast$me, int dir, int side, \hyperlink{int_8h_d3/d17/struct_p_p___g_r_i_d}{P\+P\+\_\+\+G\+R\+ID} $\ast$pp\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{iscatter_8c_a4411095d80d1abadf048360d0e4b9c07}{domain\+\_\+id} (int $\ast$icoords, int $\ast$G, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iscatter_8c_ac92f50c8fc101655fa746e9c5e2709ce}{print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure} (\hyperlink{int_8h_d3/d17/struct_p_p___g_r_i_d}{P\+P\+\_\+\+G\+R\+ID} $\ast$pp\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_d3/d17/struct_p_p___g_r_i_d}{P\+P\+\_\+\+G\+R\+ID} $\ast$ \hyperlink{iscatter_8c_a2b37cff74e437d6806d09ab06a91b692}{set\+\_\+pp\+\_\+grid} (\hyperlink{cdecs_8h_a18423d263765f9b6e78d8f1089446c91}{I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$init, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$comp\+\_\+glbgr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{iscatter.\+c@{iscatter.\+c}!domain\+\_\+id@{domain\+\_\+id}}
+\index{domain\+\_\+id@{domain\+\_\+id}!iscatter.\+c@{iscatter.\+c}}
+\subsubsection[{\texorpdfstring{domain\+\_\+id(int $\ast$icoords, int $\ast$\+G, int dim)}{domain_id(int *icoords, int *G, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int domain\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{int $\ast$}]{G, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{iscatter_8c_a4411095d80d1abadf048360d0e4b9c07}{}\label{iscatter_8c_a4411095d80d1abadf048360d0e4b9c07}
+\index{iscatter.\+c@{iscatter.\+c}!find\+\_\+\+Cartesian\+\_\+coordinates@{find\+\_\+\+Cartesian\+\_\+coordinates}}
+\index{find\+\_\+\+Cartesian\+\_\+coordinates@{find\+\_\+\+Cartesian\+\_\+coordinates}!iscatter.\+c@{iscatter.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+\+Cartesian\+\_\+coordinates(int id, P\+P\+\_\+\+G\+R\+I\+D $\ast$pp\+\_\+grid, int $\ast$icoords)}{find_Cartesian_coordinates(int id, PP_GRID *pp_grid, int *icoords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void find\+\_\+\+Cartesian\+\_\+coordinates (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf P\+P\+\_\+\+G\+R\+ID} $\ast$}]{pp\+\_\+grid, }
+\item[{int $\ast$}]{icoords}
+\end{DoxyParamCaption}
+)}\hypertarget{iscatter_8c_aa33d473637b410292650c2d619984901}{}\label{iscatter_8c_aa33d473637b410292650c2d619984901}
+\index{iscatter.\+c@{iscatter.\+c}!neighbor\+\_\+id@{neighbor\+\_\+id}}
+\index{neighbor\+\_\+id@{neighbor\+\_\+id}!iscatter.\+c@{iscatter.\+c}}
+\subsubsection[{\texorpdfstring{neighbor\+\_\+id(int $\ast$him, int $\ast$me, int dir, int side, P\+P\+\_\+\+G\+R\+I\+D $\ast$pp\+\_\+grid)}{neighbor_id(int *him, int *me, int dir, int side, PP_GRID *pp_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int neighbor\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{him, }
+\item[{int $\ast$}]{me, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{{\bf P\+P\+\_\+\+G\+R\+ID} $\ast$}]{pp\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{iscatter_8c_abe5e2cc1e6a6a5f408fa65d19e6110e4}{}\label{iscatter_8c_abe5e2cc1e6a6a5f408fa65d19e6110e4}
+\index{iscatter.\+c@{iscatter.\+c}!print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure}}
+\index{print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure}!iscatter.\+c@{iscatter.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure(\+P\+P\+\_\+\+G\+R\+I\+D $\ast$pp\+\_\+grid)}{print_PP_GRID_structure(PP_GRID *pp_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+\+P\+P\+\_\+\+G\+R\+I\+D\+\_\+structure (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+P\+\_\+\+G\+R\+ID} $\ast$}]{pp\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{iscatter_8c_ac92f50c8fc101655fa746e9c5e2709ce}{}\label{iscatter_8c_ac92f50c8fc101655fa746e9c5e2709ce}
+\index{iscatter.\+c@{iscatter.\+c}!set\+\_\+pp\+\_\+grid@{set\+\_\+pp\+\_\+grid}}
+\index{set\+\_\+pp\+\_\+grid@{set\+\_\+pp\+\_\+grid}!iscatter.\+c@{iscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+pp\+\_\+grid(\+I\+N\+I\+T\+\_\+\+D\+A\+T\+A $\ast$init, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$comp\+\_\+glbgr)}{set_pp_grid(INIT_DATA *init, RECT_GRID *comp_glbgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+P\+\_\+\+G\+R\+ID}$\ast$ set\+\_\+pp\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$}]{init, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{comp\+\_\+glbgr}
+\end{DoxyParamCaption}
+)}\hypertarget{iscatter_8c_a2b37cff74e437d6806d09ab06a91b692}{}\label{iscatter_8c_a2b37cff74e437d6806d09ab06a91b692}

@@ -1,0 +1,66 @@
+\hypertarget{error_8c}{}\section{D\+N\+S/src/util/error.c File Reference}
+\label{error_8c}\index{D\+N\+S/src/util/error.\+c@{D\+N\+S/src/util/error.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$malloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{error_8c_a401a75def256ac437e66511337442d62}{print\+\_\+errors} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{error_8c_a8a3f6b1e4d4dd9262d5eea7c23da77dc}{set\+\_\+error\+\_\+immediate} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{error_8c_a677021c23a96db00135bf093be47b547}{log\+\_\+error} (const char $\ast$filename, int line\+\_\+number, int number, const char $\ast$message)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} struct \hyperlink{cdecs_8h_d0/d44/struct___error}{\+\_\+\+Error} \hyperlink{error_8c_ab6609beb9b24791fb1156962ea139bf0}{error\+\_\+list}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} struct \hyperlink{cdecs_8h_d0/d44/struct___error}{\+\_\+\+Error} $\ast$ \hyperlink{error_8c_a627b43ddcf44efa2505fbd52432bb9c5}{last\+\_\+error} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{error_8c_a0d3ef67065ea7058d17b1a54b379d473}{num\+\_\+errors} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} F\+I\+LE $\ast$ \hyperlink{error_8c_a0bf3409998f641426a2f29e386b9fa95}{error\+\_\+immediate} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{error.\+c@{error.\+c}!log\+\_\+error@{log\+\_\+error}}
+\index{log\+\_\+error@{log\+\_\+error}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{log\+\_\+error(const char $\ast$filename, int line\+\_\+number, int number, const char $\ast$message)}{log_error(const char *filename, int line_number, int number, const char *message)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void log\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{line\+\_\+number, }
+\item[{int}]{number, }
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{error_8c_a677021c23a96db00135bf093be47b547}{}\label{error_8c_a677021c23a96db00135bf093be47b547}
+\index{error.\+c@{error.\+c}!print\+\_\+errors@{print\+\_\+errors}}
+\index{print\+\_\+errors@{print\+\_\+errors}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+errors(void)}{print_errors(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+errors (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{error_8c_a401a75def256ac437e66511337442d62}{}\label{error_8c_a401a75def256ac437e66511337442d62}
+\index{error.\+c@{error.\+c}!set\+\_\+error\+\_\+immediate@{set\+\_\+error\+\_\+immediate}}
+\index{set\+\_\+error\+\_\+immediate@{set\+\_\+error\+\_\+immediate}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+error\+\_\+immediate(\+F\+I\+L\+E $\ast$file)}{set_error_immediate(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+error\+\_\+immediate (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{error_8c_a8a3f6b1e4d4dd9262d5eea7c23da77dc}{}\label{error_8c_a8a3f6b1e4d4dd9262d5eea7c23da77dc}
+
+
+\subsection{Variable Documentation}
+\index{error.\+c@{error.\+c}!error\+\_\+immediate@{error\+\_\+immediate}}
+\index{error\+\_\+immediate@{error\+\_\+immediate}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{error\+\_\+immediate}{error_immediate}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} F\+I\+LE$\ast$ error\+\_\+immediate = N\+U\+LL}\hypertarget{error_8c_a0bf3409998f641426a2f29e386b9fa95}{}\label{error_8c_a0bf3409998f641426a2f29e386b9fa95}
+\index{error.\+c@{error.\+c}!error\+\_\+list@{error\+\_\+list}}
+\index{error\+\_\+list@{error\+\_\+list}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{error\+\_\+list}{error_list}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} struct {\bf \+\_\+\+Error} error\+\_\+list}\hypertarget{error_8c_ab6609beb9b24791fb1156962ea139bf0}{}\label{error_8c_ab6609beb9b24791fb1156962ea139bf0}
+\index{error.\+c@{error.\+c}!last\+\_\+error@{last\+\_\+error}}
+\index{last\+\_\+error@{last\+\_\+error}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{last\+\_\+error}{last_error}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} struct {\bf \+\_\+\+Error}$\ast$ last\+\_\+error = N\+U\+LL}\hypertarget{error_8c_a627b43ddcf44efa2505fbd52432bb9c5}{}\label{error_8c_a627b43ddcf44efa2505fbd52432bb9c5}
+\index{error.\+c@{error.\+c}!num\+\_\+errors@{num\+\_\+errors}}
+\index{num\+\_\+errors@{num\+\_\+errors}!error.\+c@{error.\+c}}
+\subsubsection[{\texorpdfstring{num\+\_\+errors}{num_errors}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int num\+\_\+errors = 0}\hypertarget{error_8c_a0d3ef67065ea7058d17b1a54b379d473}{}\label{error_8c_a0d3ef67065ea7058d17b1a54b379d473}

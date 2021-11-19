@@ -1,0 +1,451 @@
+\hypertarget{igrid_8c}{}\section{D\+N\+S/src/intfc/igrid.c File Reference}
+\label{igrid_8c}\index{D\+N\+S/src/intfc/igrid.\+c@{D\+N\+S/src/intfc/igrid.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{igrid_8c_a4e14f7942d33f96665d287e29249d598}{P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}~\char`\"{}                    Grid \hyperlink{int_8h_a3c862e42fce82c99f0f0f7efccf604de}{Dimension} = \%-\/13d\textbackslash{}n\char`\"{}
+\item 
+\#define \hyperlink{igrid_8c_ad3865a2688d48cb403a0f0bb0ca8174b}{print\+\_\+grid\+\_\+float}(x)
+\item 
+\#define \hyperlink{igrid_8c_ab1a833c79a87a68aaa09dc91560617c9}{read\+\_\+grid\+\_\+float}(x)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_abed55199e5c6ebed375053d901fe5510}{area\+\_\+of\+\_\+rect\+\_\+grid} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_a44630abf86f3b8e87feff834fc4dc02f}{cylin\+\_\+\+Area} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_ab858f24b49c0360472ea516c3f875f99}{cylin\+\_\+\+Volume} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_a171f7499bdf56be671d96546b449cbf9}{ident\+\_\+\+Length} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_a6ae233e0465674559662dba326800c15}{ident\+\_\+\+Volume} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igrid_8c_a67ebe719b45e4f835cb361ff1e044911}{spherical\+\_\+\+Volume} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igrid_8c_a6c6fc1e6ecc1fd0621949cf091f762b4}{prompt\+\_\+for\+\_\+remap} (int, \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_aff1ca47d6840d0422d7020a6ebad62dd}{rect\+\_\+grid\+\_\+corner} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid, const int $\ast$icoords, double $\ast$fcoords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a07f3fd49292a1a447cfb0a6442df6f82}{rect\+\_\+grid\+\_\+center} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid, const int $\ast$icoords, double $\ast$fcoords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$ \hyperlink{igrid_8c_ac81832ac72f7ff840183624a2cc65828}{remap\+\_\+info} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a0bcf7c7b890c88b00a43798f532847d8}{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$r\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_ade80c3b6be5ecfa1e5ba83f13a93b4c9}{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid} (double $\ast$L, double $\ast$U, int $\ast$gmax, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} geom\+\_\+remap, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$r\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a9f53e222338ac5b431d8c2a07139e3d2}{init\+\_\+topological\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$top\+\_\+grid, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$r\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} \hyperlink{igrid_8c_aaf109eeb4149b73150971ce15f1a313e}{read\+\_\+remap\+\_\+from\+\_\+string} (const char $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_ab7e02f7ee2cc11db03ac7ecd1977aed4}{set\+\_\+remap\+\_\+identity} (int dim, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} remap)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a607fc6c2c7086e114be1f8daec195fe1}{set\+\_\+remap} (int dim, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} remap\+\_\+type, \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$remap)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a378a22247afd57dcb780a56ca3deca90}{i\+\_\+print\+\_\+remap\+\_\+values} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a4661a055d478fd80611ede4dbcf99142}{set\+\_\+rect\+\_\+grid} (const double $\ast$L, const double $\ast$U, const double $\ast$GL, const double $\ast$GU, const int $\ast$lbuf, const int $\ast$ubuf, const int $\ast$gmax, int dim, const \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$remap, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a420a40910964336cba926c1be130969a}{set\+\_\+dual\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$dual\+\_\+gr, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_abcddc412a7b4452cb61ed93616379c26}{copy\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$copy\+\_\+gr, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$data\+\_\+gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igrid_8c_a7c63e29d4289efd755f20d58f1d88e0f}{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$top\+\_\+grid, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$r\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{igrid_8c_adbcf32332fbd3f210b46d112a8fa9fbc}{set\+\_\+grid\+\_\+lines} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_af2bd0786cf565ba81962747ec408d522}{free\+\_\+grid\+\_\+lines} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a33d86011e703c219a29ffeea11ef2611}{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a34ad5a5ce89926aca78af84708b3c8da}{print\+\_\+rectangular\+\_\+grid} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a031c252df403baa0a0af5e81c3856e9f}{fprint\+\_\+rectangular\+\_\+grid} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a593c7230f2c4f185bcb4d6aa8365017e}{read\+\_\+rectangular\+\_\+grid} (const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$io\+\_\+type, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} bufzones, \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$remap)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igrid_8c_a989d921219b6b3e873ea02b2230dc598}{rect\+\_\+in\+\_\+which} (const double $\ast$coords, int $\ast$icoords, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_a6936c962261dbe92116b291ed7673547}{coords\+\_\+of\+\_\+grid\+\_\+point} (const int $\ast$icoords, double $\ast$coords, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igrid_8c_aa9b527f07060d0a3b81658a1966217ea}{point\+\_\+in\+\_\+buffer} (const double $\ast$posn, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_aecadc3ec8da7e6e2ff187405806db7ad}{zoom\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr1, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{igrid_8c_a9a63c1c9b22ddfefd4fa65369e18121c}{grid\+\_\+tolerance} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_ad49d493be7426b78e3df9f1982ef37bc}{set\+\_\+rotational\+\_\+symmetry} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} yes\+\_\+no)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igrid_8c_a286155603de2e2c3e9161bbf2f72e761}{is\+\_\+rotational\+\_\+symmetry} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{igrid_8c_ad754075ed922dc9631dce1d50de645c6}{ident\+\_\+\+Area} (const double $\ast$coords, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igrid_8c_ab980d09bbdc652a9c82a0a91f9a13aff}{set\+\_\+box\+\_\+rect\+\_\+grid} (double $\ast$L, double $\ast$U, int $\ast$gmax, int $\ast$lbuf, int $\ast$ubuf, int dim, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} \hyperlink{igrid_8c_ac416cd8445ec46d8b87e89e88b923adf}{Remap}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igrid_8c_aac9b2076f75d4b7872045a52dacfb8ca}{rot\+\_\+symmetry}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{igrid.\+c@{igrid.\+c}!P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON@{P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}}
+\index{P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON@{P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}{PRINT_GRID_DIMENSION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+\_\+\+G\+R\+I\+D\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON~\char`\"{}                    Grid {\bf Dimension} = \%-\/13d\textbackslash{}n\char`\"{}}\hypertarget{igrid_8c_a4e14f7942d33f96665d287e29249d598}{}\label{igrid_8c_a4e14f7942d33f96665d287e29249d598}
+\index{igrid.\+c@{igrid.\+c}!print\+\_\+grid\+\_\+float@{print\+\_\+grid\+\_\+float}}
+\index{print\+\_\+grid\+\_\+float@{print\+\_\+grid\+\_\+float}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+grid\+\_\+float}{print_grid_float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define print\+\_\+grid\+\_\+float(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ad3865a2688d48cb403a0f0bb0ca8174b}{}\label{igrid_8c_ad3865a2688d48cb403a0f0bb0ca8174b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(b\_oput == \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES}) ? (\textcolor{keywordtype}{void}) fwrite((\textcolor{keyword}{const} \textcolor{keywordtype}{void} *)&(x),\hyperlink{vmalloc_8h_ae8690abbffa85934d64d545920e2b108}{FLOAT},1,\hyperlink{climate_2_c_make_lists_8txt_a6063d0ad1cb28fb9e79eeb34e1743b9b}{file}) :\(\backslash\)
+           (void) fprintf(\hyperlink{climate_2_c_make_lists_8txt_a6063d0ad1cb28fb9e79eeb34e1743b9b}{file},\textcolor{stringliteral}{"%-"}\hyperlink{cdecs_8h_a494b69a1596c34007f9f94b1df2bfc2b}{FFMT},(x))
+\end{DoxyCode}
+\index{igrid.\+c@{igrid.\+c}!read\+\_\+grid\+\_\+float@{read\+\_\+grid\+\_\+float}}
+\index{read\+\_\+grid\+\_\+float@{read\+\_\+grid\+\_\+float}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+grid\+\_\+float}{read_grid_float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define read\+\_\+grid\+\_\+float(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ab1a833c79a87a68aaa09dc91560617c9}{}\label{igrid_8c_ab1a833c79a87a68aaa09dc91560617c9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (b\_iput)                         \(\backslash\)
+    \{                               \(\backslash\)
+        (void) getc(\hyperlink{climate_2_c_make_lists_8txt_a6063d0ad1cb28fb9e79eeb34e1743b9b}{file}); \textcolor{comment}{/* get blank */}              \(\backslash\)
+        (void) \hyperlink{simpleio_8c_ab7b437407c21eacd4692cfea275161bf}{read\_binary\_real\_array}(x,1,io\_type);           \(\backslash\)
+    \}                               \hyperlink{climate_2_c_make_lists_8txt_a3f58d3af0c5f3ad8f3bd2dbb6df4ec02}{\(\backslash\)}
+\hyperlink{climate_2_c_make_lists_8txt_a3f58d3af0c5f3ad8f3bd2dbb6df4ec02}{    else}                               \(\backslash\)
+        (void) \hyperlink{simpleio_8c_a6771e6524e68feda69bfe4128593f0f7}{fscan\_float}(\hyperlink{climate_2_c_make_lists_8txt_a6063d0ad1cb28fb9e79eeb34e1743b9b}{file},(x))
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{igrid.\+c@{igrid.\+c}!adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square@{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square}}
+\index{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square@{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$top\+\_\+grid, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$r\+\_\+grid)}{adjust_top_grid_for_square(RECT_GRID *top_grid, const RECT_GRID *r_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{top\+\_\+grid, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{r\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a7c63e29d4289efd755f20d58f1d88e0f}{}\label{igrid_8c_a7c63e29d4289efd755f20d58f1d88e0f}
+\index{igrid.\+c@{igrid.\+c}!area\+\_\+of\+\_\+rect\+\_\+grid@{area\+\_\+of\+\_\+rect\+\_\+grid}}
+\index{area\+\_\+of\+\_\+rect\+\_\+grid@{area\+\_\+of\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{area\+\_\+of\+\_\+rect\+\_\+grid(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{area_of_rect_grid(const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double area\+\_\+of\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_abed55199e5c6ebed375053d901fe5510}{}\label{igrid_8c_abed55199e5c6ebed375053d901fe5510}
+\index{igrid.\+c@{igrid.\+c}!coords\+\_\+of\+\_\+grid\+\_\+point@{coords\+\_\+of\+\_\+grid\+\_\+point}}
+\index{coords\+\_\+of\+\_\+grid\+\_\+point@{coords\+\_\+of\+\_\+grid\+\_\+point}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{coords\+\_\+of\+\_\+grid\+\_\+point(const int $\ast$icoords, double $\ast$coords, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid)}{coords_of_grid_point(const int *icoords, double *coords, const RECT_GRID *grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void coords\+\_\+of\+\_\+grid\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const int $\ast$}]{icoords, }
+\item[{double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a6936c962261dbe92116b291ed7673547}{}\label{igrid_8c_a6936c962261dbe92116b291ed7673547}
+\index{igrid.\+c@{igrid.\+c}!copy\+\_\+rect\+\_\+grid@{copy\+\_\+rect\+\_\+grid}}
+\index{copy\+\_\+rect\+\_\+grid@{copy\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{copy\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$copy\+\_\+gr, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$data\+\_\+gr)}{copy_rect_grid(RECT_GRID *copy_gr, const RECT_GRID *data_gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void copy\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{copy\+\_\+gr, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{data\+\_\+gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_abcddc412a7b4452cb61ed93616379c26}{}\label{igrid_8c_abcddc412a7b4452cb61ed93616379c26}
+\index{igrid.\+c@{igrid.\+c}!cylin\+\_\+\+Area@{cylin\+\_\+\+Area}}
+\index{cylin\+\_\+\+Area@{cylin\+\_\+\+Area}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{cylin\+\_\+\+Area(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{cylin_Area(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double cylin\+\_\+\+Area (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a44630abf86f3b8e87feff834fc4dc02f}{}\label{igrid_8c_a44630abf86f3b8e87feff834fc4dc02f}
+\index{igrid.\+c@{igrid.\+c}!cylin\+\_\+\+Volume@{cylin\+\_\+\+Volume}}
+\index{cylin\+\_\+\+Volume@{cylin\+\_\+\+Volume}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{cylin\+\_\+\+Volume(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{cylin_Volume(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double cylin\+\_\+\+Volume (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ab858f24b49c0360472ea516c3f875f99}{}\label{igrid_8c_ab858f24b49c0360472ea516c3f875f99}
+\index{igrid.\+c@{igrid.\+c}!fprint\+\_\+rectangular\+\_\+grid@{fprint\+\_\+rectangular\+\_\+grid}}
+\index{fprint\+\_\+rectangular\+\_\+grid@{fprint\+\_\+rectangular\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+rectangular\+\_\+grid(\+F\+I\+L\+E $\ast$file, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid)}{fprint_rectangular_grid(FILE *file, const RECT_GRID *grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a031c252df403baa0a0af5e81c3856e9f}{}\label{igrid_8c_a031c252df403baa0a0af5e81c3856e9f}
+\index{igrid.\+c@{igrid.\+c}!free\+\_\+grid\+\_\+lines@{free\+\_\+grid\+\_\+lines}}
+\index{free\+\_\+grid\+\_\+lines@{free\+\_\+grid\+\_\+lines}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+grid\+\_\+lines(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{free_grid_lines(RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void free\+\_\+grid\+\_\+lines (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_af2bd0786cf565ba81962747ec408d522}{}\label{igrid_8c_af2bd0786cf565ba81962747ec408d522}
+\index{igrid.\+c@{igrid.\+c}!grid\+\_\+tolerance@{grid\+\_\+tolerance}}
+\index{grid\+\_\+tolerance@{grid\+\_\+tolerance}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{grid\+\_\+tolerance(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{grid_tolerance(const RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double grid\+\_\+tolerance (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a9a63c1c9b22ddfefd4fa65369e18121c}{}\label{igrid_8c_a9a63c1c9b22ddfefd4fa65369e18121c}
+\index{igrid.\+c@{igrid.\+c}!i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}}
+\index{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$r\+\_\+grid)}{i_init_remap_and_rect_grid(RECT_GRID *r_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{r\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a0bcf7c7b890c88b00a43798f532847d8}{}\label{igrid_8c_a0bcf7c7b890c88b00a43798f532847d8}
+\index{igrid.\+c@{igrid.\+c}!i\+\_\+print\+\_\+remap\+\_\+values@{i\+\_\+print\+\_\+remap\+\_\+values}}
+\index{i\+\_\+print\+\_\+remap\+\_\+values@{i\+\_\+print\+\_\+remap\+\_\+values}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+print\+\_\+remap\+\_\+values(void)}{i_print_remap_values(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void i\+\_\+print\+\_\+remap\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a378a22247afd57dcb780a56ca3deca90}{}\label{igrid_8c_a378a22247afd57dcb780a56ca3deca90}
+\index{igrid.\+c@{igrid.\+c}!ident\+\_\+\+Area@{ident\+\_\+\+Area}}
+\index{ident\+\_\+\+Area@{ident\+\_\+\+Area}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{ident\+\_\+\+Area(const double $\ast$coords, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{ident_Area(const double *coords, const RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double ident\+\_\+\+Area (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ad754075ed922dc9631dce1d50de645c6}{}\label{igrid_8c_ad754075ed922dc9631dce1d50de645c6}
+\index{igrid.\+c@{igrid.\+c}!ident\+\_\+\+Length@{ident\+\_\+\+Length}}
+\index{ident\+\_\+\+Length@{ident\+\_\+\+Length}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{ident\+\_\+\+Length(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{ident_Length(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ident\+\_\+\+Length (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a171f7499bdf56be671d96546b449cbf9}{}\label{igrid_8c_a171f7499bdf56be671d96546b449cbf9}
+\index{igrid.\+c@{igrid.\+c}!ident\+\_\+\+Volume@{ident\+\_\+\+Volume}}
+\index{ident\+\_\+\+Volume@{ident\+\_\+\+Volume}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{ident\+\_\+\+Volume(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{ident_Volume(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double ident\+\_\+\+Volume (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a6ae233e0465674559662dba326800c15}{}\label{igrid_8c_a6ae233e0465674559662dba326800c15}
+\index{igrid.\+c@{igrid.\+c}!init\+\_\+topological\+\_\+grid@{init\+\_\+topological\+\_\+grid}}
+\index{init\+\_\+topological\+\_\+grid@{init\+\_\+topological\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+topological\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$top\+\_\+grid, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$r\+\_\+grid)}{init_topological_grid(RECT_GRID *top_grid, const RECT_GRID *r_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+topological\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{top\+\_\+grid, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{r\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a9f53e222338ac5b431d8c2a07139e3d2}{}\label{igrid_8c_a9f53e222338ac5b431d8c2a07139e3d2}
+\index{igrid.\+c@{igrid.\+c}!is\+\_\+rotational\+\_\+symmetry@{is\+\_\+rotational\+\_\+symmetry}}
+\index{is\+\_\+rotational\+\_\+symmetry@{is\+\_\+rotational\+\_\+symmetry}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+rotational\+\_\+symmetry(void)}{is_rotational_symmetry(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} is\+\_\+rotational\+\_\+symmetry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a286155603de2e2c3e9161bbf2f72e761}{}\label{igrid_8c_a286155603de2e2c3e9161bbf2f72e761}
+\index{igrid.\+c@{igrid.\+c}!point\+\_\+in\+\_\+buffer@{point\+\_\+in\+\_\+buffer}}
+\index{point\+\_\+in\+\_\+buffer@{point\+\_\+in\+\_\+buffer}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{point\+\_\+in\+\_\+buffer(const double $\ast$posn, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{point_in_buffer(const double *posn, const RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} point\+\_\+in\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{posn, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_aa9b527f07060d0a3b81658a1966217ea}{}\label{igrid_8c_aa9b527f07060d0a3b81658a1966217ea}
+\index{igrid.\+c@{igrid.\+c}!print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure}}
+\index{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid)}{print_RECT_GRID_structure(const RECT_GRID *rect_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a33d86011e703c219a29ffeea11ef2611}{}\label{igrid_8c_a33d86011e703c219a29ffeea11ef2611}
+\index{igrid.\+c@{igrid.\+c}!print\+\_\+rectangular\+\_\+grid@{print\+\_\+rectangular\+\_\+grid}}
+\index{print\+\_\+rectangular\+\_\+grid@{print\+\_\+rectangular\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+rectangular\+\_\+grid(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid)}{print_rectangular_grid(const RECT_GRID *grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a34ad5a5ce89926aca78af84708b3c8da}{}\label{igrid_8c_a34ad5a5ce89926aca78af84708b3c8da}
+\index{igrid.\+c@{igrid.\+c}!prompt\+\_\+for\+\_\+remap@{prompt\+\_\+for\+\_\+remap}}
+\index{prompt\+\_\+for\+\_\+remap@{prompt\+\_\+for\+\_\+remap}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+for\+\_\+remap(int, R\+E\+M\+A\+P $\ast$)}{prompt_for_remap(int, REMAP *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void prompt\+\_\+for\+\_\+remap (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{{\bf R\+E\+M\+AP} $\ast$}]{remap}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a6c6fc1e6ecc1fd0621949cf091f762b4}{}\label{igrid_8c_a6c6fc1e6ecc1fd0621949cf091f762b4}
+\index{igrid.\+c@{igrid.\+c}!read\+\_\+rectangular\+\_\+grid@{read\+\_\+rectangular\+\_\+grid}}
+\index{read\+\_\+rectangular\+\_\+grid@{read\+\_\+rectangular\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+rectangular\+\_\+grid(const I\+O\+\_\+\+T\+Y\+P\+E $\ast$io\+\_\+type, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, boolean bufzones, R\+E\+M\+A\+P $\ast$remap)}{read_rectangular_grid(const IO_TYPE *io_type, RECT_GRID *gr, boolean bufzones, REMAP *remap)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void read\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf boolean}}]{bufzones, }
+\item[{{\bf R\+E\+M\+AP} $\ast$}]{remap}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a593c7230f2c4f185bcb4d6aa8365017e}{}\label{igrid_8c_a593c7230f2c4f185bcb4d6aa8365017e}
+\index{igrid.\+c@{igrid.\+c}!read\+\_\+remap\+\_\+from\+\_\+string@{read\+\_\+remap\+\_\+from\+\_\+string}}
+\index{read\+\_\+remap\+\_\+from\+\_\+string@{read\+\_\+remap\+\_\+from\+\_\+string}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{read\+\_\+remap\+\_\+from\+\_\+string(const char $\ast$s)}{read_remap_from_string(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} read\+\_\+remap\+\_\+from\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_aaf109eeb4149b73150971ce15f1a313e}{}\label{igrid_8c_aaf109eeb4149b73150971ce15f1a313e}
+\index{igrid.\+c@{igrid.\+c}!rect\+\_\+grid\+\_\+center@{rect\+\_\+grid\+\_\+center}}
+\index{rect\+\_\+grid\+\_\+center@{rect\+\_\+grid\+\_\+center}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{rect\+\_\+grid\+\_\+center(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid, const int $\ast$icoords, double $\ast$fcoords)}{rect_grid_center(const RECT_GRID *rect_grid, const int *icoords, double *fcoords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rect\+\_\+grid\+\_\+center (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid, }
+\item[{const int $\ast$}]{icoords, }
+\item[{double $\ast$}]{fcoords}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a07f3fd49292a1a447cfb0a6442df6f82}{}\label{igrid_8c_a07f3fd49292a1a447cfb0a6442df6f82}
+\index{igrid.\+c@{igrid.\+c}!rect\+\_\+grid\+\_\+corner@{rect\+\_\+grid\+\_\+corner}}
+\index{rect\+\_\+grid\+\_\+corner@{rect\+\_\+grid\+\_\+corner}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{rect\+\_\+grid\+\_\+corner(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid, const int $\ast$icoords, double $\ast$fcoords)}{rect_grid_corner(const RECT_GRID *rect_grid, const int *icoords, double *fcoords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rect\+\_\+grid\+\_\+corner (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid, }
+\item[{const int $\ast$}]{icoords, }
+\item[{double $\ast$}]{fcoords}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_aff1ca47d6840d0422d7020a6ebad62dd}{}\label{igrid_8c_aff1ca47d6840d0422d7020a6ebad62dd}
+\index{igrid.\+c@{igrid.\+c}!rect\+\_\+in\+\_\+which@{rect\+\_\+in\+\_\+which}}
+\index{rect\+\_\+in\+\_\+which@{rect\+\_\+in\+\_\+which}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{rect\+\_\+in\+\_\+which(const double $\ast$coords, int $\ast$icoords, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid)}{rect_in_which(const double *coords, int *icoords, const RECT_GRID *grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} rect\+\_\+in\+\_\+which (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{int $\ast$}]{icoords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a989d921219b6b3e873ea02b2230dc598}{}\label{igrid_8c_a989d921219b6b3e873ea02b2230dc598}
+\index{igrid.\+c@{igrid.\+c}!remap\+\_\+info@{remap\+\_\+info}}
+\index{remap\+\_\+info@{remap\+\_\+info}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{remap\+\_\+info(void)}{remap_info(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf R\+E\+M\+AP}$\ast$ remap\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ac81832ac72f7ff840183624a2cc65828}{}\label{igrid_8c_ac81832ac72f7ff840183624a2cc65828}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+box\+\_\+rect\+\_\+grid@{set\+\_\+box\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+box\+\_\+rect\+\_\+grid@{set\+\_\+box\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+box\+\_\+rect\+\_\+grid(double $\ast$\+L, double $\ast$\+U, int $\ast$gmax, int $\ast$lbuf, int $\ast$ubuf, int dim, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid)}{set_box_rect_grid(double *L, double *U, int *gmax, int *lbuf, int *ubuf, int dim, RECT_GRID *rect_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+box\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int}]{dim, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ab980d09bbdc652a9c82a0a91f9a13aff}{}\label{igrid_8c_ab980d09bbdc652a9c82a0a91f9a13aff}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+dual\+\_\+grid@{set\+\_\+dual\+\_\+grid}}
+\index{set\+\_\+dual\+\_\+grid@{set\+\_\+dual\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+dual\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$dual\+\_\+gr, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{set_dual_grid(RECT_GRID *dual_gr, const RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+dual\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{dual\+\_\+gr, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a420a40910964336cba926c1be130969a}{}\label{igrid_8c_a420a40910964336cba926c1be130969a}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+grid\+\_\+lines@{set\+\_\+grid\+\_\+lines}}
+\index{set\+\_\+grid\+\_\+lines@{set\+\_\+grid\+\_\+lines}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+lines(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{set_grid_lines(RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int set\+\_\+grid\+\_\+lines (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_adbcf32332fbd3f210b46d112a8fa9fbc}{}\label{igrid_8c_adbcf32332fbd3f210b46d112a8fa9fbc}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+rect\+\_\+grid@{set\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+rect\+\_\+grid@{set\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+rect\+\_\+grid(const double $\ast$\+L, const double $\ast$\+U, const double $\ast$\+G\+L, const double $\ast$\+G\+U, const int $\ast$lbuf, const int $\ast$ubuf, const int $\ast$gmax, int dim, const R\+E\+M\+A\+P $\ast$remap, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid)}{set_rect_grid(const double *L, const double *U, const double *GL, const double *GU, const int *lbuf, const int *ubuf, const int *gmax, int dim, const REMAP *remap, RECT_GRID *rect_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{L, }
+\item[{const double $\ast$}]{U, }
+\item[{const double $\ast$}]{GL, }
+\item[{const double $\ast$}]{GU, }
+\item[{const int $\ast$}]{lbuf, }
+\item[{const int $\ast$}]{ubuf, }
+\item[{const int $\ast$}]{gmax, }
+\item[{int}]{dim, }
+\item[{const {\bf R\+E\+M\+AP} $\ast$}]{remap, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a4661a055d478fd80611ede4dbcf99142}{}\label{igrid_8c_a4661a055d478fd80611ede4dbcf99142}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+remap@{set\+\_\+remap}}
+\index{set\+\_\+remap@{set\+\_\+remap}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap(int dim, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P remap\+\_\+type, R\+E\+M\+A\+P $\ast$remap)}{set_remap(int dim, GEOMETRY_REMAP remap_type, REMAP *remap)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+remap (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{remap\+\_\+type, }
+\item[{{\bf R\+E\+M\+AP} $\ast$}]{remap}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a607fc6c2c7086e114be1f8daec195fe1}{}\label{igrid_8c_a607fc6c2c7086e114be1f8daec195fe1}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid(double $\ast$\+L, double $\ast$\+U, int $\ast$gmax, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P geom\+\_\+remap, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$r\+\_\+grid)}{set_remap_and_rect_grid(double *L, double *U, int *gmax, GEOMETRY_REMAP geom_remap, RECT_GRID *r_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{geom\+\_\+remap, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{r\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ade80c3b6be5ecfa1e5ba83f13a93b4c9}{}\label{igrid_8c_ade80c3b6be5ecfa1e5ba83f13a93b4c9}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+remap\+\_\+identity@{set\+\_\+remap\+\_\+identity}}
+\index{set\+\_\+remap\+\_\+identity@{set\+\_\+remap\+\_\+identity}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap\+\_\+identity(int dim, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P remap)}{set_remap_identity(int dim, GEOMETRY_REMAP remap)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+remap\+\_\+identity (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{remap}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ab7e02f7ee2cc11db03ac7ecd1977aed4}{}\label{igrid_8c_ab7e02f7ee2cc11db03ac7ecd1977aed4}
+\index{igrid.\+c@{igrid.\+c}!set\+\_\+rotational\+\_\+symmetry@{set\+\_\+rotational\+\_\+symmetry}}
+\index{set\+\_\+rotational\+\_\+symmetry@{set\+\_\+rotational\+\_\+symmetry}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+rotational\+\_\+symmetry(boolean yes\+\_\+no)}{set_rotational_symmetry(boolean yes_no)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+rotational\+\_\+symmetry (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{yes\+\_\+no}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_ad49d493be7426b78e3df9f1982ef37bc}{}\label{igrid_8c_ad49d493be7426b78e3df9f1982ef37bc}
+\index{igrid.\+c@{igrid.\+c}!spherical\+\_\+\+Volume@{spherical\+\_\+\+Volume}}
+\index{spherical\+\_\+\+Volume@{spherical\+\_\+\+Volume}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{spherical\+\_\+\+Volume(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{spherical_Volume(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double spherical\+\_\+\+Volume (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{coords, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_a67ebe719b45e4f835cb361ff1e044911}{}\label{igrid_8c_a67ebe719b45e4f835cb361ff1e044911}
+\index{igrid.\+c@{igrid.\+c}!zoom\+\_\+rect\+\_\+grid@{zoom\+\_\+rect\+\_\+grid}}
+\index{zoom\+\_\+rect\+\_\+grid@{zoom\+\_\+rect\+\_\+grid}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{zoom\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr1, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr2)}{zoom_rect_grid(RECT_GRID *gr1, const RECT_GRID *gr2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void zoom\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr1, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr2}
+\end{DoxyParamCaption}
+)}\hypertarget{igrid_8c_aecadc3ec8da7e6e2ff187405806db7ad}{}\label{igrid_8c_aecadc3ec8da7e6e2ff187405806db7ad}
+
+
+\subsection{Variable Documentation}
+\index{igrid.\+c@{igrid.\+c}!Remap@{Remap}}
+\index{Remap@{Remap}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{Remap}{Remap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf R\+E\+M\+AP} Remap}\hypertarget{igrid_8c_ac416cd8445ec46d8b87e89e88b923adf}{}\label{igrid_8c_ac416cd8445ec46d8b87e89e88b923adf}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6c09a857491717e6508097b8757b3f52}{IDENTITY\_REMAP},
+                 \textcolor{stringliteral}{"IDENTITY\_REMAP"},
+                  \{ \textcolor{stringliteral}{"x"}, \textcolor{stringliteral}{"y"}, \textcolor{stringliteral}{"z"} \},
+                  \{ \textcolor{stringliteral}{"X"}, \textcolor{stringliteral}{"Y"}, \textcolor{stringliteral}{"Z"} \},
+                  \{ \textcolor{stringliteral}{"x"}, \textcolor{stringliteral}{"x & y"}, \textcolor{stringliteral}{"x, y, & z"} \},
+              0.0,
+              NULL
+            \}
+\end{DoxyCode}
+\index{igrid.\+c@{igrid.\+c}!rot\+\_\+symmetry@{rot\+\_\+symmetry}}
+\index{rot\+\_\+symmetry@{rot\+\_\+symmetry}!igrid.\+c@{igrid.\+c}}
+\subsubsection[{\texorpdfstring{rot\+\_\+symmetry}{rot_symmetry}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} rot\+\_\+symmetry}\hypertarget{igrid_8c_aac9b2076f75d4b7872045a52dacfb8ca}{}\label{igrid_8c_aac9b2076f75d4b7872045a52dacfb8ca}

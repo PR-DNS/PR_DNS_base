@@ -1,0 +1,328 @@
+\hypertarget{isurgery_8c}{}\section{D\+N\+S/src/intfc/isurgery.c File Reference}
+\label{isurgery_8c}\index{D\+N\+S/src/intfc/isurgery.\+c@{D\+N\+S/src/intfc/isurgery.\+c}}
+{\ttfamily \#include $<$intfc/int.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{isurgery_8c_d3/dea/struct___s_t_i_t_c_h}{\+\_\+\+S\+T\+I\+T\+CH}
+\item 
+struct \hyperlink{isurgery_8c_d1/d8c/struct___s_e_a_m}{\+\_\+\+S\+E\+AM}
+\item 
+struct \hyperlink{isurgery_8c_d5/df8/struct___s_u_r_g_e_r_y}{\+\_\+\+S\+U\+R\+G\+E\+RY}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{isurgery_8c_d3/dea/struct___s_t_i_t_c_h}{\+\_\+\+S\+T\+I\+T\+CH} \hyperlink{isurgery_8c_acb48fab6d3cb812700724f71dd2861d7}{S\+T\+I\+T\+CH}
+\item 
+typedef struct \hyperlink{isurgery_8c_d1/d8c/struct___s_e_a_m}{\+\_\+\+S\+E\+AM} \hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM}
+\item 
+typedef struct \hyperlink{isurgery_8c_d5/df8/struct___s_u_r_g_e_r_y}{\+\_\+\+S\+U\+R\+G\+E\+RY} \hyperlink{isurgery_8c_a5ab41dc3a269fb610495df6c6961f38d}{S\+U\+R\+G\+E\+RY}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{isurgery_8c_a84627a72058502328269676b81780f89a7b483d8cb7501442a6e4c6d827d42368}{S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH}, 
+\hyperlink{isurgery_8c_a84627a72058502328269676b81780f89a32429a3bf36bcb9188af45895dc57b89}{C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH}
+ \}
+\item 
+enum \{ \hyperlink{isurgery_8c_af3520ff6d43011872bab77edd27d4de3a56e9649f2f65c69b9cdb42ff6d2b30eb}{M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX} = 100
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{isurgery_8c_a31c3df14e714c752d8dd6aab57b4fa82}{align\+\_\+seam\+\_\+with\+\_\+point} (\hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{isurgery_8c_a5cf620bc707b17aa9f6f161913dd4982}{sew\+\_\+surface\+\_\+to\+\_\+curve} (\hyperlink{isurgery_8c_a5ab41dc3a269fb610495df6c6961f38d}{S\+U\+R\+G\+E\+RY} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{isurgery_8c_a9f3e89c88f6cc4031ac8a486e9eb3e89}{count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{isurgery_8c_a28fb32b9313b34048fb8145244c909e6}{set\+\_\+surface\+\_\+seam} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, \hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{isurgery_8c_a92e5a4b37f38e197712a6dafaa6d28af}{set\+\_\+curve\+\_\+seam} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{isurgery_8c_a6c071e2e3debfd6e0d7dc27cc328e51d}{print\+\_\+seam} (\hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$ \hyperlink{isurgery_8c_aa1c3e5b1a7e857c86bc9f560c6d04036}{bdry\+\_\+adjacent\+\_\+tri} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{isurgery_8c_a96622d090226e776b05dd253035ace17}{identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{isurgery_8c_a766d38d3c06aeebf24704f8b03bd7b90}{next\+\_\+null\+\_\+sided\+\_\+tri} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$start\+\_\+tri, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$vertex, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$\hyperlink{iprotos_8h_a1e89629bc4052f3eaab8c7763eaa9861}{next\+\_\+tri})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{isurgery_8c_a6ea00db63bf9f1aa90cdc066e31e42d5}{prev\+\_\+null\+\_\+sided\+\_\+tri} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$start\+\_\+tri, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$vertex, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$prev\+\_\+tri)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$ \hyperlink{isurgery_8c_aa2d437e4cb2e1113fd54d46e47f180b2}{insert\+\_\+point\+\_\+in\+\_\+surface} (int idir, double $\ast$coords, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{isurgery_8c_a6290009e46509cfd3db8ff415424967a}{insert\+\_\+curve\+\_\+in\+\_\+surface} (double $\ast$nor, \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$ns, \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$ne, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{isurgery_8c_ab1b5947ece2932043ec8680d3cb7b592}{rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double phi, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{isurgery_8c_a7c6a6fba2b182593ad7be66009cc183b}{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double phi, double theta, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{isurgery_8c_aa8f9ea8f366f200328d931c974b3e751}{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double phi, double theta, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+S\+T\+I\+T\+CH@{\+\_\+\+S\+T\+I\+T\+CH}}\label{struct___s_t_i_t_c_h}
+\hypertarget{isurgery_8c_struct___s_t_i_t_c_h}{}
+\subsubsection{struct \+\_\+\+S\+T\+I\+T\+CH}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$\hypertarget{isurgery_8c_add91e57e06259b4306d16726b0d59a6c}{}\label{isurgery_8c_add91e57e06259b4306d16726b0d59a6c}
+&
+detached\+\_\+bond&
+\\
+\hline
+
+int\hypertarget{isurgery_8c_a048aa76c150291c96b2def9c8b434542}{}\label{isurgery_8c_a048aa76c150291c96b2def9c8b434542}
+&
+detached\+\_\+side&
+\\
+\hline
+
+\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$\hypertarget{isurgery_8c_abb68dd495d2028f12b0ae5166f3a44da}{}\label{isurgery_8c_abb68dd495d2028f12b0ae5166f3a44da}
+&
+detached\+\_\+tri&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{isurgery_8c_a4454830549711ed373680bb1c96664ee}{}\label{isurgery_8c_a4454830549711ed373680bb1c96664ee}
+&
+end\+\_\+pt&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{isurgery_8c_a624e958b2845e92ea6b7f5c245937784}{}\label{isurgery_8c_a624e958b2845e92ea6b7f5c245937784}
+&
+start\+\_\+pt&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+S\+E\+AM@{\+\_\+\+S\+E\+AM}}\label{struct___s_e_a_m}
+\hypertarget{isurgery_8c_struct___s_e_a_m}{}
+\subsubsection{struct \+\_\+\+S\+E\+AM}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{isurgery_8c_ac0c1bfae37fb3f44b8a79136e5570a8a}{}\label{isurgery_8c_ac0c1bfae37fb3f44b8a79136e5570a8a}
+&
+begin\+\_\+pt&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{isurgery_8c_ae9fc5ae5c74090069c3ec05ea8461c15}{}\label{isurgery_8c_ae9fc5ae5c74090069c3ec05ea8461c15}
+&
+finish\+\_\+pt&
+\\
+\hline
+
+int\hypertarget{isurgery_8c_ab021ab4b94de97e6b32adf58a436b9d0}{}\label{isurgery_8c_ab021ab4b94de97e6b32adf58a436b9d0}
+&
+number\+\_\+of\+\_\+stitches&
+\\
+\hline
+
+\hyperlink{isurgery_8c_acb48fab6d3cb812700724f71dd2861d7}{S\+T\+I\+T\+CH} $\ast$\hypertarget{isurgery_8c_adf387c9d90ae7e122b070cc8a5deb94d}{}\label{isurgery_8c_adf387c9d90ae7e122b070cc8a5deb94d}
+&
+stitch&
+\\
+\hline
+
+\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$\hypertarget{isurgery_8c_a9504c541ea40b8cd2c78fb242b8f72c5}{}\label{isurgery_8c_a9504c541ea40b8cd2c78fb242b8f72c5}
+&
+surface&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+S\+U\+R\+G\+E\+RY@{\+\_\+\+S\+U\+R\+G\+E\+RY}}\label{struct___s_u_r_g_e_r_y}
+\hypertarget{isurgery_8c_struct___s_u_r_g_e_r_y}{}
+\subsubsection{struct \+\_\+\+S\+U\+R\+G\+E\+RY}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$\hypertarget{isurgery_8c_aaee225c7c38fc6440b7ec18ec7f95570}{}\label{isurgery_8c_aaee225c7c38fc6440b7ec18ec7f95570}
+&
+new\+\_\+tris&
+\\
+\hline
+
+\hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$\hypertarget{isurgery_8c_a11778b2d40ef4782c322925f31ce6cfe}{}\label{isurgery_8c_a11778b2d40ef4782c322925f31ce6cfe}
+&
+seam1&
+\\
+\hline
+
+\hyperlink{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{S\+E\+AM} $\ast$\hypertarget{isurgery_8c_abb835f3e1184da2ce1c6a797638d20c8}{}\label{isurgery_8c_abb835f3e1184da2ce1c6a797638d20c8}
+&
+seam2&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Typedef Documentation}
+\index{isurgery.\+c@{isurgery.\+c}!S\+E\+AM@{S\+E\+AM}}
+\index{S\+E\+AM@{S\+E\+AM}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+AM}{SEAM}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+S\+E\+AM} {\bf S\+E\+AM}}\hypertarget{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}{}\label{isurgery_8c_a6b1743d37d89e27d0498ee696f0fc194}
+\index{isurgery.\+c@{isurgery.\+c}!S\+T\+I\+T\+CH@{S\+T\+I\+T\+CH}}
+\index{S\+T\+I\+T\+CH@{S\+T\+I\+T\+CH}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{S\+T\+I\+T\+CH}{STITCH}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+S\+T\+I\+T\+CH} {\bf S\+T\+I\+T\+CH}}\hypertarget{isurgery_8c_acb48fab6d3cb812700724f71dd2861d7}{}\label{isurgery_8c_acb48fab6d3cb812700724f71dd2861d7}
+\index{isurgery.\+c@{isurgery.\+c}!S\+U\+R\+G\+E\+RY@{S\+U\+R\+G\+E\+RY}}
+\index{S\+U\+R\+G\+E\+RY@{S\+U\+R\+G\+E\+RY}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{S\+U\+R\+G\+E\+RY}{SURGERY}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+S\+U\+R\+G\+E\+RY} {\bf S\+U\+R\+G\+E\+RY}}\hypertarget{isurgery_8c_a5ab41dc3a269fb610495df6c6961f38d}{}\label{isurgery_8c_a5ab41dc3a269fb610495df6c6961f38d}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{isurgery_8c_a84627a72058502328269676b81780f89}{}\label{isurgery_8c_a84627a72058502328269676b81780f89}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH@{S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH}!isurgery.\+c@{isurgery.\+c}}\index{isurgery.\+c@{isurgery.\+c}!S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH@{S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH}}\item[{\em 
+S\+U\+R\+F\+\_\+\+S\+T\+I\+T\+CH\hypertarget{isurgery_8c_a84627a72058502328269676b81780f89a7b483d8cb7501442a6e4c6d827d42368}{}\label{isurgery_8c_a84627a72058502328269676b81780f89a7b483d8cb7501442a6e4c6d827d42368}
+}]\index{C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH@{C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH}!isurgery.\+c@{isurgery.\+c}}\index{isurgery.\+c@{isurgery.\+c}!C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH@{C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH}}\item[{\em 
+C\+U\+R\+V\+\_\+\+S\+T\+I\+T\+CH\hypertarget{isurgery_8c_a84627a72058502328269676b81780f89a32429a3bf36bcb9188af45895dc57b89}{}\label{isurgery_8c_a84627a72058502328269676b81780f89a32429a3bf36bcb9188af45895dc57b89}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{isurgery_8c_af3520ff6d43011872bab77edd27d4de3}{}\label{isurgery_8c_af3520ff6d43011872bab77edd27d4de3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX@{M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX}!isurgery.\+c@{isurgery.\+c}}\index{isurgery.\+c@{isurgery.\+c}!M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX@{M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX}}\item[{\em 
+M\+A\+X\+\_\+\+T\+R\+I\+S\+\_\+\+A\+T\+\_\+\+V\+E\+R\+T\+EX\hypertarget{isurgery_8c_af3520ff6d43011872bab77edd27d4de3a56e9649f2f65c69b9cdb42ff6d2b30eb}{}\label{isurgery_8c_af3520ff6d43011872bab77edd27d4de3a56e9649f2f65c69b9cdb42ff6d2b30eb}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{isurgery.\+c@{isurgery.\+c}!align\+\_\+seam\+\_\+with\+\_\+point@{align\+\_\+seam\+\_\+with\+\_\+point}}
+\index{align\+\_\+seam\+\_\+with\+\_\+point@{align\+\_\+seam\+\_\+with\+\_\+point}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{align\+\_\+seam\+\_\+with\+\_\+point(\+S\+E\+A\+M $\ast$, P\+O\+I\+N\+T $\ast$, S\+E\+A\+M $\ast$)}{align_seam_with_point(SEAM *, POINT *, SEAM *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void align\+\_\+seam\+\_\+with\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+AM} $\ast$}]{unaligned, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{point, }
+\item[{{\bf S\+E\+AM} $\ast$}]{aligned}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a31c3df14e714c752d8dd6aab57b4fa82}{}\label{isurgery_8c_a31c3df14e714c752d8dd6aab57b4fa82}
+\index{isurgery.\+c@{isurgery.\+c}!bdry\+\_\+adjacent\+\_\+tri@{bdry\+\_\+adjacent\+\_\+tri}}
+\index{bdry\+\_\+adjacent\+\_\+tri@{bdry\+\_\+adjacent\+\_\+tri}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{bdry\+\_\+adjacent\+\_\+tri(\+T\+R\+I $\ast$, P\+O\+I\+N\+T $\ast$, int)}{bdry_adjacent_tri(TRI *, POINT *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf T\+RI} $\ast$ bdry\+\_\+adjacent\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_aa1c3e5b1a7e857c86bc9f560c6d04036}{}\label{isurgery_8c_aa1c3e5b1a7e857c86bc9f560c6d04036}
+\index{isurgery.\+c@{isurgery.\+c}!count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf@{count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf}}
+\index{count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf@{count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf(\+S\+U\+R\+F\+A\+C\+E $\ast$)}{count_null_sides_of_surf(SURFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int count\+\_\+null\+\_\+sides\+\_\+of\+\_\+surf (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a9f3e89c88f6cc4031ac8a486e9eb3e89}{}\label{isurgery_8c_a9f3e89c88f6cc4031ac8a486e9eb3e89}
+\index{isurgery.\+c@{isurgery.\+c}!identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair@{identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair}}
+\index{identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair@{identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{identify_detached_surface_curve_pair(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void identify\+\_\+detached\+\_\+surface\+\_\+curve\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a96622d090226e776b05dd253035ace17}{}\label{isurgery_8c_a96622d090226e776b05dd253035ace17}
+\index{isurgery.\+c@{isurgery.\+c}!insert\+\_\+curve\+\_\+in\+\_\+surface@{insert\+\_\+curve\+\_\+in\+\_\+surface}}
+\index{insert\+\_\+curve\+\_\+in\+\_\+surface@{insert\+\_\+curve\+\_\+in\+\_\+surface}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+curve\+\_\+in\+\_\+surface(double $\ast$nor, N\+O\+D\+E $\ast$ns, N\+O\+D\+E $\ast$ne, S\+U\+R\+F\+A\+C\+E $\ast$surf)}{insert_curve_in_surface(double *nor, NODE *ns, NODE *ne, SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ insert\+\_\+curve\+\_\+in\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{nor, }
+\item[{{\bf N\+O\+DE} $\ast$}]{ns, }
+\item[{{\bf N\+O\+DE} $\ast$}]{ne, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a6290009e46509cfd3db8ff415424967a}{}\label{isurgery_8c_a6290009e46509cfd3db8ff415424967a}
+\index{isurgery.\+c@{isurgery.\+c}!insert\+\_\+point\+\_\+in\+\_\+surface@{insert\+\_\+point\+\_\+in\+\_\+surface}}
+\index{insert\+\_\+point\+\_\+in\+\_\+surface@{insert\+\_\+point\+\_\+in\+\_\+surface}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+point\+\_\+in\+\_\+surface(int idir, double $\ast$coords, S\+U\+R\+F\+A\+C\+E $\ast$surf)}{insert_point_in_surface(int idir, double *coords, SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+NT}$\ast$ insert\+\_\+point\+\_\+in\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{int}]{idir, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_aa2d437e4cb2e1113fd54d46e47f180b2}{}\label{isurgery_8c_aa2d437e4cb2e1113fd54d46e47f180b2}
+\index{isurgery.\+c@{isurgery.\+c}!next\+\_\+null\+\_\+sided\+\_\+tri@{next\+\_\+null\+\_\+sided\+\_\+tri}}
+\index{next\+\_\+null\+\_\+sided\+\_\+tri@{next\+\_\+null\+\_\+sided\+\_\+tri}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{next\+\_\+null\+\_\+sided\+\_\+tri(\+T\+R\+I $\ast$start\+\_\+tri, P\+O\+I\+N\+T $\ast$vertex, T\+R\+I $\ast$$\ast$next\+\_\+tri)}{next_null_sided_tri(TRI *start_tri, POINT *vertex, TRI **next_tri)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int next\+\_\+null\+\_\+sided\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{start\+\_\+tri, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{vertex, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{next\+\_\+tri}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a766d38d3c06aeebf24704f8b03bd7b90}{}\label{isurgery_8c_a766d38d3c06aeebf24704f8b03bd7b90}
+\index{isurgery.\+c@{isurgery.\+c}!prev\+\_\+null\+\_\+sided\+\_\+tri@{prev\+\_\+null\+\_\+sided\+\_\+tri}}
+\index{prev\+\_\+null\+\_\+sided\+\_\+tri@{prev\+\_\+null\+\_\+sided\+\_\+tri}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{prev\+\_\+null\+\_\+sided\+\_\+tri(\+T\+R\+I $\ast$start\+\_\+tri, P\+O\+I\+N\+T $\ast$vertex, T\+R\+I $\ast$$\ast$prev\+\_\+tri)}{prev_null_sided_tri(TRI *start_tri, POINT *vertex, TRI **prev_tri)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int prev\+\_\+null\+\_\+sided\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{start\+\_\+tri, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{vertex, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{prev\+\_\+tri}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a6ea00db63bf9f1aa90cdc066e31e42d5}{}\label{isurgery_8c_a6ea00db63bf9f1aa90cdc066e31e42d5}
+\index{isurgery.\+c@{isurgery.\+c}!print\+\_\+seam@{print\+\_\+seam}}
+\index{print\+\_\+seam@{print\+\_\+seam}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+seam(\+S\+E\+A\+M $\ast$)}{print_seam(SEAM *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+seam (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+AM} $\ast$}]{seam}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a6c071e2e3debfd6e0d7dc27cc328e51d}{}\label{isurgery_8c_a6c071e2e3debfd6e0d7dc27cc328e51d}
+\index{isurgery.\+c@{isurgery.\+c}!rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle@{rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle}}
+\index{rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle@{rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double phi, boolean first)}{rotate_point_with_polar_angle(POINT *p, double *center, double phi, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rotate\+\_\+point\+\_\+with\+\_\+polar\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_ab1b5947ece2932043ec8680d3cb7b592}{}\label{isurgery_8c_ab1b5947ece2932043ec8680d3cb7b592}
+\index{isurgery.\+c@{isurgery.\+c}!rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle@{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle}}
+\index{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle@{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double phi, double theta, boolean first)}{rotate_point_with_spherical_angle(POINT *p, double *center, double phi, double theta, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_aa8f9ea8f366f200328d931c974b3e751}{}\label{isurgery_8c_aa8f9ea8f366f200328d931c974b3e751}
+\index{isurgery.\+c@{isurgery.\+c}!rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles@{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles}}
+\index{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles@{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double phi, double theta, boolean first)}{rotate_point_with_spherical_angles(POINT *p, double *center, double phi, double theta, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rotate\+\_\+point\+\_\+with\+\_\+spherical\+\_\+angles (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a7c6a6fba2b182593ad7be66009cc183b}{}\label{isurgery_8c_a7c6a6fba2b182593ad7be66009cc183b}
+\index{isurgery.\+c@{isurgery.\+c}!set\+\_\+curve\+\_\+seam@{set\+\_\+curve\+\_\+seam}}
+\index{set\+\_\+curve\+\_\+seam@{set\+\_\+curve\+\_\+seam}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+curve\+\_\+seam(\+C\+U\+R\+V\+E $\ast$, S\+E\+A\+M $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N)}{set_curve_seam(CURVE *, SEAM *, ORIENTATION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+curve\+\_\+seam (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf S\+E\+AM} $\ast$}]{seam, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orientation}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a92e5a4b37f38e197712a6dafaa6d28af}{}\label{isurgery_8c_a92e5a4b37f38e197712a6dafaa6d28af}
+\index{isurgery.\+c@{isurgery.\+c}!set\+\_\+surface\+\_\+seam@{set\+\_\+surface\+\_\+seam}}
+\index{set\+\_\+surface\+\_\+seam@{set\+\_\+surface\+\_\+seam}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+surface\+\_\+seam(\+S\+U\+R\+F\+A\+C\+E $\ast$, S\+E\+A\+M $\ast$)}{set_surface_seam(SURFACE *, SEAM *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+surface\+\_\+seam (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf S\+E\+AM} $\ast$}]{seam}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a28fb32b9313b34048fb8145244c909e6}{}\label{isurgery_8c_a28fb32b9313b34048fb8145244c909e6}
+\index{isurgery.\+c@{isurgery.\+c}!sew\+\_\+surface\+\_\+to\+\_\+curve@{sew\+\_\+surface\+\_\+to\+\_\+curve}}
+\index{sew\+\_\+surface\+\_\+to\+\_\+curve@{sew\+\_\+surface\+\_\+to\+\_\+curve}!isurgery.\+c@{isurgery.\+c}}
+\subsubsection[{\texorpdfstring{sew\+\_\+surface\+\_\+to\+\_\+curve(\+S\+U\+R\+G\+E\+R\+Y $\ast$)}{sew_surface_to_curve(SURGERY *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void sew\+\_\+surface\+\_\+to\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+G\+E\+RY} $\ast$}]{surgery}
+\end{DoxyParamCaption}
+)}\hypertarget{isurgery_8c_a5cf620bc707b17aa9f6f161913dd4982}{}\label{isurgery_8c_a5cf620bc707b17aa9f6f161913dd4982}

@@ -1,0 +1,1226 @@
+\hypertarget{plotdecs_8h}{}\section{D\+N\+S/src/util/plotdecs.h File Reference}
+\label{plotdecs_8h}\index{D\+N\+S/src/util/plotdecs.\+h@{D\+N\+S/src/util/plotdecs.\+h}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{plotdecs_8h_acc5deaef8626166cacb2868aa13b0781}{fwrite\+\_\+ieee\+\_\+float}(f,  size,  num,  \hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})~(void) fwrite((const void$\ast$)f,size,num,\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\#define \hyperlink{plotdecs_8h_a73a55737e34bd9199ae478cb8a746c0a}{fwrite\+\_\+ieee\+\_\+int}(i,  size,  num,  \hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})~(void) fwrite((const void$\ast$)i,size,num,\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\#define \hyperlink{plotdecs_8h_a72320ec1b60ab1244e2b42182317c0dd}{set\+\_\+binary\+\_\+mode}(state)~\hyperlink{sigplot_8c_a7c2580d9a22ccb36bb9b3ba864a9d05f}{fset\+\_\+binary\+\_\+mode}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},state)
+\item 
+\#define \hyperlink{plotdecs_8h_ae89dd034e199852bbd00a8bbe7f57560}{openpl}()~\hyperlink{sigplot_8c_a8f65e39db06d165867801de34d1d17e0}{fopenpl}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE})
+\item 
+\#define \hyperlink{plotdecs_8h_aef771aacd1d2d9be713544ebfdc0a044}{closepl}()~\hyperlink{sigplot_8c_a484d9c7b23f76cbdd18957f0fbdd9264}{fclosepl}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE})
+\item 
+\#define \hyperlink{plotdecs_8h_ab4742bf6ccc339b8c96685b560377eb3}{space}(x1,  y1,  x2,  y2)~\hyperlink{sigplot_8c_a7b0f6b256886aad86915fdfeae9f5e0b}{fspace}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)
+\item 
+\#define \hyperlink{plotdecs_8h_a3d0db406c2ff957eaf0e456f046372c7}{rotate}(xc,  yc,  \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})~\hyperlink{sigplot_8c_ad492e55977d21d04498c51168f957e9f}{frotate}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},xc,yc,\hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})
+\item 
+\#define \hyperlink{plotdecs_8h_a89c0f9334b89b6dd4b0b4f9d2f6142f1}{window}(x1,  y1,  x2,  y2)~\hyperlink{sigplot_8c_a7c69dfac8d61c28fb4afda398f436a1e}{fwindow}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)
+\item 
+\#define \hyperlink{plotdecs_8h_aa188ee44ab9f3cc6d5998e6bc397608a}{viewport}(x1,  y1,  x2,  y2)~\hyperlink{sigplot_8c_a0afce5e669f15545a79d343df1a2497a}{fviewport}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)
+\item 
+\#define \hyperlink{plotdecs_8h_a54ad3dddfaf6c78f224e0d9563d138a3}{line}(x1,  y1,  x2,  y2)~\hyperlink{sigplot_8c_a7f5767024aaa7d0ee275fdcc1e9bdaf8}{fline}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)
+\item 
+\#define \hyperlink{plotdecs_8h_a07d8b30adc93efa838fc88bdd8bbc638}{move}(x,  y)~\hyperlink{sigplot_8c_addf07dfca55dfb70ba1f3c37a0ebcc9b}{fmove}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y)
+\item 
+\#define \hyperlink{plotdecs_8h_a754f45531f434944e8d7ee0ea877578f}{cont}(x,  y)~\hyperlink{sigplot_8c_aff983a94cc994d28c9e663594e6b02e9}{fcont}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y)
+\item 
+\#define \hyperlink{plotdecs_8h_ab53ff43c2335d85dbc2d6226c1b56c8e}{polygon}(m,  v)~\hyperlink{sigplot_8c_a9cdaf608630ab10bdeac2272088f8f9b}{fpolygon}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},m,v)
+\item 
+\#define \hyperlink{plotdecs_8h_af253d5fad9ffa98a5a65b873866f0a11}{rectangle}(v)~\hyperlink{sigplot_8c_ac37fe87050f2c43caa1763241c855171}{frectangle}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},v)
+\item 
+\#define \hyperlink{plotdecs_8h_a8544d9517f8822487c1eed4b4a672a6e}{set\+\_\+text\+\_\+precision}(precision,  font,  slant)~\hyperlink{sigplot_8c_a42f3baab98062d535a3c6f7342c6b299}{fset\+\_\+text\+\_\+precision}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},precision,font,slant)
+\item 
+\#define \hyperlink{plotdecs_8h_a2d45ceb45b3303d6496f041976a0caa6}{set\+\_\+text\+\_\+size}(height,  width,  spce,  \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})~\hyperlink{sigplot_8c_ab262900b2ed8bc9497cd69a54b45d184}{fset\+\_\+text\+\_\+size}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},height,width,spce,\hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})
+\item 
+\#define \hyperlink{plotdecs_8h_a5e45b0b692edce6335ae288bccc177cd}{text\+\_\+height\+\_\+angle}(h,  a)~\hyperlink{sigplot_8c_a206631de228a5f388f7f9a6af0f308b0}{ftext\+\_\+height\+\_\+angle}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},h,a)
+\item 
+\#define \hyperlink{plotdecs_8h_a9e59d95c67708a047ef8b79e4732e47e}{label}(strng)~\hyperlink{sigplot_8c_a13fc2b0f6a442b64b9a5d10760cd63da}{flabel}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},strng)
+\item 
+\#define \hyperlink{plotdecs_8h_aa2e5e36025884edb53f83db3da7d939e}{erase}()~\hyperlink{sigplot_8c_aafce0d665dd95a4b3241f0a3b57dd7ab}{ferase}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE})
+\item 
+\#define \hyperlink{plotdecs_8h_a60ce8f769c296205356f71138005f748}{repeat}(num)~\hyperlink{sigplot_8c_abe95475315978d9ae8e10892293efc82}{frepeat}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_a4ccddf70df3a5e808503d2bf495d5279}{point}(x,  y)~\hyperlink{sigplot_8c_acc7be4275e44ba0a92f691455e1fba39}{fpoint}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y)
+\item 
+\#define \hyperlink{plotdecs_8h_a507cd8af2009d849637026e3aa2fb0ff}{set\+\_\+up\+\_\+colors}(num)~\hyperlink{sigplot_8c_ae77d79040dfa5149818281b5e062c643}{fset\+\_\+up\+\_\+colors}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_ace5977a7f007d8acd3e51fbbbb431c3e}{set\+\_\+color}(col)~\hyperlink{sigplot_8c_a36dd7288610a722e2d6b077e02dddec9}{fset\+\_\+color}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},col)
+\item 
+\#define \hyperlink{plotdecs_8h_a1dac7852c7a737bc893fcd08c42695e1}{set\+\_\+up\+\_\+color\+\_\+palette}(num)~\hyperlink{sigplot_8c_a946f8f4e01b94ab2165c9ebac6a66904}{fset\+\_\+up\+\_\+color\+\_\+palette}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_a4ab0df6df4b542ca04dcb93e33b9d4d8}{set\+\_\+up\+\_\+color\+\_\+table}(num)~\hyperlink{sigplot_8c_a72ec2ba39dff807a8fab56aaf2d38755}{fset\+\_\+up\+\_\+color\+\_\+table}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_a5fd6fb5fccaaae5632b1197c2b9439e8}{set\+\_\+color\+\_\+from\+\_\+palette}(col\+\_\+frac)~\hyperlink{sigplot_8c_aaeb38eadcde9a0e13893a25c9cc274a0}{fset\+\_\+color\+\_\+from\+\_\+palette}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},col\+\_\+frac)
+\item 
+\#define \hyperlink{plotdecs_8h_a940e9ebcd4957f46974c585c8e7a66a1}{set\+\_\+color\+\_\+from\+\_\+table}(col)~\hyperlink{sigplot_8c_a2029e37a3c088d8551bff7614c4f9f80}{fset\+\_\+color\+\_\+from\+\_\+table}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},col)
+\item 
+\#define \hyperlink{plotdecs_8h_a74b149070d0e3884a6c50046b6f17815}{set\+\_\+color\+\_\+rgb}(red,  green,  blue)~\hyperlink{sigplot_8c_a534cf1125726c05249e84351ea6dd675}{fset\+\_\+color\+\_\+rgb}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},red,green,blue)
+\item 
+\#define \hyperlink{plotdecs_8h_aac17c1f6ce0bd0c4b51581a0aa4afc84}{set\+\_\+background\+\_\+color}(col)~\hyperlink{sigplot_8c_a4e2c59fd6f81e3bf7a01a117b4f38217}{fset\+\_\+background\+\_\+color}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},col)
+\item 
+\#define \hyperlink{plotdecs_8h_a9cccb39b4698ded6e31f51e4e8924687}{set\+\_\+color\+\_\+bar\+\_\+data}(\hyperlink{cdecs_8h_a273b979d8609a180a20a8b3c8b7886b8}{min},  \hyperlink{cdecs_8h_a4efacfde05b65a37ed410af337e013dc}{max},  strng)~\hyperlink{sigplot_8c_a29bf198e80dacf188b70d32203b135f4}{fset\+\_\+color\+\_\+bar\+\_\+data}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},\hyperlink{cdecs_8h_a273b979d8609a180a20a8b3c8b7886b8}{min},\hyperlink{cdecs_8h_a4efacfde05b65a37ed410af337e013dc}{max},strng)
+\item 
+\#define \hyperlink{plotdecs_8h_aaf89ce4269b6751586f853ebe871960a}{shade}()~\hyperlink{sigplot_8c_ad282950581a4ffafa8f4de70d813e7e8}{fshade}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE})
+\item 
+\#define \hyperlink{plotdecs_8h_a21b04976c82dd070871dd019f65118be}{linemod}(strng)~\hyperlink{sigplot_8c_a51afbde52ba651dae139678b3c97d0fe}{flinemod}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},strng)
+\item 
+\#define \hyperlink{plotdecs_8h_ac29a4e997d54e04b0b80099dec0f1a30}{set\+\_\+linestyle}(style)~\hyperlink{sigplot_8c_ac5320bc50337e3758b33a1c42d8086f0}{fset\+\_\+linestyle}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},style)
+\item 
+\#define \hyperlink{plotdecs_8h_a803f6168cb80295c4b099e8c7876d5ac}{arc}(xc,  yc,  x1,  y1,  x2,  y2)~\hyperlink{sigplot_8c_ad1a12038763fa079a4e92462c213bc86}{farc}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},xc,yc,x1,y1,x2,y2)
+\item 
+\#define \hyperlink{plotdecs_8h_ac160ee3f9ee48006ca7423d579139b16}{arrow}(xc,  yc,  x1,  y1)~\hyperlink{sigplot_8c_ad56b4f591fdcf57c89412fdf12e85ec2}{farrow}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},xc,yc,x1,y1)
+\item 
+\#define \hyperlink{plotdecs_8h_a58bcd5f84f3d4cc0a374bc3f2c3be1cf}{closevt}()~\hyperlink{sigplot_8c_a83e869138cd1f8bafda83ceeb03e382d}{fclosevt}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE});
+\item 
+\#define \hyperlink{plotdecs_8h_abe69cd6dc905705020acdeb280fc9e1d}{create\+\_\+segment}(num)~\hyperlink{sigplot_8c_a9d31a7665c4debcfa79b11cee1ea65df}{fcreate\+\_\+segment}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_a6fc45b6083e84c59e874a79b236d1743}{close\+\_\+segment}()~\hyperlink{sigplot_8c_adaa281a542bc2dc051b27fb345c21ecb}{fclose\+\_\+segment}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE})
+\item 
+\#define \hyperlink{plotdecs_8h_aba5b5cfb8e0266c4939d02b050f6c5cf}{delete\+\_\+segment}(num)~\hyperlink{sigplot_8c_a2bd92d43759ce55d40bee45a12931a5b}{fdelete\+\_\+segment}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num)
+\item 
+\#define \hyperlink{plotdecs_8h_ac1a39568f2f6a510bd7383beb3664b68}{set\+\_\+visibility}(num,  state)~\hyperlink{sigplot_8c_a6a53ecf14410a6e7471d5a17b2adc685}{fset\+\_\+visibility}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},num,state)
+\item 
+\#define \hyperlink{plotdecs_8h_a1d53e6cf4261db120de8a8f0cb0e2856}{rename\+\_\+segment}(n1,  n2)~\hyperlink{sigplot_8c_ad6e148425d2f3a18bc886b4d1fbdaf16}{frename\+\_\+segment}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},n1,n2)
+\item 
+\#define \hyperlink{plotdecs_8h_a06099ca4f2a2a9904dd5de861a608e69}{set\+\_\+projection}(type,  x,  y,  z)~\hyperlink{sigplot_8c_a76b5772512bb293c0f2f71b521a0ce43}{fset\+\_\+projection}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},type,x,y,z)
+\item 
+\#define \hyperlink{plotdecs_8h_a800da6aac37029ef25bab819c970f407}{set\+\_\+view\+\_\+reference\+\_\+point}(x,  y,  z)~\hyperlink{sigplot_8c_a648387cf92503e6d8ea8ad7e1aff3a37}{fset\+\_\+view\+\_\+reference\+\_\+point}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y,z)
+\item 
+\#define \hyperlink{plotdecs_8h_a2d78eef139907163560b87c6e8997f8d}{set\+\_\+view\+\_\+plane\+\_\+normal}(nx,  ny,  nz)~\hyperlink{sigplot_8c_a5ed28f767f9094ffc3da2b419025ef64}{fset\+\_\+view\+\_\+plane\+\_\+normal}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},nx,ny,nz)
+\item 
+\#define \hyperlink{plotdecs_8h_a5201531204e5b542390fea217be315b4}{set\+\_\+view\+\_\+up\+\_\+vector}(nx,  ny,  nz)~\hyperlink{sigplot_8c_a7990f8ff6536c0ee5625fd534ce04a45}{fset\+\_\+view\+\_\+up\+\_\+vector}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},nx,ny,nz)
+\item 
+\#define \hyperlink{plotdecs_8h_a0f23892228a4541a2ab225bfd2e498bb}{line\+\_\+3}(x1,  y1,  z1,  x2,  y2,  z2)~\hyperlink{sigplot_8c_a6b96534d4328d611f0d33326ee29042c}{fline\+\_\+3}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x1,y1,z1,x2,y2,z2)
+\item 
+\#define \hyperlink{plotdecs_8h_a8b228b5573d5a33f2480a08ce6bddb0f}{move\+\_\+3}(x,  y,  z)~\hyperlink{sigplot_8c_a1795bfc90e71593e0b8f4020865527a2}{fmove\+\_\+3}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y,z)
+\item 
+\#define \hyperlink{plotdecs_8h_ab6856a5f37828fd6287a1281a0f08571}{cont\+\_\+3}(x,  y,  z)~\hyperlink{sigplot_8c_a1b017b45cf6f6176574940ada448cf96}{fcont\+\_\+3}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y,z)
+\item 
+\#define \hyperlink{plotdecs_8h_a7cbddbf45a714932ccd52dedc8a325aa}{arrow\+\_\+3}(x,  y,  z,  vx,  vy,  vz)~\hyperlink{sigplot_8c_a4aeb93cf07426cb417156eba663964f0}{farrow\+\_\+3}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},x,y,z,vx,vy,vz)
+\item 
+\#define \hyperlink{plotdecs_8h_af59b55fd161a2347648cc6df70d90cd8}{polygon\+\_\+3}(col,  m,  v)~\hyperlink{sigplot_8c_a4782bfaad155529b71861e06af77346f}{fpolygon\+\_\+3}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},col,m,v)
+\item 
+\#define \hyperlink{plotdecs_8h_ae3d50b4997fd3c538b21363c1a28bbd2}{set\+\_\+hidden\+\_\+surface\+\_\+removal}(flag)~\hyperlink{sigplot_8c_a05fff12aa5e4d8f676785cac88de1836}{fset\+\_\+hidden\+\_\+surface\+\_\+removal}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},flag)
+\item 
+\#define \hyperlink{plotdecs_8h_a70686f443f43557a58ae9b3b6245f81b}{set\+\_\+hidden\+\_\+line\+\_\+removal}(flag)~\hyperlink{sigplot_8c_a52bff73e7bf70d103588b5c3ed13b9dd}{fset\+\_\+hidden\+\_\+line\+\_\+removal}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},flag)
+\item 
+\#define \hyperlink{plotdecs_8h_a9ec308a608a6bc32703c9cef9857c965}{set\+\_\+convex\+\_\+polyhedra}(flag)~\hyperlink{sigplot_8c_a1988267b0652052126745c86bb2a96f2}{fset\+\_\+convex\+\_\+polyhedra}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},flag)
+\item 
+\#define \hyperlink{plotdecs_8h_ab2dc6a303721515a8d4ac0e8a41de2c4}{magnify}(xl,  yl,  xu,  yu)~\hyperlink{sigplot_8c_ad4a473689a45e245b4006fa5de7fb47c}{fmagnify}(\hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE},xl,yl,xu,yu)
+\item 
+\#define \hyperlink{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE}~stdout
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26a6a82685f0663cc70c3301447056f3841}{N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON} = 0, 
+\hyperlink{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26ad0c10b80d3340f95cea91c41bbfebe4b}{B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON} = 1
+ \}
+\item 
+enum \{ \\*
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af77fb67151d0c18d397069ad8c271ba3}{B\+L\+A\+CK} = 0, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af80f9a890089d211842d59625e561f88}{R\+ED}, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aa60bd322f93178d68184e30e162571ca}{G\+R\+E\+EN}, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a35d6719cb4d7577c031b3d79057a1b79}{B\+L\+UE}, 
+\\*
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3ae735a848bf82163a19236ead1c3ef2d2}{Y\+E\+L\+L\+OW}, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a56926c820ad72d0977e7ee44d9916e62}{M\+A\+G\+E\+N\+TA}, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aafe71cad474c15ce63b300c470eef8cc}{C\+Y\+AN}, 
+\hyperlink{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a283fc479650da98250635b9c3c0e7e50}{W\+H\+I\+TE}
+ \}
+\item 
+enum \{ \hyperlink{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a4fb73e95a306bf1cf7eb9cbe7b8345c6}{S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON} = 0, 
+\hyperlink{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a21560a6b3e37328acb7936314ae91c7f}{S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ac7ea64dd3c06ad31e398ef5f18896bf7}{fset\+\_\+binary\+\_\+mode} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ac23dcae96f6287ba609e61a566367d1c}{fopenpl} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a4cbcbc99b464a6b33a32a98b8a15c8d8}{fclosepl} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a5a7d2f9668da8a3e8cb34ae54b7f49f1}{fspace} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ad4a2c9bd5affd7c9f1d88dbdb511b178}{frotate} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_aa63da08765d6242563a2462a34497be0}{fwindow} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ab3f312646596238db06146276660eb06}{fviewport} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a07efd138f6c893cc47442f3f9f44b219}{fline} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a5aa5c61fc78e06e695e2323bf7b6d2d9}{fmove} (F\+I\+LE $\ast$, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a1a0b3951fedeab752c1f15a93cbb96ae}{fcont} (F\+I\+LE $\ast$, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a46c076b64330266d39079be31ea888cb}{fpolygon} (F\+I\+LE $\ast$, int, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a4c84a6d79f8f1fd9dcaa64cdf569fd01}{frectangle} (F\+I\+LE $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a78c94b46860f99e167dcd75574fb328e}{fset\+\_\+text\+\_\+precision} (F\+I\+LE $\ast$, int, int, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_af3c7ac528d88bd76763814aab838febb}{fset\+\_\+text\+\_\+size} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a7eefb74d5a42e5b1fc194708c0b5a0c8}{ftext\+\_\+height\+\_\+angle} (F\+I\+LE $\ast$, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a4b8f0113409bf77d29d3eba0b7e1c3a7}{flabel} (F\+I\+LE $\ast$, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_af9b5953567dd5746922c2d5150c6fe2e}{ferase} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a214eab4ca9085abfd79f7e0e18a0d384}{frepeat} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a564f084e6a1f117929e0b0e4dea117ee}{fpoint} (F\+I\+LE $\ast$, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a8134b06d20c3edfb3cc3fbfc85a80f8c}{fset\+\_\+up\+\_\+colors} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_adca14a02258f1146c69b95aa9dfcffb5}{fset\+\_\+color} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a1de5375f5ff3260b6d3b12472ef84d98}{fset\+\_\+up\+\_\+color\+\_\+palette} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a9e7e97cd7fc6dc719887c5495d84fa17}{fset\+\_\+up\+\_\+color\+\_\+table} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_aa289bb1089141c0a1624bc74c1d774ea}{fset\+\_\+color\+\_\+from\+\_\+palette} (F\+I\+LE $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a47b9fcd5824287b1614c3fe28bb0fb92}{fset\+\_\+color\+\_\+from\+\_\+table} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a703ea25f4b872d7c5ea70178cb4b58c1}{fset\+\_\+color\+\_\+rgb} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_afedc6794bb3bb2dbf85d613bc460b6eb}{fset\+\_\+background\+\_\+color} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a852cbebe0caa5c9c4e97df798ab4392a}{fset\+\_\+color\+\_\+bar\+\_\+data} (F\+I\+LE $\ast$, double, double, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_abab94b36ba74184e29b917bb3738ff53}{fshade} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a6d865a274995ee68c21a42611572dc8d}{flinemod} (F\+I\+LE $\ast$, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a0502a74fc9caa58e1b8aba8b70b0855d}{fset\+\_\+linestyle} (F\+I\+LE $\ast$, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_aecb978e5699a6d8792788ffb7467a230}{farc} (F\+I\+LE $\ast$, double, double, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ae39af069a418ca0ee0abda3efb0b9445}{farrow} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_adc0dbd7bf784448fd27c638f32619fd0}{fclosevt} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a55370da8769d097d38c7b04991d8013d}{fcreate\+\_\+segment} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a180382d5de333469b8ed7a85d7eb5710}{fclose\+\_\+segment} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_abf261c485013731ffaf87254892a830b}{fdelete\+\_\+segment} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a8fe32b18d5ca084627c26fa4e54b95ba}{fset\+\_\+visibility} (F\+I\+LE $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a1ef01a229365884d921f7145a80cc242}{frename\+\_\+segment} (F\+I\+LE $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a6ff2348424b46647a3d4564db51f8b10}{fset\+\_\+projection} (F\+I\+LE $\ast$, const char $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a07b4f2b70bc4d561ba4706dcce363843}{fset\+\_\+view\+\_\+reference\+\_\+point} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a8c368f827b9ab001a023a76c7db675fb}{fset\+\_\+view\+\_\+plane\+\_\+normal} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ab8cf9b2654a8c51f1d2f42171d78822b}{fset\+\_\+view\+\_\+up\+\_\+vector} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a3d45144467ba16f1aefc781224a32796}{fline\+\_\+3} (F\+I\+LE $\ast$, double, double, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ad0e820b88420f2b9fc7682245dbd0e72}{fmove\+\_\+3} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a57385cbe9190f28e73b14784f00d2295}{fcont\+\_\+3} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a34a124ce9834a8abaaf4799f57350561}{farrow\+\_\+3} (F\+I\+LE $\ast$, double, double, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_adfb51a7a8766f7b848192b531147b25d}{fpolygon\+\_\+3} (F\+I\+LE $\ast$, double, int, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ae44079a8108edc0106282994d31a1610}{fset\+\_\+hidden\+\_\+surface\+\_\+removal} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_aa0f439fa380b89dd438bc8c7115f5aa7}{fset\+\_\+hidden\+\_\+line\+\_\+removal} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_ad162f9ed240fe7796682caea07c908c7}{fset\+\_\+convex\+\_\+polyhedra} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{plotdecs_8h_a14b329e6f8431d9b95e06e05887d22bb}{fmagnify} (F\+I\+LE $\ast$, double, double, double, double)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{plotdecs.\+h@{plotdecs.\+h}!arc@{arc}}
+\index{arc@{arc}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{arc}{arc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define arc(
+\begin{DoxyParamCaption}
+\item[{}]{xc, }
+\item[{}]{yc, }
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)~{\bf farc}({\bf P\+L\+O\+T\+F\+I\+LE},xc,yc,x1,y1,x2,y2)}\hypertarget{plotdecs_8h_a803f6168cb80295c4b099e8c7876d5ac}{}\label{plotdecs_8h_a803f6168cb80295c4b099e8c7876d5ac}
+\index{plotdecs.\+h@{plotdecs.\+h}!arrow@{arrow}}
+\index{arrow@{arrow}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{arrow}{arrow}}]{\setlength{\rightskip}{0pt plus 5cm}\#define arrow(
+\begin{DoxyParamCaption}
+\item[{}]{xc, }
+\item[{}]{yc, }
+\item[{}]{x1, }
+\item[{}]{y1}
+\end{DoxyParamCaption}
+)~{\bf farrow}({\bf P\+L\+O\+T\+F\+I\+LE},xc,yc,x1,y1)}\hypertarget{plotdecs_8h_ac160ee3f9ee48006ca7423d579139b16}{}\label{plotdecs_8h_ac160ee3f9ee48006ca7423d579139b16}
+\index{plotdecs.\+h@{plotdecs.\+h}!arrow\+\_\+3@{arrow\+\_\+3}}
+\index{arrow\+\_\+3@{arrow\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{arrow\+\_\+3}{arrow_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define arrow\+\_\+3(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z, }
+\item[{}]{vx, }
+\item[{}]{vy, }
+\item[{}]{vz}
+\end{DoxyParamCaption}
+)~{\bf farrow\+\_\+3}({\bf P\+L\+O\+T\+F\+I\+LE},x,y,z,vx,vy,vz)}\hypertarget{plotdecs_8h_a7cbddbf45a714932ccd52dedc8a325aa}{}\label{plotdecs_8h_a7cbddbf45a714932ccd52dedc8a325aa}
+\index{plotdecs.\+h@{plotdecs.\+h}!close\+\_\+segment@{close\+\_\+segment}}
+\index{close\+\_\+segment@{close\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{close\+\_\+segment}{close_segment}}]{\setlength{\rightskip}{0pt plus 5cm}\#define close\+\_\+segment(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf fclose\+\_\+segment}({\bf P\+L\+O\+T\+F\+I\+LE})}\hypertarget{plotdecs_8h_a6fc45b6083e84c59e874a79b236d1743}{}\label{plotdecs_8h_a6fc45b6083e84c59e874a79b236d1743}
+\index{plotdecs.\+h@{plotdecs.\+h}!closepl@{closepl}}
+\index{closepl@{closepl}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{closepl}{closepl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define closepl(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf fclosepl}({\bf P\+L\+O\+T\+F\+I\+LE})}\hypertarget{plotdecs_8h_aef771aacd1d2d9be713544ebfdc0a044}{}\label{plotdecs_8h_aef771aacd1d2d9be713544ebfdc0a044}
+\index{plotdecs.\+h@{plotdecs.\+h}!closevt@{closevt}}
+\index{closevt@{closevt}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{closevt}{closevt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define closevt(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf fclosevt}({\bf P\+L\+O\+T\+F\+I\+LE});}\hypertarget{plotdecs_8h_a58bcd5f84f3d4cc0a374bc3f2c3be1cf}{}\label{plotdecs_8h_a58bcd5f84f3d4cc0a374bc3f2c3be1cf}
+\index{plotdecs.\+h@{plotdecs.\+h}!cont@{cont}}
+\index{cont@{cont}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{cont}{cont}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cont(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~{\bf fcont}({\bf P\+L\+O\+T\+F\+I\+LE},x,y)}\hypertarget{plotdecs_8h_a754f45531f434944e8d7ee0ea877578f}{}\label{plotdecs_8h_a754f45531f434944e8d7ee0ea877578f}
+\index{plotdecs.\+h@{plotdecs.\+h}!cont\+\_\+3@{cont\+\_\+3}}
+\index{cont\+\_\+3@{cont\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{cont\+\_\+3}{cont_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cont\+\_\+3(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~{\bf fcont\+\_\+3}({\bf P\+L\+O\+T\+F\+I\+LE},x,y,z)}\hypertarget{plotdecs_8h_ab6856a5f37828fd6287a1281a0f08571}{}\label{plotdecs_8h_ab6856a5f37828fd6287a1281a0f08571}
+\index{plotdecs.\+h@{plotdecs.\+h}!create\+\_\+segment@{create\+\_\+segment}}
+\index{create\+\_\+segment@{create\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{create\+\_\+segment}{create_segment}}]{\setlength{\rightskip}{0pt plus 5cm}\#define create\+\_\+segment(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf fcreate\+\_\+segment}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_abe69cd6dc905705020acdeb280fc9e1d}{}\label{plotdecs_8h_abe69cd6dc905705020acdeb280fc9e1d}
+\index{plotdecs.\+h@{plotdecs.\+h}!delete\+\_\+segment@{delete\+\_\+segment}}
+\index{delete\+\_\+segment@{delete\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{delete\+\_\+segment}{delete_segment}}]{\setlength{\rightskip}{0pt plus 5cm}\#define delete\+\_\+segment(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf fdelete\+\_\+segment}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_aba5b5cfb8e0266c4939d02b050f6c5cf}{}\label{plotdecs_8h_aba5b5cfb8e0266c4939d02b050f6c5cf}
+\index{plotdecs.\+h@{plotdecs.\+h}!erase@{erase}}
+\index{erase@{erase}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{erase}{erase}}]{\setlength{\rightskip}{0pt plus 5cm}\#define erase(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf ferase}({\bf P\+L\+O\+T\+F\+I\+LE})}\hypertarget{plotdecs_8h_aa2e5e36025884edb53f83db3da7d939e}{}\label{plotdecs_8h_aa2e5e36025884edb53f83db3da7d939e}
+\index{plotdecs.\+h@{plotdecs.\+h}!fwrite\+\_\+ieee\+\_\+float@{fwrite\+\_\+ieee\+\_\+float}}
+\index{fwrite\+\_\+ieee\+\_\+float@{fwrite\+\_\+ieee\+\_\+float}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fwrite\+\_\+ieee\+\_\+float}{fwrite_ieee_float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fwrite\+\_\+ieee\+\_\+float(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{size, }
+\item[{}]{num, }
+\item[{}]{{\bf file}}
+\end{DoxyParamCaption}
+)~(void) fwrite((const void$\ast$)f,size,num,{\bf file})}\hypertarget{plotdecs_8h_acc5deaef8626166cacb2868aa13b0781}{}\label{plotdecs_8h_acc5deaef8626166cacb2868aa13b0781}
+\index{plotdecs.\+h@{plotdecs.\+h}!fwrite\+\_\+ieee\+\_\+int@{fwrite\+\_\+ieee\+\_\+int}}
+\index{fwrite\+\_\+ieee\+\_\+int@{fwrite\+\_\+ieee\+\_\+int}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fwrite\+\_\+ieee\+\_\+int}{fwrite_ieee_int}}]{\setlength{\rightskip}{0pt plus 5cm}\#define fwrite\+\_\+ieee\+\_\+int(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{size, }
+\item[{}]{num, }
+\item[{}]{{\bf file}}
+\end{DoxyParamCaption}
+)~(void) fwrite((const void$\ast$)i,size,num,{\bf file})}\hypertarget{plotdecs_8h_a73a55737e34bd9199ae478cb8a746c0a}{}\label{plotdecs_8h_a73a55737e34bd9199ae478cb8a746c0a}
+\index{plotdecs.\+h@{plotdecs.\+h}!label@{label}}
+\index{label@{label}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{label}{label}}]{\setlength{\rightskip}{0pt plus 5cm}\#define label(
+\begin{DoxyParamCaption}
+\item[{}]{strng}
+\end{DoxyParamCaption}
+)~{\bf flabel}({\bf P\+L\+O\+T\+F\+I\+LE},strng)}\hypertarget{plotdecs_8h_a9e59d95c67708a047ef8b79e4732e47e}{}\label{plotdecs_8h_a9e59d95c67708a047ef8b79e4732e47e}
+\index{plotdecs.\+h@{plotdecs.\+h}!line@{line}}
+\index{line@{line}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{line}{line}}]{\setlength{\rightskip}{0pt plus 5cm}\#define line(
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)~{\bf fline}({\bf P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)}\hypertarget{plotdecs_8h_a54ad3dddfaf6c78f224e0d9563d138a3}{}\label{plotdecs_8h_a54ad3dddfaf6c78f224e0d9563d138a3}
+\index{plotdecs.\+h@{plotdecs.\+h}!line\+\_\+3@{line\+\_\+3}}
+\index{line\+\_\+3@{line\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{line\+\_\+3}{line_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define line\+\_\+3(
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{z1, }
+\item[{}]{x2, }
+\item[{}]{y2, }
+\item[{}]{z2}
+\end{DoxyParamCaption}
+)~{\bf fline\+\_\+3}({\bf P\+L\+O\+T\+F\+I\+LE},x1,y1,z1,x2,y2,z2)}\hypertarget{plotdecs_8h_a0f23892228a4541a2ab225bfd2e498bb}{}\label{plotdecs_8h_a0f23892228a4541a2ab225bfd2e498bb}
+\index{plotdecs.\+h@{plotdecs.\+h}!linemod@{linemod}}
+\index{linemod@{linemod}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{linemod}{linemod}}]{\setlength{\rightskip}{0pt plus 5cm}\#define linemod(
+\begin{DoxyParamCaption}
+\item[{}]{strng}
+\end{DoxyParamCaption}
+)~{\bf flinemod}({\bf P\+L\+O\+T\+F\+I\+LE},strng)}\hypertarget{plotdecs_8h_a21b04976c82dd070871dd019f65118be}{}\label{plotdecs_8h_a21b04976c82dd070871dd019f65118be}
+\index{plotdecs.\+h@{plotdecs.\+h}!magnify@{magnify}}
+\index{magnify@{magnify}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{magnify}{magnify}}]{\setlength{\rightskip}{0pt plus 5cm}\#define magnify(
+\begin{DoxyParamCaption}
+\item[{}]{xl, }
+\item[{}]{yl, }
+\item[{}]{xu, }
+\item[{}]{yu}
+\end{DoxyParamCaption}
+)~{\bf fmagnify}({\bf P\+L\+O\+T\+F\+I\+LE},xl,yl,xu,yu)}\hypertarget{plotdecs_8h_ab2dc6a303721515a8d4ac0e8a41de2c4}{}\label{plotdecs_8h_ab2dc6a303721515a8d4ac0e8a41de2c4}
+\index{plotdecs.\+h@{plotdecs.\+h}!move@{move}}
+\index{move@{move}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{move}{move}}]{\setlength{\rightskip}{0pt plus 5cm}\#define move(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~{\bf fmove}({\bf P\+L\+O\+T\+F\+I\+LE},x,y)}\hypertarget{plotdecs_8h_a07d8b30adc93efa838fc88bdd8bbc638}{}\label{plotdecs_8h_a07d8b30adc93efa838fc88bdd8bbc638}
+\index{plotdecs.\+h@{plotdecs.\+h}!move\+\_\+3@{move\+\_\+3}}
+\index{move\+\_\+3@{move\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{move\+\_\+3}{move_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define move\+\_\+3(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~{\bf fmove\+\_\+3}({\bf P\+L\+O\+T\+F\+I\+LE},x,y,z)}\hypertarget{plotdecs_8h_a8b228b5573d5a33f2480a08ce6bddb0f}{}\label{plotdecs_8h_a8b228b5573d5a33f2480a08ce6bddb0f}
+\index{plotdecs.\+h@{plotdecs.\+h}!openpl@{openpl}}
+\index{openpl@{openpl}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{openpl}{openpl}}]{\setlength{\rightskip}{0pt plus 5cm}\#define openpl(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf fopenpl}({\bf P\+L\+O\+T\+F\+I\+LE})}\hypertarget{plotdecs_8h_ae89dd034e199852bbd00a8bbe7f57560}{}\label{plotdecs_8h_ae89dd034e199852bbd00a8bbe7f57560}
+\index{plotdecs.\+h@{plotdecs.\+h}!P\+L\+O\+T\+F\+I\+LE@{P\+L\+O\+T\+F\+I\+LE}}
+\index{P\+L\+O\+T\+F\+I\+LE@{P\+L\+O\+T\+F\+I\+LE}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{P\+L\+O\+T\+F\+I\+LE}{PLOTFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+L\+O\+T\+F\+I\+LE~stdout}\hypertarget{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}{}\label{plotdecs_8h_ac1f61a7c91df43d3155f4b980804732e}
+\index{plotdecs.\+h@{plotdecs.\+h}!point@{point}}
+\index{point@{point}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{point}{point}}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf point}(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~{\bf fpoint}({\bf P\+L\+O\+T\+F\+I\+LE},x,y)}\hypertarget{plotdecs_8h_a4ccddf70df3a5e808503d2bf495d5279}{}\label{plotdecs_8h_a4ccddf70df3a5e808503d2bf495d5279}
+\index{plotdecs.\+h@{plotdecs.\+h}!polygon@{polygon}}
+\index{polygon@{polygon}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{polygon}{polygon}}]{\setlength{\rightskip}{0pt plus 5cm}\#define polygon(
+\begin{DoxyParamCaption}
+\item[{}]{m, }
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~{\bf fpolygon}({\bf P\+L\+O\+T\+F\+I\+LE},m,v)}\hypertarget{plotdecs_8h_ab53ff43c2335d85dbc2d6226c1b56c8e}{}\label{plotdecs_8h_ab53ff43c2335d85dbc2d6226c1b56c8e}
+\index{plotdecs.\+h@{plotdecs.\+h}!polygon\+\_\+3@{polygon\+\_\+3}}
+\index{polygon\+\_\+3@{polygon\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{polygon\+\_\+3}{polygon_3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define polygon\+\_\+3(
+\begin{DoxyParamCaption}
+\item[{}]{col, }
+\item[{}]{m, }
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~{\bf fpolygon\+\_\+3}({\bf P\+L\+O\+T\+F\+I\+LE},col,m,v)}\hypertarget{plotdecs_8h_af59b55fd161a2347648cc6df70d90cd8}{}\label{plotdecs_8h_af59b55fd161a2347648cc6df70d90cd8}
+\index{plotdecs.\+h@{plotdecs.\+h}!rectangle@{rectangle}}
+\index{rectangle@{rectangle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{rectangle}{rectangle}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rectangle(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~{\bf frectangle}({\bf P\+L\+O\+T\+F\+I\+LE},v)}\hypertarget{plotdecs_8h_af253d5fad9ffa98a5a65b873866f0a11}{}\label{plotdecs_8h_af253d5fad9ffa98a5a65b873866f0a11}
+\index{plotdecs.\+h@{plotdecs.\+h}!rename\+\_\+segment@{rename\+\_\+segment}}
+\index{rename\+\_\+segment@{rename\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{rename\+\_\+segment}{rename_segment}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rename\+\_\+segment(
+\begin{DoxyParamCaption}
+\item[{}]{n1, }
+\item[{}]{n2}
+\end{DoxyParamCaption}
+)~{\bf frename\+\_\+segment}({\bf P\+L\+O\+T\+F\+I\+LE},n1,n2)}\hypertarget{plotdecs_8h_a1d53e6cf4261db120de8a8f0cb0e2856}{}\label{plotdecs_8h_a1d53e6cf4261db120de8a8f0cb0e2856}
+\index{plotdecs.\+h@{plotdecs.\+h}!repeat@{repeat}}
+\index{repeat@{repeat}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{repeat}{repeat}}]{\setlength{\rightskip}{0pt plus 5cm}\#define repeat(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf frepeat}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_a60ce8f769c296205356f71138005f748}{}\label{plotdecs_8h_a60ce8f769c296205356f71138005f748}
+\index{plotdecs.\+h@{plotdecs.\+h}!rotate@{rotate}}
+\index{rotate@{rotate}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{rotate}{rotate}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rotate(
+\begin{DoxyParamCaption}
+\item[{}]{xc, }
+\item[{}]{yc, }
+\item[{}]{{\bf angle}}
+\end{DoxyParamCaption}
+)~{\bf frotate}({\bf P\+L\+O\+T\+F\+I\+LE},xc,yc,{\bf angle})}\hypertarget{plotdecs_8h_a3d0db406c2ff957eaf0e456f046372c7}{}\label{plotdecs_8h_a3d0db406c2ff957eaf0e456f046372c7}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+background\+\_\+color@{set\+\_\+background\+\_\+color}}
+\index{set\+\_\+background\+\_\+color@{set\+\_\+background\+\_\+color}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+background\+\_\+color}{set_background_color}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+background\+\_\+color(
+\begin{DoxyParamCaption}
+\item[{}]{col}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+background\+\_\+color}({\bf P\+L\+O\+T\+F\+I\+LE},col)}\hypertarget{plotdecs_8h_aac17c1f6ce0bd0c4b51581a0aa4afc84}{}\label{plotdecs_8h_aac17c1f6ce0bd0c4b51581a0aa4afc84}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+binary\+\_\+mode@{set\+\_\+binary\+\_\+mode}}
+\index{set\+\_\+binary\+\_\+mode@{set\+\_\+binary\+\_\+mode}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+binary\+\_\+mode}{set_binary_mode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+binary\+\_\+mode(
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+binary\+\_\+mode}({\bf P\+L\+O\+T\+F\+I\+LE},state)}\hypertarget{plotdecs_8h_a72320ec1b60ab1244e2b42182317c0dd}{}\label{plotdecs_8h_a72320ec1b60ab1244e2b42182317c0dd}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+color@{set\+\_\+color}}
+\index{set\+\_\+color@{set\+\_\+color}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+color}{set_color}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+color(
+\begin{DoxyParamCaption}
+\item[{}]{col}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+color}({\bf P\+L\+O\+T\+F\+I\+LE},col)}\hypertarget{plotdecs_8h_ace5977a7f007d8acd3e51fbbbb431c3e}{}\label{plotdecs_8h_ace5977a7f007d8acd3e51fbbbb431c3e}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+color\+\_\+bar\+\_\+data@{set\+\_\+color\+\_\+bar\+\_\+data}}
+\index{set\+\_\+color\+\_\+bar\+\_\+data@{set\+\_\+color\+\_\+bar\+\_\+data}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+color\+\_\+bar\+\_\+data}{set_color_bar_data}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+color\+\_\+bar\+\_\+data(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf min}, }
+\item[{}]{{\bf max}, }
+\item[{}]{strng}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+color\+\_\+bar\+\_\+data}({\bf P\+L\+O\+T\+F\+I\+LE},{\bf min},{\bf max},strng)}\hypertarget{plotdecs_8h_a9cccb39b4698ded6e31f51e4e8924687}{}\label{plotdecs_8h_a9cccb39b4698ded6e31f51e4e8924687}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+color\+\_\+from\+\_\+palette@{set\+\_\+color\+\_\+from\+\_\+palette}}
+\index{set\+\_\+color\+\_\+from\+\_\+palette@{set\+\_\+color\+\_\+from\+\_\+palette}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+color\+\_\+from\+\_\+palette}{set_color_from_palette}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+color\+\_\+from\+\_\+palette(
+\begin{DoxyParamCaption}
+\item[{}]{col\+\_\+frac}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+color\+\_\+from\+\_\+palette}({\bf P\+L\+O\+T\+F\+I\+LE},col\+\_\+frac)}\hypertarget{plotdecs_8h_a5fd6fb5fccaaae5632b1197c2b9439e8}{}\label{plotdecs_8h_a5fd6fb5fccaaae5632b1197c2b9439e8}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+color\+\_\+from\+\_\+table@{set\+\_\+color\+\_\+from\+\_\+table}}
+\index{set\+\_\+color\+\_\+from\+\_\+table@{set\+\_\+color\+\_\+from\+\_\+table}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+color\+\_\+from\+\_\+table}{set_color_from_table}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+color\+\_\+from\+\_\+table(
+\begin{DoxyParamCaption}
+\item[{}]{col}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+color\+\_\+from\+\_\+table}({\bf P\+L\+O\+T\+F\+I\+LE},col)}\hypertarget{plotdecs_8h_a940e9ebcd4957f46974c585c8e7a66a1}{}\label{plotdecs_8h_a940e9ebcd4957f46974c585c8e7a66a1}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+color\+\_\+rgb@{set\+\_\+color\+\_\+rgb}}
+\index{set\+\_\+color\+\_\+rgb@{set\+\_\+color\+\_\+rgb}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+color\+\_\+rgb}{set_color_rgb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+color\+\_\+rgb(
+\begin{DoxyParamCaption}
+\item[{}]{red, }
+\item[{}]{green, }
+\item[{}]{blue}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+color\+\_\+rgb}({\bf P\+L\+O\+T\+F\+I\+LE},red,green,blue)}\hypertarget{plotdecs_8h_a74b149070d0e3884a6c50046b6f17815}{}\label{plotdecs_8h_a74b149070d0e3884a6c50046b6f17815}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+convex\+\_\+polyhedra@{set\+\_\+convex\+\_\+polyhedra}}
+\index{set\+\_\+convex\+\_\+polyhedra@{set\+\_\+convex\+\_\+polyhedra}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+convex\+\_\+polyhedra}{set_convex_polyhedra}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+convex\+\_\+polyhedra(
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+convex\+\_\+polyhedra}({\bf P\+L\+O\+T\+F\+I\+LE},flag)}\hypertarget{plotdecs_8h_a9ec308a608a6bc32703c9cef9857c965}{}\label{plotdecs_8h_a9ec308a608a6bc32703c9cef9857c965}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+hidden\+\_\+line\+\_\+removal@{set\+\_\+hidden\+\_\+line\+\_\+removal}}
+\index{set\+\_\+hidden\+\_\+line\+\_\+removal@{set\+\_\+hidden\+\_\+line\+\_\+removal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+hidden\+\_\+line\+\_\+removal}{set_hidden_line_removal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+hidden\+\_\+line\+\_\+removal(
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+hidden\+\_\+line\+\_\+removal}({\bf P\+L\+O\+T\+F\+I\+LE},flag)}\hypertarget{plotdecs_8h_a70686f443f43557a58ae9b3b6245f81b}{}\label{plotdecs_8h_a70686f443f43557a58ae9b3b6245f81b}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+hidden\+\_\+surface\+\_\+removal@{set\+\_\+hidden\+\_\+surface\+\_\+removal}}
+\index{set\+\_\+hidden\+\_\+surface\+\_\+removal@{set\+\_\+hidden\+\_\+surface\+\_\+removal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+hidden\+\_\+surface\+\_\+removal}{set_hidden_surface_removal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+hidden\+\_\+surface\+\_\+removal(
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+hidden\+\_\+surface\+\_\+removal}({\bf P\+L\+O\+T\+F\+I\+LE},flag)}\hypertarget{plotdecs_8h_ae3d50b4997fd3c538b21363c1a28bbd2}{}\label{plotdecs_8h_ae3d50b4997fd3c538b21363c1a28bbd2}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+linestyle@{set\+\_\+linestyle}}
+\index{set\+\_\+linestyle@{set\+\_\+linestyle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+linestyle}{set_linestyle}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+linestyle(
+\begin{DoxyParamCaption}
+\item[{}]{style}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+linestyle}({\bf P\+L\+O\+T\+F\+I\+LE},style)}\hypertarget{plotdecs_8h_ac29a4e997d54e04b0b80099dec0f1a30}{}\label{plotdecs_8h_ac29a4e997d54e04b0b80099dec0f1a30}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+projection@{set\+\_\+projection}}
+\index{set\+\_\+projection@{set\+\_\+projection}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+projection}{set_projection}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+projection(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+projection}({\bf P\+L\+O\+T\+F\+I\+LE},type,x,y,z)}\hypertarget{plotdecs_8h_a06099ca4f2a2a9904dd5de861a608e69}{}\label{plotdecs_8h_a06099ca4f2a2a9904dd5de861a608e69}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+text\+\_\+precision@{set\+\_\+text\+\_\+precision}}
+\index{set\+\_\+text\+\_\+precision@{set\+\_\+text\+\_\+precision}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+text\+\_\+precision}{set_text_precision}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+text\+\_\+precision(
+\begin{DoxyParamCaption}
+\item[{}]{precision, }
+\item[{}]{font, }
+\item[{}]{slant}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+text\+\_\+precision}({\bf P\+L\+O\+T\+F\+I\+LE},precision,font,slant)}\hypertarget{plotdecs_8h_a8544d9517f8822487c1eed4b4a672a6e}{}\label{plotdecs_8h_a8544d9517f8822487c1eed4b4a672a6e}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+text\+\_\+size@{set\+\_\+text\+\_\+size}}
+\index{set\+\_\+text\+\_\+size@{set\+\_\+text\+\_\+size}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+text\+\_\+size}{set_text_size}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+text\+\_\+size(
+\begin{DoxyParamCaption}
+\item[{}]{height, }
+\item[{}]{width, }
+\item[{}]{spce, }
+\item[{}]{{\bf angle}}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+text\+\_\+size}({\bf P\+L\+O\+T\+F\+I\+LE},height,width,spce,{\bf angle})}\hypertarget{plotdecs_8h_a2d45ceb45b3303d6496f041976a0caa6}{}\label{plotdecs_8h_a2d45ceb45b3303d6496f041976a0caa6}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+up\+\_\+color\+\_\+palette@{set\+\_\+up\+\_\+color\+\_\+palette}}
+\index{set\+\_\+up\+\_\+color\+\_\+palette@{set\+\_\+up\+\_\+color\+\_\+palette}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+up\+\_\+color\+\_\+palette}{set_up_color_palette}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+up\+\_\+color\+\_\+palette(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+up\+\_\+color\+\_\+palette}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_a1dac7852c7a737bc893fcd08c42695e1}{}\label{plotdecs_8h_a1dac7852c7a737bc893fcd08c42695e1}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+up\+\_\+color\+\_\+table@{set\+\_\+up\+\_\+color\+\_\+table}}
+\index{set\+\_\+up\+\_\+color\+\_\+table@{set\+\_\+up\+\_\+color\+\_\+table}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+up\+\_\+color\+\_\+table}{set_up_color_table}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+up\+\_\+color\+\_\+table(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+up\+\_\+color\+\_\+table}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_a4ab0df6df4b542ca04dcb93e33b9d4d8}{}\label{plotdecs_8h_a4ab0df6df4b542ca04dcb93e33b9d4d8}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+up\+\_\+colors@{set\+\_\+up\+\_\+colors}}
+\index{set\+\_\+up\+\_\+colors@{set\+\_\+up\+\_\+colors}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+up\+\_\+colors}{set_up_colors}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+up\+\_\+colors(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+up\+\_\+colors}({\bf P\+L\+O\+T\+F\+I\+LE},num)}\hypertarget{plotdecs_8h_a507cd8af2009d849637026e3aa2fb0ff}{}\label{plotdecs_8h_a507cd8af2009d849637026e3aa2fb0ff}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+view\+\_\+plane\+\_\+normal@{set\+\_\+view\+\_\+plane\+\_\+normal}}
+\index{set\+\_\+view\+\_\+plane\+\_\+normal@{set\+\_\+view\+\_\+plane\+\_\+normal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+view\+\_\+plane\+\_\+normal}{set_view_plane_normal}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+view\+\_\+plane\+\_\+normal(
+\begin{DoxyParamCaption}
+\item[{}]{nx, }
+\item[{}]{ny, }
+\item[{}]{nz}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+view\+\_\+plane\+\_\+normal}({\bf P\+L\+O\+T\+F\+I\+LE},nx,ny,nz)}\hypertarget{plotdecs_8h_a2d78eef139907163560b87c6e8997f8d}{}\label{plotdecs_8h_a2d78eef139907163560b87c6e8997f8d}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+view\+\_\+reference\+\_\+point@{set\+\_\+view\+\_\+reference\+\_\+point}}
+\index{set\+\_\+view\+\_\+reference\+\_\+point@{set\+\_\+view\+\_\+reference\+\_\+point}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+view\+\_\+reference\+\_\+point}{set_view_reference_point}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+view\+\_\+reference\+\_\+point(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+view\+\_\+reference\+\_\+point}({\bf P\+L\+O\+T\+F\+I\+LE},x,y,z)}\hypertarget{plotdecs_8h_a800da6aac37029ef25bab819c970f407}{}\label{plotdecs_8h_a800da6aac37029ef25bab819c970f407}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+view\+\_\+up\+\_\+vector@{set\+\_\+view\+\_\+up\+\_\+vector}}
+\index{set\+\_\+view\+\_\+up\+\_\+vector@{set\+\_\+view\+\_\+up\+\_\+vector}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+view\+\_\+up\+\_\+vector}{set_view_up_vector}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+view\+\_\+up\+\_\+vector(
+\begin{DoxyParamCaption}
+\item[{}]{nx, }
+\item[{}]{ny, }
+\item[{}]{nz}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+view\+\_\+up\+\_\+vector}({\bf P\+L\+O\+T\+F\+I\+LE},nx,ny,nz)}\hypertarget{plotdecs_8h_a5201531204e5b542390fea217be315b4}{}\label{plotdecs_8h_a5201531204e5b542390fea217be315b4}
+\index{plotdecs.\+h@{plotdecs.\+h}!set\+\_\+visibility@{set\+\_\+visibility}}
+\index{set\+\_\+visibility@{set\+\_\+visibility}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+visibility}{set_visibility}}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\+\_\+visibility(
+\begin{DoxyParamCaption}
+\item[{}]{num, }
+\item[{}]{state}
+\end{DoxyParamCaption}
+)~{\bf fset\+\_\+visibility}({\bf P\+L\+O\+T\+F\+I\+LE},num,state)}\hypertarget{plotdecs_8h_ac1a39568f2f6a510bd7383beb3664b68}{}\label{plotdecs_8h_ac1a39568f2f6a510bd7383beb3664b68}
+\index{plotdecs.\+h@{plotdecs.\+h}!shade@{shade}}
+\index{shade@{shade}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{shade}{shade}}]{\setlength{\rightskip}{0pt plus 5cm}\#define shade(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf fshade}({\bf P\+L\+O\+T\+F\+I\+LE})}\hypertarget{plotdecs_8h_aaf89ce4269b6751586f853ebe871960a}{}\label{plotdecs_8h_aaf89ce4269b6751586f853ebe871960a}
+\index{plotdecs.\+h@{plotdecs.\+h}!space@{space}}
+\index{space@{space}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{space}{space}}]{\setlength{\rightskip}{0pt plus 5cm}\#define space(
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)~{\bf fspace}({\bf P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)}\hypertarget{plotdecs_8h_ab4742bf6ccc339b8c96685b560377eb3}{}\label{plotdecs_8h_ab4742bf6ccc339b8c96685b560377eb3}
+\index{plotdecs.\+h@{plotdecs.\+h}!text\+\_\+height\+\_\+angle@{text\+\_\+height\+\_\+angle}}
+\index{text\+\_\+height\+\_\+angle@{text\+\_\+height\+\_\+angle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{text\+\_\+height\+\_\+angle}{text_height_angle}}]{\setlength{\rightskip}{0pt plus 5cm}\#define text\+\_\+height\+\_\+angle(
+\begin{DoxyParamCaption}
+\item[{}]{h, }
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf ftext\+\_\+height\+\_\+angle}({\bf P\+L\+O\+T\+F\+I\+LE},h,a)}\hypertarget{plotdecs_8h_a5e45b0b692edce6335ae288bccc177cd}{}\label{plotdecs_8h_a5e45b0b692edce6335ae288bccc177cd}
+\index{plotdecs.\+h@{plotdecs.\+h}!viewport@{viewport}}
+\index{viewport@{viewport}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{viewport}{viewport}}]{\setlength{\rightskip}{0pt plus 5cm}\#define viewport(
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)~{\bf fviewport}({\bf P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)}\hypertarget{plotdecs_8h_aa188ee44ab9f3cc6d5998e6bc397608a}{}\label{plotdecs_8h_aa188ee44ab9f3cc6d5998e6bc397608a}
+\index{plotdecs.\+h@{plotdecs.\+h}!window@{window}}
+\index{window@{window}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{window}{window}}]{\setlength{\rightskip}{0pt plus 5cm}\#define window(
+\begin{DoxyParamCaption}
+\item[{}]{x1, }
+\item[{}]{y1, }
+\item[{}]{x2, }
+\item[{}]{y2}
+\end{DoxyParamCaption}
+)~{\bf fwindow}({\bf P\+L\+O\+T\+F\+I\+LE},x1,y1,x2,y2)}\hypertarget{plotdecs_8h_a89c0f9334b89b6dd4b0b4f9d2f6142f1}{}\label{plotdecs_8h_a89c0f9334b89b6dd4b0b4f9d2f6142f1}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26}{}\label{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON@{N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON@{N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON}}\item[{\em 
+N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON\hypertarget{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26a6a82685f0663cc70c3301447056f3841}{}\label{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26a6a82685f0663cc70c3301447056f3841}
+}]\index{B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON@{B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON@{B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON}}\item[{\em 
+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON\hypertarget{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26ad0c10b80d3340f95cea91c41bbfebe4b}{}\label{plotdecs_8h_af8654c714018c6241d9ebd01f3fb5a26ad0c10b80d3340f95cea91c41bbfebe4b}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+L\+A\+CK@{B\+L\+A\+CK}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!B\+L\+A\+CK@{B\+L\+A\+CK}}\item[{\em 
+B\+L\+A\+CK\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af77fb67151d0c18d397069ad8c271ba3}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af77fb67151d0c18d397069ad8c271ba3}
+}]\index{R\+ED@{R\+ED}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!R\+ED@{R\+ED}}\item[{\em 
+R\+ED\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af80f9a890089d211842d59625e561f88}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3af80f9a890089d211842d59625e561f88}
+}]\index{G\+R\+E\+EN@{G\+R\+E\+EN}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!G\+R\+E\+EN@{G\+R\+E\+EN}}\item[{\em 
+G\+R\+E\+EN\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aa60bd322f93178d68184e30e162571ca}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aa60bd322f93178d68184e30e162571ca}
+}]\index{B\+L\+UE@{B\+L\+UE}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!B\+L\+UE@{B\+L\+UE}}\item[{\em 
+B\+L\+UE\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a35d6719cb4d7577c031b3d79057a1b79}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a35d6719cb4d7577c031b3d79057a1b79}
+}]\index{Y\+E\+L\+L\+OW@{Y\+E\+L\+L\+OW}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!Y\+E\+L\+L\+OW@{Y\+E\+L\+L\+OW}}\item[{\em 
+Y\+E\+L\+L\+OW\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3ae735a848bf82163a19236ead1c3ef2d2}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3ae735a848bf82163a19236ead1c3ef2d2}
+}]\index{M\+A\+G\+E\+N\+TA@{M\+A\+G\+E\+N\+TA}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!M\+A\+G\+E\+N\+TA@{M\+A\+G\+E\+N\+TA}}\item[{\em 
+M\+A\+G\+E\+N\+TA\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a56926c820ad72d0977e7ee44d9916e62}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a56926c820ad72d0977e7ee44d9916e62}
+}]\index{C\+Y\+AN@{C\+Y\+AN}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!C\+Y\+AN@{C\+Y\+AN}}\item[{\em 
+C\+Y\+AN\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aafe71cad474c15ce63b300c470eef8cc}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3aafe71cad474c15ce63b300c470eef8cc}
+}]\index{W\+H\+I\+TE@{W\+H\+I\+TE}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!W\+H\+I\+TE@{W\+H\+I\+TE}}\item[{\em 
+W\+H\+I\+TE\hypertarget{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a283fc479650da98250635b9c3c0e7e50}{}\label{plotdecs_8h_a2f80701c36e79c0640d91c788feee0b3a283fc479650da98250635b9c3c0e7e50}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493}{}\label{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON@{S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON@{S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}}\item[{\em 
+S\+T\+R\+I\+N\+G\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON\hypertarget{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a4fb73e95a306bf1cf7eb9cbe7b8345c6}{}\label{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a4fb73e95a306bf1cf7eb9cbe7b8345c6}
+}]\index{S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON@{S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}!plotdecs.\+h@{plotdecs.\+h}}\index{plotdecs.\+h@{plotdecs.\+h}!S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON@{S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}}\item[{\em 
+S\+T\+R\+O\+K\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON\hypertarget{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a21560a6b3e37328acb7936314ae91c7f}{}\label{plotdecs_8h_a531c35e38ede3ea4e5ba5afb24b29493a21560a6b3e37328acb7936314ae91c7f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{plotdecs.\+h@{plotdecs.\+h}!farc@{farc}}
+\index{farc@{farc}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{farc(\+F\+I\+L\+E $\ast$, double, double, double, double, double, double)}{farc(FILE *, double, double, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void farc (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_aecb978e5699a6d8792788ffb7467a230}{}\label{plotdecs_8h_aecb978e5699a6d8792788ffb7467a230}
+\index{plotdecs.\+h@{plotdecs.\+h}!farrow@{farrow}}
+\index{farrow@{farrow}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{farrow(\+F\+I\+L\+E $\ast$, double, double, double, double)}{farrow(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void farrow (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ae39af069a418ca0ee0abda3efb0b9445}{}\label{plotdecs_8h_ae39af069a418ca0ee0abda3efb0b9445}
+\index{plotdecs.\+h@{plotdecs.\+h}!farrow\+\_\+3@{farrow\+\_\+3}}
+\index{farrow\+\_\+3@{farrow\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{farrow\+\_\+3(\+F\+I\+L\+E $\ast$, double, double, double, double, double, double)}{farrow_3(FILE *, double, double, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void farrow\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a34a124ce9834a8abaaf4799f57350561}{}\label{plotdecs_8h_a34a124ce9834a8abaaf4799f57350561}
+\index{plotdecs.\+h@{plotdecs.\+h}!fclose\+\_\+segment@{fclose\+\_\+segment}}
+\index{fclose\+\_\+segment@{fclose\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fclose\+\_\+segment(\+F\+I\+L\+E $\ast$)}{fclose_segment(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fclose\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a180382d5de333469b8ed7a85d7eb5710}{}\label{plotdecs_8h_a180382d5de333469b8ed7a85d7eb5710}
+\index{plotdecs.\+h@{plotdecs.\+h}!fclosepl@{fclosepl}}
+\index{fclosepl@{fclosepl}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fclosepl(\+F\+I\+L\+E $\ast$)}{fclosepl(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fclosepl (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a4cbcbc99b464a6b33a32a98b8a15c8d8}{}\label{plotdecs_8h_a4cbcbc99b464a6b33a32a98b8a15c8d8}
+\index{plotdecs.\+h@{plotdecs.\+h}!fclosevt@{fclosevt}}
+\index{fclosevt@{fclosevt}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fclosevt(\+F\+I\+L\+E $\ast$)}{fclosevt(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fclosevt (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_adc0dbd7bf784448fd27c638f32619fd0}{}\label{plotdecs_8h_adc0dbd7bf784448fd27c638f32619fd0}
+\index{plotdecs.\+h@{plotdecs.\+h}!fcont@{fcont}}
+\index{fcont@{fcont}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fcont(\+F\+I\+L\+E $\ast$, double, double)}{fcont(FILE *, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fcont (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a1a0b3951fedeab752c1f15a93cbb96ae}{}\label{plotdecs_8h_a1a0b3951fedeab752c1f15a93cbb96ae}
+\index{plotdecs.\+h@{plotdecs.\+h}!fcont\+\_\+3@{fcont\+\_\+3}}
+\index{fcont\+\_\+3@{fcont\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fcont\+\_\+3(\+F\+I\+L\+E $\ast$, double, double, double)}{fcont_3(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fcont\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a57385cbe9190f28e73b14784f00d2295}{}\label{plotdecs_8h_a57385cbe9190f28e73b14784f00d2295}
+\index{plotdecs.\+h@{plotdecs.\+h}!fcreate\+\_\+segment@{fcreate\+\_\+segment}}
+\index{fcreate\+\_\+segment@{fcreate\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fcreate\+\_\+segment(\+F\+I\+L\+E $\ast$, int)}{fcreate_segment(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fcreate\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a55370da8769d097d38c7b04991d8013d}{}\label{plotdecs_8h_a55370da8769d097d38c7b04991d8013d}
+\index{plotdecs.\+h@{plotdecs.\+h}!fdelete\+\_\+segment@{fdelete\+\_\+segment}}
+\index{fdelete\+\_\+segment@{fdelete\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fdelete\+\_\+segment(\+F\+I\+L\+E $\ast$, int)}{fdelete_segment(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fdelete\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_abf261c485013731ffaf87254892a830b}{}\label{plotdecs_8h_abf261c485013731ffaf87254892a830b}
+\index{plotdecs.\+h@{plotdecs.\+h}!ferase@{ferase}}
+\index{ferase@{ferase}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{ferase(\+F\+I\+L\+E $\ast$)}{ferase(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void ferase (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_af9b5953567dd5746922c2d5150c6fe2e}{}\label{plotdecs_8h_af9b5953567dd5746922c2d5150c6fe2e}
+\index{plotdecs.\+h@{plotdecs.\+h}!flabel@{flabel}}
+\index{flabel@{flabel}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{flabel(\+F\+I\+L\+E $\ast$, const char $\ast$)}{flabel(FILE *, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void flabel (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a4b8f0113409bf77d29d3eba0b7e1c3a7}{}\label{plotdecs_8h_a4b8f0113409bf77d29d3eba0b7e1c3a7}
+\index{plotdecs.\+h@{plotdecs.\+h}!fline@{fline}}
+\index{fline@{fline}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fline(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fline(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fline (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a07efd138f6c893cc47442f3f9f44b219}{}\label{plotdecs_8h_a07efd138f6c893cc47442f3f9f44b219}
+\index{plotdecs.\+h@{plotdecs.\+h}!fline\+\_\+3@{fline\+\_\+3}}
+\index{fline\+\_\+3@{fline\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fline\+\_\+3(\+F\+I\+L\+E $\ast$, double, double, double, double, double, double)}{fline_3(FILE *, double, double, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fline\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a3d45144467ba16f1aefc781224a32796}{}\label{plotdecs_8h_a3d45144467ba16f1aefc781224a32796}
+\index{plotdecs.\+h@{plotdecs.\+h}!flinemod@{flinemod}}
+\index{flinemod@{flinemod}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{flinemod(\+F\+I\+L\+E $\ast$, const char $\ast$)}{flinemod(FILE *, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void flinemod (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a6d865a274995ee68c21a42611572dc8d}{}\label{plotdecs_8h_a6d865a274995ee68c21a42611572dc8d}
+\index{plotdecs.\+h@{plotdecs.\+h}!fmagnify@{fmagnify}}
+\index{fmagnify@{fmagnify}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fmagnify(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fmagnify(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fmagnify (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a14b329e6f8431d9b95e06e05887d22bb}{}\label{plotdecs_8h_a14b329e6f8431d9b95e06e05887d22bb}
+\index{plotdecs.\+h@{plotdecs.\+h}!fmove@{fmove}}
+\index{fmove@{fmove}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fmove(\+F\+I\+L\+E $\ast$, double, double)}{fmove(FILE *, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fmove (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a5aa5c61fc78e06e695e2323bf7b6d2d9}{}\label{plotdecs_8h_a5aa5c61fc78e06e695e2323bf7b6d2d9}
+\index{plotdecs.\+h@{plotdecs.\+h}!fmove\+\_\+3@{fmove\+\_\+3}}
+\index{fmove\+\_\+3@{fmove\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fmove\+\_\+3(\+F\+I\+L\+E $\ast$, double, double, double)}{fmove_3(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fmove\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ad0e820b88420f2b9fc7682245dbd0e72}{}\label{plotdecs_8h_ad0e820b88420f2b9fc7682245dbd0e72}
+\index{plotdecs.\+h@{plotdecs.\+h}!fopenpl@{fopenpl}}
+\index{fopenpl@{fopenpl}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fopenpl(\+F\+I\+L\+E $\ast$)}{fopenpl(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fopenpl (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ac23dcae96f6287ba609e61a566367d1c}{}\label{plotdecs_8h_ac23dcae96f6287ba609e61a566367d1c}
+\index{plotdecs.\+h@{plotdecs.\+h}!fpoint@{fpoint}}
+\index{fpoint@{fpoint}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fpoint(\+F\+I\+L\+E $\ast$, double, double)}{fpoint(FILE *, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fpoint (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a564f084e6a1f117929e0b0e4dea117ee}{}\label{plotdecs_8h_a564f084e6a1f117929e0b0e4dea117ee}
+\index{plotdecs.\+h@{plotdecs.\+h}!fpolygon@{fpolygon}}
+\index{fpolygon@{fpolygon}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fpolygon(\+F\+I\+L\+E $\ast$, int, double $\ast$)}{fpolygon(FILE *, int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fpolygon (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a46c076b64330266d39079be31ea888cb}{}\label{plotdecs_8h_a46c076b64330266d39079be31ea888cb}
+\index{plotdecs.\+h@{plotdecs.\+h}!fpolygon\+\_\+3@{fpolygon\+\_\+3}}
+\index{fpolygon\+\_\+3@{fpolygon\+\_\+3}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fpolygon\+\_\+3(\+F\+I\+L\+E $\ast$, double, int, double $\ast$)}{fpolygon_3(FILE *, double, int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fpolygon\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_adfb51a7a8766f7b848192b531147b25d}{}\label{plotdecs_8h_adfb51a7a8766f7b848192b531147b25d}
+\index{plotdecs.\+h@{plotdecs.\+h}!frectangle@{frectangle}}
+\index{frectangle@{frectangle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{frectangle(\+F\+I\+L\+E $\ast$, double $\ast$)}{frectangle(FILE *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void frectangle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a4c84a6d79f8f1fd9dcaa64cdf569fd01}{}\label{plotdecs_8h_a4c84a6d79f8f1fd9dcaa64cdf569fd01}
+\index{plotdecs.\+h@{plotdecs.\+h}!frename\+\_\+segment@{frename\+\_\+segment}}
+\index{frename\+\_\+segment@{frename\+\_\+segment}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{frename\+\_\+segment(\+F\+I\+L\+E $\ast$, int, int)}{frename_segment(FILE *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void frename\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a1ef01a229365884d921f7145a80cc242}{}\label{plotdecs_8h_a1ef01a229365884d921f7145a80cc242}
+\index{plotdecs.\+h@{plotdecs.\+h}!frepeat@{frepeat}}
+\index{frepeat@{frepeat}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{frepeat(\+F\+I\+L\+E $\ast$, int)}{frepeat(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void frepeat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a214eab4ca9085abfd79f7e0e18a0d384}{}\label{plotdecs_8h_a214eab4ca9085abfd79f7e0e18a0d384}
+\index{plotdecs.\+h@{plotdecs.\+h}!frotate@{frotate}}
+\index{frotate@{frotate}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{frotate(\+F\+I\+L\+E $\ast$, double, double, double)}{frotate(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void frotate (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ad4a2c9bd5affd7c9f1d88dbdb511b178}{}\label{plotdecs_8h_ad4a2c9bd5affd7c9f1d88dbdb511b178}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+background\+\_\+color@{fset\+\_\+background\+\_\+color}}
+\index{fset\+\_\+background\+\_\+color@{fset\+\_\+background\+\_\+color}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+background\+\_\+color(\+F\+I\+L\+E $\ast$, int)}{fset_background_color(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+background\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_afedc6794bb3bb2dbf85d613bc460b6eb}{}\label{plotdecs_8h_afedc6794bb3bb2dbf85d613bc460b6eb}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+binary\+\_\+mode@{fset\+\_\+binary\+\_\+mode}}
+\index{fset\+\_\+binary\+\_\+mode@{fset\+\_\+binary\+\_\+mode}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+binary\+\_\+mode(\+F\+I\+L\+E $\ast$, int)}{fset_binary_mode(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+binary\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ac7ea64dd3c06ad31e398ef5f18896bf7}{}\label{plotdecs_8h_ac7ea64dd3c06ad31e398ef5f18896bf7}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+color@{fset\+\_\+color}}
+\index{fset\+\_\+color@{fset\+\_\+color}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color(\+F\+I\+L\+E $\ast$, int)}{fset_color(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_adca14a02258f1146c69b95aa9dfcffb5}{}\label{plotdecs_8h_adca14a02258f1146c69b95aa9dfcffb5}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+color\+\_\+bar\+\_\+data@{fset\+\_\+color\+\_\+bar\+\_\+data}}
+\index{fset\+\_\+color\+\_\+bar\+\_\+data@{fset\+\_\+color\+\_\+bar\+\_\+data}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+bar\+\_\+data(\+F\+I\+L\+E $\ast$, double, double, const char $\ast$)}{fset_color_bar_data(FILE *, double, double, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+color\+\_\+bar\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a852cbebe0caa5c9c4e97df798ab4392a}{}\label{plotdecs_8h_a852cbebe0caa5c9c4e97df798ab4392a}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+color\+\_\+from\+\_\+palette@{fset\+\_\+color\+\_\+from\+\_\+palette}}
+\index{fset\+\_\+color\+\_\+from\+\_\+palette@{fset\+\_\+color\+\_\+from\+\_\+palette}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+from\+\_\+palette(\+F\+I\+L\+E $\ast$, double)}{fset_color_from_palette(FILE *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+color\+\_\+from\+\_\+palette (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_aa289bb1089141c0a1624bc74c1d774ea}{}\label{plotdecs_8h_aa289bb1089141c0a1624bc74c1d774ea}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+color\+\_\+from\+\_\+table@{fset\+\_\+color\+\_\+from\+\_\+table}}
+\index{fset\+\_\+color\+\_\+from\+\_\+table@{fset\+\_\+color\+\_\+from\+\_\+table}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+from\+\_\+table(\+F\+I\+L\+E $\ast$, int)}{fset_color_from_table(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+color\+\_\+from\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a47b9fcd5824287b1614c3fe28bb0fb92}{}\label{plotdecs_8h_a47b9fcd5824287b1614c3fe28bb0fb92}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+color\+\_\+rgb@{fset\+\_\+color\+\_\+rgb}}
+\index{fset\+\_\+color\+\_\+rgb@{fset\+\_\+color\+\_\+rgb}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+rgb(\+F\+I\+L\+E $\ast$, double, double, double)}{fset_color_rgb(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+color\+\_\+rgb (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a703ea25f4b872d7c5ea70178cb4b58c1}{}\label{plotdecs_8h_a703ea25f4b872d7c5ea70178cb4b58c1}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+convex\+\_\+polyhedra@{fset\+\_\+convex\+\_\+polyhedra}}
+\index{fset\+\_\+convex\+\_\+polyhedra@{fset\+\_\+convex\+\_\+polyhedra}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+convex\+\_\+polyhedra(\+F\+I\+L\+E $\ast$, int)}{fset_convex_polyhedra(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+convex\+\_\+polyhedra (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ad162f9ed240fe7796682caea07c908c7}{}\label{plotdecs_8h_ad162f9ed240fe7796682caea07c908c7}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+hidden\+\_\+line\+\_\+removal@{fset\+\_\+hidden\+\_\+line\+\_\+removal}}
+\index{fset\+\_\+hidden\+\_\+line\+\_\+removal@{fset\+\_\+hidden\+\_\+line\+\_\+removal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+hidden\+\_\+line\+\_\+removal(\+F\+I\+L\+E $\ast$, int)}{fset_hidden_line_removal(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+hidden\+\_\+line\+\_\+removal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_aa0f439fa380b89dd438bc8c7115f5aa7}{}\label{plotdecs_8h_aa0f439fa380b89dd438bc8c7115f5aa7}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+hidden\+\_\+surface\+\_\+removal@{fset\+\_\+hidden\+\_\+surface\+\_\+removal}}
+\index{fset\+\_\+hidden\+\_\+surface\+\_\+removal@{fset\+\_\+hidden\+\_\+surface\+\_\+removal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+hidden\+\_\+surface\+\_\+removal(\+F\+I\+L\+E $\ast$, int)}{fset_hidden_surface_removal(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+hidden\+\_\+surface\+\_\+removal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ae44079a8108edc0106282994d31a1610}{}\label{plotdecs_8h_ae44079a8108edc0106282994d31a1610}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+linestyle@{fset\+\_\+linestyle}}
+\index{fset\+\_\+linestyle@{fset\+\_\+linestyle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+linestyle(\+F\+I\+L\+E $\ast$, const char $\ast$)}{fset_linestyle(FILE *, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+linestyle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a0502a74fc9caa58e1b8aba8b70b0855d}{}\label{plotdecs_8h_a0502a74fc9caa58e1b8aba8b70b0855d}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+projection@{fset\+\_\+projection}}
+\index{fset\+\_\+projection@{fset\+\_\+projection}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+projection(\+F\+I\+L\+E $\ast$, const char $\ast$, double, double, double)}{fset_projection(FILE *, const char *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+projection (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a6ff2348424b46647a3d4564db51f8b10}{}\label{plotdecs_8h_a6ff2348424b46647a3d4564db51f8b10}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+text\+\_\+precision@{fset\+\_\+text\+\_\+precision}}
+\index{fset\+\_\+text\+\_\+precision@{fset\+\_\+text\+\_\+precision}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+text\+\_\+precision(\+F\+I\+L\+E $\ast$, int, int, double)}{fset_text_precision(FILE *, int, int, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+text\+\_\+precision (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a78c94b46860f99e167dcd75574fb328e}{}\label{plotdecs_8h_a78c94b46860f99e167dcd75574fb328e}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+text\+\_\+size@{fset\+\_\+text\+\_\+size}}
+\index{fset\+\_\+text\+\_\+size@{fset\+\_\+text\+\_\+size}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+text\+\_\+size(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fset_text_size(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+text\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_af3c7ac528d88bd76763814aab838febb}{}\label{plotdecs_8h_af3c7ac528d88bd76763814aab838febb}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+up\+\_\+color\+\_\+palette@{fset\+\_\+up\+\_\+color\+\_\+palette}}
+\index{fset\+\_\+up\+\_\+color\+\_\+palette@{fset\+\_\+up\+\_\+color\+\_\+palette}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+color\+\_\+palette(\+F\+I\+L\+E $\ast$, int)}{fset_up_color_palette(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+up\+\_\+color\+\_\+palette (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a1de5375f5ff3260b6d3b12472ef84d98}{}\label{plotdecs_8h_a1de5375f5ff3260b6d3b12472ef84d98}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+up\+\_\+color\+\_\+table@{fset\+\_\+up\+\_\+color\+\_\+table}}
+\index{fset\+\_\+up\+\_\+color\+\_\+table@{fset\+\_\+up\+\_\+color\+\_\+table}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+color\+\_\+table(\+F\+I\+L\+E $\ast$, int)}{fset_up_color_table(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+up\+\_\+color\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a9e7e97cd7fc6dc719887c5495d84fa17}{}\label{plotdecs_8h_a9e7e97cd7fc6dc719887c5495d84fa17}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+up\+\_\+colors@{fset\+\_\+up\+\_\+colors}}
+\index{fset\+\_\+up\+\_\+colors@{fset\+\_\+up\+\_\+colors}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+colors(\+F\+I\+L\+E $\ast$, int)}{fset_up_colors(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+up\+\_\+colors (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a8134b06d20c3edfb3cc3fbfc85a80f8c}{}\label{plotdecs_8h_a8134b06d20c3edfb3cc3fbfc85a80f8c}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+view\+\_\+plane\+\_\+normal@{fset\+\_\+view\+\_\+plane\+\_\+normal}}
+\index{fset\+\_\+view\+\_\+plane\+\_\+normal@{fset\+\_\+view\+\_\+plane\+\_\+normal}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+plane\+\_\+normal(\+F\+I\+L\+E $\ast$, double, double, double)}{fset_view_plane_normal(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+view\+\_\+plane\+\_\+normal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a8c368f827b9ab001a023a76c7db675fb}{}\label{plotdecs_8h_a8c368f827b9ab001a023a76c7db675fb}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+view\+\_\+reference\+\_\+point@{fset\+\_\+view\+\_\+reference\+\_\+point}}
+\index{fset\+\_\+view\+\_\+reference\+\_\+point@{fset\+\_\+view\+\_\+reference\+\_\+point}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+reference\+\_\+point(\+F\+I\+L\+E $\ast$, double, double, double)}{fset_view_reference_point(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+view\+\_\+reference\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a07b4f2b70bc4d561ba4706dcce363843}{}\label{plotdecs_8h_a07b4f2b70bc4d561ba4706dcce363843}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+view\+\_\+up\+\_\+vector@{fset\+\_\+view\+\_\+up\+\_\+vector}}
+\index{fset\+\_\+view\+\_\+up\+\_\+vector@{fset\+\_\+view\+\_\+up\+\_\+vector}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+up\+\_\+vector(\+F\+I\+L\+E $\ast$, double, double, double)}{fset_view_up_vector(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+view\+\_\+up\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ab8cf9b2654a8c51f1d2f42171d78822b}{}\label{plotdecs_8h_ab8cf9b2654a8c51f1d2f42171d78822b}
+\index{plotdecs.\+h@{plotdecs.\+h}!fset\+\_\+visibility@{fset\+\_\+visibility}}
+\index{fset\+\_\+visibility@{fset\+\_\+visibility}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fset\+\_\+visibility(\+F\+I\+L\+E $\ast$, int, int)}{fset_visibility(FILE *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fset\+\_\+visibility (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a8fe32b18d5ca084627c26fa4e54b95ba}{}\label{plotdecs_8h_a8fe32b18d5ca084627c26fa4e54b95ba}
+\index{plotdecs.\+h@{plotdecs.\+h}!fshade@{fshade}}
+\index{fshade@{fshade}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fshade(\+F\+I\+L\+E $\ast$)}{fshade(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fshade (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_abab94b36ba74184e29b917bb3738ff53}{}\label{plotdecs_8h_abab94b36ba74184e29b917bb3738ff53}
+\index{plotdecs.\+h@{plotdecs.\+h}!fspace@{fspace}}
+\index{fspace@{fspace}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fspace(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fspace(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fspace (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a5a7d2f9668da8a3e8cb34ae54b7f49f1}{}\label{plotdecs_8h_a5a7d2f9668da8a3e8cb34ae54b7f49f1}
+\index{plotdecs.\+h@{plotdecs.\+h}!ftext\+\_\+height\+\_\+angle@{ftext\+\_\+height\+\_\+angle}}
+\index{ftext\+\_\+height\+\_\+angle@{ftext\+\_\+height\+\_\+angle}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{ftext\+\_\+height\+\_\+angle(\+F\+I\+L\+E $\ast$, double, double)}{ftext_height_angle(FILE *, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void ftext\+\_\+height\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_a7eefb74d5a42e5b1fc194708c0b5a0c8}{}\label{plotdecs_8h_a7eefb74d5a42e5b1fc194708c0b5a0c8}
+\index{plotdecs.\+h@{plotdecs.\+h}!fviewport@{fviewport}}
+\index{fviewport@{fviewport}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fviewport(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fviewport(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fviewport (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_ab3f312646596238db06146276660eb06}{}\label{plotdecs_8h_ab3f312646596238db06146276660eb06}
+\index{plotdecs.\+h@{plotdecs.\+h}!fwindow@{fwindow}}
+\index{fwindow@{fwindow}!plotdecs.\+h@{plotdecs.\+h}}
+\subsubsection[{\texorpdfstring{fwindow(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fwindow(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fwindow (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{plotdecs_8h_aa63da08765d6242563a2462a34497be0}{}\label{plotdecs_8h_aa63da08765d6242563a2462a34497be0}

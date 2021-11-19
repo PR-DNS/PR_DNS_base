@@ -1,0 +1,243 @@
+\hypertarget{clmsub_8cpp}{}\section{D\+N\+S/climate/clmsub.cpp File Reference}
+\label{clmsub_8cpp}\index{D\+N\+S/climate/clmsub.\+cpp@{D\+N\+S/climate/clmsub.\+cpp}}
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}climate.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{clmsub_8cpp_a8d2ee252a9a43880b4a49330589d730c}{melt\+\_\+flow\+Through\+Boundary\+State} (double $\ast$p0, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{clmsub_8cpp_a2cf46788ebebc3f18c8bb2384bec9d2a}{init\+\_\+vapor\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{class_v_c_a_r_t_e_s_i_a_n}{V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$vcartesian)
+\item 
+void \hyperlink{clmsub_8cpp_ad140a5d86efd61465bef947c0e6e7156}{init\+\_\+temp\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{class_v_c_a_r_t_e_s_i_a_n}{V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$vcartesian)
+\item 
+void \hyperlink{clmsub_8cpp_a2c069a156eeb5754d9d1f5aa9cad964b}{init\+\_\+fluid\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{class_incompress___solver___smooth___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$l\+\_\+cartesian)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{clmsub_8cpp_a962129b452f382743c426d9cc1aa0c0c}{Print\+\_\+particle\+\_\+array} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$particle\+\_\+array, int num)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$ \hyperlink{clmsub_8cpp_ab742cb9a74b03c14a2c8787eaba9af05}{cut\+\_\+buf\+\_\+particle} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$particle\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int \&buf\+\_\+size, int dir, int side)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{clmsub_8cpp_a8e41a766ca29f9d956cbcc0ec2ac3c93}{send\+\_\+particle} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$buf\+\_\+particle, int buf\+\_\+size, int dst\+\_\+id)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$ \hyperlink{clmsub_8cpp_af3603dbcd7b590c89fb4f5ddfeaa8d3b}{receive\+\_\+particle} (int src\+\_\+id, int \&buf\+\_\+size)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{clmsub_8cpp_a8865bce6d7ce6dd771b213d630368590}{merge\+\_\+particle} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$$\ast$particle\+\_\+array, \hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$adj\+\_\+particle, int adj\+\_\+size, \hyperlink{climate_8h_adc32b7cd2747da3d0faff22bbba5677d}{P\+A\+R\+A\+MS} $\ast$params)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{clmsub_8cpp_a39c375c5ebce5f1e51176f7d61327a83}{Parallel\+Exch\+Particle} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$$\ast$particle\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clmsub_8cpp_a77d7a533d2395428243fb0c1770db0f3}{Particle\+Propagate} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+void \hyperlink{clmsub_8cpp_a15d24b53e0ffa0e87f635a50239edef2}{set\+Particle\+Group\+Index} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$particle\+\_\+array, int size, int dim, int $\ast$Nclip, double $\ast$L, double $\ast$U)
+\item 
+void \hyperlink{clmsub_8cpp_a3e9dd40b806bbcbdd45c071e334bf21d}{set\+Particle\+Global\+Index} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$particle\+\_\+array, int size)
+\item 
+void \hyperlink{clmsub_8cpp_ab55c4c4e350874992653360e28d1d2c2}{print\+Droplets\+States} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$outname)
+\item 
+void \hyperlink{clmsub_8cpp_af261bcbb056e98315515d4ae026da491}{gv\+\_\+plot\+\_\+scatter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clmsub_8cpp_a2083d4bc8b84317f6880e4eb1f944399}{vtk\+\_\+plot\+\_\+scatter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clmsub_8cpp_a20d23561c7fb3a5484e87772e1c99b7d}{vtk\+\_\+plot\+\_\+sample\+\_\+traj} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clmsub_8cpp_a4d3e68a49b7ef1e72aaa73ae3338ecbb}{Deviation} (double $\ast$array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double \&Mean, double \&Var)
+\item 
+void \hyperlink{clmsub_8cpp_ad56fe0b8c1c41e85370a6f88ac1f156a}{Deviation} (double $\ast$array, int size, double \&Mean, double \&Var)
+\item 
+double $\ast$ \hyperlink{clmsub_8cpp_a1192829ad3da43f492e2a6453a8336eb}{Compute\+P\+DF} (double $\ast$array, int size, double \&bin\+\_\+size, int num\+\_\+bins, double \&var\+\_\+min, double \&var\+\_\+max)
+\item 
+double $\ast$ \hyperlink{clmsub_8cpp_acbf3c75b45ebf5c62eb23380a22084a5}{Compute\+P\+DF} (double $\ast$array, int size, double \&bin\+\_\+size, int num\+\_\+bins, double \&var\+\_\+min, double \&var\+\_\+max, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} ignore\+\_\+zero)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Compute\+P\+DF@{Compute\+P\+DF}}
+\index{Compute\+P\+DF@{Compute\+P\+DF}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Compute\+P\+D\+F(double $\ast$array, int size, double \&bin\+\_\+size, int num\+\_\+bins, double \&var\+\_\+min, double \&var\+\_\+max)}{ComputePDF(double *array, int size, double &bin_size, int num_bins, double &var_min, double &var_max)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Compute\+P\+DF (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{array, }
+\item[{int}]{size, }
+\item[{double \&}]{bin\+\_\+size, }
+\item[{int}]{num\+\_\+bins, }
+\item[{double \&}]{var\+\_\+min, }
+\item[{double \&}]{var\+\_\+max}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a1192829ad3da43f492e2a6453a8336eb}{}\label{clmsub_8cpp_a1192829ad3da43f492e2a6453a8336eb}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Compute\+P\+DF@{Compute\+P\+DF}}
+\index{Compute\+P\+DF@{Compute\+P\+DF}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Compute\+P\+D\+F(double $\ast$array, int size, double \&bin\+\_\+size, int num\+\_\+bins, double \&var\+\_\+min, double \&var\+\_\+max, boolean ignore\+\_\+zero)}{ComputePDF(double *array, int size, double &bin_size, int num_bins, double &var_min, double &var_max, boolean ignore_zero)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Compute\+P\+DF (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{array, }
+\item[{int}]{size, }
+\item[{double \&}]{bin\+\_\+size, }
+\item[{int}]{num\+\_\+bins, }
+\item[{double \&}]{var\+\_\+min, }
+\item[{double \&}]{var\+\_\+max, }
+\item[{{\bf boolean}}]{ignore\+\_\+zero}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_acbf3c75b45ebf5c62eb23380a22084a5}{}\label{clmsub_8cpp_acbf3c75b45ebf5c62eb23380a22084a5}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!cut\+\_\+buf\+\_\+particle@{cut\+\_\+buf\+\_\+particle}}
+\index{cut\+\_\+buf\+\_\+particle@{cut\+\_\+buf\+\_\+particle}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{cut\+\_\+buf\+\_\+particle(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$particle\+\_\+array, Front $\ast$front, int \&buf\+\_\+size, int dir, int side)}{cut_buf_particle(PARTICLE *particle_array, Front *front, int &buf_size, int dir, int side)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+A\+R\+T\+I\+C\+LE}$\ast$ cut\+\_\+buf\+\_\+particle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{particle\+\_\+array, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int \&}]{buf\+\_\+size, }
+\item[{int}]{dir, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_ab742cb9a74b03c14a2c8787eaba9af05}{}\label{clmsub_8cpp_ab742cb9a74b03c14a2c8787eaba9af05}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Deviation@{Deviation}}
+\index{Deviation@{Deviation}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Deviation(double $\ast$array, Front $\ast$front, double \&\+Mean, double \&\+Var)}{Deviation(double *array, Front *front, double &Mean, double &Var)}}]{\setlength{\rightskip}{0pt plus 5cm}void Deviation (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{array, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double \&}]{Mean, }
+\item[{double \&}]{Var}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a4d3e68a49b7ef1e72aaa73ae3338ecbb}{}\label{clmsub_8cpp_a4d3e68a49b7ef1e72aaa73ae3338ecbb}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Deviation@{Deviation}}
+\index{Deviation@{Deviation}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Deviation(double $\ast$array, int size, double \&\+Mean, double \&\+Var)}{Deviation(double *array, int size, double &Mean, double &Var)}}]{\setlength{\rightskip}{0pt plus 5cm}void Deviation (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{array, }
+\item[{int}]{size, }
+\item[{double \&}]{Mean, }
+\item[{double \&}]{Var}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_ad56fe0b8c1c41e85370a6f88ac1f156a}{}\label{clmsub_8cpp_ad56fe0b8c1c41e85370a6f88ac1f156a}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!gv\+\_\+plot\+\_\+scatter@{gv\+\_\+plot\+\_\+scatter}}
+\index{gv\+\_\+plot\+\_\+scatter@{gv\+\_\+plot\+\_\+scatter}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{gv\+\_\+plot\+\_\+scatter(\+Front $\ast$front)}{gv_plot_scatter(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void gv\+\_\+plot\+\_\+scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_af261bcbb056e98315515d4ae026da491}{}\label{clmsub_8cpp_af261bcbb056e98315515d4ae026da491}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}}
+\index{init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+\_\+fluid\+\_\+state\+\_\+func(\+Front $\ast$front, Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis $\ast$l\+\_\+cartesian)}{init_fluid_state_func(Front *front, Incompress_Solver_Smooth_Basis *l_cartesian)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+fluid\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$}]{l\+\_\+cartesian}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a2c069a156eeb5754d9d1f5aa9cad964b}{}\label{clmsub_8cpp_a2c069a156eeb5754d9d1f5aa9cad964b}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!init\+\_\+temp\+\_\+state\+\_\+func@{init\+\_\+temp\+\_\+state\+\_\+func}}
+\index{init\+\_\+temp\+\_\+state\+\_\+func@{init\+\_\+temp\+\_\+state\+\_\+func}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+\_\+temp\+\_\+state\+\_\+func(\+Front $\ast$front, V\+C\+A\+R\+T\+E\+S\+I\+A\+N $\ast$vcartesian)}{init_temp_state_func(Front *front, VCARTESIAN *vcartesian)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+temp\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$}]{vcartesian}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_ad140a5d86efd61465bef947c0e6e7156}{}\label{clmsub_8cpp_ad140a5d86efd61465bef947c0e6e7156}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!init\+\_\+vapor\+\_\+state\+\_\+func@{init\+\_\+vapor\+\_\+state\+\_\+func}}
+\index{init\+\_\+vapor\+\_\+state\+\_\+func@{init\+\_\+vapor\+\_\+state\+\_\+func}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+\_\+vapor\+\_\+state\+\_\+func(\+Front $\ast$front, V\+C\+A\+R\+T\+E\+S\+I\+A\+N $\ast$vcartesian)}{init_vapor_state_func(Front *front, VCARTESIAN *vcartesian)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+vapor\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$}]{vcartesian}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a2cf46788ebebc3f18c8bb2384bec9d2a}{}\label{clmsub_8cpp_a2cf46788ebebc3f18c8bb2384bec9d2a}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!melt\+\_\+flow\+Through\+Boundary\+State@{melt\+\_\+flow\+Through\+Boundary\+State}}
+\index{melt\+\_\+flow\+Through\+Boundary\+State@{melt\+\_\+flow\+Through\+Boundary\+State}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{melt\+\_\+flow\+Through\+Boundary\+State(double $\ast$p0, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, Front $\ast$front, P\+O\+I\+N\+T\+E\+R params, P\+O\+I\+N\+T\+E\+R state)}{melt_flowThroughBoundaryState(double *p0, HYPER_SURF *hs, Front *front, POINTER params, POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}void melt\+\_\+flow\+Through\+Boundary\+State (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p0, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a8d2ee252a9a43880b4a49330589d730c}{}\label{clmsub_8cpp_a8d2ee252a9a43880b4a49330589d730c}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!merge\+\_\+particle@{merge\+\_\+particle}}
+\index{merge\+\_\+particle@{merge\+\_\+particle}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{merge\+\_\+particle(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$$\ast$particle\+\_\+array, P\+A\+R\+T\+I\+C\+L\+E $\ast$adj\+\_\+particle, int adj\+\_\+size, P\+A\+R\+A\+M\+S $\ast$params)}{merge_particle(PARTICLE **particle_array, PARTICLE *adj_particle, int adj_size, PARAMS *params)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void merge\+\_\+particle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$$\ast$}]{particle\+\_\+array, }
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{adj\+\_\+particle, }
+\item[{int}]{adj\+\_\+size, }
+\item[{{\bf P\+A\+R\+A\+MS} $\ast$}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a8865bce6d7ce6dd771b213d630368590}{}\label{clmsub_8cpp_a8865bce6d7ce6dd771b213d630368590}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Parallel\+Exch\+Particle@{Parallel\+Exch\+Particle}}
+\index{Parallel\+Exch\+Particle@{Parallel\+Exch\+Particle}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Parallel\+Exch\+Particle(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$$\ast$particle\+\_\+array, Front $\ast$front)}{ParallelExchParticle(PARTICLE **particle_array, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void Parallel\+Exch\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$$\ast$}]{particle\+\_\+array, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a39c375c5ebce5f1e51176f7d61327a83}{}\label{clmsub_8cpp_a39c375c5ebce5f1e51176f7d61327a83}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Particle\+Propagate@{Particle\+Propagate}}
+\index{Particle\+Propagate@{Particle\+Propagate}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Particle\+Propagate(\+Front $\ast$fr)}{ParticlePropagate(Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Propagate (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a77d7a533d2395428243fb0c1770db0f3}{}\label{clmsub_8cpp_a77d7a533d2395428243fb0c1770db0f3}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!Print\+\_\+particle\+\_\+array@{Print\+\_\+particle\+\_\+array}}
+\index{Print\+\_\+particle\+\_\+array@{Print\+\_\+particle\+\_\+array}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{Print\+\_\+particle\+\_\+array(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$particle\+\_\+array, int num)}{Print_particle_array(PARTICLE *particle_array, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void Print\+\_\+particle\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{particle\+\_\+array, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a962129b452f382743c426d9cc1aa0c0c}{}\label{clmsub_8cpp_a962129b452f382743c426d9cc1aa0c0c}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!print\+Droplets\+States@{print\+Droplets\+States}}
+\index{print\+Droplets\+States@{print\+Droplets\+States}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+Droplets\+States(\+Front $\ast$front, char $\ast$outname)}{printDropletsStates(Front *front, char *outname)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Droplets\+States (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{char $\ast$}]{outname}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_ab55c4c4e350874992653360e28d1d2c2}{}\label{clmsub_8cpp_ab55c4c4e350874992653360e28d1d2c2}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!receive\+\_\+particle@{receive\+\_\+particle}}
+\index{receive\+\_\+particle@{receive\+\_\+particle}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{receive\+\_\+particle(int src\+\_\+id, int \&buf\+\_\+size)}{receive_particle(int src_id, int &buf_size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+A\+R\+T\+I\+C\+LE}$\ast$ receive\+\_\+particle (
+\begin{DoxyParamCaption}
+\item[{int}]{src\+\_\+id, }
+\item[{int \&}]{buf\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_af3603dbcd7b590c89fb4f5ddfeaa8d3b}{}\label{clmsub_8cpp_af3603dbcd7b590c89fb4f5ddfeaa8d3b}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!send\+\_\+particle@{send\+\_\+particle}}
+\index{send\+\_\+particle@{send\+\_\+particle}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{send\+\_\+particle(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$buf\+\_\+particle, int buf\+\_\+size, int dst\+\_\+id)}{send_particle(PARTICLE *buf_particle, int buf_size, int dst_id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void send\+\_\+particle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{buf\+\_\+particle, }
+\item[{int}]{buf\+\_\+size, }
+\item[{int}]{dst\+\_\+id}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a8e41a766ca29f9d956cbcc0ec2ac3c93}{}\label{clmsub_8cpp_a8e41a766ca29f9d956cbcc0ec2ac3c93}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!set\+Particle\+Global\+Index@{set\+Particle\+Global\+Index}}
+\index{set\+Particle\+Global\+Index@{set\+Particle\+Global\+Index}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Particle\+Global\+Index(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$particle\+\_\+array, int size)}{setParticleGlobalIndex(PARTICLE *particle_array, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Particle\+Global\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{particle\+\_\+array, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a3e9dd40b806bbcbdd45c071e334bf21d}{}\label{clmsub_8cpp_a3e9dd40b806bbcbdd45c071e334bf21d}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!set\+Particle\+Group\+Index@{set\+Particle\+Group\+Index}}
+\index{set\+Particle\+Group\+Index@{set\+Particle\+Group\+Index}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Particle\+Group\+Index(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$particle\+\_\+array, int size, int dim, int $\ast$\+Nclip, double $\ast$\+L, double $\ast$\+U)}{setParticleGroupIndex(PARTICLE *particle_array, int size, int dim, int *Nclip, double *L, double *U)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Particle\+Group\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{particle\+\_\+array, }
+\item[{int}]{size, }
+\item[{int}]{dim, }
+\item[{int $\ast$}]{Nclip, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a15d24b53e0ffa0e87f635a50239edef2}{}\label{clmsub_8cpp_a15d24b53e0ffa0e87f635a50239edef2}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!vtk\+\_\+plot\+\_\+sample\+\_\+traj@{vtk\+\_\+plot\+\_\+sample\+\_\+traj}}
+\index{vtk\+\_\+plot\+\_\+sample\+\_\+traj@{vtk\+\_\+plot\+\_\+sample\+\_\+traj}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+sample\+\_\+traj(\+Front $\ast$front)}{vtk_plot_sample_traj(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void vtk\+\_\+plot\+\_\+sample\+\_\+traj (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a20d23561c7fb3a5484e87772e1c99b7d}{}\label{clmsub_8cpp_a20d23561c7fb3a5484e87772e1c99b7d}
+\index{clmsub.\+cpp@{clmsub.\+cpp}!vtk\+\_\+plot\+\_\+scatter@{vtk\+\_\+plot\+\_\+scatter}}
+\index{vtk\+\_\+plot\+\_\+scatter@{vtk\+\_\+plot\+\_\+scatter}!clmsub.\+cpp@{clmsub.\+cpp}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+scatter(\+Front $\ast$front)}{vtk_plot_scatter(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void vtk\+\_\+plot\+\_\+scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clmsub_8cpp_a2083d4bc8b84317f6880e4eb1f944399}{}\label{clmsub_8cpp_a2083d4bc8b84317f6880e4eb1f944399}

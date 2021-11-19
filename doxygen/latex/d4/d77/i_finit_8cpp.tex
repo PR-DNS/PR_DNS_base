@@ -1,0 +1,63 @@
+\hypertarget{i_finit_8cpp}{}\section{D\+N\+S/i\+Fluid/i\+Finit.cpp File Reference}
+\label{i_finit_8cpp}\index{D\+N\+S/i\+Fluid/i\+Finit.\+cpp@{D\+N\+S/i\+Fluid/i\+Finit.\+cpp}}
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}\\*
+{\ttfamily \#include $<$ifluid\+\_\+basic.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i_finit_8cpp_a293bc6d2504c3f13bee55a36a93d0604}{set\+Initial\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a3a8db0030cbeafed0ec59f4c151377a5}{L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$level\+\_\+func\+\_\+pack, char $\ast$inname, \hyperlink{ifluid__basic_8h_a1ea6fbb4f8c64119ef93a781babcf32f}{I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} prob\+\_\+type)
+\item 
+void \hyperlink{i_finit_8cpp_a282750296611276098c15f7939031b47}{init\+\_\+fluid\+\_\+state\+\_\+func} (\hyperlink{class_incompress___solver___smooth___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$l\+\_\+cartesian, \hyperlink{ifluid__basic_8h_a1ea6fbb4f8c64119ef93a781babcf32f}{I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} prob\+\_\+type)
+\item 
+void \hyperlink{i_finit_8cpp_a6f12ebf91fb395e89ea5bb494154567a}{read\+\_\+i\+F\+\_\+prob\+\_\+type} (char $\ast$inname, \hyperlink{ifluid__basic_8h_a1ea6fbb4f8c64119ef93a781babcf32f}{I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} $\ast$prob\+\_\+type)
+\item 
+void \hyperlink{i_finit_8cpp_a6d81db6241205504aa904eb120793e19}{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params} (int dim, char $\ast$inname, \hyperlink{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{R\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$rgb\+\_\+params)
+\item 
+void \hyperlink{i_finit_8cpp_a9bbc517e3fd65bade703fbe238182bbd}{set\+\_\+rgbody\+\_\+params} (\hyperlink{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{R\+G\+\_\+\+P\+A\+R\+A\+MS} rg\+\_\+params, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{i\+Finit.\+cpp@{i\+Finit.\+cpp}!init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}}
+\index{init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}!i\+Finit.\+cpp@{i\+Finit.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+\_\+fluid\+\_\+state\+\_\+func(\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis $\ast$l\+\_\+cartesian, I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+P\+E prob\+\_\+type)}{init_fluid_state_func(Incompress_Solver_Smooth_Basis *l_cartesian, IF_PROB_TYPE prob_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+fluid\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$}]{l\+\_\+cartesian, }
+\item[{{\bf I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}]{prob\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{i_finit_8cpp_a282750296611276098c15f7939031b47}{}\label{i_finit_8cpp_a282750296611276098c15f7939031b47}
+\index{i\+Finit.\+cpp@{i\+Finit.\+cpp}!prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params@{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params}}
+\index{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params@{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params}!i\+Finit.\+cpp@{i\+Finit.\+cpp}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params(int dim, char $\ast$inname, R\+G\+\_\+\+P\+A\+R\+A\+M\+S $\ast$rgb\+\_\+params)}{prompt_for_rigid_body_params(int dim, char *inname, RG_PARAMS *rgb_params)}}]{\setlength{\rightskip}{0pt plus 5cm}void prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{char $\ast$}]{inname, }
+\item[{{\bf R\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{rgb\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{i_finit_8cpp_a6d81db6241205504aa904eb120793e19}{}\label{i_finit_8cpp_a6d81db6241205504aa904eb120793e19}
+\index{i\+Finit.\+cpp@{i\+Finit.\+cpp}!read\+\_\+i\+F\+\_\+prob\+\_\+type@{read\+\_\+i\+F\+\_\+prob\+\_\+type}}
+\index{read\+\_\+i\+F\+\_\+prob\+\_\+type@{read\+\_\+i\+F\+\_\+prob\+\_\+type}!i\+Finit.\+cpp@{i\+Finit.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+\_\+i\+F\+\_\+prob\+\_\+type(char $\ast$inname, I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+P\+E $\ast$prob\+\_\+type)}{read_iF_prob_type(char *inname, IF_PROB_TYPE *prob_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+i\+F\+\_\+prob\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{inname, }
+\item[{{\bf I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} $\ast$}]{prob\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{i_finit_8cpp_a6f12ebf91fb395e89ea5bb494154567a}{}\label{i_finit_8cpp_a6f12ebf91fb395e89ea5bb494154567a}
+\index{i\+Finit.\+cpp@{i\+Finit.\+cpp}!set\+\_\+rgbody\+\_\+params@{set\+\_\+rgbody\+\_\+params}}
+\index{set\+\_\+rgbody\+\_\+params@{set\+\_\+rgbody\+\_\+params}!i\+Finit.\+cpp@{i\+Finit.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+\_\+rgbody\+\_\+params(\+R\+G\+\_\+\+P\+A\+R\+A\+M\+S rg\+\_\+params, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs)}{set_rgbody_params(RG_PARAMS rg_params, HYPER_SURF *hs)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+rgbody\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+\_\+\+P\+A\+R\+A\+MS}}]{rg\+\_\+params, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs}
+\end{DoxyParamCaption}
+)}\hypertarget{i_finit_8cpp_a9bbc517e3fd65bade703fbe238182bbd}{}\label{i_finit_8cpp_a9bbc517e3fd65bade703fbe238182bbd}
+\index{i\+Finit.\+cpp@{i\+Finit.\+cpp}!set\+Initial\+Intfc@{set\+Initial\+Intfc}}
+\index{set\+Initial\+Intfc@{set\+Initial\+Intfc}!i\+Finit.\+cpp@{i\+Finit.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+Initial\+Intfc(\+Front $\ast$front, L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+C\+K $\ast$level\+\_\+func\+\_\+pack, char $\ast$inname, I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+P\+E prob\+\_\+type)}{setInitialIntfc(Front *front, LEVEL_FUNC_PACK *level_func_pack, char *inname, IF_PROB_TYPE prob_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Initial\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$}]{level\+\_\+func\+\_\+pack, }
+\item[{char $\ast$}]{inname, }
+\item[{{\bf I\+F\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}]{prob\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{i_finit_8cpp_a293bc6d2504c3f13bee55a36a93d0604}{}\label{i_finit_8cpp_a293bc6d2504c3f13bee55a36a93d0604}

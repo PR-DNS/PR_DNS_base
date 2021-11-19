@@ -1,0 +1,89 @@
+\hypertarget{group___o_u_t_p_u_t}{}\section{Fron\+Tier Output Functions}
+\label{group___o_u_t_p_u_t}\index{Fron\+Tier Output Functions@{Fron\+Tier Output Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_gafd7ac13ea02e0f3844ebcb1a9efc60c0}{F\+T\+\_\+\+Save} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{testfront_8c_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name})
+\begin{DoxyCompactList}\small\item\em Output front geometric data to the directory of out\+\_\+name. The data can be used for restart of the run. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_gad32bc73d7f3427bc42db9a86a7fad142}{F\+T\+\_\+\+Add\+Movie\+Frame} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{testfront_8c_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name}, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fluid_8cpp_a95d2bcffcf88447457ccd073a80718c1}{binary})
+\begin{DoxyCompactList}\small\item\em Output a movie frame, currently includes GD, hdf, vtk formats. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_ga4eb501b23f143596c39ede7060bb06db}{F\+T\+\_\+\+Xgraph\+Sample\+Line} (char $\ast$dirname, char $\ast$varname, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} data\+\_\+in\+\_\+domain, int size, double $\ast$x, double $\ast$var)
+\begin{DoxyCompactList}\small\item\em This function output variable sample along a grid line as xgraph data file. It considers parallelization of subdomains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Output Functions@{Fron\+Tier Output Functions}!F\+T\+\_\+\+Add\+Movie\+Frame@{F\+T\+\_\+\+Add\+Movie\+Frame}}
+\index{F\+T\+\_\+\+Add\+Movie\+Frame@{F\+T\+\_\+\+Add\+Movie\+Frame}!Fron\+Tier Output Functions@{Fron\+Tier Output Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Movie\+Frame(\+Front $\ast$front, char $\ast$out\+\_\+name, boolean binary)}{FT_AddMovieFrame(Front *front, char *out_name, boolean binary)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Add\+Movie\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{char $\ast$}]{out\+\_\+name, }
+\item[{{\bf boolean}}]{binary}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_u_t_p_u_t_gad32bc73d7f3427bc42db9a86a7fad142}{}\label{group___o_u_t_p_u_t_gad32bc73d7f3427bc42db9a86a7fad142}
+
+
+Output a movie frame, currently includes GD, hdf, vtk formats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em out\+\_\+name} & {\bfseries in} String for output directory name. \\
+\hline
+{\em binary} & {\bfseries in} Boolean whether the output should be binary (for some data). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Output Functions@{Fron\+Tier Output Functions}!F\+T\+\_\+\+Save@{F\+T\+\_\+\+Save}}
+\index{F\+T\+\_\+\+Save@{F\+T\+\_\+\+Save}!Fron\+Tier Output Functions@{Fron\+Tier Output Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Save(\+Front $\ast$front, char $\ast$out\+\_\+name)}{FT_Save(Front *front, char *out_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Save (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{char $\ast$}]{out\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_u_t_p_u_t_gafd7ac13ea02e0f3844ebcb1a9efc60c0}{}\label{group___o_u_t_p_u_t_gafd7ac13ea02e0f3844ebcb1a9efc60c0}
+
+
+Output front geometric data to the directory of out\+\_\+name. The data can be used for restart of the run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em out\+\_\+name} & {\bfseries in} String for output directory name. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Output Functions@{Fron\+Tier Output Functions}!F\+T\+\_\+\+Xgraph\+Sample\+Line@{F\+T\+\_\+\+Xgraph\+Sample\+Line}}
+\index{F\+T\+\_\+\+Xgraph\+Sample\+Line@{F\+T\+\_\+\+Xgraph\+Sample\+Line}!Fron\+Tier Output Functions@{Fron\+Tier Output Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Xgraph\+Sample\+Line(char $\ast$dirname, char $\ast$varname, boolean data\+\_\+in\+\_\+domain, int size, double $\ast$x, double $\ast$var)}{FT_XgraphSampleLine(char *dirname, char *varname, boolean data_in_domain, int size, double *x, double *var)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Xgraph\+Sample\+Line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dirname, }
+\item[{char $\ast$}]{varname, }
+\item[{{\bf boolean}}]{data\+\_\+in\+\_\+domain, }
+\item[{int}]{size, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{var}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_u_t_p_u_t_ga4eb501b23f143596c39ede7060bb06db}{}\label{group___o_u_t_p_u_t_ga4eb501b23f143596c39ede7060bb06db}
+
+
+This function output variable sample along a grid line as xgraph data file. It considers parallelization of subdomains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirname} & {\bfseries in} Name of the directory for the output file. \\
+\hline
+{\em varname} & {\bfseries in} Name of the variable for the output file. \\
+\hline
+{\em data\+\_\+in\+\_\+domain} & {\bfseries in} Yes if the subdomain contains data. \\
+\hline
+{\em size} & {\bfseries in} Size of the data in the subdomain. \\
+\hline
+{\em x} & {\bfseries in} Horizontal axis containing coordinate of the sample line. \\
+\hline
+{\em var} & {\bfseries in} Vertical axis containing variable data. \\
+\hline
+\end{DoxyParams}

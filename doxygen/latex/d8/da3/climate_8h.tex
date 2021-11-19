@@ -1,0 +1,1133 @@
+\hypertarget{climate_8h}{}\section{D\+N\+S/climate/climate.h File Reference}
+\label{climate_8h}\index{D\+N\+S/climate/climate.\+h@{D\+N\+S/climate/climate.\+h}}
+{\ttfamily \#include $<$Fron\+Tier.\+h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$petscksp.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}fftw3.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{climate_8h_d6/d76/struct___p_h_a_s_e___f_i_e_l_d}{\+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}
+\item 
+struct \hyperlink{climate_8h_da/df0/struct___m_o_v_i_e___o_p_t_i_o_n}{\+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}
+\item 
+struct \hyperlink{climate_8h_dd/d84/struct___p_a_r_t_i_c_l_e}{\+\_\+\+P\+A\+R\+T\+I\+C\+LE}
+\item 
+struct \hyperlink{climate_8h_d1/d62/struct___p_a_r_a_m_s}{\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+class \hyperlink{class_r_e_c_t_a_n_g_l_e}{R\+E\+C\+T\+A\+N\+G\+LE}
+\item 
+class \hyperlink{class_v_c_a_r_t_e_s_i_a_n}{V\+C\+A\+R\+T\+E\+S\+I\+AN}
+\item 
+class \hyperlink{class_w_e_n_o___f_l_u_x}{W\+E\+N\+O\+\_\+\+F\+L\+UX}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{climate_8h_a34eb030e3e2091d860a2dcdedd02882e}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}~3
+\item 
+\#define \hyperlink{climate_8h_a089b7696830a14a603e1df2becda9512}{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}~1
+\item 
+\#define \hyperlink{climate_8h_aa505cec034e74fcc1b15b9c60d0e63c1}{alternate\+\_\+comp}(comp)~(comp) == \hyperlink{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2} ? \hyperlink{i_fluid_8h_a089b7696830a14a603e1df2becda9512}{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP} \+: \hyperlink{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}
+\item 
+\#define \hyperlink{climate_8h_a8fa4a934e7d02b3e5dabfc502cb611f7}{M\+A\+X\+\_\+\+S\+T\+EP}~10000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371}{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} \hyperlink{climate_8h_a0121baba4aa50082324d1ba01147219b}{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}
+\item 
+typedef enum \hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8e}{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME} \hyperlink{climate_8h_ae672ed2d1e9e5db11f77587b58e38d5e}{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}
+\item 
+typedef enum \hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112}{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE} \hyperlink{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}
+\item 
+typedef struct \hyperlink{climate_8h_d6/d76/struct___p_h_a_s_e___f_i_e_l_d}{\+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD} \hyperlink{climate_8h_ac5ffc5b3bad0297c19e3d707caf86504}{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}
+\item 
+typedef struct \hyperlink{climate_8h_da/df0/struct___m_o_v_i_e___o_p_t_i_o_n}{\+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON} \hyperlink{climate_8h_a3261cdad5a8904a193479ff68f99f448}{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}
+\item 
+typedef struct \hyperlink{climate_8h_dd/d84/struct___p_a_r_t_i_c_l_e}{\+\_\+\+P\+A\+R\+T\+I\+C\+LE} \hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE}
+\item 
+typedef struct \hyperlink{climate_8h_d1/d62/struct___p_a_r_a_m_s}{\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{climate_8h_adc32b7cd2747da3d0faff22bbba5677d}{P\+A\+R\+A\+MS}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371}{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} \{ \hyperlink{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a1ced207bc4dd7d578498517e19352907}{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG} = 1, 
+\hyperlink{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a75446cf0c635bc6e3347b10150d57c8f}{E\+N\+T\+R\+A\+I\+N\+M\+E\+NT} = 1, 
+\hyperlink{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a221d0f453e7238e6dced217b56afa0d3}{R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD}
+ \}
+\item 
+enum \hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8e}{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME} \{ \\*
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea39ebf1b149a7af51d3bb740350b32b6e}{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT} = 1, 
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea183bb3388e1f1086820175f78b35172f}{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}, 
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea9a825f14ff352e8900b237674b82eb63}{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT}, 
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea4e31e06b92c04c664acf49279770a6b2}{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}, 
+\\*
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea2bd7557cb52db04459d696084240b42e}{W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}, 
+\hyperlink{climate_8h_a335caef8600c25fa44a8180d9c32cb8eabbd1ebd69b82357b2dd7e0d08aff007f}{C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}
+ \}
+\item 
+enum \hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112}{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE} \{ \\*
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112ae6e34b14506993a8682bbd088c178b4e}{Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE} = 1, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112a696130dad445394b4958e4f6aa0411e2}{C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad59ca8ae35e783f1959ec793c553b148}{R\+A\+N\+D\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112ab4c6fa4d312aa55b906d871d594cc94e}{T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE}, 
+\\*
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112a9cbeb00af24b3257a312c9a7b0b1a10b}{P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112a06e65a3d2593dbd7e0cf051a6118cba2}{F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112ac586fa2a0d5f758c57ce6ea48adaa44c}{S\+I\+N\+E\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112aa0b829a2e49fcd852af603f698e05b24}{A\+B\+C\+\_\+\+S\+T\+A\+TE}, 
+\\*
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad342554e83b831b3e7f6569d22f94ea4}{L\+R\+\_\+\+S\+T\+A\+TE}, 
+\hyperlink{climate_8h_ab6b5ddc76229c76ef2b465423066b112a2e6b554f3e6cadc0821bfbd7ec537437}{T\+B\+\_\+\+S\+T\+A\+TE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{climate_8h_aa66fc3cf04442018a4ede64c84f7c603}{Vector\+Int\+Print} (int my\+\_\+rank, char $\ast$name, int n, int $\ast$vector)
+\item 
+void \hyperlink{climate_8h_af060d6d39074eb826801e20820c13f69}{Vector\+Print} (int my\+\_\+rank, char $\ast$name, int n, double $\ast$vector)
+\item 
+void \hyperlink{climate_8h_ada7b84285cfbc0a4cf1ae6eb4ed9c060}{Vector\+Zero} (int n, double $\ast$vector)
+\item 
+void \hyperlink{climate_8h_a28e7d1d44b2c5a07a3a146b3b6a68fc0}{Vector\+Zero} (int n, int $\ast$vector)
+\item 
+void \hyperlink{climate_8h_a8f30c2f8b0cf03e09dcc8a759143c89c}{Vector\+Copy} (int n, double $\ast$vector1, double $\ast$vector2)
+\item 
+void \hyperlink{climate_8h_ad35e40cc2a8baa97e72e8d5797b1737a}{Matrix\+Print} (int my\+\_\+rank, char $\ast$name, int m, int n, double $\ast$$\ast$matrix)
+\item 
+void \hyperlink{climate_8h_a2e1ce0139c6ef73185f33fa38503d926}{Matrix\+Zero} (int m, int n, double $\ast$$\ast$matrix)
+\item 
+void \hyperlink{climate_8h_aca6526a84fd6bc02ddb57134aa4ae973}{Matrix\+Identity} (int n, double $\ast$$\ast$matrix)
+\item 
+void \hyperlink{climate_8h_a7522d728e2cfaf019a11191665abae2b}{Matrix\+Copy} (int m, int n, double $\ast$$\ast$U2, double $\ast$$\ast$U1)
+\item 
+void \hyperlink{climate_8h_a35faa387e111e6979ec24a8c2eeb5866}{Array\+Zero} (int m, int n, int l, double $\ast$$\ast$$\ast$matrix)
+\item 
+void \hyperlink{climate_8h_a9af857c3408b9d50e51a68495ae7fc9a}{Vector2\+Matrix} (int m, int n, double $\ast$$\ast$matrix, double $\ast$vector)
+\item 
+void \hyperlink{climate_8h_afe223dcd91034b5fa10ff5ed9b07f144}{Array\+Print} (int my\+\_\+rank, char $\ast$name, int m, int n, int l, double $\ast$$\ast$$\ast$array)
+\item 
+void \hyperlink{climate_8h_aa609630c3d89b7bdf397c02c35506ca0}{Matrix\+Multiply} (int n, double $\ast$$\ast$C, double $\ast$$\ast$A, double $\ast$$\ast$B)
+\item 
+void \hyperlink{climate_8h_acd014ffdb82f43998be362156d65386d}{Matrix\+Multiply} (int n, double $\ast$$\ast$C, double $\ast$$\ast$A)
+\item 
+void \hyperlink{climate_8h_a558543767cd7789fe14cbdf405d31042}{Matrix\+Multiply} (double C\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, double A\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, double B\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\item 
+void \hyperlink{climate_8h_ad2ae21eba267cd664a9979ef9c22d256}{Matrix\+Vector\+Multiply} (int n, double $\ast$C, double $\ast$$\ast$A, double $\ast$b)
+\item 
+void \hyperlink{climate_8h_a09c705d382adfab74a86964cadf88579}{Symmetric\+Matrix\+Inverse} (double B\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, double A\mbox{[}3\mbox{]}\mbox{[}3\mbox{]})
+\item 
+double \hyperlink{climate_8h_a6f5bd92a43f206de47ca92c3299a6c48}{Matrix\+Max} (int m, int n, double $\ast$$\ast$matrix)
+\item 
+double \hyperlink{climate_8h_a9e523bc2cd45a03493142e4592fc098b}{Matrix\+Min} (int m, int n, double $\ast$$\ast$matrix)
+\item 
+void \hyperlink{climate_8h_a20c0b36193bc2c4d80c52a9dc3f84e33}{read\+Phase\+Params} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a38ffee15b5c3ef80ee878bc3b68d027e}{init\+Phase\+Intfc} (char $\ast$, int, \hyperlink{fdecs_8h_a3a8db0030cbeafed0ec59f4c151377a5}{L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$, \hyperlink{climate_8h_adc32b7cd2747da3d0faff22bbba5677d}{P\+A\+R\+A\+MS} $\ast$)
+\item 
+void \hyperlink{climate_8h_ac3843e53f37bd2af5c156d33b439695d}{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data} (char $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA})
+\item 
+void \hyperlink{climate_8h_a7229d2614cdf9aed40ada17b56a11c0e}{read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data} (char $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA})
+\item 
+void \hyperlink{climate_8h_abceae2545be35a6d8e93f8af6daf6507}{melt\+\_\+flow\+Through\+Boundary\+State} (double $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+void \hyperlink{climate_8h_a1246f3eea78d1a7f11651bbf71366921}{read\+\_\+fluid\+\_\+params} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a62825592778d8dba01080beceeeaf918}{init\+\_\+fluid\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{class_incompress___solver___smooth___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$)
+\item 
+void \hyperlink{climate_8h_a2fb4eb164f7759834f0e5dfb31acc7c8}{init\+\_\+vapor\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{class_v_c_a_r_t_e_s_i_a_n}{V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$)
+\item 
+void \hyperlink{climate_8h_a1dd7bb48f3cc15f682f25ab6b38153c0}{init\+\_\+temp\+\_\+state\+\_\+func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{class_v_c_a_r_t_e_s_i_a_n}{V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$)
+\item 
+void \hyperlink{climate_8h_ab5c3f0f3550c10fe653f3820a9eae309}{assign\+State\+Temperature} (double, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+void \hyperlink{climate_8h_a8f5beec79141ce7c038a227c6ac18211}{assign\+State\+Vapor} (double, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{climate_8h_ab30fcc590d49de48dfb4449a7abee519}{get\+State\+Temperature} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{climate_8h_ad1d386f9b7e7dc7d0169d4e3b014e9a3}{get\+State\+Vapor} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{climate_8h_a93350b1a4af8f0ae84cf29151a12add4}{get\+State\+Super} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+void \hyperlink{climate_8h_af4bfdea56184382fa59c35ac81a10511}{init\+Water\+Drops} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_ace8c2c7cacea6f5a6e6e08fc75623a0c}{compute\+\_\+ice\+\_\+particle\+\_\+force} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double, double $\ast$, double $\ast$)
+\item 
+void \hyperlink{climate_8h_a0d7a1a09f6eed2447e959d215700d350}{Condensation\+Pre\+Advance} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a4d3019acc7dcdb578b7536e77c6587e9}{Particle\+Propagate} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a79ce5e11fa7fe15982567a25407cac91}{set\+Particle\+Global\+Index} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$, int)
+\item 
+void \hyperlink{climate_8h_a77f2fd947e6879d132921a84b3e3553e}{set\+Particle\+Group\+Index} (\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$, int, int, int $\ast$, double $\ast$, double $\ast$)
+\item 
+void \hyperlink{climate_8h_ae563ae6976a5226777ae58835a93c427}{read\+\_\+\+C\+L\+\_\+prob\+\_\+type} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a8b2c704aee2074d562f813a4eb7e83db}{read\+Water\+Drops\+Params} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, char $\ast$)
+\item 
+void \hyperlink{climate_8h_a00bc3979c6c3e2188063ee1c81c0621b}{print\+Droplets\+States} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, char $\ast$)
+\item 
+void \hyperlink{climate_8h_ac356fe4d26d337e2e9fa7428a7c8c0f4}{gv\+\_\+plot\+\_\+scatter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a846289e7d118553b4ff56c07216ed670}{vtk\+\_\+plot\+\_\+scatter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a1667998dce305ff230bf7d71b4c248e4}{vtk\+\_\+plot\+\_\+sample\+\_\+traj} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{climate_8h_a9b904563ad00bec55164fa9b4d53b615}{Deviation} (double $\ast$, int, double \&, double \&)
+\item 
+void \hyperlink{climate_8h_a893d166663c824222a76f8e12ee82a4a}{Deviation} (double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, double \&, double \&)
+\item 
+double $\ast$ \hyperlink{climate_8h_ad3036ad60322b08cf0437af8b45fbc14}{Compute\+P\+DF} (double $\ast$, int, double \&, int, double \&, double \&)
+\item 
+double $\ast$ \hyperlink{climate_8h_a5019c95da2dc4e2a12c50cf487dccdf0}{Compute\+P\+DF} (double $\ast$, int, double \&, int, double \&, double \&, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+bool \hyperlink{climate_8h_a7a6b49c0524a760880dd8f67f6ff4d8f}{fftnd} (fftw\+\_\+complex $\ast$, int, int $\ast$, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD@{\+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}}\label{struct___p_h_a_s_e___f_i_e_l_d}
+\hypertarget{climate_8h_struct___p_h_a_s_e___f_i_e_l_d}{}
+\subsubsection{struct \+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{climate_8h_a9fa5509849df06415ad4f31bc198a791}{}\label{climate_8h_a9fa5509849df06415ad4f31bc198a791}
+&
+adv&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a49bd9784bed6d379ab63867b32c8308f}{}\label{climate_8h_a49bd9784bed6d379ab63867b32c8308f}
+&
+adv\+\_\+old&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_adbe2bdeb2ab33d1be6c45bf1254f53b1}{}\label{climate_8h_adbe2bdeb2ab33d1be6c45bf1254f53b1}
+&
+cloud&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a10ddfa564951e9b86ffa14fbbd80c769}{}\label{climate_8h_a10ddfa564951e9b86ffa14fbbd80c769}
+&
+drops&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{climate_8h_ad46582395961692ac28982b9cb1d1f00}{}\label{climate_8h_ad46582395961692ac28982b9cb1d1f00}
+&
+ext\+\_\+accel&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a5b24787d41d42acf039474903c99feab}{}\label{climate_8h_a5b24787d41d42acf039474903c99feab}
+&
+mrad&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a9ec039a13f69b40d980698e4b5e1dafe}{}\label{climate_8h_a9ec039a13f69b40d980698e4b5e1dafe}
+&
+pres&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a875653540dc748395688bd9c708228ad}{}\label{climate_8h_a875653540dc748395688bd9c708228ad}
+&
+supersat&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a7e996bddb6519dfc38db2925243bdd0b}{}\label{climate_8h_a7e996bddb6519dfc38db2925243bdd0b}
+&
+temperature&
+\\
+\hline
+
+double $\ast$\hypertarget{climate_8h_a13e1d655eb41bdbf10253cacecbba79f}{}\label{climate_8h_a13e1d655eb41bdbf10253cacecbba79f}
+&
+vapor&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{climate_8h_a1e67d8f3a6f9256cda7009c6b039ed01}{}\label{climate_8h_a1e67d8f3a6f9256cda7009c6b039ed01}
+&
+vel&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON@{\+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}}\label{struct___m_o_v_i_e___o_p_t_i_o_n}
+\hypertarget{climate_8h_struct___m_o_v_i_e___o_p_t_i_o_n}{}
+\subsubsection{struct \+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a74acbb03ddceab552cea7634ecd64b87}{}\label{climate_8h_a74acbb03ddceab552cea7634ecd64b87}
+&
+plot\+\_\+cross\+\_\+section\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_af80ba40a630a3b33b5c28be19da3841b}{}\label{climate_8h_af80ba40a630a3b33b5c28be19da3841b}
+&
+plot\+\_\+particles&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_acb44f0b8b1f94c753a7d16f2246e434b}{}\label{climate_8h_acb44f0b8b1f94c753a7d16f2246e434b}
+&
+plot\+\_\+pres&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a6bb1ba4f6389ac5da0342e49c88eba7c}{}\label{climate_8h_a6bb1ba4f6389ac5da0342e49c88eba7c}
+&
+plot\+\_\+temperature&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_ae729b52582ababde17015f5111f5ee00}{}\label{climate_8h_ae729b52582ababde17015f5111f5ee00}
+&
+plot\+\_\+vapor&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a42a0c7524883c8bca18f1f455894ded4}{}\label{climate_8h_a42a0c7524883c8bca18f1f455894ded4}
+&
+plot\+\_\+velo&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_ac4e343e6108c13c78bb2ae511f284217}{}\label{climate_8h_ac4e343e6108c13c78bb2ae511f284217}
+&
+plot\+\_\+vort&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+P\+A\+R\+T\+I\+C\+LE@{\+\_\+\+P\+A\+R\+T\+I\+C\+LE}}\label{struct___p_a_r_t_i_c_l_e}
+\hypertarget{climate_8h_struct___p_a_r_t_i_c_l_e}{}
+\subsubsection{struct \+\_\+\+P\+A\+R\+T\+I\+C\+LE}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{climate_8h_ab793dc682a0143d09da95fc6475df11d}{}\label{climate_8h_ab793dc682a0143d09da95fc6475df11d}
+&
+center\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a9f96015c69e178f6d71adb0ca6f44646}{}\label{climate_8h_a9f96015c69e178f6d71adb0ca6f44646}
+&
+flag&
+\\
+\hline
+
+int\hypertarget{climate_8h_a8537e370377e23a84d45ee33e0c94020}{}\label{climate_8h_a8537e370377e23a84d45ee33e0c94020}
+&
+Gindex&
+\\
+\hline
+
+double\hypertarget{climate_8h_a3e6e6fd34e231be9977a1bc9cb6f5aff}{}\label{climate_8h_a3e6e6fd34e231be9977a1bc9cb6f5aff}
+&
+R0&
+\\
+\hline
+
+double\hypertarget{climate_8h_aac2e9ebcc294a0ab34604caee5d6e0e9}{}\label{climate_8h_aac2e9ebcc294a0ab34604caee5d6e0e9}
+&
+radius&
+\\
+\hline
+
+double\hypertarget{climate_8h_a3aed14112dbcc060d81f57b81e819f41}{}\label{climate_8h_a3aed14112dbcc060d81f57b81e819f41}
+&
+rho&
+\\
+\hline
+
+double\hypertarget{climate_8h_ad9edaaef7ce8fbcce1487c724c60308b}{}\label{climate_8h_ad9edaaef7ce8fbcce1487c724c60308b}
+&
+vel\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+P\+A\+R\+A\+MS@{\+\_\+\+P\+A\+R\+A\+MS}}\label{struct___p_a_r_a_m_s}
+\hypertarget{climate_8h_struct___p_a_r_a_m_s}{}
+\subsubsection{struct \+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{climate_8h_a754f4d85b3489ec7efa9213a59e74de9}{}\label{climate_8h_a754f4d85b3489ec7efa9213a59e74de9}
+&
+Cp&
+\\
+\hline
+
+double\hypertarget{climate_8h_a311d013a5a287320e6633023bd846737}{}\label{climate_8h_a311d013a5a287320e6633023bd846737}
+&
+D&
+\\
+\hline
+
+int\hypertarget{climate_8h_aba80253dc0b7cb1dded66884c3541994}{}\label{climate_8h_aba80253dc0b7cb1dded66884c3541994}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{climate_8h_a622b6d64f888aa40f0c3973e6f109e53}{}\label{climate_8h_a622b6d64f888aa40f0c3973e6f109e53}
+&
+disp\+\_\+rate&
+\\
+\hline
+
+\hyperlink{climate_8h_ac5ffc5b3bad0297c19e3d707caf86504}{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD} $\ast$\hypertarget{climate_8h_ad7f77c45c5fb994793a2a8eae09f3c78}{}\label{climate_8h_ad7f77c45c5fb994793a2a8eae09f3c78}
+&
+field&
+\\
+\hline
+
+double\hypertarget{climate_8h_a634e76523134d47fcfde055bab51ee7f}{}\label{climate_8h_a634e76523134d47fcfde055bab51ee7f}
+&
+frac&
+\\
+\hline
+
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$\hypertarget{climate_8h_a5fdae67dbc10d088861ee11de44c1f1e}{}\label{climate_8h_a5fdae67dbc10d088861ee11de44c1f1e}
+&
+global\+\_\+grid&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a4d652f5889e20c6faf7a924ad9f62da4}{}\label{climate_8h_a4d652f5889e20c6faf7a924ad9f62da4}
+&
+if\+\_\+condensation&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_aaed550c98cd50941498ee275cb47d4cf}{}\label{climate_8h_aaed550c98cd50941498ee275cb47d4cf}
+&
+if\+\_\+sedimentation&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_afb8ad5d41ea4869f3abbae8e910ee440}{}\label{climate_8h_afb8ad5d41ea4869f3abbae8e910ee440}
+&
+if\+\_\+volume\+\_\+force&
+\\
+\hline
+
+\hyperlink{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}\hypertarget{climate_8h_a1042eb172efe0a33bab5ba7b60abb3e6}{}\label{climate_8h_a1042eb172efe0a33bab5ba7b60abb3e6}
+&
+init\+\_\+drop\+\_\+state&
+\\
+\hline
+
+\hyperlink{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}\hypertarget{climate_8h_a2aadf4f354d91cf3230a118a6c88ec3f}{}\label{climate_8h_a2aadf4f354d91cf3230a118a6c88ec3f}
+&
+init\+\_\+state&
+\\
+\hline
+
+\hyperlink{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}\hypertarget{climate_8h_a7a4007988c2651416036d9f205b9ed5f}{}\label{climate_8h_a7a4007988c2651416036d9f205b9ed5f}
+&
+init\+\_\+temp\+\_\+state&
+\\
+\hline
+
+\hyperlink{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}\hypertarget{climate_8h_a8775173823a07cc083f4d4f655d5bebf}{}\label{climate_8h_a8775173823a07cc083f4d4f655d5bebf}
+&
+init\+\_\+vapor\+\_\+state&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_a03fbd4b22271152f1a5b1e5f45d0685b}{}\label{climate_8h_a03fbd4b22271152f1a5b1e5f45d0685b}
+&
+is\+\_\+bigdata&
+\\
+\hline
+
+double\hypertarget{climate_8h_a02aa47aa7be04b8bcd23582a266912bd}{}\label{climate_8h_a02aa47aa7be04b8bcd23582a266912bd}
+&
+K&
+\\
+\hline
+
+double\hypertarget{climate_8h_a96676ef73a5ee8bff4897886f2a77fe6}{}\label{climate_8h_a96676ef73a5ee8bff4897886f2a77fe6}
+&
+Kc&
+\\
+\hline
+
+double\hypertarget{climate_8h_a6d502f025ba58a2d331a0fd8ce55f24b}{}\label{climate_8h_a6d502f025ba58a2d331a0fd8ce55f24b}
+&
+L\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{climate_8h_a81a8dd5918b100950c86b6aa0f8d7b32}{}\label{climate_8h_a81a8dd5918b100950c86b6aa0f8d7b32}
+&
+Lh&
+\\
+\hline
+
+\hyperlink{climate_8h_a3261cdad5a8904a193479ff68f99f448}{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON} $\ast$\hypertarget{climate_8h_a942d0e3da0867b3c06bcd99a6bee426b}{}\label{climate_8h_a942d0e3da0867b3c06bcd99a6bee426b}
+&
+movie\+\_\+option&
+\\
+\hline
+
+int\hypertarget{climate_8h_abd481e762b289b2e12530cb11f98ce43}{}\label{climate_8h_abd481e762b289b2e12530cb11f98ce43}
+&
+Nclip\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{climate_8h_ac3cef1aa492a49df7707f13b51bb6839}{}\label{climate_8h_ac3cef1aa492a49df7707f13b51bb6839}
+&
+no\+\_\+droplets&
+\\
+\hline
+
+int\hypertarget{climate_8h_af8edf22dabbdb97a1ad985b4658c3693}{}\label{climate_8h_af8edf22dabbdb97a1ad985b4658c3693}
+&
+num\+\_\+drops&
+\\
+\hline
+
+int\hypertarget{climate_8h_aea92bcdd962cb07a0fc70ba2368ae2f9}{}\label{climate_8h_aea92bcdd962cb07a0fc70ba2368ae2f9}
+&
+num\+\_\+phases&
+\\
+\hline
+
+\hyperlink{climate_8h_ae672ed2d1e9e5db11f77587b58e38d5e}{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}\hypertarget{climate_8h_a1b4d3ccedbcddc9016ebe0eb24e4416f}{}\label{climate_8h_a1b4d3ccedbcddc9016ebe0eb24e4416f}
+&
+num\+\_\+scheme&
+\\
+\hline
+
+\hyperlink{climate_8h_af4f40182b820265bf127f595fcf84143}{P\+A\+R\+T\+I\+C\+LE} $\ast$\hypertarget{climate_8h_ad73da812956a6a620dabc7eadbf32ee0}{}\label{climate_8h_ad73da812956a6a620dabc7eadbf32ee0}
+&
+particle\+\_\+array&
+\\
+\hline
+
+int\hypertarget{climate_8h_a44d0f32dff3075fdee7e5c6348f92dd6}{}\label{climate_8h_a44d0f32dff3075fdee7e5c6348f92dd6}
+&
+pde\+\_\+order&
+\\
+\hline
+
+\hyperlink{climate_8h_a0121baba4aa50082324d1ba01147219b}{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}\hypertarget{climate_8h_ab8cda86548dc3970807ad031eb0da77c}{}\label{climate_8h_ab8cda86548dc3970807ad031eb0da77c}
+&
+prob\+\_\+type&
+\\
+\hline
+
+double\hypertarget{climate_8h_a969a0394f8df596abde6c7c5973f4c2a}{}\label{climate_8h_a969a0394f8df596abde6c7c5973f4c2a}
+&
+qe&
+\\
+\hline
+
+double\hypertarget{climate_8h_ab3aa44fe083e91ee630dd2ecc2181509}{}\label{climate_8h_ab3aa44fe083e91ee630dd2ecc2181509}
+&
+qs&
+\\
+\hline
+
+double\hypertarget{climate_8h_a4d3805fffdb3ac6ffef92f440da5649c}{}\label{climate_8h_a4d3805fffdb3ac6ffef92f440da5649c}
+&
+qv0&
+\\
+\hline
+
+double\hypertarget{climate_8h_aafb79f357d3b5597c95bfa14f984b5fb}{}\label{climate_8h_aafb79f357d3b5597c95bfa14f984b5fb}
+&
+Rd&
+\\
+\hline
+
+double\hypertarget{climate_8h_a044aad76ebdc868493de4fb4d32b7199}{}\label{climate_8h_a044aad76ebdc868493de4fb4d32b7199}
+&
+rho\+\_\+l&
+\\
+\hline
+
+double\hypertarget{climate_8h_aec8a371870c2e67f1f00d4aa48b36324}{}\label{climate_8h_aec8a371870c2e67f1f00d4aa48b36324}
+&
+Rv&
+\\
+\hline
+
+double\hypertarget{climate_8h_a99ff2ce413d1ee2a08b023d56f36ac8e}{}\label{climate_8h_a99ff2ce413d1ee2a08b023d56f36ac8e}
+&
+T0&
+\\
+\hline
+
+double\hypertarget{climate_8h_ab2a0d38693b6c047641a8e76453cee1f}{}\label{climate_8h_ab2a0d38693b6c047641a8e76453cee1f}
+&
+U\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{climate.\+h@{climate.\+h}!alternate\+\_\+comp@{alternate\+\_\+comp}}
+\index{alternate\+\_\+comp@{alternate\+\_\+comp}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{alternate\+\_\+comp}{alternate_comp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define alternate\+\_\+comp(
+\begin{DoxyParamCaption}
+\item[{}]{comp}
+\end{DoxyParamCaption}
+)~(comp) == {\bf L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2} ? {\bf S\+O\+L\+I\+D\+\_\+\+C\+O\+MP} \+: {\bf L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}}\hypertarget{climate_8h_aa505cec034e74fcc1b15b9c60d0e63c1}{}\label{climate_8h_aa505cec034e74fcc1b15b9c60d0e63c1}
+\index{climate.\+h@{climate.\+h}!L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}}
+\index{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}{LIQUID_COMP2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2~3}\hypertarget{climate_8h_a34eb030e3e2091d860a2dcdedd02882e}{}\label{climate_8h_a34eb030e3e2091d860a2dcdedd02882e}
+\index{climate.\+h@{climate.\+h}!M\+A\+X\+\_\+\+S\+T\+EP@{M\+A\+X\+\_\+\+S\+T\+EP}}
+\index{M\+A\+X\+\_\+\+S\+T\+EP@{M\+A\+X\+\_\+\+S\+T\+EP}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+S\+T\+EP}{MAX_STEP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+S\+T\+EP~10000}\hypertarget{climate_8h_a8fa4a934e7d02b3e5dabfc502cb611f7}{}\label{climate_8h_a8fa4a934e7d02b3e5dabfc502cb611f7}
+\index{climate.\+h@{climate.\+h}!S\+O\+L\+I\+D\+\_\+\+C\+O\+MP@{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}}
+\index{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP@{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}{SOLID_COMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+L\+I\+D\+\_\+\+C\+O\+MP~1}\hypertarget{climate_8h_a089b7696830a14a603e1df2becda9512}{}\label{climate_8h_a089b7696830a14a603e1df2becda9512}
+
+
+\subsection{Typedef Documentation}
+\index{climate.\+h@{climate.\+h}!C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE@{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}
+\index{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE@{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}{CL_PROB_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE} {\bf C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}\hypertarget{climate_8h_a0121baba4aa50082324d1ba01147219b}{}\label{climate_8h_a0121baba4aa50082324d1ba01147219b}
+\index{climate.\+h@{climate.\+h}!I\+N\+I\+T\+\_\+\+S\+T\+A\+TE@{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}}
+\index{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE@{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}{INIT_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE} {\bf I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}}\hypertarget{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}{}\label{climate_8h_a0f0c784ae4d2a2d4c34c08abfb6e0d1b}
+\index{climate.\+h@{climate.\+h}!M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON@{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}}
+\index{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON@{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}{MOVIE_OPTION}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON} {\bf M\+O\+V\+I\+E\+\_\+\+O\+P\+T\+I\+ON}}\hypertarget{climate_8h_a3261cdad5a8904a193479ff68f99f448}{}\label{climate_8h_a3261cdad5a8904a193479ff68f99f448}
+\index{climate.\+h@{climate.\+h}!N\+U\+M\+\_\+\+S\+C\+H\+E\+ME@{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}}
+\index{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME@{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}{NUM_SCHEME}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME} {\bf N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}}\hypertarget{climate_8h_ae672ed2d1e9e5db11f77587b58e38d5e}{}\label{climate_8h_ae672ed2d1e9e5db11f77587b58e38d5e}
+\index{climate.\+h@{climate.\+h}!P\+A\+R\+A\+MS@{P\+A\+R\+A\+MS}}
+\index{P\+A\+R\+A\+MS@{P\+A\+R\+A\+MS}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+A\+MS}{PARAMS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+P\+A\+R\+A\+MS} {\bf P\+A\+R\+A\+MS}}\hypertarget{climate_8h_adc32b7cd2747da3d0faff22bbba5677d}{}\label{climate_8h_adc32b7cd2747da3d0faff22bbba5677d}
+\index{climate.\+h@{climate.\+h}!P\+A\+R\+T\+I\+C\+LE@{P\+A\+R\+T\+I\+C\+LE}}
+\index{P\+A\+R\+T\+I\+C\+LE@{P\+A\+R\+T\+I\+C\+LE}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+T\+I\+C\+LE}{PARTICLE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+P\+A\+R\+T\+I\+C\+LE} {\bf P\+A\+R\+T\+I\+C\+LE}}\hypertarget{climate_8h_af4f40182b820265bf127f595fcf84143}{}\label{climate_8h_af4f40182b820265bf127f595fcf84143}
+\index{climate.\+h@{climate.\+h}!P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD@{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}}
+\index{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD@{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}{PHASE_FIELD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD} {\bf P\+H\+A\+S\+E\+\_\+\+F\+I\+E\+LD}}\hypertarget{climate_8h_ac5ffc5b3bad0297c19e3d707caf86504}{}\label{climate_8h_ac5ffc5b3bad0297c19e3d707caf86504}
+
+
+\subsection{Enumeration Type Documentation}
+\index{climate.\+h@{climate.\+h}!\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE@{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}
+\index{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE@{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}{_CL_PROB_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+C\+L\+\_\+\+P\+R\+O\+B\+\_\+\+T\+Y\+PE}}\hypertarget{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371}{}\label{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG@{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG@{P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG}}\item[{\em 
+P\+A\+R\+T\+I\+C\+L\+E\+\_\+\+T\+R\+A\+C\+K\+I\+NG\hypertarget{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a1ced207bc4dd7d578498517e19352907}{}\label{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a1ced207bc4dd7d578498517e19352907}
+}]\index{E\+N\+T\+R\+A\+I\+N\+M\+E\+NT@{E\+N\+T\+R\+A\+I\+N\+M\+E\+NT}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!E\+N\+T\+R\+A\+I\+N\+M\+E\+NT@{E\+N\+T\+R\+A\+I\+N\+M\+E\+NT}}\item[{\em 
+E\+N\+T\+R\+A\+I\+N\+M\+E\+NT\hypertarget{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a75446cf0c635bc6e3347b10150d57c8f}{}\label{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a75446cf0c635bc6e3347b10150d57c8f}
+}]\index{R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD@{R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD@{R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD}}\item[{\em 
+R\+A\+N\+D\+O\+M\+\_\+\+F\+I\+E\+LD\hypertarget{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a221d0f453e7238e6dced217b56afa0d3}{}\label{climate_8h_a9105ab2b5cbb887a7dced9d71d4c6371a221d0f453e7238e6dced217b56afa0d3}
+}]\end{description}
+\end{Desc}
+\index{climate.\+h@{climate.\+h}!\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE@{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}}
+\index{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE@{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}{_INIT_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+TE}}\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE@{Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE@{Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+Z\+E\+R\+O\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112ae6e34b14506993a8682bbd088c178b4e}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112ae6e34b14506993a8682bbd088c178b4e}
+}]\index{C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE@{C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE@{C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+C\+O\+N\+S\+T\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112a696130dad445394b4958e4f6aa0411e2}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112a696130dad445394b4958e4f6aa0411e2}
+}]\index{R\+A\+N\+D\+\_\+\+S\+T\+A\+TE@{R\+A\+N\+D\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!R\+A\+N\+D\+\_\+\+S\+T\+A\+TE@{R\+A\+N\+D\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+R\+A\+N\+D\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad59ca8ae35e783f1959ec793c553b148}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad59ca8ae35e783f1959ec793c553b148}
+}]\index{T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE@{T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE@{T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+T\+A\+Y\+L\+O\+R\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112ab4c6fa4d312aa55b906d871d594cc94e}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112ab4c6fa4d312aa55b906d871d594cc94e}
+}]\index{P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE@{P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE@{P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+P\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112a9cbeb00af24b3257a312c9a7b0b1a10b}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112a9cbeb00af24b3257a312c9a7b0b1a10b}
+}]\index{F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE@{F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE@{F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+F\+O\+U\+R\+I\+E\+R\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112a06e65a3d2593dbd7e0cf051a6118cba2}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112a06e65a3d2593dbd7e0cf051a6118cba2}
+}]\index{S\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{S\+I\+N\+E\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!S\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{S\+I\+N\+E\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+S\+I\+N\+E\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112ac586fa2a0d5f758c57ce6ea48adaa44c}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112ac586fa2a0d5f758c57ce6ea48adaa44c}
+}]\index{A\+B\+C\+\_\+\+S\+T\+A\+TE@{A\+B\+C\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!A\+B\+C\+\_\+\+S\+T\+A\+TE@{A\+B\+C\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+A\+B\+C\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112aa0b829a2e49fcd852af603f698e05b24}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112aa0b829a2e49fcd852af603f698e05b24}
+}]\index{L\+R\+\_\+\+S\+T\+A\+TE@{L\+R\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!L\+R\+\_\+\+S\+T\+A\+TE@{L\+R\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+L\+R\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad342554e83b831b3e7f6569d22f94ea4}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112ad342554e83b831b3e7f6569d22f94ea4}
+}]\index{T\+B\+\_\+\+S\+T\+A\+TE@{T\+B\+\_\+\+S\+T\+A\+TE}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!T\+B\+\_\+\+S\+T\+A\+TE@{T\+B\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+T\+B\+\_\+\+S\+T\+A\+TE\hypertarget{climate_8h_ab6b5ddc76229c76ef2b465423066b112a2e6b554f3e6cadc0821bfbd7ec537437}{}\label{climate_8h_ab6b5ddc76229c76ef2b465423066b112a2e6b554f3e6cadc0821bfbd7ec537437}
+}]\end{description}
+\end{Desc}
+\index{climate.\+h@{climate.\+h}!\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME@{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}}
+\index{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME@{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}{_NUM_SCHEME}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+N\+U\+M\+\_\+\+S\+C\+H\+E\+ME}}\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8e}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT@{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT@{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT}}\item[{\em 
+U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea39ebf1b149a7af51d3bb740350b32b6e}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea39ebf1b149a7af51d3bb740350b32b6e}
+}]\index{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM@{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM@{U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}}\item[{\em 
+U\+N\+S\+P\+L\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea183bb3388e1f1086820175f78b35172f}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea183bb3388e1f1086820175f78b35172f}
+}]\index{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT@{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT@{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT}}\item[{\em 
+U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+IT\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea9a825f14ff352e8900b237674b82eb63}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea9a825f14ff352e8900b237674b82eb63}
+}]\index{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM@{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM@{U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM}}\item[{\em 
+U\+N\+S\+P\+L\+I\+T\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+C\+IM\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea4e31e06b92c04c664acf49279770a6b2}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea4e31e06b92c04c664acf49279770a6b2}
+}]\index{W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON@{W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON@{W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}}\item[{\em 
+W\+E\+N\+O\+\_\+\+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea2bd7557cb52db04459d696084240b42e}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8ea2bd7557cb52db04459d696084240b42e}
+}]\index{C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON@{C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}!climate.\+h@{climate.\+h}}\index{climate.\+h@{climate.\+h}!C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON@{C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON}}\item[{\em 
+C\+R\+A\+N\+K\+\_\+\+N\+I\+C\+O\+L\+S\+ON\hypertarget{climate_8h_a335caef8600c25fa44a8180d9c32cb8eabbd1ebd69b82357b2dd7e0d08aff007f}{}\label{climate_8h_a335caef8600c25fa44a8180d9c32cb8eabbd1ebd69b82357b2dd7e0d08aff007f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{climate.\+h@{climate.\+h}!Array\+Print@{Array\+Print}}
+\index{Array\+Print@{Array\+Print}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Array\+Print(int my\+\_\+rank, char $\ast$name, int m, int n, int l, double $\ast$$\ast$$\ast$array)}{ArrayPrint(int my_rank, char *name, int m, int n, int l, double ***array)}}]{\setlength{\rightskip}{0pt plus 5cm}void Array\+Print (
+\begin{DoxyParamCaption}
+\item[{int}]{my\+\_\+rank, }
+\item[{char $\ast$}]{name, }
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{int}]{l, }
+\item[{double $\ast$$\ast$$\ast$}]{array}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_afe223dcd91034b5fa10ff5ed9b07f144}{}\label{climate_8h_afe223dcd91034b5fa10ff5ed9b07f144}
+\index{climate.\+h@{climate.\+h}!Array\+Zero@{Array\+Zero}}
+\index{Array\+Zero@{Array\+Zero}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Array\+Zero(int m, int n, int l, double $\ast$$\ast$$\ast$matrix)}{ArrayZero(int m, int n, int l, double ***matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void Array\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{int}]{l, }
+\item[{double $\ast$$\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a35faa387e111e6979ec24a8c2eeb5866}{}\label{climate_8h_a35faa387e111e6979ec24a8c2eeb5866}
+\index{climate.\+h@{climate.\+h}!assign\+State\+Temperature@{assign\+State\+Temperature}}
+\index{assign\+State\+Temperature@{assign\+State\+Temperature}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{assign\+State\+Temperature(double, P\+O\+I\+N\+T\+E\+R)}{assignStateTemperature(double, POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}void assign\+State\+Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ab5c3f0f3550c10fe653f3820a9eae309}{}\label{climate_8h_ab5c3f0f3550c10fe653f3820a9eae309}
+\index{climate.\+h@{climate.\+h}!assign\+State\+Vapor@{assign\+State\+Vapor}}
+\index{assign\+State\+Vapor@{assign\+State\+Vapor}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{assign\+State\+Vapor(double, P\+O\+I\+N\+T\+E\+R)}{assignStateVapor(double, POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}void assign\+State\+Vapor (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a8f5beec79141ce7c038a227c6ac18211}{}\label{climate_8h_a8f5beec79141ce7c038a227c6ac18211}
+\index{climate.\+h@{climate.\+h}!compute\+\_\+ice\+\_\+particle\+\_\+force@{compute\+\_\+ice\+\_\+particle\+\_\+force}}
+\index{compute\+\_\+ice\+\_\+particle\+\_\+force@{compute\+\_\+ice\+\_\+particle\+\_\+force}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{compute\+\_\+ice\+\_\+particle\+\_\+force(\+Front $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double, double $\ast$, double $\ast$)}{compute_ice_particle_force(Front *, HYPER_SURF *, double, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void compute\+\_\+ice\+\_\+particle\+\_\+force (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{, }
+\item[{double}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ace8c2c7cacea6f5a6e6e08fc75623a0c}{}\label{climate_8h_ace8c2c7cacea6f5a6e6e08fc75623a0c}
+\index{climate.\+h@{climate.\+h}!Compute\+P\+DF@{Compute\+P\+DF}}
+\index{Compute\+P\+DF@{Compute\+P\+DF}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Compute\+P\+D\+F(double $\ast$, int, double \&, int, double \&, double \&)}{ComputePDF(double *, int, double &, int, double &, double &)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Compute\+P\+DF (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{int}]{, }
+\item[{double \&}]{, }
+\item[{int}]{, }
+\item[{double \&}]{, }
+\item[{double \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ad3036ad60322b08cf0437af8b45fbc14}{}\label{climate_8h_ad3036ad60322b08cf0437af8b45fbc14}
+\index{climate.\+h@{climate.\+h}!Compute\+P\+DF@{Compute\+P\+DF}}
+\index{Compute\+P\+DF@{Compute\+P\+DF}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Compute\+P\+D\+F(double $\ast$, int, double \&, int, double \&, double \&, boolean)}{ComputePDF(double *, int, double &, int, double &, double &, boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Compute\+P\+DF (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{int}]{, }
+\item[{double \&}]{, }
+\item[{int}]{, }
+\item[{double \&}]{, }
+\item[{double \&}]{, }
+\item[{{\bf boolean}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a5019c95da2dc4e2a12c50cf487dccdf0}{}\label{climate_8h_a5019c95da2dc4e2a12c50cf487dccdf0}
+\index{climate.\+h@{climate.\+h}!Condensation\+Pre\+Advance@{Condensation\+Pre\+Advance}}
+\index{Condensation\+Pre\+Advance@{Condensation\+Pre\+Advance}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Condensation\+Pre\+Advance(\+Front $\ast$)}{CondensationPreAdvance(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Condensation\+Pre\+Advance (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a0d7a1a09f6eed2447e959d215700d350}{}\label{climate_8h_a0d7a1a09f6eed2447e959d215700d350}
+\index{climate.\+h@{climate.\+h}!Deviation@{Deviation}}
+\index{Deviation@{Deviation}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Deviation(double $\ast$, int, double \&, double \&)}{Deviation(double *, int, double &, double &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Deviation (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{int}]{, }
+\item[{double \&}]{, }
+\item[{double \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a9b904563ad00bec55164fa9b4d53b615}{}\label{climate_8h_a9b904563ad00bec55164fa9b4d53b615}
+\index{climate.\+h@{climate.\+h}!Deviation@{Deviation}}
+\index{Deviation@{Deviation}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Deviation(double $\ast$, Front $\ast$, double \&, double \&)}{Deviation(double *, Front *, double &, double &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Deviation (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{, }
+\item[{double \&}]{, }
+\item[{double \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a893d166663c824222a76f8e12ee82a4a}{}\label{climate_8h_a893d166663c824222a76f8e12ee82a4a}
+\index{climate.\+h@{climate.\+h}!fftnd@{fftnd}}
+\index{fftnd@{fftnd}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{fftnd(fftw\+\_\+complex $\ast$, int, int $\ast$, int)}{fftnd(fftw_complex *, int, int *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}bool fftnd (
+\begin{DoxyParamCaption}
+\item[{fftw\+\_\+complex $\ast$}]{, }
+\item[{int}]{, }
+\item[{int $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a7a6b49c0524a760880dd8f67f6ff4d8f}{}\label{climate_8h_a7a6b49c0524a760880dd8f67f6ff4d8f}
+\index{climate.\+h@{climate.\+h}!get\+State\+Super@{get\+State\+Super}}
+\index{get\+State\+Super@{get\+State\+Super}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Super(\+P\+O\+I\+N\+T\+E\+R)}{getStateSuper(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Super (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a93350b1a4af8f0ae84cf29151a12add4}{}\label{climate_8h_a93350b1a4af8f0ae84cf29151a12add4}
+\index{climate.\+h@{climate.\+h}!get\+State\+Temperature@{get\+State\+Temperature}}
+\index{get\+State\+Temperature@{get\+State\+Temperature}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Temperature(\+P\+O\+I\+N\+T\+E\+R)}{getStateTemperature(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ab30fcc590d49de48dfb4449a7abee519}{}\label{climate_8h_ab30fcc590d49de48dfb4449a7abee519}
+\index{climate.\+h@{climate.\+h}!get\+State\+Vapor@{get\+State\+Vapor}}
+\index{get\+State\+Vapor@{get\+State\+Vapor}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Vapor(\+P\+O\+I\+N\+T\+E\+R)}{getStateVapor(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Vapor (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ad1d386f9b7e7dc7d0169d4e3b014e9a3}{}\label{climate_8h_ad1d386f9b7e7dc7d0169d4e3b014e9a3}
+\index{climate.\+h@{climate.\+h}!gv\+\_\+plot\+\_\+scatter@{gv\+\_\+plot\+\_\+scatter}}
+\index{gv\+\_\+plot\+\_\+scatter@{gv\+\_\+plot\+\_\+scatter}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{gv\+\_\+plot\+\_\+scatter(\+Front $\ast$)}{gv_plot_scatter(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void gv\+\_\+plot\+\_\+scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ac356fe4d26d337e2e9fa7428a7c8c0f4}{}\label{climate_8h_ac356fe4d26d337e2e9fa7428a7c8c0f4}
+\index{climate.\+h@{climate.\+h}!init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}}
+\index{init\+\_\+fluid\+\_\+state\+\_\+func@{init\+\_\+fluid\+\_\+state\+\_\+func}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+fluid\+\_\+state\+\_\+func(\+Front $\ast$, Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis $\ast$)}{init_fluid_state_func(Front *, Incompress_Solver_Smooth_Basis *)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+fluid\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a62825592778d8dba01080beceeeaf918}{}\label{climate_8h_a62825592778d8dba01080beceeeaf918}
+\index{climate.\+h@{climate.\+h}!init\+\_\+temp\+\_\+state\+\_\+func@{init\+\_\+temp\+\_\+state\+\_\+func}}
+\index{init\+\_\+temp\+\_\+state\+\_\+func@{init\+\_\+temp\+\_\+state\+\_\+func}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+temp\+\_\+state\+\_\+func(\+Front $\ast$, V\+C\+A\+R\+T\+E\+S\+I\+A\+N $\ast$)}{init_temp_state_func(Front *, VCARTESIAN *)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+temp\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a1dd7bb48f3cc15f682f25ab6b38153c0}{}\label{climate_8h_a1dd7bb48f3cc15f682f25ab6b38153c0}
+\index{climate.\+h@{climate.\+h}!init\+\_\+vapor\+\_\+state\+\_\+func@{init\+\_\+vapor\+\_\+state\+\_\+func}}
+\index{init\+\_\+vapor\+\_\+state\+\_\+func@{init\+\_\+vapor\+\_\+state\+\_\+func}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+vapor\+\_\+state\+\_\+func(\+Front $\ast$, V\+C\+A\+R\+T\+E\+S\+I\+A\+N $\ast$)}{init_vapor_state_func(Front *, VCARTESIAN *)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+vapor\+\_\+state\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf V\+C\+A\+R\+T\+E\+S\+I\+AN} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a2fb4eb164f7759834f0e5dfb31acc7c8}{}\label{climate_8h_a2fb4eb164f7759834f0e5dfb31acc7c8}
+\index{climate.\+h@{climate.\+h}!init\+Phase\+Intfc@{init\+Phase\+Intfc}}
+\index{init\+Phase\+Intfc@{init\+Phase\+Intfc}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{init\+Phase\+Intfc(char $\ast$, int, L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+C\+K $\ast$, P\+A\+R\+A\+M\+S $\ast$)}{initPhaseIntfc(char *, int, LEVEL_FUNC_PACK *, PARAMS *)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Phase\+Intfc (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{int}]{, }
+\item[{{\bf L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$}]{, }
+\item[{{\bf P\+A\+R\+A\+MS} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a38ffee15b5c3ef80ee878bc3b68d027e}{}\label{climate_8h_a38ffee15b5c3ef80ee878bc3b68d027e}
+\index{climate.\+h@{climate.\+h}!init\+Water\+Drops@{init\+Water\+Drops}}
+\index{init\+Water\+Drops@{init\+Water\+Drops}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{init\+Water\+Drops(\+Front $\ast$)}{initWaterDrops(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Water\+Drops (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_af4bfdea56184382fa59c35ac81a10511}{}\label{climate_8h_af4bfdea56184382fa59c35ac81a10511}
+\index{climate.\+h@{climate.\+h}!Matrix\+Copy@{Matrix\+Copy}}
+\index{Matrix\+Copy@{Matrix\+Copy}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Copy(int m, int n, double $\ast$$\ast$\+U2, double $\ast$$\ast$\+U1)}{MatrixCopy(int m, int n, double **U2, double **U1)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Copy (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{U2, }
+\item[{double $\ast$$\ast$}]{U1}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a7522d728e2cfaf019a11191665abae2b}{}\label{climate_8h_a7522d728e2cfaf019a11191665abae2b}
+\index{climate.\+h@{climate.\+h}!Matrix\+Identity@{Matrix\+Identity}}
+\index{Matrix\+Identity@{Matrix\+Identity}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Identity(int n, double $\ast$$\ast$matrix)}{MatrixIdentity(int n, double **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Identity (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_aca6526a84fd6bc02ddb57134aa4ae973}{}\label{climate_8h_aca6526a84fd6bc02ddb57134aa4ae973}
+\index{climate.\+h@{climate.\+h}!Matrix\+Max@{Matrix\+Max}}
+\index{Matrix\+Max@{Matrix\+Max}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Max(int m, int n, double $\ast$$\ast$matrix)}{MatrixMax(int m, int n, double **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}double Matrix\+Max (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a6f5bd92a43f206de47ca92c3299a6c48}{}\label{climate_8h_a6f5bd92a43f206de47ca92c3299a6c48}
+\index{climate.\+h@{climate.\+h}!Matrix\+Min@{Matrix\+Min}}
+\index{Matrix\+Min@{Matrix\+Min}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Min(int m, int n, double $\ast$$\ast$matrix)}{MatrixMin(int m, int n, double **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}double Matrix\+Min (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a9e523bc2cd45a03493142e4592fc098b}{}\label{climate_8h_a9e523bc2cd45a03493142e4592fc098b}
+\index{climate.\+h@{climate.\+h}!Matrix\+Multiply@{Matrix\+Multiply}}
+\index{Matrix\+Multiply@{Matrix\+Multiply}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Multiply(int n, double $\ast$$\ast$\+C, double $\ast$$\ast$\+A, double $\ast$$\ast$\+B)}{MatrixMultiply(int n, double **C, double **A, double **B)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Multiply (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{C, }
+\item[{double $\ast$$\ast$}]{A, }
+\item[{double $\ast$$\ast$}]{B}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_aa609630c3d89b7bdf397c02c35506ca0}{}\label{climate_8h_aa609630c3d89b7bdf397c02c35506ca0}
+\index{climate.\+h@{climate.\+h}!Matrix\+Multiply@{Matrix\+Multiply}}
+\index{Matrix\+Multiply@{Matrix\+Multiply}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Multiply(int n, double $\ast$$\ast$\+C, double $\ast$$\ast$\+A)}{MatrixMultiply(int n, double **C, double **A)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Multiply (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{C, }
+\item[{double $\ast$$\ast$}]{A}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_acd014ffdb82f43998be362156d65386d}{}\label{climate_8h_acd014ffdb82f43998be362156d65386d}
+\index{climate.\+h@{climate.\+h}!Matrix\+Multiply@{Matrix\+Multiply}}
+\index{Matrix\+Multiply@{Matrix\+Multiply}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Multiply(double C[3][3], double A[3][3], double B[3][3])}{MatrixMultiply(double C[3][3], double A[3][3], double B[3][3])}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Multiply (
+\begin{DoxyParamCaption}
+\item[{double}]{C\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{double}]{A\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{double}]{B\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a558543767cd7789fe14cbdf405d31042}{}\label{climate_8h_a558543767cd7789fe14cbdf405d31042}
+\index{climate.\+h@{climate.\+h}!Matrix\+Print@{Matrix\+Print}}
+\index{Matrix\+Print@{Matrix\+Print}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Print(int my\+\_\+rank, char $\ast$name, int m, int n, double $\ast$$\ast$matrix)}{MatrixPrint(int my_rank, char *name, int m, int n, double **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Print (
+\begin{DoxyParamCaption}
+\item[{int}]{my\+\_\+rank, }
+\item[{char $\ast$}]{name, }
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ad35e40cc2a8baa97e72e8d5797b1737a}{}\label{climate_8h_ad35e40cc2a8baa97e72e8d5797b1737a}
+\index{climate.\+h@{climate.\+h}!Matrix\+Vector\+Multiply@{Matrix\+Vector\+Multiply}}
+\index{Matrix\+Vector\+Multiply@{Matrix\+Vector\+Multiply}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Vector\+Multiply(int n, double $\ast$\+C, double $\ast$$\ast$\+A, double $\ast$b)}{MatrixVectorMultiply(int n, double *C, double **A, double *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Vector\+Multiply (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$}]{C, }
+\item[{double $\ast$$\ast$}]{A, }
+\item[{double $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ad2ae21eba267cd664a9979ef9c22d256}{}\label{climate_8h_ad2ae21eba267cd664a9979ef9c22d256}
+\index{climate.\+h@{climate.\+h}!Matrix\+Zero@{Matrix\+Zero}}
+\index{Matrix\+Zero@{Matrix\+Zero}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Matrix\+Zero(int m, int n, double $\ast$$\ast$matrix)}{MatrixZero(int m, int n, double **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a2e1ce0139c6ef73185f33fa38503d926}{}\label{climate_8h_a2e1ce0139c6ef73185f33fa38503d926}
+\index{climate.\+h@{climate.\+h}!melt\+\_\+flow\+Through\+Boundary\+State@{melt\+\_\+flow\+Through\+Boundary\+State}}
+\index{melt\+\_\+flow\+Through\+Boundary\+State@{melt\+\_\+flow\+Through\+Boundary\+State}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{melt\+\_\+flow\+Through\+Boundary\+State(double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Front $\ast$, P\+O\+I\+N\+T\+E\+R, P\+O\+I\+N\+T\+E\+R)}{melt_flowThroughBoundaryState(double *, HYPER_SURF *, Front *, POINTER, POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}void melt\+\_\+flow\+Through\+Boundary\+State (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_abceae2545be35a6d8e93f8af6daf6507}{}\label{climate_8h_abceae2545be35a6d8e93f8af6daf6507}
+\index{climate.\+h@{climate.\+h}!Particle\+Propagate@{Particle\+Propagate}}
+\index{Particle\+Propagate@{Particle\+Propagate}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Particle\+Propagate(\+Front $\ast$)}{ParticlePropagate(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Propagate (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a4d3019acc7dcdb578b7536e77c6587e9}{}\label{climate_8h_a4d3019acc7dcdb578b7536e77c6587e9}
+\index{climate.\+h@{climate.\+h}!print\+Droplets\+States@{print\+Droplets\+States}}
+\index{print\+Droplets\+States@{print\+Droplets\+States}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{print\+Droplets\+States(\+Front $\ast$, char $\ast$)}{printDropletsStates(Front *, char *)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Droplets\+States (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a00bc3979c6c3e2188063ee1c81c0621b}{}\label{climate_8h_a00bc3979c6c3e2188063ee1c81c0621b}
+\index{climate.\+h@{climate.\+h}!read\+\_\+\+C\+L\+\_\+prob\+\_\+type@{read\+\_\+\+C\+L\+\_\+prob\+\_\+type}}
+\index{read\+\_\+\+C\+L\+\_\+prob\+\_\+type@{read\+\_\+\+C\+L\+\_\+prob\+\_\+type}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+\+C\+L\+\_\+prob\+\_\+type(\+Front $\ast$)}{read_CL_prob_type(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+\+C\+L\+\_\+prob\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ae563ae6976a5226777ae58835a93c427}{}\label{climate_8h_ae563ae6976a5226777ae58835a93c427}
+\index{climate.\+h@{climate.\+h}!read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data}}
+\index{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data(char $\ast$, Front $\ast$, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A)}{read_crt_dirichlet_bdry_data(char *, Front *, F_BASIC_DATA)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ac3843e53f37bd2af5c156d33b439695d}{}\label{climate_8h_ac3843e53f37bd2af5c156d33b439695d}
+\index{climate.\+h@{climate.\+h}!read\+\_\+fluid\+\_\+params@{read\+\_\+fluid\+\_\+params}}
+\index{read\+\_\+fluid\+\_\+params@{read\+\_\+fluid\+\_\+params}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+fluid\+\_\+params(\+Front $\ast$)}{read_fluid_params(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+fluid\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a1246f3eea78d1a7f11651bbf71366921}{}\label{climate_8h_a1246f3eea78d1a7f11651bbf71366921}
+\index{climate.\+h@{climate.\+h}!read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data}}
+\index{read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data(char $\ast$, Front $\ast$, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A)}{read_melt_dirichlet_bdry_data(char *, Front *, F_BASIC_DATA)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+melt\+\_\+dirichlet\+\_\+bdry\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a7229d2614cdf9aed40ada17b56a11c0e}{}\label{climate_8h_a7229d2614cdf9aed40ada17b56a11c0e}
+\index{climate.\+h@{climate.\+h}!read\+Phase\+Params@{read\+Phase\+Params}}
+\index{read\+Phase\+Params@{read\+Phase\+Params}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+Phase\+Params(\+Front $\ast$)}{readPhaseParams(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Phase\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a20c0b36193bc2c4d80c52a9dc3f84e33}{}\label{climate_8h_a20c0b36193bc2c4d80c52a9dc3f84e33}
+\index{climate.\+h@{climate.\+h}!read\+Water\+Drops\+Params@{read\+Water\+Drops\+Params}}
+\index{read\+Water\+Drops\+Params@{read\+Water\+Drops\+Params}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{read\+Water\+Drops\+Params(\+Front $\ast$, char $\ast$)}{readWaterDropsParams(Front *, char *)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Water\+Drops\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a8b2c704aee2074d562f813a4eb7e83db}{}\label{climate_8h_a8b2c704aee2074d562f813a4eb7e83db}
+\index{climate.\+h@{climate.\+h}!set\+Particle\+Global\+Index@{set\+Particle\+Global\+Index}}
+\index{set\+Particle\+Global\+Index@{set\+Particle\+Global\+Index}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{set\+Particle\+Global\+Index(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$, int)}{setParticleGlobalIndex(PARTICLE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Particle\+Global\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a79ce5e11fa7fe15982567a25407cac91}{}\label{climate_8h_a79ce5e11fa7fe15982567a25407cac91}
+\index{climate.\+h@{climate.\+h}!set\+Particle\+Group\+Index@{set\+Particle\+Group\+Index}}
+\index{set\+Particle\+Group\+Index@{set\+Particle\+Group\+Index}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{set\+Particle\+Group\+Index(\+P\+A\+R\+T\+I\+C\+L\+E $\ast$, int, int, int $\ast$, double $\ast$, double $\ast$)}{setParticleGroupIndex(PARTICLE *, int, int, int *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Particle\+Group\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+A\+R\+T\+I\+C\+LE} $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a77f2fd947e6879d132921a84b3e3553e}{}\label{climate_8h_a77f2fd947e6879d132921a84b3e3553e}
+\index{climate.\+h@{climate.\+h}!Symmetric\+Matrix\+Inverse@{Symmetric\+Matrix\+Inverse}}
+\index{Symmetric\+Matrix\+Inverse@{Symmetric\+Matrix\+Inverse}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Symmetric\+Matrix\+Inverse(double B[3][3], double A[3][3])}{SymmetricMatrixInverse(double B[3][3], double A[3][3])}}]{\setlength{\rightskip}{0pt plus 5cm}void Symmetric\+Matrix\+Inverse (
+\begin{DoxyParamCaption}
+\item[{double}]{B\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{double}]{A\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a09c705d382adfab74a86964cadf88579}{}\label{climate_8h_a09c705d382adfab74a86964cadf88579}
+\index{climate.\+h@{climate.\+h}!Vector2\+Matrix@{Vector2\+Matrix}}
+\index{Vector2\+Matrix@{Vector2\+Matrix}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector2\+Matrix(int m, int n, double $\ast$$\ast$matrix, double $\ast$vector)}{Vector2Matrix(int m, int n, double **matrix, double *vector)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector2\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$$\ast$}]{matrix, }
+\item[{double $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a9af857c3408b9d50e51a68495ae7fc9a}{}\label{climate_8h_a9af857c3408b9d50e51a68495ae7fc9a}
+\index{climate.\+h@{climate.\+h}!Vector\+Copy@{Vector\+Copy}}
+\index{Vector\+Copy@{Vector\+Copy}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector\+Copy(int n, double $\ast$vector1, double $\ast$vector2)}{VectorCopy(int n, double *vector1, double *vector2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Copy (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$}]{vector1, }
+\item[{double $\ast$}]{vector2}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a8f30c2f8b0cf03e09dcc8a759143c89c}{}\label{climate_8h_a8f30c2f8b0cf03e09dcc8a759143c89c}
+\index{climate.\+h@{climate.\+h}!Vector\+Int\+Print@{Vector\+Int\+Print}}
+\index{Vector\+Int\+Print@{Vector\+Int\+Print}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector\+Int\+Print(int my\+\_\+rank, char $\ast$name, int n, int $\ast$vector)}{VectorIntPrint(int my_rank, char *name, int n, int *vector)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Int\+Print (
+\begin{DoxyParamCaption}
+\item[{int}]{my\+\_\+rank, }
+\item[{char $\ast$}]{name, }
+\item[{int}]{n, }
+\item[{int $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_aa66fc3cf04442018a4ede64c84f7c603}{}\label{climate_8h_aa66fc3cf04442018a4ede64c84f7c603}
+\index{climate.\+h@{climate.\+h}!Vector\+Print@{Vector\+Print}}
+\index{Vector\+Print@{Vector\+Print}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector\+Print(int my\+\_\+rank, char $\ast$name, int n, double $\ast$vector)}{VectorPrint(int my_rank, char *name, int n, double *vector)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Print (
+\begin{DoxyParamCaption}
+\item[{int}]{my\+\_\+rank, }
+\item[{char $\ast$}]{name, }
+\item[{int}]{n, }
+\item[{double $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_af060d6d39074eb826801e20820c13f69}{}\label{climate_8h_af060d6d39074eb826801e20820c13f69}
+\index{climate.\+h@{climate.\+h}!Vector\+Zero@{Vector\+Zero}}
+\index{Vector\+Zero@{Vector\+Zero}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector\+Zero(int n, double $\ast$vector)}{VectorZero(int n, double *vector)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_ada7b84285cfbc0a4cf1ae6eb4ed9c060}{}\label{climate_8h_ada7b84285cfbc0a4cf1ae6eb4ed9c060}
+\index{climate.\+h@{climate.\+h}!Vector\+Zero@{Vector\+Zero}}
+\index{Vector\+Zero@{Vector\+Zero}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{Vector\+Zero(int n, int $\ast$vector)}{VectorZero(int n, int *vector)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Zero (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a28e7d1d44b2c5a07a3a146b3b6a68fc0}{}\label{climate_8h_a28e7d1d44b2c5a07a3a146b3b6a68fc0}
+\index{climate.\+h@{climate.\+h}!vtk\+\_\+plot\+\_\+sample\+\_\+traj@{vtk\+\_\+plot\+\_\+sample\+\_\+traj}}
+\index{vtk\+\_\+plot\+\_\+sample\+\_\+traj@{vtk\+\_\+plot\+\_\+sample\+\_\+traj}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+sample\+\_\+traj(\+Front $\ast$)}{vtk_plot_sample_traj(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void vtk\+\_\+plot\+\_\+sample\+\_\+traj (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a1667998dce305ff230bf7d71b4c248e4}{}\label{climate_8h_a1667998dce305ff230bf7d71b4c248e4}
+\index{climate.\+h@{climate.\+h}!vtk\+\_\+plot\+\_\+scatter@{vtk\+\_\+plot\+\_\+scatter}}
+\index{vtk\+\_\+plot\+\_\+scatter@{vtk\+\_\+plot\+\_\+scatter}!climate.\+h@{climate.\+h}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+scatter(\+Front $\ast$)}{vtk_plot_scatter(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void vtk\+\_\+plot\+\_\+scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8h_a846289e7d118553b4ff56c07216ed670}{}\label{climate_8h_a846289e7d118553b4ff56c07216ed670}

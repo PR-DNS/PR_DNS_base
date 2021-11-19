@@ -1,0 +1,567 @@
+\hypertarget{group___q_u_e_r_y}{}\section{Fron\+Tier Interface Query Functions}
+\label{group___q_u_e_r_y}\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga4d9374ec9ecc9610a746e12284b4bd42}{F\+T\+\_\+\+Dimension} ()
+\begin{DoxyCompactList}\small\item\em This function returns the spatial dimension of current run. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga1d60b2b7c1875fd799717fdee8ab42ee}{F\+T\+\_\+\+Rect\+Boundary\+Type} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function returns rectangular boundary type in direction dir and side side. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ \hyperlink{group___q_u_e_r_y_ga448da7f0f1046c2719bde3e7bbd8789a}{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type}, int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function looks for a boundary hyper surface (curve in 2D and surface in 3D) at the rectangular domain border with the given wave type of the hyper surface in direction dir and side side. Returns N\+U\+LL if no match is found and return pointer to the hyper surface if found. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$ \hyperlink{group___q_u_e_r_y_ga284615aa684afaf4edc86afab5d0ac3d}{F\+T\+\_\+\+Interior\+Hyp\+Surfs} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type}, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function looks for interior hyper surfaces (curve in 2D and surface in 3D) with the given wave type. Returns N\+U\+LL if no match is found and return pointer to an array of hyper surfaces if found. This function allocates the memory for the array of pointers to hyper surfaces. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga4f56672571ef59cb0be35967c460be8e}{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves in the intfc to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga2039349c92878e260d0d3232d0c24203}{F\+T\+\_\+\+Array\+Of\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$point\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of points on the curve to an array (already allocated with memory) point\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga6ee0e1dbcfc9a442dbb0e1fee99b4fae}{F\+T\+\_\+\+Num\+Of\+Node\+Curves} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\begin{DoxyCompactList}\small\item\em This function count number of curves attached to the node, including both in-\/curves and out curves. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaee7090b7b79ea5badcbba83f48c22666}{F\+T\+\_\+\+Num\+Of\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the curve including its nodes (closed node may be counted twice). \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gad43f164dc90250d6ac6c8536db801601}{F\+T\+\_\+\+Num\+Of\+Surf\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gae3903407c883aae3f4d9d881d0c685cc}{F\+T\+\_\+\+Num\+Of\+Intfc\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the entire interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gad039b582da0a979747a806715aabcf15}{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of node on the entire interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga7123212fc81e8409b178e53d0941a946}{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of bond on a curve of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaae259bd9072e278989500c3eee87ba1c}{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of bond on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gabb18997c449c383f0dbfa17e80159746}{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of curves on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga80e89d9000938aa938c80df2bfb608c6}{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of surfaces on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gab8fa81018080f61d1242431b5abe1e10}{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of triangles on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaedec9f2bbc41428ca15ddee32caf6891}{F\+T\+\_\+\+Num\+Of\+Surf\+Tris} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of triangles on the surface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_gadca1d64d064d0eb9f7cc41b67b950839}{F\+T\+\_\+\+Array\+Of\+Node\+Curves} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves on the node to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga63660f62a81443ac9dbd5976771b278b}{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$bond\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of bonds on the curve to an array (already allocated with memory) bond\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_gaa471f7452622a683f1e56d7e668b4196}{F\+T\+\_\+\+Array\+Of\+Surf\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$point\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of points on the surface to an array (already allocated with memory) point\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga9ac9d06b332226a1c6f88a836801f38b}{F\+T\+\_\+\+Array\+Of\+Surf\+Curves} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves on the surface to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga50d1723179238b2a05ebea5d97ce19dc}{F\+T\+\_\+\+Num\+Of\+Surf\+Curves} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count and return number of curves on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga9621e2519f36c3f27a8dcb3948f54f2f}{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$$\ast$tris)
+\begin{DoxyCompactList}\small\item\em This function searches for triangles in the first ring around the input point p, and return the number of tris in the first ring. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{group___q_u_e_r_y_ga82b5fdcda4ce961541d5675b4bbd9e19}{F\+T\+\_\+\+Curve\+Of\+Point} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$\hyperlink{triangle_8c_a1479cb0d7d80d051fa683ce4e5cdacc9}{bond})
+\begin{DoxyCompactList}\small\item\em This function looks for the curve on which the point is located. If found, it will return the handle (pointer) of the curve, otherwise it will return N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$ \hyperlink{group___q_u_e_r_y_gaadc19788c0b2abe61e6645c4333223e0}{F\+T\+\_\+\+Node\+Of\+Point} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\begin{DoxyCompactList}\small\item\em This function looks for the node on which the point is located. If found, it will return the handle (pointer) of the node, otherwise it will return N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga86e03a92306e9bed251fdefaa2c8f318}{F\+T\+\_\+\+Boundary\+Type} (int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function return boundary type as an enumerated. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga7033e33d9d5ed34627e184aa1a4ca83a}{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of interior points on the surface boundary (on curve or node) points are not included. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga2ad484a4da2b2fabdb2257429caec1be}{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of interior points on the curve boundary (on node) points are not included. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Curve\+Bonds@{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds}}
+\index{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds@{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds(\+C\+U\+R\+V\+E $\ast$curve, B\+O\+N\+D $\ast$$\ast$bond\+\_\+array)}{FT_ArrayOfCurveBonds(CURVE *curve, BOND **bond_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Curve\+Bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{bond\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga63660f62a81443ac9dbd5976771b278b}{}\label{group___q_u_e_r_y_ga63660f62a81443ac9dbd5976771b278b}
+
+
+This function put all the handles (pointers) of bonds on the curve to an array (already allocated with memory) bond\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries in} Pointer to a curve of the front interface. \\
+\hline
+{\em bond\+\_\+array} & {\bfseries inout} bond array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Curve\+Points@{F\+T\+\_\+\+Array\+Of\+Curve\+Points}}
+\index{F\+T\+\_\+\+Array\+Of\+Curve\+Points@{F\+T\+\_\+\+Array\+Of\+Curve\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Curve\+Points(\+C\+U\+R\+V\+E $\ast$curve, P\+O\+I\+N\+T $\ast$$\ast$point\+\_\+array)}{FT_ArrayOfCurvePoints(CURVE *curve, POINT **point_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Curve\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{point\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga2039349c92878e260d0d3232d0c24203}{}\label{group___q_u_e_r_y_ga2039349c92878e260d0d3232d0c24203}
+
+
+This function put all the handles (pointers) of points on the curve to an array (already allocated with memory) point\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries in} Pointer to a curve of the front interface. \\
+\hline
+{\em point\+\_\+array} & {\bfseries inout} point array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Intfc\+Curves@{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves}}
+\index{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves@{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+U\+R\+V\+E $\ast$$\ast$curve\+\_\+array)}{FT_ArrayOfIntfcCurves(INTERFACE *intfc, CURVE **curve_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Intfc\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curve\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga4f56672571ef59cb0be35967c460be8e}{}\label{group___q_u_e_r_y_ga4f56672571ef59cb0be35967c460be8e}
+
+
+This function put all the handles (pointers) of curves in the intfc to an array (already allocated with memory) curve\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to an interface of the front. \\
+\hline
+{\em curve\+\_\+array} & {\bfseries inout} curve array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Node\+Curves@{F\+T\+\_\+\+Array\+Of\+Node\+Curves}}
+\index{F\+T\+\_\+\+Array\+Of\+Node\+Curves@{F\+T\+\_\+\+Array\+Of\+Node\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Node\+Curves(\+N\+O\+D\+E $\ast$node, C\+U\+R\+V\+E $\ast$$\ast$curve\+\_\+array)}{FT_ArrayOfNodeCurves(NODE *node, CURVE **curve_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Node\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curve\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gadca1d64d064d0eb9f7cc41b67b950839}{}\label{group___q_u_e_r_y_gadca1d64d064d0eb9f7cc41b67b950839}
+
+
+This function put all the handles (pointers) of curves on the node to an array (already allocated with memory) curve\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & {\bfseries in} Pointer to a node of the front interface. \\
+\hline
+{\em curve\+\_\+array} & {\bfseries inout} curve array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Surf\+Curves@{F\+T\+\_\+\+Array\+Of\+Surf\+Curves}}
+\index{F\+T\+\_\+\+Array\+Of\+Surf\+Curves@{F\+T\+\_\+\+Array\+Of\+Surf\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Surf\+Curves(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, C\+U\+R\+V\+E $\ast$$\ast$curve\+\_\+array)}{FT_ArrayOfSurfCurves(SURFACE *surf, CURVE **curve_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Surf\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curve\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga9ac9d06b332226a1c6f88a836801f38b}{}\label{group___q_u_e_r_y_ga9ac9d06b332226a1c6f88a836801f38b}
+
+
+This function put all the handles (pointers) of curves on the surface to an array (already allocated with memory) curve\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front interface. \\
+\hline
+{\em curve\+\_\+array} & {\bfseries inout} curve array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Array\+Of\+Surf\+Points@{F\+T\+\_\+\+Array\+Of\+Surf\+Points}}
+\index{F\+T\+\_\+\+Array\+Of\+Surf\+Points@{F\+T\+\_\+\+Array\+Of\+Surf\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Array\+Of\+Surf\+Points(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, P\+O\+I\+N\+T $\ast$$\ast$point\+\_\+array)}{FT_ArrayOfSurfPoints(SURFACE *surf, POINT **point_array)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Array\+Of\+Surf\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{point\+\_\+array}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gaa471f7452622a683f1e56d7e668b4196}{}\label{group___q_u_e_r_y_gaa471f7452622a683f1e56d7e668b4196}
+
+
+This function put all the handles (pointers) of points on the surface to an array (already allocated with memory) point\+\_\+array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front interface. \\
+\hline
+{\em point\+\_\+array} & {\bfseries inout} point array (with memory allocated). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Boundary\+Type@{F\+T\+\_\+\+Boundary\+Type}}
+\index{F\+T\+\_\+\+Boundary\+Type@{F\+T\+\_\+\+Boundary\+Type}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Boundary\+Type(int dir, int side)}{FT_BoundaryType(int dir, int side)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Boundary\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga86e03a92306e9bed251fdefaa2c8f318}{}\label{group___q_u_e_r_y_ga86e03a92306e9bed251fdefaa2c8f318}
+
+
+This function return boundary type as an enumerated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & {\bfseries in} Direction of the boundary. \\
+\hline
+{\em side} & {\bfseries in} Side of the boundary. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Curve\+Of\+Point@{F\+T\+\_\+\+Curve\+Of\+Point}}
+\index{F\+T\+\_\+\+Curve\+Of\+Point@{F\+T\+\_\+\+Curve\+Of\+Point}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Curve\+Of\+Point(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, P\+O\+I\+N\+T $\ast$point, B\+O\+N\+D $\ast$$\ast$bond)}{FT_CurveOfPoint(INTERFACE *intfc, POINT *point, BOND **bond)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+U\+R\+VE} $\ast$ F\+T\+\_\+\+Curve\+Of\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{point, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{bond}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga82b5fdcda4ce961541d5675b4bbd9e19}{}\label{group___q_u_e_r_y_ga82b5fdcda4ce961541d5675b4bbd9e19}
+
+
+This function looks for the curve on which the point is located. If found, it will return the handle (pointer) of the curve, otherwise it will return N\+U\+LL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the front interface. \\
+\hline
+{\em point} & {\bfseries in} point on which the curve to be returned. \\
+\hline
+{\em bond} & {\bfseries out} bond on which the point is at. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Dimension@{F\+T\+\_\+\+Dimension}}
+\index{F\+T\+\_\+\+Dimension@{F\+T\+\_\+\+Dimension}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Dimension()}{FT_Dimension()}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga4d9374ec9ecc9610a746e12284b4bd42}{}\label{group___q_u_e_r_y_ga4d9374ec9ecc9610a746e12284b4bd42}
+
+
+This function returns the spatial dimension of current run. 
+
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point@{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point}}
+\index{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point@{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point(\+P\+O\+I\+N\+T $\ast$p, T\+R\+I $\ast$tri, T\+R\+I $\ast$$\ast$$\ast$tris)}{FT_FirstRingTrisAroundPoint(POINT *p, TRI *tri, TRI ***tris)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf T\+RI} $\ast$$\ast$$\ast$}]{tris}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga9621e2519f36c3f27a8dcb3948f54f2f}{}\label{group___q_u_e_r_y_ga9621e2519f36c3f27a8dcb3948f54f2f}
+
+
+This function searches for triangles in the first ring around the input point p, and return the number of tris in the first ring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\bfseries in} Pointer to a point of the front interface. \\
+\hline
+{\em tri} & {\bfseries in} Pointer to one of the tris around the point. \\
+\hline
+{\em tris} & {\bfseries out} Pointer to array of tris around the point. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Interior\+Hyp\+Surfs@{F\+T\+\_\+\+Interior\+Hyp\+Surfs}}
+\index{F\+T\+\_\+\+Interior\+Hyp\+Surfs@{F\+T\+\_\+\+Interior\+Hyp\+Surfs}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Interior\+Hyp\+Surfs(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int wave\+\_\+type, int $\ast$num\+\_\+hs)}{FT_InteriorHypSurfs(INTERFACE *intfc, int wave_type, int *num_hs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$ F\+T\+\_\+\+Interior\+Hyp\+Surfs (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int}]{wave\+\_\+type, }
+\item[{int $\ast$}]{num\+\_\+hs}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga284615aa684afaf4edc86afab5d0ac3d}{}\label{group___q_u_e_r_y_ga284615aa684afaf4edc86afab5d0ac3d}
+
+
+This function looks for interior hyper surfaces (curve in 2D and surface in 3D) with the given wave type. Returns N\+U\+LL if no match is found and return pointer to an array of hyper surfaces if found. This function allocates the memory for the array of pointers to hyper surfaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to an interface of the front. \\
+\hline
+{\em wave\+\_\+type} & {\bfseries in} Wave type of the hyper surfaces requested. \\
+\hline
+{\em num\+\_\+hs} & {\bfseries out} Address to interger of number of hyper surfs found. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Node\+Of\+Point@{F\+T\+\_\+\+Node\+Of\+Point}}
+\index{F\+T\+\_\+\+Node\+Of\+Point@{F\+T\+\_\+\+Node\+Of\+Point}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Node\+Of\+Point(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, P\+O\+I\+N\+T $\ast$point)}{FT_NodeOfPoint(INTERFACE *intfc, POINT *point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+DE} $\ast$ F\+T\+\_\+\+Node\+Of\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gaadc19788c0b2abe61e6645c4333223e0}{}\label{group___q_u_e_r_y_gaadc19788c0b2abe61e6645c4333223e0}
+
+
+This function looks for the node on which the point is located. If found, it will return the handle (pointer) of the node, otherwise it will return N\+U\+LL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the front interface. \\
+\hline
+{\em point} & {\bfseries in} point on which the curve to be returned. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Curve\+Bonds@{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds}}
+\index{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds@{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds(\+C\+U\+R\+V\+E $\ast$curve)}{FT_NumOfCurveBonds(CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Curve\+Bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga7123212fc81e8409b178e53d0941a946}{}\label{group___q_u_e_r_y_ga7123212fc81e8409b178e53d0941a946}
+
+
+This function count number of bond on a curve of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries in} Pointer to curve on the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Curve\+Points@{F\+T\+\_\+\+Num\+Of\+Curve\+Points}}
+\index{F\+T\+\_\+\+Num\+Of\+Curve\+Points@{F\+T\+\_\+\+Num\+Of\+Curve\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Curve\+Points(\+C\+U\+R\+V\+E $\ast$curve)}{FT_NumOfCurvePoints(CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Curve\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gaee7090b7b79ea5badcbba83f48c22666}{}\label{group___q_u_e_r_y_gaee7090b7b79ea5badcbba83f48c22666}
+
+
+This function count number of point on the curve including its nodes (closed node may be counted twice). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries in} Pointer to a curve of the front interface. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds@{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds@{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcBonds(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gaae259bd9072e278989500c3eee87ba1c}{}\label{group___q_u_e_r_y_gaae259bd9072e278989500c3eee87ba1c}
+
+
+This function count number of bond on the entire interface of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Curves@{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves@{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcCurves(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gabb18997c449c383f0dbfa17e80159746}{}\label{group___q_u_e_r_y_gabb18997c449c383f0dbfa17e80159746}
+
+
+This function count number of curves on the entire interface of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes@{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes@{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcNodes(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gad039b582da0a979747a806715aabcf15}{}\label{group___q_u_e_r_y_gad039b582da0a979747a806715aabcf15}
+
+
+This function count number of node on the entire interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Points@{F\+T\+\_\+\+Num\+Of\+Intfc\+Points}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Points@{F\+T\+\_\+\+Num\+Of\+Intfc\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Points(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcPoints(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gae3903407c883aae3f4d9d881d0c685cc}{}\label{group___q_u_e_r_y_gae3903407c883aae3f4d9d881d0c685cc}
+
+
+This function count number of point on the entire interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces@{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces@{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcSurfaces(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga80e89d9000938aa938c80df2bfb608c6}{}\label{group___q_u_e_r_y_ga80e89d9000938aa938c80df2bfb608c6}
+
+
+This function count number of surfaces on the entire interface of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Intfc\+Tris@{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris}}
+\index{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris@{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{FT_NumOfIntfcTris(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Intfc\+Tris (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gab8fa81018080f61d1242431b5abe1e10}{}\label{group___q_u_e_r_y_gab8fa81018080f61d1242431b5abe1e10}
+
+
+This function count number of triangles on the entire interface of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to the interface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Node\+Curves@{F\+T\+\_\+\+Num\+Of\+Node\+Curves}}
+\index{F\+T\+\_\+\+Num\+Of\+Node\+Curves@{F\+T\+\_\+\+Num\+Of\+Node\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Node\+Curves(\+N\+O\+D\+E $\ast$node)}{FT_NumOfNodeCurves(NODE *node)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Node\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga6ee0e1dbcfc9a442dbb0e1fee99b4fae}{}\label{group___q_u_e_r_y_ga6ee0e1dbcfc9a442dbb0e1fee99b4fae}
+
+
+This function count number of curves attached to the node, including both in-\/curves and out curves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & {\bfseries in} Pointer to a node of the front interface. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Surf\+Curves@{F\+T\+\_\+\+Num\+Of\+Surf\+Curves}}
+\index{F\+T\+\_\+\+Num\+Of\+Surf\+Curves@{F\+T\+\_\+\+Num\+Of\+Surf\+Curves}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Surf\+Curves(\+S\+U\+R\+F\+A\+C\+E $\ast$surf)}{FT_NumOfSurfCurves(SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Surf\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga50d1723179238b2a05ebea5d97ce19dc}{}\label{group___q_u_e_r_y_ga50d1723179238b2a05ebea5d97ce19dc}
+
+
+This function count and return number of curves on the surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front interface. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Surf\+Points@{F\+T\+\_\+\+Num\+Of\+Surf\+Points}}
+\index{F\+T\+\_\+\+Num\+Of\+Surf\+Points@{F\+T\+\_\+\+Num\+Of\+Surf\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Surf\+Points(\+S\+U\+R\+F\+A\+C\+E $\ast$surf)}{FT_NumOfSurfPoints(SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Surf\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gad43f164dc90250d6ac6c8536db801601}{}\label{group___q_u_e_r_y_gad43f164dc90250d6ac6c8536db801601}
+
+
+This function count number of point on the surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front interface. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Num\+Of\+Surf\+Tris@{F\+T\+\_\+\+Num\+Of\+Surf\+Tris}}
+\index{F\+T\+\_\+\+Num\+Of\+Surf\+Tris@{F\+T\+\_\+\+Num\+Of\+Surf\+Tris}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Num\+Of\+Surf\+Tris(\+S\+U\+R\+F\+A\+C\+E $\ast$surf)}{FT_NumOfSurfTris(SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Num\+Of\+Surf\+Tris (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_gaedec9f2bbc41428ca15ddee32caf6891}{}\label{group___q_u_e_r_y_gaedec9f2bbc41428ca15ddee32caf6891}
+
+
+This function count number of triangles on the surface of the front. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf@{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf}}
+\index{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf@{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int wave\+\_\+type, int dir, int side)}{FT_RectBoundaryHypSurf(INTERFACE *intfc, int wave_type, int dir, int side)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int}]{wave\+\_\+type, }
+\item[{int}]{dir, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga448da7f0f1046c2719bde3e7bbd8789a}{}\label{group___q_u_e_r_y_ga448da7f0f1046c2719bde3e7bbd8789a}
+
+
+This function looks for a boundary hyper surface (curve in 2D and surface in 3D) at the rectangular domain border with the given wave type of the hyper surface in direction dir and side side. Returns N\+U\+LL if no match is found and return pointer to the hyper surface if found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} Pointer to an interface of the front. \\
+\hline
+{\em wave\+\_\+type} & {\bfseries in} Wave type of the hyper surface requested. \\
+\hline
+{\em dir} & {\bfseries in} Direction of the boundary, 0 for x-\/dir, 1 for y-\/dir and 2 for z-\/dir. \\
+\hline
+{\em side} & {\bfseries in} Side of the rectangular domain, 0 for lower side and 1 for upper side. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!F\+T\+\_\+\+Rect\+Boundary\+Type@{F\+T\+\_\+\+Rect\+Boundary\+Type}}
+\index{F\+T\+\_\+\+Rect\+Boundary\+Type@{F\+T\+\_\+\+Rect\+Boundary\+Type}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Rect\+Boundary\+Type(\+Front $\ast$front, int dir, int side)}{FT_RectBoundaryType(Front *front, int dir, int side)}}]{\setlength{\rightskip}{0pt plus 5cm}int F\+T\+\_\+\+Rect\+Boundary\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{dir, }
+\item[{int}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga1d60b2b7c1875fd799717fdee8ab42ee}{}\label{group___q_u_e_r_y_ga1d60b2b7c1875fd799717fdee8ab42ee}
+
+
+This function returns rectangular boundary type in direction dir and side side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer the front. \\
+\hline
+{\em dir} & {\bfseries in} Direction of the boundary. \\
+\hline
+{\em side} & {\bfseries in} Side of the rectangular domain, 0 for lower side and 1 for upper side. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!I\+\_\+\+Num\+Of\+Curve\+Interior\+Points@{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points}}
+\index{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points@{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points(\+C\+U\+R\+V\+E $\ast$curve)}{I_NumOfCurveInteriorPoints(CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}int I\+\_\+\+Num\+Of\+Curve\+Interior\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga2ad484a4da2b2fabdb2257429caec1be}{}\label{group___q_u_e_r_y_ga2ad484a4da2b2fabdb2257429caec1be}
+
+
+This function count number of interior points on the curve boundary (on node) points are not included. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries in} Pointer to a curve of the front interface. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}!I\+\_\+\+Num\+Of\+Surf\+Interior\+Points@{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points}}
+\index{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points@{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points}!Fron\+Tier Interface Query Functions@{Fron\+Tier Interface Query Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points(\+S\+U\+R\+F\+A\+C\+E $\ast$surf)}{I_NumOfSurfInteriorPoints(SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}int I\+\_\+\+Num\+Of\+Surf\+Interior\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{group___q_u_e_r_y_ga7033e33d9d5ed34627e184aa1a4ca83a}{}\label{group___q_u_e_r_y_ga7033e33d9d5ed34627e184aa1a4ca83a}
+
+
+This function count number of interior points on the surface boundary (on curve or node) points are not included. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Pointer to a surface of the front interface. \\
+\hline
+\end{DoxyParams}

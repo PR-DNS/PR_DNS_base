@@ -1,0 +1,41 @@
+\hypertarget{group___f_i_e_l_d}{}\section{Fron\+Tier Field (State) Functions}
+\label{group___f_i_e_l_d}\index{Fron\+Tier Field (\+State) Functions@{Fron\+Tier Field (\+State) Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___f_i_e_l_d_ga01d421aa00940cf885ed1c7d0f4f5701}{F\+T\+\_\+\+Get\+States\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$sl, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$sr)
+\begin{DoxyCompactList}\small\item\em This function retrieves the left and right states at a point. Since a point can be shared by different entities, the associated hyper surface element (bond in 2D and tri in 3D) and hyper surface (curve in 2D and surface in 3D) must be provided as input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Field (\+State) Functions@{Fron\+Tier Field (\+State) Functions}!F\+T\+\_\+\+Get\+States\+At\+Point@{F\+T\+\_\+\+Get\+States\+At\+Point}}
+\index{F\+T\+\_\+\+Get\+States\+At\+Point@{F\+T\+\_\+\+Get\+States\+At\+Point}!Fron\+Tier Field (\+State) Functions@{Fron\+Tier Field (\+State) Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Get\+States\+At\+Point(\+P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, P\+O\+I\+N\+T\+E\+R $\ast$sl, P\+O\+I\+N\+T\+E\+R $\ast$sr)}{FT_GetStatesAtPoint(POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, POINTER *sl, POINTER *sr)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Get\+States\+At\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{sl, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___f_i_e_l_d_ga01d421aa00940cf885ed1c7d0f4f5701}{}\label{group___f_i_e_l_d_ga01d421aa00940cf885ed1c7d0f4f5701}
+
+
+This function retrieves the left and right states at a point. Since a point can be shared by different entities, the associated hyper surface element (bond in 2D and tri in 3D) and hyper surface (curve in 2D and surface in 3D) must be provided as input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\bfseries in} Pointer to point. \\
+\hline
+{\em hse} & {\bfseries in} Pointer to the associated hyper surface element. \\
+\hline
+{\em hs} & {\bfseries in} Pointer to the associated hyper surface. \\
+\hline
+{\em sl} & {\bfseries out} Address for the left state. \\
+\hline
+{\em sr} & {\bfseries out} Address for the right state. \\
+\hline
+\end{DoxyParams}

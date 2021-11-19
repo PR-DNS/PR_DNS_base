@@ -1,0 +1,47 @@
+\hypertarget{group___p_r_o_p_a_g_a_t_i_o_n}{}\section{Fron\+Tier Propagation Functions}
+\label{group___p_r_o_p_a_g_a_t_i_o_n}\index{Fron\+Tier Propagation Functions@{Fron\+Tier Propagation Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_r_o_p_a_g_a_t_i_o_n_ga0c7f34093dfd543ebd66b2ccff8742cd}{F\+T\+\_\+\+Propagate} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Propagate the Front for one time step. The process includes advancing the front forward by one step to new positions, redistributing new interface mesh and resolving physical and topological bifurcations. The interface in the front is replaced by a new and propagated one and the old one is freed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_r_o_p_a_g_a_t_i_o_n_ga51834b9206a288347040fe15e719e295}{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Add front-\/$>$dt to front-\/$>$time after propagation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Propagation Functions@{Fron\+Tier Propagation Functions}!F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter@{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter}}
+\index{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter@{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter}!Fron\+Tier Propagation Functions@{Fron\+Tier Propagation Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter(\+Front $\ast$front)}{FT_AddTimeStepToCounter(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_r_o_p_a_g_a_t_i_o_n_ga51834b9206a288347040fe15e719e295}{}\label{group___p_r_o_p_a_g_a_t_i_o_n_ga51834b9206a288347040fe15e719e295}
+
+
+Add front-\/$>$dt to front-\/$>$time after propagation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Propagation Functions@{Fron\+Tier Propagation Functions}!F\+T\+\_\+\+Propagate@{F\+T\+\_\+\+Propagate}}
+\index{F\+T\+\_\+\+Propagate@{F\+T\+\_\+\+Propagate}!Fron\+Tier Propagation Functions@{Fron\+Tier Propagation Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Propagate(\+Front $\ast$front)}{FT_Propagate(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Propagate (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_r_o_p_a_g_a_t_i_o_n_ga0c7f34093dfd543ebd66b2ccff8742cd}{}\label{group___p_r_o_p_a_g_a_t_i_o_n_ga0c7f34093dfd543ebd66b2ccff8742cd}
+
+
+Propagate the Front for one time step. The process includes advancing the front forward by one step to new positions, redistributing new interface mesh and resolving physical and topological bifurcations. The interface in the front is replaced by a new and propagated one and the old one is freed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & Pointer to Front to be propagated \\
+\hline
+\end{DoxyParams}

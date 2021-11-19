@@ -1,0 +1,1020 @@
+\hypertarget{i_rel_8h}{}\section{D\+N\+S/src/intfc/i\+Rel.h File Reference}
+\label{i_rel_8h}\index{D\+N\+S/src/intfc/i\+Rel.\+h@{D\+N\+S/src/intfc/i\+Rel.\+h}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance}
+\begin{DoxyCompactList}\small\item\em Type used to store i\+Rel interface handle. \end{DoxyCompactList}\item 
+typedef struct i\+Rel\+\_\+\+Relation\+Handle\+\_\+\+Private $\ast$ \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle}
+\begin{DoxyCompactList}\small\item\em Type used to store references to relation pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becd}{Iface\+Type} \{ \\*
+\hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdab7a89d08fe8c6d9d93f49e993598f018}{i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE} = 0, 
+\hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdac9eb18f06d11575695002e852fdba4e4}{i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE}, 
+\hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda9fc65d09ecc8caf9e1f5b87ff7ccbbf5}{i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE}, 
+\hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda3df069047ba56b333f1826003c62d8f2}{i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE}, 
+\\*
+\hyperlink{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda264be58fe6d4e9d316ed9430324c33f1}{i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE}
+ \}\begin{DoxyCompactList}\small\item\em Enumerator specifying interface types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i_rel_8h_a48e2139df7bdc69dca520bcb73cde7fc}{i\+Rel\+\_\+dtor} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em i\+Rel\+\_\+dtor Destroy the interface object \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_aa05a1c04d45f88d1f28ee7f18e81bbf6}{i\+Rel\+\_\+create\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_base_8h_a0fff2f138a7fbd38cf0fdd4427f627fc}{i\+Base\+\_\+\+Instance} iface1, const int ent\+\_\+or\+\_\+set1, const int iface\+\_\+type1, \hyperlink{i_base_8h_a0fff2f138a7fbd38cf0fdd4427f627fc}{i\+Base\+\_\+\+Instance} iface2, const int ent\+\_\+or\+\_\+set2, const int iface\+\_\+type2, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} $\ast$rel, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Create a relation pair between two interfaces. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_aef45c7e4bfee95e956e1797b6a257213}{i\+Rel\+\_\+destroy\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Destroy a relation pair. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_aad13675f6dd69aceb972a47df82a55b7}{i\+Rel\+\_\+get\+Associated\+Interfaces} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_base_8h_a0fff2f138a7fbd38cf0fdd4427f627fc}{i\+Base\+\_\+\+Instance} iface, \hyperlink{i_base_8h_a0fff2f138a7fbd38cf0fdd4427f627fc}{i\+Base\+\_\+\+Instance} $\ast$$\ast$interfaces, int $\ast$interfaces\+\_\+allocated, int $\ast$interfaces\+\_\+size, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Get interfaces related to specified interface. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a479f6e8a5319e6ffcf61b4f1803e65e5}{i\+Rel\+\_\+set\+Ent\+Ent\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a77104a8a290c2859e897328326159568}{i\+Rel\+\_\+set\+Ent\+Set\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_afaa2594ff93116aa2d3d8a988cd12bad}{i\+Rel\+\_\+set\+Set\+Ent\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a2dc264c7dce84dfb2795d7cd591160e9}{i\+Rel\+\_\+set\+Set\+Set\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_ae808584b9b1abc73537ac67063eb0996}{i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Set a relation between an entity and several entities. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a53e43e7248e9a0b976153818e4d2079a}{i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a94c539005ae9379b959ce9a599e514da}{i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a7f893fb71b29608e69284bd95be08ea3}{i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_af9eed42711ba758f1f3f8b9130597fea}{i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Set relations between arrays of entities pairwise, ent\+\_\+array\+\_\+1\mbox{[}i\mbox{]}$<$-\/$>$ent\+\_\+array\+\_\+2\mbox{[}i\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_afabc48f9c09e1f321c2ca9abd15db3ed}{i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_aef09a26118d995aef13484f5ebdf4027}{i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_af61b6e8b44934a44f0fc3712db46d061}{i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a3473293d155e0069633a38d147786bba}{i\+Rel\+\_\+get\+Ent\+Ent\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent2, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Get entity related to specified entity and relation handle. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a17601db8b4965269931424de54b24af8}{i\+Rel\+\_\+get\+Ent\+Set\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_aff45e08ae6ebb9953dc5c86f89a1ec65}{i\+Rel\+\_\+get\+Set\+Ent\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a765da4656d753da8ec345ab7e71bf33a}{i\+Rel\+\_\+get\+Set\+Set\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent2, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a82d7c354869f3e5513c94ce590b1d18a}{i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Get entities related to specified entity and relation. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_af9f307b0b1fc167c6313bf11030ecd15}{i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} ent1, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a2b6f4e9c2db543bc0416e758841c7ff4}{i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$$\ast$offset, int $\ast$offset\+\_\+allocated, int $\ast$offset\+\_\+size, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Get entities related to those in specified array and relation, pairwise. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a6da9b11cfbb5fe05db1ddbcae1888c6d}{i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a14380da3975c521104b61e2a5119bf73}{i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$$\ast$offset, int $\ast$offset\+\_\+allocated, int $\ast$offset\+\_\+size, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a8b9cbf6cbb4dc97f8a069971d742b7f0}{i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a0e83a849392bdc9b805ab19dc09f1663}{i\+Rel\+\_\+create\+Vtx\+And\+Associate} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, double x, double y, double z, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} associated\+Geom\+Ent, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$new\+\_\+entity\+\_\+handle, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Create a mesh vertex and relate to geometry entity. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a2da3c518b6e9fd60ae9a0e84e9976314}{i\+Rel\+\_\+create\+Ent\+And\+Associate} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, int new\+\_\+entity\+\_\+topology, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$lower\+\_\+order\+\_\+entity\+\_\+handles, int lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} associated\+Geom\+Ent, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$new\+\_\+entity\+\_\+handle, int $\ast$creation\+\_\+status, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Create a mesh entity and relate to geometry entity. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a94d122752629022baf08a2fbbd95a952}{i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, int num\+\_\+verts, int storage\+\_\+order, double $\ast$new\+\_\+coords, int new\+\_\+coords\+\_\+size, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$associated\+Geom\+Ents, int num\+\_\+geom\+\_\+ents, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$new\+\_\+vertex\+\_\+handles, int $\ast$new\+\_\+vertex\+\_\+handles\+\_\+allocated, int $\ast$new\+\_\+vertex\+\_\+handles\+\_\+size, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Create an array of mesh vertices and relate to geometry entities. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_af442412c286bd20f13f8b9775c3836e5}{i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, int new\+\_\+entity\+\_\+topology, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$lower\+\_\+order\+\_\+entity\+\_\+handles, int lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, int $\ast$offsets, int offsets\+\_\+size, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$associated\+Geom\+Ents, int num\+\_\+geom\+\_\+ents, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$new\+\_\+entity\+\_\+handles, int $\ast$new\+\_\+entity\+\_\+handles\+\_\+allocated, int $\ast$new\+\_\+entity\+\_\+handles\+\_\+size, int $\ast$$\ast$status, int $\ast$status\+\_\+allocated, int $\ast$status\+\_\+size, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Create an array of mesh entities and relate to geometry entities. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_aa5d38313d163c7a911eb1c4212058a83}{i\+Rel\+\_\+infer\+All\+Associations} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Infer relations between entities in specified pair of interfaces. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a51479e555098daf5d19bd5d7d8089449}{i\+Rel\+\_\+infer\+Ent\+Associations} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} entity, int iface\+\_\+no, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Infer relations corresponding to specified entity and relation pair. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a82b2cca560453c0b50239c050e5c361d}{i\+Rel\+\_\+infer\+Set\+Associations} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} entity, int iface\+\_\+no, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_afceda1f9134046fbd386cf40bb243324}{i\+Rel\+\_\+infer\+Ent\+Arr\+Associations} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} $\ast$entities, int entities\+\_\+size, int iface\+\_\+no, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Infer relations corresponding to specified entities and relation pair. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_a46409d3b205b94d1fad9466ca54038e4}{i\+Rel\+\_\+infer\+Set\+Arr\+Associations} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{i\+Rel\+\_\+\+Relation\+Handle} rel, \hyperlink{i_base_8h_ac4685c95b3ba606ba3d62fd70ab6d971}{i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$entities, int entities\+\_\+size, int iface\+\_\+no, int $\ast$ierr)
+\item 
+void \hyperlink{i_rel_8h_a7345f126a11a3fefa26a4e239064cdaa}{i\+Rel\+\_\+move\+To} (\hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} instance, \hyperlink{i_geom_8h_a108ea0f63b32b57b7dee5876a91989f8}{i\+Geom\+\_\+\+Instance} geom, \hyperlink{i_mesh_8h_acb65e940120fe27aa9c62210e5a8fad4}{i\+Mesh\+\_\+\+Instance} mesh, \hyperlink{i_base_8h_a0a23828dc837370ead1813e9c05752e3}{i\+Base\+\_\+\+Entity\+Handle} geom\+\_\+entity\+\_\+handle, int $\ast$ierr)
+\begin{DoxyCompactList}\small\item\em Move related mesh entities to the closest point on the specified geometry entity. \end{DoxyCompactList}\item 
+void \hyperlink{i_rel_8h_ab113b7bf339bfd25665972730cfdbb5c}{i\+Rel\+\_\+new\+Assoc} (const char $\ast$options, \hyperlink{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{i\+Rel\+\_\+\+Instance} $\ast$instance, int $\ast$ierr, const int options\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Create a new i\+Rel instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{i_base_8h_dc/d78/structi_base___error}{i\+Base\+\_\+\+Error} \hyperlink{i_rel_8h_a87fc5bf48e684bd4d0215f2b2f0577eb}{i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+Instance@{i\+Rel\+\_\+\+Instance}}
+\index{i\+Rel\+\_\+\+Instance@{i\+Rel\+\_\+\+Instance}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+\+Instance}{iRel_Instance}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf i\+Rel\+\_\+\+Instance}}\hypertarget{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}{}\label{i_rel_8h_a7d82930e6c6a39304b2659718e49f44e}
+
+
+Type used to store i\+Rel interface handle. 
+
+Type used to store i\+Rel interface handle \index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+Relation\+Handle@{i\+Rel\+\_\+\+Relation\+Handle}}
+\index{i\+Rel\+\_\+\+Relation\+Handle@{i\+Rel\+\_\+\+Relation\+Handle}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+\+Relation\+Handle}{iRel_RelationHandle}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct i\+Rel\+\_\+\+Relation\+Handle\+\_\+\+Private$\ast$ {\bf i\+Rel\+\_\+\+Relation\+Handle}}\hypertarget{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}{}\label{i_rel_8h_aea4c1068842380f344bc9c915cfd8b69}
+
+
+Type used to store references to relation pairs. 
+
+Type used to store references to relation pairs 
+
+\subsection{Enumeration Type Documentation}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!Iface\+Type@{Iface\+Type}}
+\index{Iface\+Type@{Iface\+Type}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{Iface\+Type}{IfaceType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Iface\+Type}}\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becd}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becd}
+
+
+Enumerator specifying interface types. 
+
+Enumerator specifying interface types. This enumeration is necessary because functions to get entities of a given dimension are part of the higher-\/level interfaces (e.\+g. i\+Geom, i\+Mesh) instead of i\+Base. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE}!i\+Rel.\+h@{i\+Rel.\+h}}\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE}}\item[{\em 
+i\+Rel\+\_\+\+I\+B\+A\+S\+E\+\_\+\+I\+F\+A\+CE\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdab7a89d08fe8c6d9d93f49e993598f018}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdab7a89d08fe8c6d9d93f49e993598f018}
+}]\index{i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE}!i\+Rel.\+h@{i\+Rel.\+h}}\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE}}\item[{\em 
+i\+Rel\+\_\+\+I\+G\+E\+O\+M\+\_\+\+I\+F\+A\+CE\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdac9eb18f06d11575695002e852fdba4e4}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becdac9eb18f06d11575695002e852fdba4e4}
+}]\index{i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE}!i\+Rel.\+h@{i\+Rel.\+h}}\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE}}\item[{\em 
+i\+Rel\+\_\+\+I\+M\+E\+S\+H\+\_\+\+I\+F\+A\+CE\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda9fc65d09ecc8caf9e1f5b87ff7ccbbf5}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda9fc65d09ecc8caf9e1f5b87ff7ccbbf5}
+}]\index{i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE}!i\+Rel.\+h@{i\+Rel.\+h}}\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE}}\item[{\em 
+i\+Rel\+\_\+\+I\+F\+I\+E\+L\+D\+\_\+\+I\+F\+A\+CE\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda3df069047ba56b333f1826003c62d8f2}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda3df069047ba56b333f1826003c62d8f2}
+}]\index{i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE}!i\+Rel.\+h@{i\+Rel.\+h}}\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE@{i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE}}\item[{\em 
+i\+Rel\+\_\+\+I\+R\+E\+L\+\_\+\+I\+F\+A\+CE\hypertarget{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda264be58fe6d4e9d316ed9430324c33f1}{}\label{i_rel_8h_a76a7ad39e1abe31dec13a182f551becda264be58fe6d4e9d316ed9430324c33f1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+create\+Association@{i\+Rel\+\_\+create\+Association}}
+\index{i\+Rel\+\_\+create\+Association@{i\+Rel\+\_\+create\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+create\+Association(i\+Rel\+\_\+\+Instance instance, i\+Base\+\_\+\+Instance iface1, const int ent\+\_\+or\+\_\+set1, const int iface\+\_\+type1, i\+Base\+\_\+\+Instance iface2, const int ent\+\_\+or\+\_\+set2, const int iface\+\_\+type2, i\+Rel\+\_\+\+Relation\+Handle $\ast$rel, int $\ast$ierr)}{iRel_createAssociation(iRel_Instance instance, iBase_Instance iface1, const int ent_or_set1, const int iface_type1, iBase_Instance iface2, const int ent_or_set2, const int iface_type2, iRel_RelationHandle *rel, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+create\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Base\+\_\+\+Instance}}]{iface1, }
+\item[{const int}]{ent\+\_\+or\+\_\+set1, }
+\item[{const int}]{iface\+\_\+type1, }
+\item[{{\bf i\+Base\+\_\+\+Instance}}]{iface2, }
+\item[{const int}]{ent\+\_\+or\+\_\+set2, }
+\item[{const int}]{iface\+\_\+type2, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle} $\ast$}]{rel, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aa05a1c04d45f88d1f28ee7f18e81bbf6}{}\label{i_rel_8h_aa05a1c04d45f88d1f28ee7f18e81bbf6}
+
+
+Create a relation pair between two interfaces. 
+
+Creates a relation pair between two interfaces, passing back a handle to the pair. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em iface1} & 1st interface object in the relation pair \\
+\hline
+{\em ent\+\_\+or\+\_\+set1} & This relation relates entities (=0) or sets (=1) or both (=2) from 1st interface object \\
+\hline
+{\em iface\+\_\+type1} & Type of 1st interface (0=i\+Base, 1=i\+Geom, 2=i\+Mesh, 3=i\+Field, 4=i\+Rel) \\
+\hline
+{\em iface2} & 2nd interface object in the relation pair \\
+\hline
+{\em ent\+\_\+or\+\_\+set2} & This relation relates entities (=0) or sets (=1) or both (=2) from 2nd interface object \\
+\hline
+{\em iface\+\_\+type2} & Type of 2nd interface (0=i\+Base, 1=i\+Geom, 2=i\+Mesh, 3=i\+Field, 4=i\+Rel) \\
+\hline
+{\em $\ast$rel} & Pointer to relation handle, returned from function \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+create\+Ent\+And\+Associate@{i\+Rel\+\_\+create\+Ent\+And\+Associate}}
+\index{i\+Rel\+\_\+create\+Ent\+And\+Associate@{i\+Rel\+\_\+create\+Ent\+And\+Associate}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+create\+Ent\+And\+Associate(i\+Rel\+\_\+\+Instance instance, int new\+\_\+entity\+\_\+topology, i\+Base\+\_\+\+Entity\+Handle $\ast$lower\+\_\+order\+\_\+entity\+\_\+handles, int lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, i\+Base\+\_\+\+Entity\+Handle associated\+Geom\+Ent, i\+Base\+\_\+\+Entity\+Handle $\ast$new\+\_\+entity\+\_\+handle, int $\ast$creation\+\_\+status, int $\ast$ierr)}{iRel_createEntAndAssociate(iRel_Instance instance, int new_entity_topology, iBase_EntityHandle *lower_order_entity_handles, int lower_order_entity_handles_size, iBase_EntityHandle associatedGeomEnt, iBase_EntityHandle *new_entity_handle, int *creation_status, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+create\+Ent\+And\+Associate (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{int}]{new\+\_\+entity\+\_\+topology, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{lower\+\_\+order\+\_\+entity\+\_\+handles, }
+\item[{int}]{lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{associated\+Geom\+Ent, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{new\+\_\+entity\+\_\+handle, }
+\item[{int $\ast$}]{creation\+\_\+status, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a2da3c518b6e9fd60ae9a0e84e9976314}{}\label{i_rel_8h_a2da3c518b6e9fd60ae9a0e84e9976314}
+
+
+Create a mesh entity and relate to geometry entity. 
+
+Create a mesh entity and relate to geometry entity. Relation pair instance must be between geometry instance and mesh instance, and must have instances in that order (geometry, mesh). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em new\+\_\+entity\+\_\+topology} & Topology type of new mesh entity (from i\+Mesh Topology enum) \\
+\hline
+{\em lower\+\_\+order\+\_\+entity\+\_\+handles} & Handles of lower dimension entities bounding new mesh entity \\
+\hline
+{\em lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size} & Number of lower dimension entities in lower\+\_\+order\+\_\+entity\+\_\+handles array \\
+\hline
+{\em associated\+Geom\+Ent} & Geometry entity to be related to new vertex \\
+\hline
+{\em $\ast$new\+\_\+entity\+\_\+handle} & Pointer to new mesh entity handle \\
+\hline
+{\em $\ast$creation\+\_\+status} & Creation status of new entity (from i\+Base Creation\+Status enum) \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate@{i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate}}
+\index{i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate@{i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate(i\+Rel\+\_\+\+Instance instance, int new\+\_\+entity\+\_\+topology, i\+Base\+\_\+\+Entity\+Handle $\ast$lower\+\_\+order\+\_\+entity\+\_\+handles, int lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, int $\ast$offsets, int offsets\+\_\+size, i\+Base\+\_\+\+Entity\+Handle $\ast$associated\+Geom\+Ents, int num\+\_\+geom\+\_\+ents, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$new\+\_\+entity\+\_\+handles, int $\ast$new\+\_\+entity\+\_\+handles\+\_\+allocated, int $\ast$new\+\_\+entity\+\_\+handles\+\_\+size, int $\ast$$\ast$status, int $\ast$status\+\_\+allocated, int $\ast$status\+\_\+size, int $\ast$ierr)}{iRel_createEntArrAndAssociate(iRel_Instance instance, int new_entity_topology, iBase_EntityHandle *lower_order_entity_handles, int lower_order_entity_handles_size, int *offsets, int offsets_size, iBase_EntityHandle *associatedGeomEnts, int num_geom_ents, iBase_EntityHandle **new_entity_handles, int *new_entity_handles_allocated, int *new_entity_handles_size, int **status, int *status_allocated, int *status_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+create\+Ent\+Arr\+And\+Associate (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{int}]{new\+\_\+entity\+\_\+topology, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{lower\+\_\+order\+\_\+entity\+\_\+handles, }
+\item[{int}]{lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size, }
+\item[{int $\ast$}]{offsets, }
+\item[{int}]{offsets\+\_\+size, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{associated\+Geom\+Ents, }
+\item[{int}]{num\+\_\+geom\+\_\+ents, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{new\+\_\+entity\+\_\+handles, }
+\item[{int $\ast$}]{new\+\_\+entity\+\_\+handles\+\_\+allocated, }
+\item[{int $\ast$}]{new\+\_\+entity\+\_\+handles\+\_\+size, }
+\item[{int $\ast$$\ast$}]{status, }
+\item[{int $\ast$}]{status\+\_\+allocated, }
+\item[{int $\ast$}]{status\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_af442412c286bd20f13f8b9775c3836e5}{}\label{i_rel_8h_af442412c286bd20f13f8b9775c3836e5}
+
+
+Create an array of mesh entities and relate to geometry entities. 
+
+Create an array of mesh entities and relate to one or more geometry entities. If only one geometry entity is input, entities are all related to that entity; otherwise the number of new entities and input geometric entities must be identical. Relation pair instance must be between geometry instance and mesh instance, and must have instances in that order (geometry, mesh). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em new\+\_\+entity\+\_\+topology} & Topology type of new mesh entity (from i\+Mesh Topology enum) \\
+\hline
+{\em lower\+\_\+order\+\_\+entity\+\_\+handles} & Handles of lower dimension entities bounding new mesh entity \\
+\hline
+{\em lower\+\_\+order\+\_\+entity\+\_\+handles\+\_\+size} & Number of lower dimension entities in lower\+\_\+order\+\_\+entity\+\_\+handles array \\
+\hline
+{\em offsets} & Offset array; offset\mbox{[}i\mbox{]} is index into lower\+\_\+order\+\_\+entity\+\_\+handles for i\textquotesingle{}th new entity \\
+\hline
+{\em offsets\+\_\+size} & Size of offset array, also equal to one more than number of new entities to be created \\
+\hline
+{\em $\ast$associated\+Geom\+Ents} & Geometry entities to be related to new vertices \\
+\hline
+{\em num\+\_\+geom\+\_\+ents} & Number of geometry entities\\
+\hline
+{\em $\ast$new\+\_\+entity\+\_\+handles} & Pointer to array of returned entity handles \\
+\hline
+{\em $\ast$new\+\_\+entity\+\_\+handles\+\_\+allocated} & Pointer to allocated size of new entity handle array \\
+\hline
+{\em $\ast$new\+\_\+entity\+\_\+handles\+\_\+size} & Pointer to occupied size of new entity handle array \\
+\hline
+{\em $\ast$status} & Creation status of new entities (from i\+Base Creation\+Status enum) \\
+\hline
+{\em $\ast$status\+\_\+allocated} & Allocated size of status array \\
+\hline
+{\em $\ast$status\+\_\+size} & Occupied size of status array \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+create\+Vtx\+And\+Associate@{i\+Rel\+\_\+create\+Vtx\+And\+Associate}}
+\index{i\+Rel\+\_\+create\+Vtx\+And\+Associate@{i\+Rel\+\_\+create\+Vtx\+And\+Associate}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+create\+Vtx\+And\+Associate(i\+Rel\+\_\+\+Instance instance, double x, double y, double z, i\+Base\+\_\+\+Entity\+Handle associated\+Geom\+Ent, i\+Base\+\_\+\+Entity\+Handle $\ast$new\+\_\+entity\+\_\+handle, int $\ast$ierr)}{iRel_createVtxAndAssociate(iRel_Instance instance, double x, double y, double z, iBase_EntityHandle associatedGeomEnt, iBase_EntityHandle *new_entity_handle, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+create\+Vtx\+And\+Associate (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{associated\+Geom\+Ent, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{new\+\_\+entity\+\_\+handle, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a0e83a849392bdc9b805ab19dc09f1663}{}\label{i_rel_8h_a0e83a849392bdc9b805ab19dc09f1663}
+
+
+Create a mesh vertex and relate to geometry entity. 
+
+Create a mesh vertex and relate to geometry entity. Relation pair instance must be between geometry instance and mesh instance, and must have instances in that order (geometry, mesh). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em x} & X position of new mesh vertex \\
+\hline
+{\em y} & Y position of new mesh vertex \\
+\hline
+{\em z} & Z position of new mesh vertex \\
+\hline
+{\em associated\+Geom\+Ent} & Geometry entity to be related to new vertex \\
+\hline
+{\em $\ast$new\+\_\+entity\+\_\+handle} & Pointer to new mesh vertex handle \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate@{i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate}}
+\index{i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate@{i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate(i\+Rel\+\_\+\+Instance instance, int num\+\_\+verts, int storage\+\_\+order, double $\ast$new\+\_\+coords, int new\+\_\+coords\+\_\+size, i\+Base\+\_\+\+Entity\+Handle $\ast$associated\+Geom\+Ents, int num\+\_\+geom\+\_\+ents, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$new\+\_\+vertex\+\_\+handles, int $\ast$new\+\_\+vertex\+\_\+handles\+\_\+allocated, int $\ast$new\+\_\+vertex\+\_\+handles\+\_\+size, int $\ast$ierr)}{iRel_createVtxArrAndAssociate(iRel_Instance instance, int num_verts, int storage_order, double *new_coords, int new_coords_size, iBase_EntityHandle *associatedGeomEnts, int num_geom_ents, iBase_EntityHandle **new_vertex_handles, int *new_vertex_handles_allocated, int *new_vertex_handles_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+create\+Vtx\+Arr\+And\+Associate (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{int}]{num\+\_\+verts, }
+\item[{int}]{storage\+\_\+order, }
+\item[{double $\ast$}]{new\+\_\+coords, }
+\item[{int}]{new\+\_\+coords\+\_\+size, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{associated\+Geom\+Ents, }
+\item[{int}]{num\+\_\+geom\+\_\+ents, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{new\+\_\+vertex\+\_\+handles, }
+\item[{int $\ast$}]{new\+\_\+vertex\+\_\+handles\+\_\+allocated, }
+\item[{int $\ast$}]{new\+\_\+vertex\+\_\+handles\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a94d122752629022baf08a2fbbd95a952}{}\label{i_rel_8h_a94d122752629022baf08a2fbbd95a952}
+
+
+Create an array of mesh vertices and relate to geometry entities. 
+
+Create an array of mesh vertices and relate to one or more geometry entities. If only one geometry entity is input, vertices are all related to that entity; otherwise the number of new vertices and input geometric entities must be identical. Relation pair instance must be between geometry instance and mesh instance, and must have instances in that order (geometry, mesh). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em num\+\_\+verts} & Number of new vertices to be created \\
+\hline
+{\em storage\+\_\+order} & Storage order of coordinate array (from i\+Base Storage\+Order enum, either i\+Base\+\_\+\+B\+L\+O\+C\+K\+ED or i\+Base\+\_\+\+I\+N\+T\+E\+R\+L\+E\+A\+V\+ED) \\
+\hline
+{\em new\+\_\+coords} & Positions of new mesh vertices \\
+\hline
+{\em new\+\_\+coords\+\_\+size} & Number of position entries in new\+\_\+coords \\
+\hline
+{\em $\ast$associated\+Geom\+Ents} & Geometry entities to be related to new vertices \\
+\hline
+{\em num\+\_\+geom\+\_\+ents} & Number of geometry entities \\
+\hline
+{\em $\ast$new\+\_\+vertex\+\_\+handles} & Pointer to array of returned vertex handles \\
+\hline
+{\em $\ast$new\+\_\+vertex\+\_\+handles\+\_\+allocated} & Pointer to allocated size of new vertex handle array \\
+\hline
+{\em $\ast$new\+\_\+vertex\+\_\+handles\+\_\+size} & Pointer to occupied size of new vertex handle array \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+destroy\+Association@{i\+Rel\+\_\+destroy\+Association}}
+\index{i\+Rel\+\_\+destroy\+Association@{i\+Rel\+\_\+destroy\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+destroy\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, int $\ast$ierr)}{iRel_destroyAssociation(iRel_Instance instance, iRel_RelationHandle rel, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+destroy\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aef45c7e4bfee95e956e1797b6a257213}{}\label{i_rel_8h_aef45c7e4bfee95e956e1797b6a257213}
+
+
+Destroy a relation pair. 
+
+Destroy the relation pair corresponding to the handle input 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Handle of relation pair to destroy \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+dtor@{i\+Rel\+\_\+dtor}}
+\index{i\+Rel\+\_\+dtor@{i\+Rel\+\_\+dtor}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+dtor(i\+Rel\+\_\+\+Instance instance, int $\ast$ierr)}{iRel_dtor(iRel_Instance instance, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+dtor (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a48e2139df7bdc69dca520bcb73cde7fc}{}\label{i_rel_8h_a48e2139df7bdc69dca520bcb73cde7fc}
+
+
+i\+Rel\+\_\+dtor Destroy the interface object 
+
+Calls destructor on interface object 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface object handle to destroy \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Associated\+Interfaces@{i\+Rel\+\_\+get\+Associated\+Interfaces}}
+\index{i\+Rel\+\_\+get\+Associated\+Interfaces@{i\+Rel\+\_\+get\+Associated\+Interfaces}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Associated\+Interfaces(i\+Rel\+\_\+\+Instance instance, i\+Base\+\_\+\+Instance iface, i\+Base\+\_\+\+Instance $\ast$$\ast$interfaces, int $\ast$interfaces\+\_\+allocated, int $\ast$interfaces\+\_\+size, int $\ast$ierr)}{iRel_getAssociatedInterfaces(iRel_Instance instance, iBase_Instance iface, iBase_Instance **interfaces, int *interfaces_allocated, int *interfaces_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Associated\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Base\+\_\+\+Instance}}]{iface, }
+\item[{{\bf i\+Base\+\_\+\+Instance} $\ast$$\ast$}]{interfaces, }
+\item[{int $\ast$}]{interfaces\+\_\+allocated, }
+\item[{int $\ast$}]{interfaces\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aad13675f6dd69aceb972a47df82a55b7}{}\label{i_rel_8h_aad13675f6dd69aceb972a47df82a55b7}
+
+
+Get interfaces related to specified interface. 
+
+Get interfaces related to the specified interface 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em iface} & Specified interface \\
+\hline
+{\em interfaces} & Pointer to array holding returned interfaces related to specified interface \\
+\hline
+{\em interfaces\+\_\+allocated} & Pointer to allocated size of interfaces list \\
+\hline
+{\em interfaces\+\_\+size} & Pointer to occupied size of interfaces list \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$$\ast$offset, int $\ast$offset\+\_\+allocated, int $\ast$offset\+\_\+size, int $\ast$ierr)}{iRel_getEntArrEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle *ent_array_1, int ent_array_1_size, int switch_order, iBase_EntityHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int **offset, int *offset_allocated, int *offset_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Ent\+Arr\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{ent\+\_\+array\+\_\+1\+\_\+size, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$$\ast$}]{offset, }
+\item[{int $\ast$}]{offset\+\_\+allocated, }
+\item[{int $\ast$}]{offset\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a2b6f4e9c2db543bc0416e758841c7ff4}{}\label{i_rel_8h_a2b6f4e9c2db543bc0416e758841c7ff4}
+
+
+Get entities related to those in specified array and relation, pairwise. 
+
+Get entities related to those in specified array and relation, pairwise. Returns sets or entities, depending on relation type and entities in ent\+\_\+array\+\_\+1. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent\+\_\+array\+\_\+1} & Array of entities whose relations are being queried \\
+\hline
+{\em ent\+\_\+array\+\_\+1\+\_\+size} & Number of entities in ent\+\_\+array\+\_\+1 \\
+\hline
+{\em switch\+\_\+order} & Entities in ent\+\_\+array\+\_\+1 are associated with 1st (=0) or 2nd (=1) interface of this relation pair \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2} & Pointer to array of entity handles returned from function \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated} & Pointer to allocated size of ent\+\_\+array\+\_\+2 \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2\+\_\+size} & Pointer to occupied size of ent\+\_\+array\+\_\+2 \\
+\hline
+{\em $\ast$offset} & Pointer to offset array; ($\ast$offset)\mbox{[}i\mbox{]} is index into ($\ast$ent\+\_\+array\+\_\+2) of 1st relation of ent\+\_\+array\+\_\+1\mbox{[}i\mbox{]} \\
+\hline
+{\em $\ast$offset\+\_\+allocated} & Pointer to allocated size of offset \\
+\hline
+{\em $\ast$offset\+\_\+size} & Pointer to occupied size of offset \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)}{iRel_getEntArrSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle *ent_array_1, int ent_array_1_size, int switch_order, iBase_EntitySetHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Ent\+Arr\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{ent\+\_\+array\+\_\+1\+\_\+size, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a6da9b11cfbb5fe05db1ddbcae1888c6d}{}\label{i_rel_8h_a6da9b11cfbb5fe05db1ddbcae1888c6d}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)}{iRel_getEntEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, int switch_order, iBase_EntityHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Ent\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a82d7c354869f3e5513c94ce590b1d18a}{}\label{i_rel_8h_a82d7c354869f3e5513c94ce590b1d18a}
+
+
+Get entities related to specified entity and relation. 
+
+Get entities related to specified entity and relation; returns entity sets or contained entities, depending on relation type (entity, set, or both). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent1} & 1st entity of relation being queried \\
+\hline
+{\em switch\+\_\+order} & ent1 is associated with 1st (=0) or 2nd (=1) interface of this relation pair \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2} & Pointer to array of entity handles returned from function \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated} & Pointer to allocated size of ent\+\_\+array\+\_\+2 \\
+\hline
+{\em $\ast$ent\+\_\+array\+\_\+2\+\_\+size} & Pointer to occupied size of ent\+\_\+array\+\_\+2 \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Ent\+Ent\+Association@{i\+Rel\+\_\+get\+Ent\+Ent\+Association}}
+\index{i\+Rel\+\_\+get\+Ent\+Ent\+Association@{i\+Rel\+\_\+get\+Ent\+Ent\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Ent\+Ent\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$ent2, int $\ast$ierr)}{iRel_getEntEntAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, int switch_order, iBase_EntityHandle *ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Ent\+Ent\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a3473293d155e0069633a38d147786bba}{}\label{i_rel_8h_a3473293d155e0069633a38d147786bba}
+
+
+Get entity related to specified entity and relation handle. 
+
+Get entity related to specified entity and relation handle. Also returns whether the related entity is an entity or a set. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent1} & 1st entity of relation being queried \\
+\hline
+{\em switch\+\_\+order} & 1st entity is related to 1st interface (=0) or 2nd interface (=1) of relation pair \\
+\hline
+{\em $\ast$ent2} & Pointer to entity related to ent1 \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Ent\+Set\+Association@{i\+Rel\+\_\+get\+Ent\+Set\+Association}}
+\index{i\+Rel\+\_\+get\+Ent\+Set\+Association@{i\+Rel\+\_\+get\+Ent\+Set\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Ent\+Set\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent2, int $\ast$ierr)}{iRel_getEntSetAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, int switch_order, iBase_EntitySetHandle *ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Ent\+Set\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a17601db8b4965269931424de54b24af8}{}\label{i_rel_8h_a17601db8b4965269931424de54b24af8}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$$\ast$offset, int $\ast$offset\+\_\+allocated, int $\ast$offset\+\_\+size, int $\ast$ierr)}{iRel_getSetArrEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle *ent_array_1, int ent_array_1_size, int switch_order, iBase_EntityHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int **offset, int *offset_allocated, int *offset_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Set\+Arr\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{ent\+\_\+array\+\_\+1\+\_\+size, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$$\ast$}]{offset, }
+\item[{int $\ast$}]{offset\+\_\+allocated, }
+\item[{int $\ast$}]{offset\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a14380da3975c521104b61e2a5119bf73}{}\label{i_rel_8h_a14380da3975c521104b61e2a5119bf73}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+1, int ent\+\_\+array\+\_\+1\+\_\+size, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)}{iRel_getSetArrSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle *ent_array_1, int ent_array_1_size, int switch_order, iBase_EntitySetHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Set\+Arr\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{ent\+\_\+array\+\_\+1\+\_\+size, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a8b9cbf6cbb4dc97f8a069971d742b7f0}{}\label{i_rel_8h_a8b9cbf6cbb4dc97f8a069971d742b7f0}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association@{i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$$\ast$ent\+\_\+array\+\_\+2, int $\ast$ent\+\_\+array\+\_\+2\+\_\+allocated, int $\ast$ent\+\_\+array\+\_\+2\+\_\+size, int $\ast$ierr)}{iRel_getSetEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, int switch_order, iBase_EntityHandle **ent_array_2, int *ent_array_2_allocated, int *ent_array_2_size, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Set\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$$\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+allocated, }
+\item[{int $\ast$}]{ent\+\_\+array\+\_\+2\+\_\+size, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_af9f307b0b1fc167c6313bf11030ecd15}{}\label{i_rel_8h_af9f307b0b1fc167c6313bf11030ecd15}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Set\+Ent\+Association@{i\+Rel\+\_\+get\+Set\+Ent\+Association}}
+\index{i\+Rel\+\_\+get\+Set\+Ent\+Association@{i\+Rel\+\_\+get\+Set\+Ent\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Set\+Ent\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$ent2, int $\ast$ierr)}{iRel_getSetEntAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, int switch_order, iBase_EntityHandle *ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Set\+Ent\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aff45e08ae6ebb9953dc5c86f89a1ec65}{}\label{i_rel_8h_aff45e08ae6ebb9953dc5c86f89a1ec65}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+get\+Set\+Set\+Association@{i\+Rel\+\_\+get\+Set\+Set\+Association}}
+\index{i\+Rel\+\_\+get\+Set\+Set\+Association@{i\+Rel\+\_\+get\+Set\+Set\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+get\+Set\+Set\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent2, int $\ast$ierr)}{iRel_getSetSetAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, int switch_order, iBase_EntitySetHandle *ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+get\+Set\+Set\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a765da4656d753da8ec345ab7e71bf33a}{}\label{i_rel_8h_a765da4656d753da8ec345ab7e71bf33a}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+infer\+All\+Associations@{i\+Rel\+\_\+infer\+All\+Associations}}
+\index{i\+Rel\+\_\+infer\+All\+Associations@{i\+Rel\+\_\+infer\+All\+Associations}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+infer\+All\+Associations(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, int $\ast$ierr)}{iRel_inferAllAssociations(iRel_Instance instance, iRel_RelationHandle rel, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+infer\+All\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aa5d38313d163c7a911eb1c4212058a83}{}\label{i_rel_8h_aa5d38313d163c7a911eb1c4212058a83}
+
+
+Infer relations between entities in specified pair of interfaces. 
+
+Infer relations between entities in specified pair of interfaces. The criteria used to infer these relations depends on the interfaces in the pair, the i\+Rel implementation, and the source of the data in those interfaces. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+infer\+Ent\+Arr\+Associations@{i\+Rel\+\_\+infer\+Ent\+Arr\+Associations}}
+\index{i\+Rel\+\_\+infer\+Ent\+Arr\+Associations@{i\+Rel\+\_\+infer\+Ent\+Arr\+Associations}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+infer\+Ent\+Arr\+Associations(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle $\ast$entities, int entities\+\_\+size, int iface\+\_\+no, int $\ast$ierr)}{iRel_inferEntArrAssociations(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle *entities, int entities_size, int iface_no, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+infer\+Ent\+Arr\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{entities, }
+\item[{int}]{entities\+\_\+size, }
+\item[{int}]{iface\+\_\+no, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_afceda1f9134046fbd386cf40bb243324}{}\label{i_rel_8h_afceda1f9134046fbd386cf40bb243324}
+
+
+Infer relations corresponding to specified entities and relation pair. 
+
+Infer relations corresponding to specified entities and relation pair. The criteria used to infer these relations depends on the interfaces in the pair, the i\+Rel implementation, and the source of the data in those interfaces. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em entities} & Array of entities whose relation are being inferred \\
+\hline
+{\em entities\+\_\+size} & Number of entities in array \\
+\hline
+{\em is\+\_\+set} & Entities are regular entities (=0) or sets (=1) \\
+\hline
+{\em iface\+\_\+no} & Entities correspond to 1st (=0) or 2nd (=1) interface in relation pair \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+infer\+Ent\+Associations@{i\+Rel\+\_\+infer\+Ent\+Associations}}
+\index{i\+Rel\+\_\+infer\+Ent\+Associations@{i\+Rel\+\_\+infer\+Ent\+Associations}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+infer\+Ent\+Associations(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle entity, int iface\+\_\+no, int $\ast$ierr)}{iRel_inferEntAssociations(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle entity, int iface_no, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+infer\+Ent\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{entity, }
+\item[{int}]{iface\+\_\+no, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a51479e555098daf5d19bd5d7d8089449}{}\label{i_rel_8h_a51479e555098daf5d19bd5d7d8089449}
+
+
+Infer relations corresponding to specified entity and relation pair. 
+
+Infer relations corresponding to specified entity and relation pair. The criteria used to infer these relations depends on the interfaces in the pair, the i\+Rel implementation, and the source of the data in those interfaces. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em entity} & Entity whose relations are being inferred \\
+\hline
+{\em is\+\_\+set} & Entity is a regular entity (=0) or a set (=1) \\
+\hline
+{\em iface\+\_\+no} & Entity corresponds to 1st (=0) or 2nd (=1) interface in relation pair \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+infer\+Set\+Arr\+Associations@{i\+Rel\+\_\+infer\+Set\+Arr\+Associations}}
+\index{i\+Rel\+\_\+infer\+Set\+Arr\+Associations@{i\+Rel\+\_\+infer\+Set\+Arr\+Associations}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+infer\+Set\+Arr\+Associations(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$entities, int entities\+\_\+size, int iface\+\_\+no, int $\ast$ierr)}{iRel_inferSetArrAssociations(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle *entities, int entities_size, int iface_no, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+infer\+Set\+Arr\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{entities, }
+\item[{int}]{entities\+\_\+size, }
+\item[{int}]{iface\+\_\+no, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a46409d3b205b94d1fad9466ca54038e4}{}\label{i_rel_8h_a46409d3b205b94d1fad9466ca54038e4}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+infer\+Set\+Associations@{i\+Rel\+\_\+infer\+Set\+Associations}}
+\index{i\+Rel\+\_\+infer\+Set\+Associations@{i\+Rel\+\_\+infer\+Set\+Associations}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+infer\+Set\+Associations(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle entity, int iface\+\_\+no, int $\ast$ierr)}{iRel_inferSetAssociations(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle entity, int iface_no, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+infer\+Set\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{entity, }
+\item[{int}]{iface\+\_\+no, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a82b2cca560453c0b50239c050e5c361d}{}\label{i_rel_8h_a82b2cca560453c0b50239c050e5c361d}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+move\+To@{i\+Rel\+\_\+move\+To}}
+\index{i\+Rel\+\_\+move\+To@{i\+Rel\+\_\+move\+To}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+move\+To(i\+Rel\+\_\+\+Instance instance, i\+Geom\+\_\+\+Instance geom, i\+Mesh\+\_\+\+Instance mesh, i\+Base\+\_\+\+Entity\+Handle geom\+\_\+entity\+\_\+handle, int $\ast$ierr)}{iRel_moveTo(iRel_Instance instance, iGeom_Instance geom, iMesh_Instance mesh, iBase_EntityHandle geom_entity_handle, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+move\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Geom\+\_\+\+Instance}}]{geom, }
+\item[{{\bf i\+Mesh\+\_\+\+Instance}}]{mesh, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{geom\+\_\+entity\+\_\+handle, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a7345f126a11a3fefa26a4e239064cdaa}{}\label{i_rel_8h_a7345f126a11a3fefa26a4e239064cdaa}
+
+
+Move related mesh entities to the closest point on the specified geometry entity. 
+
+Move related mesh entities to the closest point on the specified geometry entity. There must exist a relation pair instance between the input geometry and mesh instances, with those instances in that order (geometry, mesh). 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em geom} & i\+Geom instance handle \\
+\hline
+{\em mesh} & i\+Mesh instance handle \\
+\hline
+{\em geom\+\_\+entity\+\_\+handle} & Geometry entity whose related entities are being moved to it \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+new\+Assoc@{i\+Rel\+\_\+new\+Assoc}}
+\index{i\+Rel\+\_\+new\+Assoc@{i\+Rel\+\_\+new\+Assoc}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+new\+Assoc(const char $\ast$options, i\+Rel\+\_\+\+Instance $\ast$instance, int $\ast$ierr, const int options\+\_\+len)}{iRel_newAssoc(const char *options, iRel_Instance *instance, int *ierr, const int options_len)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+new\+Assoc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{options, }
+\item[{{\bf i\+Rel\+\_\+\+Instance} $\ast$}]{instance, }
+\item[{int $\ast$}]{ierr, }
+\item[{const int}]{options\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_ab113b7bf339bfd25665972730cfdbb5c}{}\label{i_rel_8h_ab113b7bf339bfd25665972730cfdbb5c}
+
+
+Create a new i\+Rel instance. 
+
+Create a new i\+Rel instance. Currently no options are implemented. 
+\begin{DoxyParams}{Parameters}
+{\em options} & Options for the implementation \\
+\hline
+{\em $\ast$instance} & Interface instance \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+{\em options\+\_\+len} & Length of options string \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)}{iRel_setEntArrEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle *ent_array_1, int num_ent1, iBase_EntityHandle *ent_array_2, int num_ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Arr\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{num\+\_\+ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_af9eed42711ba758f1f3f8b9130597fea}{}\label{i_rel_8h_af9eed42711ba758f1f3f8b9130597fea}
+
+
+Set relations between arrays of entities pairwise, ent\+\_\+array\+\_\+1\mbox{[}i\mbox{]}$<$-\/$>$ent\+\_\+array\+\_\+2\mbox{[}i\mbox{]}. 
+
+Set relations between arrays of entities pairwise, ent\+\_\+array\+\_\+1\mbox{[}i\mbox{]}$<$-\/$>$ent\+\_\+array\+\_\+2\mbox{[}i\mbox{]}. If either array contains sets and that side of the relation is \textquotesingle{}both\textquotesingle{}-\/type, set relations for individual entities in those sets too. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent\+\_\+array\+\_\+1} & 1st array of entities of relation being set \\
+\hline
+{\em num\+\_\+ent1} & Number of entities in 1st array \\
+\hline
+{\em ent\+\_\+array\+\_\+2} & 2nd array of entities of relation being set \\
+\hline
+{\em num\+\_\+ent2} & Number of entities in 2nd array \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)}{iRel_setEntArrSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle *ent_array_1, int num_ent1, iBase_EntitySetHandle *ent_array_2, int num_ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Arr\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{num\+\_\+ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_aef09a26118d995aef13484f5ebdf4027}{}\label{i_rel_8h_aef09a26118d995aef13484f5ebdf4027}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)}{iRel_setEntEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, int switch_order, iBase_EntityHandle *ent_array_2, int num_entities, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+entities, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_ae808584b9b1abc73537ac67063eb0996}{}\label{i_rel_8h_ae808584b9b1abc73537ac67063eb0996}
+
+
+Set a relation between an entity and several entities. 
+
+Set a relation between an entity and several entities. If either is a set and that side of the relation is \textquotesingle{}both\textquotesingle{}-\/type, set relations for individual entities in that set too. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent1} & 1st entity of relation being set \\
+\hline
+{\em switch\+\_\+order} & If non-\/zero, ent1 is associated with iface2 and ent\+\_\+array\+\_\+2 with iface1 of specified relation, otherwise vica versa \\
+\hline
+{\em ent\+\_\+array\+\_\+2} & Entity(ies) to be related to ent1 \\
+\hline
+{\em num\+\_\+entities} & Number of entities in ent\+\_\+array\+\_\+2 \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Ent\+Association@{i\+Rel\+\_\+set\+Ent\+Ent\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Ent\+Association@{i\+Rel\+\_\+set\+Ent\+Ent\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Ent\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, i\+Base\+\_\+\+Entity\+Handle ent2, int $\ast$ierr)}{iRel_setEntEntAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, iBase_EntityHandle ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Ent\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a479f6e8a5319e6ffcf61b4f1803e65e5}{}\label{i_rel_8h_a479f6e8a5319e6ffcf61b4f1803e65e5}
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & Interface instance \\
+\hline
+{\em rel} & Relation handle being queried \\
+\hline
+{\em ent1} & 1st entity of relation being set \\
+\hline
+{\em ent2} & 2nd entity of relation being set \\
+\hline
+{\em $\ast$ierr} & Pointer to error value, returned from function \\
+\hline
+\end{DoxyParams}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)}{iRel_setEntSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, int switch_order, iBase_EntitySetHandle *ent_array_2, int num_entities, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+entities, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a94c539005ae9379b959ce9a599e514da}{}\label{i_rel_8h_a94c539005ae9379b959ce9a599e514da}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Ent\+Set\+Association@{i\+Rel\+\_\+set\+Ent\+Set\+Association}}
+\index{i\+Rel\+\_\+set\+Ent\+Set\+Association@{i\+Rel\+\_\+set\+Ent\+Set\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Ent\+Set\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Handle ent1, i\+Base\+\_\+\+Entity\+Set\+Handle ent2, int $\ast$ierr)}{iRel_setEntSetAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntityHandle ent1, iBase_EntitySetHandle ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Ent\+Set\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a77104a8a290c2859e897328326159568}{}\label{i_rel_8h_a77104a8a290c2859e897328326159568}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)}{iRel_setSetArrEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle *ent_array_1, int num_ent1, iBase_EntityHandle *ent_array_2, int num_ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Arr\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{num\+\_\+ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_afabc48f9c09e1f321c2ca9abd15db3ed}{}\label{i_rel_8h_afabc48f9c09e1f321c2ca9abd15db3ed}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+1, int num\+\_\+ent1, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+ent2, int $\ast$ierr)}{iRel_setSetArrSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle *ent_array_1, int num_ent1, iBase_EntitySetHandle *ent_array_2, int num_ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Arr\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+1, }
+\item[{int}]{num\+\_\+ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_af61b6e8b44934a44f0fc3712db46d061}{}\label{i_rel_8h_af61b6e8b44934a44f0fc3712db46d061}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)}{iRel_setSetEntArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, int switch_order, iBase_EntityHandle *ent_array_2, int num_entities, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Ent\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+entities, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a53e43e7248e9a0b976153818e4d2079a}{}\label{i_rel_8h_a53e43e7248e9a0b976153818e4d2079a}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Ent\+Association@{i\+Rel\+\_\+set\+Set\+Ent\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Ent\+Association@{i\+Rel\+\_\+set\+Set\+Ent\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Ent\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, i\+Base\+\_\+\+Entity\+Handle ent2, int $\ast$ierr)}{iRel_setSetEntAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, iBase_EntityHandle ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Ent\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Handle}}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_afaa2594ff93116aa2d3d8a988cd12bad}{}\label{i_rel_8h_afaa2594ff93116aa2d3d8a988cd12bad}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association@{i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, int switch\+\_\+order, i\+Base\+\_\+\+Entity\+Set\+Handle $\ast$ent\+\_\+array\+\_\+2, int num\+\_\+entities, int $\ast$ierr)}{iRel_setSetSetArrAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, int switch_order, iBase_EntitySetHandle *ent_array_2, int num_entities, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Set\+Arr\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{int}]{switch\+\_\+order, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle} $\ast$}]{ent\+\_\+array\+\_\+2, }
+\item[{int}]{num\+\_\+entities, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a7f893fb71b29608e69284bd95be08ea3}{}\label{i_rel_8h_a7f893fb71b29608e69284bd95be08ea3}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+set\+Set\+Set\+Association@{i\+Rel\+\_\+set\+Set\+Set\+Association}}
+\index{i\+Rel\+\_\+set\+Set\+Set\+Association@{i\+Rel\+\_\+set\+Set\+Set\+Association}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+set\+Set\+Set\+Association(i\+Rel\+\_\+\+Instance instance, i\+Rel\+\_\+\+Relation\+Handle rel, i\+Base\+\_\+\+Entity\+Set\+Handle ent1, i\+Base\+\_\+\+Entity\+Set\+Handle ent2, int $\ast$ierr)}{iRel_setSetSetAssociation(iRel_Instance instance, iRel_RelationHandle rel, iBase_EntitySetHandle ent1, iBase_EntitySetHandle ent2, int *ierr)}}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Rel\+\_\+set\+Set\+Set\+Association (
+\begin{DoxyParamCaption}
+\item[{{\bf i\+Rel\+\_\+\+Instance}}]{instance, }
+\item[{{\bf i\+Rel\+\_\+\+Relation\+Handle}}]{rel, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent1, }
+\item[{{\bf i\+Base\+\_\+\+Entity\+Set\+Handle}}]{ent2, }
+\item[{int $\ast$}]{ierr}
+\end{DoxyParamCaption}
+)}\hypertarget{i_rel_8h_a2dc264c7dce84dfb2795d7cd591160e9}{}\label{i_rel_8h_a2dc264c7dce84dfb2795d7cd591160e9}
+
+
+\subsection{Variable Documentation}
+\index{i\+Rel.\+h@{i\+Rel.\+h}!i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR@{i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR}}
+\index{i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR@{i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR}!i\+Rel.\+h@{i\+Rel.\+h}}
+\subsubsection[{\texorpdfstring{i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR}{iRel_LAST_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf i\+Base\+\_\+\+Error} i\+Rel\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+OR}\hypertarget{i_rel_8h_a87fc5bf48e684bd4d0215f2b2f0577eb}{}\label{i_rel_8h_a87fc5bf48e684bd4d0215f2b2f0577eb}

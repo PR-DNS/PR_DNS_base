@@ -1,0 +1,421 @@
+\hypertarget{group___g_r_i_d_i_n_t_f_c}{}\section{Fron\+Tier Interface-\/\+Grid Functions}
+\label{group___g_r_i_d_i_n_t_f_c}\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{F\+T\+\_\+\+Make\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Make a duplicate interface whose topological grid is the expanded dual grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga03dfa34f5478d732b91a297188a6bfb5}{F\+T\+\_\+\+Free\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space of grid crossing interface made by the function \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{F\+T\+\_\+\+Make\+Grid\+Intfc()}. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga70d43787e4dee696c039d4286a904c5c}{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Make a duplicate interface whose topological grid is the expanded comp grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_gaff71f10a5ea191217f1fa302e8c14224}{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space of grid crossing interface of front-\/$>$old\+\_\+grid\+\_\+intfc. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_gae8a4043d1a692d4650b0e70e08c481fa}{F\+T\+\_\+\+Free\+Front} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space occupied by the front including grid\+\_\+intfc if still there, and interf. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_gaf48a7313099d778293353fdc04359f2b}{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, double $\ast$nor, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\begin{DoxyCompactList}\small\item\em Standing at grid icoords, looking to the direction dir, this function looks for the nearest interface cross on the grid line segment. The function returns Y\+ES if the crossing exists, in such case, the crossing coordinates are copied to crx\+\_\+coords, the corresponding hyper surface (curce in 2D and surface in 3D) is assigned to hs, and the normal vector to the side of comp. If no crossing exists, the function return NO;. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga99a4412d35cf4e8ba70f40ee8e021213}{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Sitting at icoords and look to the direction dir, this function detects the nearest hyper surface (curve in 2D and surface in 3D) on the grid segment. Return pointer to hyper surface if there is one, return N\+U\+LL if no crossing hyper surface is found. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_ga4a0e84e0bbe322e0344144904b2d971b}{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double $\ast$ans, double $\ast$default\+\_\+ans)
+\begin{DoxyCompactList}\small\item\em Interpolate a state variable at a space point with coords. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_gaf8502ad50741cbb47b859d2a74421e4b}{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double $\ast$ans, double $\ast$default\+\_\+ans)
+\begin{DoxyCompactList}\small\item\em Interpolate a state variable at a space point with coords on computational grid. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2d9baf36c34acc36c027840cbbf80370}{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, int range, double $\ast$ans)
+\begin{DoxyCompactList}\small\item\em Find the state variable on rectangular grid point which has the same component as the input and is nearest to the input coordinate. Return Y\+ES if such point is found, and NO if no such point is found. In the latter case, the value of the ans is set to zero. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{group___g_r_i_d_i_n_t_f_c_ga13c00f63b4a54734de6eae4efae45bda}{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+vol)
+\begin{DoxyCompactList}\small\item\em This function compute the total volume fraction associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It returns the total volume fraction as a double precision value. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga84f55d47301bbcca08ccdd5706e6f286}{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+vol, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$grid\+\_\+vol\+\_\+frac)
+\begin{DoxyCompactList}\small\item\em This function compute the volume fraction on the expanded dual grid associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It passes the address of the grid volume fraction to the pointer grid\+\_\+vol\+\_\+frac. In 2D, it is a double$\ast$$\ast$, in 3D it is double$\ast$$\ast$$\ast$. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_gaa9ec67adaee0fd0b4498e0d0d2a36b40}{F\+T\+\_\+\+Grid\+Intfc\+TopL} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return lower bounds of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga906dd1fc0f6fcadadaea6f3950f0f642}{F\+T\+\_\+\+Grid\+Intfc\+TopU} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return upper bounds of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga7df01fa187bfed7f240c6883b356018c}{F\+T\+\_\+\+Grid\+Intfc\+Toph} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return grid spacing of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_gae5ea92169c297b2b18f4db76d2fd9729}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return components of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga8fd41d6d6171f1266b0381c6568ab884}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return mesh sizes of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga6641e0a8a541513cdeb5cbd25a88a147}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return grid structure of grid domain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords@{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords}}
+\index{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords@{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords(\+Front $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\+P\+O\+I\+N\+T\+E\+R), double $\ast$ans, double $\ast$default\+\_\+ans)}{FT_CompGridIntrpStateVarAtCoords(Front *front, int comp, double *coords, double *var_array, double(*state_func)(POINTER), double *ans, double *default_ans)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{var\+\_\+array, }
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER})}]{state\+\_\+func, }
+\item[{double $\ast$}]{ans, }
+\item[{double $\ast$}]{default\+\_\+ans}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gaf8502ad50741cbb47b859d2a74421e4b}{}\label{group___g_r_i_d_i_n_t_f_c_gaf8502ad50741cbb47b859d2a74421e4b}
+
+
+Interpolate a state variable at a space point with coords on computational grid. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em comp} & {\bfseries in} Component in which the state should be interpolated. \\
+\hline
+{\em var\+\_\+array} & {\bfseries in} Array of the variable on the expanded dual grid. \\
+\hline
+{\em state\+\_\+func()} & {\bfseries in} Function to retrieve the variable from the interface state pointer. \\
+\hline
+{\em ans} & {\bfseries out} Address of the interpolated variable. \\
+\hline
+{\em default\+\_\+ans} & {\bfseries in} Address of default solution, if N\+U\+LL, the function will look for solution at nearest interface point. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction@{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction}}
+\index{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction@{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction(\+Front $\ast$front, C\+O\+M\+P\+O\+N\+E\+N\+T comp\+\_\+of\+\_\+vol, P\+O\+I\+N\+T\+E\+R $\ast$grid\+\_\+vol\+\_\+frac)}{FT_ComputeGridVolumeFraction(Front *front, COMPONENT comp_of_vol, POINTER *grid_vol_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}double F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp\+\_\+of\+\_\+vol, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{grid\+\_\+vol\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga84f55d47301bbcca08ccdd5706e6f286}{}\label{group___g_r_i_d_i_n_t_f_c_ga84f55d47301bbcca08ccdd5706e6f286}
+
+
+This function compute the volume fraction on the expanded dual grid associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It passes the address of the grid volume fraction to the pointer grid\+\_\+vol\+\_\+frac. In 2D, it is a double$\ast$$\ast$, in 3D it is double$\ast$$\ast$$\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries pointer} to the front. \\
+\hline
+{\em comp\+\_\+of\+\_\+vol} & {\bfseries component} index of the volume fraction. \\
+\hline
+{\em grid\+\_\+vol\+\_\+frac} & {\bfseries ananomous} pointer pointing to the addess of the volume fraction on the grid. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction@{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction}}
+\index{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction@{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction(\+Front $\ast$front, C\+O\+M\+P\+O\+N\+E\+N\+T comp\+\_\+of\+\_\+vol)}{FT_ComputeTotalVolumeFraction(Front *front, COMPONENT comp_of_vol)}}]{\setlength{\rightskip}{0pt plus 5cm}double F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp\+\_\+of\+\_\+vol}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga13c00f63b4a54734de6eae4efae45bda}{}\label{group___g_r_i_d_i_n_t_f_c_ga13c00f63b4a54734de6eae4efae45bda}
+
+
+This function compute the total volume fraction associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It returns the total volume fraction as a double precision value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries pointer} to the front. \\
+\hline
+{\em comp\+\_\+of\+\_\+vol} & {\bfseries component} index of the volume fraction. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Free\+Front@{F\+T\+\_\+\+Free\+Front}}
+\index{F\+T\+\_\+\+Free\+Front@{F\+T\+\_\+\+Free\+Front}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Free\+Front(\+Front $\ast$front)}{FT_FreeFront(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Free\+Front (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gae8a4043d1a692d4650b0e70e08c481fa}{}\label{group___g_r_i_d_i_n_t_f_c_gae8a4043d1a692d4650b0e70e08c481fa}
+
+
+Delete and free space occupied by the front including grid\+\_\+intfc if still there, and interf. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Free\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Grid\+Intfc}}
+\index{F\+T\+\_\+\+Free\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Grid\+Intfc}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Free\+Grid\+Intfc(\+Front $\ast$front)}{FT_FreeGridIntfc(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Free\+Grid\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga03dfa34f5478d732b91a297188a6bfb5}{}\label{group___g_r_i_d_i_n_t_f_c_ga03dfa34f5478d732b91a297188a6bfb5}
+
+
+Delete and free space of grid crossing interface made by the function \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{F\+T\+\_\+\+Make\+Grid\+Intfc()}. 
+
+Delete and free space of grid crossing interface made by the function \hyperlink{group___g_r_i_d_i_n_t_f_c_ga70d43787e4dee696c039d4286a904c5c}{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Free\+Old\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc}}
+\index{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc(\+Front $\ast$front)}{FT_FreeOldGridIntfc(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Free\+Old\+Grid\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gaff71f10a5ea191217f1fa302e8c14224}{}\label{group___g_r_i_d_i_n_t_f_c_gaff71f10a5ea191217f1fa302e8c14224}
+
+
+Delete and free space of grid crossing interface of front-\/$>$old\+\_\+grid\+\_\+intfc. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp(\+Front $\ast$)}{FT_GridIntfcTopComp(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gae5ea92169c297b2b18f4db76d2fd9729}{}\label{group___g_r_i_d_i_n_t_f_c_gae5ea92169c297b2b18f4db76d2fd9729}
+
+
+This function return components of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax(\+Front $\ast$)}{FT_GridIntfcTopGmax(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga8fd41d6d6171f1266b0381c6568ab884}{}\label{group___g_r_i_d_i_n_t_f_c_ga8fd41d6d6171f1266b0381c6568ab884}
+
+
+This function return mesh sizes of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid@{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid(\+Front $\ast$)}{FT_GridIntfcTopGrid(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$ F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga6641e0a8a541513cdeb5cbd25a88a147}{}\label{group___g_r_i_d_i_n_t_f_c_ga6641e0a8a541513cdeb5cbd25a88a147}
+
+
+This function return grid structure of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+Toph@{F\+T\+\_\+\+Grid\+Intfc\+Toph}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+Toph@{F\+T\+\_\+\+Grid\+Intfc\+Toph}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Toph(\+Front $\ast$)}{FT_GridIntfcToph(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ F\+T\+\_\+\+Grid\+Intfc\+Toph (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga7df01fa187bfed7f240c6883b356018c}{}\label{group___g_r_i_d_i_n_t_f_c_ga7df01fa187bfed7f240c6883b356018c}
+
+
+This function return grid spacing of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+TopL@{F\+T\+\_\+\+Grid\+Intfc\+TopL}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+TopL@{F\+T\+\_\+\+Grid\+Intfc\+TopL}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Top\+L(\+Front $\ast$)}{FT_GridIntfcTopL(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ F\+T\+\_\+\+Grid\+Intfc\+TopL (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gaa9ec67adaee0fd0b4498e0d0d2a36b40}{}\label{group___g_r_i_d_i_n_t_f_c_gaa9ec67adaee0fd0b4498e0d0d2a36b40}
+
+
+This function return lower bounds of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Grid\+Intfc\+TopU@{F\+T\+\_\+\+Grid\+Intfc\+TopU}}
+\index{F\+T\+\_\+\+Grid\+Intfc\+TopU@{F\+T\+\_\+\+Grid\+Intfc\+TopU}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Intfc\+Top\+U(\+Front $\ast$)}{FT_GridIntfcTopU(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ F\+T\+\_\+\+Grid\+Intfc\+TopU (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga906dd1fc0f6fcadadaea6f3950f0f642}{}\label{group___g_r_i_d_i_n_t_f_c_ga906dd1fc0f6fcadadaea6f3950f0f642}
+
+
+This function return upper bounds of grid domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing@{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing}}
+\index{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing@{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int wave\+\_\+type)}{FT_HyperSurfAtGridCrossing(Front *front, int *icoords, GRID_DIRECTION dir, int wave_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{wave\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga99a4412d35cf4e8ba70f40ee8e021213}{}\label{group___g_r_i_d_i_n_t_f_c_ga99a4412d35cf4e8ba70f40ee8e021213}
+
+
+Sitting at icoords and look to the direction dir, this function detects the nearest hyper surface (curve in 2D and surface in 3D) on the grid segment. Return pointer to hyper surface if there is one, return N\+U\+LL if no crossing hyper surface is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em icoords} & {\bfseries in} Grid point coordinate indices. \\
+\hline
+{\em dir} & {\bfseries in} Direction to which the crossing is to be found. \\
+\hline
+{\em wave\+\_\+type} & {\bfseries in} wave type of the hyper surface to search, if A\+N\+Y\+\_\+\+W\+A\+V\+E\+\_\+\+T\+Y\+PE, will return any hyper surface at the crossing. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords@{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords}}
+\index{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords@{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords(\+Front $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\+P\+O\+I\+N\+T\+E\+R), double $\ast$ans, double $\ast$default\+\_\+ans)}{FT_IntrpStateVarAtCoords(Front *front, int comp, double *coords, double *var_array, double(*state_func)(POINTER), double *ans, double *default_ans)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{var\+\_\+array, }
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER})}]{state\+\_\+func, }
+\item[{double $\ast$}]{ans, }
+\item[{double $\ast$}]{default\+\_\+ans}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga4a0e84e0bbe322e0344144904b2d971b}{}\label{group___g_r_i_d_i_n_t_f_c_ga4a0e84e0bbe322e0344144904b2d971b}
+
+
+Interpolate a state variable at a space point with coords. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em comp} & {\bfseries in} Component in which the state should be interpolated. \\
+\hline
+{\em var\+\_\+array} & {\bfseries in} Array of the variable on the expanded dual grid. \\
+\hline
+{\em state\+\_\+func()} & {\bfseries in} Function to retrieve the variable from the interface state pointer. \\
+\hline
+{\em ans} & {\bfseries out} Address of the interpolated variable. \\
+\hline
+{\em default\+\_\+ans} & {\bfseries in} Address of default solution, if N\+U\+LL, the function will look for solution at nearest interface point. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc@{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc}}
+\index{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc@{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc(\+Front $\ast$front)}{FT_MakeCompGridIntfc(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga70d43787e4dee696c039d4286a904c5c}{}\label{group___g_r_i_d_i_n_t_f_c_ga70d43787e4dee696c039d4286a904c5c}
+
+
+Make a duplicate interface whose topological grid is the expanded comp grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Make\+Grid\+Intfc@{F\+T\+\_\+\+Make\+Grid\+Intfc}}
+\index{F\+T\+\_\+\+Make\+Grid\+Intfc@{F\+T\+\_\+\+Make\+Grid\+Intfc}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Grid\+Intfc(\+Front $\ast$front)}{FT_MakeGridIntfc(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Grid\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{}\label{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}
+
+
+Make a duplicate interface whose topological grid is the expanded dual grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range@{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range}}
+\index{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range@{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range(\+Front $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, int range, double $\ast$ans)}{FT_NearestRectGridVarInRange(Front *front, int comp, double *coords, double *var_array, int range, double *ans)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{var\+\_\+array, }
+\item[{int}]{range, }
+\item[{double $\ast$}]{ans}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_ga2d9baf36c34acc36c027840cbbf80370}{}\label{group___g_r_i_d_i_n_t_f_c_ga2d9baf36c34acc36c027840cbbf80370}
+
+
+Find the state variable on rectangular grid point which has the same component as the input and is nearest to the input coordinate. Return Y\+ES if such point is found, and NO if no such point is found. In the latter case, the value of the ans is set to zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em comp} & {\bfseries in} Component in which the state should be interpolated. \\
+\hline
+{\em var\+\_\+array} & {\bfseries in} Array of the variable on the expanded dual grid. \\
+\hline
+{\em range} & {\bfseries in} Rnage of search in number of grid cells. \\
+\hline
+{\em ans} & {\bfseries out} Address of the interpolated variable. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}!F\+T\+\_\+\+Normal\+At\+Grid\+Crossing@{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing}}
+\index{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing@{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing}!Fron\+Tier Interface-\/\+Grid Functions@{Fron\+Tier Interface-\/\+Grid Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, double $\ast$nor, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)}{FT_NormalAtGridCrossing(Front *front, int *icoords, GRID_DIRECTION dir, int comp, double *nor, HYPER_SURF **hs, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Normal\+At\+Grid\+Crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_r_i_d_i_n_t_f_c_gaf48a7313099d778293353fdc04359f2b}{}\label{group___g_r_i_d_i_n_t_f_c_gaf48a7313099d778293353fdc04359f2b}
+
+
+Standing at grid icoords, looking to the direction dir, this function looks for the nearest interface cross on the grid line segment. The function returns Y\+ES if the crossing exists, in such case, the crossing coordinates are copied to crx\+\_\+coords, the corresponding hyper surface (curce in 2D and surface in 3D) is assigned to hs, and the normal vector to the side of comp. If no crossing exists, the function return NO;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em icoords} & {\bfseries in} Grid point coordinate indices. \\
+\hline
+{\em dir} & {\bfseries in} Direction to which the crossing is to be found. \\
+\hline
+{\em comp} & {\bfseries in} Component (domain index) of the grid point at icoord. \\
+\hline
+{\em nor} & {\bfseries out} normal vector at the crossing to the side of comp. \\
+\hline
+{\em hs} & {\bfseries out} Crossing hyper surface (curve in 2D and surface in 3D). \\
+\hline
+{\em crx\+\_\+coords} & {\bfseries out} Crossing coordinates. \\
+\hline
+\end{DoxyParams}

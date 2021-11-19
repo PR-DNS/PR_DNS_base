@@ -1,0 +1,131 @@
+\hypertarget{group___t_i_m_e}{}\section{Fron\+Tier Time Control Functions}
+\label{group___t_i_m_e}\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_ga09741004fb2b7edfeb175a53c99c9b0a}{F\+T\+\_\+\+Set\+Time\+Step} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Calculate front-\/$>$dt for next time step using the recorded maximum speed from previous time step, it step is reduced by a C\+FL factor to to ensure numerical stability. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_gadd79a047c81eb97b79756e6798bde8e3}{F\+T\+\_\+\+Time\+Control\+Filter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em To further reduce time step if the printing or movie output time is smaller than the time after next time step. Increment priting or/and movie output index if either of both of them are met. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_gaaa75f808bfc48b58cef67f5db0e63b20}{F\+T\+\_\+\+Is\+Save\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for printing restart files. returns Y\+ES to indicate that restart file should be generated. This function does not write the output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_gaefbf5f750cbf1d02b7e1e15fb76954e9}{F\+T\+\_\+\+Is\+Movie\+Frame\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for output of a movie frame. returns Y\+ES to indicate that a movie frame should be generated. This function does not write the movie frame. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_ga869ebe5c3c2fbd15767e266febe88e46}{F\+T\+\_\+\+Time\+Limit\+Reached} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for termination of the run. Return Y\+ES either maximum time has been reached or maximum time step has been reached. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_ga9f007ed6e3de95b1e56c8f925b740a0c}{F\+T\+\_\+\+Record\+Max\+Front\+Speed} (int dir, double speed, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, double $\ast$coords, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function compare and record maximum speed of the front. The recorded speed will be used to determine the time step which must satisfy the C\+FL condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Is\+Movie\+Frame\+Time@{F\+T\+\_\+\+Is\+Movie\+Frame\+Time}}
+\index{F\+T\+\_\+\+Is\+Movie\+Frame\+Time@{F\+T\+\_\+\+Is\+Movie\+Frame\+Time}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Is\+Movie\+Frame\+Time(\+Front $\ast$front)}{FT_IsMovieFrameTime(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Is\+Movie\+Frame\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_gaefbf5f750cbf1d02b7e1e15fb76954e9}{}\label{group___t_i_m_e_gaefbf5f750cbf1d02b7e1e15fb76954e9}
+
+
+Signals that time is reached for output of a movie frame. returns Y\+ES to indicate that a movie frame should be generated. This function does not write the movie frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Is\+Save\+Time@{F\+T\+\_\+\+Is\+Save\+Time}}
+\index{F\+T\+\_\+\+Is\+Save\+Time@{F\+T\+\_\+\+Is\+Save\+Time}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Is\+Save\+Time(\+Front $\ast$front)}{FT_IsSaveTime(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Is\+Save\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_gaaa75f808bfc48b58cef67f5db0e63b20}{}\label{group___t_i_m_e_gaaa75f808bfc48b58cef67f5db0e63b20}
+
+
+Signals that time is reached for printing restart files. returns Y\+ES to indicate that restart file should be generated. This function does not write the output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Record\+Max\+Front\+Speed@{F\+T\+\_\+\+Record\+Max\+Front\+Speed}}
+\index{F\+T\+\_\+\+Record\+Max\+Front\+Speed@{F\+T\+\_\+\+Record\+Max\+Front\+Speed}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Record\+Max\+Front\+Speed(int dir, double speed, P\+O\+I\+N\+T\+E\+R state, double $\ast$coords, Front $\ast$front)}{FT_RecordMaxFrontSpeed(int dir, double speed, POINTER state, double *coords, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Record\+Max\+Front\+Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{double}]{speed, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_ga9f007ed6e3de95b1e56c8f925b740a0c}{}\label{group___t_i_m_e_ga9f007ed6e3de95b1e56c8f925b740a0c}
+
+
+This function compare and record maximum speed of the front. The recorded speed will be used to determine the time step which must satisfy the C\+FL condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & {\bfseries in} Direction of the speed, e. g. 0(x), 1(y), or 2(z). \\
+\hline
+{\em speed} & {\bfseries in} The speed to be compared and recorded (if bigger than max). \\
+\hline
+{\em state} & {\bfseries in} Pointer to the state, optional, can be set to N\+U\+LL. \\
+\hline
+{\em coords} & {\bfseries in} Coordinates of the point where the speed occurs. \\
+\hline
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Set\+Time\+Step@{F\+T\+\_\+\+Set\+Time\+Step}}
+\index{F\+T\+\_\+\+Set\+Time\+Step@{F\+T\+\_\+\+Set\+Time\+Step}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Set\+Time\+Step(\+Front $\ast$front)}{FT_SetTimeStep(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Set\+Time\+Step (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_ga09741004fb2b7edfeb175a53c99c9b0a}{}\label{group___t_i_m_e_ga09741004fb2b7edfeb175a53c99c9b0a}
+
+
+Calculate front-\/$>$dt for next time step using the recorded maximum speed from previous time step, it step is reduced by a C\+FL factor to to ensure numerical stability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Time\+Control\+Filter@{F\+T\+\_\+\+Time\+Control\+Filter}}
+\index{F\+T\+\_\+\+Time\+Control\+Filter@{F\+T\+\_\+\+Time\+Control\+Filter}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Time\+Control\+Filter(\+Front $\ast$front)}{FT_TimeControlFilter(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Time\+Control\+Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_gadd79a047c81eb97b79756e6798bde8e3}{}\label{group___t_i_m_e_gadd79a047c81eb97b79756e6798bde8e3}
+
+
+To further reduce time step if the printing or movie output time is smaller than the time after next time step. Increment priting or/and movie output index if either of both of them are met. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}!F\+T\+\_\+\+Time\+Limit\+Reached@{F\+T\+\_\+\+Time\+Limit\+Reached}}
+\index{F\+T\+\_\+\+Time\+Limit\+Reached@{F\+T\+\_\+\+Time\+Limit\+Reached}!Fron\+Tier Time Control Functions@{Fron\+Tier Time Control Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Time\+Limit\+Reached(\+Front $\ast$front)}{FT_TimeLimitReached(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} F\+T\+\_\+\+Time\+Limit\+Reached (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___t_i_m_e_ga869ebe5c3c2fbd15767e266febe88e46}{}\label{group___t_i_m_e_ga869ebe5c3c2fbd15767e266febe88e46}
+
+
+Signals that time is reached for termination of the run. Return Y\+ES either maximum time has been reached or maximum time step has been reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+\end{DoxyParams}

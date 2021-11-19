@@ -1,0 +1,361 @@
+\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n}{}\section{Fron\+Tier Initialization Functions}
+\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n}\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaabc3a4a619100a7f79ccab041e56f13c}{F\+T\+\_\+\+Init} (int argc, char $\ast$$\ast$argv, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Process the command line arguments, set IO handles, and store initialization parameters in f\+\_\+basic, Including read the number of processors, the dimesension of the problem, partition of the computational domain, restart message, the input file and the output directory. -\/d dim -\/p nx \mbox{[}ny\mbox{]} \mbox{[}nz\mbox{]} -\/i input-\/name -\/o output-\/dir-\/name -\/r restart-\/dir-\/name -\/t restart-\/step. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga9f0c9eacbefffd97c78270a99028fcc4}{F\+T\+\_\+\+Read\+Space\+Domain} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Read from input file the computational domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga5691571dfcb374f3bfd1bab6e2185ae5}{F\+T\+\_\+\+Read\+Comparison\+Domain} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Read from input file the comparison domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga506f3542260db3b0a8ed36d5132835e3}{F\+T\+\_\+\+Start\+Up} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Initialize front computational grid, interface and function hooks, default function calls, and if restart, read interface from restart directory. Constructor for Front object. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga689d30333f9c5885405c00cd5c19bdec}{F\+T\+\_\+\+Init\+Debug} (char $\ast$inname)
+\begin{DoxyCompactList}\small\item\em Initialize strings for debugging option of the problem, read the input file. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga51d0d72516f4d3312a9cd3e4bfdb3552}{F\+T\+\_\+\+Init\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a3a8db0030cbeafed0ec59f4c151377a5}{L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$level\+\_\+func\+\_\+pack)
+\begin{DoxyCompactList}\small\item\em Initialize the interface interface curves (2D) and surfaces (3D) using level function and parameters, or in some cases, point set. Install boundary curves (2D) or surfaces (3D). For 2D, the boundary is installed by default. For 3D, the boundary is installed on request. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga2c959dd0460cbcafda590a48e9a75e7a}{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Clip the Initial interface of the front to a parallel subdomain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga1a5d78422a8649b43a530adbef947254}{F\+T\+\_\+\+Init\+Velo\+Func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a9726a0c7607082b8d5754acb01ff6008}{V\+E\+L\+O\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$velo\+\_\+func\+\_\+pack)
+\begin{DoxyCompactList}\small\item\em Initialize front velocity function for front point propagation. The velocity function use point and other related structures as input, must also supply parameters needed for the velocity function. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga62f9af5003ddf2150954b97148607186}{F\+T\+\_\+\+Read\+Time\+Control} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Read the time domain and control information from input file, including maximum time, maximum step, restart print interval, movie frame output interval, C\+FL factor, and redistribution step interval. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3858581907803fab14abd2c3addbcfdb}{F\+T\+\_\+\+Reset\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Reset the time to 0.\+0, time step to 0, print interval index to 0, movie interval index to 0. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$ \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaeb9c6b8ce8c744c05f0d4f7a9bbf9c2e}{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int neg\+\_\+comp, int pos\+\_\+comp, double($\ast$func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, int w\+\_\+type, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function creates a set of hypersurfaces (curves in 2D and surfaces in 3D) using a level function (provided by the caller). The function return the handle for the array of hyper surfaces as (P\+O\+I\+N\+T\+E\+R$\ast$). \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3ca82d7da0f0c28cada6f5d7abf30930}{F\+T\+\_\+\+Set\+Output\+Counter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function is used in restart to set the printing index and movie output index to appropiate number according to the restart time. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga679e45f3721591450a189f73b5da582f}{F\+T\+\_\+\+Set\+Global\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function set global index for all point in the interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaa36db6cc7825fb05ec972758627c53af}{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name, double $\ast$$\ast$var\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Initialize a variable and information for vtk vector movie output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gad30a6da66424927bdd6c9a5d8ab195f2}{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name, double $\ast$var\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Initialize a variable and information for vtk scalar movie output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gae690a760cc56fa5dbf52104a59e67e33}{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initialize the variable name for vtk interface movie output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable}}
+\index{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable(\+Front $\ast$front, const char $\ast$var\+\_\+name)}{FT_AddVtkIntfcMovieVariable(Front *front, const char *var_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{const char $\ast$}]{var\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gae690a760cc56fa5dbf52104a59e67e33}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gae690a760cc56fa5dbf52104a59e67e33}
+
+
+Initialize the variable name for vtk interface movie output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to the front \\
+\hline
+{\em var\+\_\+name} & {\bfseries in} Names of the variable \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable}}
+\index{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable(\+Front $\ast$front, const char $\ast$var\+\_\+name, double $\ast$var\+\_\+field)}{FT_AddVtkScalarMovieVariable(Front *front, const char *var_name, double *var_field)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{const char $\ast$}]{var\+\_\+name, }
+\item[{double $\ast$}]{var\+\_\+field}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gad30a6da66424927bdd6c9a5d8ab195f2}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gad30a6da66424927bdd6c9a5d8ab195f2}
+
+
+Initialize a variable and information for vtk scalar movie output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to the front \\
+\hline
+{\em var\+\_\+name} & {\bfseries in} Names of the variable \\
+\hline
+{\em var\+\_\+field} & {\bfseries in} Field values of the variable \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable}}
+\index{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable@{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable(\+Front $\ast$front, const char $\ast$var\+\_\+name, double $\ast$$\ast$var\+\_\+field)}{FT_AddVtkVectorMovieVariable(Front *front, const char *var_name, double **var_field)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{const char $\ast$}]{var\+\_\+name, }
+\item[{double $\ast$$\ast$}]{var\+\_\+field}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaa36db6cc7825fb05ec972758627c53af}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaa36db6cc7825fb05ec972758627c53af}
+
+
+Initialize a variable and information for vtk vector movie output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to the front \\
+\hline
+{\em var\+\_\+name} & {\bfseries in} Names of the variable \\
+\hline
+{\em var\+\_\+field} & {\bfseries in} Field values of the variable \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain@{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain}}
+\index{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain@{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain(\+Front $\ast$front)}{FT_ClipIntfcToSubdomain(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga2c959dd0460cbcafda590a48e9a75e7a}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga2c959dd0460cbcafda590a48e9a75e7a}
+
+
+Clip the Initial interface of the front to a parallel subdomain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs@{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs}}
+\index{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs@{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int neg\+\_\+comp, int pos\+\_\+comp, double($\ast$func)(\+P\+O\+I\+N\+T\+E\+R, double $\ast$), P\+O\+I\+N\+T\+E\+R func\+\_\+params, int w\+\_\+type, int $\ast$num\+\_\+hs)}{FT_CreateLevelHyperSurfs(RECT_GRID *rgr, INTERFACE *intfc, int neg_comp, int pos_comp, double(*func)(POINTER, double *), POINTER func_params, int w_type, int *num_hs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+I\+N\+T\+ER} $\ast$ F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int}]{neg\+\_\+comp, }
+\item[{int}]{pos\+\_\+comp, }
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER}, double $\ast$)}]{func, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{int}]{w\+\_\+type, }
+\item[{int $\ast$}]{num\+\_\+hs}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaeb9c6b8ce8c744c05f0d4f7a9bbf9c2e}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaeb9c6b8ce8c744c05f0d4f7a9bbf9c2e}
+
+
+This function creates a set of hypersurfaces (curves in 2D and surfaces in 3D) using a level function (provided by the caller). The function return the handle for the array of hyper surfaces as (P\+O\+I\+N\+T\+E\+R$\ast$). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgr} & {\bfseries in} Pointer to the rectangular grid in which the hyper surfaces are constructed. \\
+\hline
+{\em intfc} & {\bfseries in} Pointer to the interface structure. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} Region index of the negative side of the level surfaces. \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} Region index of the positive side of the level surfaces. \\
+\hline
+{\em func} & {\bfseries in} Pointer level set function, level surface is the zero set. \\
+\hline
+{\em func\+\_\+params} & {\bfseries in} Pointer level set function parameters. \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} Wave type of the hyper surfaces. \\
+\hline
+{\em num\+\_\+hs} & {\bfseries out} Address of number of segments of the hyper surfaces. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Init@{F\+T\+\_\+\+Init}}
+\index{F\+T\+\_\+\+Init@{F\+T\+\_\+\+Init}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Init(int argc, char $\ast$$\ast$argv, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A $\ast$f\+\_\+basic)}{FT_Init(int argc, char **argv, F_BASIC_DATA *f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$}]{f\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaabc3a4a619100a7f79ccab041e56f13c}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaabc3a4a619100a7f79ccab041e56f13c}
+
+
+Process the command line arguments, set IO handles, and store initialization parameters in f\+\_\+basic, Including read the number of processors, the dimesension of the problem, partition of the computational domain, restart message, the input file and the output directory. -\/d dim -\/p nx \mbox{[}ny\mbox{]} \mbox{[}nz\mbox{]} -\/i input-\/name -\/o output-\/dir-\/name -\/r restart-\/dir-\/name -\/t restart-\/step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & {\bfseries in} The number of arguments passed by command line \\
+\hline
+{\em argv} & {\bfseries in} The argument vector passed by command line \\
+\hline
+{\em f\+\_\+basic} & {\bfseries out} Structure to store options for initializing the program \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Init\+Debug@{F\+T\+\_\+\+Init\+Debug}}
+\index{F\+T\+\_\+\+Init\+Debug@{F\+T\+\_\+\+Init\+Debug}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Init\+Debug(char $\ast$inname)}{FT_InitDebug(char *inname)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Init\+Debug (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{inname}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga689d30333f9c5885405c00cd5c19bdec}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga689d30333f9c5885405c00cd5c19bdec}
+
+
+Initialize strings for debugging option of the problem, read the input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inname} & {\bfseries in} The name of the input file \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Init\+Intfc@{F\+T\+\_\+\+Init\+Intfc}}
+\index{F\+T\+\_\+\+Init\+Intfc@{F\+T\+\_\+\+Init\+Intfc}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Init\+Intfc(\+Front $\ast$front, L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+C\+K $\ast$level\+\_\+func\+\_\+pack)}{FT_InitIntfc(Front *front, LEVEL_FUNC_PACK *level_func_pack)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Init\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$}]{level\+\_\+func\+\_\+pack}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga51d0d72516f4d3312a9cd3e4bfdb3552}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga51d0d72516f4d3312a9cd3e4bfdb3552}
+
+
+Initialize the interface interface curves (2D) and surfaces (3D) using level function and parameters, or in some cases, point set. Install boundary curves (2D) or surfaces (3D). For 2D, the boundary is installed by default. For 3D, the boundary is installed on request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+{\em level\+\_\+func\+\_\+pack} & {\bfseries in} Structure of level function and parameters, or point set. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Init\+Velo\+Func@{F\+T\+\_\+\+Init\+Velo\+Func}}
+\index{F\+T\+\_\+\+Init\+Velo\+Func@{F\+T\+\_\+\+Init\+Velo\+Func}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Init\+Velo\+Func(\+Front $\ast$front, V\+E\+L\+O\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+C\+K $\ast$velo\+\_\+func\+\_\+pack)}{FT_InitVeloFunc(Front *front, VELO_FUNC_PACK *velo_func_pack)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Init\+Velo\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf V\+E\+L\+O\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$}]{velo\+\_\+func\+\_\+pack}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga1a5d78422a8649b43a530adbef947254}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga1a5d78422a8649b43a530adbef947254}
+
+
+Initialize front velocity function for front point propagation. The velocity function use point and other related structures as input, must also supply parameters needed for the velocity function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+{\em velo\+\_\+func\+\_\+pack} & {\bfseries in} Structure containing velocity function and parameters. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Read\+Comparison\+Domain@{F\+T\+\_\+\+Read\+Comparison\+Domain}}
+\index{F\+T\+\_\+\+Read\+Comparison\+Domain@{F\+T\+\_\+\+Read\+Comparison\+Domain}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Read\+Comparison\+Domain(char $\ast$in\+\_\+name, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A $\ast$f\+\_\+basic)}{FT_ReadComparisonDomain(char *in_name, F_BASIC_DATA *f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Read\+Comparison\+Domain (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+name, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$}]{f\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga5691571dfcb374f3bfd1bab6e2185ae5}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga5691571dfcb374f3bfd1bab6e2185ae5}
+
+
+Read from input file the comparison domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+name} & {\bfseries in} The name of input file \\
+\hline
+{\em f\+\_\+basic} & {\bfseries out} Structure to store domain information \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Read\+Space\+Domain@{F\+T\+\_\+\+Read\+Space\+Domain}}
+\index{F\+T\+\_\+\+Read\+Space\+Domain@{F\+T\+\_\+\+Read\+Space\+Domain}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Read\+Space\+Domain(char $\ast$in\+\_\+name, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A $\ast$f\+\_\+basic)}{FT_ReadSpaceDomain(char *in_name, F_BASIC_DATA *f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Read\+Space\+Domain (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+name, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$}]{f\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga9f0c9eacbefffd97c78270a99028fcc4}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga9f0c9eacbefffd97c78270a99028fcc4}
+
+
+Read from input file the computational domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+name} & {\bfseries in} The name of input file \\
+\hline
+{\em f\+\_\+basic} & {\bfseries out} Structure to store domain information \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Read\+Time\+Control@{F\+T\+\_\+\+Read\+Time\+Control}}
+\index{F\+T\+\_\+\+Read\+Time\+Control@{F\+T\+\_\+\+Read\+Time\+Control}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Read\+Time\+Control(char $\ast$in\+\_\+name, Front $\ast$front)}{FT_ReadTimeControl(char *in_name, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Read\+Time\+Control (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+name, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga62f9af5003ddf2150954b97148607186}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga62f9af5003ddf2150954b97148607186}
+
+
+Read the time domain and control information from input file, including maximum time, maximum step, restart print interval, movie frame output interval, C\+FL factor, and redistribution step interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+name} & {\bfseries in} The name of input file \\
+\hline
+{\em front} & {\bfseries inout} Pointer to Front for computation \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Reset\+Time@{F\+T\+\_\+\+Reset\+Time}}
+\index{F\+T\+\_\+\+Reset\+Time@{F\+T\+\_\+\+Reset\+Time}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Reset\+Time(\+Front $\ast$front)}{FT_ResetTime(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Reset\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3858581907803fab14abd2c3addbcfdb}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3858581907803fab14abd2c3addbcfdb}
+
+
+Reset the time to 0.\+0, time step to 0, print interval index to 0, movie interval index to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Set\+Global\+Index@{F\+T\+\_\+\+Set\+Global\+Index}}
+\index{F\+T\+\_\+\+Set\+Global\+Index@{F\+T\+\_\+\+Set\+Global\+Index}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Set\+Global\+Index(\+Front $\ast$front)}{FT_SetGlobalIndex(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Set\+Global\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga679e45f3721591450a189f73b5da582f}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga679e45f3721591450a189f73b5da582f}
+
+
+This function set global index for all point in the interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & {\bfseries in} Number of items whose memory are to be freed. \\
+\hline
+{\em ...} & {\bfseries Pointers} to the addresses of these items. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Set\+Output\+Counter@{F\+T\+\_\+\+Set\+Output\+Counter}}
+\index{F\+T\+\_\+\+Set\+Output\+Counter@{F\+T\+\_\+\+Set\+Output\+Counter}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Set\+Output\+Counter(\+Front $\ast$front)}{FT_SetOutputCounter(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Set\+Output\+Counter (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3ca82d7da0f0c28cada6f5d7abf30930}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3ca82d7da0f0c28cada6f5d7abf30930}
+
+
+This function is used in restart to set the printing index and movie output index to appropiate number according to the restart time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}!F\+T\+\_\+\+Start\+Up@{F\+T\+\_\+\+Start\+Up}}
+\index{F\+T\+\_\+\+Start\+Up@{F\+T\+\_\+\+Start\+Up}!Fron\+Tier Initialization Functions@{Fron\+Tier Initialization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Start\+Up(\+Front $\ast$front, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A $\ast$f\+\_\+basic)}{FT_StartUp(Front *front, F_BASIC_DATA *f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Start\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$}]{ft\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga506f3542260db3b0a8ed36d5132835e3}{}\label{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga506f3542260db3b0a8ed36d5132835e3}
+
+
+Initialize front computational grid, interface and function hooks, default function calls, and if restart, read interface from restart directory. Constructor for Front object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+{\em f\+\_\+basic} & {\bfseries in} Structure for initialization information. \\
+\hline
+\end{DoxyParams}

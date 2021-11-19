@@ -1,0 +1,232 @@
+\hypertarget{times_8c}{}\section{D\+N\+S/src/util/times.c File Reference}
+\label{times_8c}\index{D\+N\+S/src/util/times.\+c@{D\+N\+S/src/util/times.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/times.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/resource.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{times_8c_da/d6d/structclock}{clock}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{times_8c_a03df76d1f70664d745ca8de2864e39b3}{C\+L\+K\+\_\+\+T\+CK}~sysconf(\+\_\+\+S\+C\+\_\+\+C\+L\+K\+\_\+\+T\+CK)
+\item 
+\#define \hyperlink{times_8c_a110d588b2e9b8a441b639295d2b7174a}{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{times_8c_ae978c76a82841ef024fb5b819b5703ed}{print\+\_\+rss\+\_\+usage} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_abe75c70ef21d234f3fcee2987c7e8775}{print\+\_\+execution\+\_\+times} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_ae988559b663e217bc9e38a2f63eefac1}{start\+\_\+clock} (const char $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_a6f8b77979d6516039b8be8377b27a922}{stop\+\_\+clock} (const char $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_a74f7a5a45849e2f9202ab0729e196603}{cpu\+\_\+time} (const char $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_a8f054fd537f78a7edef0ca2ce81103bb}{start\+Clock} (const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_ac44589f59d62023439a4b964422559fd}{stop\+Clock} (const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{times_8c_a5306694da9a4c0f9d79202b0144b6b65}{cpu\+\_\+seconds} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{times_8c_adb8c673156332501c8654cf44a88c935}{real\+\_\+time} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{times_8c_a6f8c8661ca1f6c016932662307798661}{date\+\_\+string} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_a7d2648aa102f4c5fbe411420069966de}{add\+\_\+time\+\_\+start} (int ind)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_ae93e95ce93b1809d052cbacc3292cade}{add\+\_\+time\+\_\+end} (int ind)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{times_8c_a7c093c600793cdeb49ff421b487fb6f1}{add\+\_\+time\+\_\+clear} (int ind)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{times_8c_ac1d7a97104ecb4f3a0c37ec56dabbbbe}{add\+\_\+time\+\_\+get} (int ind)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{times_8c_a175f667d846e5b2290a2b5c5c324ba1e}{M\+A\+X\+\_\+\+T\+I\+M\+ES} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double $\ast$ \hyperlink{times_8c_a0b071280b2ec0e724e74a9d541e2bf47}{cputime} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{times_8c_abfe2f76b4a282ad4b6fa0470f867b385}{top} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{times_8c_a7a59520a8b577bf72e7b9d9bf54326cf}{add\+\_\+top} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{times_8c_a883dbb07c450beb1717432f52fc44521}{add\+\_\+time} \mbox{[}\hyperlink{times_8c_a110d588b2e9b8a441b639295d2b7174a}{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}\mbox{]}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{times_8c_a10c5bb8c5477a75ed69baecddbf05de9}{add\+\_\+time\+\_\+st} \mbox{[}\hyperlink{times_8c_a110d588b2e9b8a441b639295d2b7174a}{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{clock@{clock}}\label{structclock}
+\hypertarget{times_8c_structclock}{}
+\subsubsection{struct clock}
+\begin{DoxyFields}{Class Members}
+char $\ast$\hypertarget{times_8c_a2a64b59dd8410c6d3194a2c1d4be83a0}{}\label{times_8c_a2a64b59dd8410c6d3194a2c1d4be83a0}
+&
+name&
+\\
+\hline
+
+struct \hyperlink{times_8c_da/d6d/structclock}{clock} $\ast$\hypertarget{times_8c_aed35ec4e14643d85857d8b287b5e2607}{}\label{times_8c_aed35ec4e14643d85857d8b287b5e2607}
+&
+next&
+\\
+\hline
+
+long\hypertarget{times_8c_aee59dd42d190c6f1d35842a63cb0ae36}{}\label{times_8c_aee59dd42d190c6f1d35842a63cb0ae36}
+&
+start\+Time&
+\\
+\hline
+
+long\hypertarget{times_8c_a18041bff6411a077f39c4b7c854984ff}{}\label{times_8c_a18041bff6411a077f39c4b7c854984ff}
+&
+total\+Time&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{times.\+c@{times.\+c}!A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}}
+\index{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN@{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}{ADD_MAX_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN~20}\hypertarget{times_8c_a110d588b2e9b8a441b639295d2b7174a}{}\label{times_8c_a110d588b2e9b8a441b639295d2b7174a}
+\index{times.\+c@{times.\+c}!C\+L\+K\+\_\+\+T\+CK@{C\+L\+K\+\_\+\+T\+CK}}
+\index{C\+L\+K\+\_\+\+T\+CK@{C\+L\+K\+\_\+\+T\+CK}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{C\+L\+K\+\_\+\+T\+CK}{CLK_TCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+K\+\_\+\+T\+CK~sysconf(\+\_\+\+S\+C\+\_\+\+C\+L\+K\+\_\+\+T\+CK)}\hypertarget{times_8c_a03df76d1f70664d745ca8de2864e39b3}{}\label{times_8c_a03df76d1f70664d745ca8de2864e39b3}
+
+
+\subsection{Function Documentation}
+\index{times.\+c@{times.\+c}!add\+\_\+time\+\_\+clear@{add\+\_\+time\+\_\+clear}}
+\index{add\+\_\+time\+\_\+clear@{add\+\_\+time\+\_\+clear}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time\+\_\+clear(int ind)}{add_time_clear(int ind)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void add\+\_\+time\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a7c093c600793cdeb49ff421b487fb6f1}{}\label{times_8c_a7c093c600793cdeb49ff421b487fb6f1}
+\index{times.\+c@{times.\+c}!add\+\_\+time\+\_\+end@{add\+\_\+time\+\_\+end}}
+\index{add\+\_\+time\+\_\+end@{add\+\_\+time\+\_\+end}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time\+\_\+end(int ind)}{add_time_end(int ind)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void add\+\_\+time\+\_\+end (
+\begin{DoxyParamCaption}
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_ae93e95ce93b1809d052cbacc3292cade}{}\label{times_8c_ae93e95ce93b1809d052cbacc3292cade}
+\index{times.\+c@{times.\+c}!add\+\_\+time\+\_\+get@{add\+\_\+time\+\_\+get}}
+\index{add\+\_\+time\+\_\+get@{add\+\_\+time\+\_\+get}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time\+\_\+get(int ind)}{add_time_get(int ind)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double add\+\_\+time\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_ac1d7a97104ecb4f3a0c37ec56dabbbbe}{}\label{times_8c_ac1d7a97104ecb4f3a0c37ec56dabbbbe}
+\index{times.\+c@{times.\+c}!add\+\_\+time\+\_\+start@{add\+\_\+time\+\_\+start}}
+\index{add\+\_\+time\+\_\+start@{add\+\_\+time\+\_\+start}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time\+\_\+start(int ind)}{add_time_start(int ind)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void add\+\_\+time\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a7d2648aa102f4c5fbe411420069966de}{}\label{times_8c_a7d2648aa102f4c5fbe411420069966de}
+\index{times.\+c@{times.\+c}!cpu\+\_\+seconds@{cpu\+\_\+seconds}}
+\index{cpu\+\_\+seconds@{cpu\+\_\+seconds}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+seconds(void)}{cpu_seconds(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double cpu\+\_\+seconds (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a5306694da9a4c0f9d79202b0144b6b65}{}\label{times_8c_a5306694da9a4c0f9d79202b0144b6b65}
+\index{times.\+c@{times.\+c}!cpu\+\_\+time@{cpu\+\_\+time}}
+\index{cpu\+\_\+time@{cpu\+\_\+time}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+time(const char $\ast$s)}{cpu_time(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void cpu\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a74f7a5a45849e2f9202ab0729e196603}{}\label{times_8c_a74f7a5a45849e2f9202ab0729e196603}
+\index{times.\+c@{times.\+c}!date\+\_\+string@{date\+\_\+string}}
+\index{date\+\_\+string@{date\+\_\+string}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{date\+\_\+string(void)}{date_string(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$ date\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a6f8c8661ca1f6c016932662307798661}{}\label{times_8c_a6f8c8661ca1f6c016932662307798661}
+\index{times.\+c@{times.\+c}!print\+\_\+execution\+\_\+times@{print\+\_\+execution\+\_\+times}}
+\index{print\+\_\+execution\+\_\+times@{print\+\_\+execution\+\_\+times}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+execution\+\_\+times(void)}{print_execution_times(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+execution\+\_\+times (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_abe75c70ef21d234f3fcee2987c7e8775}{}\label{times_8c_abe75c70ef21d234f3fcee2987c7e8775}
+\index{times.\+c@{times.\+c}!print\+\_\+rss\+\_\+usage@{print\+\_\+rss\+\_\+usage}}
+\index{print\+\_\+rss\+\_\+usage@{print\+\_\+rss\+\_\+usage}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+rss\+\_\+usage(void)}{print_rss_usage(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+rss\+\_\+usage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_ae978c76a82841ef024fb5b819b5703ed}{}\label{times_8c_ae978c76a82841ef024fb5b819b5703ed}
+\index{times.\+c@{times.\+c}!real\+\_\+time@{real\+\_\+time}}
+\index{real\+\_\+time@{real\+\_\+time}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{real\+\_\+time(void)}{real_time(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double real\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_adb8c673156332501c8654cf44a88c935}{}\label{times_8c_adb8c673156332501c8654cf44a88c935}
+\index{times.\+c@{times.\+c}!start\+\_\+clock@{start\+\_\+clock}}
+\index{start\+\_\+clock@{start\+\_\+clock}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{start\+\_\+clock(const char $\ast$s)}{start_clock(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void start\+\_\+clock (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_ae988559b663e217bc9e38a2f63eefac1}{}\label{times_8c_ae988559b663e217bc9e38a2f63eefac1}
+\index{times.\+c@{times.\+c}!start\+Clock@{start\+Clock}}
+\index{start\+Clock@{start\+Clock}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{start\+Clock(const char $\ast$name)}{startClock(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void start\+Clock (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a8f054fd537f78a7edef0ca2ce81103bb}{}\label{times_8c_a8f054fd537f78a7edef0ca2ce81103bb}
+\index{times.\+c@{times.\+c}!stop\+\_\+clock@{stop\+\_\+clock}}
+\index{stop\+\_\+clock@{stop\+\_\+clock}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{stop\+\_\+clock(const char $\ast$s)}{stop_clock(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void stop\+\_\+clock (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_a6f8b77979d6516039b8be8377b27a922}{}\label{times_8c_a6f8b77979d6516039b8be8377b27a922}
+\index{times.\+c@{times.\+c}!stop\+Clock@{stop\+Clock}}
+\index{stop\+Clock@{stop\+Clock}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{stop\+Clock(const char $\ast$name)}{stopClock(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void stop\+Clock (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{times_8c_ac44589f59d62023439a4b964422559fd}{}\label{times_8c_ac44589f59d62023439a4b964422559fd}
+
+
+\subsection{Variable Documentation}
+\index{times.\+c@{times.\+c}!add\+\_\+time@{add\+\_\+time}}
+\index{add\+\_\+time@{add\+\_\+time}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time}{add_time}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double add\+\_\+time\mbox{[}{\bf A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}\mbox{]}}\hypertarget{times_8c_a883dbb07c450beb1717432f52fc44521}{}\label{times_8c_a883dbb07c450beb1717432f52fc44521}
+\index{times.\+c@{times.\+c}!add\+\_\+time\+\_\+st@{add\+\_\+time\+\_\+st}}
+\index{add\+\_\+time\+\_\+st@{add\+\_\+time\+\_\+st}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+time\+\_\+st}{add_time_st}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double add\+\_\+time\+\_\+st\mbox{[}{\bf A\+D\+D\+\_\+\+M\+A\+X\+\_\+\+L\+EN}\mbox{]}}\hypertarget{times_8c_a10c5bb8c5477a75ed69baecddbf05de9}{}\label{times_8c_a10c5bb8c5477a75ed69baecddbf05de9}
+\index{times.\+c@{times.\+c}!add\+\_\+top@{add\+\_\+top}}
+\index{add\+\_\+top@{add\+\_\+top}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+top}{add_top}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int add\+\_\+top = 0}\hypertarget{times_8c_a7a59520a8b577bf72e7b9d9bf54326cf}{}\label{times_8c_a7a59520a8b577bf72e7b9d9bf54326cf}
+\index{times.\+c@{times.\+c}!cputime@{cputime}}
+\index{cputime@{cputime}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{cputime}{cputime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double$\ast$ cputime = N\+U\+LL}\hypertarget{times_8c_a0b071280b2ec0e724e74a9d541e2bf47}{}\label{times_8c_a0b071280b2ec0e724e74a9d541e2bf47}
+\index{times.\+c@{times.\+c}!M\+A\+X\+\_\+\+T\+I\+M\+ES@{M\+A\+X\+\_\+\+T\+I\+M\+ES}}
+\index{M\+A\+X\+\_\+\+T\+I\+M\+ES@{M\+A\+X\+\_\+\+T\+I\+M\+ES}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+T\+I\+M\+ES}{MAX_TIMES}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int M\+A\+X\+\_\+\+T\+I\+M\+ES = 0}\hypertarget{times_8c_a175f667d846e5b2290a2b5c5c324ba1e}{}\label{times_8c_a175f667d846e5b2290a2b5c5c324ba1e}
+\index{times.\+c@{times.\+c}!top@{top}}
+\index{top@{top}!times.\+c@{times.\+c}}
+\subsubsection[{\texorpdfstring{top}{top}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int top = 0}\hypertarget{times_8c_abfe2f76b4a282ad4b6fa0470f867b385}{}\label{times_8c_abfe2f76b4a282ad4b6fa0470f867b385}

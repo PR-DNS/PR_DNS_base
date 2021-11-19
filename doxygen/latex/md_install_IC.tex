@@ -1,0 +1,71 @@
+
+\begin{DoxyItemize}
+\item wget \href{https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.gz}{\tt https\+://download.\+open-\/mpi.\+org/release/open-\/mpi/v4.\+1/openmpi-\/4.\+1.\+1.\+tar.\+gz}
+\item tar zxvf \href{https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.gz}{\tt openmpi-\/4.\+1.\+1.\+tar.\+gz}
+\item cd openmpi-\/4.\+1.\+1
+\item ./configure --prefix=/sdcc/u/tzhang/soft/openmpi-\/4.1.\+1
+\item make -\/j8; make install
+\item add mpi environment in /.bashrc\+:
+\begin{DoxyItemize}
+\item export P\+A\+TH=/sdcc/u/tzhang/soft/openmpi-\/4.1.\+1/bin\+:\$\+P\+A\+TH
+\item export L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH=/sdcc/u/tzhang/soft/openmpi-\/4.1.\+1/lib\+:\$\+L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\section*{2. install petsc-\/3.\+16.\+0}
+
+
+\begin{DoxyItemize}
+\item wget \href{https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.16.0.tar.gz}{\tt https\+://ftp.\+mcs.\+anl.\+gov/pub/petsc/release-\/snapshots/petsc-\/3.\+16.\+0.\+tar.\+gz}
+\item tar zxvf \href{https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.16.0.tar.gz}{\tt petsc-\/3.\+16.\+0.\+tar.\+gz}
+\item cd petsc-\/petsc-\/3.\+16.\+0
+\item ./configure --CC=mpicc --C\+XX=mpic++ --FC=mpifort --prefix=/sdcc/u/tzhang/soft/petsc-\/3.16.\+0 --download-\/fblaslapack=1 --download-\/make=1 --download-\/hdf5=1 --download-\/hypre=1 --with-\/shared-\/libraries --enable-\/static
+\item make -\/j8; make install
+\end{DoxyItemize}
+
+\section*{3. install other packages by conda}
+
+
+\begin{DoxyItemize}
+\item conda create -\/n pr-\/dns
+\item conda activate pr-\/dns
+\item conda install -\/c eumetsat fftw3
+\item conda install -\/c conda-\/forge libgd
+\item conda install -\/c conda-\/forge hdf4
+\end{DoxyItemize}
+
+\section*{4. config these package paths in D\+N\+S/cmake-\/modules}
+
+
+\begin{DoxyItemize}
+\item Find\+H\+D\+F4.\+cmake\+:
+\begin{DoxyItemize}
+\item line 67\+: set(H\+D\+F4\+\_\+\+D\+IR \char`\"{}/sdcc/u/tzhang/soft/miniconda3/envs/pr-\/dns//\char`\"{})
+\end{DoxyItemize}
+\item Find\+H\+D\+F5.\+cmake\+:
+\begin{DoxyItemize}
+\item line 7\+: set(H\+D\+F5\+\_\+\+D\+IR \char`\"{}/sdcc/u/tzhang/soft/petsc-\/3.\+16.\+0//\char`\"{})
+\end{DoxyItemize}
+\item Find\+P\+E\+T\+Sc.\+cmake\+:
+\begin{DoxyItemize}
+\item line 16\+: set(P\+E\+T\+S\+C\+\_\+\+D\+IR \char`\"{}/sdcc/u/tzhang/soft/petsc-\/3.\+16.\+0/\char`\"{})
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\section*{5. compile D\+NS}
+
+
+\begin{DoxyItemize}
+\item ./clean.sh
+\item cmake -\/\+D\+C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+C\+O\+M\+P\+I\+L\+ER=mpic++ -\/\+D\+C\+M\+A\+K\+E\+\_\+\+C\+\_\+\+C\+O\+M\+P\+I\+L\+ER=mpicc .
+\item make -\/j8
+\end{DoxyItemize}
+
+\section*{6. run D\+NS}
+
+
+\begin{DoxyItemize}
+\item cd climate
+\item sbatch run\+\_\+\+D\+N\+S\+\_\+3d.\+sh
+\item outputs are in out-\/control-\/shorter 
+\end{DoxyItemize}

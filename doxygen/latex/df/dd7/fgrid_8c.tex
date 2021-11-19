@@ -1,0 +1,442 @@
+\hypertarget{fgrid_8c}{}\section{D\+N\+S/src/front/fgrid.c File Reference}
+\label{fgrid_8c}\index{D\+N\+S/src/front/fgrid.\+c@{D\+N\+S/src/front/fgrid.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fgrid_8c_ae8cf50d609ffc1e00f530d800503b2d7}{north\+\_\+cross\+\_\+on\+\_\+grid}(iy,  \hyperlink{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{ymax})~(0 $<$= (iy) \&\& (iy) $<$  (\hyperlink{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{ymax}))
+\item 
+\#define \hyperlink{fgrid_8c_a4afb7d3f0598326ee5591c472632db54}{south\+\_\+cross\+\_\+on\+\_\+grid}(iy,  \hyperlink{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{ymax})~(0 $<$  (iy) \&\& (iy) $<$= (\hyperlink{triangle_8c_acc2b7c0bdb583fa46082e10a4344182c}{ymax}))
+\item 
+\#define \hyperlink{fgrid_8c_a38d4eb1636bd5718d1444b1fcd599e2b}{east\+\_\+cross\+\_\+on\+\_\+grid}(ix,  \hyperlink{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{xmax})~(0 $<$= (ix) \&\& (ix) $<$  (\hyperlink{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{xmax}))
+\item 
+\#define \hyperlink{fgrid_8c_a4fec4eb55b958f64b68ff32bec7a277c}{west\+\_\+cross\+\_\+on\+\_\+grid}(ix,  \hyperlink{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{xmax})~(0 $<$  (ix) \&\& (ix) $<$= (\hyperlink{triangle_8c_ab6a00c528e568052f8c0569b6567768a}{xmax}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a491d4453b1380584cfb2808aff729fee}{set\+\_\+grid\+\_\+intfc\+\_\+components1d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a4ebde437f0f35618e0ae0a9f8d99eb54}{set\+\_\+grid\+\_\+intfc\+\_\+components2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{fgrid_8c_a3559169a940eaa04f6c27bab3ab31594}{set\+\_\+comp2d} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_abafa279b34f185a7677f66b4129c4876}{inconsistent\+\_\+cross2d} (int, int, int, int, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, int, int, int, int, int $\ast$, int $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgrid_8c_ac8c1ea5f4d4d2dc9ddaf9f747c1359e0}{count\+\_\+crossings} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double, double, double, double, int, int, int, int, double, double, double, double, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, int $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a211deee042f982cb9ce7176d4800e6b0}{insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a96377093f74e1a2f9fd302fff14a911f}{insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a6236d269b24b64d151bf0a7690b05b0b}{count\+\_\+grid\+\_\+intfc\+\_\+crossings1d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a21f82d0f527b5a8526ed8421cf800264}{count\+\_\+grid\+\_\+intfc\+\_\+crossings2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a8b1ef747e88d117993d45619f7672e1a}{set\+\_\+grid\+\_\+intfc\+\_\+components3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a2f34dd46462162bbc7fcff44f4d6eabf}{set\+\_\+untracked\+\_\+components} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_ae33bb521414c5d41913dc5431c8e40b7}{add\+\_\+crx\+\_\+to\+\_\+list1d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgrid_8c_af12f08b565e389c31bb647d4bf05fd3a}{show\+\_\+grid\+\_\+components2d} (int $\ast$, int $\ast$, int, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgrid_8c_a44f55c18857968fd2d2361d605e8abf9}{show\+\_\+grid\+\_\+components3d} (int $\ast$, int $\ast$, int, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgrid_8c_a80f859a1935810cf34c81fdc3596b673}{print\+\_\+side\+\_\+crx\+\_\+list} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, char, int, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgrid_8c_a8fbb46784badf7a271439ebfe2334090}{set\+\_\+grid\+\_\+intfc\+\_\+components} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgrid_8c_a10822a2c14ca4c05a2a53179cdc59cb7}{insert\+\_\+grid\+\_\+intfc\+\_\+crossings} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgrid_8c_a71e57b75fc2156c16febcd4a40f8a7df}{count\+\_\+grid\+\_\+intfc\+\_\+crossings} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_add04deda15d882276867312c3367a119}{free\+\_\+grid\+\_\+intfc} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$ \hyperlink{fgrid_8c_aaa54efb1ebe19e16963c2f769b5676d9}{make\+\_\+grid\+\_\+intfc} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}{G\+R\+I\+D\+\_\+\+T\+Y\+PE} gr\+\_\+type, \hyperlink{int_8h_ad53ae6571c2ac86c36fe13eb35058f12}{V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$volume\+\_\+frac)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a14077f7e498944697d2e2073e4f4a409}{add\+\_\+crx\+\_\+to\+\_\+list2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int, \hyperlink{int_8h_a5b3195ff4e1b8df33be623f28b7784da}{C\+R\+O\+S\+S\+I\+N\+G\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_ab6bb92a360affd9969324433ac912352}{find\+\_\+index\+\_\+of\+\_\+node} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_abf9056eed87970b12fb3cec0baf3c3ec}{grid\+\_\+crossings\+\_\+on\+\_\+segment} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double, double, double, double, int, int, int, int, double, double, double, double, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, int $\ast$, int $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, int $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_adab455b6d72fef0251f7121b3b0b79ca}{shift\+\_\+from\+\_\+cell\+\_\+edge} (double $\ast$, int, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_a31a7c158e9911dfea7f7bd091c4f2c3c}{show\+\_\+grid\+\_\+components} (int $\ast$smin, int $\ast$smax, int idir, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_a0015db7ca83789d6214c7fefba641f1a}{show\+\_\+line\+\_\+components3d} (int $\ast$ip, int $\ast$smin, int $\ast$smax, int idir, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_a580dcf4e44c5a31d04a0567a30995d26}{show\+\_\+the\+\_\+grid\+\_\+comp} (const char $\ast$msg, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_a0307ccad9353653c345fe5e13c8f5ab5}{adjust\+\_\+grid\+\_\+intfc\+\_\+points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgrid_8c_a18046250cc48f1e8217810587a1ba479}{init\+\_\+grid\+\_\+debug} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int $\ast$ \hyperlink{fgrid_8c_a4e0ab10878ff1e8f27e772ed3bb75e57}{get\+\_\+grid\+\_\+debug\+\_\+icoords} ()
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgrid_8c_a961ebcbd4efad254d183ec3606603f67}{get\+\_\+grid\+\_\+debug\+\_\+direction} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_aba13183d263bff55a1fcb3db2eb0f286}{debug\+\_\+grid\+\_\+dir}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgrid_8c_a456ffd371ad55c806a9395d603bf8f1c}{debug\+\_\+grid\+\_\+icoords} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{fgrid.\+c@{fgrid.\+c}!east\+\_\+cross\+\_\+on\+\_\+grid@{east\+\_\+cross\+\_\+on\+\_\+grid}}
+\index{east\+\_\+cross\+\_\+on\+\_\+grid@{east\+\_\+cross\+\_\+on\+\_\+grid}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{east\+\_\+cross\+\_\+on\+\_\+grid}{east_cross_on_grid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define east\+\_\+cross\+\_\+on\+\_\+grid(
+\begin{DoxyParamCaption}
+\item[{}]{ix, }
+\item[{}]{{\bf xmax}}
+\end{DoxyParamCaption}
+)~(0 $<$= (ix) \&\& (ix) $<$  ({\bf xmax}))}\hypertarget{fgrid_8c_a38d4eb1636bd5718d1444b1fcd599e2b}{}\label{fgrid_8c_a38d4eb1636bd5718d1444b1fcd599e2b}
+\index{fgrid.\+c@{fgrid.\+c}!north\+\_\+cross\+\_\+on\+\_\+grid@{north\+\_\+cross\+\_\+on\+\_\+grid}}
+\index{north\+\_\+cross\+\_\+on\+\_\+grid@{north\+\_\+cross\+\_\+on\+\_\+grid}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{north\+\_\+cross\+\_\+on\+\_\+grid}{north_cross_on_grid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define north\+\_\+cross\+\_\+on\+\_\+grid(
+\begin{DoxyParamCaption}
+\item[{}]{iy, }
+\item[{}]{{\bf ymax}}
+\end{DoxyParamCaption}
+)~(0 $<$= (iy) \&\& (iy) $<$  ({\bf ymax}))}\hypertarget{fgrid_8c_ae8cf50d609ffc1e00f530d800503b2d7}{}\label{fgrid_8c_ae8cf50d609ffc1e00f530d800503b2d7}
+\index{fgrid.\+c@{fgrid.\+c}!south\+\_\+cross\+\_\+on\+\_\+grid@{south\+\_\+cross\+\_\+on\+\_\+grid}}
+\index{south\+\_\+cross\+\_\+on\+\_\+grid@{south\+\_\+cross\+\_\+on\+\_\+grid}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{south\+\_\+cross\+\_\+on\+\_\+grid}{south_cross_on_grid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define south\+\_\+cross\+\_\+on\+\_\+grid(
+\begin{DoxyParamCaption}
+\item[{}]{iy, }
+\item[{}]{{\bf ymax}}
+\end{DoxyParamCaption}
+)~(0 $<$  (iy) \&\& (iy) $<$= ({\bf ymax}))}\hypertarget{fgrid_8c_a4afb7d3f0598326ee5591c472632db54}{}\label{fgrid_8c_a4afb7d3f0598326ee5591c472632db54}
+\index{fgrid.\+c@{fgrid.\+c}!west\+\_\+cross\+\_\+on\+\_\+grid@{west\+\_\+cross\+\_\+on\+\_\+grid}}
+\index{west\+\_\+cross\+\_\+on\+\_\+grid@{west\+\_\+cross\+\_\+on\+\_\+grid}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{west\+\_\+cross\+\_\+on\+\_\+grid}{west_cross_on_grid}}]{\setlength{\rightskip}{0pt plus 5cm}\#define west\+\_\+cross\+\_\+on\+\_\+grid(
+\begin{DoxyParamCaption}
+\item[{}]{ix, }
+\item[{}]{{\bf xmax}}
+\end{DoxyParamCaption}
+)~(0 $<$  (ix) \&\& (ix) $<$= ({\bf xmax}))}\hypertarget{fgrid_8c_a4fec4eb55b958f64b68ff32bec7a277c}{}\label{fgrid_8c_a4fec4eb55b958f64b68ff32bec7a277c}
+
+
+\subsection{Function Documentation}
+\index{fgrid.\+c@{fgrid.\+c}!add\+\_\+crx\+\_\+to\+\_\+list1d@{add\+\_\+crx\+\_\+to\+\_\+list1d}}
+\index{add\+\_\+crx\+\_\+to\+\_\+list1d@{add\+\_\+crx\+\_\+to\+\_\+list1d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+crx\+\_\+to\+\_\+list1d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int, P\+O\+I\+N\+T $\ast$, int)}{add_crx_to_list1d(INTERFACE *, int, POINT *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int add\+\_\+crx\+\_\+to\+\_\+list1d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{int}]{n\+\_\+crx, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{int}]{ix}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_ae33bb521414c5d41913dc5431c8e40b7}{}\label{fgrid_8c_ae33bb521414c5d41913dc5431c8e40b7}
+\index{fgrid.\+c@{fgrid.\+c}!add\+\_\+crx\+\_\+to\+\_\+list2d@{add\+\_\+crx\+\_\+to\+\_\+list2d}}
+\index{add\+\_\+crx\+\_\+to\+\_\+list2d@{add\+\_\+crx\+\_\+to\+\_\+list2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+crx\+\_\+to\+\_\+list2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int, C\+R\+O\+S\+S\+I\+N\+G\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, P\+O\+I\+N\+T $\ast$, C\+U\+R\+V\+E $\ast$, int $\ast$)}{add_crx_to_list2d(INTERFACE *, int *, int, CROSSING_DIRECTION, POINT *, CURVE *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int add\+\_\+crx\+\_\+to\+\_\+list2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{int $\ast$}]{n\+\_\+crx, }
+\item[{int}]{msk, }
+\item[{{\bf C\+R\+O\+S\+S\+I\+N\+G\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cur, }
+\item[{int $\ast$}]{First\+\_\+cross\+\_\+on\+\_\+curve}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a14077f7e498944697d2e2073e4f4a409}{}\label{fgrid_8c_a14077f7e498944697d2e2073e4f4a409}
+\index{fgrid.\+c@{fgrid.\+c}!adjust\+\_\+grid\+\_\+intfc\+\_\+points@{adjust\+\_\+grid\+\_\+intfc\+\_\+points}}
+\index{adjust\+\_\+grid\+\_\+intfc\+\_\+points@{adjust\+\_\+grid\+\_\+intfc\+\_\+points}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+grid\+\_\+intfc\+\_\+points(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{adjust_grid_intfc_points(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void adjust\+\_\+grid\+\_\+intfc\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a0307ccad9353653c345fe5e13c8f5ab5}{}\label{fgrid_8c_a0307ccad9353653c345fe5e13c8f5ab5}
+\index{fgrid.\+c@{fgrid.\+c}!count\+\_\+crossings@{count\+\_\+crossings}}
+\index{count\+\_\+crossings@{count\+\_\+crossings}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+crossings(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double, double, double, double, int, int, int, int, double, double, double, double, C\+U\+R\+V\+E $\ast$, int $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{count_crossings(INTERFACE *, double, double, double, double, int, int, int, int, double, double, double, double, CURVE *, int *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void count\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{int}]{ix1, }
+\item[{int}]{iy1, }
+\item[{int}]{ix2, }
+\item[{int}]{iy2, }
+\item[{double}]{lenx, }
+\item[{double}]{leny, }
+\item[{double}]{max\+\_\+lenx, }
+\item[{double}]{max\+\_\+leny, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{int $\ast$}]{n\+\_\+crx, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_ac8c1ea5f4d4d2dc9ddaf9f747c1359e0}{}\label{fgrid_8c_ac8c1ea5f4d4d2dc9ddaf9f747c1359e0}
+\index{fgrid.\+c@{fgrid.\+c}!count\+\_\+grid\+\_\+intfc\+\_\+crossings@{count\+\_\+grid\+\_\+intfc\+\_\+crossings}}
+\index{count\+\_\+grid\+\_\+intfc\+\_\+crossings@{count\+\_\+grid\+\_\+intfc\+\_\+crossings}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+grid\+\_\+intfc\+\_\+crossings(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{count_grid_intfc_crossings(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int count\+\_\+grid\+\_\+intfc\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a71e57b75fc2156c16febcd4a40f8a7df}{}\label{fgrid_8c_a71e57b75fc2156c16febcd4a40f8a7df}
+\index{fgrid.\+c@{fgrid.\+c}!count\+\_\+grid\+\_\+intfc\+\_\+crossings1d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings1d}}
+\index{count\+\_\+grid\+\_\+intfc\+\_\+crossings1d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings1d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+grid\+\_\+intfc\+\_\+crossings1d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{count_grid_intfc_crossings1d(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int count\+\_\+grid\+\_\+intfc\+\_\+crossings1d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a6236d269b24b64d151bf0a7690b05b0b}{}\label{fgrid_8c_a6236d269b24b64d151bf0a7690b05b0b}
+\index{fgrid.\+c@{fgrid.\+c}!count\+\_\+grid\+\_\+intfc\+\_\+crossings2d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings2d}}
+\index{count\+\_\+grid\+\_\+intfc\+\_\+crossings2d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+grid\+\_\+intfc\+\_\+crossings2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{count_grid_intfc_crossings2d(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int count\+\_\+grid\+\_\+intfc\+\_\+crossings2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a21f82d0f527b5a8526ed8421cf800264}{}\label{fgrid_8c_a21f82d0f527b5a8526ed8421cf800264}
+\index{fgrid.\+c@{fgrid.\+c}!find\+\_\+index\+\_\+of\+\_\+node@{find\+\_\+index\+\_\+of\+\_\+node}}
+\index{find\+\_\+index\+\_\+of\+\_\+node@{find\+\_\+index\+\_\+of\+\_\+node}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+index\+\_\+of\+\_\+node(\+N\+O\+D\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{find_index_of_node(NODE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int find\+\_\+index\+\_\+of\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_ab6bb92a360affd9969324433ac912352}{}\label{fgrid_8c_ab6bb92a360affd9969324433ac912352}
+\index{fgrid.\+c@{fgrid.\+c}!free\+\_\+grid\+\_\+intfc@{free\+\_\+grid\+\_\+intfc}}
+\index{free\+\_\+grid\+\_\+intfc@{free\+\_\+grid\+\_\+intfc}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+grid\+\_\+intfc(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{free_grid_intfc(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void free\+\_\+grid\+\_\+intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_add04deda15d882276867312c3367a119}{}\label{fgrid_8c_add04deda15d882276867312c3367a119}
+\index{fgrid.\+c@{fgrid.\+c}!get\+\_\+grid\+\_\+debug\+\_\+direction@{get\+\_\+grid\+\_\+debug\+\_\+direction}}
+\index{get\+\_\+grid\+\_\+debug\+\_\+direction@{get\+\_\+grid\+\_\+debug\+\_\+direction}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+grid\+\_\+debug\+\_\+direction()}{get_grid_debug_direction()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int get\+\_\+grid\+\_\+debug\+\_\+direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a961ebcbd4efad254d183ec3606603f67}{}\label{fgrid_8c_a961ebcbd4efad254d183ec3606603f67}
+\index{fgrid.\+c@{fgrid.\+c}!get\+\_\+grid\+\_\+debug\+\_\+icoords@{get\+\_\+grid\+\_\+debug\+\_\+icoords}}
+\index{get\+\_\+grid\+\_\+debug\+\_\+icoords@{get\+\_\+grid\+\_\+debug\+\_\+icoords}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+grid\+\_\+debug\+\_\+icoords()}{get_grid_debug_icoords()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int$\ast$ get\+\_\+grid\+\_\+debug\+\_\+icoords (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a4e0ab10878ff1e8f27e772ed3bb75e57}{}\label{fgrid_8c_a4e0ab10878ff1e8f27e772ed3bb75e57}
+\index{fgrid.\+c@{fgrid.\+c}!grid\+\_\+crossings\+\_\+on\+\_\+segment@{grid\+\_\+crossings\+\_\+on\+\_\+segment}}
+\index{grid\+\_\+crossings\+\_\+on\+\_\+segment@{grid\+\_\+crossings\+\_\+on\+\_\+segment}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{grid\+\_\+crossings\+\_\+on\+\_\+segment(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double, double, double, double, int, int, int, int, double, double, double, double, C\+U\+R\+V\+E $\ast$, int $\ast$, int $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, int $\ast$, P\+O\+I\+N\+T $\ast$$\ast$)}{grid_crossings_on_segment(INTERFACE *, double, double, double, double, int, int, int, int, double, double, double, double, CURVE *, int *, int *, RECT_GRID *, int *, POINT **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int grid\+\_\+crossings\+\_\+on\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{int}]{ix1, }
+\item[{int}]{iy1, }
+\item[{int}]{ix2, }
+\item[{int}]{iy2, }
+\item[{double}]{lenx, }
+\item[{double}]{leny, }
+\item[{double}]{max\+\_\+lenx, }
+\item[{double}]{max\+\_\+leny, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{int $\ast$}]{crx\+\_\+num, }
+\item[{int $\ast$}]{fcoc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{int $\ast$}]{n\+\_\+new\+\_\+intfc\+\_\+points, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{new\+\_\+intfc\+\_\+points}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_abf9056eed87970b12fb3cec0baf3c3ec}{}\label{fgrid_8c_abf9056eed87970b12fb3cec0baf3c3ec}
+\index{fgrid.\+c@{fgrid.\+c}!inconsistent\+\_\+cross2d@{inconsistent\+\_\+cross2d}}
+\index{inconsistent\+\_\+cross2d@{inconsistent\+\_\+cross2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{inconsistent\+\_\+cross2d(int, int, int, int, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, int, int, int, int, int $\ast$, int $\ast$, int $\ast$, int $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{inconsistent_cross2d(int, int, int, int, COMPONENT, COMPONENT, COMPONENT, COMPONENT, COMPONENT, int, int, int, int, int *, int *, int *, int *, INTERFACE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int inconsistent\+\_\+cross2d (
+\begin{DoxyParamCaption}
+\item[{int}]{ix, }
+\item[{int}]{iy, }
+\item[{int}]{xmax, }
+\item[{int}]{ymax, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cS, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cE, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cN, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cW, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{ext\+\_\+comp, }
+\item[{int}]{ncs, }
+\item[{int}]{nce, }
+\item[{int}]{ncn, }
+\item[{int}]{ncw, }
+\item[{int $\ast$}]{s\+\_\+list, }
+\item[{int $\ast$}]{e\+\_\+list, }
+\item[{int $\ast$}]{n\+\_\+list, }
+\item[{int $\ast$}]{w\+\_\+list, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_abafa279b34f185a7677f66b4129c4876}{}\label{fgrid_8c_abafa279b34f185a7677f66b4129c4876}
+\index{fgrid.\+c@{fgrid.\+c}!init\+\_\+grid\+\_\+debug@{init\+\_\+grid\+\_\+debug}}
+\index{init\+\_\+grid\+\_\+debug@{init\+\_\+grid\+\_\+debug}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+grid\+\_\+debug(\+Front $\ast$front)}{init_grid_debug(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+grid\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a18046250cc48f1e8217810587a1ba479}{}\label{fgrid_8c_a18046250cc48f1e8217810587a1ba479}
+\index{fgrid.\+c@{fgrid.\+c}!insert\+\_\+grid\+\_\+intfc\+\_\+crossings@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings}}
+\index{insert\+\_\+grid\+\_\+intfc\+\_\+crossings@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+grid\+\_\+intfc\+\_\+crossings(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{insert_grid_intfc_crossings(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int insert\+\_\+grid\+\_\+intfc\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a10822a2c14ca4c05a2a53179cdc59cb7}{}\label{fgrid_8c_a10822a2c14ca4c05a2a53179cdc59cb7}
+\index{fgrid.\+c@{fgrid.\+c}!insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d}}
+\index{insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{insert_grid_intfc_crossings1d(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int insert\+\_\+grid\+\_\+intfc\+\_\+crossings1d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a211deee042f982cb9ce7176d4800e6b0}{}\label{fgrid_8c_a211deee042f982cb9ce7176d4800e6b0}
+\index{fgrid.\+c@{fgrid.\+c}!insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d}}
+\index{insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{insert_grid_intfc_crossings2d(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int insert\+\_\+grid\+\_\+intfc\+\_\+crossings2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a96377093f74e1a2f9fd302fff14a911f}{}\label{fgrid_8c_a96377093f74e1a2f9fd302fff14a911f}
+\index{fgrid.\+c@{fgrid.\+c}!make\+\_\+grid\+\_\+intfc@{make\+\_\+grid\+\_\+intfc}}
+\index{make\+\_\+grid\+\_\+intfc@{make\+\_\+grid\+\_\+intfc}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+grid\+\_\+intfc(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, G\+R\+I\+D\+\_\+\+T\+Y\+P\+E gr\+\_\+type, V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+A\+C $\ast$volume\+\_\+frac)}{make_grid_intfc(INTERFACE *intfc, GRID_TYPE gr_type, VOLUME_FRAC *volume_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf I\+N\+T\+E\+R\+F\+A\+CE}$\ast$ make\+\_\+grid\+\_\+intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+T\+Y\+PE}}]{gr\+\_\+type, }
+\item[{{\bf V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$}]{volume\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_aaa54efb1ebe19e16963c2f769b5676d9}{}\label{fgrid_8c_aaa54efb1ebe19e16963c2f769b5676d9}
+\index{fgrid.\+c@{fgrid.\+c}!print\+\_\+side\+\_\+crx\+\_\+list@{print\+\_\+side\+\_\+crx\+\_\+list}}
+\index{print\+\_\+side\+\_\+crx\+\_\+list@{print\+\_\+side\+\_\+crx\+\_\+list}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+side\+\_\+crx\+\_\+list(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, char, int, int $\ast$)}{print_side_crx_list(INTERFACE *, char, int, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+side\+\_\+crx\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{char}]{side, }
+\item[{int}]{n, }
+\item[{int $\ast$}]{n\+\_\+list}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a80f859a1935810cf34c81fdc3596b673}{}\label{fgrid_8c_a80f859a1935810cf34c81fdc3596b673}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+comp2d@{set\+\_\+comp2d}}
+\index{set\+\_\+comp2d@{set\+\_\+comp2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+comp2d(\+C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T)}{set_comp2d(COMPONENT, COMPONENT, COMPONENT, COMPONENT, COMPONENT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+O\+M\+P\+O\+N\+E\+NT} set\+\_\+comp2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cS, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cE, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cN, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{cW, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{ext\+\_\+comp}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a3559169a940eaa04f6c27bab3ab31594}{}\label{fgrid_8c_a3559169a940eaa04f6c27bab3ab31594}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+grid\+\_\+intfc\+\_\+components@{set\+\_\+grid\+\_\+intfc\+\_\+components}}
+\index{set\+\_\+grid\+\_\+intfc\+\_\+components@{set\+\_\+grid\+\_\+intfc\+\_\+components}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+intfc\+\_\+components(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{set_grid_intfc_components(INTERFACE *grid_intfc, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int set\+\_\+grid\+\_\+intfc\+\_\+components (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a8fbb46784badf7a271439ebfe2334090}{}\label{fgrid_8c_a8fbb46784badf7a271439ebfe2334090}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+grid\+\_\+intfc\+\_\+components1d@{set\+\_\+grid\+\_\+intfc\+\_\+components1d}}
+\index{set\+\_\+grid\+\_\+intfc\+\_\+components1d@{set\+\_\+grid\+\_\+intfc\+\_\+components1d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+intfc\+\_\+components1d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{set_grid_intfc_components1d(INTERFACE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+grid\+\_\+intfc\+\_\+components1d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a491d4453b1380584cfb2808aff729fee}{}\label{fgrid_8c_a491d4453b1380584cfb2808aff729fee}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+grid\+\_\+intfc\+\_\+components2d@{set\+\_\+grid\+\_\+intfc\+\_\+components2d}}
+\index{set\+\_\+grid\+\_\+intfc\+\_\+components2d@{set\+\_\+grid\+\_\+intfc\+\_\+components2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+intfc\+\_\+components2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{set_grid_intfc_components2d(INTERFACE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+grid\+\_\+intfc\+\_\+components2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a4ebde437f0f35618e0ae0a9f8d99eb54}{}\label{fgrid_8c_a4ebde437f0f35618e0ae0a9f8d99eb54}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+grid\+\_\+intfc\+\_\+components3d@{set\+\_\+grid\+\_\+intfc\+\_\+components3d}}
+\index{set\+\_\+grid\+\_\+intfc\+\_\+components3d@{set\+\_\+grid\+\_\+intfc\+\_\+components3d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+intfc\+\_\+components3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{set_grid_intfc_components3d(INTERFACE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+grid\+\_\+intfc\+\_\+components3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a8b1ef747e88d117993d45619f7672e1a}{}\label{fgrid_8c_a8b1ef747e88d117993d45619f7672e1a}
+\index{fgrid.\+c@{fgrid.\+c}!set\+\_\+untracked\+\_\+components@{set\+\_\+untracked\+\_\+components}}
+\index{set\+\_\+untracked\+\_\+components@{set\+\_\+untracked\+\_\+components}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+untracked\+\_\+components(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{set_untracked_components(INTERFACE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+untracked\+\_\+components (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a2f34dd46462162bbc7fcff44f4d6eabf}{}\label{fgrid_8c_a2f34dd46462162bbc7fcff44f4d6eabf}
+\index{fgrid.\+c@{fgrid.\+c}!shift\+\_\+from\+\_\+cell\+\_\+edge@{shift\+\_\+from\+\_\+cell\+\_\+edge}}
+\index{shift\+\_\+from\+\_\+cell\+\_\+edge@{shift\+\_\+from\+\_\+cell\+\_\+edge}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{shift\+\_\+from\+\_\+cell\+\_\+edge(double $\ast$, int, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, double)}{shift_from_cell_edge(double *, int, RECT_GRID *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int shift\+\_\+from\+\_\+cell\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p, }
+\item[{int}]{idir, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{double}]{tol}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_adab455b6d72fef0251f7121b3b0b79ca}{}\label{fgrid_8c_adab455b6d72fef0251f7121b3b0b79ca}
+\index{fgrid.\+c@{fgrid.\+c}!show\+\_\+grid\+\_\+components@{show\+\_\+grid\+\_\+components}}
+\index{show\+\_\+grid\+\_\+components@{show\+\_\+grid\+\_\+components}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+grid\+\_\+components(int $\ast$smin, int $\ast$smax, int idir, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{show_grid_components(int *smin, int *smax, int idir, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void show\+\_\+grid\+\_\+components (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int}]{idir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a31a7c158e9911dfea7f7bd091c4f2c3c}{}\label{fgrid_8c_a31a7c158e9911dfea7f7bd091c4f2c3c}
+\index{fgrid.\+c@{fgrid.\+c}!show\+\_\+grid\+\_\+components2d@{show\+\_\+grid\+\_\+components2d}}
+\index{show\+\_\+grid\+\_\+components2d@{show\+\_\+grid\+\_\+components2d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+grid\+\_\+components2d(int $\ast$, int $\ast$, int, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{show_grid_components2d(int *, int *, int, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void show\+\_\+grid\+\_\+components2d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int}]{idir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_af12f08b565e389c31bb647d4bf05fd3a}{}\label{fgrid_8c_af12f08b565e389c31bb647d4bf05fd3a}
+\index{fgrid.\+c@{fgrid.\+c}!show\+\_\+grid\+\_\+components3d@{show\+\_\+grid\+\_\+components3d}}
+\index{show\+\_\+grid\+\_\+components3d@{show\+\_\+grid\+\_\+components3d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+grid\+\_\+components3d(int $\ast$, int $\ast$, int, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{show_grid_components3d(int *, int *, int, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void show\+\_\+grid\+\_\+components3d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int}]{idir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a44f55c18857968fd2d2361d605e8abf9}{}\label{fgrid_8c_a44f55c18857968fd2d2361d605e8abf9}
+\index{fgrid.\+c@{fgrid.\+c}!show\+\_\+line\+\_\+components3d@{show\+\_\+line\+\_\+components3d}}
+\index{show\+\_\+line\+\_\+components3d@{show\+\_\+line\+\_\+components3d}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+line\+\_\+components3d(int $\ast$ip, int $\ast$smin, int $\ast$smax, int idir, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{show_line_components3d(int *ip, int *smin, int *smax, int idir, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void show\+\_\+line\+\_\+components3d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int}]{idir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a0015db7ca83789d6214c7fefba641f1a}{}\label{fgrid_8c_a0015db7ca83789d6214c7fefba641f1a}
+\index{fgrid.\+c@{fgrid.\+c}!show\+\_\+the\+\_\+grid\+\_\+comp@{show\+\_\+the\+\_\+grid\+\_\+comp}}
+\index{show\+\_\+the\+\_\+grid\+\_\+comp@{show\+\_\+the\+\_\+grid\+\_\+comp}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+the\+\_\+grid\+\_\+comp(const char $\ast$msg, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{show_the_grid_comp(const char *msg, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void show\+\_\+the\+\_\+grid\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgrid_8c_a580dcf4e44c5a31d04a0567a30995d26}{}\label{fgrid_8c_a580dcf4e44c5a31d04a0567a30995d26}
+
+
+\subsection{Variable Documentation}
+\index{fgrid.\+c@{fgrid.\+c}!debug\+\_\+grid\+\_\+dir@{debug\+\_\+grid\+\_\+dir}}
+\index{debug\+\_\+grid\+\_\+dir@{debug\+\_\+grid\+\_\+dir}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+grid\+\_\+dir}{debug_grid_dir}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int debug\+\_\+grid\+\_\+dir}\hypertarget{fgrid_8c_aba13183d263bff55a1fcb3db2eb0f286}{}\label{fgrid_8c_aba13183d263bff55a1fcb3db2eb0f286}
+\index{fgrid.\+c@{fgrid.\+c}!debug\+\_\+grid\+\_\+icoords@{debug\+\_\+grid\+\_\+icoords}}
+\index{debug\+\_\+grid\+\_\+icoords@{debug\+\_\+grid\+\_\+icoords}!fgrid.\+c@{fgrid.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+grid\+\_\+icoords}{debug_grid_icoords}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int debug\+\_\+grid\+\_\+icoords\mbox{[}{\bf M\+A\+XD}\mbox{]}}\hypertarget{fgrid_8c_a456ffd371ad55c806a9395d603bf8f1c}{}\label{fgrid_8c_a456ffd371ad55c806a9395d603bf8f1c}

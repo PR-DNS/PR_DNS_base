@@ -1,0 +1,894 @@
+\hypertarget{igview_8c}{}\section{D\+N\+S/src/intfc/igview.c File Reference}
+\label{igview_8c}\index{D\+N\+S/src/intfc/igview.\+c@{D\+N\+S/src/intfc/igview.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+{\ttfamily \#include $<$util/cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{igview_8c_a7bfdfc0c3f5232d7c4408e665da48f46}{T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS}~2000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} char $\ast$ \hyperlink{igview_8c_a099ee781a0873f6959190df8abf179cb}{get\+\_\+list\+\_\+file\+\_\+name} (char $\ast$, const char $\ast$, const char $\ast$, size\+\_\+t $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} char $\ast$ \hyperlink{igview_8c_ab65dd4a2d13ca168c9c949f8944a933b}{set\+\_\+ppfname} (char $\ast$, const char $\ast$, size\+\_\+t $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a69981b50cbb512898f545e5e0172a4b6}{gview\+\_\+plot\+\_\+cube} (const char $\ast$, const char $\ast$, const double $\ast$, const double $\ast$, const double $\ast$, const double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a31d10473de9e7a9aa2c4f5e6987913fa}{gview\+\_\+plot\+\_\+curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_afdd339b98e58a1d6ffd31d04acdf2fe1}{gview\+\_\+plot\+\_\+surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, const char $\ast$, const char $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a25edfb92afc5e127531668e22a6e14d5}{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, const char $\ast$, const char $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a804ecc14f510519cf21d5600178224e3}{print\+\_\+polyline\+\_\+description} (F\+I\+LE $\ast$, const char $\ast$, double $\ast$const $\ast$, int, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} color, double, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a4d75a5e29461589619fa2b6588623e15}{write\+\_\+interpolated\+\_\+color} (F\+I\+LE $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a377829eabfba3adaa0f48fdf4c1e1df1}{write\+\_\+color} (F\+I\+LE $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_acc38d7172925e99228af9448eaff6a45}{gview\+\_\+plot\+\_\+color\+\_\+surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, const char $\ast$, const char $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{igview_8c_ac4740b62b2fbb89f62c00c4ed4a1a786}{get\+\_\+vtk\+\_\+file\+\_\+name} (char $\ast$, const char $\ast$, const char $\ast$, size\+\_\+t $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_afd152f3b8ce59cbfbe3cf890d0a4e52b}{vtk\+\_\+print\+\_\+box} (const char $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_abcdd73f80fcd0056a834bac5e5534fa3}{vtk\+\_\+plot\+\_\+surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, const char $\ast$, const char $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, double, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a79cad121d63e4a2ca4d15d081eb69942}{vtk\+\_\+plot\+\_\+curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, int, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, double, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a9831db364ba961719c013493295286c6}{vtk\+\_\+plot\+\_\+curves2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, int, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, double, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_aa63deb6f5279a3d393d455e387df042d}{vtk\+\_\+plot\+\_\+curves3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, int, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, double, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a84476f60fe066284a024962bc068ce12}{tecplot\+\_\+surface\+\_\+special} (const char $\ast$, F\+I\+LE $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_a42c725b55d19d7250c0ba9585075d31a}{tecplot\+\_\+plot\+\_\+surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const double $\ast$, const double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, const char $\ast$, const char $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_afcb1bbf1baf6a8afd912bf27b2722169}{tecplot\+\_\+surface\+\_\+in\+\_\+box} (const char $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{igview_8c_ad7d0e2d699b3bd2bb5c4d27aa6082cb3}{gview\+\_\+plot\+\_\+intfc2d} (const char $\ast$, const char $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a7a833c35ce57f4315f0d80a08edbac25}{geomview\+\_\+intfc\+\_\+plot2d} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ae3ea0085964fe887588610f52da0724b}{tecplot\+\_\+show\+\_\+box\+\_\+tris} (const char $\ast$fname, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, int $\ast$icrds)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_acd2ca6ca520cea6b84b245f747e2daa2}{set\+\_\+shift\+\_\+for\+\_\+tecplot} (double sx, double sy, double sz)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a1caf48e689026389631866a5da05d1c1}{tecplot\+\_\+show\+\_\+tris} (const char $\ast$tname, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_aebb476ac05517d872fadf07005ffc42e}{tecplot\+\_\+blk\+\_\+intfc\+\_\+plot} (const char $\ast$fname, \hyperlink{int_8h_a46c17212c116276ea158f895d0c14623}{B\+L\+K\+\_\+\+T\+RI} $\ast$blk\+\_\+tri)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_abd00eff5f40f96824f30384508c8c1a6}{tecplot\+\_\+triad} (const char $\ast$fname, double $\ast$p, double $\ast$x, double $\ast$y, double $\ast$z, double ds)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a2dd06df123a24e67cf50b80268a830d8}{tecplot\+\_\+tris} (const char $\ast$fname, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_af32d91260bf08de3699a611c2827c3af}{tecplot\+\_\+box} (const char $\ast$bname, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$L0, double $\ast$U0)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ab2a3351a1d80f58067662d4fde3fc1c6}{tecplot\+\_\+interface} (const char $\ast$bname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a09435023662f8ef4dbdb936427275aac}{tecplot\+\_\+curve} (const char $\ast$bname, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a2ba7ed3ec607e07102f85f30d9a42475}{set\+\_\+tst\+\_\+posn} (double $\ast$pos)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a524176d9634f0c7f702e113aa9c67ed1}{tecplot\+\_\+surface\+\_\+in\+\_\+ball} (const char $\ast$fname, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+void \hyperlink{igview_8c_a6b125388fa7d750b12aa1eb5ba155b8e}{tri\+\_\+bound\+\_\+block} (double $\ast$$\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{igview_8c_aeac18980e0d342161b44c196a9d59f5e}{blocks\+\_\+sect} (double $\ast$$\ast$, double $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a9697a286619c623b91fde8cfc48b134f}{tecplot\+\_\+interface\+\_\+in\+\_\+box} (const char $\ast$tname, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int $\ast$bmin, int $\ast$bmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_aaec662d03d9d0a42d356bcccba76be15}{tecplot\+\_\+surface} (const char $\ast$bname, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a31d07a9e3411553687109b650bc207a6}{tecplot\+\_\+show\+\_\+box\+\_\+tri} (const char $\ast$tname, \hyperlink{geom_8h_a320225f3438ce16c1da83a8f48014e3b}{R\+E\+C\+T\+\_\+\+B\+OX} $\ast$box, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a3f1f37abf39ee55cdbbf8f4f25a3825d}{geomview\+\_\+interface\+\_\+plot} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ab01e7b32adb61c6ffeaedf842e24e2da}{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a0ec54b9abb8b205b0be2aaa8a43fe159}{gview\+\_\+point\+\_\+tri\+\_\+rings} (const char $\ast$filename, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a6971d3350ffbdfe0b6fc6c1efa156731}{gview\+\_\+plot\+\_\+color\+\_\+interface} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} colored)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a9ffb33924ffa6c689f679636b008df88}{set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int nt, double $\ast$B\+BL, double $\ast$B\+BU, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} preset, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} cube)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a9709fb074bec5d0dfc0dd1009d51e599}{set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$pt, int npt, double $\ast$B\+BL, double $\ast$B\+BU, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} preset, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} cube)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a5c200f10dde59aa38a004c36463a8868}{set\+\_\+vector\+\_\+bounding\+\_\+box} (const double $\ast$p, const double $\ast$u, double c, double $\ast$B\+BL, double $\ast$B\+BU, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} preset, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} cube)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a589604c7f8bee21716f7af671989980d}{gview\+\_\+plot\+\_\+triangle\+\_\+list} (const char $\ast$dname, const char $\ast$name, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris, double red\+\_\+start, double green\+\_\+start, double blue\+\_\+start, double red\+\_\+end, double green\+\_\+end, double blue\+\_\+end, double alpha, const double $\ast$B\+BL, const double $\ast$B\+BU)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a80e4768d0e237ef8d90fbe5c8b7db61b}{gview\+\_\+plot\+\_\+polyline} (const char $\ast$dname, const char $\ast$name, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$v, int nv, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} closed, double red, double green, double blue, double alpha, const double $\ast$B\+BL, const double $\ast$B\+BU)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a4796f5371b766cad05525346732ea741}{gview\+\_\+plot\+\_\+vertices} (const char $\ast$dname, const char $\ast$name, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$v, int nv, const double $\ast$B\+BL, const double $\ast$B\+BU)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ab1deaed4f5e8823aa370686e1d4ee917}{gview\+\_\+plot\+\_\+axes} (const char $\ast$dname, const char $\ast$name, const double $\ast$L, const double $\ast$U, const double $\ast$B\+BL, const double $\ast$B\+BU)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_aaee62f5eda25f1c4b720526143f40dd0}{gview\+\_\+plot\+\_\+coord\+\_\+sys} (const char $\ast$dname, const char $\ast$name, const double $\ast$o, const double $\ast$a0, const double $\ast$a1, const double $\ast$a2, const double $\ast$B\+BL, const double $\ast$B\+BU)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a4e3899f9fe3eba0c28061a33c5370ee6}{gview\+\_\+bounding\+\_\+box} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const double $\ast$B\+BL, const double $\ast$B\+BU, int indent\+\_\+level, const char $\ast$indent)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a549f458ba416029e3a62c9ea0149acb9}{gview\+\_\+plot\+\_\+curve} (const \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, const char $\ast$dname, const char $\ast$name, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} color, int width)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a1cb94d5a915fda5719c8eab1cfd50a1e}{gview\+\_\+polyline} (const char $\ast$dname, const char $\ast$fname, double $\ast$const $\ast$coords, int n\+\_\+points, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} color, int width)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ae9f28decc6bebb7bbfd0d9fcf527aebd}{gview\+\_\+local\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, const char $\ast$dname, const char $\ast$fname, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} color, const double $\ast$center, double radius)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ac6396304831f6d7251dffd7ac1ce9aa4}{gview\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surface, const char $\ast$fname, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} color)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_ad622a6607f709a0116ba4837a599285d}{gview\+\_\+cube} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const double $\ast$L, const double $\ast$U)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a1dcd762d1716757442c1d9c50a3ac4d7}{gview\+\_\+plot\+\_\+tri\+\_\+list} (const char $\ast$dname, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a433146bbc1af1c12a775efa0c3cb7a3b}{gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list} (const char $\ast$dname, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, const double $\ast$color\+\_\+tri, int num\+\_\+tris, double $\ast$const $\ast$coords, \hyperlink{int_8h_a609cd35687bbfbf1fccde885d8a1ddfb}{S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR} lcolor, double alpha, int width, int npts)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a0007a1b1a3f0775a61e7d09b8a46caf4}{gview\+\_\+plot\+\_\+c\+\_\+curve} (const \hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$c\+\_\+curve, int k, const char $\ast$dname)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_af1219261353cbebba1a630a049d7c868}{vtk\+\_\+interface\+\_\+plot} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} print\+\_\+in\+\_\+binary, double time, int step)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a3f78a4e425b331be2545e572301d6913}{sdl\+\_\+interface\+\_\+plot} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a02debd1b7296481c4050263aa932d6c3}{gview\+\_\+plot\+\_\+surface} (const char $\ast$dname, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_af08d64ab44a97e10dd62b7d6a97f137e}{gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range} (const char $\ast$dname, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$center, double radius)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a32a73c4d1948e1098f95981d885af60c}{gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range} (const char $\ast$dname, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$vertex, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, int range)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{igview_8c_a071ff5f970479e0ebbc54f7cf6f4d8a3}{gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range} (const char $\ast$dname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$center, double radius)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igview_8c_a6c98c563349391e5b52651a754e46d20}{shx} =0.\+0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igview_8c_af98654368382c4be3039de7ac123039d}{shy} =0.\+0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igview_8c_a160674f0ba3a328f54968e42d675baf0}{shz} =0.\+0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igview_8c_a5098781de2ba82e079b0dff817c2cdc3}{tst\+\_\+pt} \mbox{[}3\mbox{]} = \{ 1.\+01255, 0.\+1418, 1.\+435 \}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{igview_8c_a8cfb532c3736008b74ae120dce93c1d1}{tst\+\_\+pt1} \mbox{[}3\mbox{]} = \{ 1.\+01255, 0.\+1418, 1.\+435 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{igview.\+c@{igview.\+c}!T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS@{T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS}}
+\index{T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS@{T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS}{TEC_MAX_TRIS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+C\+\_\+\+M\+A\+X\+\_\+\+T\+R\+IS~2000}\hypertarget{igview_8c_a7bfdfc0c3f5232d7c4408e665da48f46}{}\label{igview_8c_a7bfdfc0c3f5232d7c4408e665da48f46}
+
+
+\subsection{Function Documentation}
+\index{igview.\+c@{igview.\+c}!blocks\+\_\+sect@{blocks\+\_\+sect}}
+\index{blocks\+\_\+sect@{blocks\+\_\+sect}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{blocks\+\_\+sect(double $\ast$$\ast$, double $\ast$$\ast$)}{blocks_sect(double **, double **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} blocks\+\_\+sect (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{, }
+\item[{double $\ast$$\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_aeac18980e0d342161b44c196a9d59f5e}{}\label{igview_8c_aeac18980e0d342161b44c196a9d59f5e}
+\index{igview.\+c@{igview.\+c}!geomview\+\_\+interface\+\_\+plot@{geomview\+\_\+interface\+\_\+plot}}
+\index{geomview\+\_\+interface\+\_\+plot@{geomview\+\_\+interface\+\_\+plot}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{geomview\+\_\+interface\+\_\+plot(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{geomview_interface_plot(const char *dname, INTERFACE *intfc, RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void geomview\+\_\+interface\+\_\+plot (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a3f1f37abf39ee55cdbbf8f4f25a3825d}{}\label{igview_8c_a3f1f37abf39ee55cdbbf8f4f25a3825d}
+\index{igview.\+c@{igview.\+c}!geomview\+\_\+intfc\+\_\+plot2d@{geomview\+\_\+intfc\+\_\+plot2d}}
+\index{geomview\+\_\+intfc\+\_\+plot2d@{geomview\+\_\+intfc\+\_\+plot2d}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{geomview\+\_\+intfc\+\_\+plot2d(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{geomview_intfc_plot2d(const char *dname, INTERFACE *intfc, RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void geomview\+\_\+intfc\+\_\+plot2d (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a7a833c35ce57f4315f0d80a08edbac25}{}\label{igview_8c_a7a833c35ce57f4315f0d80a08edbac25}
+\index{igview.\+c@{igview.\+c}!get\+\_\+list\+\_\+file\+\_\+name@{get\+\_\+list\+\_\+file\+\_\+name}}
+\index{get\+\_\+list\+\_\+file\+\_\+name@{get\+\_\+list\+\_\+file\+\_\+name}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+list\+\_\+file\+\_\+name(char $\ast$, const char $\ast$, const char $\ast$, size\+\_\+t $\ast$)}{get_list_file_name(char *, const char *, const char *, size_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} char $\ast$ get\+\_\+list\+\_\+file\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fname, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{size\+\_\+t $\ast$}]{fname\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a099ee781a0873f6959190df8abf179cb}{}\label{igview_8c_a099ee781a0873f6959190df8abf179cb}
+\index{igview.\+c@{igview.\+c}!get\+\_\+vtk\+\_\+file\+\_\+name@{get\+\_\+vtk\+\_\+file\+\_\+name}}
+\index{get\+\_\+vtk\+\_\+file\+\_\+name@{get\+\_\+vtk\+\_\+file\+\_\+name}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+vtk\+\_\+file\+\_\+name(char $\ast$, const char $\ast$, const char $\ast$, size\+\_\+t $\ast$)}{get_vtk_file_name(char *, const char *, const char *, size_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char $\ast$ get\+\_\+vtk\+\_\+file\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fname, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{size\+\_\+t $\ast$}]{fname\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ac4740b62b2fbb89f62c00c4ed4a1a786}{}\label{igview_8c_ac4740b62b2fbb89f62c00c4ed4a1a786}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+bounding\+\_\+box@{gview\+\_\+bounding\+\_\+box}}
+\index{gview\+\_\+bounding\+\_\+box@{gview\+\_\+bounding\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+bounding\+\_\+box(\+F\+I\+L\+E $\ast$file, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U, int indent\+\_\+level, const char $\ast$indent)}{gview_bounding_box(FILE *file, const double *BBL, const double *BBU, int indent_level, const char *indent)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{int}]{indent\+\_\+level, }
+\item[{const char $\ast$}]{indent}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a4e3899f9fe3eba0c28061a33c5370ee6}{}\label{igview_8c_a4e3899f9fe3eba0c28061a33c5370ee6}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+cube@{gview\+\_\+cube}}
+\index{gview\+\_\+cube@{gview\+\_\+cube}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+cube(\+F\+I\+L\+E $\ast$file, const double $\ast$\+L, const double $\ast$\+U)}{gview_cube(FILE *file, const double *L, const double *U)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+cube (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const double $\ast$}]{L, }
+\item[{const double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ad622a6607f709a0116ba4837a599285d}{}\label{igview_8c_ad622a6607f709a0116ba4837a599285d}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+local\+\_\+surface@{gview\+\_\+local\+\_\+surface}}
+\index{gview\+\_\+local\+\_\+surface@{gview\+\_\+local\+\_\+surface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+local\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, const char $\ast$dname, const char $\ast$fname, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R color, const double $\ast$center, double radius)}{gview_local_surface(SURFACE *surf, const char *dname, const char *fname, SURFACE_COLOR color, const double *center, double radius)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+local\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{const double $\ast$}]{center, }
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ae9f28decc6bebb7bbfd0d9fcf527aebd}{}\label{igview_8c_ae9f28decc6bebb7bbfd0d9fcf527aebd}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+axes@{gview\+\_\+plot\+\_\+axes}}
+\index{gview\+\_\+plot\+\_\+axes@{gview\+\_\+plot\+\_\+axes}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+axes(const char $\ast$dname, const char $\ast$name, const double $\ast$\+L, const double $\ast$\+U, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U)}{gview_plot_axes(const char *dname, const char *name, const double *L, const double *U, const double *BBL, const double *BBU)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+axes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{const double $\ast$}]{L, }
+\item[{const double $\ast$}]{U, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ab1deaed4f5e8823aa370686e1d4ee917}{}\label{igview_8c_ab1deaed4f5e8823aa370686e1d4ee917}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+c\+\_\+curve@{gview\+\_\+plot\+\_\+c\+\_\+curve}}
+\index{gview\+\_\+plot\+\_\+c\+\_\+curve@{gview\+\_\+plot\+\_\+c\+\_\+curve}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+c\+\_\+curve(const C\+\_\+\+C\+U\+R\+V\+E $\ast$c\+\_\+curve, int k, const char $\ast$dname)}{gview_plot_c_curve(const C_CURVE *c_curve, int k, const char *dname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+c\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+\_\+\+C\+U\+R\+VE} $\ast$}]{c\+\_\+curve, }
+\item[{int}]{k, }
+\item[{const char $\ast$}]{dname}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a0007a1b1a3f0775a61e7d09b8a46caf4}{}\label{igview_8c_a0007a1b1a3f0775a61e7d09b8a46caf4}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+color\+\_\+interface@{gview\+\_\+plot\+\_\+color\+\_\+interface}}
+\index{gview\+\_\+plot\+\_\+color\+\_\+interface@{gview\+\_\+plot\+\_\+color\+\_\+interface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+color\+\_\+interface(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, boolean colored)}{gview_plot_color_interface(const char *dname, INTERFACE *intfc, boolean colored)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+color\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf boolean}}]{colored}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a6971d3350ffbdfe0b6fc6c1efa156731}{}\label{igview_8c_a6971d3350ffbdfe0b6fc6c1efa156731}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface@{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface}}
+\index{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface@{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{gview_plot_color_scaled_interface(const char *dname, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ab01e7b32adb61c6ffeaedf842e24e2da}{}\label{igview_8c_ab01e7b32adb61c6ffeaedf842e24e2da}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces@{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces}}
+\index{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces@{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const double $\ast$, const double $\ast$, boolean, const char $\ast$, const char $\ast$, boolean, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R)}{gview_plot_color_scaled_surfaces(INTERFACE *, RECT_GRID *, const double *, const double *, boolean, const char *, const char *, boolean, SURFACE_COLOR, SURFACE_COLOR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+color\+\_\+scaled\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{clip, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf boolean}}]{bdry, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color1, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color2}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a25edfb92afc5e127531668e22a6e14d5}{}\label{igview_8c_a25edfb92afc5e127531668e22a6e14d5}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+color\+\_\+surfaces@{gview\+\_\+plot\+\_\+color\+\_\+surfaces}}
+\index{gview\+\_\+plot\+\_\+color\+\_\+surfaces@{gview\+\_\+plot\+\_\+color\+\_\+surfaces}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+color\+\_\+surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const double $\ast$, const double $\ast$, boolean, const char $\ast$, const char $\ast$, boolean)}{gview_plot_color_surfaces(INTERFACE *, RECT_GRID *, const double *, const double *, boolean, const char *, const char *, boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+color\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{clip, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf boolean}}]{bdry}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_acc38d7172925e99228af9448eaff6a45}{}\label{igview_8c_acc38d7172925e99228af9448eaff6a45}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+coord\+\_\+sys@{gview\+\_\+plot\+\_\+coord\+\_\+sys}}
+\index{gview\+\_\+plot\+\_\+coord\+\_\+sys@{gview\+\_\+plot\+\_\+coord\+\_\+sys}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+coord\+\_\+sys(const char $\ast$dname, const char $\ast$name, const double $\ast$o, const double $\ast$a0, const double $\ast$a1, const double $\ast$a2, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U)}{gview_plot_coord_sys(const char *dname, const char *name, const double *o, const double *a0, const double *a1, const double *a2, const double *BBL, const double *BBU)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+coord\+\_\+sys (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{const double $\ast$}]{o, }
+\item[{const double $\ast$}]{a0, }
+\item[{const double $\ast$}]{a1, }
+\item[{const double $\ast$}]{a2, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_aaee62f5eda25f1c4b720526143f40dd0}{}\label{igview_8c_aaee62f5eda25f1c4b720526143f40dd0}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+cube@{gview\+\_\+plot\+\_\+cube}}
+\index{gview\+\_\+plot\+\_\+cube@{gview\+\_\+plot\+\_\+cube}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+cube(const char $\ast$, const char $\ast$, const double $\ast$, const double $\ast$, const double $\ast$, const double $\ast$)}{gview_plot_cube(const char *, const char *, const double *, const double *, const double *, const double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+cube (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{gname, }
+\item[{const double $\ast$}]{L, }
+\item[{const double $\ast$}]{U, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a69981b50cbb512898f545e5e0172a4b6}{}\label{igview_8c_a69981b50cbb512898f545e5e0172a4b6}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+curve@{gview\+\_\+plot\+\_\+curve}}
+\index{gview\+\_\+plot\+\_\+curve@{gview\+\_\+plot\+\_\+curve}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+curve(const C\+U\+R\+V\+E $\ast$c, const char $\ast$dname, const char $\ast$name, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R color, int width)}{gview_plot_curve(const CURVE *c, const char *dname, const char *name, SURFACE_COLOR color, int width)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a549f458ba416029e3a62c9ea0149acb9}{}\label{igview_8c_a549f458ba416029e3a62c9ea0149acb9}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+curves@{gview\+\_\+plot\+\_\+curves}}
+\index{gview\+\_\+plot\+\_\+curves@{gview\+\_\+plot\+\_\+curves}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, int)}{gview_plot_curves(INTERFACE *, const double *, const double *, const char *, const char *, SURFACE_COLOR, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a31d10473de9e7a9aa2c4f5e6987913fa}{}\label{igview_8c_a31d10473de9e7a9aa2c4f5e6987913fa}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+intfc2d@{gview\+\_\+plot\+\_\+intfc2d}}
+\index{gview\+\_\+plot\+\_\+intfc2d@{gview\+\_\+plot\+\_\+intfc2d}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+intfc2d(const char $\ast$, const char $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{gview_plot_intfc2d(const char *, const char *, INTERFACE *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+intfc2d (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{gname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ad7d0e2d699b3bd2bb5c4d27aa6082cb3}{}\label{igview_8c_ad7d0e2d699b3bd2bb5c4d27aa6082cb3}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range}}
+\index{gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$center, double radius)}{gview_plot_intfc_within_range(const char *dname, INTERFACE *intfc, double *center, double radius)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+intfc\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a071ff5f970479e0ebbc54f7cf6f4d8a3}{}\label{igview_8c_a071ff5f970479e0ebbc54f7cf6f4d8a3}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+polyline@{gview\+\_\+plot\+\_\+polyline}}
+\index{gview\+\_\+plot\+\_\+polyline@{gview\+\_\+plot\+\_\+polyline}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+polyline(const char $\ast$dname, const char $\ast$name, P\+O\+I\+N\+T $\ast$$\ast$v, int nv, boolean closed, double red, double green, double blue, double alpha, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U)}{gview_plot_polyline(const char *dname, const char *name, POINT **v, int nv, boolean closed, double red, double green, double blue, double alpha, const double *BBL, const double *BBU)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+polyline (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{v, }
+\item[{int}]{nv, }
+\item[{{\bf boolean}}]{closed, }
+\item[{double}]{red, }
+\item[{double}]{green, }
+\item[{double}]{blue, }
+\item[{double}]{alpha, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a80e4768d0e237ef8d90fbe5c8b7db61b}{}\label{igview_8c_a80e4768d0e237ef8d90fbe5c8b7db61b}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range}}
+\index{gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range(const char $\ast$dname, P\+O\+I\+N\+T $\ast$vertex, T\+R\+I $\ast$tri, int range)}{gview_plot_pt_tri_within_range(const char *dname, POINT *vertex, TRI *tri, int range)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+pt\+\_\+tri\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{vertex, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a32a73c4d1948e1098f95981d885af60c}{}\label{igview_8c_a32a73c4d1948e1098f95981d885af60c}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range}}
+\index{gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range@{gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range(const char $\ast$dname, S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$center, double radius)}{gview_plot_surf_within_range(const char *dname, SURFACE *surf, double *center, double radius)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void gview\+\_\+plot\+\_\+surf\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_af08d64ab44a97e10dd62b7d6a97f137e}{}\label{igview_8c_af08d64ab44a97e10dd62b7d6a97f137e}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+surface@{gview\+\_\+plot\+\_\+surface}}
+\index{gview\+\_\+plot\+\_\+surface@{gview\+\_\+plot\+\_\+surface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+surface(const char $\ast$dname, S\+U\+R\+F\+A\+C\+E $\ast$surf)}{gview_plot_surface(const char *dname, SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a02debd1b7296481c4050263aa932d6c3}{}\label{igview_8c_a02debd1b7296481c4050263aa932d6c3}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+surfaces@{gview\+\_\+plot\+\_\+surfaces}}
+\index{gview\+\_\+plot\+\_\+surfaces@{gview\+\_\+plot\+\_\+surfaces}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const double $\ast$, const double $\ast$, boolean, const char $\ast$, const char $\ast$, boolean, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R)}{gview_plot_surfaces(INTERFACE *, RECT_GRID *, const double *, const double *, boolean, const char *, const char *, boolean, SURFACE_COLOR, SURFACE_COLOR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void gview\+\_\+plot\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{clip, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf boolean}}]{bdry, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color1, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color2}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_afdd339b98e58a1d6ffd31d04acdf2fe1}{}\label{igview_8c_afdd339b98e58a1d6ffd31d04acdf2fe1}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list@{gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list}}
+\index{gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list@{gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list(const char $\ast$dname, T\+R\+I $\ast$$\ast$tris, const double $\ast$color\+\_\+tri, int num\+\_\+tris, double $\ast$const $\ast$coords, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R lcolor, double alpha, int width, int npts)}{gview_plot_tri_and_point_list(const char *dname, TRI **tris, const double *color_tri, int num_tris, double *const *coords, SURFACE_COLOR lcolor, double alpha, int width, int npts)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+tri\+\_\+and\+\_\+point\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{const double $\ast$}]{color\+\_\+tri, }
+\item[{int}]{num\+\_\+tris, }
+\item[{double $\ast$const $\ast$}]{coords, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{lcolor, }
+\item[{double}]{alpha, }
+\item[{int}]{width, }
+\item[{int}]{npts}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a433146bbc1af1c12a775efa0c3cb7a3b}{}\label{igview_8c_a433146bbc1af1c12a775efa0c3cb7a3b}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+tri\+\_\+list@{gview\+\_\+plot\+\_\+tri\+\_\+list}}
+\index{gview\+\_\+plot\+\_\+tri\+\_\+list@{gview\+\_\+plot\+\_\+tri\+\_\+list}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+tri\+\_\+list(const char $\ast$dname, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris)}{gview_plot_tri_list(const char *dname, TRI **tris, int num_tris)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+tri\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a1dcd762d1716757442c1d9c50a3ac4d7}{}\label{igview_8c_a1dcd762d1716757442c1d9c50a3ac4d7}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+triangle\+\_\+list@{gview\+\_\+plot\+\_\+triangle\+\_\+list}}
+\index{gview\+\_\+plot\+\_\+triangle\+\_\+list@{gview\+\_\+plot\+\_\+triangle\+\_\+list}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+triangle\+\_\+list(const char $\ast$dname, const char $\ast$name, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris, double red\+\_\+start, double green\+\_\+start, double blue\+\_\+start, double red\+\_\+end, double green\+\_\+end, double blue\+\_\+end, double alpha, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U)}{gview_plot_triangle_list(const char *dname, const char *name, TRI **tris, int num_tris, double red_start, double green_start, double blue_start, double red_end, double green_end, double blue_end, double alpha, const double *BBL, const double *BBU)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+triangle\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{double}]{red\+\_\+start, }
+\item[{double}]{green\+\_\+start, }
+\item[{double}]{blue\+\_\+start, }
+\item[{double}]{red\+\_\+end, }
+\item[{double}]{green\+\_\+end, }
+\item[{double}]{blue\+\_\+end, }
+\item[{double}]{alpha, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a589604c7f8bee21716f7af671989980d}{}\label{igview_8c_a589604c7f8bee21716f7af671989980d}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+plot\+\_\+vertices@{gview\+\_\+plot\+\_\+vertices}}
+\index{gview\+\_\+plot\+\_\+vertices@{gview\+\_\+plot\+\_\+vertices}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+plot\+\_\+vertices(const char $\ast$dname, const char $\ast$name, P\+O\+I\+N\+T $\ast$$\ast$v, int nv, const double $\ast$\+B\+B\+L, const double $\ast$\+B\+B\+U)}{gview_plot_vertices(const char *dname, const char *name, POINT **v, int nv, const double *BBL, const double *BBU)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+plot\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{v, }
+\item[{int}]{nv, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a4796f5371b766cad05525346732ea741}{}\label{igview_8c_a4796f5371b766cad05525346732ea741}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+point\+\_\+tri\+\_\+rings@{gview\+\_\+point\+\_\+tri\+\_\+rings}}
+\index{gview\+\_\+point\+\_\+tri\+\_\+rings@{gview\+\_\+point\+\_\+tri\+\_\+rings}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+point\+\_\+tri\+\_\+rings(const char $\ast$filename, P\+O\+I\+N\+T $\ast$p)}{gview_point_tri_rings(const char *filename, POINT *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+point\+\_\+tri\+\_\+rings (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a0ec54b9abb8b205b0be2aaa8a43fe159}{}\label{igview_8c_a0ec54b9abb8b205b0be2aaa8a43fe159}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+polyline@{gview\+\_\+polyline}}
+\index{gview\+\_\+polyline@{gview\+\_\+polyline}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+polyline(const char $\ast$dname, const char $\ast$fname, double $\ast$const $\ast$coords, int n\+\_\+points, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R color, int width)}{gview_polyline(const char *dname, const char *fname, double *const *coords, int n_points, SURFACE_COLOR color, int width)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+polyline (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{double $\ast$const $\ast$}]{coords, }
+\item[{int}]{n\+\_\+points, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a1cb94d5a915fda5719c8eab1cfd50a1e}{}\label{igview_8c_a1cb94d5a915fda5719c8eab1cfd50a1e}
+\index{igview.\+c@{igview.\+c}!gview\+\_\+surface@{gview\+\_\+surface}}
+\index{gview\+\_\+surface@{gview\+\_\+surface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{gview\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surface, const char $\ast$fname, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R color)}{gview_surface(SURFACE *surface, const char *fname, SURFACE_COLOR color)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void gview\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surface, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ac6396304831f6d7251dffd7ac1ce9aa4}{}\label{igview_8c_ac6396304831f6d7251dffd7ac1ce9aa4}
+\index{igview.\+c@{igview.\+c}!print\+\_\+polyline\+\_\+description@{print\+\_\+polyline\+\_\+description}}
+\index{print\+\_\+polyline\+\_\+description@{print\+\_\+polyline\+\_\+description}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+polyline\+\_\+description(\+F\+I\+L\+E $\ast$, const char $\ast$, double $\ast$const $\ast$, int, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R color, double, int)}{print_polyline_description(FILE *, const char *, double *const *, int, SURFACE_COLOR color, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+polyline\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{indent, }
+\item[{double $\ast$const $\ast$}]{coords, }
+\item[{int}]{n\+\_\+points, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{double}]{alpha, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a804ecc14f510519cf21d5600178224e3}{}\label{igview_8c_a804ecc14f510519cf21d5600178224e3}
+\index{igview.\+c@{igview.\+c}!sdl\+\_\+interface\+\_\+plot@{sdl\+\_\+interface\+\_\+plot}}
+\index{sdl\+\_\+interface\+\_\+plot@{sdl\+\_\+interface\+\_\+plot}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+interface\+\_\+plot(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{sdl_interface_plot(const char *dname, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void sdl\+\_\+interface\+\_\+plot (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a3f78a4e425b331be2545e572301d6913}{}\label{igview_8c_a3f78a4e425b331be2545e572301d6913}
+\index{igview.\+c@{igview.\+c}!set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box@{set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box}}
+\index{set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box@{set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box(\+P\+O\+I\+N\+T $\ast$$\ast$pt, int npt, double $\ast$\+B\+B\+L, double $\ast$\+B\+B\+U, boolean preset, boolean cube)}{set_point_list_bounding_box(POINT **pt, int npt, double *BBL, double *BBU, boolean preset, boolean cube)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+point\+\_\+list\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{pt, }
+\item[{int}]{npt, }
+\item[{double $\ast$}]{B\+BL, }
+\item[{double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{preset, }
+\item[{{\bf boolean}}]{cube}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a9709fb074bec5d0dfc0dd1009d51e599}{}\label{igview_8c_a9709fb074bec5d0dfc0dd1009d51e599}
+\index{igview.\+c@{igview.\+c}!set\+\_\+ppfname@{set\+\_\+ppfname}}
+\index{set\+\_\+ppfname@{set\+\_\+ppfname}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+ppfname(char $\ast$, const char $\ast$, size\+\_\+t $\ast$)}{set_ppfname(char *, const char *, size_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} char $\ast$ set\+\_\+ppfname (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ppfname, }
+\item[{const char $\ast$}]{fname, }
+\item[{size\+\_\+t $\ast$}]{ppfname\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ab65dd4a2d13ca168c9c949f8944a933b}{}\label{igview_8c_ab65dd4a2d13ca168c9c949f8944a933b}
+\index{igview.\+c@{igview.\+c}!set\+\_\+shift\+\_\+for\+\_\+tecplot@{set\+\_\+shift\+\_\+for\+\_\+tecplot}}
+\index{set\+\_\+shift\+\_\+for\+\_\+tecplot@{set\+\_\+shift\+\_\+for\+\_\+tecplot}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+shift\+\_\+for\+\_\+tecplot(double sx, double sy, double sz)}{set_shift_for_tecplot(double sx, double sy, double sz)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+shift\+\_\+for\+\_\+tecplot (
+\begin{DoxyParamCaption}
+\item[{double}]{sx, }
+\item[{double}]{sy, }
+\item[{double}]{sz}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_acd2ca6ca520cea6b84b245f747e2daa2}{}\label{igview_8c_acd2ca6ca520cea6b84b245f747e2daa2}
+\index{igview.\+c@{igview.\+c}!set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box@{set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box}}
+\index{set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box@{set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box(\+T\+R\+I $\ast$$\ast$tris, int nt, double $\ast$\+B\+B\+L, double $\ast$\+B\+B\+U, boolean preset, boolean cube)}{set_tri_list_bounding_box(TRI **tris, int nt, double *BBL, double *BBU, boolean preset, boolean cube)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+tri\+\_\+list\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{nt, }
+\item[{double $\ast$}]{B\+BL, }
+\item[{double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{preset, }
+\item[{{\bf boolean}}]{cube}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a9ffb33924ffa6c689f679636b008df88}{}\label{igview_8c_a9ffb33924ffa6c689f679636b008df88}
+\index{igview.\+c@{igview.\+c}!set\+\_\+tst\+\_\+posn@{set\+\_\+tst\+\_\+posn}}
+\index{set\+\_\+tst\+\_\+posn@{set\+\_\+tst\+\_\+posn}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+tst\+\_\+posn(double $\ast$pos)}{set_tst_posn(double *pos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+tst\+\_\+posn (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a2ba7ed3ec607e07102f85f30d9a42475}{}\label{igview_8c_a2ba7ed3ec607e07102f85f30d9a42475}
+\index{igview.\+c@{igview.\+c}!set\+\_\+vector\+\_\+bounding\+\_\+box@{set\+\_\+vector\+\_\+bounding\+\_\+box}}
+\index{set\+\_\+vector\+\_\+bounding\+\_\+box@{set\+\_\+vector\+\_\+bounding\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+vector\+\_\+bounding\+\_\+box(const double $\ast$p, const double $\ast$u, double c, double $\ast$\+B\+B\+L, double $\ast$\+B\+B\+U, boolean preset, boolean cube)}{set_vector_bounding_box(const double *p, const double *u, double c, double *BBL, double *BBU, boolean preset, boolean cube)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+vector\+\_\+bounding\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{p, }
+\item[{const double $\ast$}]{u, }
+\item[{double}]{c, }
+\item[{double $\ast$}]{B\+BL, }
+\item[{double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{preset, }
+\item[{{\bf boolean}}]{cube}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a5c200f10dde59aa38a004c36463a8868}{}\label{igview_8c_a5c200f10dde59aa38a004c36463a8868}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+blk\+\_\+intfc\+\_\+plot@{tecplot\+\_\+blk\+\_\+intfc\+\_\+plot}}
+\index{tecplot\+\_\+blk\+\_\+intfc\+\_\+plot@{tecplot\+\_\+blk\+\_\+intfc\+\_\+plot}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+blk\+\_\+intfc\+\_\+plot(const char $\ast$fname, B\+L\+K\+\_\+\+T\+R\+I $\ast$blk\+\_\+tri)}{tecplot_blk_intfc_plot(const char *fname, BLK_TRI *blk_tri)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+blk\+\_\+intfc\+\_\+plot (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf B\+L\+K\+\_\+\+T\+RI} $\ast$}]{blk\+\_\+tri}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_aebb476ac05517d872fadf07005ffc42e}{}\label{igview_8c_aebb476ac05517d872fadf07005ffc42e}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+box@{tecplot\+\_\+box}}
+\index{tecplot\+\_\+box@{tecplot\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+box(const char $\ast$bname, F\+I\+L\+E $\ast$file, double $\ast$\+L0, double $\ast$\+U0)}{tecplot_box(const char *bname, FILE *file, double *L0, double *U0)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{bname, }
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{L0, }
+\item[{double $\ast$}]{U0}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_af32d91260bf08de3699a611c2827c3af}{}\label{igview_8c_af32d91260bf08de3699a611c2827c3af}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+curve@{tecplot\+\_\+curve}}
+\index{tecplot\+\_\+curve@{tecplot\+\_\+curve}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+curve(const char $\ast$bname, F\+I\+L\+E $\ast$file, C\+U\+R\+V\+E $\ast$c)}{tecplot_curve(const char *bname, FILE *file, CURVE *c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{bname, }
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a09435023662f8ef4dbdb936427275aac}{}\label{igview_8c_a09435023662f8ef4dbdb936427275aac}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+interface@{tecplot\+\_\+interface}}
+\index{tecplot\+\_\+interface@{tecplot\+\_\+interface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+interface(const char $\ast$bname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{tecplot_interface(const char *bname, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{bname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ab2a3351a1d80f58067662d4fde3fc1c6}{}\label{igview_8c_ab2a3351a1d80f58067662d4fde3fc1c6}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+interface\+\_\+in\+\_\+box@{tecplot\+\_\+interface\+\_\+in\+\_\+box}}
+\index{tecplot\+\_\+interface\+\_\+in\+\_\+box@{tecplot\+\_\+interface\+\_\+in\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+interface\+\_\+in\+\_\+box(const char $\ast$tname, F\+I\+L\+E $\ast$file, int $\ast$bmin, int $\ast$bmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{tecplot_interface_in_box(const char *tname, FILE *file, int *bmin, int *bmax, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+interface\+\_\+in\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tname, }
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a9697a286619c623b91fde8cfc48b134f}{}\label{igview_8c_a9697a286619c623b91fde8cfc48b134f}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+plot\+\_\+surfaces@{tecplot\+\_\+plot\+\_\+surfaces}}
+\index{tecplot\+\_\+plot\+\_\+surfaces@{tecplot\+\_\+plot\+\_\+surfaces}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+plot\+\_\+surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const double $\ast$, const double $\ast$, boolean, const char $\ast$, const char $\ast$, boolean, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R)}{tecplot_plot_surfaces(INTERFACE *, RECT_GRID *, const double *, const double *, boolean, const char *, const char *, boolean, SURFACE_COLOR, SURFACE_COLOR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void tecplot\+\_\+plot\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{clip, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf boolean}}]{bdry, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color1, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color2}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a42c725b55d19d7250c0ba9585075d31a}{}\label{igview_8c_a42c725b55d19d7250c0ba9585075d31a}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+show\+\_\+box\+\_\+tri@{tecplot\+\_\+show\+\_\+box\+\_\+tri}}
+\index{tecplot\+\_\+show\+\_\+box\+\_\+tri@{tecplot\+\_\+show\+\_\+box\+\_\+tri}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+show\+\_\+box\+\_\+tri(const char $\ast$tname, R\+E\+C\+T\+\_\+\+B\+O\+X $\ast$box, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris, F\+I\+L\+E $\ast$file)}{tecplot_show_box_tri(const char *tname, RECT_BOX *box, TRI **tris, int num_tris, FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+show\+\_\+box\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tname, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+B\+OX} $\ast$}]{box, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a31d07a9e3411553687109b650bc207a6}{}\label{igview_8c_a31d07a9e3411553687109b650bc207a6}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+show\+\_\+box\+\_\+tris@{tecplot\+\_\+show\+\_\+box\+\_\+tris}}
+\index{tecplot\+\_\+show\+\_\+box\+\_\+tris@{tecplot\+\_\+show\+\_\+box\+\_\+tris}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+show\+\_\+box\+\_\+tris(const char $\ast$fname, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, int $\ast$icrds)}{tecplot_show_box_tris(const char *fname, TRI **tris, int num_tris, RECT_GRID *gr, int *icrds)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+show\+\_\+box\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{int $\ast$}]{icrds}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_ae3ea0085964fe887588610f52da0724b}{}\label{igview_8c_ae3ea0085964fe887588610f52da0724b}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+show\+\_\+tris@{tecplot\+\_\+show\+\_\+tris}}
+\index{tecplot\+\_\+show\+\_\+tris@{tecplot\+\_\+show\+\_\+tris}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+show\+\_\+tris(const char $\ast$tname, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris, F\+I\+L\+E $\ast$file)}{tecplot_show_tris(const char *tname, TRI **tris, int num_tris, FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+show\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tname, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a1caf48e689026389631866a5da05d1c1}{}\label{igview_8c_a1caf48e689026389631866a5da05d1c1}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+surface@{tecplot\+\_\+surface}}
+\index{tecplot\+\_\+surface@{tecplot\+\_\+surface}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+surface(const char $\ast$bname, F\+I\+L\+E $\ast$file, S\+U\+R\+F\+A\+C\+E $\ast$s)}{tecplot_surface(const char *bname, FILE *file, SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{bname, }
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_aaec662d03d9d0a42d356bcccba76be15}{}\label{igview_8c_aaec662d03d9d0a42d356bcccba76be15}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+surface\+\_\+in\+\_\+ball@{tecplot\+\_\+surface\+\_\+in\+\_\+ball}}
+\index{tecplot\+\_\+surface\+\_\+in\+\_\+ball@{tecplot\+\_\+surface\+\_\+in\+\_\+ball}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+surface\+\_\+in\+\_\+ball(const char $\ast$fname, S\+U\+R\+F\+A\+C\+E $\ast$s)}{tecplot_surface_in_ball(const char *fname, SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void tecplot\+\_\+surface\+\_\+in\+\_\+ball (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a524176d9634f0c7f702e113aa9c67ed1}{}\label{igview_8c_a524176d9634f0c7f702e113aa9c67ed1}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+surface\+\_\+in\+\_\+box@{tecplot\+\_\+surface\+\_\+in\+\_\+box}}
+\index{tecplot\+\_\+surface\+\_\+in\+\_\+box@{tecplot\+\_\+surface\+\_\+in\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+surface\+\_\+in\+\_\+box(const char $\ast$, int $\ast$, int $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$, F\+I\+L\+E $\ast$)}{tecplot_surface_in_box(const char *, int *, int *, SURFACE *, FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void tecplot\+\_\+surface\+\_\+in\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tname, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s, }
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_afcb1bbf1baf6a8afd912bf27b2722169}{}\label{igview_8c_afcb1bbf1baf6a8afd912bf27b2722169}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+surface\+\_\+special@{tecplot\+\_\+surface\+\_\+special}}
+\index{tecplot\+\_\+surface\+\_\+special@{tecplot\+\_\+surface\+\_\+special}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+surface\+\_\+special(const char $\ast$, F\+I\+L\+E $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$)}{tecplot_surface_special(const char *, FILE *, SURFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void tecplot\+\_\+surface\+\_\+special (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{bname, }
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a84476f60fe066284a024962bc068ce12}{}\label{igview_8c_a84476f60fe066284a024962bc068ce12}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+triad@{tecplot\+\_\+triad}}
+\index{tecplot\+\_\+triad@{tecplot\+\_\+triad}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+triad(const char $\ast$fname, double $\ast$p, double $\ast$x, double $\ast$y, double $\ast$z, double ds)}{tecplot_triad(const char *fname, double *p, double *x, double *y, double *z, double ds)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+triad (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{y, }
+\item[{double $\ast$}]{z, }
+\item[{double}]{ds}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_abd00eff5f40f96824f30384508c8c1a6}{}\label{igview_8c_abd00eff5f40f96824f30384508c8c1a6}
+\index{igview.\+c@{igview.\+c}!tecplot\+\_\+tris@{tecplot\+\_\+tris}}
+\index{tecplot\+\_\+tris@{tecplot\+\_\+tris}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tecplot\+\_\+tris(const char $\ast$fname, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris)}{tecplot_tris(const char *fname, TRI **tris, int num_tris)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void tecplot\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a2dd06df123a24e67cf50b80268a830d8}{}\label{igview_8c_a2dd06df123a24e67cf50b80268a830d8}
+\index{igview.\+c@{igview.\+c}!tri\+\_\+bound\+\_\+block@{tri\+\_\+bound\+\_\+block}}
+\index{tri\+\_\+bound\+\_\+block@{tri\+\_\+bound\+\_\+block}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tri\+\_\+bound\+\_\+block(double $\ast$$\ast$, T\+R\+I $\ast$)}{tri_bound_block(double **, TRI *)}}]{\setlength{\rightskip}{0pt plus 5cm}void tri\+\_\+bound\+\_\+block (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{, }
+\item[{{\bf T\+RI} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a6b125388fa7d750b12aa1eb5ba155b8e}{}\label{igview_8c_a6b125388fa7d750b12aa1eb5ba155b8e}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+interface\+\_\+plot@{vtk\+\_\+interface\+\_\+plot}}
+\index{vtk\+\_\+interface\+\_\+plot@{vtk\+\_\+interface\+\_\+plot}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+interface\+\_\+plot(const char $\ast$dname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, boolean print\+\_\+in\+\_\+binary, double time, int step)}{vtk_interface_plot(const char *dname, INTERFACE *intfc, boolean print_in_binary, double time, int step)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void vtk\+\_\+interface\+\_\+plot (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary, }
+\item[{double}]{time, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_af1219261353cbebba1a630a049d7c868}{}\label{igview_8c_af1219261353cbebba1a630a049d7c868}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+plot\+\_\+curves@{vtk\+\_\+plot\+\_\+curves}}
+\index{vtk\+\_\+plot\+\_\+curves@{vtk\+\_\+plot\+\_\+curves}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, int, boolean, double, int)}{vtk_plot_curves(INTERFACE *, const double *, const double *, const char *, const char *, SURFACE_COLOR, int, boolean, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vtk\+\_\+plot\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary, }
+\item[{double}]{time, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a79cad121d63e4a2ca4d15d081eb69942}{}\label{igview_8c_a79cad121d63e4a2ca4d15d081eb69942}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+plot\+\_\+curves2d@{vtk\+\_\+plot\+\_\+curves2d}}
+\index{vtk\+\_\+plot\+\_\+curves2d@{vtk\+\_\+plot\+\_\+curves2d}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+curves2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, int, boolean, double, int)}{vtk_plot_curves2d(INTERFACE *, const double *, const double *, const char *, const char *, SURFACE_COLOR, int, boolean, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vtk\+\_\+plot\+\_\+curves2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary, }
+\item[{double}]{time, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a9831db364ba961719c013493295286c6}{}\label{igview_8c_a9831db364ba961719c013493295286c6}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+plot\+\_\+curves3d@{vtk\+\_\+plot\+\_\+curves3d}}
+\index{vtk\+\_\+plot\+\_\+curves3d@{vtk\+\_\+plot\+\_\+curves3d}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+curves3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, const double $\ast$, const double $\ast$, const char $\ast$, const char $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, int, boolean, double, int)}{vtk_plot_curves3d(INTERFACE *, const double *, const double *, const char *, const char *, SURFACE_COLOR, int, boolean, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vtk\+\_\+plot\+\_\+curves3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{int}]{width, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary, }
+\item[{double}]{time, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_aa63deb6f5279a3d393d455e387df042d}{}\label{igview_8c_aa63deb6f5279a3d393d455e387df042d}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+plot\+\_\+surfaces@{vtk\+\_\+plot\+\_\+surfaces}}
+\index{vtk\+\_\+plot\+\_\+surfaces@{vtk\+\_\+plot\+\_\+surfaces}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, const double $\ast$, const double $\ast$, boolean, const char $\ast$, const char $\ast$, boolean, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, boolean, double, int)}{vtk_plot_surfaces(INTERFACE *, const double *, const double *, boolean, const char *, const char *, boolean, SURFACE_COLOR, SURFACE_COLOR, boolean, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vtk\+\_\+plot\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{clip, }
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{name, }
+\item[{{\bf boolean}}]{bdry, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color1, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color2, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary, }
+\item[{double}]{time, }
+\item[{int}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_abcdd73f80fcd0056a834bac5e5534fa3}{}\label{igview_8c_abcdd73f80fcd0056a834bac5e5534fa3}
+\index{igview.\+c@{igview.\+c}!vtk\+\_\+print\+\_\+box@{vtk\+\_\+print\+\_\+box}}
+\index{vtk\+\_\+print\+\_\+box@{vtk\+\_\+print\+\_\+box}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+print\+\_\+box(const char $\ast$, const double $\ast$, const double $\ast$, boolean)}{vtk_print_box(const char *, const double *, const double *, boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vtk\+\_\+print\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const double $\ast$}]{B\+BL, }
+\item[{const double $\ast$}]{B\+BU, }
+\item[{{\bf boolean}}]{print\+\_\+in\+\_\+binary}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_afd152f3b8ce59cbfbe3cf890d0a4e52b}{}\label{igview_8c_afd152f3b8ce59cbfbe3cf890d0a4e52b}
+\index{igview.\+c@{igview.\+c}!write\+\_\+color@{write\+\_\+color}}
+\index{write\+\_\+color@{write\+\_\+color}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{write\+\_\+color(\+F\+I\+L\+E $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, double)}{write_color(FILE *, SURFACE_COLOR, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void write\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color, }
+\item[{double}]{alpha}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a377829eabfba3adaa0f48fdf4c1e1df1}{}\label{igview_8c_a377829eabfba3adaa0f48fdf4c1e1df1}
+\index{igview.\+c@{igview.\+c}!write\+\_\+interpolated\+\_\+color@{write\+\_\+interpolated\+\_\+color}}
+\index{write\+\_\+interpolated\+\_\+color@{write\+\_\+interpolated\+\_\+color}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{write\+\_\+interpolated\+\_\+color(\+F\+I\+L\+E $\ast$, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+O\+R, double, double)}{write_interpolated_color(FILE *, SURFACE_COLOR, SURFACE_COLOR, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void write\+\_\+interpolated\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color1, }
+\item[{{\bf S\+U\+R\+F\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}]{color2, }
+\item[{double}]{d, }
+\item[{double}]{intensity}
+\end{DoxyParamCaption}
+)}\hypertarget{igview_8c_a4d75a5e29461589619fa2b6588623e15}{}\label{igview_8c_a4d75a5e29461589619fa2b6588623e15}
+
+
+\subsection{Variable Documentation}
+\index{igview.\+c@{igview.\+c}!shx@{shx}}
+\index{shx@{shx}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{shx}{shx}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double shx =0.\+0}\hypertarget{igview_8c_a6c98c563349391e5b52651a754e46d20}{}\label{igview_8c_a6c98c563349391e5b52651a754e46d20}
+\index{igview.\+c@{igview.\+c}!shy@{shy}}
+\index{shy@{shy}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{shy}{shy}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double shy =0.\+0}\hypertarget{igview_8c_af98654368382c4be3039de7ac123039d}{}\label{igview_8c_af98654368382c4be3039de7ac123039d}
+\index{igview.\+c@{igview.\+c}!shz@{shz}}
+\index{shz@{shz}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{shz}{shz}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double shz =0.\+0}\hypertarget{igview_8c_a160674f0ba3a328f54968e42d675baf0}{}\label{igview_8c_a160674f0ba3a328f54968e42d675baf0}
+\index{igview.\+c@{igview.\+c}!tst\+\_\+pt@{tst\+\_\+pt}}
+\index{tst\+\_\+pt@{tst\+\_\+pt}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tst\+\_\+pt}{tst_pt}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double tst\+\_\+pt\mbox{[}3\mbox{]} = \{ 1.\+01255, 0.\+1418, 1.\+435 \}}\hypertarget{igview_8c_a5098781de2ba82e079b0dff817c2cdc3}{}\label{igview_8c_a5098781de2ba82e079b0dff817c2cdc3}
+\index{igview.\+c@{igview.\+c}!tst\+\_\+pt1@{tst\+\_\+pt1}}
+\index{tst\+\_\+pt1@{tst\+\_\+pt1}!igview.\+c@{igview.\+c}}
+\subsubsection[{\texorpdfstring{tst\+\_\+pt1}{tst_pt1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double tst\+\_\+pt1\mbox{[}3\mbox{]} = \{ 1.\+01255, 0.\+1418, 1.\+435 \}}\hypertarget{igview_8c_a8cfb532c3736008b74ae120dce93c1d1}{}\label{igview_8c_a8cfb532c3736008b74ae120dce93c1d1}

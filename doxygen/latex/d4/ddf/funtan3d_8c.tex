@@ -1,0 +1,618 @@
+\hypertarget{funtan3d_8c}{}\section{D\+N\+S/src/front/funtan3d.c File Reference}
+\label{funtan3d_8c}\index{D\+N\+S/src/front/funtan3d.\+c@{D\+N\+S/src/front/funtan3d.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{funtan3d_8c_d2/dad/struct___vertex}{\+\_\+\+Vertex}
+\item 
+struct \hyperlink{funtan3d_8c_d8/d58/struct___cdt___side}{\+\_\+\+Cdt\+\_\+\+Side}
+\item 
+struct \hyperlink{funtan3d_8c_dd/d83/struct___cdt}{\+\_\+\+Cdt}
+\item 
+struct \hyperlink{funtan3d_8c_d4/dcb/struct___n_c_s_u_r_f}{\+\_\+\+N\+C\+S\+U\+RF}
+\item 
+struct \hyperlink{funtan3d_8c_d0/de1/struct___n_c_l_i_s_t}{\+\_\+\+N\+C\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{funtan3d_8c_afe759d2b6c4ff043628d467079aa4539}{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}untan3d\char`\"{}
+\item 
+\#define \hyperlink{funtan3d_8c_aabac17a812caca1f9d9f544137641bea}{physical\+\_\+region}(ncl,  i)~((ncl)-\/$>$\+\_\+physical\+\_\+region\mbox{[}(i)\mbox{]})
+\item 
+\#define \hyperlink{funtan3d_8c_ad04f9d7e26cda3f230252f60b8744ff6}{physical\+\_\+surf}(ncl,  i)~((ncl)-\/$>$NS\mbox{[}(i)\mbox{]}.physical)
+\item 
+\#define \hyperlink{funtan3d_8c_a13162166dec6e8a2677d39311ff365c1}{Point\+\_\+vertex\+\_\+pointer}(\+\_\+pnt\+\_\+)~((\hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex}$\ast$)\hyperlink{int_8h_ae658ce522d5f00e84780be8b0fd720f3}{opaque\+\_\+pointer}(\+\_\+pnt\+\_\+))
+\item 
+\#define \hyperlink{funtan3d_8c_a304a776ab60100b57fb13da56e49a317}{Tri\+\_\+side\+\_\+of\+\_\+cdt}(\+\_\+cdt\+\_\+)        ~((\+\_\+cdt\+\_\+)-\/$>$side)
+\item 
+\#define \hyperlink{funtan3d_8c_a23d5b49d6a806156a092e71bd1acb5ba}{Tri\+\_\+color}(tri)~\hyperlink{int_8h_acb9a67e47fe0190ae2b1efff83bf04c0}{Tri\+\_\+index}(tri)
+\item 
+\#define \hyperlink{funtan3d_8c_a0aedfdc3ca69c71b5c4b8e6b3bcb4312}{cdt\+\_\+of\+\_\+tri}(tri)~(\hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt} $\ast$)\hyperlink{int_8h_ae08fec8c5ed39f385561eb87c680cc87}{Tri\+\_\+workspace}(tri)
+\item 
+\#define \hyperlink{funtan3d_8c_a494603aed20b25ae430b61b898b26cf8}{c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex}(cb)
+\item 
+\#define \hyperlink{funtan3d_8c_a3945c49db18082bcc8a628a1cb820193}{c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex}(cb)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{funtan3d_8c_d2/dad/struct___vertex}{\+\_\+\+Vertex} \hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex}
+\item 
+typedef struct \hyperlink{funtan3d_8c_d8/d58/struct___cdt___side}{\+\_\+\+Cdt\+\_\+\+Side} \hyperlink{funtan3d_8c_aeb63002b62aa88a3e6b320794e45aec3}{Cdt\+\_\+\+Side}
+\item 
+typedef struct \hyperlink{funtan3d_8c_dd/d83/struct___cdt}{\+\_\+\+Cdt} \hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt}
+\item 
+typedef struct \hyperlink{funtan3d_8c_d4/dcb/struct___n_c_s_u_r_f}{\+\_\+\+N\+C\+S\+U\+RF} \hyperlink{funtan3d_8c_a7c74b7c4b08a636a24d8af60ecfd6938}{N\+C\+S\+U\+RF}
+\item 
+typedef struct \hyperlink{funtan3d_8c_d0/de1/struct___n_c_l_i_s_t}{\+\_\+\+N\+C\+L\+I\+ST} \hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaab1de87736ec1a277ff7699a5c07dcc93}{M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI} = 5, 
+\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS} = 6, 
+\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaae8124f1a09347d1790265eff5e1d76fc}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS} = 10, 
+\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaaf03b3630bb66cb26427d1ff6e9d163c1}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES} = 100
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$ \hyperlink{funtan3d_8c_a7ba23c023bdec9a7e9e92b097ae5f70b}{set\+\_\+nclist} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a42eb2d3caf6bdfb2da8846f5ee517922}{delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces} (\hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a0179ef5dabab0bfcbf31ca55011ebbdd}{delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve} (\hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$$\ast$, \hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a1fa4588c3666849d80b3ac961e28d01d}{c\+\_\+bonds\+\_\+intersect} (\hyperlink{int_8h_a100ad00b96391c34c63e6c5fd27e0857}{C\+\_\+\+B\+O\+ND} $\ast$, \hyperlink{int_8h_a100ad00b96391c34c63e6c5fd27e0857}{C\+\_\+\+B\+O\+ND} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_aea46defe93a611033daa436d2b8825d6}{c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain} (\hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_acf96429ebbd2151de6e6408b0c94e01b}{cdt\+\_\+triangulate\+\_\+one\+\_\+tri} (\hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a4030e39966848baa0d0ac2762a958b7b}{cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_afcb8cd1d0f2a684c160bdf5aa56b68bf}{curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_ad6b345f53af287cfc4a38385caec2dd3}{delete\+\_\+inconsistent\+\_\+surfs} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a836aa8b04bf5e515d1c796adbf666745}{prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt} (\hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt} $\ast$, \hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex} $\ast$, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a0ef906e3d0a42383e44c52e053f050e3}{split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{funtan3d_8c_a096bccf63ea0c1cd339976fe41669051}{paint\+\_\+component} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_af96375448756325503ea9199f7a5907c}{print\+\_\+cdt} (\hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_a1061a5c848b38edee13efa404bd30543}{print\+\_\+cdt\+\_\+side} (\hyperlink{funtan3d_8c_aeb63002b62aa88a3e6b320794e45aec3}{Cdt\+\_\+\+Side} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_a5c852211f466a7f01ebeeb7baf15bdfd}{print\+\_\+nclist} (\hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_a25e1680577953611be6f266a78e3775d}{print\+\_\+ncsurf} (\hyperlink{funtan3d_8c_a7c74b7c4b08a636a24d8af60ecfd6938}{N\+C\+S\+U\+RF} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_a17f32e87cd0b2d32ba876880f48b29bb}{print\+\_\+vertex} (const char $\ast$, \hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_aeafc3639ef1d10f959e2a208527bffc4}{insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve} (\hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_af2a6c249fd38cda18fd70795c602e8a1}{install\+\_\+tris\+\_\+from\+\_\+dtris} (\hyperlink{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{Cdt} $\ast$, \hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex} $\ast$, \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_acb0818fcbe9496d47d9e39d13eca9607}{set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{N\+C\+L\+I\+ST} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_a6504b8a026ed86533485be0d07dd95ef}{set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{funtan3d_8c_ad55b60c9ff67697beb663657736d8318}{set\+\_\+states\+\_\+at\+\_\+crosses} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{funtan3d_8c_a9e2b21e80627c21a5a2de1889f2ffdff}{scalar\+\_\+unravel\+\_\+3d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$$\ast$crosses)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+Vertex@{\+\_\+\+Vertex}}\label{struct___vertex}
+\hypertarget{funtan3d_8c_struct___vertex}{}
+\subsubsection{struct \+\_\+\+Vertex}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{funtan3d_8c_a1bd626b59c4798fdd80e939864ce6a05}{}\label{funtan3d_8c_a1bd626b59c4798fdd80e939864ce6a05}
+&
+cdt\+\_\+side\+\_\+index\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{funtan3d_8c_a0378021c06326cbc095db5e20d6af21e}{}\label{funtan3d_8c_a0378021c06326cbc095db5e20d6af21e}
+&
+d2&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_ad33b9502eef44973ca76e4f9900848b3}{}\label{funtan3d_8c_ad33b9502eef44973ca76e4f9900848b3}
+&
+index&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{funtan3d_8c_abb30ed2d95983abe6fdd7d0130cdd06c}{}\label{funtan3d_8c_abb30ed2d95983abe6fdd7d0130cdd06c}
+&
+point&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_a1d0102b48f9cc83cf9d6e97c71d319dd}{}\label{funtan3d_8c_a1d0102b48f9cc83cf9d6e97c71d319dd}
+&
+tri\+\_\+side\+\_\+index&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_aec2b41d14703f917585a01a6828e8821}{}\label{funtan3d_8c_aec2b41d14703f917585a01a6828e8821}
+&
+tri\+\_\+vertex\+\_\+index&
+\\
+\hline
+
+double\hypertarget{funtan3d_8c_af88a6e00889ed1b9ea910272eb1c78cd}{}\label{funtan3d_8c_af88a6e00889ed1b9ea910272eb1c78cd}
+&
+x&
+\\
+\hline
+
+double\hypertarget{funtan3d_8c_adaff5abf3a7ada27ab00ab9239d6bee2}{}\label{funtan3d_8c_adaff5abf3a7ada27ab00ab9239d6bee2}
+&
+y&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+Cdt\+\_\+\+Side@{\+\_\+\+Cdt\+\_\+\+Side}}\label{struct___cdt___side}
+\hypertarget{funtan3d_8c_struct___cdt___side}{}
+\subsubsection{struct \+\_\+\+Cdt\+\_\+\+Side}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{funtan3d_8c_af4e61922bab3b5721324ce3699bcf8d6}{}\label{funtan3d_8c_af4e61922bab3b5721324ce3699bcf8d6}
+&
+done\+\_\+stiching&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_ab9ec45ddc07505029e57a1e2f40b306e}{}\label{funtan3d_8c_ab9ec45ddc07505029e57a1e2f40b306e}
+&
+num\+\_\+tris&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_aa136d21dc72e70d3833a6330797f0b80}{}\label{funtan3d_8c_aa136d21dc72e70d3833a6330797f0b80}
+&
+num\+\_\+verts&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_a0c21486f2fc99b9b6e3cdd39e5bb03e8}{}\label{funtan3d_8c_a0c21486f2fc99b9b6e3cdd39e5bb03e8}
+&
+tri\+\_\+facing\+\_\+side\mbox{[}\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS}-\/1\mbox{]}&
+\\
+\hline
+
+\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$\hypertarget{funtan3d_8c_a37365670e5b290a144d51c572a54139b}{}\label{funtan3d_8c_a37365670e5b290a144d51c572a54139b}
+&
+tris\mbox{[}\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS}-\/1\mbox{]}&
+\\
+\hline
+
+\hyperlink{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{Vertex} $\ast$\hypertarget{funtan3d_8c_ac904ce6e3e3240f210f0cfa0115f8a00}{}\label{funtan3d_8c_ac904ce6e3e3240f210f0cfa0115f8a00}
+&
+vertices\mbox{[}\hyperlink{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+Cdt@{\+\_\+\+Cdt}}\label{struct___cdt}
+\hypertarget{funtan3d_8c_struct___cdt}{}
+\subsubsection{struct \+\_\+\+Cdt}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a100ad00b96391c34c63e6c5fd27e0857}{C\+\_\+\+B\+O\+ND} $\ast$$\ast$\hypertarget{funtan3d_8c_a94de9b384c775b51ae4e4682068670e4}{}\label{funtan3d_8c_a94de9b384c775b51ae4e4682068670e4}
+&
+c\+\_\+bond\+\_\+list&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_a033c10ea51bbd790de7f1193c7e38cf3}{}\label{funtan3d_8c_a033c10ea51bbd790de7f1193c7e38cf3}
+&
+isurf&
+\\
+\hline
+
+struct \hyperlink{funtan3d_8c_dd/d83/struct___cdt}{\+\_\+\+Cdt} $\ast$\hypertarget{funtan3d_8c_ae7b00c7232cf1bd65d6c718dfad267b7}{}\label{funtan3d_8c_ae7b00c7232cf1bd65d6c718dfad267b7}
+&
+next&
+\\
+\hline
+
+\hyperlink{funtan3d_8c_aeb63002b62aa88a3e6b320794e45aec3}{Cdt\+\_\+\+Side}\hypertarget{funtan3d_8c_a87e1694bc95ce6a542b8440cd5191301}{}\label{funtan3d_8c_a87e1694bc95ce6a542b8440cd5191301}
+&
+side\mbox{[}3\mbox{]}&
+\\
+\hline
+
+\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$\hypertarget{funtan3d_8c_a1a74dc17468537ea0778837fe60000a7}{}\label{funtan3d_8c_a1a74dc17468537ea0778837fe60000a7}
+&
+surf&
+\\
+\hline
+
+\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$\hypertarget{funtan3d_8c_a3d8b4ea4043b3a095da3291344daf56d}{}\label{funtan3d_8c_a3d8b4ea4043b3a095da3291344daf56d}
+&
+tri&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+N\+C\+S\+U\+RF@{\+\_\+\+N\+C\+S\+U\+RF}}\label{struct___n_c_s_u_r_f}
+\hypertarget{funtan3d_8c_struct___n_c_s_u_r_f}{}
+\subsubsection{struct \+\_\+\+N\+C\+S\+U\+RF}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{funtan3d_8c_a2a52f9d5c5df1ef9c44582933c442111}{}\label{funtan3d_8c_a2a52f9d5c5df1ef9c44582933c442111}
+&
+area&
+\\
+\hline
+
+\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}\hypertarget{funtan3d_8c_a88ae8b7403185ae314501eab9dde2d99}{}\label{funtan3d_8c_a88ae8b7403185ae314501eab9dde2d99}
+&
+orient&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{funtan3d_8c_a990829af87c79c45f1179bc562e4fe71}{}\label{funtan3d_8c_a990829af87c79c45f1179bc562e4fe71}
+&
+physical&
+\\
+\hline
+
+\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$\hypertarget{funtan3d_8c_a4a3afb20b9660e8a64f7fd659fa84425}{}\label{funtan3d_8c_a4a3afb20b9660e8a64f7fd659fa84425}
+&
+s&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+N\+C\+L\+I\+ST@{\+\_\+\+N\+C\+L\+I\+ST}}\label{struct___n_c_l_i_s_t}
+\hypertarget{funtan3d_8c_struct___n_c_l_i_s_t}{}
+\subsubsection{struct \+\_\+\+N\+C\+L\+I\+ST}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{funtan3d_8c_ac129060b624136ace8cba27e59fbefc7}{}\label{funtan3d_8c_ac129060b624136ace8cba27e59fbefc7}
+&
+\+\_\+physical\+\_\+region\mbox{[}4\mbox{]}&
+\\
+\hline
+
+\hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$\hypertarget{funtan3d_8c_a1945ee84ac1b8dfbb7b99bf7c31936c8}{}\label{funtan3d_8c_a1945ee84ac1b8dfbb7b99bf7c31936c8}
+&
+c\+\_\+curve&
+\\
+\hline
+
+struct \hyperlink{funtan3d_8c_d0/de1/struct___n_c_l_i_s_t}{\+\_\+\+N\+C\+L\+I\+ST} $\ast$\hypertarget{funtan3d_8c_aa1ae17f309c00530df6d164be1432a6e}{}\label{funtan3d_8c_aa1ae17f309c00530df6d164be1432a6e}
+&
+next&
+\\
+\hline
+
+\hyperlink{funtan3d_8c_a7c74b7c4b08a636a24d8af60ecfd6938}{N\+C\+S\+U\+RF}\hypertarget{funtan3d_8c_ae6dbdea1afb1ef23ad21ac612d442b7f}{}\label{funtan3d_8c_ae6dbdea1afb1ef23ad21ac612d442b7f}
+&
+NS\mbox{[}4\mbox{]}&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_a5c080e8805cbb5aa54ac102a8fa99a9e}{}\label{funtan3d_8c_a5c080e8805cbb5aa54ac102a8fa99a9e}
+&
+num\+\_\+comps&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_af85a9d4a300567de7644212668cae659}{}\label{funtan3d_8c_af85a9d4a300567de7644212668cae659}
+&
+num\+\_\+physical\+\_\+regions&
+\\
+\hline
+
+int\hypertarget{funtan3d_8c_a2d0035dfee3d3d5925867288798e8a59}{}\label{funtan3d_8c_a2d0035dfee3d3d5925867288798e8a59}
+&
+num\+\_\+surfaces&
+\\
+\hline
+
+struct \hyperlink{funtan3d_8c_d0/de1/struct___n_c_l_i_s_t}{\+\_\+\+N\+C\+L\+I\+ST} $\ast$\hypertarget{funtan3d_8c_a01bcd82ee0b914f88592f035fc175cce}{}\label{funtan3d_8c_a01bcd82ee0b914f88592f035fc175cce}
+&
+prev&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{funtan3d.\+c@{funtan3d.\+c}!c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex@{c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex}}
+\index{c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex@{c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex}{c_bond_end_is_tri_vertex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define c\+\_\+bond\+\_\+end\+\_\+is\+\_\+tri\+\_\+vertex(
+\begin{DoxyParamCaption}
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a3945c49db18082bcc8a628a1cb820193}{}\label{funtan3d_8c_a3945c49db18082bcc8a628a1cb820193}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((\hyperlink{int_8h_ad5564db398a50e71c3f7941526e037c4}{is\_end\_on\_bdry}(cb,0) && \hyperlink{int_8h_a82a0c4385cd29f9805a64cc341c2f9d8}{is\_end\_to\_vertex}(cb,0))             \(\backslash\)
+                    &&                      \(\backslash\)
+     (\hyperlink{int_8h_ad5564db398a50e71c3f7941526e037c4}{is\_end\_on\_bdry}(cb,1) && \hyperlink{int_8h_a82a0c4385cd29f9805a64cc341c2f9d8}{is\_end\_to\_vertex}(cb,1)))
+\end{DoxyCode}
+\index{funtan3d.\+c@{funtan3d.\+c}!c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex@{c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex}}
+\index{c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex@{c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex}{c_bond_start_is_tri_vertex}}]{\setlength{\rightskip}{0pt plus 5cm}\#define c\+\_\+bond\+\_\+start\+\_\+is\+\_\+tri\+\_\+vertex(
+\begin{DoxyParamCaption}
+\item[{}]{cb}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a494603aed20b25ae430b61b898b26cf8}{}\label{funtan3d_8c_a494603aed20b25ae430b61b898b26cf8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((\hyperlink{int_8h_afe84ec47fbe0393a4ce75d1aad9a46f6}{is\_start\_on\_bdry}(cb,0) && \hyperlink{int_8h_a8023de7ac18ee3fb9013f285d241cee2}{is\_start\_to\_vertex}(cb,0))         \(\backslash\)
+                 &&                         \(\backslash\)
+     (\hyperlink{int_8h_afe84ec47fbe0393a4ce75d1aad9a46f6}{is\_start\_on\_bdry}(cb,1) && \hyperlink{int_8h_a8023de7ac18ee3fb9013f285d241cee2}{is\_start\_to\_vertex}(cb,1)))
+\end{DoxyCode}
+\index{funtan3d.\+c@{funtan3d.\+c}!cdt\+\_\+of\+\_\+tri@{cdt\+\_\+of\+\_\+tri}}
+\index{cdt\+\_\+of\+\_\+tri@{cdt\+\_\+of\+\_\+tri}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{cdt\+\_\+of\+\_\+tri}{cdt_of_tri}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cdt\+\_\+of\+\_\+tri(
+\begin{DoxyParamCaption}
+\item[{}]{tri}
+\end{DoxyParamCaption}
+)~({\bf Cdt} $\ast$){\bf Tri\+\_\+workspace}(tri)}\hypertarget{funtan3d_8c_a0aedfdc3ca69c71b5c4b8e6b3bcb4312}{}\label{funtan3d_8c_a0aedfdc3ca69c71b5c4b8e6b3bcb4312}
+\index{funtan3d.\+c@{funtan3d.\+c}!D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}{DEBUG_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}untan3d\char`\"{}}\hypertarget{funtan3d_8c_afe759d2b6c4ff043628d467079aa4539}{}\label{funtan3d_8c_afe759d2b6c4ff043628d467079aa4539}
+\index{funtan3d.\+c@{funtan3d.\+c}!physical\+\_\+region@{physical\+\_\+region}}
+\index{physical\+\_\+region@{physical\+\_\+region}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{physical\+\_\+region}{physical_region}}]{\setlength{\rightskip}{0pt plus 5cm}\#define physical\+\_\+region(
+\begin{DoxyParamCaption}
+\item[{}]{ncl, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~((ncl)-\/$>$\+\_\+physical\+\_\+region\mbox{[}(i)\mbox{]})}\hypertarget{funtan3d_8c_aabac17a812caca1f9d9f544137641bea}{}\label{funtan3d_8c_aabac17a812caca1f9d9f544137641bea}
+\index{funtan3d.\+c@{funtan3d.\+c}!physical\+\_\+surf@{physical\+\_\+surf}}
+\index{physical\+\_\+surf@{physical\+\_\+surf}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{physical\+\_\+surf}{physical_surf}}]{\setlength{\rightskip}{0pt plus 5cm}\#define physical\+\_\+surf(
+\begin{DoxyParamCaption}
+\item[{}]{ncl, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~((ncl)-\/$>$NS\mbox{[}(i)\mbox{]}.physical)}\hypertarget{funtan3d_8c_ad04f9d7e26cda3f230252f60b8744ff6}{}\label{funtan3d_8c_ad04f9d7e26cda3f230252f60b8744ff6}
+\index{funtan3d.\+c@{funtan3d.\+c}!Point\+\_\+vertex\+\_\+pointer@{Point\+\_\+vertex\+\_\+pointer}}
+\index{Point\+\_\+vertex\+\_\+pointer@{Point\+\_\+vertex\+\_\+pointer}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Point\+\_\+vertex\+\_\+pointer}{Point_vertex_pointer}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Point\+\_\+vertex\+\_\+pointer(
+\begin{DoxyParamCaption}
+\item[{}]{\+\_\+pnt\+\_\+}
+\end{DoxyParamCaption}
+)~(({\bf Vertex}$\ast$){\bf opaque\+\_\+pointer}(\+\_\+pnt\+\_\+))}\hypertarget{funtan3d_8c_a13162166dec6e8a2677d39311ff365c1}{}\label{funtan3d_8c_a13162166dec6e8a2677d39311ff365c1}
+\index{funtan3d.\+c@{funtan3d.\+c}!Tri\+\_\+color@{Tri\+\_\+color}}
+\index{Tri\+\_\+color@{Tri\+\_\+color}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Tri\+\_\+color}{Tri_color}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tri\+\_\+color(
+\begin{DoxyParamCaption}
+\item[{}]{tri}
+\end{DoxyParamCaption}
+)~{\bf Tri\+\_\+index}(tri)}\hypertarget{funtan3d_8c_a23d5b49d6a806156a092e71bd1acb5ba}{}\label{funtan3d_8c_a23d5b49d6a806156a092e71bd1acb5ba}
+\index{funtan3d.\+c@{funtan3d.\+c}!Tri\+\_\+side\+\_\+of\+\_\+cdt@{Tri\+\_\+side\+\_\+of\+\_\+cdt}}
+\index{Tri\+\_\+side\+\_\+of\+\_\+cdt@{Tri\+\_\+side\+\_\+of\+\_\+cdt}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Tri\+\_\+side\+\_\+of\+\_\+cdt}{Tri_side_of_cdt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Tri\+\_\+side\+\_\+of\+\_\+cdt(
+\begin{DoxyParamCaption}
+\item[{}]{\+\_\+cdt\+\_\+}
+\end{DoxyParamCaption}
+)~((\+\_\+cdt\+\_\+)-\/$>$side)}\hypertarget{funtan3d_8c_a304a776ab60100b57fb13da56e49a317}{}\label{funtan3d_8c_a304a776ab60100b57fb13da56e49a317}
+
+
+\subsection{Typedef Documentation}
+\index{funtan3d.\+c@{funtan3d.\+c}!Cdt@{Cdt}}
+\index{Cdt@{Cdt}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Cdt}{Cdt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Cdt} {\bf Cdt}}\hypertarget{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}{}\label{funtan3d_8c_a7d5cfc7e50d052f70fff34a2bfe1d644}
+\index{funtan3d.\+c@{funtan3d.\+c}!Cdt\+\_\+\+Side@{Cdt\+\_\+\+Side}}
+\index{Cdt\+\_\+\+Side@{Cdt\+\_\+\+Side}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Cdt\+\_\+\+Side}{Cdt_Side}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Cdt\+\_\+\+Side} {\bf Cdt\+\_\+\+Side}}\hypertarget{funtan3d_8c_aeb63002b62aa88a3e6b320794e45aec3}{}\label{funtan3d_8c_aeb63002b62aa88a3e6b320794e45aec3}
+\index{funtan3d.\+c@{funtan3d.\+c}!N\+C\+L\+I\+ST@{N\+C\+L\+I\+ST}}
+\index{N\+C\+L\+I\+ST@{N\+C\+L\+I\+ST}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{N\+C\+L\+I\+ST}{NCLIST}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+N\+C\+L\+I\+ST} {\bf N\+C\+L\+I\+ST}}\hypertarget{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}{}\label{funtan3d_8c_a2559493e46ed28a6292d91b971ae69b1}
+\index{funtan3d.\+c@{funtan3d.\+c}!N\+C\+S\+U\+RF@{N\+C\+S\+U\+RF}}
+\index{N\+C\+S\+U\+RF@{N\+C\+S\+U\+RF}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{N\+C\+S\+U\+RF}{NCSURF}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+N\+C\+S\+U\+RF} {\bf N\+C\+S\+U\+RF}}\hypertarget{funtan3d_8c_a7c74b7c4b08a636a24d8af60ecfd6938}{}\label{funtan3d_8c_a7c74b7c4b08a636a24d8af60ecfd6938}
+\index{funtan3d.\+c@{funtan3d.\+c}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{Vertex}{Vertex}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+Vertex} {\bf Vertex}}\hypertarget{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}{}\label{funtan3d_8c_a4bd172f8dd0e9405b88e151f44852233}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{funtan3d_8c_a80155586fa275b28773c9b203f52caba}{}\label{funtan3d_8c_a80155586fa275b28773c9b203f52caba}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI@{M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI}!funtan3d.\+c@{funtan3d.\+c}}\index{funtan3d.\+c@{funtan3d.\+c}!M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI@{M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI}}\item[{\em 
+M\+A\+X\+\_\+\+C\+\_\+\+C\+U\+R\+V\+E\+S\+\_\+\+O\+N\+\_\+\+T\+RI\hypertarget{funtan3d_8c_a80155586fa275b28773c9b203f52cabaab1de87736ec1a277ff7699a5c07dcc93}{}\label{funtan3d_8c_a80155586fa275b28773c9b203f52cabaab1de87736ec1a277ff7699a5c07dcc93}
+}]\index{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS}!funtan3d.\+c@{funtan3d.\+c}}\index{funtan3d.\+c@{funtan3d.\+c}!M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS}}\item[{\em 
+M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+I\+D\+E\+\_\+\+V\+TS\hypertarget{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}{}\label{funtan3d_8c_a80155586fa275b28773c9b203f52cabaa7536273598950058f63f7d98311fe1c9}
+}]\index{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS}!funtan3d.\+c@{funtan3d.\+c}}\index{funtan3d.\+c@{funtan3d.\+c}!M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS}}\item[{\em 
+M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+TS\hypertarget{funtan3d_8c_a80155586fa275b28773c9b203f52cabaae8124f1a09347d1790265eff5e1d76fc}{}\label{funtan3d_8c_a80155586fa275b28773c9b203f52cabaae8124f1a09347d1790265eff5e1d76fc}
+}]\index{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES}!funtan3d.\+c@{funtan3d.\+c}}\index{funtan3d.\+c@{funtan3d.\+c}!M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES@{M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES}}\item[{\em 
+M\+A\+X\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+\_\+\+E\+D\+G\+ES\hypertarget{funtan3d_8c_a80155586fa275b28773c9b203f52cabaaf03b3630bb66cb26427d1ff6e9d163c1}{}\label{funtan3d_8c_a80155586fa275b28773c9b203f52cabaaf03b3630bb66cb26427d1ff6e9d163c1}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{funtan3d.\+c@{funtan3d.\+c}!c\+\_\+bonds\+\_\+intersect@{c\+\_\+bonds\+\_\+intersect}}
+\index{c\+\_\+bonds\+\_\+intersect@{c\+\_\+bonds\+\_\+intersect}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+bonds\+\_\+intersect(\+C\+\_\+\+B\+O\+N\+D $\ast$, C\+\_\+\+B\+O\+N\+D $\ast$)}{c_bonds_intersect(C_BOND *, C_BOND *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} c\+\_\+bonds\+\_\+intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+B\+O\+ND} $\ast$}]{cb0, }
+\item[{{\bf C\+\_\+\+B\+O\+ND} $\ast$}]{cb1}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a1fa4588c3666849d80b3ac961e28d01d}{}\label{funtan3d_8c_a1fa4588c3666849d80b3ac961e28d01d}
+\index{funtan3d.\+c@{funtan3d.\+c}!c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain@{c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain}}
+\index{c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain@{c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain(\+C\+\_\+\+C\+U\+R\+V\+E $\ast$)}{c_curve_out_comp_domain(C_CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} c\+\_\+curve\+\_\+out\+\_\+comp\+\_\+domain (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+C\+U\+R\+VE} $\ast$}]{c\+\_\+curve}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_aea46defe93a611033daa436d2b8825d6}{}\label{funtan3d_8c_aea46defe93a611033daa436d2b8825d6}
+\index{funtan3d.\+c@{funtan3d.\+c}!cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves@{cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves}}
+\index{cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves@{cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves(\+S\+U\+R\+F\+A\+C\+E $\ast$)}{cdt_retriangulate_surface_along_c_curves(SURFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} cdt\+\_\+retriangulate\+\_\+surface\+\_\+along\+\_\+c\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a4030e39966848baa0d0ac2762a958b7b}{}\label{funtan3d_8c_a4030e39966848baa0d0ac2762a958b7b}
+\index{funtan3d.\+c@{funtan3d.\+c}!cdt\+\_\+triangulate\+\_\+one\+\_\+tri@{cdt\+\_\+triangulate\+\_\+one\+\_\+tri}}
+\index{cdt\+\_\+triangulate\+\_\+one\+\_\+tri@{cdt\+\_\+triangulate\+\_\+one\+\_\+tri}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{cdt\+\_\+triangulate\+\_\+one\+\_\+tri(\+Cdt $\ast$)}{cdt_triangulate_one_tri(Cdt *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} cdt\+\_\+triangulate\+\_\+one\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf Cdt} $\ast$}]{cdt}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_acf96429ebbd2151de6e6408b0c94e01b}{}\label{funtan3d_8c_acf96429ebbd2151de6e6408b0c94e01b}
+\index{funtan3d.\+c@{funtan3d.\+c}!curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list@{curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list}}
+\index{curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list@{curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list(\+C\+U\+R\+V\+E $\ast$)}{curve_is_in_c_curve_list(CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} curve\+\_\+is\+\_\+in\+\_\+c\+\_\+curve\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_afcb8cd1d0f2a684c160bdf5aa56b68bf}{}\label{funtan3d_8c_afcb8cd1d0f2a684c160bdf5aa56b68bf}
+\index{funtan3d.\+c@{funtan3d.\+c}!delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces@{delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces}}
+\index{delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces@{delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces(\+N\+C\+L\+I\+S\+T $\ast$$\ast$)}{delete_detected_unphysical_surfaces(NCLIST **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} delete\+\_\+detected\+\_\+unphysical\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+C\+L\+I\+ST} $\ast$$\ast$}]{pnclist}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a42eb2d3caf6bdfb2da8846f5ee517922}{}\label{funtan3d_8c_a42eb2d3caf6bdfb2da8846f5ee517922}
+\index{funtan3d.\+c@{funtan3d.\+c}!delete\+\_\+inconsistent\+\_\+surfs@{delete\+\_\+inconsistent\+\_\+surfs}}
+\index{delete\+\_\+inconsistent\+\_\+surfs@{delete\+\_\+inconsistent\+\_\+surfs}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{delete\+\_\+inconsistent\+\_\+surfs(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{delete_inconsistent_surfs(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} delete\+\_\+inconsistent\+\_\+surfs (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_ad6b345f53af287cfc4a38385caec2dd3}{}\label{funtan3d_8c_ad6b345f53af287cfc4a38385caec2dd3}
+\index{funtan3d.\+c@{funtan3d.\+c}!delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve@{delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve}}
+\index{delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve@{delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve(\+N\+C\+L\+I\+S\+T $\ast$$\ast$, N\+C\+L\+I\+S\+T $\ast$$\ast$)}{delete_unphysical_surfaces_at_c_curve(NCLIST **, NCLIST **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} delete\+\_\+unphysical\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+C\+L\+I\+ST} $\ast$$\ast$}]{pncl, }
+\item[{{\bf N\+C\+L\+I\+ST} $\ast$$\ast$}]{pnclist}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a0179ef5dabab0bfcbf31ca55011ebbdd}{}\label{funtan3d_8c_a0179ef5dabab0bfcbf31ca55011ebbdd}
+\index{funtan3d.\+c@{funtan3d.\+c}!insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve@{insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve}}
+\index{insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve@{insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve(\+C\+\_\+\+C\+U\+R\+V\+E $\ast$)}{insert_curve_from_c_curve(C_CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void insert\+\_\+curve\+\_\+from\+\_\+c\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+C\+U\+R\+VE} $\ast$}]{c\+\_\+curve}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_aeafc3639ef1d10f959e2a208527bffc4}{}\label{funtan3d_8c_aeafc3639ef1d10f959e2a208527bffc4}
+\index{funtan3d.\+c@{funtan3d.\+c}!install\+\_\+tris\+\_\+from\+\_\+dtris@{install\+\_\+tris\+\_\+from\+\_\+dtris}}
+\index{install\+\_\+tris\+\_\+from\+\_\+dtris@{install\+\_\+tris\+\_\+from\+\_\+dtris}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{install\+\_\+tris\+\_\+from\+\_\+dtris(\+Cdt $\ast$, Vertex $\ast$, triangulateio $\ast$)}{install_tris_from_dtris(Cdt *, Vertex *, triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void install\+\_\+tris\+\_\+from\+\_\+dtris (
+\begin{DoxyParamCaption}
+\item[{{\bf Cdt} $\ast$}]{cdt, }
+\item[{{\bf Vertex} $\ast$}]{v, }
+\item[{{\bf triangulateio} $\ast$}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_af2a6c249fd38cda18fd70795c602e8a1}{}\label{funtan3d_8c_af2a6c249fd38cda18fd70795c602e8a1}
+\index{funtan3d.\+c@{funtan3d.\+c}!paint\+\_\+component@{paint\+\_\+component}}
+\index{paint\+\_\+component@{paint\+\_\+component}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{paint\+\_\+component(\+T\+R\+I $\ast$, int)}{paint_component(TRI *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int paint\+\_\+component (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a096bccf63ea0c1cd339976fe41669051}{}\label{funtan3d_8c_a096bccf63ea0c1cd339976fe41669051}
+\index{funtan3d.\+c@{funtan3d.\+c}!prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt@{prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt}}
+\index{prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt@{prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt(\+Cdt $\ast$, Vertex $\ast$, int $\ast$, int $\ast$, int $\ast$)}{prepare_v_and_e_for_cdt(Cdt *, Vertex *, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} prepare\+\_\+v\+\_\+and\+\_\+e\+\_\+for\+\_\+cdt (
+\begin{DoxyParamCaption}
+\item[{{\bf Cdt} $\ast$}]{cdt, }
+\item[{{\bf Vertex} $\ast$}]{vts, }
+\item[{int $\ast$}]{pnum\+\_\+vs, }
+\item[{int $\ast$}]{edges, }
+\item[{int $\ast$}]{pnedges}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a836aa8b04bf5e515d1c796adbf666745}{}\label{funtan3d_8c_a836aa8b04bf5e515d1c796adbf666745}
+\index{funtan3d.\+c@{funtan3d.\+c}!print\+\_\+cdt@{print\+\_\+cdt}}
+\index{print\+\_\+cdt@{print\+\_\+cdt}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+cdt(\+Cdt $\ast$)}{print_cdt(Cdt *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+cdt (
+\begin{DoxyParamCaption}
+\item[{{\bf Cdt} $\ast$}]{cdt}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_af96375448756325503ea9199f7a5907c}{}\label{funtan3d_8c_af96375448756325503ea9199f7a5907c}
+\index{funtan3d.\+c@{funtan3d.\+c}!print\+\_\+cdt\+\_\+side@{print\+\_\+cdt\+\_\+side}}
+\index{print\+\_\+cdt\+\_\+side@{print\+\_\+cdt\+\_\+side}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+cdt\+\_\+side(\+Cdt\+\_\+\+Side $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{print_cdt_side(Cdt_Side *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+cdt\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{{\bf Cdt\+\_\+\+Side} $\ast$}]{cdt\+\_\+side, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a1061a5c848b38edee13efa404bd30543}{}\label{funtan3d_8c_a1061a5c848b38edee13efa404bd30543}
+\index{funtan3d.\+c@{funtan3d.\+c}!print\+\_\+nclist@{print\+\_\+nclist}}
+\index{print\+\_\+nclist@{print\+\_\+nclist}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+nclist(\+N\+C\+L\+I\+S\+T $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{print_nclist(NCLIST *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+nclist (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+C\+L\+I\+ST} $\ast$}]{ncl, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a5c852211f466a7f01ebeeb7baf15bdfd}{}\label{funtan3d_8c_a5c852211f466a7f01ebeeb7baf15bdfd}
+\index{funtan3d.\+c@{funtan3d.\+c}!print\+\_\+ncsurf@{print\+\_\+ncsurf}}
+\index{print\+\_\+ncsurf@{print\+\_\+ncsurf}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+ncsurf(\+N\+C\+S\+U\+R\+F $\ast$)}{print_ncsurf(NCSURF *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+ncsurf (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+C\+S\+U\+RF} $\ast$}]{ncs}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a25e1680577953611be6f266a78e3775d}{}\label{funtan3d_8c_a25e1680577953611be6f266a78e3775d}
+\index{funtan3d.\+c@{funtan3d.\+c}!print\+\_\+vertex@{print\+\_\+vertex}}
+\index{print\+\_\+vertex@{print\+\_\+vertex}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+vertex(const char $\ast$, Vertex $\ast$)}{print_vertex(const char *, Vertex *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{indent, }
+\item[{{\bf Vertex} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a17f32e87cd0b2d32ba876880f48b29bb}{}\label{funtan3d_8c_a17f32e87cd0b2d32ba876880f48b29bb}
+\index{funtan3d.\+c@{funtan3d.\+c}!scalar\+\_\+unravel\+\_\+3d@{scalar\+\_\+unravel\+\_\+3d}}
+\index{scalar\+\_\+unravel\+\_\+3d@{scalar\+\_\+unravel\+\_\+3d}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{scalar\+\_\+unravel\+\_\+3d(\+Front $\ast$front, C\+R\+O\+S\+S $\ast$$\ast$crosses)}{scalar_unravel_3d(Front *front, CROSS **crosses)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} scalar\+\_\+unravel\+\_\+3d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf C\+R\+O\+SS} $\ast$$\ast$}]{crosses}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a9e2b21e80627c21a5a2de1889f2ffdff}{}\label{funtan3d_8c_a9e2b21e80627c21a5a2de1889f2ffdff}
+\index{funtan3d.\+c@{funtan3d.\+c}!set\+\_\+nclist@{set\+\_\+nclist}}
+\index{set\+\_\+nclist@{set\+\_\+nclist}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+nclist(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{set_nclist(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf N\+C\+L\+I\+ST} $\ast$ set\+\_\+nclist (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a7ba23c023bdec9a7e9e92b097ae5f70b}{}\label{funtan3d_8c_a7ba23c023bdec9a7e9e92b097ae5f70b}
+\index{funtan3d.\+c@{funtan3d.\+c}!set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve@{set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve}}
+\index{set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve@{set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve(\+C\+U\+R\+V\+E $\ast$, N\+C\+L\+I\+S\+T $\ast$)}{set_physical_surfaces_at_curve(CURVE *, NCLIST *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+physical\+\_\+surfaces\+\_\+at\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf N\+C\+L\+I\+ST} $\ast$}]{nclist}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_acb0818fcbe9496d47d9e39d13eca9607}{}\label{funtan3d_8c_acb0818fcbe9496d47d9e39d13eca9607}
+\index{funtan3d.\+c@{funtan3d.\+c}!set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points@{set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points}}
+\index{set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points@{set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points(\+Front $\ast$, C\+\_\+\+C\+U\+R\+V\+E $\ast$)}{set_states_at_cross_points(Front *, C_CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+states\+\_\+at\+\_\+cross\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf C\+\_\+\+C\+U\+R\+VE} $\ast$}]{c\+\_\+curve}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a6504b8a026ed86533485be0d07dd95ef}{}\label{funtan3d_8c_a6504b8a026ed86533485be0d07dd95ef}
+\index{funtan3d.\+c@{funtan3d.\+c}!set\+\_\+states\+\_\+at\+\_\+crosses@{set\+\_\+states\+\_\+at\+\_\+crosses}}
+\index{set\+\_\+states\+\_\+at\+\_\+crosses@{set\+\_\+states\+\_\+at\+\_\+crosses}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+states\+\_\+at\+\_\+crosses(\+Front $\ast$)}{set_states_at_crosses(Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+states\+\_\+at\+\_\+crosses (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_ad55b60c9ff67697beb663657736d8318}{}\label{funtan3d_8c_ad55b60c9ff67697beb663657736d8318}
+\index{funtan3d.\+c@{funtan3d.\+c}!split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves@{split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves}}
+\index{split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves@{split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves}!funtan3d.\+c@{funtan3d.\+c}}
+\subsubsection[{\texorpdfstring{split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{split_surfaces_at_c_curves(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} split\+\_\+surfaces\+\_\+at\+\_\+c\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{funtan3d_8c_a0ef906e3d0a42383e44c52e053f050e3}{}\label{funtan3d_8c_a0ef906e3d0a42383e44c52e053f050e3}

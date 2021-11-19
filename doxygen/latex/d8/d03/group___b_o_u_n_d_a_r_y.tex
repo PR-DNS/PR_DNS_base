@@ -1,0 +1,131 @@
+\hypertarget{group___b_o_u_n_d_a_r_y}{}\section{Fron\+Tier Boundary Setting Functions}
+\label{group___b_o_u_n_d_a_r_y}\index{Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga04f16e2a6047664dfea1d69701676476}{F\+T\+\_\+\+Set\+Dirichlet\+Boundary} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), const char $\ast$state\+\_\+func\+\_\+name, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state\+\_\+func\+\_\+params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\begin{DoxyCompactList}\small\item\em This function sets state of a Dirichlet boundary as a hyper surface. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga060be793f512f0fa0217c9fed9484eba}{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), const char $\ast$state\+\_\+func\+\_\+name, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state\+\_\+func\+\_\+params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, int index)
+\begin{DoxyCompactList}\small\item\em This function insert state to a Dirichlet boundary. The six (four for 2D) sides of the boundary memory has been allocated, this function fills in the content of the boundary state. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$ \hyperlink{group___b_o_u_n_d_a_r_y_gaf54c91ffe6263b6da327ef983043a4f8}{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int idir, int nb, int w\+\_\+type, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function returns a set of hyper surfaces (curves in 2D and surfaces in 3D) whose wave type matches the input w\+\_\+type. If the boundary on idir and side nb is not M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY, the function returns N\+U\+LL. Otherwise it will return an array of hyper surfaces. The function also assign num\+\_\+hs, the total number of hyper surfaces in the returned set. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga7e6e2321cddf21da04485200e47087e3}{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function sets the node types and curve wave types of nodes and curves at the M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY side(s). This function is only for 2D. It will prompt and set nodes in ascending order and then curves between the node pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}!F\+T\+\_\+\+Insert\+Dirichlet\+Boundary@{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary}}
+\index{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary@{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary}!Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary(\+Front $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Front $\ast$, P\+O\+I\+N\+T\+E\+R, P\+O\+I\+N\+T\+E\+R), const char $\ast$state\+\_\+func\+\_\+name, P\+O\+I\+N\+T\+E\+R state\+\_\+func\+\_\+params, P\+O\+I\+N\+T\+E\+R state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, int index)}{FT_InsertDirichletBoundary(Front *front, void(*state_func)(double *, HYPER_SURF *, Front *, POINTER, POINTER), const char *state_func_name, POINTER state_func_params, POINTER state, HYPER_SURF *hs, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Insert\+Dirichlet\+Boundary (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{void($\ast$)(double $\ast$, {\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, {\bf Front} $\ast$, {\bf P\+O\+I\+N\+T\+ER}, {\bf P\+O\+I\+N\+T\+ER})}]{state\+\_\+func, }
+\item[{const char $\ast$}]{state\+\_\+func\+\_\+name, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state\+\_\+func\+\_\+params, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_o_u_n_d_a_r_y_ga060be793f512f0fa0217c9fed9484eba}{}\label{group___b_o_u_n_d_a_r_y_ga060be793f512f0fa0217c9fed9484eba}
+
+
+This function insert state to a Dirichlet boundary. The six (four for 2D) sides of the boundary memory has been allocated, this function fills in the content of the boundary state. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+{\em state\+\_\+func} & {\bfseries in} Function pointer where state is evaluated in option (b). \\
+\hline
+{\em state\+\_\+func\+\_\+name} & {\bfseries in} Function name as a char string, for option (b). \\
+\hline
+{\em state\+\_\+func\+\_\+params} & {\bfseries in} Associated function parameters, for option (b). \\
+\hline
+{\em state} & {\bfseries in} The address of the constant state, for option (a). \\
+\hline
+{\em hs} & {\bfseries inout} The pointer to the boundary as a hyper surface structure. \\
+\hline
+{\em index} & {\bfseries The} boundary surface index. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}!F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs@{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs}}
+\index{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs@{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs}!Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int idir, int nb, int w\+\_\+type, int $\ast$num\+\_\+hs)}{FT_MixedBoundaryHypSurfs(INTERFACE *intfc, int idir, int nb, int w_type, int *num_hs)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int}]{idir, }
+\item[{int}]{nb, }
+\item[{int}]{w\+\_\+type, }
+\item[{int $\ast$}]{num\+\_\+hs}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_o_u_n_d_a_r_y_gaf54c91ffe6263b6da327ef983043a4f8}{}\label{group___b_o_u_n_d_a_r_y_gaf54c91ffe6263b6da327ef983043a4f8}
+
+
+This function returns a set of hyper surfaces (curves in 2D and surfaces in 3D) whose wave type matches the input w\+\_\+type. If the boundary on idir and side nb is not M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY, the function returns N\+U\+LL. Otherwise it will return an array of hyper surfaces. The function also assign num\+\_\+hs, the total number of hyper surfaces in the returned set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intfc} & {\bfseries in} P\+O\+I\+N\+T\+ER to the input interface. \\
+\hline
+{\em idir} & {\bfseries in} Direction 0 for x-\/dir, 1 for y-\/dir, 2 for z-\/dir. \\
+\hline
+{\em nb} & {\bfseries in} Side, 0 for lower side, 1 for upper side. \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} Wave type of the hyper surfaces looking for. \\
+\hline
+{\em num\+\_\+hs} & {\bfseries out} Number of hyper surfaces in the matching set. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}!F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d@{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d}}
+\index{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d@{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d}!Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d(char $\ast$in\+\_\+name, Front $\ast$front)}{FT_PromptSetMixedTypeBoundary2d(char *in_name, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+name, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_o_u_n_d_a_r_y_ga7e6e2321cddf21da04485200e47087e3}{}\label{group___b_o_u_n_d_a_r_y_ga7e6e2321cddf21da04485200e47087e3}
+
+
+This function sets the node types and curve wave types of nodes and curves at the M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY side(s). This function is only for 2D. It will prompt and set nodes in ascending order and then curves between the node pairs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+name} & {\bfseries in} Character string of input file name to open. \\
+\hline
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}!F\+T\+\_\+\+Set\+Dirichlet\+Boundary@{F\+T\+\_\+\+Set\+Dirichlet\+Boundary}}
+\index{F\+T\+\_\+\+Set\+Dirichlet\+Boundary@{F\+T\+\_\+\+Set\+Dirichlet\+Boundary}!Fron\+Tier Boundary Setting Functions@{Fron\+Tier Boundary Setting Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Set\+Dirichlet\+Boundary(\+Front $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Front $\ast$, P\+O\+I\+N\+T\+E\+R, P\+O\+I\+N\+T\+E\+R), const char $\ast$state\+\_\+func\+\_\+name, P\+O\+I\+N\+T\+E\+R state\+\_\+func\+\_\+params, P\+O\+I\+N\+T\+E\+R state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs)}{FT_SetDirichletBoundary(Front *front, void(*state_func)(double *, HYPER_SURF *, Front *, POINTER, POINTER), const char *state_func_name, POINTER state_func_params, POINTER state, HYPER_SURF *hs)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Set\+Dirichlet\+Boundary (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{void($\ast$)(double $\ast$, {\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, {\bf Front} $\ast$, {\bf P\+O\+I\+N\+T\+ER}, {\bf P\+O\+I\+N\+T\+ER})}]{state\+\_\+func, }
+\item[{const char $\ast$}]{state\+\_\+func\+\_\+name, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state\+\_\+func\+\_\+params, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs}
+\end{DoxyParamCaption}
+)}\hypertarget{group___b_o_u_n_d_a_r_y_ga04f16e2a6047664dfea1d69701676476}{}\label{group___b_o_u_n_d_a_r_y_ga04f16e2a6047664dfea1d69701676476}
+
+
+This function sets state of a Dirichlet boundary as a hyper surface. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+{\em state\+\_\+func} & {\bfseries in} Function pointer where state is evaluated in option (b). \\
+\hline
+{\em state\+\_\+func\+\_\+name} & {\bfseries in} Function name as a char string, for option (b). \\
+\hline
+{\em state\+\_\+func\+\_\+params} & {\bfseries in} Associated function parameters, for option (b). \\
+\hline
+{\em state} & {\bfseries in} The address of the constant state, for option (a). \\
+\hline
+{\em hs} & {\bfseries inout} The pointer to the boundary as a hyper surface structure. \\
+\hline
+\end{DoxyParams}

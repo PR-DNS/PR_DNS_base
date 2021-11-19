@@ -1,0 +1,244 @@
+\hypertarget{ixgraph_8c}{}\section{D\+N\+S/src/intfc/ixgraph.c File Reference}
+\label{ixgraph_8c}\index{D\+N\+S/src/intfc/ixgraph.\+c@{D\+N\+S/src/intfc/ixgraph.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ixgraph_8c_ace2569dabb1a522ca696be6916194af2}{xgraph\+\_\+curve\+\_\+within\+\_\+range} (F\+I\+LE $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, double $\ast$, double, char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ixgraph_8c_af92df485f306469631c8d5cc1ed0db79}{xgraph\+\_\+surface\+\_\+tris} (const char $\ast$, const char $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ixgraph_8c_aac8af1191477c3b6b3033c7c5eb978ea}{xgraph\+\_\+grid} (const char $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ixgraph_8c_a72c6c2579efbe85ffd94765970e89079}{xgraph\+\_\+curve\+\_\+file} (const char $\ast$, const char $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_ab6280412932dbbff8fce47640d449a99}{xgraph\+\_\+2d\+\_\+intfc} (const char $\ast$filename, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a9fa313dc941b60492b2bdf2a56dd27a6}{xgraph\+\_\+2d\+\_\+reflection} (const char $\ast$filename, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$coords, double $\ast$coords\+\_\+bdry, double $\ast$coords\+\_\+ref, double $\ast$nor)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_adf2e3365f20f354829796f050164415a}{xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range} (const char $\ast$filename, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$center, double radius, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} draw\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a4b0b8223aa4e596e0c889edbd3dd2597}{xgraph\+\_\+interface\+\_\+surfaces} (const char $\ast$dname, const char $\ast$fname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} F\+I\+LE $\ast$ \hyperlink{ixgraph_8c_ad10b737d6580df4084ba7f8d0a7efd79}{xgraph\+\_\+file\+\_\+open} (const char $\ast$dname, const char $\ast$fname, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a5ff8bf76cae2b43c8d9204aac1309a4d}{xgraph\+\_\+tris\+\_\+list} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int num\+\_\+tris, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a7478aec13f8f7f782ecb026aa38c379d}{xgraph\+\_\+tri} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a0419f976fccf09f2d4dbbeb8320f8647}{xgraph\+\_\+new\+\_\+data\+\_\+set} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a993dfbc85e440a9e9f136470303ec2ed}{xgraph\+\_\+point} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$p, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj, const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a79bd02454cd497e7650fd5bdb8347531}{xgraph\+\_\+affine\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$start, double $\ast$v, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj, const char $\ast$msg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_ab9cf0369c5d713fd0aaa05a6f22bbcf4}{xgraph\+\_\+line\+\_\+segment} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$start, double $\ast$end, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj, const char $\ast$msg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a8c73e9d2a5ad82dbbc9789402fd76717}{xgraph\+\_\+interface\+\_\+nodes} (const char $\ast$dname, const char $\ast$fname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a4783927911a0d84b085fed2b8fc059f5}{xgraph\+\_\+interface\+\_\+curves} (const char $\ast$dname, const char $\ast$fname, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a96dc2a4139129b9855ec0df9d72aaff9}{xgraph\+\_\+curve} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, const \hyperlink{int_8h_a29e67155ec7c377579dd4872a626d036}{C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE} proj)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ixgraph_8c_a5a1e6057e37b175acda46a5004c7d9be}{xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID} (const char $\ast$dname, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rect\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ixgraph_8c_a5c3620a2b4a176ec021501d795a120d9}{point\+\_\+within\+\_\+range} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double radius, int dim)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{ixgraph.\+c@{ixgraph.\+c}!point\+\_\+within\+\_\+range@{point\+\_\+within\+\_\+range}}
+\index{point\+\_\+within\+\_\+range@{point\+\_\+within\+\_\+range}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{point\+\_\+within\+\_\+range(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double radius, int dim)}{point_within_range(POINT *p, double *center, double radius, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} point\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a5c3620a2b4a176ec021501d795a120d9}{}\label{ixgraph_8c_a5c3620a2b4a176ec021501d795a120d9}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+2d\+\_\+intfc@{xgraph\+\_\+2d\+\_\+intfc}}
+\index{xgraph\+\_\+2d\+\_\+intfc@{xgraph\+\_\+2d\+\_\+intfc}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+2d\+\_\+intfc(const char $\ast$filename, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{xgraph_2d_intfc(const char *filename, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+2d\+\_\+intfc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_ab6280412932dbbff8fce47640d449a99}{}\label{ixgraph_8c_ab6280412932dbbff8fce47640d449a99}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range@{xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range}}
+\index{xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range@{xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range(const char $\ast$filename, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$center, double radius, boolean draw\+\_\+grid)}{xgraph_2d_intfc_within_range(const char *filename, INTERFACE *intfc, double *center, double radius, boolean draw_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+2d\+\_\+intfc\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius, }
+\item[{{\bf boolean}}]{draw\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_adf2e3365f20f354829796f050164415a}{}\label{ixgraph_8c_adf2e3365f20f354829796f050164415a}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+2d\+\_\+reflection@{xgraph\+\_\+2d\+\_\+reflection}}
+\index{xgraph\+\_\+2d\+\_\+reflection@{xgraph\+\_\+2d\+\_\+reflection}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+2d\+\_\+reflection(const char $\ast$filename, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$coords, double $\ast$coords\+\_\+bdry, double $\ast$coords\+\_\+ref, double $\ast$nor)}{xgraph_2d_reflection(const char *filename, INTERFACE *intfc, double *coords, double *coords_bdry, double *coords_ref, double *nor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+2d\+\_\+reflection (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{coords\+\_\+bdry, }
+\item[{double $\ast$}]{coords\+\_\+ref, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a9fa313dc941b60492b2bdf2a56dd27a6}{}\label{ixgraph_8c_a9fa313dc941b60492b2bdf2a56dd27a6}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+affine\+\_\+vector@{xgraph\+\_\+affine\+\_\+vector}}
+\index{xgraph\+\_\+affine\+\_\+vector@{xgraph\+\_\+affine\+\_\+vector}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+affine\+\_\+vector(\+F\+I\+L\+E $\ast$file, double $\ast$start, double $\ast$v, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj, const char $\ast$msg)}{xgraph_affine_vector(FILE *file, double *start, double *v, const COORDINATE_PLANE proj, const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+affine\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{start, }
+\item[{double $\ast$}]{v, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj, }
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a79bd02454cd497e7650fd5bdb8347531}{}\label{ixgraph_8c_a79bd02454cd497e7650fd5bdb8347531}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+curve@{xgraph\+\_\+curve}}
+\index{xgraph\+\_\+curve@{xgraph\+\_\+curve}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+curve(\+F\+I\+L\+E $\ast$file, C\+U\+R\+V\+E $\ast$c, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_curve(FILE *file, CURVE *c, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a96dc2a4139129b9855ec0df9d72aaff9}{}\label{ixgraph_8c_a96dc2a4139129b9855ec0df9d72aaff9}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+curve\+\_\+file@{xgraph\+\_\+curve\+\_\+file}}
+\index{xgraph\+\_\+curve\+\_\+file@{xgraph\+\_\+curve\+\_\+file}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+curve\+\_\+file(const char $\ast$, const char $\ast$, C\+U\+R\+V\+E $\ast$, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E)}{xgraph_curve_file(const char *, const char *, CURVE *, const COORDINATE_PLANE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void xgraph\+\_\+curve\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a72c6c2579efbe85ffd94765970e89079}{}\label{ixgraph_8c_a72c6c2579efbe85ffd94765970e89079}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+curve\+\_\+within\+\_\+range@{xgraph\+\_\+curve\+\_\+within\+\_\+range}}
+\index{xgraph\+\_\+curve\+\_\+within\+\_\+range@{xgraph\+\_\+curve\+\_\+within\+\_\+range}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+curve\+\_\+within\+\_\+range(\+F\+I\+L\+E $\ast$, C\+U\+R\+V\+E $\ast$, double $\ast$, double, char $\ast$)}{xgraph_curve_within_range(FILE *, CURVE *, double *, double, char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void xgraph\+\_\+curve\+\_\+within\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius, }
+\item[{char $\ast$}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_ace2569dabb1a522ca696be6916194af2}{}\label{ixgraph_8c_ace2569dabb1a522ca696be6916194af2}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+file\+\_\+open@{xgraph\+\_\+file\+\_\+open}}
+\index{xgraph\+\_\+file\+\_\+open@{xgraph\+\_\+file\+\_\+open}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+file\+\_\+open(const char $\ast$dname, const char $\ast$fname, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_file_open(const char *dname, const char *fname, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} F\+I\+LE$\ast$ xgraph\+\_\+file\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_ad10b737d6580df4084ba7f8d0a7efd79}{}\label{ixgraph_8c_ad10b737d6580df4084ba7f8d0a7efd79}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+grid@{xgraph\+\_\+grid}}
+\index{xgraph\+\_\+grid@{xgraph\+\_\+grid}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+grid(const char $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E)}{xgraph_grid(const char *, RECT_GRID *, const COORDINATE_PLANE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void xgraph\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_aac8af1191477c3b6b3033c7c5eb978ea}{}\label{ixgraph_8c_aac8af1191477c3b6b3033c7c5eb978ea}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+interface\+\_\+curves@{xgraph\+\_\+interface\+\_\+curves}}
+\index{xgraph\+\_\+interface\+\_\+curves@{xgraph\+\_\+interface\+\_\+curves}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+interface\+\_\+curves(const char $\ast$dname, const char $\ast$fname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_interface_curves(const char *dname, const char *fname, INTERFACE *intfc, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+interface\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a4783927911a0d84b085fed2b8fc059f5}{}\label{ixgraph_8c_a4783927911a0d84b085fed2b8fc059f5}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+interface\+\_\+nodes@{xgraph\+\_\+interface\+\_\+nodes}}
+\index{xgraph\+\_\+interface\+\_\+nodes@{xgraph\+\_\+interface\+\_\+nodes}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+interface\+\_\+nodes(const char $\ast$dname, const char $\ast$fname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_interface_nodes(const char *dname, const char *fname, INTERFACE *intfc, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+interface\+\_\+nodes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a8c73e9d2a5ad82dbbc9789402fd76717}{}\label{ixgraph_8c_a8c73e9d2a5ad82dbbc9789402fd76717}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+interface\+\_\+surfaces@{xgraph\+\_\+interface\+\_\+surfaces}}
+\index{xgraph\+\_\+interface\+\_\+surfaces@{xgraph\+\_\+interface\+\_\+surfaces}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+interface\+\_\+surfaces(const char $\ast$dname, const char $\ast$fname, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_interface_surfaces(const char *dname, const char *fname, INTERFACE *intfc, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+interface\+\_\+surfaces (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a4b0b8223aa4e596e0c889edbd3dd2597}{}\label{ixgraph_8c_a4b0b8223aa4e596e0c889edbd3dd2597}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+line\+\_\+segment@{xgraph\+\_\+line\+\_\+segment}}
+\index{xgraph\+\_\+line\+\_\+segment@{xgraph\+\_\+line\+\_\+segment}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+line\+\_\+segment(\+F\+I\+L\+E $\ast$file, double $\ast$start, double $\ast$end, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj, const char $\ast$msg)}{xgraph_line_segment(FILE *file, double *start, double *end, const COORDINATE_PLANE proj, const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+line\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{start, }
+\item[{double $\ast$}]{end, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj, }
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_ab9cf0369c5d713fd0aaa05a6f22bbcf4}{}\label{ixgraph_8c_ab9cf0369c5d713fd0aaa05a6f22bbcf4}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+new\+\_\+data\+\_\+set@{xgraph\+\_\+new\+\_\+data\+\_\+set}}
+\index{xgraph\+\_\+new\+\_\+data\+\_\+set@{xgraph\+\_\+new\+\_\+data\+\_\+set}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+new\+\_\+data\+\_\+set(\+F\+I\+L\+E $\ast$file)}{xgraph_new_data_set(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+new\+\_\+data\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a0419f976fccf09f2d4dbbeb8320f8647}{}\label{ixgraph_8c_a0419f976fccf09f2d4dbbeb8320f8647}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+point@{xgraph\+\_\+point}}
+\index{xgraph\+\_\+point@{xgraph\+\_\+point}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+point(\+F\+I\+L\+E $\ast$file, double $\ast$p, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj, const char $\ast$name)}{xgraph_point(FILE *file, double *p, const COORDINATE_PLANE proj, const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{p, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a993dfbc85e440a9e9f136470303ec2ed}{}\label{ixgraph_8c_a993dfbc85e440a9e9f136470303ec2ed}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID@{xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID}}
+\index{xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID@{xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D(const char $\ast$dname, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rect\+\_\+grid)}{xgraph_RECT_GRID(const char *dname, RECT_GRID *rect_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a5a1e6057e37b175acda46a5004c7d9be}{}\label{ixgraph_8c_a5a1e6057e37b175acda46a5004c7d9be}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+surface\+\_\+tris@{xgraph\+\_\+surface\+\_\+tris}}
+\index{xgraph\+\_\+surface\+\_\+tris@{xgraph\+\_\+surface\+\_\+tris}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+surface\+\_\+tris(const char $\ast$, const char $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E)}{xgraph_surface_tris(const char *, const char *, SURFACE *, const COORDINATE_PLANE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void xgraph\+\_\+surface\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dname, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_af92df485f306469631c8d5cc1ed0db79}{}\label{ixgraph_8c_af92df485f306469631c8d5cc1ed0db79}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+tri@{xgraph\+\_\+tri}}
+\index{xgraph\+\_\+tri@{xgraph\+\_\+tri}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+tri(\+F\+I\+L\+E $\ast$file, T\+R\+I $\ast$tri, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_tri(FILE *file, TRI *tri, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a7478aec13f8f7f782ecb026aa38c379d}{}\label{ixgraph_8c_a7478aec13f8f7f782ecb026aa38c379d}
+\index{ixgraph.\+c@{ixgraph.\+c}!xgraph\+\_\+tris\+\_\+list@{xgraph\+\_\+tris\+\_\+list}}
+\index{xgraph\+\_\+tris\+\_\+list@{xgraph\+\_\+tris\+\_\+list}!ixgraph.\+c@{ixgraph.\+c}}
+\subsubsection[{\texorpdfstring{xgraph\+\_\+tris\+\_\+list(\+F\+I\+L\+E $\ast$file, T\+R\+I $\ast$$\ast$tris, int num\+\_\+tris, const C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+N\+E proj)}{xgraph_tris_list(FILE *file, TRI **tris, int num_tris, const COORDINATE_PLANE proj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void xgraph\+\_\+tris\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{const {\bf C\+O\+O\+R\+D\+I\+N\+A\+T\+E\+\_\+\+P\+L\+A\+NE}}]{proj}
+\end{DoxyParamCaption}
+)}\hypertarget{ixgraph_8c_a5ff8bf76cae2b43c8d9204aac1309a4d}{}\label{ixgraph_8c_a5ff8bf76cae2b43c8d9204aac1309a4d}

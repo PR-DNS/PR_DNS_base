@@ -1,0 +1,333 @@
+\hypertarget{debug_8c}{}\section{D\+N\+S/src/util/debug.c File Reference}
+\label{debug_8c}\index{D\+N\+S/src/util/debug.\+c@{D\+N\+S/src/util/debug.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{debug_8c_d3/d96/structentry}{entry}
+\item 
+struct \hyperlink{debug_8c_d8/d81/struct___i_n_t_e_r_n_a_l___d_e_b_u_g___p_a_r_a_m_s}{\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{debug_8c_ad3ebe7b981eaf3b1307db1a2be5a1ca7}{db\+\_\+mode}~Db\+Params.\+\_\+debug\+\_\+params.\+\_\+debug\+\_\+mode
+\item 
+\#define \hyperlink{debug_8c_a96a9978b6ba40d23fa98dffafa4cb91b}{num\+\_\+of\+\_\+debug\+\_\+names}~Db\+Params.\+\_\+num\+\_\+of\+\_\+debug\+\_\+names
+\item 
+\#define \hyperlink{debug_8c_a7972b05792e3d12a865efc09c7211e95}{debug\+\_\+names}~Db\+Params.\+\_\+debug\+\_\+names
+\item 
+\#define \hyperlink{debug_8c_ade3e00ae11290ef7623c886d70a217de}{debug\+\_\+output}~Db\+Params.\+\_\+debug\+\_\+output
+\item 
+\#define \hyperlink{debug_8c_a07a009ff1250f7d5aea87ae8dcf96da6}{debug\+\_\+input}~Db\+Params.\+\_\+debug\+\_\+input
+\item 
+\#define \hyperlink{debug_8c_a0967081dc9d3164eb4ec9b206f693752}{remember}~Db\+Params.\+\_\+remember
+\item 
+\#define \hyperlink{debug_8c_a6d1197264c8235ebd5bda57ba423914e}{head}~Db\+Params.\+\_\+head
+\item 
+\#define \hyperlink{debug_8c_acc624d04eb8a43e77d74757b8c2e0a6f}{ftrace}~Db\+Params.\+\_\+ftrace
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{debug_8c_d8/d81/struct___i_n_t_e_r_n_a_l___d_e_b_u_g___p_a_r_a_m_s}{\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{debug_8c_adacb862b654a8a340b1a33acc3c344cf}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{debug_8c_a1be3860693af99a6c1da72580097294ca5ce8081cfb874015fae9b4ee0a8edd3c}{M\+A\+X\+\_\+\+N\+A\+M\+ES} = 50
+ \}
+\item 
+enum \{ \hyperlink{debug_8c_ac9420823bfeba78fce625fc105e3b01da5e60895e8fe07f3d73a62c5779fb3b1d}{M\+A\+X\+\_\+\+B\+Y\+T\+ES} = 500
+ \}
+\item 
+enum \{ \hyperlink{debug_8c_afa9be5679ab03d785820f2474c5ccc6eae76081a9b4f8d2d0f7c2bc5cdd71c4df}{M\+A\+X\+\_\+\+C\+H\+A\+RS} = 8
+ \}
+\item 
+enum \{ \hyperlink{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6a283f6f936d65508d44bd9fe10b8c89e3}{M\+A\+X\+\_\+\+T\+R\+A\+CE} = 50
+ \}
+\item 
+enum \{ \hyperlink{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac940624f31de0987e20de185ae88759d}{M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES} = 2$\ast$\+M\+A\+X\+\_\+\+T\+R\+A\+CE, 
+\hyperlink{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac983c763acd019288d35bebed07a2a48}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN} = 77
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ab9961bdfac653c19117bf22ac3a13ac8}{D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$ \hyperlink{debug_8c_ab71058c17dbe2d1011437f883038e970}{default\+\_\+debug} (const \hyperlink{cdecs_8h_a159ad1020f4786fc12abab747f580221}{D\+E\+B\+U\+G\+\_\+\+M\+O\+DE} dbmode)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ab9961bdfac653c19117bf22ac3a13ac8}{D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$ \hyperlink{debug_8c_adb53a1254c03ac015df830bc5ac0fdcc}{init\+\_\+debug} (const \hyperlink{cdecs_8h_a159ad1020f4786fc12abab747f580221}{D\+E\+B\+U\+G\+\_\+\+M\+O\+DE} dbmode)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_a4eb936d2a130eb94d6034ee8d832365a}{set\+\_\+debug\+\_\+output} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_a7fb068c7165e1e6781741daa3cf71c6d}{add\+\_\+to\+\_\+debug} (const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_aba0f3515bacf1896eb50d7f1f2fbba22}{remove\+\_\+from\+\_\+debug} (const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_a01897636dd9c627ed3f873f05128bf3f}{debug\+\_\+print} (const char $\ast$funcname, const char $\ast$fmt,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{debug_8c_a0ce244e47f243a1ce4436592ce1a87dd}{debugging} (const char $\ast$funcname)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$$\ast$ \hyperlink{debug_8c_a9ec4e10089676a2293de12132b4f061c}{debugging\+\_\+names} (int $\ast$ndbnames)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_a777b0aff0baf0ab85fd22bdaedaf7613}{debug\+\_\+trace} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{debug_8c_a194d1303b567145cb5d6ac7e8fd6aa8c}{unset\+\_\+debug} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{debug_8c_adacb862b654a8a340b1a33acc3c344cf}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{debug_8c_a07d3e14c22f56f2bb774d1c1d11cb63f}{Db\+Params}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{entry@{entry}}\label{structentry}
+\hypertarget{debug_8c_structentry}{}
+\subsubsection{struct entry}
+defined(\+M\+A\+X\+\_\+\+T\+R\+A\+C\+E) \begin{DoxyFields}{Class Members}
+char\hypertarget{debug_8c_a715ed9f4b317c5ce12ff87a85addebc5}{}\label{debug_8c_a715ed9f4b317c5ce12ff87a85addebc5}
+&
+fname\mbox{[}\hyperlink{debug_8c_afa9be5679ab03d785820f2474c5ccc6eae76081a9b4f8d2d0f7c2bc5cdd71c4df}{M\+A\+X\+\_\+\+C\+H\+A\+RS}+1\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{debug_8c_d3/d96/structentry}{entry} $\ast$\hypertarget{debug_8c_a6ba6b7d14932763dcb0df242b5ff2dfd}{}\label{debug_8c_a6ba6b7d14932763dcb0df242b5ff2dfd}
+&
+next&
+\\
+\hline
+
+struct \hyperlink{debug_8c_d3/d96/structentry}{entry} $\ast$\hypertarget{debug_8c_ae8ddeecbebfb00f71ce07bdb5524bda1}{}\label{debug_8c_ae8ddeecbebfb00f71ce07bdb5524bda1}
+&
+prev&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS@{\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}}\label{struct___i_n_t_e_r_n_a_l___d_e_b_u_g___p_a_r_a_m_s}
+\hypertarget{debug_8c_struct___i_n_t_e_r_n_a_l___d_e_b_u_g___p_a_r_a_m_s}{}
+\subsubsection{struct \+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+F\+I\+LE $\ast$\hypertarget{debug_8c_a615811819046d4305e073f5cac2759e5}{}\label{debug_8c_a615811819046d4305e073f5cac2759e5}
+&
+\+\_\+debug\+\_\+input&
+\\
+\hline
+
+char\hypertarget{debug_8c_a3d9d50ad68b6db34018e1c7a6d9ced05}{}\label{debug_8c_a3d9d50ad68b6db34018e1c7a6d9ced05}
+&
+\+\_\+debug\+\_\+names\mbox{[}\hyperlink{debug_8c_a1be3860693af99a6c1da72580097294ca5ce8081cfb874015fae9b4ee0a8edd3c}{M\+A\+X\+\_\+\+N\+A\+M\+ES}\mbox{]}\mbox{[}\hyperlink{debug_8c_afa9be5679ab03d785820f2474c5ccc6eae76081a9b4f8d2d0f7c2bc5cdd71c4df}{M\+A\+X\+\_\+\+C\+H\+A\+RS}+1\mbox{]}&
+\\
+\hline
+
+F\+I\+LE $\ast$\hypertarget{debug_8c_af599c71c40d1181d19f9e1dc90e57666}{}\label{debug_8c_af599c71c40d1181d19f9e1dc90e57666}
+&
+\+\_\+debug\+\_\+output&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ab9961bdfac653c19117bf22ac3a13ac8}{D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}\hypertarget{debug_8c_a5fc470ec37f8eb96219e23c0c32f4af2}{}\label{debug_8c_a5fc470ec37f8eb96219e23c0c32f4af2}
+&
+\+\_\+debug\+\_\+params&
+\\
+\hline
+
+struct \hyperlink{debug_8c_d3/d96/structentry}{entry}\hypertarget{debug_8c_a90cae1a727078efbee81702066c01a84}{}\label{debug_8c_a90cae1a727078efbee81702066c01a84}
+&
+\+\_\+ftrace\mbox{[}\hyperlink{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6a283f6f936d65508d44bd9fe10b8c89e3}{M\+A\+X\+\_\+\+T\+R\+A\+CE}\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{debug_8c_d3/d96/structentry}{entry} $\ast$\hypertarget{debug_8c_ac502809dd70ffcdbff75859e69a0b12c}{}\label{debug_8c_ac502809dd70ffcdbff75859e69a0b12c}
+&
+\+\_\+head&
+\\
+\hline
+
+int\hypertarget{debug_8c_abdf8b51c91ef1192d5dd44ea3194b965}{}\label{debug_8c_abdf8b51c91ef1192d5dd44ea3194b965}
+&
+\+\_\+num\+\_\+of\+\_\+debug\+\_\+names&
+\\
+\hline
+
+F\+I\+LE $\ast$\hypertarget{debug_8c_a772c033eb0828e662ac0d0e1420be21d}{}\label{debug_8c_a772c033eb0828e662ac0d0e1420be21d}
+&
+\+\_\+remember&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{debug.\+c@{debug.\+c}!db\+\_\+mode@{db\+\_\+mode}}
+\index{db\+\_\+mode@{db\+\_\+mode}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{db\+\_\+mode}{db_mode}}]{\setlength{\rightskip}{0pt plus 5cm}\#define db\+\_\+mode~Db\+Params.\+\_\+debug\+\_\+params.\+\_\+debug\+\_\+mode}\hypertarget{debug_8c_ad3ebe7b981eaf3b1307db1a2be5a1ca7}{}\label{debug_8c_ad3ebe7b981eaf3b1307db1a2be5a1ca7}
+\index{debug.\+c@{debug.\+c}!debug\+\_\+input@{debug\+\_\+input}}
+\index{debug\+\_\+input@{debug\+\_\+input}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+input}{debug_input}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+input~Db\+Params.\+\_\+debug\+\_\+input}\hypertarget{debug_8c_a07a009ff1250f7d5aea87ae8dcf96da6}{}\label{debug_8c_a07a009ff1250f7d5aea87ae8dcf96da6}
+\index{debug.\+c@{debug.\+c}!debug\+\_\+names@{debug\+\_\+names}}
+\index{debug\+\_\+names@{debug\+\_\+names}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+names}{debug_names}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+names~Db\+Params.\+\_\+debug\+\_\+names}\hypertarget{debug_8c_a7972b05792e3d12a865efc09c7211e95}{}\label{debug_8c_a7972b05792e3d12a865efc09c7211e95}
+\index{debug.\+c@{debug.\+c}!debug\+\_\+output@{debug\+\_\+output}}
+\index{debug\+\_\+output@{debug\+\_\+output}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+output}{debug_output}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+output~Db\+Params.\+\_\+debug\+\_\+output}\hypertarget{debug_8c_ade3e00ae11290ef7623c886d70a217de}{}\label{debug_8c_ade3e00ae11290ef7623c886d70a217de}
+\index{debug.\+c@{debug.\+c}!ftrace@{ftrace}}
+\index{ftrace@{ftrace}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{ftrace}{ftrace}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ftrace~Db\+Params.\+\_\+ftrace}\hypertarget{debug_8c_acc624d04eb8a43e77d74757b8c2e0a6f}{}\label{debug_8c_acc624d04eb8a43e77d74757b8c2e0a6f}
+\index{debug.\+c@{debug.\+c}!head@{head}}
+\index{head@{head}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{head}{head}}]{\setlength{\rightskip}{0pt plus 5cm}\#define head~Db\+Params.\+\_\+head}\hypertarget{debug_8c_a6d1197264c8235ebd5bda57ba423914e}{}\label{debug_8c_a6d1197264c8235ebd5bda57ba423914e}
+\index{debug.\+c@{debug.\+c}!num\+\_\+of\+\_\+debug\+\_\+names@{num\+\_\+of\+\_\+debug\+\_\+names}}
+\index{num\+\_\+of\+\_\+debug\+\_\+names@{num\+\_\+of\+\_\+debug\+\_\+names}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{num\+\_\+of\+\_\+debug\+\_\+names}{num_of_debug_names}}]{\setlength{\rightskip}{0pt plus 5cm}\#define num\+\_\+of\+\_\+debug\+\_\+names~Db\+Params.\+\_\+num\+\_\+of\+\_\+debug\+\_\+names}\hypertarget{debug_8c_a96a9978b6ba40d23fa98dffafa4cb91b}{}\label{debug_8c_a96a9978b6ba40d23fa98dffafa4cb91b}
+\index{debug.\+c@{debug.\+c}!remember@{remember}}
+\index{remember@{remember}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{remember}{remember}}]{\setlength{\rightskip}{0pt plus 5cm}\#define remember~Db\+Params.\+\_\+remember}\hypertarget{debug_8c_a0967081dc9d3164eb4ec9b206f693752}{}\label{debug_8c_a0967081dc9d3164eb4ec9b206f693752}
+
+
+\subsection{Typedef Documentation}
+\index{debug.\+c@{debug.\+c}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}{INTERNAL_DEBUG_PARAMS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}}\hypertarget{debug_8c_adacb862b654a8a340b1a33acc3c344cf}{}\label{debug_8c_adacb862b654a8a340b1a33acc3c344cf}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{debug_8c_a1be3860693af99a6c1da72580097294c}{}\label{debug_8c_a1be3860693af99a6c1da72580097294c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+N\+A\+M\+ES@{M\+A\+X\+\_\+\+N\+A\+M\+ES}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+N\+A\+M\+ES@{M\+A\+X\+\_\+\+N\+A\+M\+ES}}\item[{\em 
+M\+A\+X\+\_\+\+N\+A\+M\+ES\hypertarget{debug_8c_a1be3860693af99a6c1da72580097294ca5ce8081cfb874015fae9b4ee0a8edd3c}{}\label{debug_8c_a1be3860693af99a6c1da72580097294ca5ce8081cfb874015fae9b4ee0a8edd3c}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{debug_8c_ac9420823bfeba78fce625fc105e3b01d}{}\label{debug_8c_ac9420823bfeba78fce625fc105e3b01d}
+defined(\+M\+A\+X\+\_\+\+N\+A\+M\+E\+S) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+B\+Y\+T\+ES@{M\+A\+X\+\_\+\+B\+Y\+T\+ES}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+B\+Y\+T\+ES@{M\+A\+X\+\_\+\+B\+Y\+T\+ES}}\item[{\em 
+M\+A\+X\+\_\+\+B\+Y\+T\+ES\hypertarget{debug_8c_ac9420823bfeba78fce625fc105e3b01da5e60895e8fe07f3d73a62c5779fb3b1d}{}\label{debug_8c_ac9420823bfeba78fce625fc105e3b01da5e60895e8fe07f3d73a62c5779fb3b1d}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{debug_8c_afa9be5679ab03d785820f2474c5ccc6e}{}\label{debug_8c_afa9be5679ab03d785820f2474c5ccc6e}
+defined(\+M\+A\+X\+\_\+\+B\+Y\+T\+E\+S) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+C\+H\+A\+RS@{M\+A\+X\+\_\+\+C\+H\+A\+RS}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+C\+H\+A\+RS@{M\+A\+X\+\_\+\+C\+H\+A\+RS}}\item[{\em 
+M\+A\+X\+\_\+\+C\+H\+A\+RS\hypertarget{debug_8c_afa9be5679ab03d785820f2474c5ccc6eae76081a9b4f8d2d0f7c2bc5cdd71c4df}{}\label{debug_8c_afa9be5679ab03d785820f2474c5ccc6eae76081a9b4f8d2d0f7c2bc5cdd71c4df}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6}{}\label{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6}
+defined(\+M\+A\+X\+\_\+\+C\+H\+A\+R\+S) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+T\+R\+A\+CE@{M\+A\+X\+\_\+\+T\+R\+A\+CE}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+T\+R\+A\+CE@{M\+A\+X\+\_\+\+T\+R\+A\+CE}}\item[{\em 
+M\+A\+X\+\_\+\+T\+R\+A\+CE\hypertarget{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6a283f6f936d65508d44bd9fe10b8c89e3}{}\label{debug_8c_ae6dceca96ec2c7a1b4aa211264a87ef6a283f6f936d65508d44bd9fe10b8c89e3}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173}{}\label{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES@{M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES@{M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES}}\item[{\em 
+M\+A\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+L\+I\+N\+ES\hypertarget{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac940624f31de0987e20de185ae88759d}{}\label{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac940624f31de0987e20de185ae88759d}
+}]\index{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}!debug.\+c@{debug.\+c}}\index{debug.\+c@{debug.\+c}!M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}}\item[{\em 
+M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN\hypertarget{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac983c763acd019288d35bebed07a2a48}{}\label{debug_8c_a56a0f36da7f9eaaf54bd05cc2bf49173ac983c763acd019288d35bebed07a2a48}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{debug.\+c@{debug.\+c}!add\+\_\+to\+\_\+debug@{add\+\_\+to\+\_\+debug}}
+\index{add\+\_\+to\+\_\+debug@{add\+\_\+to\+\_\+debug}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+to\+\_\+debug(const char $\ast$name)}{add_to_debug(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void add\+\_\+to\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a7fb068c7165e1e6781741daa3cf71c6d}{}\label{debug_8c_a7fb068c7165e1e6781741daa3cf71c6d}
+\index{debug.\+c@{debug.\+c}!debug\+\_\+print@{debug\+\_\+print}}
+\index{debug\+\_\+print@{debug\+\_\+print}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+print(const char $\ast$funcname, const char $\ast$fmt,...)}{debug_print(const char *funcname, const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void debug\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{funcname, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a01897636dd9c627ed3f873f05128bf3f}{}\label{debug_8c_a01897636dd9c627ed3f873f05128bf3f}
+\index{debug.\+c@{debug.\+c}!debug\+\_\+trace@{debug\+\_\+trace}}
+\index{debug\+\_\+trace@{debug\+\_\+trace}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+trace(void)}{debug_trace(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void debug\+\_\+trace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a777b0aff0baf0ab85fd22bdaedaf7613}{}\label{debug_8c_a777b0aff0baf0ab85fd22bdaedaf7613}
+\index{debug.\+c@{debug.\+c}!debugging@{debugging}}
+\index{debugging@{debugging}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debugging(const char $\ast$funcname)}{debugging(const char *funcname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} debugging (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{funcname}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a0ce244e47f243a1ce4436592ce1a87dd}{}\label{debug_8c_a0ce244e47f243a1ce4436592ce1a87dd}
+\index{debug.\+c@{debug.\+c}!debugging\+\_\+names@{debugging\+\_\+names}}
+\index{debugging\+\_\+names@{debugging\+\_\+names}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{debugging\+\_\+names(int $\ast$ndbnames)}{debugging_names(int *ndbnames)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$$\ast$ debugging\+\_\+names (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ndbnames}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a9ec4e10089676a2293de12132b4f061c}{}\label{debug_8c_a9ec4e10089676a2293de12132b4f061c}
+\index{debug.\+c@{debug.\+c}!default\+\_\+debug@{default\+\_\+debug}}
+\index{default\+\_\+debug@{default\+\_\+debug}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{default\+\_\+debug(const D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E dbmode)}{default_debug(const DEBUG_MODE dbmode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}$\ast$ default\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}}]{dbmode}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_ab71058c17dbe2d1011437f883038e970}{}\label{debug_8c_ab71058c17dbe2d1011437f883038e970}
+\index{debug.\+c@{debug.\+c}!init\+\_\+debug@{init\+\_\+debug}}
+\index{init\+\_\+debug@{init\+\_\+debug}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+debug(const D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E dbmode)}{init_debug(const DEBUG_MODE dbmode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS}$\ast$ init\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}}]{dbmode}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_adb53a1254c03ac015df830bc5ac0fdcc}{}\label{debug_8c_adb53a1254c03ac015df830bc5ac0fdcc}
+\index{debug.\+c@{debug.\+c}!remove\+\_\+from\+\_\+debug@{remove\+\_\+from\+\_\+debug}}
+\index{remove\+\_\+from\+\_\+debug@{remove\+\_\+from\+\_\+debug}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{remove\+\_\+from\+\_\+debug(const char $\ast$name)}{remove_from_debug(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void remove\+\_\+from\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_aba0f3515bacf1896eb50d7f1f2fbba22}{}\label{debug_8c_aba0f3515bacf1896eb50d7f1f2fbba22}
+\index{debug.\+c@{debug.\+c}!set\+\_\+debug\+\_\+output@{set\+\_\+debug\+\_\+output}}
+\index{set\+\_\+debug\+\_\+output@{set\+\_\+debug\+\_\+output}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+debug\+\_\+output(\+F\+I\+L\+E $\ast$file)}{set_debug_output(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+debug\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a4eb936d2a130eb94d6034ee8d832365a}{}\label{debug_8c_a4eb936d2a130eb94d6034ee8d832365a}
+\index{debug.\+c@{debug.\+c}!unset\+\_\+debug@{unset\+\_\+debug}}
+\index{unset\+\_\+debug@{unset\+\_\+debug}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{unset\+\_\+debug()}{unset_debug()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void unset\+\_\+debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{debug_8c_a194d1303b567145cb5d6ac7e8fd6aa8c}{}\label{debug_8c_a194d1303b567145cb5d6ac7e8fd6aa8c}
+
+
+\subsection{Variable Documentation}
+\index{debug.\+c@{debug.\+c}!Db\+Params@{Db\+Params}}
+\index{Db\+Params@{Db\+Params}!debug.\+c@{debug.\+c}}
+\subsubsection[{\texorpdfstring{Db\+Params}{DbParams}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+A\+R\+A\+MS} Db\+Params}\hypertarget{debug_8c_a07d3e14c22f56f2bb774d1c1d11cb63f}{}\label{debug_8c_a07d3e14c22f56f2bb774d1c1d11cb63f}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+                                            \{
+                                                \hyperlink{cdecs_8h_a47d319cc3afdca6c6b6f0071862cca1eac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}
+                                            \},
+                                            NULL, 
+                                            NULL, 
+                                            NULL, 
+                                            0,    
+                                            NULL  
+                                       \}
+\end{DoxyCode}

@@ -1,0 +1,59 @@
+\hypertarget{fredist_8c}{}\section{D\+N\+S/src/front/fredist.c File Reference}
+\label{fredist_8c}\index{D\+N\+S/src/front/fredist.\+c@{D\+N\+S/src/front/fredist.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fredist_8c_a7e382cf6a323dc2e7f4fc972495db384}{redistribute} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} do\+\_\+redist, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} restart\+\_\+init)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fredist_8c_ae6d30a901bdc6221b92ba7c1494497c7}{f\+\_\+perform\+\_\+redistribution} (\hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} force)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fredist_8c_a90ef7ff95394b60275a55b61bfb9d325}{redist\+\_\+needed} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, int wfam)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fredist_8c_ab2a953223f63b23854170a292e4664ef}{interface\+\_\+is\+\_\+tangled} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cross)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fredist_8c_a09456e4c7a89fef38b0e4724f5581500}{Clear\+\_\+redistribution\+\_\+parameters} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fredist.\+c@{fredist.\+c}!Clear\+\_\+redistribution\+\_\+parameters@{Clear\+\_\+redistribution\+\_\+parameters}}
+\index{Clear\+\_\+redistribution\+\_\+parameters@{Clear\+\_\+redistribution\+\_\+parameters}!fredist.\+c@{fredist.\+c}}
+\subsubsection[{\texorpdfstring{Clear\+\_\+redistribution\+\_\+parameters(\+Front $\ast$fr)}{Clear_redistribution_parameters(Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Clear\+\_\+redistribution\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fredist_8c_a09456e4c7a89fef38b0e4724f5581500}{}\label{fredist_8c_a09456e4c7a89fef38b0e4724f5581500}
+\index{fredist.\+c@{fredist.\+c}!f\+\_\+perform\+\_\+redistribution@{f\+\_\+perform\+\_\+redistribution}}
+\index{f\+\_\+perform\+\_\+redistribution@{f\+\_\+perform\+\_\+redistribution}!fredist.\+c@{fredist.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+perform\+\_\+redistribution(\+H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, Front $\ast$front, boolean force)}{f_perform_redistribution(HYPER_SURF *hs, Front *front, boolean force)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+perform\+\_\+redistribution (
+\begin{DoxyParamCaption}
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf boolean}}]{force}
+\end{DoxyParamCaption}
+)}\hypertarget{fredist_8c_ae6d30a901bdc6221b92ba7c1494497c7}{}\label{fredist_8c_ae6d30a901bdc6221b92ba7c1494497c7}
+\index{fredist.\+c@{fredist.\+c}!interface\+\_\+is\+\_\+tangled@{interface\+\_\+is\+\_\+tangled}}
+\index{interface\+\_\+is\+\_\+tangled@{interface\+\_\+is\+\_\+tangled}!fredist.\+c@{fredist.\+c}}
+\subsubsection[{\texorpdfstring{interface\+\_\+is\+\_\+tangled(\+C\+R\+O\+S\+S $\ast$cross)}{interface_is_tangled(CROSS *cross)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} interface\+\_\+is\+\_\+tangled (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cross}
+\end{DoxyParamCaption}
+)}\hypertarget{fredist_8c_ab2a953223f63b23854170a292e4664ef}{}\label{fredist_8c_ab2a953223f63b23854170a292e4664ef}
+\index{fredist.\+c@{fredist.\+c}!redist\+\_\+needed@{redist\+\_\+needed}}
+\index{redist\+\_\+needed@{redist\+\_\+needed}!fredist.\+c@{fredist.\+c}}
+\subsubsection[{\texorpdfstring{redist\+\_\+needed(\+Front $\ast$fr, int wfam)}{redist_needed(Front *fr, int wfam)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} redist\+\_\+needed (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int}]{wfam}
+\end{DoxyParamCaption}
+)}\hypertarget{fredist_8c_a90ef7ff95394b60275a55b61bfb9d325}{}\label{fredist_8c_a90ef7ff95394b60275a55b61bfb9d325}
+\index{fredist.\+c@{fredist.\+c}!redistribute@{redistribute}}
+\index{redistribute@{redistribute}!fredist.\+c@{fredist.\+c}}
+\subsubsection[{\texorpdfstring{redistribute(\+Front $\ast$fr, boolean do\+\_\+redist, boolean restart\+\_\+init)}{redistribute(Front *fr, boolean do_redist, boolean restart_init)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int redistribute (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf boolean}}]{do\+\_\+redist, }
+\item[{{\bf boolean}}]{restart\+\_\+init}
+\end{DoxyParamCaption}
+)}\hypertarget{fredist_8c_a7e382cf6a323dc2e7f4fc972495db384}{}\label{fredist_8c_a7e382cf6a323dc2e7f4fc972495db384}

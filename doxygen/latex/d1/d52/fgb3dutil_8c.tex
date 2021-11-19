@@ -1,0 +1,1006 @@
+\hypertarget{fgb3dutil_8c}{}\section{D\+N\+S/src/front/fgb3dutil.c File Reference}
+\label{fgb3dutil_8c}\index{D\+N\+S/src/front/fgb3dutil.\+c@{D\+N\+S/src/front/fgb3dutil.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{fgb3dutil_8c_d3/d08/struct___c_r_x___s_o_r_t}{\+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT}
+\item 
+struct \hyperlink{fgb3dutil_8c_d4/d1d/struct___g_r_i_d___p_t}{\+\_\+\+G\+R\+I\+D\+\_\+\+PT}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fgb3dutil_8c_afe759d2b6c4ff043628d467079aa4539}{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}crx\+\_\+intfc\char`\"{}
+\item 
+\#define \hyperlink{fgb3dutil_8c_adf5403f5178f47164dbbf298853d93ab}{M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX}~20
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{fgb3dutil_8c_d3/d08/struct___c_r_x___s_o_r_t}{\+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT} \hyperlink{fgb3dutil_8c_a45f45e1f9410ad953caf89e6c00c94f3}{C\+R\+X\+\_\+\+S\+O\+RT}
+\item 
+typedef enum \hyperlink{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635f}{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE} \hyperlink{fgb3dutil_8c_ad1510a4dce834d4a892a91d627243988}{E\+D\+G\+E\+\_\+\+T\+Y\+PE}
+\item 
+typedef struct \hyperlink{fgb3dutil_8c_d4/d1d/struct___g_r_i_d___p_t}{\+\_\+\+G\+R\+I\+D\+\_\+\+PT} \hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635f}{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE} \{ \hyperlink{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fa0746276347ed7f3a8a7fc674720929d5}{U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE} = 0, 
+\hyperlink{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fae868572b41c93710413fc47a1a334335}{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE} = 1
+ \}
+\item 
+enum \{ \hyperlink{fgb3dutil_8c_a16af7b253440dadd46a80a4b9fddba4da85ba54d9e9f0d92109b23da93e030b00}{M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX} = 20
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{fgb3dutil_8c_a8c52408f5af5fae9113ca2c9ae8e3939}{next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx} (\hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{fgb3dutil_8c_a48da12078ba6f000137b710c03da5e0f}{this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx} (\hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fgb3dutil_8c_ad1510a4dce834d4a892a91d627243988}{E\+D\+G\+E\+\_\+\+T\+Y\+PE} \hyperlink{fgb3dutil_8c_ad51ec4fea53e823748534581752b5ddf}{edge\+\_\+comp\+\_\+walk} (\hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a10d88deb6cd9d1cd81058bafe1d7c7f9}{check\+\_\+comp\+\_\+at} (int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_ab7d93a9c1a0a7ed0cfd89f17b7e2994d}{walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a62d42cfb287ddea236955252c1c09008}{check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp} (int $\ast$, int $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a777691a1a9098a85d7d1422e040d98da}{unset\+\_\+comp\+\_\+exist} (int $\ast$, int $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_aabc78f3a0fba9a83cfce28112cca8043}{physical\+\_\+edge} (int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a47b5605dab6fe4c91d4b8d47785e2755}{crossings\+\_\+on\+\_\+edge} (double $\ast$$\ast$, double $\ast$, double $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_ab6c4b5ea3b944c6e442a8866d7ce74fe}{eliminate\+\_\+same\+\_\+crossings} (int $\ast$, int $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a6bca4dbc805e354f012d029e1f7d6d2f}{fill\+\_\+missing\+\_\+crx} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a67017e07ca31b3f68d61587397fb02e3}{adjust\+\_\+for\+\_\+min\+\_\+spacing} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, double, double $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a9ad6d0f182c44faef909a3005e1b165e}{multi\+\_\+crx\+\_\+debug} (\hyperlink{fgb3dutil_8c_a45f45e1f9410ad953caf89e6c00c94f3}{C\+R\+X\+\_\+\+S\+O\+RT} $\ast$, int, \hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$, double $\ast$, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_abb82310b1bf9a8f9b6d182870f7f6d96}{debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line} (const char $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a1c065fb583a0a587a4a53bd71ba97a4f}{print\+\_\+crx\+\_\+sort} (\hyperlink{fgb3dutil_8c_a45f45e1f9410ad953caf89e6c00c94f3}{C\+R\+X\+\_\+\+S\+O\+RT} $\ast$, int, \hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a8015c87abe92ff2591cadfc51a27a208}{print\+\_\+edge\+\_\+crxings} (\hyperlink{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{G\+R\+I\+D\+\_\+\+PT} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_ab6a6887ee09158ba98a47e7e5f11f712}{set\+\_\+grid\+\_\+crx\+\_\+edge} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, double $\ast$, double $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a4fc5958cfca7a0f4b7131946d587d5d6}{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE}, int $\ast$, int $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_ae57f14fae1ad78a1a567e0c7193f594a}{count\+\_\+block\+\_\+crossings} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, int $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$, int, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a919e60262e9f02121c6286a4fd8ba00c}{add\+\_\+to\+\_\+edge\+\_\+list} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, int, \hyperlink{int_8h_df/d8b/struct_c_r_x___s_t_o_r_e}{C\+R\+X\+\_\+\+S\+T\+O\+RE} $\ast$, int $\ast$, double $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a5f502e637c60dc60d835b9d3a14bf3ef}{add\+\_\+to\+\_\+crx\+\_\+list} (int $\ast$, int, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, \hyperlink{int_8h_df/d8b/struct_c_r_x___s_t_o_r_e}{C\+R\+X\+\_\+\+S\+T\+O\+RE} $\ast$, int $\ast$, int $\ast$, double $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a14bd0cde200b908a595f8ca9def1adec}{insert\+\_\+block\+\_\+crossings} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, int $\ast$$\ast$, int $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$, int, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a06fd307c400ae176619c6c5f15239c85}{linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri} (double $\ast$, double $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_ade91cc69888382a88eaacef6f080d3bd}{set\+\_\+comp\+\_\+at\+\_\+vertex} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a48df39f5f07c7ffd60d891aa829dd4d8}{fill\+\_\+block\+\_\+crx} (int, int, int, \hyperlink{int_8h_a85ded598aa9c72a197869125bf28e118}{B\+L\+K\+\_\+\+C\+RX} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a565d8a6dc35d1bd0134b93f0cb153420}{fill\+\_\+block\+\_\+curve\+\_\+crx} (int, int, \hyperlink{int_8h_a85ded598aa9c72a197869125bf28e118}{B\+L\+K\+\_\+\+C\+RX} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_ac02d4c945f5c8d06f2efff7933ed5b15}{is\+\_\+crx} (int $\ast$, int $\ast$, int, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_add2946ca9bb4a476d1e364a61783586d}{install\+\_\+curve\+\_\+points\+\_\+state} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_aa64c8c84caf68e9c6814cf5abfb19919}{install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a3a85dcb733a9517c6ac6d810374b3d02}{B\+O\+N\+D\+\_\+\+T\+RI} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, size\+\_\+t, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a7382a9f06d3c6a653532cff60cfc6871}{unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, int $\ast$, int $\ast$, int $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} \hyperlink{fgb3dutil_8c_abf74943acfc5b0c57313966da8d4df8c}{opposite\+\_\+direction} (\hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{fgb3dutil_8c_aa73cefab88577d672cab5786d9ca3b05}{comp\+\_\+of\+\_\+this\+\_\+side} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{fgb3dutil_8c_af8c25206230238e2f9dde41ef3cf5200}{comp\+\_\+of\+\_\+next\+\_\+side} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$ \hyperlink{fgb3dutil_8c_ac66bda97164cc31fb091e2e705d052fb}{next\+\_\+crossing} (int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, struct \hyperlink{table_8h_d5/d0d/struct_table}{Table} $\ast$, \hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a3dd822b5b2e5788836c83e6137f063ba}{remove\+\_\+crossing} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int $\ast$, struct \hyperlink{table_8h_d5/d0d/struct_table}{Table} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_add6e76073018000d4d0aea606451c688}{print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line} (int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, struct \hyperlink{table_8h_d5/d0d/struct_table}{Table} $\ast$, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_abb8cf66b266473f00adccd6dd7866576}{reset\+\_\+segment} (int $\ast$, int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a216e29f0a0fa32ad5803307f26dad2e9}{remove\+\_\+unphy\+\_\+pair} (int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, struct \hyperlink{table_8h_d5/d0d/struct_table}{Table} $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a59062ef7a7cd827706ee953b27e917ea}{enforce\+\_\+single\+\_\+crossing} (int $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, struct \hyperlink{table_8h_d5/d0d/struct_table}{Table} $\ast$, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fgb3dutil_8c_a75fd2bfe379d853eb8b87e6b826456ae}{check\+\_\+curve\+\_\+connect} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$)
+\item 
+void \hyperlink{fgb3dutil_8c_aa2a3c798976c6bd79cd74d032779c661}{print\+\_\+edge\+\_\+crossings} (int $\ast$, int $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a139fb7058404a2bda4afeb10d889b0ba}{crx\+\_\+ascend} (const void $\ast$, const void $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a4ab7465140a64f9953b80e339388cf59}{crx\+\_\+descend} (const void $\ast$, const void $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_af2a85e9c6387f888b4265eafdc4a6929}{set\+\_\+expanded\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$dual\+\_\+grid, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$expanded\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_af5dda6d2b8960996ed15634c6872522e}{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$smin, int $\ast$smax, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} full\+\_\+reconst, \hyperlink{int_8h_ad53ae6571c2ac86c36fe13eb35058f12}{V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$volume\+\_\+frac)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a8bad549947a503d0fe4c15a36e69eaad}{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$smin, int $\ast$smax, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} full\+\_\+reconst, \hyperlink{int_8h_ad53ae6571c2ac86c36fe13eb35058f12}{V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$volume\+\_\+frac)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$ \hyperlink{fgb3dutil_8c_a99bd66654c3aea2f97f2f88bb3415c2f}{find\+\_\+surf\+\_\+with\+\_\+comp} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int c0, int c1)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_abbb0034eac5a504e142670225ac368f4}{curves\+\_\+on\+\_\+bdry\+\_\+side} (int dir, int side, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_ae138dbaa241c8b4b23972c57ab7549e9}{set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_ad53ae6571c2ac86c36fe13eb35058f12}{V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$volume\+\_\+frac)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_aa724084c031b5903df11ba27e419984b}{remove\+\_\+unphysical\+\_\+crossings3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$smin, int $\ast$smax)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a301a198ba730eac492e9d906159346bb}{track\+\_\+comp\+\_\+through\+\_\+crxings3d} (int $\ast$smin, int $\ast$smax, int $\ast$gmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE} crx\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_ab01758a2e295f10c6df060a7660f7fd5}{fill\+\_\+physical\+\_\+comps} (int $\ast$smin, int $\ast$smax, int $\ast$gmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a3a285872f1c02ca240feae0d82b1ad17}{fill\+\_\+comp\+\_\+with\+\_\+component3d} (int $\ast$smin, int $\ast$smax, int $\ast$gmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgb3dutil_8c_a49745c0cccd473cc1c2c1464e3b43769}{record\+\_\+unphysical\+\_\+ips} (int $\ast$smin, int $\ast$smax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$$\ast$ips)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a0c1259a335de65915c9f2a453f87a03c}{remove\+\_\+unphysical\+\_\+crxings} (int $\ast$smin, int $\ast$smax, int $\ast$gmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE} crx\+\_\+type, int $\ast$num\+\_\+ip, int $\ast$$\ast$ips)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a401fc2dcd22185278551fe3da722635e}{next\+\_\+ip\+\_\+in\+\_\+dir} (const int $\ast$ip, int dir, int $\ast$ipn, int $\ast$smin, int $\ast$smax)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgb3dutil_8c_a661ae66fa3eed0b777a0f6db83a939f7}{idir\+\_\+of\+\_\+dir} (\hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a4ff0a8204884cdbf42db29e94a6a6d7c}{check\+\_\+and\+\_\+repair\+\_\+crx} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$smin, int $\ast$smax)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a27a1d2d04ca2ceb861b09adc29e91b2c}{adjust\+\_\+crossings} (int $\ast$smin, int $\ast$smax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_aa791624d23423756ef748edcb4eb3996}{fill\+\_\+comps\+\_\+in\+\_\+box} (int $\ast$smin\+\_\+in, int $\ast$smax\+\_\+in, int $\ast$gmax, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fgb3dutil_8c_a5efced8042b1c5cbf0a9406a491f9d1c}{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int $\ast$smin, int $\ast$smax, int $\ast$gmax, int $\ast$ip, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, \hyperlink{int_8h_a86f4b67fa5a66694a1fcd503e013bcb4}{C\+R\+X\+\_\+\+T\+Y\+PE} crx\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a5c8cedb8f355a08f312b555ca70738d6}{show\+\_\+component\+\_\+along\+\_\+line} (int i1, int i2, int $\ast$smin, int $\ast$smax, int idir, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgb3dutil_8c_a63516582d7887abe33ff6b4bbb279c99}{adjacent\+\_\+cell} (int $\ast$icrds1, int $\ast$icrds2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgb3dutil_8c_a16701cb3405160f93408d19d81c96acf}{count\+\_\+grid\+\_\+intfc\+\_\+crossings3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_aae19527734693b005dd90b4e4bb8f049}{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a9d527e5da40eb9771b393e345340ede4}{linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts} (double $\ast$f, double $\ast$coords, double $\ast$p0, double $\ast$p1, double $\ast$p2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_affb2f15e13be2820382ea02b45845e39}{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, int ie)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fgb3dutil_8c_ac7358f26447dd4d7f55cbf543ed50bcc}{insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a2ba7a03ee166ed24756e9b051fca8a82}{free\+\_\+crx\+\_\+storage} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a2d98b43f2b21be6b88d76f3b796bd6c7}{check\+\_\+surface\+\_\+curve} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgb3dutil_8c_a1f6c35db8b358215504529bef2e19a6a}{check\+\_\+intfc\+\_\+curve\+\_\+connect} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT@{\+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT}}\label{struct___c_r_x___s_o_r_t}
+\hypertarget{fgb3dutil_8c_struct___c_r_x___s_o_r_t}{}
+\subsubsection{struct \+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{fgb3dutil_8c_af87c477907a04609bf59ede0624ba890}{}\label{fgb3dutil_8c_af87c477907a04609bf59ede0624ba890}
+&
+compare\+\_\+coord&
+\\
+\hline
+
+\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$\hypertarget{fgb3dutil_8c_a2098bbf82cbec54086bcc78ea1fa7427}{}\label{fgb3dutil_8c_a2098bbf82cbec54086bcc78ea1fa7427}
+&
+crx&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+G\+R\+I\+D\+\_\+\+PT@{\+\_\+\+G\+R\+I\+D\+\_\+\+PT}}\label{struct___g_r_i_d___p_t}
+\hypertarget{fgb3dutil_8c_struct___g_r_i_d___p_t}{}
+\subsubsection{struct \+\_\+\+G\+R\+I\+D\+\_\+\+PT}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}\hypertarget{fgb3dutil_8c_a98676e0bb0fe627564524858d3ea4237}{}\label{fgb3dutil_8c_a98676e0bb0fe627564524858d3ea4237}
+&
+comp&
+\\
+\hline
+
+\hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}\hypertarget{fgb3dutil_8c_a3c3b67b298415c004c7becf95df4d3fe}{}\label{fgb3dutil_8c_a3c3b67b298415c004c7becf95df4d3fe}
+&
+cur\+\_\+dir&
+\\
+\hline
+
+int\hypertarget{fgb3dutil_8c_af022567beff0b950f38f0d5256607868}{}\label{fgb3dutil_8c_af022567beff0b950f38f0d5256607868}
+&
+ip\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{fgb3dutil_8c_d4/d1d/struct___g_r_i_d___p_t}{\+\_\+\+G\+R\+I\+D\+\_\+\+PT} $\ast$\hypertarget{fgb3dutil_8c_a6a4446f8aff3bce98456525f578efc2b}{}\label{fgb3dutil_8c_a6a4446f8aff3bce98456525f578efc2b}
+&
+prev&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}{DEBUG_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}crx\+\_\+intfc\char`\"{}}\hypertarget{fgb3dutil_8c_afe759d2b6c4ff043628d467079aa4539}{}\label{fgb3dutil_8c_afe759d2b6c4ff043628d467079aa4539}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX@{M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX}}
+\index{M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX@{M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX}{MAX_SEG_CRX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+S\+E\+G\+\_\+\+C\+RX~20}\hypertarget{fgb3dutil_8c_adf5403f5178f47164dbbf298853d93ab}{}\label{fgb3dutil_8c_adf5403f5178f47164dbbf298853d93ab}
+
+
+\subsection{Typedef Documentation}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!C\+R\+X\+\_\+\+S\+O\+RT@{C\+R\+X\+\_\+\+S\+O\+RT}}
+\index{C\+R\+X\+\_\+\+S\+O\+RT@{C\+R\+X\+\_\+\+S\+O\+RT}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{C\+R\+X\+\_\+\+S\+O\+RT}{CRX_SORT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+R\+X\+\_\+\+S\+O\+RT} {\bf C\+R\+X\+\_\+\+S\+O\+RT}}\hypertarget{fgb3dutil_8c_a45f45e1f9410ad953caf89e6c00c94f3}{}\label{fgb3dutil_8c_a45f45e1f9410ad953caf89e6c00c94f3}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!E\+D\+G\+E\+\_\+\+T\+Y\+PE@{E\+D\+G\+E\+\_\+\+T\+Y\+PE}}
+\index{E\+D\+G\+E\+\_\+\+T\+Y\+PE@{E\+D\+G\+E\+\_\+\+T\+Y\+PE}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{E\+D\+G\+E\+\_\+\+T\+Y\+PE}{EDGE_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE} {\bf E\+D\+G\+E\+\_\+\+T\+Y\+PE}}\hypertarget{fgb3dutil_8c_ad1510a4dce834d4a892a91d627243988}{}\label{fgb3dutil_8c_ad1510a4dce834d4a892a91d627243988}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!G\+R\+I\+D\+\_\+\+PT@{G\+R\+I\+D\+\_\+\+PT}}
+\index{G\+R\+I\+D\+\_\+\+PT@{G\+R\+I\+D\+\_\+\+PT}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{G\+R\+I\+D\+\_\+\+PT}{GRID_PT}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+G\+R\+I\+D\+\_\+\+PT} {\bf G\+R\+I\+D\+\_\+\+PT}}\hypertarget{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}{}\label{fgb3dutil_8c_a12dcb2df79ae3ba8f21667e36f7bea69}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{fgb3dutil_8c_a16af7b253440dadd46a80a4b9fddba4d}{}\label{fgb3dutil_8c_a16af7b253440dadd46a80a4b9fddba4d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX@{M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX}!fgb3dutil.\+c@{fgb3dutil.\+c}}\index{fgb3dutil.\+c@{fgb3dutil.\+c}!M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX@{M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX}}\item[{\em 
+M\+A\+X\+\_\+\+E\+D\+G\+E\+\_\+\+C\+RX\hypertarget{fgb3dutil_8c_a16af7b253440dadd46a80a4b9fddba4da85ba54d9e9f0d92109b23da93e030b00}{}\label{fgb3dutil_8c_a16af7b253440dadd46a80a4b9fddba4da85ba54d9e9f0d92109b23da93e030b00}
+}]\end{description}
+\end{Desc}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE@{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE}}
+\index{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE@{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE}{_EDGE_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+E\+D\+G\+E\+\_\+\+T\+Y\+PE}}\hypertarget{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635f}{}\label{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE@{U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE}!fgb3dutil.\+c@{fgb3dutil.\+c}}\index{fgb3dutil.\+c@{fgb3dutil.\+c}!U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE@{U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE}}\item[{\em 
+U\+N\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE\hypertarget{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fa0746276347ed7f3a8a7fc674720929d5}{}\label{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fa0746276347ed7f3a8a7fc674720929d5}
+}]\index{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE@{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE}!fgb3dutil.\+c@{fgb3dutil.\+c}}\index{fgb3dutil.\+c@{fgb3dutil.\+c}!P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE@{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE}}\item[{\em 
+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+D\+GE\hypertarget{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fae868572b41c93710413fc47a1a334335}{}\label{fgb3dutil_8c_aee428cb2d42316ca1ee56cbfa21c635fae868572b41c93710413fc47a1a334335}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!add\+\_\+to\+\_\+crx\+\_\+list@{add\+\_\+to\+\_\+crx\+\_\+list}}
+\index{add\+\_\+to\+\_\+crx\+\_\+list@{add\+\_\+to\+\_\+crx\+\_\+list}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+to\+\_\+crx\+\_\+list(int $\ast$, int, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, T\+R\+I $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$, C\+R\+X\+I\+N\+G $\ast$, C\+R\+X\+\_\+\+S\+T\+O\+R\+E $\ast$, int $\ast$, int $\ast$, double $\ast$, int, int)}{add_to_crx_list(int *, int, INTERFACE *, TRI *, SURFACE *, CRXING *, CRX_STORE *, int *, int *, double *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void add\+\_\+to\+\_\+crx\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{index, }
+\item[{int}]{ic, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx\+\_\+list, }
+\item[{{\bf C\+R\+X\+\_\+\+S\+T\+O\+RE} $\ast$}]{crx\+\_\+tmp\+\_\+store, }
+\item[{int $\ast$}]{edge\+\_\+list, }
+\item[{int $\ast$}]{nc, }
+\item[{double $\ast$}]{crds\+\_\+crx, }
+\item[{int}]{iv, }
+\item[{int}]{ie}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a5f502e637c60dc60d835b9d3a14bf3ef}{}\label{fgb3dutil_8c_a5f502e637c60dc60d835b9d3a14bf3ef}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!add\+\_\+to\+\_\+edge\+\_\+list@{add\+\_\+to\+\_\+edge\+\_\+list}}
+\index{add\+\_\+to\+\_\+edge\+\_\+list@{add\+\_\+to\+\_\+edge\+\_\+list}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+to\+\_\+edge\+\_\+list(\+T\+R\+I $\ast$, int, C\+R\+X\+\_\+\+S\+T\+O\+R\+E $\ast$, int $\ast$, double $\ast$, int, int)}{add_to_edge_list(TRI *, int, CRX_STORE *, int *, double *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int add\+\_\+to\+\_\+edge\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{int}]{ic, }
+\item[{{\bf C\+R\+X\+\_\+\+S\+T\+O\+RE} $\ast$}]{crx\+\_\+list, }
+\item[{int $\ast$}]{nc, }
+\item[{double $\ast$}]{crds\+\_\+crx, }
+\item[{int}]{iv, }
+\item[{int}]{ie}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a919e60262e9f02121c6286a4fd8ba00c}{}\label{fgb3dutil_8c_a919e60262e9f02121c6286a4fd8ba00c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!adjacent\+\_\+cell@{adjacent\+\_\+cell}}
+\index{adjacent\+\_\+cell@{adjacent\+\_\+cell}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{adjacent\+\_\+cell(int $\ast$icrds1, int $\ast$icrds2)}{adjacent_cell(int *icrds1, int *icrds2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} adjacent\+\_\+cell (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icrds1, }
+\item[{int $\ast$}]{icrds2}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a63516582d7887abe33ff6b4bbb279c99}{}\label{fgb3dutil_8c_a63516582d7887abe33ff6b4bbb279c99}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!adjust\+\_\+crossings@{adjust\+\_\+crossings}}
+\index{adjust\+\_\+crossings@{adjust\+\_\+crossings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+crossings(int $\ast$smin, int $\ast$smax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{adjust_crossings(int *smin, int *smax, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void adjust\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a27a1d2d04ca2ceb861b09adc29e91b2c}{}\label{fgb3dutil_8c_a27a1d2d04ca2ceb861b09adc29e91b2c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!adjust\+\_\+for\+\_\+min\+\_\+spacing@{adjust\+\_\+for\+\_\+min\+\_\+spacing}}
+\index{adjust\+\_\+for\+\_\+min\+\_\+spacing@{adjust\+\_\+for\+\_\+min\+\_\+spacing}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+for\+\_\+min\+\_\+spacing(\+C\+R\+X\+I\+N\+G $\ast$, double, double $\ast$, int, int)}{adjust_for_min_spacing(CRXING *, double, double *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void adjust\+\_\+for\+\_\+min\+\_\+spacing (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crxings, }
+\item[{double}]{crds\+\_\+start, }
+\item[{double $\ast$}]{h, }
+\item[{int}]{n\+\_\+crx, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a67017e07ca31b3f68d61587397fb02e3}{}\label{fgb3dutil_8c_a67017e07ca31b3f68d61587397fb02e3}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+and\+\_\+repair\+\_\+crx@{check\+\_\+and\+\_\+repair\+\_\+crx}}
+\index{check\+\_\+and\+\_\+repair\+\_\+crx@{check\+\_\+and\+\_\+repair\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+and\+\_\+repair\+\_\+crx(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$smin, int $\ast$smax)}{check_and_repair_crx(INTERFACE *intfc, int *smin, int *smax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} check\+\_\+and\+\_\+repair\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a4ff0a8204884cdbf42db29e94a6a6d7c}{}\label{fgb3dutil_8c_a4ff0a8204884cdbf42db29e94a6a6d7c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp@{check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp}}
+\index{check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp@{check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp(int $\ast$, int $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{check_and_unset_bad_comp(int *, int *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int check\+\_\+and\+\_\+unset\+\_\+bad\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a62d42cfb287ddea236955252c1c09008}{}\label{fgb3dutil_8c_a62d42cfb287ddea236955252c1c09008}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+comp\+\_\+at@{check\+\_\+comp\+\_\+at}}
+\index{check\+\_\+comp\+\_\+at@{check\+\_\+comp\+\_\+at}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+comp\+\_\+at(int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, boolean)}{check_comp_at(int *, GRID_DIRECTION, INTERFACE *, int *, int *, boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} check\+\_\+comp\+\_\+at (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf boolean}}]{vocal}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a10d88deb6cd9d1cd81058bafe1d7c7f9}{}\label{fgb3dutil_8c_a10d88deb6cd9d1cd81058bafe1d7c7f9}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+curve\+\_\+connect@{check\+\_\+curve\+\_\+connect}}
+\index{check\+\_\+curve\+\_\+connect@{check\+\_\+curve\+\_\+connect}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+curve\+\_\+connect(\+C\+U\+R\+V\+E $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$)}{check_curve_connect(CURVE *, SURFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void check\+\_\+curve\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a75fd2bfe379d853eb8b87e6b826456ae}{}\label{fgb3dutil_8c_a75fd2bfe379d853eb8b87e6b826456ae}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+intfc\+\_\+curve\+\_\+connect@{check\+\_\+intfc\+\_\+curve\+\_\+connect}}
+\index{check\+\_\+intfc\+\_\+curve\+\_\+connect@{check\+\_\+intfc\+\_\+curve\+\_\+connect}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+intfc\+\_\+curve\+\_\+connect(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{check_intfc_curve_connect(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void check\+\_\+intfc\+\_\+curve\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a1f6c35db8b358215504529bef2e19a6a}{}\label{fgb3dutil_8c_a1f6c35db8b358215504529bef2e19a6a}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!check\+\_\+surface\+\_\+curve@{check\+\_\+surface\+\_\+curve}}
+\index{check\+\_\+surface\+\_\+curve@{check\+\_\+surface\+\_\+curve}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+surface\+\_\+curve(\+S\+U\+R\+F\+A\+C\+E $\ast$s)}{check_surface_curve(SURFACE *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void check\+\_\+surface\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a2d98b43f2b21be6b88d76f3b796bd6c7}{}\label{fgb3dutil_8c_a2d98b43f2b21be6b88d76f3b796bd6c7}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!comp\+\_\+of\+\_\+next\+\_\+side@{comp\+\_\+of\+\_\+next\+\_\+side}}
+\index{comp\+\_\+of\+\_\+next\+\_\+side@{comp\+\_\+of\+\_\+next\+\_\+side}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{comp\+\_\+of\+\_\+next\+\_\+side(\+C\+R\+X\+I\+N\+G $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N)}{comp_of_next_side(CRXING *, GRID_DIRECTION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+next\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_af8c25206230238e2f9dde41ef3cf5200}{}\label{fgb3dutil_8c_af8c25206230238e2f9dde41ef3cf5200}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!comp\+\_\+of\+\_\+this\+\_\+side@{comp\+\_\+of\+\_\+this\+\_\+side}}
+\index{comp\+\_\+of\+\_\+this\+\_\+side@{comp\+\_\+of\+\_\+this\+\_\+side}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{comp\+\_\+of\+\_\+this\+\_\+side(\+C\+R\+X\+I\+N\+G $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N)}{comp_of_this_side(CRXING *, GRID_DIRECTION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+this\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aa73cefab88577d672cab5786d9ca3b05}{}\label{fgb3dutil_8c_aa73cefab88577d672cab5786d9ca3b05}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!count\+\_\+block\+\_\+crossings@{count\+\_\+block\+\_\+crossings}}
+\index{count\+\_\+block\+\_\+crossings@{count\+\_\+block\+\_\+crossings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+block\+\_\+crossings(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, int $\ast$, T\+R\+I $\ast$$\ast$, int, int $\ast$)}{count_block_crossings(RECT_GRID *, int *, TRI **, int, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int count\+\_\+block\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{int $\ast$}]{seg\+\_\+crx\+\_\+count, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{num\+\_\+tris, }
+\item[{int $\ast$}]{ic}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ae57f14fae1ad78a1a567e0c7193f594a}{}\label{fgb3dutil_8c_ae57f14fae1ad78a1a567e0c7193f594a}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!count\+\_\+grid\+\_\+intfc\+\_\+crossings3d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings3d}}
+\index{count\+\_\+grid\+\_\+intfc\+\_\+crossings3d@{count\+\_\+grid\+\_\+intfc\+\_\+crossings3d}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+grid\+\_\+intfc\+\_\+crossings3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{count_grid_intfc_crossings3d(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int count\+\_\+grid\+\_\+intfc\+\_\+crossings3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a16701cb3405160f93408d19d81c96acf}{}\label{fgb3dutil_8c_a16701cb3405160f93408d19d81c96acf}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!crossings\+\_\+on\+\_\+edge@{crossings\+\_\+on\+\_\+edge}}
+\index{crossings\+\_\+on\+\_\+edge@{crossings\+\_\+on\+\_\+edge}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{crossings\+\_\+on\+\_\+edge(double $\ast$$\ast$, double $\ast$, double $\ast$, int, int)}{crossings_on_edge(double **, double *, double *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crossings\+\_\+on\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{crossing, }
+\item[{double $\ast$}]{start, }
+\item[{double $\ast$}]{end, }
+\item[{int}]{axis, }
+\item[{int}]{crx\+\_\+count}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a47b5605dab6fe4c91d4b8d47785e2755}{}\label{fgb3dutil_8c_a47b5605dab6fe4c91d4b8d47785e2755}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!crx\+\_\+ascend@{crx\+\_\+ascend}}
+\index{crx\+\_\+ascend@{crx\+\_\+ascend}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{crx\+\_\+ascend(const void $\ast$, const void $\ast$)}{crx_ascend(const void *, const void *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crx\+\_\+ascend (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{c1, }
+\item[{const void $\ast$}]{c2}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a139fb7058404a2bda4afeb10d889b0ba}{}\label{fgb3dutil_8c_a139fb7058404a2bda4afeb10d889b0ba}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!crx\+\_\+descend@{crx\+\_\+descend}}
+\index{crx\+\_\+descend@{crx\+\_\+descend}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{crx\+\_\+descend(const void $\ast$, const void $\ast$)}{crx_descend(const void *, const void *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crx\+\_\+descend (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{c1, }
+\item[{const void $\ast$}]{c2}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a4ab7465140a64f9953b80e339388cf59}{}\label{fgb3dutil_8c_a4ab7465140a64f9953b80e339388cf59}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!curves\+\_\+on\+\_\+bdry\+\_\+side@{curves\+\_\+on\+\_\+bdry\+\_\+side}}
+\index{curves\+\_\+on\+\_\+bdry\+\_\+side@{curves\+\_\+on\+\_\+bdry\+\_\+side}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{curves\+\_\+on\+\_\+bdry\+\_\+side(int dir, int side, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{curves_on_bdry_side(int dir, int side, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} curves\+\_\+on\+\_\+bdry\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_abbb0034eac5a504e142670225ac368f4}{}\label{fgb3dutil_8c_abbb0034eac5a504e142670225ac368f4}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line@{debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line}}
+\index{debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line@{debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line(const char $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$)}{debug_comp_on_grid_line(const char *, INTERFACE *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void debug\+\_\+comp\+\_\+on\+\_\+grid\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_abb82310b1bf9a8f9b6d182870f7f6d96}{}\label{fgb3dutil_8c_abb82310b1bf9a8f9b6d182870f7f6d96}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!edge\+\_\+comp\+\_\+walk@{edge\+\_\+comp\+\_\+walk}}
+\index{edge\+\_\+comp\+\_\+walk@{edge\+\_\+comp\+\_\+walk}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{edge\+\_\+comp\+\_\+walk(\+G\+R\+I\+D\+\_\+\+P\+T $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, C\+R\+X\+\_\+\+T\+Y\+P\+E)}{edge_comp_walk(GRID_PT *, INTERFACE *, COMPONENT *, CRX_TYPE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf E\+D\+G\+E\+\_\+\+T\+Y\+PE} edge\+\_\+comp\+\_\+walk (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{next\+\_\+comp, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ad51ec4fea53e823748534581752b5ddf}{}\label{fgb3dutil_8c_ad51ec4fea53e823748534581752b5ddf}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!eliminate\+\_\+same\+\_\+crossings@{eliminate\+\_\+same\+\_\+crossings}}
+\index{eliminate\+\_\+same\+\_\+crossings@{eliminate\+\_\+same\+\_\+crossings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{eliminate\+\_\+same\+\_\+crossings(int $\ast$, int $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{eliminate_same_crossings(int *, int *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void eliminate\+\_\+same\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ab6c4b5ea3b944c6e442a8866d7ce74fe}{}\label{fgb3dutil_8c_ab6c4b5ea3b944c6e442a8866d7ce74fe}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!enforce\+\_\+single\+\_\+crossing@{enforce\+\_\+single\+\_\+crossing}}
+\index{enforce\+\_\+single\+\_\+crossing@{enforce\+\_\+single\+\_\+crossing}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{enforce\+\_\+single\+\_\+crossing(int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, struct Table $\ast$, int $\ast$, int $\ast$, int $\ast$)}{enforce_single_crossing(int *, int *, GRID_DIRECTION, struct Table *, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void enforce\+\_\+single\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip\+\_\+start, }
+\item[{int $\ast$}]{ip\+\_\+end, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{struct {\bf Table} $\ast$}]{T, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a59062ef7a7cd827706ee953b27e917ea}{}\label{fgb3dutil_8c_a59062ef7a7cd827706ee953b27e917ea}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+block\+\_\+crx@{fill\+\_\+block\+\_\+crx}}
+\index{fill\+\_\+block\+\_\+crx@{fill\+\_\+block\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+block\+\_\+crx(int, int, int, B\+L\+K\+\_\+\+C\+R\+X $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{fill_block_crx(int, int, int, BLK_CRX *, int *, GRID_DIRECTION, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fill\+\_\+block\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{int}]{k, }
+\item[{{\bf B\+L\+K\+\_\+\+C\+RX} $\ast$}]{blk\+\_\+crx, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a48df39f5f07c7ffd60d891aa829dd4d8}{}\label{fgb3dutil_8c_a48df39f5f07c7ffd60d891aa829dd4d8}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+block\+\_\+curve\+\_\+crx@{fill\+\_\+block\+\_\+curve\+\_\+crx}}
+\index{fill\+\_\+block\+\_\+curve\+\_\+crx@{fill\+\_\+block\+\_\+curve\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+block\+\_\+curve\+\_\+crx(int, int, B\+L\+K\+\_\+\+C\+R\+X $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{fill_block_curve_crx(int, int, BLK_CRX *, int *, GRID_DIRECTION, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fill\+\_\+block\+\_\+curve\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf B\+L\+K\+\_\+\+C\+RX} $\ast$}]{blk\+\_\+crx, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a565d8a6dc35d1bd0134b93f0cb153420}{}\label{fgb3dutil_8c_a565d8a6dc35d1bd0134b93f0cb153420}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+comp\+\_\+with\+\_\+component3d@{fill\+\_\+comp\+\_\+with\+\_\+component3d}}
+\index{fill\+\_\+comp\+\_\+with\+\_\+component3d@{fill\+\_\+comp\+\_\+with\+\_\+component3d}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+comp\+\_\+with\+\_\+component3d(int $\ast$smin, int $\ast$smax, int $\ast$gmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{fill_comp_with_component3d(int *smin, int *smax, int *gmax, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fill\+\_\+comp\+\_\+with\+\_\+component3d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a3a285872f1c02ca240feae0d82b1ad17}{}\label{fgb3dutil_8c_a3a285872f1c02ca240feae0d82b1ad17}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+comps\+\_\+in\+\_\+box@{fill\+\_\+comps\+\_\+in\+\_\+box}}
+\index{fill\+\_\+comps\+\_\+in\+\_\+box@{fill\+\_\+comps\+\_\+in\+\_\+box}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+comps\+\_\+in\+\_\+box(int $\ast$smin\+\_\+in, int $\ast$smax\+\_\+in, int $\ast$gmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{fill_comps_in_box(int *smin_in, int *smax_in, int *gmax, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fill\+\_\+comps\+\_\+in\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin\+\_\+in, }
+\item[{int $\ast$}]{smax\+\_\+in, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aa791624d23423756ef748edcb4eb3996}{}\label{fgb3dutil_8c_aa791624d23423756ef748edcb4eb3996}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+missing\+\_\+crx@{fill\+\_\+missing\+\_\+crx}}
+\index{fill\+\_\+missing\+\_\+crx@{fill\+\_\+missing\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+missing\+\_\+crx(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int)}{fill_missing_crx(INTERFACE *, int *, int *, GRID_DIRECTION, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int fill\+\_\+missing\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{ip, }
+\item[{int $\ast$}]{ipn, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{num\+\_\+crx\+\_\+fill}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a6bca4dbc805e354f012d029e1f7d6d2f}{}\label{fgb3dutil_8c_a6bca4dbc805e354f012d029e1f7d6d2f}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!fill\+\_\+physical\+\_\+comps@{fill\+\_\+physical\+\_\+comps}}
+\index{fill\+\_\+physical\+\_\+comps@{fill\+\_\+physical\+\_\+comps}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{fill\+\_\+physical\+\_\+comps(int $\ast$smin, int $\ast$smax, int $\ast$gmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{fill_physical_comps(int *smin, int *smax, int *gmax, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fill\+\_\+physical\+\_\+comps (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ab01758a2e295f10c6df060a7660f7fd5}{}\label{fgb3dutil_8c_ab01758a2e295f10c6df060a7660f7fd5}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!find\+\_\+surf\+\_\+with\+\_\+comp@{find\+\_\+surf\+\_\+with\+\_\+comp}}
+\index{find\+\_\+surf\+\_\+with\+\_\+comp@{find\+\_\+surf\+\_\+with\+\_\+comp}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+surf\+\_\+with\+\_\+comp(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int c0, int c1)}{find_surf_with_comp(INTERFACE *intfc, int c0, int c1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf S\+U\+R\+F\+A\+CE}$\ast$ find\+\_\+surf\+\_\+with\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int}]{c0, }
+\item[{int}]{c1}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a99bd66654c3aea2f97f2f88bb3415c2f}{}\label{fgb3dutil_8c_a99bd66654c3aea2f97f2f88bb3415c2f}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!free\+\_\+crx\+\_\+storage@{free\+\_\+crx\+\_\+storage}}
+\index{free\+\_\+crx\+\_\+storage@{free\+\_\+crx\+\_\+storage}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+crx\+\_\+storage(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{free_crx_storage(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void free\+\_\+crx\+\_\+storage (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a2ba7a03ee166ed24756e9b051fca8a82}{}\label{fgb3dutil_8c_a2ba7a03ee166ed24756e9b051fca8a82}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!idir\+\_\+of\+\_\+dir@{idir\+\_\+of\+\_\+dir}}
+\index{idir\+\_\+of\+\_\+dir@{idir\+\_\+of\+\_\+dir}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{idir\+\_\+of\+\_\+dir(\+G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir)}{idir_of_dir(GRID_DIRECTION dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int idir\+\_\+of\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a661ae66fa3eed0b777a0f6db83a939f7}{}\label{fgb3dutil_8c_a661ae66fa3eed0b777a0f6db83a939f7}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!insert\+\_\+block\+\_\+crossings@{insert\+\_\+block\+\_\+crossings}}
+\index{insert\+\_\+block\+\_\+crossings@{insert\+\_\+block\+\_\+crossings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+block\+\_\+crossings(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, C\+R\+X\+I\+N\+G $\ast$, int $\ast$$\ast$, int $\ast$, T\+R\+I $\ast$$\ast$, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$, int, int $\ast$, int $\ast$)}{insert_block_crossings(INTERFACE *, RECT_GRID *, CRXING *, int **, int *, TRI **, SURFACE **, int, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void insert\+\_\+block\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx\+\_\+store, }
+\item[{int $\ast$$\ast$}]{seg\+\_\+crx\+\_\+lists, }
+\item[{int $\ast$}]{seg\+\_\+crx\+\_\+count, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surfs, }
+\item[{int}]{num\+\_\+tris, }
+\item[{int $\ast$}]{icrds, }
+\item[{int $\ast$}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a14bd0cde200b908a595f8ca9def1adec}{}\label{fgb3dutil_8c_a14bd0cde200b908a595f8ca9def1adec}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d}}
+\index{insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d@{insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{insert_grid_intfc_crossings3d(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int insert\+\_\+grid\+\_\+intfc\+\_\+crossings3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ac7358f26447dd4d7f55cbf543ed50bcc}{}\label{fgb3dutil_8c_ac7358f26447dd4d7f55cbf543ed50bcc}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx@{install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx}}
+\index{install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx@{install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, B\+O\+N\+D\+\_\+\+T\+R\+I $\ast$, C\+R\+X\+I\+N\+G $\ast$, size\+\_\+t, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N)}{install_btri_states_from_crx(INTERFACE *, BOND_TRI *, CRXING *, size_t, ORIENTATION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} install\+\_\+btri\+\_\+states\+\_\+from\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf B\+O\+N\+D\+\_\+\+T\+RI} $\ast$}]{btri, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx, }
+\item[{size\+\_\+t}]{sizest, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aa64c8c84caf68e9c6814cf5abfb19919}{}\label{fgb3dutil_8c_aa64c8c84caf68e9c6814cf5abfb19919}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!install\+\_\+curve\+\_\+points\+\_\+state@{install\+\_\+curve\+\_\+points\+\_\+state}}
+\index{install\+\_\+curve\+\_\+points\+\_\+state@{install\+\_\+curve\+\_\+points\+\_\+state}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{install\+\_\+curve\+\_\+points\+\_\+state(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{install_curve_points_state(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void install\+\_\+curve\+\_\+points\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_add2946ca9bb4a476d1e364a61783586d}{}\label{fgb3dutil_8c_add2946ca9bb4a476d1e364a61783586d}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge@{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge}}
+\index{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge@{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, P\+O\+I\+N\+T $\ast$pt, T\+R\+I $\ast$tri, S\+U\+R\+F\+A\+C\+E $\ast$surf, int ie)}{interpolate_crx_pt_states_on_edge(INTERFACE *intfc, POINT *pt, TRI *tri, SURFACE *surf, int ie)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pt, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{int}]{ie}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_affb2f15e13be2820382ea02b45845e39}{}\label{fgb3dutil_8c_affb2f15e13be2820382ea02b45845e39}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri@{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri}}
+\index{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri@{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, P\+O\+I\+N\+T $\ast$pt, T\+R\+I $\ast$tri, S\+U\+R\+F\+A\+C\+E $\ast$surf)}{interpolate_crx_pt_states_on_tri(INTERFACE *intfc, POINT *pt, TRI *tri, SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void interpolate\+\_\+crx\+\_\+pt\+\_\+states\+\_\+on\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pt, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aae19527734693b005dd90b4e4bb8f049}{}\label{fgb3dutil_8c_aae19527734693b005dd90b4e4bb8f049}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!is\+\_\+crx@{is\+\_\+crx}}
+\index{is\+\_\+crx@{is\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+crx(int $\ast$, int $\ast$, int, int, int)}{is_crx(int *, int *, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} is\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{comp, }
+\item[{int $\ast$}]{gmax, }
+\item[{int}]{ix, }
+\item[{int}]{iy, }
+\item[{int}]{iz}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ac02d4c945f5c8d06f2efff7933ed5b15}{}\label{fgb3dutil_8c_ac02d4c945f5c8d06f2efff7933ed5b15}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri@{linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri}}
+\index{linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri@{linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri(double $\ast$, double $\ast$, T\+R\+I $\ast$)}{linear_interp_coefs_3d_tri(double *, double *, TRI *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void linear\+\_\+interp\+\_\+coefs\+\_\+3d\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{f, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf T\+RI} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a06fd307c400ae176619c6c5f15239c85}{}\label{fgb3dutil_8c_a06fd307c400ae176619c6c5f15239c85}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts@{linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts}}
+\index{linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts@{linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts(double $\ast$f, double $\ast$coords, double $\ast$p0, double $\ast$p1, double $\ast$p2)}{linear_interp_coefs_three_pts(double *f, double *coords, double *p0, double *p1, double *p2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void linear\+\_\+interp\+\_\+coefs\+\_\+three\+\_\+pts (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{f, }
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{p0, }
+\item[{double $\ast$}]{p1, }
+\item[{double $\ast$}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a9d527e5da40eb9771b393e345340ede4}{}\label{fgb3dutil_8c_a9d527e5da40eb9771b393e345340ede4}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!multi\+\_\+crx\+\_\+debug@{multi\+\_\+crx\+\_\+debug}}
+\index{multi\+\_\+crx\+\_\+debug@{multi\+\_\+crx\+\_\+debug}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{multi\+\_\+crx\+\_\+debug(\+C\+R\+X\+\_\+\+S\+O\+R\+T $\ast$, int, G\+R\+I\+D\+\_\+\+P\+T $\ast$, double $\ast$, double $\ast$, int)}{multi_crx_debug(CRX_SORT *, int, GRID_PT *, double *, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void multi\+\_\+crx\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+\_\+\+S\+O\+RT} $\ast$}]{crx\+\_\+sort, }
+\item[{int}]{crx\+\_\+count, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp, }
+\item[{double $\ast$}]{start, }
+\item[{double $\ast$}]{end, }
+\item[{int}]{unphys\+\_\+crxing}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a9ad6d0f182c44faef909a3005e1b165e}{}\label{fgb3dutil_8c_a9ad6d0f182c44faef909a3005e1b165e}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!next\+\_\+crossing@{next\+\_\+crossing}}
+\index{next\+\_\+crossing@{next\+\_\+crossing}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{next\+\_\+crossing(int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, struct Table $\ast$, C\+R\+X\+I\+N\+G $\ast$)}{next_crossing(int *, int *, GRID_DIRECTION, struct Table *, CRXING *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+R\+X\+I\+NG} $\ast$ next\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{struct {\bf Table} $\ast$}]{T, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ac66bda97164cc31fb091e2e705d052fb}{}\label{fgb3dutil_8c_ac66bda97164cc31fb091e2e705d052fb}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!next\+\_\+ip\+\_\+in\+\_\+dir@{next\+\_\+ip\+\_\+in\+\_\+dir}}
+\index{next\+\_\+ip\+\_\+in\+\_\+dir@{next\+\_\+ip\+\_\+in\+\_\+dir}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{next\+\_\+ip\+\_\+in\+\_\+dir(const int $\ast$ip, int dir, int $\ast$ipn, int $\ast$smin, int $\ast$smax)}{next_ip_in_dir(const int *ip, int dir, int *ipn, int *smin, int *smax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} next\+\_\+ip\+\_\+in\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{const int $\ast$}]{ip, }
+\item[{int}]{dir, }
+\item[{int $\ast$}]{ipn, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a401fc2dcd22185278551fe3da722635e}{}\label{fgb3dutil_8c_a401fc2dcd22185278551fe3da722635e}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx@{next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx}}
+\index{next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx@{next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx(\+G\+R\+I\+D\+\_\+\+P\+T $\ast$, C\+R\+X\+I\+N\+G $\ast$)}{next_side_comp_at_crx(GRID_PT *, CRXING *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+O\+M\+P\+O\+N\+E\+NT} next\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a8c52408f5af5fae9113ca2c9ae8e3939}{}\label{fgb3dutil_8c_a8c52408f5af5fae9113ca2c9ae8e3939}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!opposite\+\_\+direction@{opposite\+\_\+direction}}
+\index{opposite\+\_\+direction@{opposite\+\_\+direction}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{opposite\+\_\+direction(\+G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N)}{opposite_direction(GRID_DIRECTION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} opposite\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_abf74943acfc5b0c57313966da8d4df8c}{}\label{fgb3dutil_8c_abf74943acfc5b0c57313966da8d4df8c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!physical\+\_\+edge@{physical\+\_\+edge}}
+\index{physical\+\_\+edge@{physical\+\_\+edge}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{physical\+\_\+edge(int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, C\+R\+X\+\_\+\+T\+Y\+P\+E)}{physical_edge(int *, GRID_DIRECTION, INTERFACE *, int *, int *, CRX_TYPE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} physical\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aabc78f3a0fba9a83cfce28112cca8043}{}\label{fgb3dutil_8c_aabc78f3a0fba9a83cfce28112cca8043}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}}
+\index{print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line(int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, struct Table $\ast$, int $\ast$, int $\ast$, int $\ast$)}{print_comp_along_grid_line(int *, int *, GRID_DIRECTION, struct Table *, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip1, }
+\item[{int $\ast$}]{ip2, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{struct {\bf Table} $\ast$}]{T, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_add6e76073018000d4d0aea606451c688}{}\label{fgb3dutil_8c_add6e76073018000d4d0aea606451c688}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!print\+\_\+crx\+\_\+sort@{print\+\_\+crx\+\_\+sort}}
+\index{print\+\_\+crx\+\_\+sort@{print\+\_\+crx\+\_\+sort}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+crx\+\_\+sort(\+C\+R\+X\+\_\+\+S\+O\+R\+T $\ast$, int, G\+R\+I\+D\+\_\+\+P\+T $\ast$)}{print_crx_sort(CRX_SORT *, int, GRID_PT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+crx\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+\_\+\+S\+O\+RT} $\ast$}]{crx\+\_\+sort, }
+\item[{int}]{nc, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a1c065fb583a0a587a4a53bd71ba97a4f}{}\label{fgb3dutil_8c_a1c065fb583a0a587a4a53bd71ba97a4f}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!print\+\_\+edge\+\_\+crossings@{print\+\_\+edge\+\_\+crossings}}
+\index{print\+\_\+edge\+\_\+crossings@{print\+\_\+edge\+\_\+crossings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+edge\+\_\+crossings(int $\ast$, int $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{print_edge_crossings(int *, int *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+edge\+\_\+crossings (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aa2a3c798976c6bd79cd74d032779c661}{}\label{fgb3dutil_8c_aa2a3c798976c6bd79cd74d032779c661}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!print\+\_\+edge\+\_\+crxings@{print\+\_\+edge\+\_\+crxings}}
+\index{print\+\_\+edge\+\_\+crxings@{print\+\_\+edge\+\_\+crxings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+edge\+\_\+crxings(\+G\+R\+I\+D\+\_\+\+P\+T $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{print_edge_crxings(GRID_PT *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+edge\+\_\+crxings (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a8015c87abe92ff2591cadfc51a27a208}{}\label{fgb3dutil_8c_a8015c87abe92ff2591cadfc51a27a208}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box@{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box}}
+\index{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box@{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$smin, int $\ast$smax, boolean full\+\_\+reconst, V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+A\+C $\ast$volume\+\_\+frac)}{reconstruct_intfc3d_in_box(INTERFACE *intfc, int *smin, int *smax, boolean full_reconst, VOLUME_FRAC *volume_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf boolean}}]{full\+\_\+reconst, }
+\item[{{\bf V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$}]{volume\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a8bad549947a503d0fe4c15a36e69eaad}{}\label{fgb3dutil_8c_a8bad549947a503d0fe4c15a36e69eaad}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb@{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb}}
+\index{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb@{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$smin, int $\ast$smax, boolean full\+\_\+reconst, V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+A\+C $\ast$volume\+\_\+frac)}{reconstruct_intfc3d_in_box_lgb(INTERFACE *intfc, int *smin, int *smax, boolean full_reconst, VOLUME_FRAC *volume_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} reconstruct\+\_\+intfc3d\+\_\+in\+\_\+box\+\_\+lgb (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf boolean}}]{full\+\_\+reconst, }
+\item[{{\bf V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$}]{volume\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_af5dda6d2b8960996ed15634c6872522e}{}\label{fgb3dutil_8c_af5dda6d2b8960996ed15634c6872522e}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!record\+\_\+unphysical\+\_\+ips@{record\+\_\+unphysical\+\_\+ips}}
+\index{record\+\_\+unphysical\+\_\+ips@{record\+\_\+unphysical\+\_\+ips}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{record\+\_\+unphysical\+\_\+ips(int $\ast$smin, int $\ast$smax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$$\ast$ips)}{record_unphysical_ips(int *smin, int *smax, INTERFACE *intfc, int **ips)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int record\+\_\+unphysical\+\_\+ips (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$$\ast$}]{ips}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a49745c0cccd473cc1c2c1464e3b43769}{}\label{fgb3dutil_8c_a49745c0cccd473cc1c2c1464e3b43769}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!remove\+\_\+crossing@{remove\+\_\+crossing}}
+\index{remove\+\_\+crossing@{remove\+\_\+crossing}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{remove\+\_\+crossing(\+C\+R\+X\+I\+N\+G $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int $\ast$, struct Table $\ast$)}{remove_crossing(CRXING *, int *, GRID_DIRECTION, int *, struct Table *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} remove\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int $\ast$}]{gmax, }
+\item[{struct {\bf Table} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a3dd822b5b2e5788836c83e6137f063ba}{}\label{fgb3dutil_8c_a3dd822b5b2e5788836c83e6137f063ba}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!remove\+\_\+unphy\+\_\+pair@{remove\+\_\+unphy\+\_\+pair}}
+\index{remove\+\_\+unphy\+\_\+pair@{remove\+\_\+unphy\+\_\+pair}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{remove\+\_\+unphy\+\_\+pair(int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, struct Table $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$$\ast$)}{remove_unphy_pair(int *, GRID_DIRECTION, struct Table *, int *, int *, int *, int *, int **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} remove\+\_\+unphy\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{struct {\bf Table} $\ast$}]{T, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{num\+\_\+ip, }
+\item[{int $\ast$$\ast$}]{ips}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a216e29f0a0fa32ad5803307f26dad2e9}{}\label{fgb3dutil_8c_a216e29f0a0fa32ad5803307f26dad2e9}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!remove\+\_\+unphysical\+\_\+crossings3d@{remove\+\_\+unphysical\+\_\+crossings3d}}
+\index{remove\+\_\+unphysical\+\_\+crossings3d@{remove\+\_\+unphysical\+\_\+crossings3d}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{remove\+\_\+unphysical\+\_\+crossings3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$smin, int $\ast$smax)}{remove_unphysical_crossings3d(INTERFACE *intfc, int *smin, int *smax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} remove\+\_\+unphysical\+\_\+crossings3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_aa724084c031b5903df11ba27e419984b}{}\label{fgb3dutil_8c_aa724084c031b5903df11ba27e419984b}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!remove\+\_\+unphysical\+\_\+crxings@{remove\+\_\+unphysical\+\_\+crxings}}
+\index{remove\+\_\+unphysical\+\_\+crxings@{remove\+\_\+unphysical\+\_\+crxings}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{remove\+\_\+unphysical\+\_\+crxings(int $\ast$smin, int $\ast$smax, int $\ast$gmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+R\+X\+\_\+\+T\+Y\+P\+E crx\+\_\+type, int $\ast$num\+\_\+ip, int $\ast$$\ast$ips)}{remove_unphysical_crxings(int *smin, int *smax, int *gmax, INTERFACE *intfc, CRX_TYPE crx_type, int *num_ip, int **ips)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void remove\+\_\+unphysical\+\_\+crxings (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type, }
+\item[{int $\ast$}]{num\+\_\+ip, }
+\item[{int $\ast$$\ast$}]{ips}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a0c1259a335de65915c9f2a453f87a03c}{}\label{fgb3dutil_8c_a0c1259a335de65915c9f2a453f87a03c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!reset\+\_\+segment@{reset\+\_\+segment}}
+\index{reset\+\_\+segment@{reset\+\_\+segment}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{reset\+\_\+segment(int $\ast$, int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, int $\ast$, int $\ast$, int $\ast$)}{reset_segment(int *, int *, int *, GRID_DIRECTION, COMPONENT *, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} reset\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{int $\ast$}]{ip\+\_\+start, }
+\item[{int $\ast$}]{ip\+\_\+end, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{comp, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_abb8cf66b266473f00adccd6dd7866576}{}\label{fgb3dutil_8c_abb8cf66b266473f00adccd6dd7866576}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line@{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line}}
+\index{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line@{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, C\+R\+X\+\_\+\+T\+Y\+P\+E, int $\ast$, int $\ast$$\ast$)}{rm_unphy_crx_along_grid_line(INTERFACE *, int *, int *, int *, int *, GRID_DIRECTION, CRX_TYPE, int *, int **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type, }
+\item[{int $\ast$}]{num\+\_\+ip, }
+\item[{int $\ast$$\ast$}]{ips}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a4fc5958cfca7a0f4b7131946d587d5d6}{}\label{fgb3dutil_8c_a4fc5958cfca7a0f4b7131946d587d5d6}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old@{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old}}
+\index{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old@{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, int $\ast$smin, int $\ast$smax, int $\ast$gmax, int $\ast$ip, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, C\+R\+X\+\_\+\+T\+Y\+P\+E crx\+\_\+type)}{rm_unphy_crx_along_grid_line_old(INTERFACE *intfc, int *smin, int *smax, int *gmax, int *ip, GRID_DIRECTION dir, CRX_TYPE crx_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int rm\+\_\+unphy\+\_\+crx\+\_\+along\+\_\+grid\+\_\+line\+\_\+old (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a5efced8042b1c5cbf0a9406a491f9d1c}{}\label{fgb3dutil_8c_a5efced8042b1c5cbf0a9406a491f9d1c}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!set\+\_\+comp\+\_\+at\+\_\+vertex@{set\+\_\+comp\+\_\+at\+\_\+vertex}}
+\index{set\+\_\+comp\+\_\+at\+\_\+vertex@{set\+\_\+comp\+\_\+at\+\_\+vertex}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+comp\+\_\+at\+\_\+vertex(\+C\+R\+X\+I\+N\+G $\ast$, P\+O\+I\+N\+T $\ast$, T\+R\+I $\ast$, S\+U\+R\+F\+A\+C\+E $\ast$, int)}{set_comp_at_vertex(CRXING *, POINT *, TRI *, SURFACE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} set\+\_\+comp\+\_\+at\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ade91cc69888382a88eaacef6f080d3bd}{}\label{fgb3dutil_8c_ade91cc69888382a88eaacef6f080d3bd}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction@{set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction}}
+\index{set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction@{set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+A\+C $\ast$volume\+\_\+frac)}{set_crx_storage_for_reconstruction(INTERFACE *intfc, VOLUME_FRAC *volume_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+crx\+\_\+storage\+\_\+for\+\_\+reconstruction (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf V\+O\+L\+U\+M\+E\+\_\+\+F\+R\+AC} $\ast$}]{volume\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ae138dbaa241c8b4b23972c57ab7549e9}{}\label{fgb3dutil_8c_ae138dbaa241c8b4b23972c57ab7549e9}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!set\+\_\+expanded\+\_\+grid@{set\+\_\+expanded\+\_\+grid}}
+\index{set\+\_\+expanded\+\_\+grid@{set\+\_\+expanded\+\_\+grid}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+expanded\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$dual\+\_\+grid, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$expanded\+\_\+grid)}{set_expanded_grid(RECT_GRID *dual_grid, RECT_GRID *expanded_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+expanded\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{dual\+\_\+grid, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{expanded\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_af2a85e9c6387f888b4265eafdc4a6929}{}\label{fgb3dutil_8c_af2a85e9c6387f888b4265eafdc4a6929}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!set\+\_\+grid\+\_\+crx\+\_\+edge@{set\+\_\+grid\+\_\+crx\+\_\+edge}}
+\index{set\+\_\+grid\+\_\+crx\+\_\+edge@{set\+\_\+grid\+\_\+crx\+\_\+edge}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+crx\+\_\+edge(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, double $\ast$, double $\ast$, int $\ast$, int $\ast$)}{set_grid_crx_edge(RECT_GRID *, int *, GRID_DIRECTION, double *, double *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+grid\+\_\+crx\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rect\+\_\+grid, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{double $\ast$}]{start, }
+\item[{double $\ast$}]{end, }
+\item[{int $\ast$}]{axis, }
+\item[{int $\ast$}]{polarity}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ab6a6887ee09158ba98a47e7e5f11f712}{}\label{fgb3dutil_8c_ab6a6887ee09158ba98a47e7e5f11f712}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!show\+\_\+component\+\_\+along\+\_\+line@{show\+\_\+component\+\_\+along\+\_\+line}}
+\index{show\+\_\+component\+\_\+along\+\_\+line@{show\+\_\+component\+\_\+along\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+component\+\_\+along\+\_\+line(int i1, int i2, int $\ast$smin, int $\ast$smax, int idir, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{show_component_along_line(int i1, int i2, int *smin, int *smax, int idir, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void show\+\_\+component\+\_\+along\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{int}]{i1, }
+\item[{int}]{i2, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int}]{idir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a5c8cedb8f355a08f312b555ca70738d6}{}\label{fgb3dutil_8c_a5c8cedb8f355a08f312b555ca70738d6}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx@{this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx}}
+\index{this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx@{this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx(\+G\+R\+I\+D\+\_\+\+P\+T $\ast$, C\+R\+X\+I\+N\+G $\ast$)}{this_side_comp_at_crx(GRID_PT *, CRXING *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+O\+M\+P\+O\+N\+E\+NT} this\+\_\+side\+\_\+comp\+\_\+at\+\_\+crx (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+PT} $\ast$}]{gp, }
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$}]{crx}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a48da12078ba6f000137b710c03da5e0f}{}\label{fgb3dutil_8c_a48da12078ba6f000137b710c03da5e0f}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!track\+\_\+comp\+\_\+through\+\_\+crxings3d@{track\+\_\+comp\+\_\+through\+\_\+crxings3d}}
+\index{track\+\_\+comp\+\_\+through\+\_\+crxings3d@{track\+\_\+comp\+\_\+through\+\_\+crxings3d}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{track\+\_\+comp\+\_\+through\+\_\+crxings3d(int $\ast$smin, int $\ast$smax, int $\ast$gmax, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+R\+X\+\_\+\+T\+Y\+P\+E crx\+\_\+type)}{track_comp_through_crxings3d(int *smin, int *smax, int *gmax, INTERFACE *intfc, CRX_TYPE crx_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} track\+\_\+comp\+\_\+through\+\_\+crxings3d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+R\+X\+\_\+\+T\+Y\+PE}}]{crx\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a301a198ba730eac492e9d906159346bb}{}\label{fgb3dutil_8c_a301a198ba730eac492e9d906159346bb}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}}
+\index{unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, int $\ast$, int)}{unset_comp_along_grid_line(INTERFACE *, int *, int *, int *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void unset\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{int}]{idir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a7382a9f06d3c6a653532cff60cfc6871}{}\label{fgb3dutil_8c_a7382a9f06d3c6a653532cff60cfc6871}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!unset\+\_\+comp\+\_\+exist@{unset\+\_\+comp\+\_\+exist}}
+\index{unset\+\_\+comp\+\_\+exist@{unset\+\_\+comp\+\_\+exist}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{unset\+\_\+comp\+\_\+exist(int $\ast$, int $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{unset_comp_exist(int *, int *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} unset\+\_\+comp\+\_\+exist (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_a777691a1a9098a85d7d1422e040d98da}{}\label{fgb3dutil_8c_a777691a1a9098a85d7d1422e040d98da}
+\index{fgb3dutil.\+c@{fgb3dutil.\+c}!walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}}
+\index{walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line@{walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line}!fgb3dutil.\+c@{fgb3dutil.\+c}}
+\subsubsection[{\texorpdfstring{walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N)}{walk_comp_along_grid_line(INTERFACE *, int *, int *, int *, int *, GRID_DIRECTION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int walk\+\_\+comp\+\_\+along\+\_\+grid\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fgb3dutil_8c_ab7d93a9c1a0a7ed0cfd89f17b7e2994d}{}\label{fgb3dutil_8c_ab7d93a9c1a0a7ed0cfd89f17b7e2994d}

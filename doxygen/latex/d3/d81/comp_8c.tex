@@ -1,0 +1,109 @@
+\hypertarget{comp_8c}{}\section{D\+N\+S/src/intfc/comp.c File Reference}
+\label{comp_8c}\index{D\+N\+S/src/intfc/comp.\+c@{D\+N\+S/src/intfc/comp.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{comp_8c_ab59c473a7f0559c52ba06be17e27ab24}{component} (double $\ast$coords, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{comp_8c_a15697a9dda0007be5f389391eb9851bd}{nearest\+\_\+interior\+\_\+comp} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} multiple\+\_\+comps, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} dflt\+\_\+comp, double $\ast$coords, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{comp_8c_ac220b573f7d3f5031f188005673d6406}{long\+\_\+component} (double $\ast$coords, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{comp_8c_a2d4906bac335810661e761b3ae7671f5}{show\+\_\+\+C\+O\+MP} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{comp_8c_a315a4e152dd35140c5681a878f4cd2aa}{new\+\_\+component} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{comp_8c_ac1eb69f9e3b860bb600f2f65324eb3e5}{is\+\_\+excluded\+\_\+comp} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{comp_8c_ae3a9b865d4523b414e3b397bc4dcbddb}{exclude\+\_\+comp} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{comp_8c_a7e9ac2baf6622812d9811211769328d1}{set\+\_\+topological\+\_\+grid} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$input\+\_\+grid)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{comp_8c_abb773a51705ecaca9cb7316a71b8c5c9}{check\+\_\+comps\+\_\+at\+\_\+nodes} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a968d2491c75fa1339ffe1cd56c372c84}{O\+\_\+\+N\+O\+DE} $\ast$$\ast$onode\+\_\+list)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{comp_8c_acf36542e587852d4250cb7d9c0822ee2}{comps\+\_\+consistent\+\_\+at\+\_\+node} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{comp.\+c@{comp.\+c}!check\+\_\+comps\+\_\+at\+\_\+nodes@{check\+\_\+comps\+\_\+at\+\_\+nodes}}
+\index{check\+\_\+comps\+\_\+at\+\_\+nodes@{check\+\_\+comps\+\_\+at\+\_\+nodes}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{check\+\_\+comps\+\_\+at\+\_\+nodes(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, O\+\_\+\+N\+O\+D\+E $\ast$$\ast$onode\+\_\+list)}{check_comps_at_nodes(INTERFACE *intfc, O_NODE **onode_list)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int check\+\_\+comps\+\_\+at\+\_\+nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf O\+\_\+\+N\+O\+DE} $\ast$$\ast$}]{onode\+\_\+list}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_abb773a51705ecaca9cb7316a71b8c5c9}{}\label{comp_8c_abb773a51705ecaca9cb7316a71b8c5c9}
+\index{comp.\+c@{comp.\+c}!component@{component}}
+\index{component@{component}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{component(double $\ast$coords, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{component(double *coords, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+O\+M\+P\+O\+N\+E\+NT} component (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_ab59c473a7f0559c52ba06be17e27ab24}{}\label{comp_8c_ab59c473a7f0559c52ba06be17e27ab24}
+\index{comp.\+c@{comp.\+c}!comps\+\_\+consistent\+\_\+at\+\_\+node@{comps\+\_\+consistent\+\_\+at\+\_\+node}}
+\index{comps\+\_\+consistent\+\_\+at\+\_\+node@{comps\+\_\+consistent\+\_\+at\+\_\+node}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{comps\+\_\+consistent\+\_\+at\+\_\+node(\+N\+O\+D\+E $\ast$node)}{comps_consistent_at_node(NODE *node)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int comps\+\_\+consistent\+\_\+at\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_acf36542e587852d4250cb7d9c0822ee2}{}\label{comp_8c_acf36542e587852d4250cb7d9c0822ee2}
+\index{comp.\+c@{comp.\+c}!exclude\+\_\+comp@{exclude\+\_\+comp}}
+\index{exclude\+\_\+comp@{exclude\+\_\+comp}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{exclude\+\_\+comp(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{exclude_comp(COMPONENT comp, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void exclude\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_ae3a9b865d4523b414e3b397bc4dcbddb}{}\label{comp_8c_ae3a9b865d4523b414e3b397bc4dcbddb}
+\index{comp.\+c@{comp.\+c}!is\+\_\+excluded\+\_\+comp@{is\+\_\+excluded\+\_\+comp}}
+\index{is\+\_\+excluded\+\_\+comp@{is\+\_\+excluded\+\_\+comp}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+excluded\+\_\+comp(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{is_excluded_comp(COMPONENT comp, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} is\+\_\+excluded\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_ac1eb69f9e3b860bb600f2f65324eb3e5}{}\label{comp_8c_ac1eb69f9e3b860bb600f2f65324eb3e5}
+\index{comp.\+c@{comp.\+c}!long\+\_\+component@{long\+\_\+component}}
+\index{long\+\_\+component@{long\+\_\+component}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{long\+\_\+component(double $\ast$coords, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{long_component(double *coords, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+O\+M\+P\+O\+N\+E\+NT} long\+\_\+component (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_ac220b573f7d3f5031f188005673d6406}{}\label{comp_8c_ac220b573f7d3f5031f188005673d6406}
+\index{comp.\+c@{comp.\+c}!nearest\+\_\+interior\+\_\+comp@{nearest\+\_\+interior\+\_\+comp}}
+\index{nearest\+\_\+interior\+\_\+comp@{nearest\+\_\+interior\+\_\+comp}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{nearest\+\_\+interior\+\_\+comp(boolean multiple\+\_\+comps, C\+O\+M\+P\+O\+N\+E\+N\+T dflt\+\_\+comp, double $\ast$coords, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{nearest_interior_comp(boolean multiple_comps, COMPONENT dflt_comp, double *coords, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+O\+M\+P\+O\+N\+E\+NT} nearest\+\_\+interior\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{multiple\+\_\+comps, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{dflt\+\_\+comp, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_a15697a9dda0007be5f389391eb9851bd}{}\label{comp_8c_a15697a9dda0007be5f389391eb9851bd}
+\index{comp.\+c@{comp.\+c}!new\+\_\+component@{new\+\_\+component}}
+\index{new\+\_\+component@{new\+\_\+component}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{new\+\_\+component(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp)}{new_component(COMPONENT comp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+O\+M\+P\+O\+N\+E\+NT} new\+\_\+component (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_a315a4e152dd35140c5681a878f4cd2aa}{}\label{comp_8c_a315a4e152dd35140c5681a878f4cd2aa}
+\index{comp.\+c@{comp.\+c}!set\+\_\+topological\+\_\+grid@{set\+\_\+topological\+\_\+grid}}
+\index{set\+\_\+topological\+\_\+grid@{set\+\_\+topological\+\_\+grid}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+topological\+\_\+grid(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$input\+\_\+grid)}{set_topological_grid(INTERFACE *intfc, RECT_GRID *input_grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+topological\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{input\+\_\+grid}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_a7e9ac2baf6622812d9811211769328d1}{}\label{comp_8c_a7e9ac2baf6622812d9811211769328d1}
+\index{comp.\+c@{comp.\+c}!show\+\_\+\+C\+O\+MP@{show\+\_\+\+C\+O\+MP}}
+\index{show\+\_\+\+C\+O\+MP@{show\+\_\+\+C\+O\+MP}!comp.\+c@{comp.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+\+C\+O\+M\+P(\+F\+I\+L\+E $\ast$file, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{show_COMP(FILE *file, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void show\+\_\+\+C\+O\+MP (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{comp_8c_a2d4906bac335810661e761b3ae7671f5}{}\label{comp_8c_a2d4906bac335810661e761b3ae7671f5}

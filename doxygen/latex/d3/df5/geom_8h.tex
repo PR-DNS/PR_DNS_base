@@ -1,0 +1,2694 @@
+\hypertarget{geom_8h}{}\section{D\+N\+S/src/intfc/geom.h File Reference}
+\label{geom_8h}\index{D\+N\+S/src/intfc/geom.\+h@{D\+N\+S/src/intfc/geom.\+h}}
+{\ttfamily \#include $<$util/cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$util/vmalloc.\+h$>$}\\*
+{\ttfamily \#include $<$intfc/triangledefs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{geom_8h_d0/de8/struct___r_e_c_t___g_r_i_d}{\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID}
+\item 
+struct \hyperlink{struct___r_e_c_t___g_r_i_d_1_1___r_e_m_a_p}{\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+::\+\_\+\+R\+E\+M\+AP}
+\item 
+struct \hyperlink{geom_8h_db/dde/struct___c_o_m_m___b_o_x}{\+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX}
+\item 
+struct \hyperlink{geom_8h_dd/da4/struct___r_e_c_t___b_o_x}{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX}
+\item 
+struct \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}
+\item 
+struct \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}
+\item 
+struct \hyperlink{geom_8h_d9/de0/struct_b_d_r_y___b_o_x___p_a_r_a_m_s}{B\+D\+R\+Y\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d3/d31/struct_e_l_l_i_p___p_a_r_a_m_s}{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d3/d8d/struct_p_l_a_n_e___p_a_r_a_m_s}{P\+L\+A\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_dc/d9d/struct_d_u_m_b_b_e_l_l___p_a_r_a_m_s}{D\+U\+M\+B\+B\+E\+L\+L\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_db/ddd/struct_l_i_n_e___p_a_r_a_m_s}{L\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d8/dd9/struct_e_l_l_i_p2_d___p_a_r_a_m_s}{E\+L\+L\+I\+P2\+D\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d5/dab/struct_e_l_l_i_p2_d___t_i_l_t___p_a_r_a_m_s}{E\+L\+L\+I\+P2\+D\+\_\+\+T\+I\+L\+T\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d1/d33/struct_t_r_i_a_n_g_l_e___p_a_r_a_m_s}{T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d2/dd4/struct_r_e_c_t_a_n_g_l_e___p_a_r_a_m_s}{R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d2/d05/struct_c_o_s_m_o_s___p_a_r_a_m_s}{C\+O\+S\+M\+O\+S\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d4/dba/struct_t_a_e_g_e_u_k___p_a_r_a_m_s}{T\+A\+E\+G\+E\+U\+K\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d8/dcb/struct_w_i_n_g___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_dd/db7/struct_p_r_o_p_e_l_l_e_r___p_a_r_a_m_s}{P\+R\+O\+P\+E\+L\+L\+E\+R\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d6/daf/struct_t_d_i_s_k___p_a_r_a_m_s}{T\+D\+I\+S\+K\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_db/d11/struct_s_l_o_t_t_e_d___c_i_r_c_l_e___p_a_r_a_m_s}{S\+L\+O\+T\+T\+E\+D\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d7/d69/struct_m_c___p_a_r_a_m_s}{M\+C\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_db/d13/struct_m___e_l_l_i_p___p_a_r_a_m_s}{M\+\_\+\+E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d2/d22/struct_c_i_r_c_l_e___p_a_r_a_m_s}{C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_df/df1/struct_p_r_o_j_e_c_t_i_l_e___p_a_r_a_m_s}{P\+R\+O\+J\+E\+C\+T\+I\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_dd/d1d/struct_c_u_b_o_i_d___p_a_r_a_m_s}{C\+U\+B\+O\+I\+D\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d3/dbb/struct_c_y_l_i_n_d_e_r___p_a_r_a_m_s}{C\+Y\+L\+I\+N\+D\+E\+R\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_dc/de1/struct_c_o_n_e___p_a_r_a_m_s}{C\+O\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d7/d3d/struct_t_e_t_r_a_h_e_d_r_o_n___p_a_r_a_m_s}{T\+E\+T\+R\+A\+H\+E\+D\+R\+O\+N\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_db/d11/struct_s_i_n_e___p_a_r_a_m_s}{S\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d3/d40/struct_s_e_e_d___p_a_r_a_m_s}{S\+E\+E\+D\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d4/d86/struct_r_e_c_t___b_o_x___p_a_r_a_m_s}{R\+E\+C\+T\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_db/d57/struct_r_e_c_t___c_o_n_s_t_r___p_a_r_a_m_s}{R\+E\+C\+T\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d2/d21/struct_e_l_l_i_p_s_e___c_o_n_s_t_r___p_a_r_a_m_s}{E\+L\+L\+I\+P\+S\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_de/d83/struct_c_r_o_s_s___c_o_n_s_t_r___p_a_r_a_m_s}{C\+R\+O\+S\+S\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_da/d7a/struct_w_i_n_g___t_y_p_e1___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E1\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d9/d30/struct_w_i_n_g___t_y_p_e2___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E2\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d3/d5c/struct_w_i_n_g___t_y_p_e3___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E3\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{geom_8h_d8/daa/struct_w_i_n_g___c_o_n_s_t_r___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{geom_8h_a814bad324c6b1d56172a219747ddb19c}{N\+O\+B\+UF}~N\+U\+LL
+\item 
+\#define \hyperlink{geom_8h_a2edffa098d45364ead5275aab0adb4ce}{d\+\_\+index1d}(ix,  gmax)          ~(ix)
+\item 
+\#define \hyperlink{geom_8h_a5935090fab13cce088c7f135d5bf5e6a}{d\+\_\+index2d}(ix,  iy,  gmax)                                                                            ~((iy)$\ast$((gmax)\mbox{[}0\mbox{]}+1)+(ix))
+\item 
+\#define \hyperlink{geom_8h_ad0ccbbf486f9aa6ac0ddac38ff127364}{d\+\_\+index3d}(ix,  iy,  iz,  gmax)                                                                            ~(((iz)$\ast$((gmax)\mbox{[}1\mbox{]}+1)+(iy))$\ast$((gmax)\mbox{[}0\mbox{]}+1)+(ix))
+\item 
+\#define \hyperlink{geom_8h_a0ac295010316dc486f6a9c7dfa1c1721}{d\+\_\+index}(icoords,  gmax,  dim)                                                          
+\item 
+\#define \hyperlink{geom_8h_a6b94183f4623b659bf5edd174edf4624}{grid\+\_\+center\+\_\+coord}(i,  gr)~(0.\+5 $\ast$ ((gr)-\/$>$L\mbox{[}i\mbox{]} + (gr)-\/$>$U\mbox{[}i\mbox{]}))
+\item 
+\#define \hyperlink{geom_8h_a8f98c1d3c3b576c8a13bf81880b6198b}{cell\+\_\+index}(p,  i,  gr)~\hyperlink{uprotos_8h_ae6434d84a59734e516433de166b3465a}{irint}(floor(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))
+\item 
+\#define \hyperlink{geom_8h_ac91859d9d9f7bf61b99ce4fbea9598b0}{cell\+\_\+floor}(p,  i,  gr)~\hyperlink{uprotos_8h_ae6434d84a59734e516433de166b3465a}{irint}(floor(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))
+\item 
+\#define \hyperlink{geom_8h_adccf35be79ff1a5c0bc01e12be422a4b}{cell\+\_\+ceil}(p,  i,  gr)~\hyperlink{uprotos_8h_ae6434d84a59734e516433de166b3465a}{irint}(ceil(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))
+\item 
+\#define \hyperlink{geom_8h_ac1c565d33a29e3113fc497a4219eb7c9}{cell\+\_\+center}(indx,  i,  gr)~((gr)-\/$>$L\mbox{[}i\mbox{]} + ((indx) + 0.\+5)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})
+\item 
+\#define \hyperlink{geom_8h_ab0d4678d2dc26e22b1921c19fdfc7d59}{cell\+\_\+edge}(indx,  i,  gr)~((gr)-\/$>$L\mbox{[}i\mbox{]} + (indx)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})
+\item 
+\#define \hyperlink{geom_8h_a3388b3f5ff677082c95ff413eec8ab03}{vd\+\_\+cell\+\_\+edge}(indx,  i,  gr)~((gr)-\/$>$VL\mbox{[}i\mbox{]} + (indx)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})
+\item 
+\#define \hyperlink{geom_8h_a3f34962ffad314319bdffa901b406b81}{cell\+\_\+width}(index,  i,  gr)~((gr)-\/$>$h\mbox{[}i\mbox{]})
+\item 
+\#define \hyperlink{geom_8h_a4b1ffb8725de0283139599508532871e}{Opposite\+\_\+orient}(orient)
+\item 
+\#define \hyperlink{geom_8h_af9cfdd527caf09795ed8d85651a9128f}{Opposite\+\_\+ang\+\_\+dir}(dir)~((dir) == \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}{C\+L\+O\+C\+K\+W\+I\+SE} ? \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba23ff1e76d34a0938d9417f06a9c3f869}{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK} \+: \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}{C\+L\+O\+C\+K\+W\+I\+SE})
+\item 
+\#define \hyperlink{geom_8h_ab95cfbdf13c6dfc4797fee5a54d70108}{curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r}(ang\+\_\+dir,  orient)        
+\item 
+\#define \hyperlink{geom_8h_a4a47ba3b3d7ab7657df5b8cabc9a91de}{Next\+\_\+m3}(n)~(((n) + 1) \% 3)
+\item 
+\#define \hyperlink{geom_8h_a75fae88ee8940cebaa78357c94b183b2}{Prev\+\_\+m3}(n)~(((n) + 2) \% 3)
+\item 
+\#define \hyperlink{geom_8h_a8a3e4856ed7b66e0993b4b7b8393789e}{print\+\_\+angle}(mesg,  ang,  end)~(void) printf(\char`\"{}\%s \%g (\%g deg)\%s\char`\"{},mesg,ang,\hyperlink{cdecs_8h_adfd8b6ffd35547b8e353a64ff5bfd9b3}{degrees}(ang),end)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{geom_8h_d0/de8/struct___r_e_c_t___g_r_i_d}{\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID} \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID}
+\item 
+typedef struct \hyperlink{geom_8h_db/dde/struct___c_o_m_m___b_o_x}{\+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX} \hyperlink{geom_8h_ab5d6b2b4f68f48b79bccf6329c46575b}{C\+O\+M\+M\+\_\+\+B\+OX}
+\item 
+typedef struct \hyperlink{geom_8h_dd/da4/struct___r_e_c_t___b_o_x}{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX} \hyperlink{geom_8h_a320225f3438ce16c1da83a8f48014e3b}{R\+E\+C\+T\+\_\+\+B\+OX}
+\item 
+typedef struct \+\_\+\+R\+E\+M\+AP \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP}
+\item 
+typedef enum \hyperlink{geom_8h_a545324dab251960143516e885f8eced0}{\+\_\+\+S\+I\+DE} \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE}
+\item 
+typedef enum \hyperlink{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3}{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY} \hyperlink{geom_8h_ab1839759590e01f016fc75840901ee06}{P\+R\+O\+X\+I\+M\+I\+TY}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD} = 3
+ \}
+\item 
+enum \{ \hyperlink{geom_8h_a5d76b81b0ad4c19007a781d4edb8181fac65dbd65c3d11a008434705b710c2708}{M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS} = 100
+ \}
+\item 
+enum \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} \{ \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0efaf131affc82cff329addae997349bc22f}{I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP} = 0, 
+\hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6c09a857491717e6508097b8757b3f52}{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP} = 1, 
+\hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6913026d35a01ddd498c1c5b7791b50c}{C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP} = 2, 
+\hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa7f8ebc385d8dddb28734405bde9d479b}{S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP} = 3
+ \}
+\item 
+enum \hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}{G\+R\+I\+D\+\_\+\+T\+Y\+PE} \{ \hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18baa49c02b312d81ac7f5d71da983ad80d6}{C\+O\+M\+P\+\_\+\+G\+R\+ID} = 1, 
+\hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18bab3b52955e2418202d7f3f7bd0c3c5e18}{D\+U\+A\+L\+\_\+\+G\+R\+ID} = 2, 
+\hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba9b8164c36e47791fdfb5a0544adb6b85}{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID} = 3, 
+\hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba78b8f278fc86645b3cb484173c790cc9}{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID} = 4
+ \}
+\item 
+enum \hyperlink{geom_8h_a545324dab251960143516e885f8eced0}{\+\_\+\+S\+I\+DE} \{ \\*
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a5678d1f3a9326c4caf86b125b9aeb0bc}{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE} = -\/3, 
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a6b936571314dd2e4371d343459c1f6d2}{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE} = 0, 
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a5f950b5d6d9c82ecf0072a2f3f2a566b}{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE} = 1, 
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a85bbe5aca51647bc0595b4acba6ca1f7}{O\+N\+E\+D\+GE} = 2, 
+\\*
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a7b218649375f5b418124df2ef7d0e564}{O\+N\+V\+E\+R\+T\+EX} = 3, 
+\hyperlink{geom_8h_a545324dab251960143516e885f8eced0a14bb27bbae24e21bab4d5e2b478194dd}{C\+O\+P\+L\+A\+N\+AR} = 4
+ \}
+\item 
+enum \{ \hyperlink{geom_8h_aac34dfe6c6b73b43a4656c9dce041034ac603e33fe2cb5b884190c96684e0d104}{P\+L\+U\+S\+\_\+\+C\+UT} = 1, 
+\hyperlink{geom_8h_aac34dfe6c6b73b43a4656c9dce041034a4a68fc52b45ed7021a5bd34d3e3ef7fa}{M\+I\+N\+U\+S\+\_\+\+C\+UT} = -\/1
+ \}
+\item 
+enum \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} \{ \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} =1, 
+\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} =2, 
+\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca43d3b2d2c3efb5f4b89ea15aa5d28552}{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET} =-\/1
+ \}
+\item 
+enum \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} \{ \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba23ff1e76d34a0938d9417f06a9c3f869}{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK} =1, 
+\hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}{C\+L\+O\+C\+K\+W\+I\+SE} =2, 
+\hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba127c2d8aad6d27b8f86b2234eae6f616}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET} =-\/1
+ \}
+\item 
+enum \hyperlink{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3}{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY} \{ \hyperlink{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ab5c63c54204a3c25d5ff88ea4d1d8336}{F\+L\+O\+OR} = 1, 
+\hyperlink{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3a0ee31af9a91b18edf2bc06d9eb86a100}{C\+E\+I\+L\+I\+NG}, 
+\hyperlink{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ac08dae7edcb5c5bb959fee5971fbad95}{S\+P\+A\+CE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} \hyperlink{geom_8h_a5d309fada8c51181668c05365746d236}{fread\+\_\+angle\+\_\+direction} (F\+I\+LE $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} \hyperlink{geom_8h_a910717e1fe07eb445d6ad3de57f99ccd}{Opposite\+\_\+side} (const \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a2725287e309d33d8ee3836808163315b}{dscaled\+\_\+hypot} (const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} const char $\ast$ \hyperlink{geom_8h_a6c6236fa2310f07b4f15fb9f20cbf5a0}{angle\+\_\+direction\+\_\+name} (\hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} const char $\ast$ \hyperlink{geom_8h_a61e3d063a79b47a088f539321b5acb1c}{orientation\+\_\+name} (\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} const char $\ast$ \hyperlink{geom_8h_a941c025b901793dfa800a8a27d18e699}{side\+\_\+name} (\hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_ae3c32b7acca532078937c36fd1b6e47e}{\+\_\+scaled\+\_\+separation} (const double $\ast$, const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_aebdd903d773a9fc893529501c3438dfd}{angle} (double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a99257edfc4a59b6012468d9d42b440c5}{avg\+\_\+angle\+\_\+and\+\_\+normalize} (double, double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_afdb449ca78ffd01ed1937b1f6fdbb219}{cal\+\_\+angle} (const double $\ast$, const double $\ast$, const double $\ast$, int, int, const double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a1d6ba0450d1d940c5af56684e06f3b0a}{distance\+\_\+between\+\_\+positions} (const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_ac5018df2656b5491d195be0225f83545}{dscalar\+\_\+product} (const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a581df84596ccf8112f3afd8eba48ab2b}{grid\+\_\+size\+\_\+in\+\_\+direction} (const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a64e656753e8dec0fdac534bf8415ae8d}{mag\+\_\+vector} (const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_ab9ead64fb2b2a33bcfe988bca8016a65}{normalized\+\_\+angle} (double)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a9008c20afbcc3524161844afe6d7f215}{random\+\_\+gaussian} (double, double, unsigned short int\mbox{[}3\mbox{]})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a3058ad55c8295f5ad81a1c91f76a748b}{scalar\+\_\+product} (const double $\ast$, const double $\ast$, const int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a003fd200550085842a7e6c56bad72230}{scaled\+\_\+hypot} (const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a6a549ae362924c0f7136f70b2175378b}{triple\+\_\+product} (const double $\ast$, const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a92020e41482161024c1121a12c116e07}{vector\+\_\+product} (const double $\ast$, const double $\ast$, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_af286c71ba7f158b7cc7a3c56367d23e9}{vector\+\_\+product\+\_\+on\+\_\+points} (const double $\ast$, const double $\ast$, const double $\ast$, int, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{geom_8h_ab3a383d58ef0c969fd1587e9b6320cbd}{is\+\_\+new\+\_\+angle\+\_\+smaller} (double, double, double, double, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{geom_8h_a8b7a33313f9ff70c8c1b8375d2d95ef4}{outside\+\_\+point} (const double $\ast$, const double $\ast$, const double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a6bd62858d5a7e43ba492992a62c93176}{affine\+\_\+fit} (const double $\ast$const $\ast$, int, int, const double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a63fc1c146e7b08ac543b14c7bb049560}{fprint\+\_\+angle\+\_\+direction} (F\+I\+LE $\ast$, const char $\ast$, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_afc78fe20ec4d9abef11382b339282ae2}{fprint\+\_\+general\+\_\+vector} (F\+I\+LE $\ast$, const char $\ast$, const double $\ast$, int, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a672a5024704dd3159ab2acc037b34c35}{fprint\+\_\+orientation} (F\+I\+LE $\ast$, const char $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a2164088757424176aa1b82a06581fe0a}{sprint\+\_\+general\+\_\+vector} (char $\ast$, const char $\ast$, const double $\ast$, int, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_af42cbdacf46369fa6011c5f3378ca30c}{print\+\_\+angle\+\_\+direction} (const char $\ast$, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_ad35af3659ef832bc66f3b34e619d62f6}{print\+\_\+general\+\_\+vector} (const char $\ast$, const double $\ast$, int, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a1a1e5d34156b5d4db2cc04c09d6a0cfb}{print\+\_\+side} (const char $\ast$, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE}, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_ad4be0f5e5a9a972aa834edba1958d634}{print\+\_\+orientation} (const char $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a4108f8e490ea7b45e23ad7d5cb4f5826}{plane\+\_\+angle} (double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a3624ec7f61e2fcde2d7a02184af022c3}{direction\+\_\+vector} (double $\ast$, double $\ast$, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} \hyperlink{geom_8h_a8aa53980a13c8eba85782a707c58385a}{read\+\_\+remap\+\_\+from\+\_\+string} (const char $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$ \hyperlink{geom_8h_a321f84909579a04fb5789cb7073e876c}{remap\+\_\+info} (void)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{geom_8h_a500939df96cde948c04b3707d51350ca}{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{geom_8h_a9f28da11bdbc7fde8563df94202eca24}{point\+\_\+in\+\_\+buffer} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{geom_8h_a0fd014baaa39da4301271fa2c811ceba}{is\+\_\+rotational\+\_\+symmetry} (void)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{geom_8h_ae8c1df02afd324ab338d0acba5c12721}{rect\+\_\+in\+\_\+which} (const double $\ast$, int $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a14c4d904e5481e3e633599b8f58b010d}{grid\+\_\+tolerance} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_ab43181ea62d12182a90253cc8b5848a1}{ident\+\_\+\+Area} (const double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{geom_8h_ac87074713a56df8216c0354ca96aba13}{set\+\_\+grid\+\_\+lines} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a67da4913029ba86603ca625b1f681e59}{coords\+\_\+of\+\_\+grid\+\_\+point} (const int $\ast$, double $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_aba8875f006913617853f6b9a1d154c85}{set\+\_\+rotational\+\_\+symmetry} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_abb518258d132b71e5e9a98d8e7b843ad}{copy\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a8e9602f7b9c737a96549a321b858f2bb}{fprint\+\_\+rectangular\+\_\+grid} (F\+I\+LE $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a25ec57c3da4985e82aaeefe7bafb92b2}{free\+\_\+grid\+\_\+lines} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a843e68620cc62bff1f3212910828ec70}{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a10ed40003709eec20e7a26b242f1d1e2}{i\+\_\+print\+\_\+remap\+\_\+values} (void)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_ab6758f515166f9933628af6d54ef9b63}{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_acd9db913bfa4aef5ac43bc6c6f46fe11}{print\+\_\+rectangular\+\_\+grid} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a03a493aefa4c9a5e4138fcf325781ff4}{read\+\_\+rectangular\+\_\+grid} (const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}, \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a2f66150aa6f015b95732065195607941}{set\+\_\+dual\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a9f5b8ea33267bb30a1f30997e9b393b2}{set\+\_\+rect\+\_\+grid} (const double $\ast$, const double $\ast$, const double $\ast$, const double $\ast$, const int $\ast$, const int $\ast$, const int $\ast$, int, const \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a402c3d2f680c5862eee10a86151b3b39}{set\+\_\+box\+\_\+rect\+\_\+grid} (double $\ast$, double $\ast$, int $\ast$, int $\ast$, int $\ast$, int, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a8b6d9eb3fc03b410518020fb122d2ad6}{set\+\_\+remap} (int, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}, \hyperlink{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{R\+E\+M\+AP} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_ab0669f60405e68309cd96a43e39b46ce}{set\+\_\+remap\+\_\+identity} (int, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP})
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a034de7e1291fef8a35c70725c54b8614}{zoom\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a03fd7370f8918671a396125b520b62d7}{rect\+\_\+grid\+\_\+corner} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const int $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a1f0994bc0c573445bf0b5a4aabee1f56}{rect\+\_\+grid\+\_\+center} (const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const int $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a05b729565476ace2cf1372be9af74700}{init\+\_\+topological\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, const \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{geom_8h_a3da6fbf117086fb3d8a45cbb74595408}{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid} (double $\ast$, double $\ast$, int $\ast$, \hyperlink{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{geom_8h_a5c8d5e640bbec022b62630693baa6f5d}{E\+P\+S\+I\+L\+ON}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID@{\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID}}\label{struct___r_e_c_t___g_r_i_d}
+\hypertarget{geom_8h_struct___r_e_c_t___g_r_i_d}{}
+\subsubsection{struct \+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{geom_8h_a7fdb387262578f1a1ef812798a1ff859}{}\label{geom_8h_a7fdb387262578f1a1ef812798a1ff859}
+&
+centers\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_a69b705076e3ef6881629795c462d71c2}{}\label{geom_8h_a69b705076e3ef6881629795c462d71c2}
+&
+dh\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a611039a1f3016e961e00211bc6b0208f}{}\label{geom_8h_a611039a1f3016e961e00211bc6b0208f}
+&
+dim&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_a114a1fbca77a3b8144b7ed64ba684e7b}{}\label{geom_8h_a114a1fbca77a3b8144b7ed64ba684e7b}
+&
+edges\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_ab5a29acaa5361eb7790c605fbd92e9d7}{}\label{geom_8h_ab5a29acaa5361eb7790c605fbd92e9d7}
+&
+GL\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_a3435be345b3085a3f9be0997e3f5e7d8}{}\label{geom_8h_a3435be345b3085a3f9be0997e3f5e7d8}
+&
+glstore&
+\\
+\hline
+
+int\hypertarget{geom_8h_a8072ddb7f59e16c9704611f523de2d03}{}\label{geom_8h_a8072ddb7f59e16c9704611f523de2d03}
+&
+gmax\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_ab8078a4175e0243f0e9c40261446985d}{}\label{geom_8h_ab8078a4175e0243f0e9c40261446985d}
+&
+GU\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a8f68651a006f70e43a0e730dda1db827}{}\label{geom_8h_a8f68651a006f70e43a0e730dda1db827}
+&
+h\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_ae84f13864d40185c36f04fca340edd7f}{}\label{geom_8h_ae84f13864d40185c36f04fca340edd7f}
+&
+L\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a82a5ecbeb5991b4d876f646287d92159}{}\label{geom_8h_a82a5ecbeb5991b4d876f646287d92159}
+&
+lbuf\mbox{[}3\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{struct___r_e_c_t___g_r_i_d_1_1___r_e_m_a_p}{\+\_\+\+R\+E\+M\+AP}\hypertarget{geom_8h_a30a6891779fb9ffc3f5e59bc387d3cb5}{}\label{geom_8h_a30a6891779fb9ffc3f5e59bc387d3cb5}
+&
+Remap&
+\\
+\hline
+
+double\hypertarget{geom_8h_afbee2a0bc16ba2663b0be01db40f8131}{}\label{geom_8h_afbee2a0bc16ba2663b0be01db40f8131}
+&
+U\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_ad333180a0ce37db8d99e32d61712731f}{}\label{geom_8h_ad333180a0ce37db8d99e32d61712731f}
+&
+ubuf\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a3aecc9ad60737ab579d512fd98bed528}{}\label{geom_8h_a3aecc9ad60737ab579d512fd98bed528}
+&
+variable\+\_\+mesh\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_aa07ef902025e2950d2d3dc3e3fd6efc2}{}\label{geom_8h_aa07ef902025e2950d2d3dc3e3fd6efc2}
+&
+VL\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a89c8b18cb19bc6f5eaf32be124dc1abf}{}\label{geom_8h_a89c8b18cb19bc6f5eaf32be124dc1abf}
+&
+VU\mbox{[}3\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX@{\+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX}}\label{struct___c_o_m_m___b_o_x}
+\hypertarget{geom_8h_struct___c_o_m_m___b_o_x}{}
+\subsubsection{struct \+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{geom_8h_ae1b7853c5ad27413459746c078484d7d}{}\label{geom_8h_ae1b7853c5ad27413459746c078484d7d}
+&
+flag&
+\\
+\hline
+
+double\hypertarget{geom_8h_a66e42b5be1011007f87c7b2211ae75e3}{}\label{geom_8h_a66e42b5be1011007f87c7b2211ae75e3}
+&
+L0&
+\\
+\hline
+
+double\hypertarget{geom_8h_afaaf14478665a772e597d6871228f98d}{}\label{geom_8h_afaaf14478665a772e597d6871228f98d}
+&
+L1&
+\\
+\hline
+
+int\hypertarget{geom_8h_a8d20895a6fe5ecfbca17b77bd8f24faf}{}\label{geom_8h_a8d20895a6fe5ecfbca17b77bd8f24faf}
+&
+lmax\mbox{[}4\mbox{]}\mbox{[}2\mbox{]}\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_ad2573631696a57e5dd4b2299cc8491af}{}\label{geom_8h_ad2573631696a57e5dd4b2299cc8491af}
+&
+lmin\mbox{[}4\mbox{]}\mbox{[}2\mbox{]}\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a8892ba47332a0f9b698ea747c44af518}{}\label{geom_8h_a8892ba47332a0f9b698ea747c44af518}
+&
+lx&
+\\
+\hline
+
+int\hypertarget{geom_8h_a0c831299d688922124688d4f9ae6ee6e}{}\label{geom_8h_a0c831299d688922124688d4f9ae6ee6e}
+&
+ly&
+\\
+\hline
+
+double\hypertarget{geom_8h_a8909b6d173ed10514cbf10df9094fbe1}{}\label{geom_8h_a8909b6d173ed10514cbf10df9094fbe1}
+&
+U0&
+\\
+\hline
+
+double\hypertarget{geom_8h_aa818cbaac7e4af3ce034ffae8df68409}{}\label{geom_8h_aa818cbaac7e4af3ce034ffae8df68409}
+&
+U1&
+\\
+\hline
+
+int\hypertarget{geom_8h_a57dc7ddd2f8014d02a8a290edf2e7617}{}\label{geom_8h_a57dc7ddd2f8014d02a8a290edf2e7617}
+&
+umax\mbox{[}4\mbox{]}\mbox{[}2\mbox{]}\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a3f0cd6c75675de77630536d0a4bd7312}{}\label{geom_8h_a3f0cd6c75675de77630536d0a4bd7312}
+&
+umin\mbox{[}4\mbox{]}\mbox{[}2\mbox{]}\mbox{[}3\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a9f361ad83dd9acda933f1dbd3bbf1abf}{}\label{geom_8h_a9f361ad83dd9acda933f1dbd3bbf1abf}
+&
+ux&
+\\
+\hline
+
+int\hypertarget{geom_8h_a6d23ff75e210cad144bcdf49e0557c9b}{}\label{geom_8h_a6d23ff75e210cad144bcdf49e0557c9b}
+&
+uy&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX@{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX}}\label{struct___r_e_c_t___b_o_x}
+\hypertarget{geom_8h_struct___r_e_c_t___b_o_x}{}
+\subsubsection{struct \+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{geom_8h_a2c7e0fbb1399cc45836ff9786d91dbe3}{}\label{geom_8h_a2c7e0fbb1399cc45836ff9786d91dbe3}
+&
+bmax\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a62b0904c035a796d0724712ab1907ba7}{}\label{geom_8h_a62b0904c035a796d0724712ab1907ba7}
+&
+bmin\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{int_8h_d1/d1a/struct___cross}{\+\_\+\+Cross} $\ast$\hypertarget{geom_8h_a0a1aeed283b6893a123ff2623c26ccd7}{}\label{geom_8h_a0a1aeed283b6893a123ff2623c26ccd7}
+&
+cross\mbox{[}100\mbox{]}&
+\\
+\hline
+
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$\hypertarget{geom_8h_af6345c751a23e058d0f322f628f09ab4}{}\label{geom_8h_af6345c751a23e058d0f322f628f09ab4}
+&
+grid&
+\\
+\hline
+
+struct \hyperlink{geom_8h_dd/da4/struct___r_e_c_t___b_o_x}{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX} $\ast$\hypertarget{geom_8h_ab258ed2f1e5da9b80fea44d66d9d79a0}{}\label{geom_8h_ab258ed2f1e5da9b80fea44d66d9d79a0}
+&
+next&
+\\
+\hline
+
+int\hypertarget{geom_8h_af973bf36a21bec6253daad6d9b7b7b41}{}\label{geom_8h_af973bf36a21bec6253daad6d9b7b7b41}
+&
+num\+\_\+cross&
+\\
+\hline
+
+struct \hyperlink{geom_8h_dd/da4/struct___r_e_c_t___b_o_x}{\+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX} $\ast$\hypertarget{geom_8h_a61cac3fc2bd3724802bec50504dac929}{}\label{geom_8h_a61cac3fc2bd3724802bec50504dac929}
+&
+prev&
+\\
+\hline
+
+int\hypertarget{geom_8h_a59bb92d7d5a8f9f33eb486ee413c0044}{}\label{geom_8h_a59bb92d7d5a8f9f33eb486ee413c0044}
+&
+smax\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_ad6371427b5f7fafd255e75490e33576d}{}\label{geom_8h_ad6371427b5f7fafd255e75490e33576d}
+&
+smin\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY@{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}}\label{struct_f_o_u_r_i_e_r___p_o_l_y}
+\hypertarget{geom_8h_struct_f_o_u_r_i_e_r___p_o_l_y}{}
+\subsubsection{struct F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{geom_8h_a67dff5f64233f922b470551891682f1d}{}\label{geom_8h_a67dff5f64233f922b470551891682f1d}
+&
+A&
+\\
+\hline
+
+int\hypertarget{geom_8h_a73f5a8dcf69f2a1083f88a2693234a14}{}\label{geom_8h_a73f5a8dcf69f2a1083f88a2693234a14}
+&
+dim&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_af3207471b736910cc591d5494defcfd0}{}\label{geom_8h_af3207471b736910cc591d5494defcfd0}
+&
+L&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{geom_8h_a3b80798848d026ad4ddf9ba24401c6b6}{}\label{geom_8h_a3b80798848d026ad4ddf9ba24401c6b6}
+&
+nu&
+\\
+\hline
+
+int\hypertarget{geom_8h_a69e42e13b2ff029f48c6c30d1f9c6429}{}\label{geom_8h_a69e42e13b2ff029f48c6c30d1f9c6429}
+&
+num\+\_\+modes&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_aa9640847e004833cd8a5b9fa6cff3e6c}{}\label{geom_8h_aa9640847e004833cd8a5b9fa6cff3e6c}
+&
+phase&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_a5a6c298ed7fe4c240c3f09747fd80d5f}{}\label{geom_8h_a5a6c298ed7fe4c240c3f09747fd80d5f}
+&
+U&
+\\
+\hline
+
+double\hypertarget{geom_8h_a20f8c5a43c524f137f2b4a03ef0a1086}{}\label{geom_8h_a20f8c5a43c524f137f2b4a03ef0a1086}
+&
+z0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY@{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}}\label{struct_l_e_g_e_n_d_r_e___p_o_l_y}
+\hypertarget{geom_8h_struct_l_e_g_e_n_d_r_e___p_o_l_y}{}
+\subsubsection{struct L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{geom_8h_a063208edc929ca3f5ddf803c5f95c685}{}\label{geom_8h_a063208edc929ca3f5ddf803c5f95c685}
+&
+A&
+\\
+\hline
+
+int\hypertarget{geom_8h_a26157ada5e13af1865af89a6a8adc426}{}\label{geom_8h_a26157ada5e13af1865af89a6a8adc426}
+&
+max\+\_\+degree&
+\\
+\hline
+
+\end{DoxyFields}
+\index{B\+D\+R\+Y\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS@{B\+D\+R\+Y\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_b_d_r_y___b_o_x___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_b_d_r_y___b_o_x___p_a_r_a_m_s}{}
+\subsubsection{struct B\+D\+R\+Y\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+struct \hyperlink{int_8h_d0/d95/struct___i_n_t_e_r_f_a_c_e}{\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE} $\ast$\hypertarget{geom_8h_ad12c7bd3214d31591d6b61dc51f7554f}{}\label{geom_8h_ad12c7bd3214d31591d6b61dc51f7554f}
+&
+intfc&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_aa055292887e048452f8904412b956493}{}\label{geom_8h_aa055292887e048452f8904412b956493}
+&
+L&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_a728c2eae526b4f6477f4c7b4dc7df27f}{}\label{geom_8h_a728c2eae526b4f6477f4c7b4dc7df27f}
+&
+U&
+\\
+\hline
+
+\end{DoxyFields}
+\index{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS@{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_e_l_l_i_p___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_e_l_l_i_p___p_a_r_a_m_s}{}
+\subsubsection{struct E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a2f8e9ddc6788ddca96c45b977c385282}{}\label{geom_8h_a2f8e9ddc6788ddca96c45b977c385282}
+&
+cen\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a9ba6c30fa3c55e3525b76b840c92c1a2}{}\label{geom_8h_a9ba6c30fa3c55e3525b76b840c92c1a2}
+&
+closed&
+\\
+\hline
+
+int\hypertarget{geom_8h_a796f639773271a3e46ba2635e84fedbc}{}\label{geom_8h_a796f639773271a3e46ba2635e84fedbc}
+&
+dim&
+\\
+\hline
+
+\hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$\hypertarget{geom_8h_a9bdd6babf2cb3410701f6fca54308350}{}\label{geom_8h_a9bdd6babf2cb3410701f6fca54308350}
+&
+fpoly&
+\\
+\hline
+
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$\hypertarget{geom_8h_a1ab3c1e9af9eecf30236f2294a0e77aa}{}\label{geom_8h_a1ab3c1e9af9eecf30236f2294a0e77aa}
+&
+gr&
+\\
+\hline
+
+\hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$\hypertarget{geom_8h_a8e60e7e36d63141e8d515b24800886d7}{}\label{geom_8h_a8e60e7e36d63141e8d515b24800886d7}
+&
+lpoly&
+\\
+\hline
+
+\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}\hypertarget{geom_8h_a2d6553c689133194b8be0e1fe41fbae0}{}\label{geom_8h_a2d6553c689133194b8be0e1fe41fbae0}
+&
+nor\+\_\+orient&
+\\
+\hline
+
+double\hypertarget{geom_8h_a5226f185462a34d705d2a0fb101dcaf6}{}\label{geom_8h_a5226f185462a34d705d2a0fb101dcaf6}
+&
+rad\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a74b6b21e05cc4b9f2b2f6549c480d9ff}{}\label{geom_8h_a74b6b21e05cc4b9f2b2f6549c480d9ff}
+&
+ThetaE\mbox{[}2\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a588dbbf58e8f98c13e107c54d1709db8}{}\label{geom_8h_a588dbbf58e8f98c13e107c54d1709db8}
+&
+ThetaS\mbox{[}2\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{P\+L\+A\+N\+E\+\_\+\+P\+A\+R\+A\+MS@{P\+L\+A\+N\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_p_l_a_n_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_p_l_a_n_e___p_a_r_a_m_s}{}
+\subsubsection{struct P\+L\+A\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a855148e2e5c7e5b59ec3bf2b6f837335}{}\label{geom_8h_a855148e2e5c7e5b59ec3bf2b6f837335}
+&
+N\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_ae359730a85939bfdb290fe6e817aadb6}{}\label{geom_8h_ae359730a85939bfdb290fe6e817aadb6}
+&
+P\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{D\+U\+M\+B\+B\+E\+L\+L\+\_\+\+P\+A\+R\+A\+MS@{D\+U\+M\+B\+B\+E\+L\+L\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_d_u_m_b_b_e_l_l___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_d_u_m_b_b_e_l_l___p_a_r_a_m_s}{}
+\subsubsection{struct D\+U\+M\+B\+B\+E\+L\+L\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a3d075c8b05bb6d48a0973df9644918a6}{}\label{geom_8h_a3d075c8b05bb6d48a0973df9644918a6}
+&
+R&
+\\
+\hline
+
+double\hypertarget{geom_8h_a77721701aff87456b8a6b95e5f4efdd3}{}\label{geom_8h_a77721701aff87456b8a6b95e5f4efdd3}
+&
+rr&
+\\
+\hline
+
+double\hypertarget{geom_8h_afc587988589333aaeb2a0ec0f5eb2ba5}{}\label{geom_8h_afc587988589333aaeb2a0ec0f5eb2ba5}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a3d02b36c6d249f78ac686c934e861d1a}{}\label{geom_8h_a3d02b36c6d249f78ac686c934e861d1a}
+&
+x1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a06025027ad3875fef971fc10b919ae3e}{}\label{geom_8h_a06025027ad3875fef971fc10b919ae3e}
+&
+y&
+\\
+\hline
+
+double\hypertarget{geom_8h_afb6c7c8434317781bf9c76e643222310}{}\label{geom_8h_afb6c7c8434317781bf9c76e643222310}
+&
+z&
+\\
+\hline
+
+\end{DoxyFields}
+\index{L\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS@{L\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_l_i_n_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_l_i_n_e___p_a_r_a_m_s}{}
+\subsubsection{struct L\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a7c23dbe61a7c3291e0f7729f855b4f8a}{}\label{geom_8h_a7c23dbe61a7c3291e0f7729f855b4f8a}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_a9c919ef6f8174b1540bdf64866d23dd7}{}\label{geom_8h_a9c919ef6f8174b1540bdf64866d23dd7}
+&
+b&
+\\
+\hline
+
+double\hypertarget{geom_8h_a39034c227b374b6b8532d910ab64a04b}{}\label{geom_8h_a39034c227b374b6b8532d910ab64a04b}
+&
+c&
+\\
+\hline
+
+\end{DoxyFields}
+\index{E\+L\+L\+I\+P2\+D\+\_\+\+P\+A\+R\+A\+MS@{E\+L\+L\+I\+P2\+D\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_e_l_l_i_p2_d___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_e_l_l_i_p2_d___p_a_r_a_m_s}{}
+\subsubsection{struct E\+L\+L\+I\+P2\+D\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_afff19c6d8160219dad6317d6715c519e}{}\label{geom_8h_afff19c6d8160219dad6317d6715c519e}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_a79dad608c8fb780bb47d41cb19e97bb0}{}\label{geom_8h_a79dad608c8fb780bb47d41cb19e97bb0}
+&
+b&
+\\
+\hline
+
+double\hypertarget{geom_8h_a56a1d292547e140f402aec035c122b11}{}\label{geom_8h_a56a1d292547e140f402aec035c122b11}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a95d1ab23597177f580a9efc9878785db}{}\label{geom_8h_a95d1ab23597177f580a9efc9878785db}
+&
+y0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{E\+L\+L\+I\+P2\+D\+\_\+\+T\+I\+L\+T\+\_\+\+P\+A\+R\+A\+MS@{E\+L\+L\+I\+P2\+D\+\_\+\+T\+I\+L\+T\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_e_l_l_i_p2_d___t_i_l_t___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_e_l_l_i_p2_d___t_i_l_t___p_a_r_a_m_s}{}
+\subsubsection{struct E\+L\+L\+I\+P2\+D\+\_\+\+T\+I\+L\+T\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a10b0ebdd16916752a53288e2f8538835}{}\label{geom_8h_a10b0ebdd16916752a53288e2f8538835}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_a1f4f7c2ebea294430bd8fe79fbc899dd}{}\label{geom_8h_a1f4f7c2ebea294430bd8fe79fbc899dd}
+&
+b&
+\\
+\hline
+
+double\hypertarget{geom_8h_a3783fad2d31b3786a6db0ad1c8da752e}{}\label{geom_8h_a3783fad2d31b3786a6db0ad1c8da752e}
+&
+theta&
+\\
+\hline
+
+double\hypertarget{geom_8h_a53572b97ae57c712db8d2776c1149464}{}\label{geom_8h_a53572b97ae57c712db8d2776c1149464}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_ad8f2fe38c24aea78261b1e13b2c0e444}{}\label{geom_8h_ad8f2fe38c24aea78261b1e13b2c0e444}
+&
+y0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS@{T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_t_r_i_a_n_g_l_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_t_r_i_a_n_g_l_e___p_a_r_a_m_s}{}
+\subsubsection{struct T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a7e4068aec774a1d4a75d203708f6da9d}{}\label{geom_8h_a7e4068aec774a1d4a75d203708f6da9d}
+&
+x\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a3870a69099d346b427eadf3c7e0ea928}{}\label{geom_8h_a3870a69099d346b427eadf3c7e0ea928}
+&
+y\mbox{[}3\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS@{R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_r_e_c_t_a_n_g_l_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_r_e_c_t_a_n_g_l_e___p_a_r_a_m_s}{}
+\subsubsection{struct R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a9562679b23989e3407f1ff21784f9c2d}{}\label{geom_8h_a9562679b23989e3407f1ff21784f9c2d}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac25139eb66f3d86f30241a2371734b33}{}\label{geom_8h_ac25139eb66f3d86f30241a2371734b33}
+&
+b&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac21c18c7c74f2a238c1248bf371b6e95}{}\label{geom_8h_ac21c18c7c74f2a238c1248bf371b6e95}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_ad39bd2e99003152448d29533874112dc}{}\label{geom_8h_ad39bd2e99003152448d29533874112dc}
+&
+y0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+O\+S\+M\+O\+S\+\_\+\+P\+A\+R\+A\+MS@{C\+O\+S\+M\+O\+S\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_o_s_m_o_s___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_o_s_m_o_s___p_a_r_a_m_s}{}
+\subsubsection{struct C\+O\+S\+M\+O\+S\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a1e5a2887de85133b4b277884e4e4119f}{}\label{geom_8h_a1e5a2887de85133b4b277884e4e4119f}
+&
+r0&
+\\
+\hline
+
+double\hypertarget{geom_8h_ad8307f8cc0c278384eb5a21a17e4f62f}{}\label{geom_8h_ad8307f8cc0c278384eb5a21a17e4f62f}
+&
+r1&
+\\
+\hline
+
+double\hypertarget{geom_8h_af84134b6003807c1ec557a4a2b27384c}{}\label{geom_8h_af84134b6003807c1ec557a4a2b27384c}
+&
+r2&
+\\
+\hline
+
+double\hypertarget{geom_8h_a18347d07ffde7bc6f27df0ebcb914f71}{}\label{geom_8h_a18347d07ffde7bc6f27df0ebcb914f71}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a518432a75889ebe1273077b50c7ec33a}{}\label{geom_8h_a518432a75889ebe1273077b50c7ec33a}
+&
+x1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a25444590dff6929338981b186be6f028}{}\label{geom_8h_a25444590dff6929338981b186be6f028}
+&
+x2&
+\\
+\hline
+
+double\hypertarget{geom_8h_aeb01fb16b4e4e84ed93a012c67369ddd}{}\label{geom_8h_aeb01fb16b4e4e84ed93a012c67369ddd}
+&
+y&
+\\
+\hline
+
+\end{DoxyFields}
+\index{T\+A\+E\+G\+E\+U\+K\+\_\+\+P\+A\+R\+A\+MS@{T\+A\+E\+G\+E\+U\+K\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_t_a_e_g_e_u_k___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_t_a_e_g_e_u_k___p_a_r_a_m_s}{}
+\subsubsection{struct T\+A\+E\+G\+E\+U\+K\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a56410ae6c1fb2d25ba88610e1522b422}{}\label{geom_8h_a56410ae6c1fb2d25ba88610e1522b422}
+&
+r0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a612f870ff1ce24efa0b3ddc420a8803f}{}\label{geom_8h_a612f870ff1ce24efa0b3ddc420a8803f}
+&
+r1&
+\\
+\hline
+
+double\hypertarget{geom_8h_abec26e315c984cbfd0973e36545507b9}{}\label{geom_8h_abec26e315c984cbfd0973e36545507b9}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_ae68035d9c1d68b214322fed28cbfd9d6}{}\label{geom_8h_ae68035d9c1d68b214322fed28cbfd9d6}
+&
+x1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a5262ab4c8a617e9319742ef5a4cca997}{}\label{geom_8h_a5262ab4c8a617e9319742ef5a4cca997}
+&
+x2&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac08d66bf20906dd973e34ce782f38558}{}\label{geom_8h_ac08d66bf20906dd973e34ce782f38558}
+&
+x3&
+\\
+\hline
+
+double\hypertarget{geom_8h_ab5a35c1105cff6e61024f5e3548800fb}{}\label{geom_8h_ab5a35c1105cff6e61024f5e3548800fb}
+&
+x4&
+\\
+\hline
+
+double\hypertarget{geom_8h_a452f5866c9a72100f6eaab64eb9d88d4}{}\label{geom_8h_a452f5866c9a72100f6eaab64eb9d88d4}
+&
+y&
+\\
+\hline
+
+\end{DoxyFields}
+\index{W\+I\+N\+G\+\_\+\+P\+A\+R\+A\+MS@{W\+I\+N\+G\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_w_i_n_g___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_w_i_n_g___p_a_r_a_m_s}{}
+\subsubsection{struct W\+I\+N\+G\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_ad9b4474e07a7f90031fc17eb35286c18}{}\label{geom_8h_ad9b4474e07a7f90031fc17eb35286c18}
+&
+a0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a40005df8056d071414481e73298bccbe}{}\label{geom_8h_a40005df8056d071414481e73298bccbe}
+&
+a1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a4a81ca260bb5fe804c1e72f9a95880ba}{}\label{geom_8h_a4a81ca260bb5fe804c1e72f9a95880ba}
+&
+b0&
+\\
+\hline
+
+double\hypertarget{geom_8h_ad0bdb789a8f8afed37a881f0bcc0098f}{}\label{geom_8h_ad0bdb789a8f8afed37a881f0bcc0098f}
+&
+b1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a0b77fa67c3536b51bf32aeb77cab65ec}{}\label{geom_8h_a0b77fa67c3536b51bf32aeb77cab65ec}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a196c372459fb9d7a9ea4d7da16f58bc4}{}\label{geom_8h_a196c372459fb9d7a9ea4d7da16f58bc4}
+&
+x1&
+\\
+\hline
+
+double\hypertarget{geom_8h_a31950631e7187d7b9c43d197aa04f209}{}\label{geom_8h_a31950631e7187d7b9c43d197aa04f209}
+&
+y0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a072b721c558ccad07a7a36fe6009988a}{}\label{geom_8h_a072b721c558ccad07a7a36fe6009988a}
+&
+y1&
+\\
+\hline
+
+\end{DoxyFields}
+\index{P\+R\+O\+P\+E\+L\+L\+E\+R\+\_\+\+P\+A\+R\+A\+MS@{P\+R\+O\+P\+E\+L\+L\+E\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_p_r_o_p_e_l_l_e_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_p_r_o_p_e_l_l_e_r___p_a_r_a_m_s}{}
+\subsubsection{struct P\+R\+O\+P\+E\+L\+L\+E\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{geom_8h_a769a3efc93c7268c997fbb7f4270b75b}{}\label{geom_8h_a769a3efc93c7268c997fbb7f4270b75b}
+&
+NofW&
+\\
+\hline
+
+double\hypertarget{geom_8h_abab937ce2d8e29fcf9093fc377a47eb2}{}\label{geom_8h_abab937ce2d8e29fcf9093fc377a47eb2}
+&
+r\mbox{[}2\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_af74bb0d4c42f720fdeda0c03df0d6ff4}{}\label{geom_8h_af74bb0d4c42f720fdeda0c03df0d6ff4}
+&
+x\mbox{[}1\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_afa5d5129074f106b0a7269a791604990}{}\label{geom_8h_afa5d5129074f106b0a7269a791604990}
+&
+y\mbox{[}1\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{T\+D\+I\+S\+K\+\_\+\+P\+A\+R\+A\+MS@{T\+D\+I\+S\+K\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_t_d_i_s_k___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_t_d_i_s_k___p_a_r_a_m_s}{}
+\subsubsection{struct T\+D\+I\+S\+K\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_ab7183c551e52d99b1098485fa1d1d256}{}\label{geom_8h_ab7183c551e52d99b1098485fa1d1d256}
+&
+h&
+\\
+\hline
+
+double\hypertarget{geom_8h_aeb0a306bbd34234da30a42168affb6c0}{}\label{geom_8h_aeb0a306bbd34234da30a42168affb6c0}
+&
+r&
+\\
+\hline
+
+double\hypertarget{geom_8h_a6a298bb4522bd893a8d6af23b623dc7a}{}\label{geom_8h_a6a298bb4522bd893a8d6af23b623dc7a}
+&
+w&
+\\
+\hline
+
+double\hypertarget{geom_8h_a951cf42ce58c48722548dfd3af880280}{}\label{geom_8h_a951cf42ce58c48722548dfd3af880280}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_a15c3623c6e5057b447e4ec16985a04c0}{}\label{geom_8h_a15c3623c6e5057b447e4ec16985a04c0}
+&
+y0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{S\+L\+O\+T\+T\+E\+D\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS@{S\+L\+O\+T\+T\+E\+D\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_s_l_o_t_t_e_d___c_i_r_c_l_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_s_l_o_t_t_e_d___c_i_r_c_l_e___p_a_r_a_m_s}{}
+\subsubsection{struct S\+L\+O\+T\+T\+E\+D\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a723f48039c1c7b673c83d96abc6fcb74}{}\label{geom_8h_a723f48039c1c7b673c83d96abc6fcb74}
+&
+add\+\_\+pert&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac4c4a3a35746eed83e42a2628b565079}{}\label{geom_8h_ac4c4a3a35746eed83e42a2628b565079}
+&
+amp&
+\\
+\hline
+
+double\hypertarget{geom_8h_abe8d0155a8fc63326dc4c14818cac157}{}\label{geom_8h_abe8d0155a8fc63326dc4c14818cac157}
+&
+h&
+\\
+\hline
+
+double\hypertarget{geom_8h_abd87195b4860213bf53eb691b05db2ae}{}\label{geom_8h_abd87195b4860213bf53eb691b05db2ae}
+&
+nu&
+\\
+\hline
+
+double\hypertarget{geom_8h_aae554cbcde3074257ef2ce8b337a6308}{}\label{geom_8h_aae554cbcde3074257ef2ce8b337a6308}
+&
+phase&
+\\
+\hline
+
+double\hypertarget{geom_8h_a86dfde2b3e1e20b4f429e672edfd14ad}{}\label{geom_8h_a86dfde2b3e1e20b4f429e672edfd14ad}
+&
+r&
+\\
+\hline
+
+double\hypertarget{geom_8h_a327788a11b7718917a22b469559ab5d9}{}\label{geom_8h_a327788a11b7718917a22b469559ab5d9}
+&
+w&
+\\
+\hline
+
+double\hypertarget{geom_8h_a2050e236511eaeed269eca45bce7e7b7}{}\label{geom_8h_a2050e236511eaeed269eca45bce7e7b7}
+&
+x0&
+\\
+\hline
+
+double\hypertarget{geom_8h_aa9a49b939abd9ac704fb338108df8511}{}\label{geom_8h_aa9a49b939abd9ac704fb338108df8511}
+&
+y0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{M\+C\+\_\+\+P\+A\+R\+A\+MS@{M\+C\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_m_c___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_m_c___p_a_r_a_m_s}{}
+\subsubsection{struct M\+C\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double $\ast$$\ast$\hypertarget{geom_8h_a77670bd5ad628a07ebf1c2a2bf7e5b03}{}\label{geom_8h_a77670bd5ad628a07ebf1c2a2bf7e5b03}
+&
+cen&
+\\
+\hline
+
+int\hypertarget{geom_8h_a73eeb5752566497e2bc096bfed99ac01}{}\label{geom_8h_a73eeb5752566497e2bc096bfed99ac01}
+&
+dim&
+\\
+\hline
+
+int\hypertarget{geom_8h_ae05a85c8fe612c332b8b80dddd336be6}{}\label{geom_8h_ae05a85c8fe612c332b8b80dddd336be6}
+&
+num\+\_\+cir&
+\\
+\hline
+
+double $\ast$\hypertarget{geom_8h_aa081216abe57bc98a63d1bd547c7df91}{}\label{geom_8h_aa081216abe57bc98a63d1bd547c7df91}
+&
+rad&
+\\
+\hline
+
+\end{DoxyFields}
+\index{M\+\_\+\+E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS@{M\+\_\+\+E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_m___e_l_l_i_p___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_m___e_l_l_i_p___p_a_r_a_m_s}{}
+\subsubsection{struct M\+\_\+\+E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double $\ast$$\ast$\hypertarget{geom_8h_a5197a620fd82a0c7e7a1c2f4e8259c85}{}\label{geom_8h_a5197a620fd82a0c7e7a1c2f4e8259c85}
+&
+cen&
+\\
+\hline
+
+int\hypertarget{geom_8h_ae26e452c9331aa3e0728869f83052d69}{}\label{geom_8h_ae26e452c9331aa3e0728869f83052d69}
+&
+dim&
+\\
+\hline
+
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$\hypertarget{geom_8h_af445fbe15c700ed296db51ce714e31dd}{}\label{geom_8h_af445fbe15c700ed296db51ce714e31dd}
+&
+gr&
+\\
+\hline
+
+\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}\hypertarget{geom_8h_a45d758f1fe699790fab5043ab66c2cb1}{}\label{geom_8h_a45d758f1fe699790fab5043ab66c2cb1}
+&
+nor\+\_\+orient&
+\\
+\hline
+
+int\hypertarget{geom_8h_aeda2477764cc63782f0c7c7bca3a2604}{}\label{geom_8h_aeda2477764cc63782f0c7c7bca3a2604}
+&
+num\+\_\+ellip&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{geom_8h_a332ad90f9663da906976b9dec15b009c}{}\label{geom_8h_a332ad90f9663da906976b9dec15b009c}
+&
+rad&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS@{C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_i_r_c_l_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_i_r_c_l_e___p_a_r_a_m_s}{}
+\subsubsection{struct C\+I\+R\+C\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a9b7c83ffa4abc5630966e65964790227}{}\label{geom_8h_a9b7c83ffa4abc5630966e65964790227}
+&
+add\+\_\+perturbation&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a6582c2f635864b746f4f82bb9cd61e7a}{}\label{geom_8h_a6582c2f635864b746f4f82bb9cd61e7a}
+&
+add\+\_\+plan\+\_\+surf&
+\\
+\hline
+
+double\hypertarget{geom_8h_a35ebe32da3074909f5f828550782f775}{}\label{geom_8h_a35ebe32da3074909f5f828550782f775}
+&
+cen\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a1e51d548bd856ed53da2792c59ec7aa7}{}\label{geom_8h_a1e51d548bd856ed53da2792c59ec7aa7}
+&
+dim&
+\\
+\hline
+
+\hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$\hypertarget{geom_8h_a72b4a0bb0518da0a87183b0246161602}{}\label{geom_8h_a72b4a0bb0518da0a87183b0246161602}
+&
+fpoly&
+\\
+\hline
+
+double\hypertarget{geom_8h_a90ee776e9019b8851962274063999f3b}{}\label{geom_8h_a90ee776e9019b8851962274063999f3b}
+&
+H&
+\\
+\hline
+
+double\hypertarget{geom_8h_a1f0dc08f054d121e3712a2e8d43de48d}{}\label{geom_8h_a1f0dc08f054d121e3712a2e8d43de48d}
+&
+R&
+\\
+\hline
+
+\end{DoxyFields}
+\index{P\+R\+O\+J\+E\+C\+T\+I\+L\+E\+\_\+\+P\+A\+R\+A\+MS@{P\+R\+O\+J\+E\+C\+T\+I\+L\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_p_r_o_j_e_c_t_i_l_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_p_r_o_j_e_c_t_i_l_e___p_a_r_a_m_s}{}
+\subsubsection{struct P\+R\+O\+J\+E\+C\+T\+I\+L\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a77d672bd21728514a7201f21b72336f9}{}\label{geom_8h_a77d672bd21728514a7201f21b72336f9}
+&
+cen\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a173a41eb20a776a00f4811648ccb3306}{}\label{geom_8h_a173a41eb20a776a00f4811648ccb3306}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{geom_8h_a8ecd933d62fd2030290841ceb58c6939}{}\label{geom_8h_a8ecd933d62fd2030290841ceb58c6939}
+&
+h&
+\\
+\hline
+
+double\hypertarget{geom_8h_aae017cc741b1924c75be5d507c379158}{}\label{geom_8h_aae017cc741b1924c75be5d507c379158}
+&
+R&
+\\
+\hline
+
+double\hypertarget{geom_8h_a610e71b40d9bab421ac37a15ddbddd18}{}\label{geom_8h_a610e71b40d9bab421ac37a15ddbddd18}
+&
+r&
+\\
+\hline
+
+double\hypertarget{geom_8h_aedfb3781d4acd56cf59c807518447b4f}{}\label{geom_8h_aedfb3781d4acd56cf59c807518447b4f}
+&
+theta&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+U\+B\+O\+I\+D\+\_\+\+P\+A\+R\+A\+MS@{C\+U\+B\+O\+I\+D\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_u_b_o_i_d___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_u_b_o_i_d___p_a_r_a_m_s}{}
+\subsubsection{struct C\+U\+B\+O\+I\+D\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a61b31fd851d87d8aa17a052509a94b34}{}\label{geom_8h_a61b31fd851d87d8aa17a052509a94b34}
+&
+center\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a6df130fed5d2498ad098d1211167af4b}{}\label{geom_8h_a6df130fed5d2498ad098d1211167af4b}
+&
+edge\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+Y\+L\+I\+N\+D\+E\+R\+\_\+\+P\+A\+R\+A\+MS@{C\+Y\+L\+I\+N\+D\+E\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_y_l_i_n_d_e_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_y_l_i_n_d_e_r___p_a_r_a_m_s}{}
+\subsubsection{struct C\+Y\+L\+I\+N\+D\+E\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a8abb65414a10a6ff8d6934caf4a666ef}{}\label{geom_8h_a8abb65414a10a6ff8d6934caf4a666ef}
+&
+center\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a2ca4b9c87ec7edf77632b3f3bb3a5773}{}\label{geom_8h_a2ca4b9c87ec7edf77632b3f3bb3a5773}
+&
+height&
+\\
+\hline
+
+double\hypertarget{geom_8h_a31e7322534f27660026ed89ad26ade63}{}\label{geom_8h_a31e7322534f27660026ed89ad26ade63}
+&
+radius&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+O\+N\+E\+\_\+\+P\+A\+R\+A\+MS@{C\+O\+N\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_o_n_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_o_n_e___p_a_r_a_m_s}{}
+\subsubsection{struct C\+O\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_ab5f2ac2b86b422e5b4312b612e1fc9b9}{}\label{geom_8h_ab5f2ac2b86b422e5b4312b612e1fc9b9}
+&
+center\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_aa6279e58ad5c3012ba6c643f30313876}{}\label{geom_8h_aa6279e58ad5c3012ba6c643f30313876}
+&
+height&
+\\
+\hline
+
+double\hypertarget{geom_8h_afec46c608debc7f84d70832bb1affb90}{}\label{geom_8h_afec46c608debc7f84d70832bb1affb90}
+&
+slope&
+\\
+\hline
+
+\end{DoxyFields}
+\index{T\+E\+T\+R\+A\+H\+E\+D\+R\+O\+N\+\_\+\+P\+A\+R\+A\+MS@{T\+E\+T\+R\+A\+H\+E\+D\+R\+O\+N\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_t_e_t_r_a_h_e_d_r_o_n___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_t_e_t_r_a_h_e_d_r_o_n___p_a_r_a_m_s}{}
+\subsubsection{struct T\+E\+T\+R\+A\+H\+E\+D\+R\+O\+N\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_ab6635653c70a9c73353261f89546af5d}{}\label{geom_8h_ab6635653c70a9c73353261f89546af5d}
+&
+center\mbox{[}3\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a220fbc7a3dde83bce1a1f2592ab766c5}{}\label{geom_8h_a220fbc7a3dde83bce1a1f2592ab766c5}
+&
+edge&
+\\
+\hline
+
+\end{DoxyFields}
+\index{S\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS@{S\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_s_i_n_e___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_s_i_n_e___p_a_r_a_m_s}{}
+\subsubsection{struct S\+I\+N\+E\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a602e02615c5844013d94c097371a6c44}{}\label{geom_8h_a602e02615c5844013d94c097371a6c44}
+&
+A&
+\\
+\hline
+
+int\hypertarget{geom_8h_a731985dbbb649c88c9df8d745b82f63a}{}\label{geom_8h_a731985dbbb649c88c9df8d745b82f63a}
+&
+m&
+\\
+\hline
+
+double\hypertarget{geom_8h_a6c3af275e6a9fd43b05d247bb41a9bc4}{}\label{geom_8h_a6c3af275e6a9fd43b05d247bb41a9bc4}
+&
+phi&
+\\
+\hline
+
+double\hypertarget{geom_8h_acfffa6cbc0a2101e5f1e17d1cf5f19a0}{}\label{geom_8h_acfffa6cbc0a2101e5f1e17d1cf5f19a0}
+&
+z0&
+\\
+\hline
+
+\end{DoxyFields}
+\index{S\+E\+E\+D\+\_\+\+P\+A\+R\+A\+MS@{S\+E\+E\+D\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_s_e_e_d___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_s_e_e_d___p_a_r_a_m_s}{}
+\subsubsection{struct S\+E\+E\+D\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a16bc13ec313f05eaa7620ae3ae889876}{}\label{geom_8h_a16bc13ec313f05eaa7620ae3ae889876}
+&
+add\+\_\+space\+\_\+seed\+\_\+pert&
+\\
+\hline
+
+double\hypertarget{geom_8h_a52b71cd12af03e19492006dde93d19e1}{}\label{geom_8h_a52b71cd12af03e19492006dde93d19e1}
+&
+amp&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{geom_8h_a2d87038e1fe7f0848b7441a0f0b039e3}{}\label{geom_8h_a2d87038e1fe7f0848b7441a0f0b039e3}
+&
+ceiling\+\_\+center&
+\\
+\hline
+
+double\hypertarget{geom_8h_ab45805df929d0fe323a7977797f46763}{}\label{geom_8h_ab45805df929d0fe323a7977797f46763}
+&
+ceiling\+\_\+level&
+\\
+\hline
+
+int\hypertarget{geom_8h_abeca91e49b74c246ac94f5a1a736f239}{}\label{geom_8h_abeca91e49b74c246ac94f5a1a736f239}
+&
+dim&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{geom_8h_ad7a69cd4737e075a9643a0d555356625}{}\label{geom_8h_ad7a69cd4737e075a9643a0d555356625}
+&
+floor\+\_\+center&
+\\
+\hline
+
+double\hypertarget{geom_8h_a86ff1d859ee3d0989f41e005a77afde0}{}\label{geom_8h_a86ff1d859ee3d0989f41e005a77afde0}
+&
+floor\+\_\+level&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a1568abf892b88d3053e2af63d70a4ff8}{}\label{geom_8h_a1568abf892b88d3053e2af63d70a4ff8}
+&
+grow\+\_\+from\+\_\+ceiling&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a2448dfe8fc282c17327940837f50ab1b}{}\label{geom_8h_a2448dfe8fc282c17327940837f50ab1b}
+&
+grow\+\_\+from\+\_\+floor&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{geom_8h_a022fdaed8fad8f764f8b1d3e01146c51}{}\label{geom_8h_a022fdaed8fad8f764f8b1d3e01146c51}
+&
+grow\+\_\+from\+\_\+space&
+\\
+\hline
+
+double\hypertarget{geom_8h_a4f39c9c1f8485249d0a0a6b2b90660a9}{}\label{geom_8h_a4f39c9c1f8485249d0a0a6b2b90660a9}
+&
+nu&
+\\
+\hline
+
+int\hypertarget{geom_8h_ad2e19bd2e65b2f5a21ef4bbef7cb72ef}{}\label{geom_8h_ad2e19bd2e65b2f5a21ef4bbef7cb72ef}
+&
+num\+\_\+ceiling\+\_\+seeds&
+\\
+\hline
+
+int\hypertarget{geom_8h_ab5c3f5d535f7fbf8dc5c87b9b2fefa1c}{}\label{geom_8h_ab5c3f5d535f7fbf8dc5c87b9b2fefa1c}
+&
+num\+\_\+floor\+\_\+seeds&
+\\
+\hline
+
+int\hypertarget{geom_8h_a91137bfc9155d2fabd3338c4e8c29322}{}\label{geom_8h_a91137bfc9155d2fabd3338c4e8c29322}
+&
+num\+\_\+space\+\_\+seeds&
+\\
+\hline
+
+double\hypertarget{geom_8h_af1cb892f8503a575c4a0b5683c2d8e6f}{}\label{geom_8h_af1cb892f8503a575c4a0b5683c2d8e6f}
+&
+phase&
+\\
+\hline
+
+double\hypertarget{geom_8h_a681ed53f92d599f9cb8c876c0e2976e2}{}\label{geom_8h_a681ed53f92d599f9cb8c876c0e2976e2}
+&
+point&
+\\
+\hline
+
+double\hypertarget{geom_8h_aaf6dab630ae0e1a48a10b7ffc2c4566e}{}\label{geom_8h_aaf6dab630ae0e1a48a10b7ffc2c4566e}
+&
+seed\+\_\+radius&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{geom_8h_a0bb754d205a3006974b3846451b14e98}{}\label{geom_8h_a0bb754d205a3006974b3846451b14e98}
+&
+space\+\_\+center&
+\\
+\hline
+
+\end{DoxyFields}
+\index{R\+E\+C\+T\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS@{R\+E\+C\+T\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_r_e_c_t___b_o_x___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_r_e_c_t___b_o_x___p_a_r_a_m_s}{}
+\subsubsection{struct R\+E\+C\+T\+\_\+\+B\+O\+X\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a59214ce47e012d642daca6fc820db083}{}\label{geom_8h_a59214ce47e012d642daca6fc820db083}
+&
+center\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_a8be6220ccc6610f068949f527abd872a}{}\label{geom_8h_a8be6220ccc6610f068949f527abd872a}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{geom_8h_a350803ae55f47ca4d0612f23c4370278}{}\label{geom_8h_a350803ae55f47ca4d0612f23c4370278}
+&
+length\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{R\+E\+C\+T\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS@{R\+E\+C\+T\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_r_e_c_t___c_o_n_s_t_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_r_e_c_t___c_o_n_s_t_r___p_a_r_a_m_s}{}
+\subsubsection{struct R\+E\+C\+T\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{geom_8h_ac26c731e285e44557874408f2b70f8ae}{}\label{geom_8h_ac26c731e285e44557874408f2b70f8ae}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{geom_8h_af6ac451434674ba4c2627840ac4f3895}{}\label{geom_8h_af6ac451434674ba4c2627840ac4f3895}
+&
+L\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_ade630912b7ef64f38e41c3adbcb249f4}{}\label{geom_8h_ade630912b7ef64f38e41c3adbcb249f4}
+&
+U\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{E\+L\+L\+I\+P\+S\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS@{E\+L\+L\+I\+P\+S\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_e_l_l_i_p_s_e___c_o_n_s_t_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_e_l_l_i_p_s_e___c_o_n_s_t_r___p_a_r_a_m_s}{}
+\subsubsection{struct E\+L\+L\+I\+P\+S\+E\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a03a4ed4b40e2377a28f9d45a9d9f1c85}{}\label{geom_8h_a03a4ed4b40e2377a28f9d45a9d9f1c85}
+&
+cen\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{geom_8h_ac2bedc3ebbe2d5bd576a1b75b0f829ee}{}\label{geom_8h_ac2bedc3ebbe2d5bd576a1b75b0f829ee}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{geom_8h_a848d20356da0fe8ce30b7d6d0d20518f}{}\label{geom_8h_a848d20356da0fe8ce30b7d6d0d20518f}
+&
+radii\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a0a2e385386e0f99c9cd280f42fd6125b}{}\label{geom_8h_a0a2e385386e0f99c9cd280f42fd6125b}
+&
+x\+\_\+range\mbox{[}2\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{C\+R\+O\+S\+S\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS@{C\+R\+O\+S\+S\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_c_r_o_s_s___c_o_n_s_t_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_c_r_o_s_s___c_o_n_s_t_r___p_a_r_a_m_s}{}
+\subsubsection{struct C\+R\+O\+S\+S\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_abb1670f5afae1dca1f29dcc48247492a}{}\label{geom_8h_abb1670f5afae1dca1f29dcc48247492a}
+&
+L1\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a57d1eade0df22196d05f619dcc096efb}{}\label{geom_8h_a57d1eade0df22196d05f619dcc096efb}
+&
+L2\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_abd2df2f24de3b33cd84c921f48b0ffe4}{}\label{geom_8h_abd2df2f24de3b33cd84c921f48b0ffe4}
+&
+U1\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a5f6794dfeea6a2268d6286bfdfd49841}{}\label{geom_8h_a5f6794dfeea6a2268d6286bfdfd49841}
+&
+U2\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E1\+\_\+\+P\+A\+R\+A\+MS@{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E1\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_w_i_n_g___t_y_p_e1___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_w_i_n_g___t_y_p_e1___p_a_r_a_m_s}{}
+\subsubsection{struct W\+I\+N\+G\+\_\+\+T\+Y\+P\+E1\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a2f19878ff99fba4cfb2b556b550ca2e9}{}\label{geom_8h_a2f19878ff99fba4cfb2b556b550ca2e9}
+&
+radius\mbox{[}2\mbox{]}&
+\\
+\hline
+
+double\hypertarget{geom_8h_a24f9fcec1469ff94a79780c890a82d07}{}\label{geom_8h_a24f9fcec1469ff94a79780c890a82d07}
+&
+x\+\_\+devi&
+\\
+\hline
+
+double\hypertarget{geom_8h_afc80355fb12333bfef059a9827a89caa}{}\label{geom_8h_afc80355fb12333bfef059a9827a89caa}
+&
+x\+\_\+sym&
+\\
+\hline
+
+double\hypertarget{geom_8h_ab6e7aaeabc1d241bedde043057675495}{}\label{geom_8h_ab6e7aaeabc1d241bedde043057675495}
+&
+y\+\_\+constraint&
+\\
+\hline
+
+\end{DoxyFields}
+\index{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E2\+\_\+\+P\+A\+R\+A\+MS@{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E2\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_w_i_n_g___t_y_p_e2___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_w_i_n_g___t_y_p_e2___p_a_r_a_m_s}{}
+\subsubsection{struct W\+I\+N\+G\+\_\+\+T\+Y\+P\+E2\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_a6a997726f5c485b16d31a5ddc6710409}{}\label{geom_8h_a6a997726f5c485b16d31a5ddc6710409}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_a11451185e8b99a159352a834b9f17122}{}\label{geom_8h_a11451185e8b99a159352a834b9f17122}
+&
+b&
+\\
+\hline
+
+double\hypertarget{geom_8h_a4a9e72ab48ed6af03e172586292840b1}{}\label{geom_8h_a4a9e72ab48ed6af03e172586292840b1}
+&
+x\+\_\+cen&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac3dee7273369a4ceca8d5ee03af63fdb}{}\label{geom_8h_ac3dee7273369a4ceca8d5ee03af63fdb}
+&
+y\+\_\+cen&
+\\
+\hline
+
+\end{DoxyFields}
+\index{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E3\+\_\+\+P\+A\+R\+A\+MS@{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E3\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_w_i_n_g___t_y_p_e3___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_w_i_n_g___t_y_p_e3___p_a_r_a_m_s}{}
+\subsubsection{struct W\+I\+N\+G\+\_\+\+T\+Y\+P\+E3\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{geom_8h_ab2c8f4c5146e81a3ccda22b74c4494be}{}\label{geom_8h_ab2c8f4c5146e81a3ccda22b74c4494be}
+&
+a&
+\\
+\hline
+
+double\hypertarget{geom_8h_ad56404b35c4c03f13475f6e959aaeeea}{}\label{geom_8h_ad56404b35c4c03f13475f6e959aaeeea}
+&
+x\+\_\+devi&
+\\
+\hline
+
+double\hypertarget{geom_8h_ac18f11b978d7142de58ba302d169f360}{}\label{geom_8h_ac18f11b978d7142de58ba302d169f360}
+&
+x\+\_\+sym&
+\\
+\hline
+
+double\hypertarget{geom_8h_a4f6c18dfc88c19f0ed6f11f537bec648}{}\label{geom_8h_a4f6c18dfc88c19f0ed6f11f537bec648}
+&
+y\+\_\+cen&
+\\
+\hline
+
+\end{DoxyFields}
+\index{W\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS@{W\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_w_i_n_g___c_o_n_s_t_r___p_a_r_a_m_s}
+\hypertarget{geom_8h_struct_w_i_n_g___c_o_n_s_t_r___p_a_r_a_m_s}{}
+\subsubsection{struct W\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{geom_8h_ad4f81a0e5a6b710f1462c12db6e58b11}{}\label{geom_8h_ad4f81a0e5a6b710f1462c12db6e58b11}
+&
+dim&
+\\
+\hline
+
+int\hypertarget{geom_8h_a8635d7383d5f1650c99f1cd41e54b55d}{}\label{geom_8h_a8635d7383d5f1650c99f1cd41e54b55d}
+&
+wing\+\_\+type&
+\\
+\hline
+
+\hyperlink{geom_8h_da/d7a/struct_w_i_n_g___t_y_p_e1___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E1\+\_\+\+P\+A\+R\+A\+MS}\hypertarget{geom_8h_a15dac4c7fa5cbb3a8408edaefdc93076}{}\label{geom_8h_a15dac4c7fa5cbb3a8408edaefdc93076}
+&
+wing\+\_\+type1\+\_\+params&
+\\
+\hline
+
+\hyperlink{geom_8h_d9/d30/struct_w_i_n_g___t_y_p_e2___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E2\+\_\+\+P\+A\+R\+A\+MS}\hypertarget{geom_8h_a5baf66b17965709c11eaba01bb70da05}{}\label{geom_8h_a5baf66b17965709c11eaba01bb70da05}
+&
+wing\+\_\+type2\+\_\+params&
+\\
+\hline
+
+\hyperlink{geom_8h_d3/d5c/struct_w_i_n_g___t_y_p_e3___p_a_r_a_m_s}{W\+I\+N\+G\+\_\+\+T\+Y\+P\+E3\+\_\+\+P\+A\+R\+A\+MS}\hypertarget{geom_8h_ac47b32d23e6fa4b2b9fa9ca9a043299b}{}\label{geom_8h_ac47b32d23e6fa4b2b9fa9ca9a043299b}
+&
+wing\+\_\+type3\+\_\+params&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+ceil@{cell\+\_\+ceil}}
+\index{cell\+\_\+ceil@{cell\+\_\+ceil}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+ceil}{cell_ceil}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+ceil(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~{\bf irint}(ceil(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))}\hypertarget{geom_8h_adccf35be79ff1a5c0bc01e12be422a4b}{}\label{geom_8h_adccf35be79ff1a5c0bc01e12be422a4b}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+center@{cell\+\_\+center}}
+\index{cell\+\_\+center@{cell\+\_\+center}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+center}{cell_center}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+center(
+\begin{DoxyParamCaption}
+\item[{}]{indx, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~((gr)-\/$>$L\mbox{[}i\mbox{]} + ((indx) + 0.\+5)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})}\hypertarget{geom_8h_ac1c565d33a29e3113fc497a4219eb7c9}{}\label{geom_8h_ac1c565d33a29e3113fc497a4219eb7c9}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+edge@{cell\+\_\+edge}}
+\index{cell\+\_\+edge@{cell\+\_\+edge}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+edge}{cell_edge}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+edge(
+\begin{DoxyParamCaption}
+\item[{}]{indx, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~((gr)-\/$>$L\mbox{[}i\mbox{]} + (indx)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})}\hypertarget{geom_8h_ab0d4678d2dc26e22b1921c19fdfc7d59}{}\label{geom_8h_ab0d4678d2dc26e22b1921c19fdfc7d59}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+floor@{cell\+\_\+floor}}
+\index{cell\+\_\+floor@{cell\+\_\+floor}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+floor}{cell_floor}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+floor(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~{\bf irint}(floor(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))}\hypertarget{geom_8h_ac91859d9d9f7bf61b99ce4fbea9598b0}{}\label{geom_8h_ac91859d9d9f7bf61b99ce4fbea9598b0}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+index@{cell\+\_\+index}}
+\index{cell\+\_\+index@{cell\+\_\+index}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+index}{cell_index}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+index(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~{\bf irint}(floor(((p)-\/(gr)-\/$>$L\mbox{[}i\mbox{]})/(gr)-\/$>$h\mbox{[}i\mbox{]}))}\hypertarget{geom_8h_a8f98c1d3c3b576c8a13bf81880b6198b}{}\label{geom_8h_a8f98c1d3c3b576c8a13bf81880b6198b}
+\index{geom.\+h@{geom.\+h}!cell\+\_\+width@{cell\+\_\+width}}
+\index{cell\+\_\+width@{cell\+\_\+width}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cell\+\_\+width}{cell_width}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cell\+\_\+width(
+\begin{DoxyParamCaption}
+\item[{}]{index, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~((gr)-\/$>$h\mbox{[}i\mbox{]})}\hypertarget{geom_8h_a3f34962ffad314319bdffa901b406b81}{}\label{geom_8h_a3f34962ffad314319bdffa901b406b81}
+\index{geom.\+h@{geom.\+h}!curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r@{curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r}}
+\index{curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r@{curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r}{curve_ang_oriented_l_to_r}}]{\setlength{\rightskip}{0pt plus 5cm}\#define curve\+\_\+ang\+\_\+oriented\+\_\+l\+\_\+to\+\_\+r(
+\begin{DoxyParamCaption}
+\item[{}]{ang\+\_\+dir, }
+\item[{}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab95cfbdf13c6dfc4797fee5a54d70108}{}\label{geom_8h_ab95cfbdf13c6dfc4797fee5a54d70108}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((((ang\_dir) == \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}{CLOCKWISE} && (orient) == \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{POSITIVE\_ORIENTATION}) ||     \(\backslash\)
+    ((ang\_dir) == \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cba23ff1e76d34a0938d9417f06a9c3f869}{COUNTER\_CLOCK} && (orient) == \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}{NEGATIVE\_ORIENTATION})) ?  \(\backslash\)
+    \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES} : \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO})
+\end{DoxyCode}
+\index{geom.\+h@{geom.\+h}!d\+\_\+index@{d\+\_\+index}}
+\index{d\+\_\+index@{d\+\_\+index}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{d\+\_\+index}{d_index}}]{\setlength{\rightskip}{0pt plus 5cm}\#define d\+\_\+index(
+\begin{DoxyParamCaption}
+\item[{}]{icoords, }
+\item[{}]{gmax, }
+\item[{}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a0ac295010316dc486f6a9c7dfa1c1721}{}\label{geom_8h_a0ac295010316dc486f6a9c7dfa1c1721}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((dim) == 1 ? \hyperlink{geom_8h_a2edffa098d45364ead5275aab0adb4ce}{d\_index1d}((icoords[0]),(gmax)) :          \(\backslash\)
+         (dim) == 2 ? \hyperlink{geom_8h_a5935090fab13cce088c7f135d5bf5e6a}{d\_index2d}((icoords[0]),(icoords[1]),(gmax)) :     \(\backslash\)
+         \hyperlink{geom_8h_ad0ccbbf486f9aa6ac0ddac38ff127364}{d\_index3d}((icoords[0]),(icoords[1]),(icoords[2]),(gmax)))
+\end{DoxyCode}
+\index{geom.\+h@{geom.\+h}!d\+\_\+index1d@{d\+\_\+index1d}}
+\index{d\+\_\+index1d@{d\+\_\+index1d}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{d\+\_\+index1d}{d_index1d}}]{\setlength{\rightskip}{0pt plus 5cm}\#define d\+\_\+index1d(
+\begin{DoxyParamCaption}
+\item[{}]{ix, }
+\item[{}]{gmax}
+\end{DoxyParamCaption}
+)~(ix)}\hypertarget{geom_8h_a2edffa098d45364ead5275aab0adb4ce}{}\label{geom_8h_a2edffa098d45364ead5275aab0adb4ce}
+\index{geom.\+h@{geom.\+h}!d\+\_\+index2d@{d\+\_\+index2d}}
+\index{d\+\_\+index2d@{d\+\_\+index2d}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{d\+\_\+index2d}{d_index2d}}]{\setlength{\rightskip}{0pt plus 5cm}\#define d\+\_\+index2d(
+\begin{DoxyParamCaption}
+\item[{}]{ix, }
+\item[{}]{iy, }
+\item[{}]{gmax}
+\end{DoxyParamCaption}
+)~((iy)$\ast$((gmax)\mbox{[}0\mbox{]}+1)+(ix))}\hypertarget{geom_8h_a5935090fab13cce088c7f135d5bf5e6a}{}\label{geom_8h_a5935090fab13cce088c7f135d5bf5e6a}
+\index{geom.\+h@{geom.\+h}!d\+\_\+index3d@{d\+\_\+index3d}}
+\index{d\+\_\+index3d@{d\+\_\+index3d}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{d\+\_\+index3d}{d_index3d}}]{\setlength{\rightskip}{0pt plus 5cm}\#define d\+\_\+index3d(
+\begin{DoxyParamCaption}
+\item[{}]{ix, }
+\item[{}]{iy, }
+\item[{}]{iz, }
+\item[{}]{gmax}
+\end{DoxyParamCaption}
+)~(((iz)$\ast$((gmax)\mbox{[}1\mbox{]}+1)+(iy))$\ast$((gmax)\mbox{[}0\mbox{]}+1)+(ix))}\hypertarget{geom_8h_ad0ccbbf486f9aa6ac0ddac38ff127364}{}\label{geom_8h_ad0ccbbf486f9aa6ac0ddac38ff127364}
+\index{geom.\+h@{geom.\+h}!grid\+\_\+center\+\_\+coord@{grid\+\_\+center\+\_\+coord}}
+\index{grid\+\_\+center\+\_\+coord@{grid\+\_\+center\+\_\+coord}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{grid\+\_\+center\+\_\+coord}{grid_center_coord}}]{\setlength{\rightskip}{0pt plus 5cm}\#define grid\+\_\+center\+\_\+coord(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~(0.\+5 $\ast$ ((gr)-\/$>$L\mbox{[}i\mbox{]} + (gr)-\/$>$U\mbox{[}i\mbox{]}))}\hypertarget{geom_8h_a6b94183f4623b659bf5edd174edf4624}{}\label{geom_8h_a6b94183f4623b659bf5edd174edf4624}
+\index{geom.\+h@{geom.\+h}!Next\+\_\+m3@{Next\+\_\+m3}}
+\index{Next\+\_\+m3@{Next\+\_\+m3}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{Next\+\_\+m3}{Next_m3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Next\+\_\+m3(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n) + 1) \% 3)}\hypertarget{geom_8h_a4a47ba3b3d7ab7657df5b8cabc9a91de}{}\label{geom_8h_a4a47ba3b3d7ab7657df5b8cabc9a91de}
+\index{geom.\+h@{geom.\+h}!N\+O\+B\+UF@{N\+O\+B\+UF}}
+\index{N\+O\+B\+UF@{N\+O\+B\+UF}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+B\+UF}{NOBUF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+B\+UF~N\+U\+LL}\hypertarget{geom_8h_a814bad324c6b1d56172a219747ddb19c}{}\label{geom_8h_a814bad324c6b1d56172a219747ddb19c}
+\index{geom.\+h@{geom.\+h}!Opposite\+\_\+ang\+\_\+dir@{Opposite\+\_\+ang\+\_\+dir}}
+\index{Opposite\+\_\+ang\+\_\+dir@{Opposite\+\_\+ang\+\_\+dir}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{Opposite\+\_\+ang\+\_\+dir}{Opposite_ang_dir}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Opposite\+\_\+ang\+\_\+dir(
+\begin{DoxyParamCaption}
+\item[{}]{dir}
+\end{DoxyParamCaption}
+)~((dir) == {\bf C\+L\+O\+C\+K\+W\+I\+SE} ? {\bf C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK} \+: {\bf C\+L\+O\+C\+K\+W\+I\+SE})}\hypertarget{geom_8h_af9cfdd527caf09795ed8d85651a9128f}{}\label{geom_8h_af9cfdd527caf09795ed8d85651a9128f}
+\index{geom.\+h@{geom.\+h}!Opposite\+\_\+orient@{Opposite\+\_\+orient}}
+\index{Opposite\+\_\+orient@{Opposite\+\_\+orient}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{Opposite\+\_\+orient}{Opposite_orient}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Opposite\+\_\+orient(
+\begin{DoxyParamCaption}
+\item[{}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a4b1ffb8725de0283139599508532871e}{}\label{geom_8h_a4b1ffb8725de0283139599508532871e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((orient)==\hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{POSITIVE\_ORIENTATION})               \(\backslash\)
+     ? \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}{NEGATIVE\_ORIENTATION} : \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{POSITIVE\_ORIENTATION})
+\end{DoxyCode}
+\index{geom.\+h@{geom.\+h}!Prev\+\_\+m3@{Prev\+\_\+m3}}
+\index{Prev\+\_\+m3@{Prev\+\_\+m3}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{Prev\+\_\+m3}{Prev_m3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prev\+\_\+m3(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n) + 2) \% 3)}\hypertarget{geom_8h_a75fae88ee8940cebaa78357c94b183b2}{}\label{geom_8h_a75fae88ee8940cebaa78357c94b183b2}
+\index{geom.\+h@{geom.\+h}!print\+\_\+angle@{print\+\_\+angle}}
+\index{print\+\_\+angle@{print\+\_\+angle}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+angle}{print_angle}}]{\setlength{\rightskip}{0pt plus 5cm}\#define print\+\_\+angle(
+\begin{DoxyParamCaption}
+\item[{}]{mesg, }
+\item[{}]{ang, }
+\item[{}]{end}
+\end{DoxyParamCaption}
+)~(void) printf(\char`\"{}\%s \%g (\%g deg)\%s\char`\"{},mesg,ang,{\bf degrees}(ang),end)}\hypertarget{geom_8h_a8a3e4856ed7b66e0993b4b7b8393789e}{}\label{geom_8h_a8a3e4856ed7b66e0993b4b7b8393789e}
+\index{geom.\+h@{geom.\+h}!vd\+\_\+cell\+\_\+edge@{vd\+\_\+cell\+\_\+edge}}
+\index{vd\+\_\+cell\+\_\+edge@{vd\+\_\+cell\+\_\+edge}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{vd\+\_\+cell\+\_\+edge}{vd_cell_edge}}]{\setlength{\rightskip}{0pt plus 5cm}\#define vd\+\_\+cell\+\_\+edge(
+\begin{DoxyParamCaption}
+\item[{}]{indx, }
+\item[{}]{i, }
+\item[{}]{gr}
+\end{DoxyParamCaption}
+)~((gr)-\/$>$VL\mbox{[}i\mbox{]} + (indx)$\ast$(gr)-\/$>$h\mbox{[}i\mbox{]})}\hypertarget{geom_8h_a3388b3f5ff677082c95ff413eec8ab03}{}\label{geom_8h_a3388b3f5ff677082c95ff413eec8ab03}
+
+
+\subsection{Typedef Documentation}
+\index{geom.\+h@{geom.\+h}!C\+O\+M\+M\+\_\+\+B\+OX@{C\+O\+M\+M\+\_\+\+B\+OX}}
+\index{C\+O\+M\+M\+\_\+\+B\+OX@{C\+O\+M\+M\+\_\+\+B\+OX}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+M\+\_\+\+B\+OX}{COMM_BOX}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+O\+M\+M\+\_\+\+B\+OX} {\bf C\+O\+M\+M\+\_\+\+B\+OX}}\hypertarget{geom_8h_ab5d6b2b4f68f48b79bccf6329c46575b}{}\label{geom_8h_ab5d6b2b4f68f48b79bccf6329c46575b}
+\index{geom.\+h@{geom.\+h}!P\+R\+O\+X\+I\+M\+I\+TY@{P\+R\+O\+X\+I\+M\+I\+TY}}
+\index{P\+R\+O\+X\+I\+M\+I\+TY@{P\+R\+O\+X\+I\+M\+I\+TY}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+X\+I\+M\+I\+TY}{PROXIMITY}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY} {\bf P\+R\+O\+X\+I\+M\+I\+TY}}\hypertarget{geom_8h_ab1839759590e01f016fc75840901ee06}{}\label{geom_8h_ab1839759590e01f016fc75840901ee06}
+\index{geom.\+h@{geom.\+h}!R\+E\+C\+T\+\_\+\+B\+OX@{R\+E\+C\+T\+\_\+\+B\+OX}}
+\index{R\+E\+C\+T\+\_\+\+B\+OX@{R\+E\+C\+T\+\_\+\+B\+OX}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+C\+T\+\_\+\+B\+OX}{RECT_BOX}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+R\+E\+C\+T\+\_\+\+B\+OX} {\bf R\+E\+C\+T\+\_\+\+B\+OX}}\hypertarget{geom_8h_a320225f3438ce16c1da83a8f48014e3b}{}\label{geom_8h_a320225f3438ce16c1da83a8f48014e3b}
+\index{geom.\+h@{geom.\+h}!R\+E\+C\+T\+\_\+\+G\+R\+ID@{R\+E\+C\+T\+\_\+\+G\+R\+ID}}
+\index{R\+E\+C\+T\+\_\+\+G\+R\+ID@{R\+E\+C\+T\+\_\+\+G\+R\+ID}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+C\+T\+\_\+\+G\+R\+ID}{RECT_GRID}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+ID} {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID}}\hypertarget{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{}\label{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}
+\index{geom.\+h@{geom.\+h}!R\+E\+M\+AP@{R\+E\+M\+AP}}
+\index{R\+E\+M\+AP@{R\+E\+M\+AP}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{R\+E\+M\+AP}{REMAP}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \+\_\+\+R\+E\+M\+AP {\bf R\+E\+M\+AP}}\hypertarget{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}{}\label{geom_8h_a9f186bf2d7b393ae0b2f5568018b54e4}
+\index{geom.\+h@{geom.\+h}!S\+I\+DE@{S\+I\+DE}}
+\index{S\+I\+DE@{S\+I\+DE}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{S\+I\+DE}{SIDE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+S\+I\+DE} {\bf S\+I\+DE}}\hypertarget{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{}\label{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8}{}\label{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+XD@{M\+A\+XD}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!M\+A\+XD@{M\+A\+XD}}\item[{\em 
+M\+A\+XD\hypertarget{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{}\label{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{geom_8h_a5d76b81b0ad4c19007a781d4edb8181f}{}\label{geom_8h_a5d76b81b0ad4c19007a781d4edb8181f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS@{M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS@{M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS}}\item[{\em 
+M\+A\+X\+\_\+\+L\+S\+Q\+\_\+\+P\+TS\hypertarget{geom_8h_a5d76b81b0ad4c19007a781d4edb8181fac65dbd65c3d11a008434705b710c2708}{}\label{geom_8h_a5d76b81b0ad4c19007a781d4edb8181fac65dbd65c3d11a008434705b710c2708}
+}]\end{description}
+\end{Desc}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{geom_8h_aac34dfe6c6b73b43a4656c9dce041034}{}\label{geom_8h_aac34dfe6c6b73b43a4656c9dce041034}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+L\+U\+S\+\_\+\+C\+UT@{P\+L\+U\+S\+\_\+\+C\+UT}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!P\+L\+U\+S\+\_\+\+C\+UT@{P\+L\+U\+S\+\_\+\+C\+UT}}\item[{\em 
+P\+L\+U\+S\+\_\+\+C\+UT\hypertarget{geom_8h_aac34dfe6c6b73b43a4656c9dce041034ac603e33fe2cb5b884190c96684e0d104}{}\label{geom_8h_aac34dfe6c6b73b43a4656c9dce041034ac603e33fe2cb5b884190c96684e0d104}
+}]\index{M\+I\+N\+U\+S\+\_\+\+C\+UT@{M\+I\+N\+U\+S\+\_\+\+C\+UT}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!M\+I\+N\+U\+S\+\_\+\+C\+UT@{M\+I\+N\+U\+S\+\_\+\+C\+UT}}\item[{\em 
+M\+I\+N\+U\+S\+\_\+\+C\+UT\hypertarget{geom_8h_aac34dfe6c6b73b43a4656c9dce041034a4a68fc52b45ed7021a5bd34d3e3ef7fa}{}\label{geom_8h_aac34dfe6c6b73b43a4656c9dce041034a4a68fc52b45ed7021a5bd34d3e3ef7fa}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY@{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY}}
+\index{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY@{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY}{_PROXIMITY}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+P\+R\+O\+X\+I\+M\+I\+TY}}\hypertarget{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3}{}\label{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+L\+O\+OR@{F\+L\+O\+OR}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!F\+L\+O\+OR@{F\+L\+O\+OR}}\item[{\em 
+F\+L\+O\+OR\hypertarget{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ab5c63c54204a3c25d5ff88ea4d1d8336}{}\label{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ab5c63c54204a3c25d5ff88ea4d1d8336}
+}]\index{C\+E\+I\+L\+I\+NG@{C\+E\+I\+L\+I\+NG}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+E\+I\+L\+I\+NG@{C\+E\+I\+L\+I\+NG}}\item[{\em 
+C\+E\+I\+L\+I\+NG\hypertarget{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3a0ee31af9a91b18edf2bc06d9eb86a100}{}\label{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3a0ee31af9a91b18edf2bc06d9eb86a100}
+}]\index{S\+P\+A\+CE@{S\+P\+A\+CE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!S\+P\+A\+CE@{S\+P\+A\+CE}}\item[{\em 
+S\+P\+A\+CE\hypertarget{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ac08dae7edcb5c5bb959fee5971fbad95}{}\label{geom_8h_a48be3e7a3d63869c35c793c4b578bcc3ac08dae7edcb5c5bb959fee5971fbad95}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!\+\_\+\+S\+I\+DE@{\+\_\+\+S\+I\+DE}}
+\index{\+\_\+\+S\+I\+DE@{\+\_\+\+S\+I\+DE}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+S\+I\+DE}{_SIDE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+S\+I\+DE}}\hypertarget{geom_8h_a545324dab251960143516e885f8eced0}{}\label{geom_8h_a545324dab251960143516e885f8eced0}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE@{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE@{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE}}\item[{\em 
+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+DE\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a5678d1f3a9326c4caf86b125b9aeb0bc}{}\label{geom_8h_a545324dab251960143516e885f8eced0a5678d1f3a9326c4caf86b125b9aeb0bc}
+}]\index{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE@{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE@{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE}}\item[{\em 
+P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+S\+I\+DE\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a6b936571314dd2e4371d343459c1f6d2}{}\label{geom_8h_a545324dab251960143516e885f8eced0a6b936571314dd2e4371d343459c1f6d2}
+}]\index{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE@{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE@{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE}}\item[{\em 
+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+S\+I\+DE\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a5f950b5d6d9c82ecf0072a2f3f2a566b}{}\label{geom_8h_a545324dab251960143516e885f8eced0a5f950b5d6d9c82ecf0072a2f3f2a566b}
+}]\index{O\+N\+E\+D\+GE@{O\+N\+E\+D\+GE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!O\+N\+E\+D\+GE@{O\+N\+E\+D\+GE}}\item[{\em 
+O\+N\+E\+D\+GE\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a85bbe5aca51647bc0595b4acba6ca1f7}{}\label{geom_8h_a545324dab251960143516e885f8eced0a85bbe5aca51647bc0595b4acba6ca1f7}
+}]\index{O\+N\+V\+E\+R\+T\+EX@{O\+N\+V\+E\+R\+T\+EX}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!O\+N\+V\+E\+R\+T\+EX@{O\+N\+V\+E\+R\+T\+EX}}\item[{\em 
+O\+N\+V\+E\+R\+T\+EX\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a7b218649375f5b418124df2ef7d0e564}{}\label{geom_8h_a545324dab251960143516e885f8eced0a7b218649375f5b418124df2ef7d0e564}
+}]\index{C\+O\+P\+L\+A\+N\+AR@{C\+O\+P\+L\+A\+N\+AR}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+O\+P\+L\+A\+N\+AR@{C\+O\+P\+L\+A\+N\+AR}}\item[{\em 
+C\+O\+P\+L\+A\+N\+AR\hypertarget{geom_8h_a545324dab251960143516e885f8eced0a14bb27bbae24e21bab4d5e2b478194dd}{}\label{geom_8h_a545324dab251960143516e885f8eced0a14bb27bbae24e21bab4d5e2b478194dd}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON@{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}
+\index{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON@{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}{ANGLE_DIRECTION}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}\hypertarget{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{}\label{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK@{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK@{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK}}\item[{\em 
+C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+CK\hypertarget{geom_8h_a13077ae8532df1d89c9dd91d5def48cba23ff1e76d34a0938d9417f06a9c3f869}{}\label{geom_8h_a13077ae8532df1d89c9dd91d5def48cba23ff1e76d34a0938d9417f06a9c3f869}
+}]\index{C\+L\+O\+C\+K\+W\+I\+SE@{C\+L\+O\+C\+K\+W\+I\+SE}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+L\+O\+C\+K\+W\+I\+SE@{C\+L\+O\+C\+K\+W\+I\+SE}}\item[{\em 
+C\+L\+O\+C\+K\+W\+I\+SE\hypertarget{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}{}\label{geom_8h_a13077ae8532df1d89c9dd91d5def48cba436e34ac11f92a71ed5b0c06a6cba180}
+}]\index{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET@{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET@{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET}}\item[{\em 
+A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET\hypertarget{geom_8h_a13077ae8532df1d89c9dd91d5def48cba127c2d8aad6d27b8f86b2234eae6f616}{}\label{geom_8h_a13077ae8532df1d89c9dd91d5def48cba127c2d8aad6d27b8f86b2234eae6f616}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP@{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}
+\index{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP@{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}{GEOMETRY_REMAP}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}\hypertarget{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}{}\label{geom_8h_ad6f59b08783809a1fe2834b74d94f0ef}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP@{I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP@{I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+M\+AP\hypertarget{geom_8h_ad6f59b08783809a1fe2834b74d94f0efaf131affc82cff329addae997349bc22f}{}\label{geom_8h_ad6f59b08783809a1fe2834b74d94f0efaf131affc82cff329addae997349bc22f}
+}]\index{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP@{I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP}}\item[{\em 
+I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+R\+E\+M\+AP\hypertarget{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6c09a857491717e6508097b8757b3f52}{}\label{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6c09a857491717e6508097b8757b3f52}
+}]\index{C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP@{C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP@{C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP}}\item[{\em 
+C\+Y\+L\+I\+N\+D\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP\hypertarget{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6913026d35a01ddd498c1c5b7791b50c}{}\label{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa6913026d35a01ddd498c1c5b7791b50c}
+}]\index{S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP@{S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP@{S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP}}\item[{\em 
+S\+P\+H\+E\+R\+I\+C\+A\+L\+\_\+\+R\+E\+M\+AP\hypertarget{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa7f8ebc385d8dddb28734405bde9d479b}{}\label{geom_8h_ad6f59b08783809a1fe2834b74d94f0efa7f8ebc385d8dddb28734405bde9d479b}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!G\+R\+I\+D\+\_\+\+T\+Y\+PE@{G\+R\+I\+D\+\_\+\+T\+Y\+PE}}
+\index{G\+R\+I\+D\+\_\+\+T\+Y\+PE@{G\+R\+I\+D\+\_\+\+T\+Y\+PE}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{G\+R\+I\+D\+\_\+\+T\+Y\+PE}{GRID_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+R\+I\+D\+\_\+\+T\+Y\+PE}}\hypertarget{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}{}\label{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+O\+M\+P\+\_\+\+G\+R\+ID@{C\+O\+M\+P\+\_\+\+G\+R\+ID}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!C\+O\+M\+P\+\_\+\+G\+R\+ID@{C\+O\+M\+P\+\_\+\+G\+R\+ID}}\item[{\em 
+C\+O\+M\+P\+\_\+\+G\+R\+ID\hypertarget{geom_8h_ab275e4206577b8f345fa1ec67e64d18baa49c02b312d81ac7f5d71da983ad80d6}{}\label{geom_8h_ab275e4206577b8f345fa1ec67e64d18baa49c02b312d81ac7f5d71da983ad80d6}
+}]\index{D\+U\+A\+L\+\_\+\+G\+R\+ID@{D\+U\+A\+L\+\_\+\+G\+R\+ID}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!D\+U\+A\+L\+\_\+\+G\+R\+ID@{D\+U\+A\+L\+\_\+\+G\+R\+ID}}\item[{\em 
+D\+U\+A\+L\+\_\+\+G\+R\+ID\hypertarget{geom_8h_ab275e4206577b8f345fa1ec67e64d18bab3b52955e2418202d7f3f7bd0c3c5e18}{}\label{geom_8h_ab275e4206577b8f345fa1ec67e64d18bab3b52955e2418202d7f3f7bd0c3c5e18}
+}]\index{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID@{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID@{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID}}\item[{\em 
+E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+C\+O\+M\+P\+\_\+\+G\+R\+ID\hypertarget{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba9b8164c36e47791fdfb5a0544adb6b85}{}\label{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba9b8164c36e47791fdfb5a0544adb6b85}
+}]\index{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID@{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID@{E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID}}\item[{\em 
+E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+D\+U\+A\+L\+\_\+\+G\+R\+ID\hypertarget{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba78b8f278fc86645b3cb484173c790cc9}{}\label{geom_8h_ab275e4206577b8f345fa1ec67e64d18ba78b8f278fc86645b3cb484173c790cc9}
+}]\end{description}
+\end{Desc}
+\index{geom.\+h@{geom.\+h}!O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}
+\index{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}{ORIENTATION}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}\hypertarget{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{}\label{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}\item[{\em 
+P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON\hypertarget{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{}\label{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}
+}]\index{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}\item[{\em 
+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON\hypertarget{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}{}\label{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}
+}]\index{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET@{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET}!geom.\+h@{geom.\+h}}\index{geom.\+h@{geom.\+h}!O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET@{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET}}\item[{\em 
+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+N\+O\+T\+\_\+\+S\+ET\hypertarget{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca43d3b2d2c3efb5f4b89ea15aa5d28552}{}\label{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca43d3b2d2c3efb5f4b89ea15aa5d28552}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{geom.\+h@{geom.\+h}!\+\_\+scaled\+\_\+separation@{\+\_\+scaled\+\_\+separation}}
+\index{\+\_\+scaled\+\_\+separation@{\+\_\+scaled\+\_\+separation}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+scaled\+\_\+separation(const double $\ast$, const double $\ast$, const double $\ast$, int)}{_scaled_separation(const double *, const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double \+\_\+scaled\+\_\+separation (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ae3c32b7acca532078937c36fd1b6e47e}{}\label{geom_8h_ae3c32b7acca532078937c36fd1b6e47e}
+\index{geom.\+h@{geom.\+h}!adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square@{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square}}
+\index{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square@{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{adjust_top_grid_for_square(RECT_GRID *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} adjust\+\_\+top\+\_\+grid\+\_\+for\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a500939df96cde948c04b3707d51350ca}{}\label{geom_8h_a500939df96cde948c04b3707d51350ca}
+\index{geom.\+h@{geom.\+h}!affine\+\_\+fit@{affine\+\_\+fit}}
+\index{affine\+\_\+fit@{affine\+\_\+fit}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{affine\+\_\+fit(const double $\ast$const $\ast$, int, int, const double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$)}{affine_fit(const double *const *, int, int, const double *, double *, double **, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void affine\+\_\+fit (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$const $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{const double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$$\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a6bd62858d5a7e43ba492992a62c93176}{}\label{geom_8h_a6bd62858d5a7e43ba492992a62c93176}
+\index{geom.\+h@{geom.\+h}!angle@{angle}}
+\index{angle@{angle}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{angle(double, double)}{angle(double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double angle (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_aebdd903d773a9fc893529501c3438dfd}{}\label{geom_8h_aebdd903d773a9fc893529501c3438dfd}
+\index{geom.\+h@{geom.\+h}!angle\+\_\+direction\+\_\+name@{angle\+\_\+direction\+\_\+name}}
+\index{angle\+\_\+direction\+\_\+name@{angle\+\_\+direction\+\_\+name}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{angle\+\_\+direction\+\_\+name(\+A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N)}{angle_direction_name(ANGLE_DIRECTION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} const char$\ast$ angle\+\_\+direction\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a6c6236fa2310f07b4f15fb9f20cbf5a0}{}\label{geom_8h_a6c6236fa2310f07b4f15fb9f20cbf5a0}
+\index{geom.\+h@{geom.\+h}!avg\+\_\+angle\+\_\+and\+\_\+normalize@{avg\+\_\+angle\+\_\+and\+\_\+normalize}}
+\index{avg\+\_\+angle\+\_\+and\+\_\+normalize@{avg\+\_\+angle\+\_\+and\+\_\+normalize}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{avg\+\_\+angle\+\_\+and\+\_\+normalize(double, double)}{avg_angle_and_normalize(double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double avg\+\_\+angle\+\_\+and\+\_\+normalize (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a99257edfc4a59b6012468d9d42b440c5}{}\label{geom_8h_a99257edfc4a59b6012468d9d42b440c5}
+\index{geom.\+h@{geom.\+h}!cal\+\_\+angle@{cal\+\_\+angle}}
+\index{cal\+\_\+angle@{cal\+\_\+angle}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{cal\+\_\+angle(const double $\ast$, const double $\ast$, const double $\ast$, int, int, const double $\ast$)}{cal_angle(const double *, const double *, const double *, int, int, const double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double cal\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{const double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_afdb449ca78ffd01ed1937b1f6fdbb219}{}\label{geom_8h_afdb449ca78ffd01ed1937b1f6fdbb219}
+\index{geom.\+h@{geom.\+h}!coords\+\_\+of\+\_\+grid\+\_\+point@{coords\+\_\+of\+\_\+grid\+\_\+point}}
+\index{coords\+\_\+of\+\_\+grid\+\_\+point@{coords\+\_\+of\+\_\+grid\+\_\+point}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{coords\+\_\+of\+\_\+grid\+\_\+point(const int $\ast$, double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{coords_of_grid_point(const int *, double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void coords\+\_\+of\+\_\+grid\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const int $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a67da4913029ba86603ca625b1f681e59}{}\label{geom_8h_a67da4913029ba86603ca625b1f681e59}
+\index{geom.\+h@{geom.\+h}!copy\+\_\+rect\+\_\+grid@{copy\+\_\+rect\+\_\+grid}}
+\index{copy\+\_\+rect\+\_\+grid@{copy\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{copy\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{copy_rect_grid(RECT_GRID *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void copy\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_abb518258d132b71e5e9a98d8e7b843ad}{}\label{geom_8h_abb518258d132b71e5e9a98d8e7b843ad}
+\index{geom.\+h@{geom.\+h}!direction\+\_\+vector@{direction\+\_\+vector}}
+\index{direction\+\_\+vector@{direction\+\_\+vector}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{direction\+\_\+vector(double $\ast$, double $\ast$, double $\ast$, int)}{direction_vector(double *, double *, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void direction\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a3624ec7f61e2fcde2d7a02184af022c3}{}\label{geom_8h_a3624ec7f61e2fcde2d7a02184af022c3}
+\index{geom.\+h@{geom.\+h}!distance\+\_\+between\+\_\+positions@{distance\+\_\+between\+\_\+positions}}
+\index{distance\+\_\+between\+\_\+positions@{distance\+\_\+between\+\_\+positions}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{distance\+\_\+between\+\_\+positions(const double $\ast$, const double $\ast$, int)}{distance_between_positions(const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double distance\+\_\+between\+\_\+positions (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a1d6ba0450d1d940c5af56684e06f3b0a}{}\label{geom_8h_a1d6ba0450d1d940c5af56684e06f3b0a}
+\index{geom.\+h@{geom.\+h}!dscalar\+\_\+product@{dscalar\+\_\+product}}
+\index{dscalar\+\_\+product@{dscalar\+\_\+product}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{dscalar\+\_\+product(const double $\ast$, const double $\ast$, int)}{dscalar_product(const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double dscalar\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ac5018df2656b5491d195be0225f83545}{}\label{geom_8h_ac5018df2656b5491d195be0225f83545}
+\index{geom.\+h@{geom.\+h}!dscaled\+\_\+hypot@{dscaled\+\_\+hypot}}
+\index{dscaled\+\_\+hypot@{dscaled\+\_\+hypot}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{dscaled\+\_\+hypot(const double $\ast$, const double $\ast$, int)}{dscaled_hypot(const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double dscaled\+\_\+hypot (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a2725287e309d33d8ee3836808163315b}{}\label{geom_8h_a2725287e309d33d8ee3836808163315b}
+\index{geom.\+h@{geom.\+h}!fprint\+\_\+angle\+\_\+direction@{fprint\+\_\+angle\+\_\+direction}}
+\index{fprint\+\_\+angle\+\_\+direction@{fprint\+\_\+angle\+\_\+direction}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+angle\+\_\+direction(\+F\+I\+L\+E $\ast$, const char $\ast$, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, const char $\ast$)}{fprint_angle_direction(FILE *, const char *, ANGLE_DIRECTION, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fprint\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a63fc1c146e7b08ac543b14c7bb049560}{}\label{geom_8h_a63fc1c146e7b08ac543b14c7bb049560}
+\index{geom.\+h@{geom.\+h}!fprint\+\_\+general\+\_\+vector@{fprint\+\_\+general\+\_\+vector}}
+\index{fprint\+\_\+general\+\_\+vector@{fprint\+\_\+general\+\_\+vector}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+general\+\_\+vector(\+F\+I\+L\+E $\ast$, const char $\ast$, const double $\ast$, int, const char $\ast$)}{fprint_general_vector(FILE *, const char *, const double *, int, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fprint\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_afc78fe20ec4d9abef11382b339282ae2}{}\label{geom_8h_afc78fe20ec4d9abef11382b339282ae2}
+\index{geom.\+h@{geom.\+h}!fprint\+\_\+orientation@{fprint\+\_\+orientation}}
+\index{fprint\+\_\+orientation@{fprint\+\_\+orientation}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+orientation(\+F\+I\+L\+E $\ast$, const char $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, const char $\ast$)}{fprint_orientation(FILE *, const char *, ORIENTATION, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fprint\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a672a5024704dd3159ab2acc037b34c35}{}\label{geom_8h_a672a5024704dd3159ab2acc037b34c35}
+\index{geom.\+h@{geom.\+h}!fprint\+\_\+rectangular\+\_\+grid@{fprint\+\_\+rectangular\+\_\+grid}}
+\index{fprint\+\_\+rectangular\+\_\+grid@{fprint\+\_\+rectangular\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+rectangular\+\_\+grid(\+F\+I\+L\+E $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{fprint_rectangular_grid(FILE *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void fprint\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a8e9602f7b9c737a96549a321b858f2bb}{}\label{geom_8h_a8e9602f7b9c737a96549a321b858f2bb}
+\index{geom.\+h@{geom.\+h}!fread\+\_\+angle\+\_\+direction@{fread\+\_\+angle\+\_\+direction}}
+\index{fread\+\_\+angle\+\_\+direction@{fread\+\_\+angle\+\_\+direction}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{fread\+\_\+angle\+\_\+direction(\+F\+I\+L\+E $\ast$)}{fread_angle_direction(FILE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} fread\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a5d309fada8c51181668c05365746d236}{}\label{geom_8h_a5d309fada8c51181668c05365746d236}
+\index{geom.\+h@{geom.\+h}!free\+\_\+grid\+\_\+lines@{free\+\_\+grid\+\_\+lines}}
+\index{free\+\_\+grid\+\_\+lines@{free\+\_\+grid\+\_\+lines}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{free\+\_\+grid\+\_\+lines(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{free_grid_lines(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void free\+\_\+grid\+\_\+lines (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a25ec57c3da4985e82aaeefe7bafb92b2}{}\label{geom_8h_a25ec57c3da4985e82aaeefe7bafb92b2}
+\index{geom.\+h@{geom.\+h}!grid\+\_\+size\+\_\+in\+\_\+direction@{grid\+\_\+size\+\_\+in\+\_\+direction}}
+\index{grid\+\_\+size\+\_\+in\+\_\+direction@{grid\+\_\+size\+\_\+in\+\_\+direction}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{grid\+\_\+size\+\_\+in\+\_\+direction(const double $\ast$, const double $\ast$, int)}{grid_size_in_direction(const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double grid\+\_\+size\+\_\+in\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a581df84596ccf8112f3afd8eba48ab2b}{}\label{geom_8h_a581df84596ccf8112f3afd8eba48ab2b}
+\index{geom.\+h@{geom.\+h}!grid\+\_\+tolerance@{grid\+\_\+tolerance}}
+\index{grid\+\_\+tolerance@{grid\+\_\+tolerance}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{grid\+\_\+tolerance(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{grid_tolerance(const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double grid\+\_\+tolerance (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a14c4d904e5481e3e633599b8f58b010d}{}\label{geom_8h_a14c4d904e5481e3e633599b8f58b010d}
+\index{geom.\+h@{geom.\+h}!i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}}
+\index{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{i_init_remap_and_rect_grid(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void i\+\_\+init\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a843e68620cc62bff1f3212910828ec70}{}\label{geom_8h_a843e68620cc62bff1f3212910828ec70}
+\index{geom.\+h@{geom.\+h}!i\+\_\+print\+\_\+remap\+\_\+values@{i\+\_\+print\+\_\+remap\+\_\+values}}
+\index{i\+\_\+print\+\_\+remap\+\_\+values@{i\+\_\+print\+\_\+remap\+\_\+values}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{i\+\_\+print\+\_\+remap\+\_\+values(void)}{i_print_remap_values(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void i\+\_\+print\+\_\+remap\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a10ed40003709eec20e7a26b242f1d1e2}{}\label{geom_8h_a10ed40003709eec20e7a26b242f1d1e2}
+\index{geom.\+h@{geom.\+h}!ident\+\_\+\+Area@{ident\+\_\+\+Area}}
+\index{ident\+\_\+\+Area@{ident\+\_\+\+Area}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{ident\+\_\+\+Area(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{ident_Area(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double ident\+\_\+\+Area (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab43181ea62d12182a90253cc8b5848a1}{}\label{geom_8h_ab43181ea62d12182a90253cc8b5848a1}
+\index{geom.\+h@{geom.\+h}!init\+\_\+topological\+\_\+grid@{init\+\_\+topological\+\_\+grid}}
+\index{init\+\_\+topological\+\_\+grid@{init\+\_\+topological\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{init\+\_\+topological\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{init_topological_grid(RECT_GRID *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void init\+\_\+topological\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a05b729565476ace2cf1372be9af74700}{}\label{geom_8h_a05b729565476ace2cf1372be9af74700}
+\index{geom.\+h@{geom.\+h}!is\+\_\+new\+\_\+angle\+\_\+smaller@{is\+\_\+new\+\_\+angle\+\_\+smaller}}
+\index{is\+\_\+new\+\_\+angle\+\_\+smaller@{is\+\_\+new\+\_\+angle\+\_\+smaller}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{is\+\_\+new\+\_\+angle\+\_\+smaller(double, double, double, double, int)}{is_new_angle_smaller(double, double, double, double, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} int is\+\_\+new\+\_\+angle\+\_\+smaller (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab3a383d58ef0c969fd1587e9b6320cbd}{}\label{geom_8h_ab3a383d58ef0c969fd1587e9b6320cbd}
+\index{geom.\+h@{geom.\+h}!is\+\_\+rotational\+\_\+symmetry@{is\+\_\+rotational\+\_\+symmetry}}
+\index{is\+\_\+rotational\+\_\+symmetry@{is\+\_\+rotational\+\_\+symmetry}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{is\+\_\+rotational\+\_\+symmetry(void)}{is_rotational_symmetry(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} is\+\_\+rotational\+\_\+symmetry (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a0fd014baaa39da4301271fa2c811ceba}{}\label{geom_8h_a0fd014baaa39da4301271fa2c811ceba}
+\index{geom.\+h@{geom.\+h}!mag\+\_\+vector@{mag\+\_\+vector}}
+\index{mag\+\_\+vector@{mag\+\_\+vector}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{mag\+\_\+vector(const double $\ast$, int)}{mag_vector(const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double mag\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a64e656753e8dec0fdac534bf8415ae8d}{}\label{geom_8h_a64e656753e8dec0fdac534bf8415ae8d}
+\index{geom.\+h@{geom.\+h}!normalized\+\_\+angle@{normalized\+\_\+angle}}
+\index{normalized\+\_\+angle@{normalized\+\_\+angle}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{normalized\+\_\+angle(double)}{normalized_angle(double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double normalized\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab9ead64fb2b2a33bcfe988bca8016a65}{}\label{geom_8h_ab9ead64fb2b2a33bcfe988bca8016a65}
+\index{geom.\+h@{geom.\+h}!Opposite\+\_\+side@{Opposite\+\_\+side}}
+\index{Opposite\+\_\+side@{Opposite\+\_\+side}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{Opposite\+\_\+side(const S\+I\+D\+E)}{Opposite_side(const SIDE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf S\+I\+DE} Opposite\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+I\+DE}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a910717e1fe07eb445d6ad3de57f99ccd}{}\label{geom_8h_a910717e1fe07eb445d6ad3de57f99ccd}
+\index{geom.\+h@{geom.\+h}!orientation\+\_\+name@{orientation\+\_\+name}}
+\index{orientation\+\_\+name@{orientation\+\_\+name}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{orientation\+\_\+name(\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N)}{orientation_name(ORIENTATION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} const char$\ast$ orientation\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a61e3d063a79b47a088f539321b5acb1c}{}\label{geom_8h_a61e3d063a79b47a088f539321b5acb1c}
+\index{geom.\+h@{geom.\+h}!outside\+\_\+point@{outside\+\_\+point}}
+\index{outside\+\_\+point@{outside\+\_\+point}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{outside\+\_\+point(const double $\ast$, const double $\ast$, const double $\ast$, int)}{outside_point(const double *, const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} int outside\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a8b7a33313f9ff70c8c1b8375d2d95ef4}{}\label{geom_8h_a8b7a33313f9ff70c8c1b8375d2d95ef4}
+\index{geom.\+h@{geom.\+h}!plane\+\_\+angle@{plane\+\_\+angle}}
+\index{plane\+\_\+angle@{plane\+\_\+angle}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{plane\+\_\+angle(double $\ast$, double $\ast$)}{plane_angle(double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double plane\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a4108f8e490ea7b45e23ad7d5cb4f5826}{}\label{geom_8h_a4108f8e490ea7b45e23ad7d5cb4f5826}
+\index{geom.\+h@{geom.\+h}!point\+\_\+in\+\_\+buffer@{point\+\_\+in\+\_\+buffer}}
+\index{point\+\_\+in\+\_\+buffer@{point\+\_\+in\+\_\+buffer}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{point\+\_\+in\+\_\+buffer(const double $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{point_in_buffer(const double *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} point\+\_\+in\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a9f28da11bdbc7fde8563df94202eca24}{}\label{geom_8h_a9f28da11bdbc7fde8563df94202eca24}
+\index{geom.\+h@{geom.\+h}!print\+\_\+angle\+\_\+direction@{print\+\_\+angle\+\_\+direction}}
+\index{print\+\_\+angle\+\_\+direction@{print\+\_\+angle\+\_\+direction}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+angle\+\_\+direction(const char $\ast$, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, const char $\ast$)}{print_angle_direction(const char *, ANGLE_DIRECTION, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+angle\+\_\+direction (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_af42cbdacf46369fa6011c5f3378ca30c}{}\label{geom_8h_af42cbdacf46369fa6011c5f3378ca30c}
+\index{geom.\+h@{geom.\+h}!print\+\_\+general\+\_\+vector@{print\+\_\+general\+\_\+vector}}
+\index{print\+\_\+general\+\_\+vector@{print\+\_\+general\+\_\+vector}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+general\+\_\+vector(const char $\ast$, const double $\ast$, int, const char $\ast$)}{print_general_vector(const char *, const double *, int, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ad35af3659ef832bc66f3b34e619d62f6}{}\label{geom_8h_ad35af3659ef832bc66f3b34e619d62f6}
+\index{geom.\+h@{geom.\+h}!print\+\_\+orientation@{print\+\_\+orientation}}
+\index{print\+\_\+orientation@{print\+\_\+orientation}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+orientation(const char $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, const char $\ast$)}{print_orientation(const char *, ORIENTATION, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+orientation (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ad4be0f5e5a9a972aa834edba1958d634}{}\label{geom_8h_ad4be0f5e5a9a972aa834edba1958d634}
+\index{geom.\+h@{geom.\+h}!print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure}}
+\index{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure@{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{print_RECT_GRID_structure(const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D\+\_\+structure (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab6758f515166f9933628af6d54ef9b63}{}\label{geom_8h_ab6758f515166f9933628af6d54ef9b63}
+\index{geom.\+h@{geom.\+h}!print\+\_\+rectangular\+\_\+grid@{print\+\_\+rectangular\+\_\+grid}}
+\index{print\+\_\+rectangular\+\_\+grid@{print\+\_\+rectangular\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+rectangular\+\_\+grid(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{print_rectangular_grid(const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_acd9db913bfa4aef5ac43bc6c6f46fe11}{}\label{geom_8h_acd9db913bfa4aef5ac43bc6c6f46fe11}
+\index{geom.\+h@{geom.\+h}!print\+\_\+side@{print\+\_\+side}}
+\index{print\+\_\+side@{print\+\_\+side}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+side(const char $\ast$, S\+I\+D\+E, const char $\ast$)}{print_side(const char *, SIDE, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+side (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf S\+I\+DE}}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a1a1e5d34156b5d4db2cc04c09d6a0cfb}{}\label{geom_8h_a1a1e5d34156b5d4db2cc04c09d6a0cfb}
+\index{geom.\+h@{geom.\+h}!random\+\_\+gaussian@{random\+\_\+gaussian}}
+\index{random\+\_\+gaussian@{random\+\_\+gaussian}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{random\+\_\+gaussian(double, double, unsigned short int[3])}{random_gaussian(double, double, unsigned short int[3])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double random\+\_\+gaussian (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{unsigned short}]{int\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a9008c20afbcc3524161844afe6d7f215}{}\label{geom_8h_a9008c20afbcc3524161844afe6d7f215}
+\index{geom.\+h@{geom.\+h}!read\+\_\+rectangular\+\_\+grid@{read\+\_\+rectangular\+\_\+grid}}
+\index{read\+\_\+rectangular\+\_\+grid@{read\+\_\+rectangular\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+rectangular\+\_\+grid(const I\+O\+\_\+\+T\+Y\+P\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, boolean, R\+E\+M\+A\+P $\ast$)}{read_rectangular_grid(const IO_TYPE *, RECT_GRID *, boolean, REMAP *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void read\+\_\+rectangular\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{{\bf boolean}}]{, }
+\item[{{\bf R\+E\+M\+AP} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a03a493aefa4c9a5e4138fcf325781ff4}{}\label{geom_8h_a03a493aefa4c9a5e4138fcf325781ff4}
+\index{geom.\+h@{geom.\+h}!read\+\_\+remap\+\_\+from\+\_\+string@{read\+\_\+remap\+\_\+from\+\_\+string}}
+\index{read\+\_\+remap\+\_\+from\+\_\+string@{read\+\_\+remap\+\_\+from\+\_\+string}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+remap\+\_\+from\+\_\+string(const char $\ast$)}{read_remap_from_string(const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP} read\+\_\+remap\+\_\+from\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a8aa53980a13c8eba85782a707c58385a}{}\label{geom_8h_a8aa53980a13c8eba85782a707c58385a}
+\index{geom.\+h@{geom.\+h}!rect\+\_\+grid\+\_\+center@{rect\+\_\+grid\+\_\+center}}
+\index{rect\+\_\+grid\+\_\+center@{rect\+\_\+grid\+\_\+center}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{rect\+\_\+grid\+\_\+center(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const int $\ast$, double $\ast$)}{rect_grid_center(const RECT_GRID *, const int *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void rect\+\_\+grid\+\_\+center (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const int $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a1f0994bc0c573445bf0b5a4aabee1f56}{}\label{geom_8h_a1f0994bc0c573445bf0b5a4aabee1f56}
+\index{geom.\+h@{geom.\+h}!rect\+\_\+grid\+\_\+corner@{rect\+\_\+grid\+\_\+corner}}
+\index{rect\+\_\+grid\+\_\+corner@{rect\+\_\+grid\+\_\+corner}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{rect\+\_\+grid\+\_\+corner(const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const int $\ast$, double $\ast$)}{rect_grid_corner(const RECT_GRID *, const int *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void rect\+\_\+grid\+\_\+corner (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const int $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a03fd7370f8918671a396125b520b62d7}{}\label{geom_8h_a03fd7370f8918671a396125b520b62d7}
+\index{geom.\+h@{geom.\+h}!rect\+\_\+in\+\_\+which@{rect\+\_\+in\+\_\+which}}
+\index{rect\+\_\+in\+\_\+which@{rect\+\_\+in\+\_\+which}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{rect\+\_\+in\+\_\+which(const double $\ast$, int $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{rect_in_which(const double *, int *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} rect\+\_\+in\+\_\+which (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ae8c1df02afd324ab338d0acba5c12721}{}\label{geom_8h_ae8c1df02afd324ab338d0acba5c12721}
+\index{geom.\+h@{geom.\+h}!remap\+\_\+info@{remap\+\_\+info}}
+\index{remap\+\_\+info@{remap\+\_\+info}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{remap\+\_\+info(void)}{remap_info(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf R\+E\+M\+AP}$\ast$ remap\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a321f84909579a04fb5789cb7073e876c}{}\label{geom_8h_a321f84909579a04fb5789cb7073e876c}
+\index{geom.\+h@{geom.\+h}!scalar\+\_\+product@{scalar\+\_\+product}}
+\index{scalar\+\_\+product@{scalar\+\_\+product}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{scalar\+\_\+product(const double $\ast$, const double $\ast$, const int)}{scalar_product(const double *, const double *, const int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double scalar\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a3058ad55c8295f5ad81a1c91f76a748b}{}\label{geom_8h_a3058ad55c8295f5ad81a1c91f76a748b}
+\index{geom.\+h@{geom.\+h}!scaled\+\_\+hypot@{scaled\+\_\+hypot}}
+\index{scaled\+\_\+hypot@{scaled\+\_\+hypot}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{scaled\+\_\+hypot(const double $\ast$, const double $\ast$, int)}{scaled_hypot(const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double scaled\+\_\+hypot (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a003fd200550085842a7e6c56bad72230}{}\label{geom_8h_a003fd200550085842a7e6c56bad72230}
+\index{geom.\+h@{geom.\+h}!set\+\_\+box\+\_\+rect\+\_\+grid@{set\+\_\+box\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+box\+\_\+rect\+\_\+grid@{set\+\_\+box\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+box\+\_\+rect\+\_\+grid(double $\ast$, double $\ast$, int $\ast$, int $\ast$, int $\ast$, int, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_box_rect_grid(double *, double *, int *, int *, int *, int, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+box\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{int}]{, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a402c3d2f680c5862eee10a86151b3b39}{}\label{geom_8h_a402c3d2f680c5862eee10a86151b3b39}
+\index{geom.\+h@{geom.\+h}!set\+\_\+dual\+\_\+grid@{set\+\_\+dual\+\_\+grid}}
+\index{set\+\_\+dual\+\_\+grid@{set\+\_\+dual\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+dual\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_dual_grid(RECT_GRID *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+dual\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a2f66150aa6f015b95732065195607941}{}\label{geom_8h_a2f66150aa6f015b95732065195607941}
+\index{geom.\+h@{geom.\+h}!set\+\_\+grid\+\_\+lines@{set\+\_\+grid\+\_\+lines}}
+\index{set\+\_\+grid\+\_\+lines@{set\+\_\+grid\+\_\+lines}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+grid\+\_\+lines(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_grid_lines(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} int set\+\_\+grid\+\_\+lines (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ac87074713a56df8216c0354ca96aba13}{}\label{geom_8h_ac87074713a56df8216c0354ca96aba13}
+\index{geom.\+h@{geom.\+h}!set\+\_\+rect\+\_\+grid@{set\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+rect\+\_\+grid@{set\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+rect\+\_\+grid(const double $\ast$, const double $\ast$, const double $\ast$, const double $\ast$, const int $\ast$, const int $\ast$, const int $\ast$, int, const R\+E\+M\+A\+P $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_rect_grid(const double *, const double *, const double *, const double *, const int *, const int *, const int *, int, const REMAP *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const int $\ast$}]{, }
+\item[{const int $\ast$}]{, }
+\item[{const int $\ast$}]{, }
+\item[{int}]{, }
+\item[{const {\bf R\+E\+M\+AP} $\ast$}]{, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a9f5b8ea33267bb30a1f30997e9b393b2}{}\label{geom_8h_a9f5b8ea33267bb30a1f30997e9b393b2}
+\index{geom.\+h@{geom.\+h}!set\+\_\+remap@{set\+\_\+remap}}
+\index{set\+\_\+remap@{set\+\_\+remap}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap(int, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P, R\+E\+M\+A\+P $\ast$)}{set_remap(int, GEOMETRY_REMAP, REMAP *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+remap (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{, }
+\item[{{\bf R\+E\+M\+AP} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a8b6d9eb3fc03b410518020fb122d2ad6}{}\label{geom_8h_a8b6d9eb3fc03b410518020fb122d2ad6}
+\index{geom.\+h@{geom.\+h}!set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}}
+\index{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid@{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid(double $\ast$, double $\ast$, int $\ast$, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_remap_and_rect_grid(double *, double *, int *, GEOMETRY_REMAP, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+remap\+\_\+and\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a3da6fbf117086fb3d8a45cbb74595408}{}\label{geom_8h_a3da6fbf117086fb3d8a45cbb74595408}
+\index{geom.\+h@{geom.\+h}!set\+\_\+remap\+\_\+identity@{set\+\_\+remap\+\_\+identity}}
+\index{set\+\_\+remap\+\_\+identity@{set\+\_\+remap\+\_\+identity}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+remap\+\_\+identity(int, G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+A\+P)}{set_remap_identity(int, GEOMETRY_REMAP)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+remap\+\_\+identity (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+R\+E\+M\+AP}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_ab0669f60405e68309cd96a43e39b46ce}{}\label{geom_8h_ab0669f60405e68309cd96a43e39b46ce}
+\index{geom.\+h@{geom.\+h}!set\+\_\+rotational\+\_\+symmetry@{set\+\_\+rotational\+\_\+symmetry}}
+\index{set\+\_\+rotational\+\_\+symmetry@{set\+\_\+rotational\+\_\+symmetry}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+rotational\+\_\+symmetry(boolean)}{set_rotational_symmetry(boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void set\+\_\+rotational\+\_\+symmetry (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_aba8875f006913617853f6b9a1d154c85}{}\label{geom_8h_aba8875f006913617853f6b9a1d154c85}
+\index{geom.\+h@{geom.\+h}!side\+\_\+name@{side\+\_\+name}}
+\index{side\+\_\+name@{side\+\_\+name}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{side\+\_\+name(\+S\+I\+D\+E)}{side_name(SIDE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} const char$\ast$ side\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+DE}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a941c025b901793dfa800a8a27d18e699}{}\label{geom_8h_a941c025b901793dfa800a8a27d18e699}
+\index{geom.\+h@{geom.\+h}!sprint\+\_\+general\+\_\+vector@{sprint\+\_\+general\+\_\+vector}}
+\index{sprint\+\_\+general\+\_\+vector@{sprint\+\_\+general\+\_\+vector}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{sprint\+\_\+general\+\_\+vector(char $\ast$, const char $\ast$, const double $\ast$, int, const char $\ast$)}{sprint_general_vector(char *, const char *, const double *, int, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void sprint\+\_\+general\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a2164088757424176aa1b82a06581fe0a}{}\label{geom_8h_a2164088757424176aa1b82a06581fe0a}
+\index{geom.\+h@{geom.\+h}!triple\+\_\+product@{triple\+\_\+product}}
+\index{triple\+\_\+product@{triple\+\_\+product}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{triple\+\_\+product(const double $\ast$, const double $\ast$, const double $\ast$, int)}{triple_product(const double *, const double *, const double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double triple\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a6a549ae362924c0f7136f70b2175378b}{}\label{geom_8h_a6a549ae362924c0f7136f70b2175378b}
+\index{geom.\+h@{geom.\+h}!vector\+\_\+product@{vector\+\_\+product}}
+\index{vector\+\_\+product@{vector\+\_\+product}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{vector\+\_\+product(const double $\ast$, const double $\ast$, double $\ast$, int)}{vector_product(const double *, const double *, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double vector\+\_\+product (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a92020e41482161024c1121a12c116e07}{}\label{geom_8h_a92020e41482161024c1121a12c116e07}
+\index{geom.\+h@{geom.\+h}!vector\+\_\+product\+\_\+on\+\_\+points@{vector\+\_\+product\+\_\+on\+\_\+points}}
+\index{vector\+\_\+product\+\_\+on\+\_\+points@{vector\+\_\+product\+\_\+on\+\_\+points}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{vector\+\_\+product\+\_\+on\+\_\+points(const double $\ast$, const double $\ast$, const double $\ast$, int, double $\ast$)}{vector_product_on_points(const double *, const double *, const double *, int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double vector\+\_\+product\+\_\+on\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{const double $\ast$}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_af286c71ba7f158b7cc7a3c56367d23e9}{}\label{geom_8h_af286c71ba7f158b7cc7a3c56367d23e9}
+\index{geom.\+h@{geom.\+h}!zoom\+\_\+rect\+\_\+grid@{zoom\+\_\+rect\+\_\+grid}}
+\index{zoom\+\_\+rect\+\_\+grid@{zoom\+\_\+rect\+\_\+grid}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{zoom\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, const R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{zoom_rect_grid(RECT_GRID *, const RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void zoom\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{, }
+\item[{const {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{geom_8h_a034de7e1291fef8a35c70725c54b8614}{}\label{geom_8h_a034de7e1291fef8a35c70725c54b8614}
+
+
+\subsection{Variable Documentation}
+\index{geom.\+h@{geom.\+h}!E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}}
+\index{E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}!geom.\+h@{geom.\+h}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+I\+L\+ON}{EPSILON}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double E\+P\+S\+I\+L\+ON}\hypertarget{geom_8h_a5c8d5e640bbec022b62630693baa6f5d}{}\label{geom_8h_a5c8d5e640bbec022b62630693baa6f5d}

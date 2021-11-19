@@ -1,0 +1,1108 @@
+\hypertarget{i_fluid_8h}{}\section{D\+N\+S/i\+Fluid/i\+Fluid.h File Reference}
+\label{i_fluid_8h}\index{D\+N\+S/i\+Fluid/i\+Fluid.\+h@{D\+N\+S/i\+Fluid/i\+Fluid.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$petscksp.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Fron\+Tier.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$solver.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{i_fluid_8h_d8/dcb/struct___s_t_a_t_e}{\+\_\+\+S\+T\+A\+TE}
+\item 
+struct \hyperlink{i_fluid_8h_d7/d13/struct___i_f___f_i_e_l_d}{\+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD}
+\item 
+struct \hyperlink{i_fluid_8h_d8/de7/struct___n_s___s_c_h_e_m_e}{\+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME}
+\item 
+struct \hyperlink{i_fluid_8h_d8/d1e/struct_i_f___p_a_r_a_m_s}{I\+F\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{i_fluid_8h_d8/d01/struct___f_l_o_w___t_h_r_o_u_g_h___p_a_r_a_m_s}{\+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{i_fluid_8h_d1/da8/struct___t_i_m_e___d_e_p_e_n_d_e_n_t___p_a_r_a_m_s}{\+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{i_fluid_8h_d4/dd9/struct___r_g___p_a_r_a_m_s}{\+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+class \hyperlink{class_l___r_e_c_t_a_n_g_l_e}{L\+\_\+\+R\+E\+C\+T\+A\+N\+G\+LE}
+\item 
+class \hyperlink{class_incompress___solver___basis}{Incompress\+\_\+\+Solver\+\_\+\+Basis}
+\item 
+class \hyperlink{class_incompress___solver___smooth___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}
+\item 
+class \hyperlink{class_incompress___solver___e_b_m}{Incompress\+\_\+\+Solver\+\_\+\+E\+BM}
+\item 
+class \hyperlink{class_incompress___solver___smooth__2_d___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Basis}
+\item 
+class \hyperlink{class_incompress___solver___smooth__3_d___basis}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Basis}
+\item 
+class \hyperlink{class_incompress___solver___smooth__2_d___cartesian}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}
+\item 
+class \hyperlink{class_incompress___solver___smooth__3_d___cartesian}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i_fluid_8h_a089b7696830a14a603e1df2becda9512}{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}~1
+\item 
+\#define \hyperlink{i_fluid_8h_ae5b4e0922048ed724b88fe0c6769372e}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1}~2
+\item 
+\#define \hyperlink{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}~3
+\item 
+\#define \hyperlink{i_fluid_8h_a47350ac3bac3fa63fc1029cc5320eb8f}{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP}~3
+\item 
+\#define \hyperlink{i_fluid_8h_a502a106b7a492eff74d8b969f8205fe2}{ifluid\+\_\+comp}(comp)  
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29}{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US} \hyperlink{i_fluid_8h_a7af34ba699ea2e25a486af141fb6c5b1}{D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d8/dcb/struct___s_t_a_t_e}{\+\_\+\+S\+T\+A\+TE} \hyperlink{i_fluid_8h_a8f65f46708d21b792e580344617d7478}{S\+T\+A\+TE}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d7/d13/struct___i_f___f_i_e_l_d}{\+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD} \hyperlink{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}{I\+F\+\_\+\+F\+I\+E\+LD}
+\item 
+typedef enum \hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceff}{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD} \hyperlink{i_fluid_8h_a5d6cd8a3412c1e8c8b42910edc4a6140}{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}
+\item 
+typedef enum \hyperlink{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0}{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD} \hyperlink{i_fluid_8h_ae01a04bda0217dfc4fb8e0ca50f51ab8}{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}
+\item 
+typedef enum \hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748}{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD} \hyperlink{i_fluid_8h_a3a32267ccf1a5f07452b7c7236e8731f}{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}
+\item 
+typedef enum \hyperlink{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2}{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD} \hyperlink{i_fluid_8h_a88192aa01ecae522fe534f9b009d1405}{D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d8/de7/struct___n_s___s_c_h_e_m_e}{\+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME} \hyperlink{i_fluid_8h_a6c6ad7f9a6fcca20f8ecd9d61c2871d3}{N\+S\+\_\+\+S\+C\+H\+E\+ME}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d8/d01/struct___f_l_o_w___t_h_r_o_u_g_h___p_a_r_a_m_s}{\+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{i_fluid_8h_aaa76b6ab1e4a183a4b8dcf7ada17d0e0}{F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+typedef enum \hyperlink{i_fluid_8h_a8451e09008b75108b164f445e94c0949}{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE} \hyperlink{i_fluid_8h_a88dd8250d3f3f66b0838008b35204927}{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d1/da8/struct___t_i_m_e___d_e_p_e_n_d_e_n_t___p_a_r_a_m_s}{\+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{i_fluid_8h_a2b83af3e9c3ed757ca0d81d34c5054df}{T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}
+\item 
+typedef struct \hyperlink{i_fluid_8h_d4/dd9/struct___r_g___p_a_r_a_m_s}{\+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS} \hyperlink{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{R\+G\+\_\+\+P\+A\+R\+A\+MS}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414b}{E\+B\+M\+\_\+\+C\+O\+O\+RD} \{ \hyperlink{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba90b0030b76559a27bf6099278d48d001}{C\+O\+O\+R\+D\+\_\+X} = 0, 
+\hyperlink{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba63ebf6d854e134f261b0f03b54fac644}{C\+O\+O\+R\+D\+\_\+Y} = 1, 
+\hyperlink{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414babb97533c2c51dea534a856c4a4432e85}{C\+O\+O\+R\+D\+\_\+Z} = 2
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29}{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US} \{ \hyperlink{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0e6873a155f86a4695f463bf8601d05f}{N\+O\+T\+\_\+\+S\+O\+L\+V\+ED} = 0, 
+\hyperlink{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a7afe5658105c338112b94e360be3690e}{T\+O\+\_\+\+S\+O\+L\+VE}, 
+\hyperlink{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0a5e81bed8da1cf85236aa6eb7569818}{S\+O\+L\+V\+ED}
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceff}{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD} \{ \\*
+\hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffaebec5f7777a643ca7b2052a14496fdef}{E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME} = -\/1, 
+\hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa1a6b6e9893ec9e5d9710335b4c74d3f6}{S\+I\+M\+P\+LE} = 1, 
+\hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa111c9abbd970c81b1d3276b51b7a5341}{B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA}, 
+\hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffad753ee1a8d275c222e9e027f01b7e024}{K\+I\+M\+\_\+\+M\+O\+IN}, 
+\\*
+\hyperlink{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa72f2cf77ca68ad33c7b0e5fe39917902}{P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA}
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0}{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD} \{ \hyperlink{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a209c4e9a4dcfa66824bbc298cab07031}{E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME} = -\/1, 
+\hyperlink{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a422e7272acfbd2c0afa7cbb8e6c80d6a}{U\+P\+W\+I\+ND} = 1, 
+\hyperlink{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a8577a05c7433031785db4c556e7ef10d}{W\+E\+NO}
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748}{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD} \{ \\*
+\hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a75a9dbca0e468dabdd30f7cc403daf27}{E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME} = -\/1, 
+\hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a07cea62b210c9059d8035388a14d3f58}{S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP} = 1, 
+\hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a3388a559cdd87ac4173c0de6886e9310}{D\+U\+A\+L\+\_\+\+E\+L\+L\+IP}, 
+\hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748af17ad1e455e5dc3e4179c56804c66c80}{D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP}, 
+\\*
+\hyperlink{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a9e385b68c198bdc42047a66c60fcdf5c}{C\+I\+M\+\_\+\+E\+L\+L\+IP}
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2}{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD} \{ \hyperlink{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a3a02e1d80087a395f32341f61fd67cae}{B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT} = 1, 
+\hyperlink{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a434f0462785b038b20d618d6c04399cc}{B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG}, 
+\hyperlink{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2ab82cb4bcd6b5c7110766fe5b43dfa5ec}{B\+Y\+\_\+\+W\+A\+LL}
+ \}
+\item 
+enum \hyperlink{i_fluid_8h_a8451e09008b75108b164f445e94c0949}{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE} \{ \hyperlink{i_fluid_8h_a8451e09008b75108b164f445e94c0949a83972670b57415508523b5641bb46116}{C\+O\+N\+S\+T\+A\+NT} = 1, 
+\hyperlink{i_fluid_8h_a8451e09008b75108b164f445e94c0949a75449b8857e4c172273fd78f6157c13e}{P\+U\+L\+S\+E\+\_\+\+F\+U\+NC}, 
+\hyperlink{i_fluid_8h_a8451e09008b75108b164f445e94c0949a3435711b95b3d718c44f02541e4f515e}{S\+I\+N\+E\+\_\+\+F\+U\+NC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{i_fluid_8h_aabcd5c854fdc5992e450b8fd169bf5a8}{get\+State\+Pres} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_af109af255bbac087892e2de312a17802}{get\+State\+Phi} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_aad276307fcefad994c3ffea02eb4f303}{get\+State\+Vort} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_a523e775842a49d1eeea0febf7e22f9bd}{get\+State\+Xvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_a8144936eb6bfd8b51daa26625173f93d}{get\+State\+Yvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_a44f0a75afa0849b295ced100370e6305}{get\+State\+Zvel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_af58f5361d977c04a656f610f929cd618}{get\+State\+Ximp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_a0353da6009d73e43d86e65e205a484c1}{get\+State\+Yimp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_a8d2d98d8aee74b8c579f1918969f78ce}{get\+State\+Zimp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_ae6bb30e7075838db9a8b8806fbd042ab}{get\+State\+Comp} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+double \hyperlink{i_fluid_8h_af66a6b094863385fd09cd18ab011683e}{get\+Pressure} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, double $\ast$, double $\ast$)
+\item 
+double \hyperlink{i_fluid_8h_aba9e5ea071811c32e066fa646547af04}{get\+Phi\+From\+Pres} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, double)
+\item 
+double \hyperlink{i_fluid_8h_a3c989c31f8604492bf58b34729c8dbba}{burger\+\_\+flux} (double, double, double)
+\item 
+double \hyperlink{i_fluid_8h_a03032520773b698d91446da2f83b0801}{linear\+\_\+flux} (double, double, double, double)
+\item 
+void \hyperlink{i_fluid_8h_a23c7e26c57130906c25fefefcb2c2da9}{fluid\+\_\+print\+\_\+front\+\_\+states} (F\+I\+LE $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{i_fluid_8h_a741a645f479ae996f2787ae782b2ab59}{fluid\+\_\+read\+\_\+front\+\_\+states} (F\+I\+LE $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void \hyperlink{i_fluid_8h_aa931951e3ccf3f3e073ab0fdace6ec81}{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data} (char $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA})
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fluid_8h_ac9600a916a9981d4bb96de2870e192d2}{is\+Dirichlet\+Preset\+Bdry} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT})
+\item 
+int \hyperlink{i_fluid_8h_a5545d19bbd2c81a5323f76efa68c52d2}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\item 
+int \hyperlink{i_fluid_8h_ad809dccd9bb6477eadc0190458d718b1}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\item 
+int \hyperlink{i_fluid_8h_a9242c5c0df9794a81a67f65067ba899c}{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\item 
+double \hyperlink{i_fluid_8h_aa2517d6afeaf087eb1a42eac8b622cc5}{p\+\_\+jump} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int, double $\ast$)
+\item 
+double \hyperlink{i_fluid_8h_a92c9ca51e1d84bc1d042a4edc7f55802}{grad\+\_\+p\+\_\+jump\+\_\+n} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int, double $\ast$, double $\ast$)
+\item 
+double \hyperlink{i_fluid_8h_a9cb620a7d5168d5cd18245da826d01d9}{grad\+\_\+p\+\_\+jump\+\_\+t} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int, int, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fluid_8h_aa1689c55f342e248648ca349ef6d3ec6}{neumann\+\_\+type\+\_\+bdry} (int)
+\item 
+void \hyperlink{i_fluid_8h_a900b352a2b85dca56deb8882b42ac927}{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params} (int, char $\ast$, \hyperlink{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{R\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$)
+\item 
+void \hyperlink{i_fluid_8h_a5ef2e33c127d1849529d308fcdbc308d}{set\+\_\+rgbody\+\_\+params} (\hyperlink{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{R\+G\+\_\+\+P\+A\+R\+A\+MS}, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$)
+\item 
+void \hyperlink{i_fluid_8h_a1ac834b97fb881552001d69b58def0db}{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double, double $\ast$, double $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+S\+T\+A\+TE@{\+\_\+\+S\+T\+A\+TE}}\label{struct___s_t_a_t_e}
+\hypertarget{i_fluid_8h_struct___s_t_a_t_e}{}
+\subsubsection{struct \+\_\+\+S\+T\+A\+TE}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{i_fluid_8h_a3075c72c2e46a4bb55085ccd593a6464}{}\label{i_fluid_8h_a3075c72c2e46a4bb55085ccd593a6464}
+&
+dens&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ae5b2f98c82ba74ec08cc7eef699f9c04}{}\label{i_fluid_8h_ae5b2f98c82ba74ec08cc7eef699f9c04}
+&
+impulse\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a1c714c4fa35ae1a77b6ca5492981f7a1}{}\label{i_fluid_8h_a1c714c4fa35ae1a77b6ca5492981f7a1}
+&
+phi&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a976df451733a421619e8f54ac4d43444}{}\label{i_fluid_8h_a976df451733a421619e8f54ac4d43444}
+&
+pres&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a9598acda76d2ddcba0c382dfdfca63c7}{}\label{i_fluid_8h_a9598acda76d2ddcba0c382dfdfca63c7}
+&
+solute&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_abbb6dd0a16e7cf848158e205873382fa}{}\label{i_fluid_8h_abbb6dd0a16e7cf848158e205873382fa}
+&
+supersat&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_abefd0477e52f5ee7b9280c8c4211a3a0}{}\label{i_fluid_8h_abefd0477e52f5ee7b9280c8c4211a3a0}
+&
+temperature&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a8f605b9ef733de3ef20333207163540b}{}\label{i_fluid_8h_a8f605b9ef733de3ef20333207163540b}
+&
+vapor&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ad8d3fea6cc50ca635aed9332ed0353d3}{}\label{i_fluid_8h_ad8d3fea6cc50ca635aed9332ed0353d3}
+&
+vel\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_aebc6fe65a2977893fe454917d0168b4b}{}\label{i_fluid_8h_aebc6fe65a2977893fe454917d0168b4b}
+&
+vort&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD@{\+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD}}\label{struct___i_f___f_i_e_l_d}
+\hypertarget{i_fluid_8h_struct___i_f___f_i_e_l_d}{}
+\subsubsection{struct \+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD}
+\begin{DoxyFields}{Class Members}
+double $\ast$\hypertarget{i_fluid_8h_af98eb18714a0ce2f5d732dc8bbe6b322}{}\label{i_fluid_8h_af98eb18714a0ce2f5d732dc8bbe6b322}
+&
+d\+\_\+phi&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a0132906ec464e9ec81f264687f66f63d}{}\label{i_fluid_8h_a0132906ec464e9ec81f264687f66f63d}
+&
+div\+\_\+U&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{i_fluid_8h_a8bd607cda3392230ffa2b46e18c69744}{}\label{i_fluid_8h_a8bd607cda3392230ffa2b46e18c69744}
+&
+ext\+\_\+accel&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{i_fluid_8h_a1e282aa5c361ad85890d6ab876edcfae}{}\label{i_fluid_8h_a1e282aa5c361ad85890d6ab876edcfae}
+&
+f\+\_\+surf&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{i_fluid_8h_a6b2b4ec984f2ae5afc0c2c09804d795c}{}\label{i_fluid_8h_a6b2b4ec984f2ae5afc0c2c09804d795c}
+&
+grad\+\_\+q&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a690dea1953214bbf8b4f57c521b96b82}{}\label{i_fluid_8h_a690dea1953214bbf8b4f57c521b96b82}
+&
+mu&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a961e43ad18190aba0efedc74e58a7b99}{}\label{i_fluid_8h_a961e43ad18190aba0efedc74e58a7b99}
+&
+nu\+\_\+t&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a306ce62884d2867ee59cf8a457166e9c}{}\label{i_fluid_8h_a306ce62884d2867ee59cf8a457166e9c}
+&
+phi&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a60805fc40137985bd2684c2f43113d0d}{}\label{i_fluid_8h_a60805fc40137985bd2684c2f43113d0d}
+&
+pres&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a4a2f1b4ce178f5781f65b956f97f5e93}{}\label{i_fluid_8h_a4a2f1b4ce178f5781f65b956f97f5e93}
+&
+q&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a127e34c05746b72c9c97c587623be15f}{}\label{i_fluid_8h_a127e34c05746b72c9c97c587623be15f}
+&
+rho&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_ac37f9a9a971d07d98e12cc5d9ba14b98}{}\label{i_fluid_8h_ac37f9a9a971d07d98e12cc5d9ba14b98}
+&
+temperature&
+\\
+\hline
+
+double $\ast$$\ast$\hypertarget{i_fluid_8h_aa4729b19762cf6574dca2503292d3f4c}{}\label{i_fluid_8h_aa4729b19762cf6574dca2503292d3f4c}
+&
+vel&
+\\
+\hline
+
+double $\ast$\hypertarget{i_fluid_8h_a56d9ff01c9ac0d07831dd40814e25003}{}\label{i_fluid_8h_a56d9ff01c9ac0d07831dd40814e25003}
+&
+vort&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME@{\+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME}}\label{struct___n_s___s_c_h_e_m_e}
+\hypertarget{i_fluid_8h_struct___n_s___s_c_h_e_m_e}{}
+\subsubsection{struct \+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME}
+\begin{DoxyFields}{Class Members}
+\hyperlink{i_fluid_8h_ae01a04bda0217dfc4fb8e0ca50f51ab8}{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}\hypertarget{i_fluid_8h_a3289727c9f4dcab30694f76625bf734f}{}\label{i_fluid_8h_a3289727c9f4dcab30694f76625bf734f}
+&
+advec\+\_\+method&
+\\
+\hline
+
+\hyperlink{i_fluid_8h_a3a32267ccf1a5f07452b7c7236e8731f}{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}\hypertarget{i_fluid_8h_a516463717d639a4274df6f52220bd62b}{}\label{i_fluid_8h_a516463717d639a4274df6f52220bd62b}
+&
+ellip\+\_\+method&
+\\
+\hline
+
+\hyperlink{i_fluid_8h_a5d6cd8a3412c1e8c8b42910edc4a6140}{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}\hypertarget{i_fluid_8h_acc24e776230d5f54887e41654693af3c}{}\label{i_fluid_8h_acc24e776230d5f54887e41654693af3c}
+&
+projc\+\_\+method&
+\\
+\hline
+
+\end{DoxyFields}
+\index{I\+F\+\_\+\+P\+A\+R\+A\+MS@{I\+F\+\_\+\+P\+A\+R\+A\+MS}}\label{struct_i_f___p_a_r_a_m_s}
+\hypertarget{i_fluid_8h_struct_i_f___p_a_r_a_m_s}{}
+\subsubsection{struct I\+F\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+int\hypertarget{i_fluid_8h_a19fcfbb0b6f0f3ff678e046037be6457}{}\label{i_fluid_8h_a19fcfbb0b6f0f3ff678e046037be6457}
+&
+adv\+\_\+order&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{i_fluid_8h_a677d3d51ee99cc19d3ae2a9082085d9c}{}\label{i_fluid_8h_a677d3d51ee99cc19d3ae2a9082085d9c}
+&
+buoyancy\+\_\+flow&
+\\
+\hline
+
+int\hypertarget{i_fluid_8h_ab88370386d7402a1032deb3633ed3f7c}{}\label{i_fluid_8h_ab88370386d7402a1032deb3633ed3f7c}
+&
+dim&
+\\
+\hline
+
+\hyperlink{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}{I\+F\+\_\+\+F\+I\+E\+LD} $\ast$\hypertarget{i_fluid_8h_ae0a8f72b7166d53c4867d020a67c8148}{}\label{i_fluid_8h_ae0a8f72b7166d53c4867d020a67c8148}
+&
+field&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ac060239ebcd347e70e85643c917ce739}{}\label{i_fluid_8h_ac060239ebcd347e70e85643c917ce739}
+&
+gravity\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{i_fluid_8h_a11664840b4fe38348dc468b1c304cc7f}{}\label{i_fluid_8h_a11664840b4fe38348dc468b1c304cc7f}
+&
+if\+\_\+buoyancy&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{i_fluid_8h_a2a621d2d169f57ac380846d10b7f3a0e}{}\label{i_fluid_8h_a2a621d2d169f57ac380846d10b7f3a0e}
+&
+if\+\_\+ref\+\_\+pres&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}\hypertarget{i_fluid_8h_abd9ce1fbc8e658cf17f3bbd0373bd389}{}\label{i_fluid_8h_abd9ce1fbc8e658cf17f3bbd0373bd389}
+&
+level\+\_\+func\+\_\+params&
+\\
+\hline
+
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}\hypertarget{i_fluid_8h_af45f4632457077a9eb8ebde97f6ab33a}{}\label{i_fluid_8h_af45f4632457077a9eb8ebde97f6ab33a}
+&
+m\+\_\+comp1&
+\\
+\hline
+
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}\hypertarget{i_fluid_8h_a28b7a3b749776d16769e90569d71bb9f}{}\label{i_fluid_8h_a28b7a3b749776d16769e90569d71bb9f}
+&
+m\+\_\+comp2&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_aef72d741d216f61694f95ee0fd9c6b7c}{}\label{i_fluid_8h_aef72d741d216f61694f95ee0fd9c6b7c}
+&
+mu1&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a042308962450b071e2ff70b02550d866}{}\label{i_fluid_8h_a042308962450b071e2ff70b02550d866}
+&
+mu2&
+\\
+\hline
+
+\hyperlink{i_fluid_8h_a6c6ad7f9a6fcca20f8ecd9d61c2871d3}{N\+S\+\_\+\+S\+C\+H\+E\+ME}\hypertarget{i_fluid_8h_a406b9fe18d853823f9e525c2d565e930}{}\label{i_fluid_8h_a406b9fe18d853823f9e525c2d565e930}
+&
+num\+\_\+scheme&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a709103625b8b48eb29fde8f32d17e7e7}{}\label{i_fluid_8h_a709103625b8b48eb29fde8f32d17e7e7}
+&
+ref\+\_\+pres&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a01f05d26c228f632a12f520353cfe9b8}{}\label{i_fluid_8h_a01f05d26c228f632a12f520353cfe9b8}
+&
+ref\+\_\+temp&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a5db72571eed7c21fd33a172f2ff929e3}{}\label{i_fluid_8h_a5db72571eed7c21fd33a172f2ff929e3}
+&
+rho1&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a0fce490a9a74dc971277f0aa730c09be}{}\label{i_fluid_8h_a0fce490a9a74dc971277f0aa730c09be}
+&
+rho2&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_abc350610c7620f4a2373505c6a312064}{}\label{i_fluid_8h_abc350610c7620f4a2373505c6a312064}
+&
+smoothing\+\_\+radius&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ab3247a2614cb6e1ca044316c50f24603}{}\label{i_fluid_8h_ab3247a2614cb6e1ca044316c50f24603}
+&
+surf\+\_\+tension&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{i_fluid_8h_ab91c271e365060d40303ceb0e6a77f8d}{}\label{i_fluid_8h_ab91c271e365060d40303ceb0e6a77f8d}
+&
+total\+\_\+div\+\_\+cancellation&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ab42100ae8d890c2e467ee7d3e76aeaee}{}\label{i_fluid_8h_ab42100ae8d890c2e467ee7d3e76aeaee}
+&
+U1\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a264d2b128e5a8d73973c23c1bb26485e}{}\label{i_fluid_8h_a264d2b128e5a8d73973c23c1bb26485e}
+&
+U2\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_aad541aa574921b1a3ce5c41d27f8051f}{}\label{i_fluid_8h_aad541aa574921b1a3ce5c41d27f8051f}
+&
+U\+\_\+ambient\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_adbc9fe9b06ebff6514408975fad02d53}{}\label{i_fluid_8h_adbc9fe9b06ebff6514408975fad02d53}
+&
+ub\+\_\+speed&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ad38664c9decc4db7ea9cd2ec648879c9}{}\label{i_fluid_8h_ad38664c9decc4db7ea9cd2ec648879c9}
+&
+Urms&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{i_fluid_8h_a390e6f2ccd62ec8361d730856eca7270}{}\label{i_fluid_8h_a390e6f2ccd62ec8361d730856eca7270}
+&
+use\+\_\+eddy\+\_\+visc&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a5f79bd933c0f07926df1d543a87b33ae}{}\label{i_fluid_8h_a5f79bd933c0f07926df1d543a87b33ae}
+&
+ymax&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS@{\+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}}\label{struct___f_l_o_w___t_h_r_o_u_g_h___p_a_r_a_m_s}
+\hypertarget{i_fluid_8h_struct___f_l_o_w___t_h_r_o_u_g_h___p_a_r_a_m_s}{}
+\subsubsection{struct \+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}\hypertarget{i_fluid_8h_aa9f91608cc980960d11f9aa3d691ec7e}{}\label{i_fluid_8h_aa9f91608cc980960d11f9aa3d691ec7e}
+&
+comp&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hypertarget{i_fluid_8h_a08da38b72792cd95b8e319f4503e61d2}{}\label{i_fluid_8h_a08da38b72792cd95b8e319f4503e61d2}
+&
+oldp&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS@{\+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}}\label{struct___t_i_m_e___d_e_p_e_n_d_e_n_t___p_a_r_a_m_s}
+\hypertarget{i_fluid_8h_struct___t_i_m_e___d_e_p_e_n_d_e_n_t___p_a_r_a_m_s}{}
+\subsubsection{struct \+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{i_fluid_8h_acde3cbd3db0b55709a81148e4dc7e84c}{}\label{i_fluid_8h_acde3cbd3db0b55709a81148e4dc7e84c}
+&
+omega&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ac49518fe41a49bd46524a0c71aefd9a7}{}\label{i_fluid_8h_ac49518fe41a49bd46524a0c71aefd9a7}
+&
+p\+\_\+amp&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a523a30829a34510e8a612af6ca80ec0d}{}\label{i_fluid_8h_a523a30829a34510e8a612af6ca80ec0d}
+&
+p\+\_\+base&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a79245f118c34be01c00698cb886c168d}{}\label{i_fluid_8h_a79245f118c34be01c00698cb886c168d}
+&
+p\+\_\+peak&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ad6626b32c105422f506400a74aff467d}{}\label{i_fluid_8h_ad6626b32c105422f506400a74aff467d}
+&
+p\+\_\+tail&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a16fcbe8bc037d58c9fb7e54e0bcabb80}{}\label{i_fluid_8h_a16fcbe8bc037d58c9fb7e54e0bcabb80}
+&
+phase&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a5d305f3f2d98eee5f84c858c349ee66a}{}\label{i_fluid_8h_a5d305f3f2d98eee5f84c858c349ee66a}
+&
+T\mbox{[}10\mbox{]}&
+\\
+\hline
+
+\hyperlink{i_fluid_8h_a88dd8250d3f3f66b0838008b35204927}{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}\hypertarget{i_fluid_8h_af343155b4f958538d84f16cd4b803f16}{}\label{i_fluid_8h_af343155b4f958538d84f16cd4b803f16}
+&
+td\+\_\+type&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a48effbb7adccf58473a2056cc22c05d5}{}\label{i_fluid_8h_a48effbb7adccf58473a2056cc22c05d5}
+&
+v\+\_\+amp\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a2331b74cc44c344df340f6372708ec56}{}\label{i_fluid_8h_a2331b74cc44c344df340f6372708ec56}
+&
+v\+\_\+base\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ada14d38e8a6ef84957f0a7c9ad33f33c}{}\label{i_fluid_8h_ada14d38e8a6ef84957f0a7c9ad33f33c}
+&
+v\+\_\+peak\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a3955d8e6219b62464aba9f2c8a4de3bb}{}\label{i_fluid_8h_a3955d8e6219b62464aba9f2c8a4de3bb}
+&
+v\+\_\+tail\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS@{\+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS}}\label{struct___r_g___p_a_r_a_m_s}
+\hypertarget{i_fluid_8h_struct___r_g___p_a_r_a_m_s}{}
+\subsubsection{struct \+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{i_fluid_8h_a03bccd3a1913749e5c2af50d85c47879}{}\label{i_fluid_8h_a03bccd3a1913749e5c2af50d85c47879}
+&
+angular\+\_\+velo&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a477bfc1cd70bfefa7e4bfef77dae3e9e}{}\label{i_fluid_8h_a477bfc1cd70bfefa7e4bfef77dae3e9e}
+&
+cen\+\_\+of\+\_\+mass\+\_\+velo\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a5eab995d542951650e0a2ff2685b8c65}{}\label{i_fluid_8h_a5eab995d542951650e0a2ff2685b8c65}
+&
+center\+\_\+of\+\_\+mass\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+int\hypertarget{i_fluid_8h_a4a2f5933739b5539ffee06ca5df0a01d}{}\label{i_fluid_8h_a4a2f5933739b5539ffee06ca5df0a01d}
+&
+dim&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ab1d53ecebb9eda609b2d1a686e4d87ec}{}\label{i_fluid_8h_ab1d53ecebb9eda609b2d1a686e4d87ec}
+&
+moment\+\_\+of\+\_\+inertial&
+\\
+\hline
+
+\hyperlink{fuserint_8h_aa4aab5610f9b318a79db26e3b59a18cf}{M\+O\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}\hypertarget{i_fluid_8h_a943d38353d70dbe54bfe1afae315c830}{}\label{i_fluid_8h_a943d38353d70dbe54bfe1afae315c830}
+&
+motion\+\_\+type&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a9a8aaf276706ba6075fbfc9368a1e78f}{}\label{i_fluid_8h_a9a8aaf276706ba6075fbfc9368a1e78f}
+&
+rotation\+\_\+cen\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_ae7117c7f3698f3bb3c10b1d1377e8d0b}{}\label{i_fluid_8h_ae7117c7f3698f3bb3c10b1d1377e8d0b}
+&
+rotation\+\_\+dir\mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}&
+\\
+\hline
+
+double\hypertarget{i_fluid_8h_a6f1af080f5c547fdf960d1148b9711c2}{}\label{i_fluid_8h_a6f1af080f5c547fdf960d1148b9711c2}
+&
+total\+\_\+mass&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!ifluid\+\_\+comp@{ifluid\+\_\+comp}}
+\index{ifluid\+\_\+comp@{ifluid\+\_\+comp}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+comp}{ifluid_comp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifluid\+\_\+comp(
+\begin{DoxyParamCaption}
+\item[{}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a502a106b7a492eff74d8b969f8205fe2}{}\label{i_fluid_8h_a502a106b7a492eff74d8b969f8205fe2}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((comp) == \hyperlink{i_fluid_8h_ae5b4e0922048ed724b88fe0c6769372e}{LIQUID\_COMP1} ||     \(\backslash\)
+        comp == \hyperlink{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}{LIQUID\_COMP2}) ? \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES} : \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO})
+\end{DoxyCode}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP}}
+\index{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP}{LIQUID_COMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+MP~3}\hypertarget{i_fluid_8h_a47350ac3bac3fa63fc1029cc5320eb8f}{}\label{i_fluid_8h_a47350ac3bac3fa63fc1029cc5320eb8f}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1}}
+\index{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1}{LIQUID_COMP1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P1~2}\hypertarget{i_fluid_8h_ae5b4e0922048ed724b88fe0c6769372e}{}\label{i_fluid_8h_ae5b4e0922048ed724b88fe0c6769372e}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}}
+\index{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2@{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2}{LIQUID_COMP2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+Q\+U\+I\+D\+\_\+\+C\+O\+M\+P2~3}\hypertarget{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}{}\label{i_fluid_8h_a34eb030e3e2091d860a2dcdedd02882e}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+O\+L\+I\+D\+\_\+\+C\+O\+MP@{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}}
+\index{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP@{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{S\+O\+L\+I\+D\+\_\+\+C\+O\+MP}{SOLID_COMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+L\+I\+D\+\_\+\+C\+O\+MP~1}\hypertarget{i_fluid_8h_a089b7696830a14a603e1df2becda9512}{}\label{i_fluid_8h_a089b7696830a14a603e1df2becda9512}
+
+
+\subsection{Typedef Documentation}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD@{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}}
+\index{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD@{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}{ADVEC_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD} {\bf A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_ae01a04bda0217dfc4fb8e0ca50f51ab8}{}\label{i_fluid_8h_ae01a04bda0217dfc4fb8e0ca50f51ab8}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD@{D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}}
+\index{D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD@{D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}{DOMAIN_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD} {\bf D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_a88192aa01ecae522fe534f9b009d1405}{}\label{i_fluid_8h_a88192aa01ecae522fe534f9b009d1405}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US@{D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}}
+\index{D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US@{D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}{DOMAIN_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US} {\bf D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}}\hypertarget{i_fluid_8h_a7af34ba699ea2e25a486af141fb6c5b1}{}\label{i_fluid_8h_a7af34ba699ea2e25a486af141fb6c5b1}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD@{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}}
+\index{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD@{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}{ELLIP_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD} {\bf E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_a3a32267ccf1a5f07452b7c7236e8731f}{}\label{i_fluid_8h_a3a32267ccf1a5f07452b7c7236e8731f}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS@{F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}}
+\index{F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS@{F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}{FLOW_THROUGH_PARAMS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS} {\bf F\+L\+O\+W\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+P\+A\+R\+A\+MS}}\hypertarget{i_fluid_8h_aaa76b6ab1e4a183a4b8dcf7ada17d0e0}{}\label{i_fluid_8h_aaa76b6ab1e4a183a4b8dcf7ada17d0e0}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!I\+F\+\_\+\+F\+I\+E\+LD@{I\+F\+\_\+\+F\+I\+E\+LD}}
+\index{I\+F\+\_\+\+F\+I\+E\+LD@{I\+F\+\_\+\+F\+I\+E\+LD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{I\+F\+\_\+\+F\+I\+E\+LD}{IF_FIELD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+I\+F\+\_\+\+F\+I\+E\+LD} {\bf I\+F\+\_\+\+F\+I\+E\+LD}}\hypertarget{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}{}\label{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!N\+S\+\_\+\+S\+C\+H\+E\+ME@{N\+S\+\_\+\+S\+C\+H\+E\+ME}}
+\index{N\+S\+\_\+\+S\+C\+H\+E\+ME@{N\+S\+\_\+\+S\+C\+H\+E\+ME}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{N\+S\+\_\+\+S\+C\+H\+E\+ME}{NS_SCHEME}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+N\+S\+\_\+\+S\+C\+H\+E\+ME} {\bf N\+S\+\_\+\+S\+C\+H\+E\+ME}}\hypertarget{i_fluid_8h_a6c6ad7f9a6fcca20f8ecd9d61c2871d3}{}\label{i_fluid_8h_a6c6ad7f9a6fcca20f8ecd9d61c2871d3}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD@{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}}
+\index{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD@{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}{PROJC_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD} {\bf P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_a5d6cd8a3412c1e8c8b42910edc4a6140}{}\label{i_fluid_8h_a5d6cd8a3412c1e8c8b42910edc4a6140}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!R\+G\+\_\+\+P\+A\+R\+A\+MS@{R\+G\+\_\+\+P\+A\+R\+A\+MS}}
+\index{R\+G\+\_\+\+P\+A\+R\+A\+MS@{R\+G\+\_\+\+P\+A\+R\+A\+MS}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{R\+G\+\_\+\+P\+A\+R\+A\+MS}{RG_PARAMS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+R\+G\+\_\+\+P\+A\+R\+A\+MS} {\bf R\+G\+\_\+\+P\+A\+R\+A\+MS}}\hypertarget{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}{}\label{i_fluid_8h_a801fb0b49885ff490b0bc57b80b12fc6}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+T\+A\+TE@{S\+T\+A\+TE}}
+\index{S\+T\+A\+TE@{S\+T\+A\+TE}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+TE}{STATE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+S\+T\+A\+TE} {\bf S\+T\+A\+TE}}\hypertarget{i_fluid_8h_a8f65f46708d21b792e580344617d7478}{}\label{i_fluid_8h_a8f65f46708d21b792e580344617d7478}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS@{T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}}
+\index{T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS@{T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}{TIME_DEPENDENT_PARAMS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS} {\bf T\+I\+M\+E\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}}\hypertarget{i_fluid_8h_a2b83af3e9c3ed757ca0d81d34c5054df}{}\label{i_fluid_8h_a2b83af3e9c3ed757ca0d81d34c5054df}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE@{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}}
+\index{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE@{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}{TIME_FUNC_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE} {\bf T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}}\hypertarget{i_fluid_8h_a88dd8250d3f3f66b0838008b35204927}{}\label{i_fluid_8h_a88dd8250d3f3f66b0838008b35204927}
+
+
+\subsection{Enumeration Type Documentation}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}}
+\index{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}{_ADVEC_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+A\+D\+V\+E\+C\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0}{}\label{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+A\+D\+V\+E\+C\+\_\+\+S\+C\+H\+E\+ME\hypertarget{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a209c4e9a4dcfa66824bbc298cab07031}{}\label{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a209c4e9a4dcfa66824bbc298cab07031}
+}]\index{U\+P\+W\+I\+ND@{U\+P\+W\+I\+ND}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!U\+P\+W\+I\+ND@{U\+P\+W\+I\+ND}}\item[{\em 
+U\+P\+W\+I\+ND\hypertarget{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a422e7272acfbd2c0afa7cbb8e6c80d6a}{}\label{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a422e7272acfbd2c0afa7cbb8e6c80d6a}
+}]\index{W\+E\+NO@{W\+E\+NO}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!W\+E\+NO@{W\+E\+NO}}\item[{\em 
+W\+E\+NO\hypertarget{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a8577a05c7433031785db4c556e7ef10d}{}\label{i_fluid_8h_aa40b68ce3fcb1941d09ce07a6f5288f0a8577a05c7433031785db4c556e7ef10d}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}}
+\index{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}{_DOMAIN_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2}{}\label{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}}\item[{\em 
+B\+Y\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT\hypertarget{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a3a02e1d80087a395f32341f61fd67cae}{}\label{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a3a02e1d80087a395f32341f61fd67cae}
+}]\index{B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG@{B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG@{B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG}}\item[{\em 
+B\+Y\+\_\+\+C\+R\+O\+S\+S\+I\+NG\hypertarget{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a434f0462785b038b20d618d6c04399cc}{}\label{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2a434f0462785b038b20d618d6c04399cc}
+}]\index{B\+Y\+\_\+\+W\+A\+LL@{B\+Y\+\_\+\+W\+A\+LL}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!B\+Y\+\_\+\+W\+A\+LL@{B\+Y\+\_\+\+W\+A\+LL}}\item[{\em 
+B\+Y\+\_\+\+W\+A\+LL\hypertarget{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2ab82cb4bcd6b5c7110766fe5b43dfa5ec}{}\label{i_fluid_8h_aa7f235fd6e5c3c9f6c46dfad72faf4a2ab82cb4bcd6b5c7110766fe5b43dfa5ec}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US@{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}}
+\index{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US@{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}{_DOMAIN_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+S\+T\+A\+T\+US}}\hypertarget{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29}{}\label{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+T\+\_\+\+S\+O\+L\+V\+ED@{N\+O\+T\+\_\+\+S\+O\+L\+V\+ED}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!N\+O\+T\+\_\+\+S\+O\+L\+V\+ED@{N\+O\+T\+\_\+\+S\+O\+L\+V\+ED}}\item[{\em 
+N\+O\+T\+\_\+\+S\+O\+L\+V\+ED\hypertarget{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0e6873a155f86a4695f463bf8601d05f}{}\label{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0e6873a155f86a4695f463bf8601d05f}
+}]\index{T\+O\+\_\+\+S\+O\+L\+VE@{T\+O\+\_\+\+S\+O\+L\+VE}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!T\+O\+\_\+\+S\+O\+L\+VE@{T\+O\+\_\+\+S\+O\+L\+VE}}\item[{\em 
+T\+O\+\_\+\+S\+O\+L\+VE\hypertarget{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a7afe5658105c338112b94e360be3690e}{}\label{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a7afe5658105c338112b94e360be3690e}
+}]\index{S\+O\+L\+V\+ED@{S\+O\+L\+V\+ED}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+O\+L\+V\+ED@{S\+O\+L\+V\+ED}}\item[{\em 
+S\+O\+L\+V\+ED\hypertarget{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0a5e81bed8da1cf85236aa6eb7569818}{}\label{i_fluid_8h_aac56ea29f26162d3ab757ab0edff8c29a0a5e81bed8da1cf85236aa6eb7569818}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}}
+\index{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}{_ELLIP_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+E\+L\+L\+I\+P\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+E\+L\+L\+I\+P\+\_\+\+S\+C\+H\+E\+ME\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a75a9dbca0e468dabdd30f7cc403daf27}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a75a9dbca0e468dabdd30f7cc403daf27}
+}]\index{S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP@{S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP@{S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP}}\item[{\em 
+S\+I\+M\+P\+L\+E\+\_\+\+E\+L\+L\+IP\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a07cea62b210c9059d8035388a14d3f58}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a07cea62b210c9059d8035388a14d3f58}
+}]\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+IP@{D\+U\+A\+L\+\_\+\+E\+L\+L\+IP}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!D\+U\+A\+L\+\_\+\+E\+L\+L\+IP@{D\+U\+A\+L\+\_\+\+E\+L\+L\+IP}}\item[{\em 
+D\+U\+A\+L\+\_\+\+E\+L\+L\+IP\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a3388a559cdd87ac4173c0de6886e9310}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a3388a559cdd87ac4173c0de6886e9310}
+}]\index{D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP@{D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP@{D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP}}\item[{\em 
+D\+O\+U\+B\+L\+E\+\_\+\+E\+L\+L\+IP\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748af17ad1e455e5dc3e4179c56804c66c80}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748af17ad1e455e5dc3e4179c56804c66c80}
+}]\index{C\+I\+M\+\_\+\+E\+L\+L\+IP@{C\+I\+M\+\_\+\+E\+L\+L\+IP}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!C\+I\+M\+\_\+\+E\+L\+L\+IP@{C\+I\+M\+\_\+\+E\+L\+L\+IP}}\item[{\em 
+C\+I\+M\+\_\+\+E\+L\+L\+IP\hypertarget{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a9e385b68c198bdc42047a66c60fcdf5c}{}\label{i_fluid_8h_ac5274efea7695e42f0d2c9cd1ee87748a9e385b68c198bdc42047a66c60fcdf5c}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}}
+\index{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD@{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}{_PROJC_METHOD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+P\+R\+O\+J\+C\+\_\+\+M\+E\+T\+H\+OD}}\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceff}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceff}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME@{E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+P\+R\+O\+J\+C\+\_\+\+S\+C\+H\+E\+ME\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffaebec5f7777a643ca7b2052a14496fdef}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffaebec5f7777a643ca7b2052a14496fdef}
+}]\index{S\+I\+M\+P\+LE@{S\+I\+M\+P\+LE}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+I\+M\+P\+LE@{S\+I\+M\+P\+LE}}\item[{\em 
+S\+I\+M\+P\+LE\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa1a6b6e9893ec9e5d9710335b4c74d3f6}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa1a6b6e9893ec9e5d9710335b4c74d3f6}
+}]\index{B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA@{B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA@{B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA}}\item[{\em 
+B\+E\+L\+L\+\_\+\+C\+O\+L\+E\+L\+LA\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa111c9abbd970c81b1d3276b51b7a5341}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa111c9abbd970c81b1d3276b51b7a5341}
+}]\index{K\+I\+M\+\_\+\+M\+O\+IN@{K\+I\+M\+\_\+\+M\+O\+IN}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!K\+I\+M\+\_\+\+M\+O\+IN@{K\+I\+M\+\_\+\+M\+O\+IN}}\item[{\em 
+K\+I\+M\+\_\+\+M\+O\+IN\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffad753ee1a8d275c222e9e027f01b7e024}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffad753ee1a8d275c222e9e027f01b7e024}
+}]\index{P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA@{P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA@{P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA}}\item[{\em 
+P\+E\+R\+O\+T\+\_\+\+B\+O\+T\+E\+L\+LA\hypertarget{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa72f2cf77ca68ad33c7b0e5fe39917902}{}\label{i_fluid_8h_a53762de923566d8b1c4e00100f4bceffa72f2cf77ca68ad33c7b0e5fe39917902}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE@{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}}
+\index{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE@{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}{_TIME_FUNC_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+T\+I\+M\+E\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}}\hypertarget{i_fluid_8h_a8451e09008b75108b164f445e94c0949}{}\label{i_fluid_8h_a8451e09008b75108b164f445e94c0949}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+O\+N\+S\+T\+A\+NT@{C\+O\+N\+S\+T\+A\+NT}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!C\+O\+N\+S\+T\+A\+NT@{C\+O\+N\+S\+T\+A\+NT}}\item[{\em 
+C\+O\+N\+S\+T\+A\+NT\hypertarget{i_fluid_8h_a8451e09008b75108b164f445e94c0949a83972670b57415508523b5641bb46116}{}\label{i_fluid_8h_a8451e09008b75108b164f445e94c0949a83972670b57415508523b5641bb46116}
+}]\index{P\+U\+L\+S\+E\+\_\+\+F\+U\+NC@{P\+U\+L\+S\+E\+\_\+\+F\+U\+NC}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!P\+U\+L\+S\+E\+\_\+\+F\+U\+NC@{P\+U\+L\+S\+E\+\_\+\+F\+U\+NC}}\item[{\em 
+P\+U\+L\+S\+E\+\_\+\+F\+U\+NC\hypertarget{i_fluid_8h_a8451e09008b75108b164f445e94c0949a75449b8857e4c172273fd78f6157c13e}{}\label{i_fluid_8h_a8451e09008b75108b164f445e94c0949a75449b8857e4c172273fd78f6157c13e}
+}]\index{S\+I\+N\+E\+\_\+\+F\+U\+NC@{S\+I\+N\+E\+\_\+\+F\+U\+NC}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!S\+I\+N\+E\+\_\+\+F\+U\+NC@{S\+I\+N\+E\+\_\+\+F\+U\+NC}}\item[{\em 
+S\+I\+N\+E\+\_\+\+F\+U\+NC\hypertarget{i_fluid_8h_a8451e09008b75108b164f445e94c0949a3435711b95b3d718c44f02541e4f515e}{}\label{i_fluid_8h_a8451e09008b75108b164f445e94c0949a3435711b95b3d718c44f02541e4f515e}
+}]\end{description}
+\end{Desc}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!E\+B\+M\+\_\+\+C\+O\+O\+RD@{E\+B\+M\+\_\+\+C\+O\+O\+RD}}
+\index{E\+B\+M\+\_\+\+C\+O\+O\+RD@{E\+B\+M\+\_\+\+C\+O\+O\+RD}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{E\+B\+M\+\_\+\+C\+O\+O\+RD}{EBM_COORD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\+B\+M\+\_\+\+C\+O\+O\+RD}}\hypertarget{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414b}{}\label{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+O\+O\+R\+D\+\_\+X@{C\+O\+O\+R\+D\+\_\+X}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!C\+O\+O\+R\+D\+\_\+X@{C\+O\+O\+R\+D\+\_\+X}}\item[{\em 
+C\+O\+O\+R\+D\+\_\+X\hypertarget{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba90b0030b76559a27bf6099278d48d001}{}\label{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba90b0030b76559a27bf6099278d48d001}
+}]\index{C\+O\+O\+R\+D\+\_\+Y@{C\+O\+O\+R\+D\+\_\+Y}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!C\+O\+O\+R\+D\+\_\+Y@{C\+O\+O\+R\+D\+\_\+Y}}\item[{\em 
+C\+O\+O\+R\+D\+\_\+Y\hypertarget{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba63ebf6d854e134f261b0f03b54fac644}{}\label{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414ba63ebf6d854e134f261b0f03b54fac644}
+}]\index{C\+O\+O\+R\+D\+\_\+Z@{C\+O\+O\+R\+D\+\_\+Z}!i\+Fluid.\+h@{i\+Fluid.\+h}}\index{i\+Fluid.\+h@{i\+Fluid.\+h}!C\+O\+O\+R\+D\+\_\+Z@{C\+O\+O\+R\+D\+\_\+Z}}\item[{\em 
+C\+O\+O\+R\+D\+\_\+Z\hypertarget{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414babb97533c2c51dea534a856c4a4432e85}{}\label{i_fluid_8h_a9bb7edf4cfff69c9636e2f706101414babb97533c2c51dea534a856c4a4432e85}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!burger\+\_\+flux@{burger\+\_\+flux}}
+\index{burger\+\_\+flux@{burger\+\_\+flux}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{burger\+\_\+flux(double, double, double)}{burger_flux(double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}double burger\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a3c989c31f8604492bf58b34729c8dbba}{}\label{i_fluid_8h_a3c989c31f8604492bf58b34729c8dbba}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!fluid\+\_\+print\+\_\+front\+\_\+states@{fluid\+\_\+print\+\_\+front\+\_\+states}}
+\index{fluid\+\_\+print\+\_\+front\+\_\+states@{fluid\+\_\+print\+\_\+front\+\_\+states}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{fluid\+\_\+print\+\_\+front\+\_\+states(\+F\+I\+L\+E $\ast$, Front $\ast$)}{fluid_print_front_states(FILE *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void fluid\+\_\+print\+\_\+front\+\_\+states (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a23c7e26c57130906c25fefefcb2c2da9}{}\label{i_fluid_8h_a23c7e26c57130906c25fefefcb2c2da9}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!fluid\+\_\+read\+\_\+front\+\_\+states@{fluid\+\_\+read\+\_\+front\+\_\+states}}
+\index{fluid\+\_\+read\+\_\+front\+\_\+states@{fluid\+\_\+read\+\_\+front\+\_\+states}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{fluid\+\_\+read\+\_\+front\+\_\+states(\+F\+I\+L\+E $\ast$, Front $\ast$)}{fluid_read_front_states(FILE *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}void fluid\+\_\+read\+\_\+front\+\_\+states (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a741a645f479ae996f2787ae782b2ab59}{}\label{i_fluid_8h_a741a645f479ae996f2787ae782b2ab59}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+Phi\+From\+Pres@{get\+Phi\+From\+Pres}}
+\index{get\+Phi\+From\+Pres@{get\+Phi\+From\+Pres}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+Phi\+From\+Pres(\+Front $\ast$, double)}{getPhiFromPres(Front *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Phi\+From\+Pres (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aba9e5ea071811c32e066fa646547af04}{}\label{i_fluid_8h_aba9e5ea071811c32e066fa646547af04}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+Pressure(\+Front $\ast$, double $\ast$, double $\ast$)}{getPressure(Front *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_af66a6b094863385fd09cd18ab011683e}{}\label{i_fluid_8h_af66a6b094863385fd09cd18ab011683e}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Comp@{get\+State\+Comp}}
+\index{get\+State\+Comp@{get\+State\+Comp}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Comp(\+P\+O\+I\+N\+T\+E\+R)}{getStateComp(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Comp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_ae6bb30e7075838db9a8b8806fbd042ab}{}\label{i_fluid_8h_ae6bb30e7075838db9a8b8806fbd042ab}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Phi@{get\+State\+Phi}}
+\index{get\+State\+Phi@{get\+State\+Phi}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Phi(\+P\+O\+I\+N\+T\+E\+R)}{getStatePhi(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Phi (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_af109af255bbac087892e2de312a17802}{}\label{i_fluid_8h_af109af255bbac087892e2de312a17802}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Pres@{get\+State\+Pres}}
+\index{get\+State\+Pres@{get\+State\+Pres}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Pres(\+P\+O\+I\+N\+T\+E\+R)}{getStatePres(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Pres (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aabcd5c854fdc5992e450b8fd169bf5a8}{}\label{i_fluid_8h_aabcd5c854fdc5992e450b8fd169bf5a8}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Vort@{get\+State\+Vort}}
+\index{get\+State\+Vort@{get\+State\+Vort}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Vort(\+P\+O\+I\+N\+T\+E\+R)}{getStateVort(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Vort (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aad276307fcefad994c3ffea02eb4f303}{}\label{i_fluid_8h_aad276307fcefad994c3ffea02eb4f303}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Ximp@{get\+State\+Ximp}}
+\index{get\+State\+Ximp@{get\+State\+Ximp}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Ximp(\+P\+O\+I\+N\+T\+E\+R)}{getStateXimp(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Ximp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_af58f5361d977c04a656f610f929cd618}{}\label{i_fluid_8h_af58f5361d977c04a656f610f929cd618}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Xvel@{get\+State\+Xvel}}
+\index{get\+State\+Xvel@{get\+State\+Xvel}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Xvel(\+P\+O\+I\+N\+T\+E\+R)}{getStateXvel(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Xvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a523e775842a49d1eeea0febf7e22f9bd}{}\label{i_fluid_8h_a523e775842a49d1eeea0febf7e22f9bd}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Yimp@{get\+State\+Yimp}}
+\index{get\+State\+Yimp@{get\+State\+Yimp}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Yimp(\+P\+O\+I\+N\+T\+E\+R)}{getStateYimp(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Yimp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a0353da6009d73e43d86e65e205a484c1}{}\label{i_fluid_8h_a0353da6009d73e43d86e65e205a484c1}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Yvel@{get\+State\+Yvel}}
+\index{get\+State\+Yvel@{get\+State\+Yvel}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Yvel(\+P\+O\+I\+N\+T\+E\+R)}{getStateYvel(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Yvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a8144936eb6bfd8b51daa26625173f93d}{}\label{i_fluid_8h_a8144936eb6bfd8b51daa26625173f93d}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Zimp@{get\+State\+Zimp}}
+\index{get\+State\+Zimp@{get\+State\+Zimp}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Zimp(\+P\+O\+I\+N\+T\+E\+R)}{getStateZimp(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Zimp (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a8d2d98d8aee74b8c579f1918969f78ce}{}\label{i_fluid_8h_a8d2d98d8aee74b8c579f1918969f78ce}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!get\+State\+Zvel@{get\+State\+Zvel}}
+\index{get\+State\+Zvel@{get\+State\+Zvel}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{get\+State\+Zvel(\+P\+O\+I\+N\+T\+E\+R)}{getStateZvel(POINTER)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Zvel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a44f0a75afa0849b295ced100370e6305}{}\label{i_fluid_8h_a44f0a75afa0849b295ced100370e6305}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!grad\+\_\+p\+\_\+jump\+\_\+n@{grad\+\_\+p\+\_\+jump\+\_\+n}}
+\index{grad\+\_\+p\+\_\+jump\+\_\+n@{grad\+\_\+p\+\_\+jump\+\_\+n}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{grad\+\_\+p\+\_\+jump\+\_\+n(\+P\+O\+I\+N\+T\+E\+R, int, double $\ast$, double $\ast$)}{grad_p_jump_n(POINTER, int, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}double grad\+\_\+p\+\_\+jump\+\_\+n (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a92c9ca51e1d84bc1d042a4edc7f55802}{}\label{i_fluid_8h_a92c9ca51e1d84bc1d042a4edc7f55802}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!grad\+\_\+p\+\_\+jump\+\_\+t@{grad\+\_\+p\+\_\+jump\+\_\+t}}
+\index{grad\+\_\+p\+\_\+jump\+\_\+t@{grad\+\_\+p\+\_\+jump\+\_\+t}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{grad\+\_\+p\+\_\+jump\+\_\+t(\+P\+O\+I\+N\+T\+E\+R, int, int, double $\ast$, double $\ast$)}{grad_p_jump_t(POINTER, int, int, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}double grad\+\_\+p\+\_\+jump\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{, }
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a9cb620a7d5168d5cd18245da826d01d9}{}\label{i_fluid_8h_a9cb620a7d5168d5cd18245da826d01d9}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque@{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque}}
+\index{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque@{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque(\+Front $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double, double $\ast$, double $\ast$)}{ifluid_compute_force_and_torque(Front *, HYPER_SURF *, double, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void ifluid\+\_\+compute\+\_\+force\+\_\+and\+\_\+torque (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{, }
+\item[{double}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a1ac834b97fb881552001d69b58def0db}{}\label{i_fluid_8h_a1ac834b97fb881552001d69b58def0db}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing(\+Front $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int, P\+O\+I\+N\+T\+E\+R $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$, double $\ast$)}{ifluid_find_state_at_cg_crossing(Front *, int *, GRID_DIRECTION, int, POINTER *, HYPER_SURF **, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+cg\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{int}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_ad809dccd9bb6477eadc0190458d718b1}{}\label{i_fluid_8h_ad809dccd9bb6477eadc0190458d718b1}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing(\+Front $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int, P\+O\+I\+N\+T\+E\+R $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$, double $\ast$)}{ifluid_find_state_at_crossing(Front *, int *, GRID_DIRECTION, int, POINTER *, HYPER_SURF **, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{int}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a5545d19bbd2c81a5323f76efa68c52d2}{}\label{i_fluid_8h_a5545d19bbd2c81a5323f76efa68c52d2}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing}}
+\index{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing@{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing(\+Front $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int, P\+O\+I\+N\+T\+E\+R $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$, double $\ast$)}{ifluid_find_state_at_dual_crossing(Front *, int *, GRID_DIRECTION, int, POINTER *, HYPER_SURF **, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}int ifluid\+\_\+find\+\_\+state\+\_\+at\+\_\+dual\+\_\+crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{int}]{, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a9242c5c0df9794a81a67f65067ba899c}{}\label{i_fluid_8h_a9242c5c0df9794a81a67f65067ba899c}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!is\+Dirichlet\+Preset\+Bdry@{is\+Dirichlet\+Preset\+Bdry}}
+\index{is\+Dirichlet\+Preset\+Bdry@{is\+Dirichlet\+Preset\+Bdry}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{is\+Dirichlet\+Preset\+Bdry(\+Front $\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, C\+O\+M\+P\+O\+N\+E\+N\+T)}{isDirichletPresetBdry(Front *, int *, GRID_DIRECTION, COMPONENT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} is\+Dirichlet\+Preset\+Bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{, }
+\item[{int $\ast$}]{, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_ac9600a916a9981d4bb96de2870e192d2}{}\label{i_fluid_8h_ac9600a916a9981d4bb96de2870e192d2}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!linear\+\_\+flux@{linear\+\_\+flux}}
+\index{linear\+\_\+flux@{linear\+\_\+flux}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{linear\+\_\+flux(double, double, double, double)}{linear_flux(double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}double linear\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a03032520773b698d91446da2f83b0801}{}\label{i_fluid_8h_a03032520773b698d91446da2f83b0801}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!neumann\+\_\+type\+\_\+bdry@{neumann\+\_\+type\+\_\+bdry}}
+\index{neumann\+\_\+type\+\_\+bdry@{neumann\+\_\+type\+\_\+bdry}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{neumann\+\_\+type\+\_\+bdry(int)}{neumann_type_bdry(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} neumann\+\_\+type\+\_\+bdry (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aa1689c55f342e248648ca349ef6d3ec6}{}\label{i_fluid_8h_aa1689c55f342e248648ca349ef6d3ec6}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!p\+\_\+jump@{p\+\_\+jump}}
+\index{p\+\_\+jump@{p\+\_\+jump}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{p\+\_\+jump(\+P\+O\+I\+N\+T\+E\+R, int, double $\ast$)}{p_jump(POINTER, int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}double p\+\_\+jump (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{, }
+\item[{int}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aa2517d6afeaf087eb1a42eac8b622cc5}{}\label{i_fluid_8h_aa2517d6afeaf087eb1a42eac8b622cc5}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params@{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params}}
+\index{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params@{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params(int, char $\ast$, R\+G\+\_\+\+P\+A\+R\+A\+M\+S $\ast$)}{prompt_for_rigid_body_params(int, char *, RG_PARAMS *)}}]{\setlength{\rightskip}{0pt plus 5cm}void prompt\+\_\+for\+\_\+rigid\+\_\+body\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{char $\ast$}]{, }
+\item[{{\bf R\+G\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a900b352a2b85dca56deb8882b42ac927}{}\label{i_fluid_8h_a900b352a2b85dca56deb8882b42ac927}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data}}
+\index{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data(char $\ast$, Front $\ast$, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A)}{read_iF_dirichlet_bdry_data(char *, Front *, F_BASIC_DATA)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+i\+F\+\_\+dirichlet\+\_\+bdry\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf Front} $\ast$}]{, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_aa931951e3ccf3f3e073ab0fdace6ec81}{}\label{i_fluid_8h_aa931951e3ccf3f3e073ab0fdace6ec81}
+\index{i\+Fluid.\+h@{i\+Fluid.\+h}!set\+\_\+rgbody\+\_\+params@{set\+\_\+rgbody\+\_\+params}}
+\index{set\+\_\+rgbody\+\_\+params@{set\+\_\+rgbody\+\_\+params}!i\+Fluid.\+h@{i\+Fluid.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+rgbody\+\_\+params(\+R\+G\+\_\+\+P\+A\+R\+A\+M\+S, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$)}{set_rgbody_params(RG_PARAMS, HYPER_SURF *)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+rgbody\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+\_\+\+P\+A\+R\+A\+MS}}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{i_fluid_8h_a5ef2e33c127d1849529d308fcdbc308d}{}\label{i_fluid_8h_a5ef2e33c127d1849529d308fcdbc308d}

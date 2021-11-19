@@ -1,0 +1,121 @@
+\hypertarget{climate_8cpp}{}\section{D\+N\+S/climate/climate.cpp File Reference}
+\label{climate_8cpp}\index{D\+N\+S/climate/climate.\+cpp@{D\+N\+S/climate/climate.\+cpp}}
+{\ttfamily \#include \char`\"{}../i\+Fluid/i\+Fluid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../i\+Fluid/ifluid\+\_\+basic.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}climate.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{climate_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{climate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+double \hyperlink{climate_8cpp_abe08c7db46f6532515c82378c36154f3}{get\+State\+Temperature} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{climate_8cpp_a3af7e9c97d9263d7f3ababab19af520c}{get\+State\+Vapor} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+double \hyperlink{climate_8cpp_a10284cf0488fbeb91e8e5aed1d1197d2}{get\+State\+Super} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{climate_8cpp_ad57d9c19211115d62eeb2cd5c0d5ed7a}{assign\+State\+Temperature} (double T, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\item 
+void \hyperlink{climate_8cpp_a4e17ecad14641cad5de74e5114235f5d}{assign\+State\+Vapor} (double T, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{climate_8cpp_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}
+\item 
+char $\ast$ \hyperlink{climate_8cpp_afaf3625c1b414a703f6fc641fe24f202}{restart\+\_\+state\+\_\+name}
+\item 
+char $\ast$ \hyperlink{climate_8cpp_a32e9821b258f94e23297294d14c55744}{restart\+\_\+name}
+\item 
+char $\ast$ \hyperlink{climate_8cpp_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name}
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{climate_8cpp_a4b40f8c17f66ee84c2d3e0a9582fe52d}{Restart\+Run}
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{climate_8cpp_a9ad718a9519d03175af1014baebf9dbd}{Read\+From\+Input}
+\item 
+int \hyperlink{climate_8cpp_a7985575113931d4204c8aa2cfeaaddb6}{Restart\+Step}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{climate.\+cpp@{climate.\+cpp}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}{MAX_NUM_VERTEX_IN_CELL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL~20}\hypertarget{climate_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}{}\label{climate_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}
+
+
+\subsection{Function Documentation}
+\index{climate.\+cpp@{climate.\+cpp}!assign\+State\+Temperature@{assign\+State\+Temperature}}
+\index{assign\+State\+Temperature@{assign\+State\+Temperature}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{assign\+State\+Temperature(double T, P\+O\+I\+N\+T\+E\+R state)}{assignStateTemperature(double T, POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}void assign\+State\+Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{T, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_ad57d9c19211115d62eeb2cd5c0d5ed7a}{}\label{climate_8cpp_ad57d9c19211115d62eeb2cd5c0d5ed7a}
+\index{climate.\+cpp@{climate.\+cpp}!assign\+State\+Vapor@{assign\+State\+Vapor}}
+\index{assign\+State\+Vapor@{assign\+State\+Vapor}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{assign\+State\+Vapor(double T, P\+O\+I\+N\+T\+E\+R state)}{assignStateVapor(double T, POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}void assign\+State\+Vapor (
+\begin{DoxyParamCaption}
+\item[{double}]{T, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_a4e17ecad14641cad5de74e5114235f5d}{}\label{climate_8cpp_a4e17ecad14641cad5de74e5114235f5d}
+\index{climate.\+cpp@{climate.\+cpp}!get\+State\+Super@{get\+State\+Super}}
+\index{get\+State\+Super@{get\+State\+Super}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Super(\+P\+O\+I\+N\+T\+E\+R state)}{getStateSuper(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Super (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_a10284cf0488fbeb91e8e5aed1d1197d2}{}\label{climate_8cpp_a10284cf0488fbeb91e8e5aed1d1197d2}
+\index{climate.\+cpp@{climate.\+cpp}!get\+State\+Temperature@{get\+State\+Temperature}}
+\index{get\+State\+Temperature@{get\+State\+Temperature}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Temperature(\+P\+O\+I\+N\+T\+E\+R state)}{getStateTemperature(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_abe08c7db46f6532515c82378c36154f3}{}\label{climate_8cpp_abe08c7db46f6532515c82378c36154f3}
+\index{climate.\+cpp@{climate.\+cpp}!get\+State\+Vapor@{get\+State\+Vapor}}
+\index{get\+State\+Vapor@{get\+State\+Vapor}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+State\+Vapor(\+P\+O\+I\+N\+T\+E\+R state)}{getStateVapor(POINTER state)}}]{\setlength{\rightskip}{0pt plus 5cm}double get\+State\+Vapor (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_a3af7e9c97d9263d7f3ababab19af520c}{}\label{climate_8cpp_a3af7e9c97d9263d7f3ababab19af520c}
+\index{climate.\+cpp@{climate.\+cpp}!main@{main}}
+\index{main@{main}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{climate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{climate_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\subsection{Variable Documentation}
+\index{climate.\+cpp@{climate.\+cpp}!in\+\_\+name@{in\+\_\+name}}
+\index{in\+\_\+name@{in\+\_\+name}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{in\+\_\+name}{in_name}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ in\+\_\+name}\hypertarget{climate_8cpp_aade3fd761de40ee7c68bcad6339774cc}{}\label{climate_8cpp_aade3fd761de40ee7c68bcad6339774cc}
+\index{climate.\+cpp@{climate.\+cpp}!out\+\_\+name@{out\+\_\+name}}
+\index{out\+\_\+name@{out\+\_\+name}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{out\+\_\+name}{out_name}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ out\+\_\+name}\hypertarget{climate_8cpp_ad6f54b1083a26246f3aa355cff73fa2c}{}\label{climate_8cpp_ad6f54b1083a26246f3aa355cff73fa2c}
+\index{climate.\+cpp@{climate.\+cpp}!Read\+From\+Input@{Read\+From\+Input}}
+\index{Read\+From\+Input@{Read\+From\+Input}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{Read\+From\+Input}{ReadFromInput}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} Read\+From\+Input}\hypertarget{climate_8cpp_a9ad718a9519d03175af1014baebf9dbd}{}\label{climate_8cpp_a9ad718a9519d03175af1014baebf9dbd}
+\index{climate.\+cpp@{climate.\+cpp}!restart\+\_\+name@{restart\+\_\+name}}
+\index{restart\+\_\+name@{restart\+\_\+name}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{restart\+\_\+name}{restart_name}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ restart\+\_\+name}\hypertarget{climate_8cpp_a32e9821b258f94e23297294d14c55744}{}\label{climate_8cpp_a32e9821b258f94e23297294d14c55744}
+\index{climate.\+cpp@{climate.\+cpp}!restart\+\_\+state\+\_\+name@{restart\+\_\+state\+\_\+name}}
+\index{restart\+\_\+state\+\_\+name@{restart\+\_\+state\+\_\+name}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{restart\+\_\+state\+\_\+name}{restart_state_name}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ restart\+\_\+state\+\_\+name}\hypertarget{climate_8cpp_afaf3625c1b414a703f6fc641fe24f202}{}\label{climate_8cpp_afaf3625c1b414a703f6fc641fe24f202}
+\index{climate.\+cpp@{climate.\+cpp}!Restart\+Run@{Restart\+Run}}
+\index{Restart\+Run@{Restart\+Run}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{Restart\+Run}{RestartRun}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} Restart\+Run}\hypertarget{climate_8cpp_a4b40f8c17f66ee84c2d3e0a9582fe52d}{}\label{climate_8cpp_a4b40f8c17f66ee84c2d3e0a9582fe52d}
+\index{climate.\+cpp@{climate.\+cpp}!Restart\+Step@{Restart\+Step}}
+\index{Restart\+Step@{Restart\+Step}!climate.\+cpp@{climate.\+cpp}}
+\subsubsection[{\texorpdfstring{Restart\+Step}{RestartStep}}]{\setlength{\rightskip}{0pt plus 5cm}int Restart\+Step}\hypertarget{climate_8cpp_a7985575113931d4204c8aa2cfeaaddb6}{}\label{climate_8cpp_a7985575113931d4204c8aa2cfeaaddb6}

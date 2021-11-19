@@ -1,0 +1,1011 @@
+\hypertarget{class_incompress___solver___smooth___basis}{}\section{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis Class Reference}
+\label{class_incompress___solver___smooth___basis}\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+
+
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}
+
+Inheritance diagram for Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d3/d30/class_incompress___solver___smooth___basis}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_incompress___solver___smooth___basis_a5ad1a4d55273b8d06b4509dd729f5b0f}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} \&\hyperlink{class_incompress___solver___smooth___basis_ab792d371ca86ec9ed21b4c95d1375a0b}{front})
+\item 
+virtual \hyperlink{class_incompress___solver___smooth___basis_ad4ecce000d19dda60fc004490268b376}{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_aa162a2636c3cc1fe6df9659a0d31ae93}{init\+Mesh} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a81599438a07e2c26421733ad068ca5d4}{set\+Advection\+Dt} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ae9562ca2b06ab97f444177ee0bbee9ef}{read\+Front\+Interior\+States} (char $\ast$state\+\_\+name)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a6420056e127746c8b93961c5ffe29029}{print\+Front\+Interior\+States} (char $\ast$state\+\_\+name)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a8e291964a201d9a7b2fdb99241091475}{init\+Movie\+Variables} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a9c95810028cadb975424b5f0ce2d45c2}{get\+Velocity} (double $\ast$p, double $\ast$U)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a21691206778cebb29ecd2c3eb887b4ec}{init\+Sample\+Velocity} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name})
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ad9fc0fca22f63d99376a70ed78154132}{application\+Set\+Component} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_aa1fe5d785f922fa711ca635aa98e10b0}{application\+Set\+States} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ad0e83204e58fc2952c196578a8d26d06}{solve\+Test} (const char $\ast$msg)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_aa17ecee1fcdfdb8053d194204324fa78}{Print\+Velocity} (const char $\ast$, double $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_aeab5402ceb5fce1e1ce379aced80a6ca}{Print\+Velocity} ()
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a1621441e8815f61c164474ebde60f51a}{set\+Initial\+Condition} (void)=0
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a011c6b8fc8c0051523bd684187678a90}{set\+Parallel\+Velocity} (void)=0
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a23cb0b79f81e0d10dcf8765386e88192}{solve} (double dt)=0
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a6b4a774a25fd752bfa05fe764cb55c4d}{vtk\+\_\+plot\+\_\+scalar} (char $\ast$, const char $\ast$)=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a01a2748ba6a9fd98db8fa120074bb334}{m\+\_\+dt}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a32b48778fbfca8db41b1a387612b5c74}{accum\+\_\+dt}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_aade48c95c92138da2ab4db924c960255}{max\+\_\+speed}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_aea0ab50c8c45ab34bcd88439f32d9a4e}{min\+\_\+pressure}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a9123e8271d9c83b7b886fa6a983b65b9}{max\+\_\+pressure}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a59f256f38196b8666ab54c6f164b43a0}{min\+\_\+value}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a3b56f4a603e152e1e8b24b624ba426f9}{max\+\_\+value}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a96e9463787fc08bb925f939f63266e72}{max\+\_\+dt}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a5e3c3f602f0d8bb5a26fbde765eb500f}{min\+\_\+dt}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a4d10d59710621f01cdb2944a4b6024ed}{top\+\_\+h}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a0f5db6627058f29c053f3ac6e3fa6a7f}{vmin} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a245b31f906cafcf80a2cc0910ff89d01}{vmax} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a339d3315db4ae6cae79f55a1e14fe672}{dim}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_aeca5693a734c264eee923f8b0a99a4d2}{icrds\+\_\+max} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+void($\ast$ \hyperlink{class_incompress___solver___smooth___basis_a99f48d4fd354fa555ec1d191a7fb568f}{get\+Initial\+State} )(\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, \hyperlink{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}{I\+F\+\_\+\+F\+I\+E\+LD} $\ast$, int, int, \hyperlink{i_fluid_8h_d8/d1e/struct_i_f___p_a_r_a_m_s}{I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$)
+\item 
+void($\ast$ \hyperlink{class_incompress___solver___smooth___basis_ae687f7aa455c0a550b63bdb5b2386d2f}{set\+Initial\+Velocity} )(\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, int $\ast$, double $\ast$, double $\ast$, double $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{i_fluid_8h_d8/d1e/struct_i_f___p_a_r_a_m_s}{I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$)
+\item 
+int($\ast$ \hyperlink{class_incompress___solver___smooth___basis_a30cd8cfd805153f9576469ac4f78aebe}{find\+State\+At\+Crossing} )(\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\item 
+int($\ast$ \hyperlink{class_incompress___solver___smooth___basis_a3a9f5110ae80be1bca8d0d1903faed10}{find\+State\+At\+C\+G\+Crossing} )(\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a69f6f20588a4bbba75984288d89b2781}{set\+Component} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ab983f0caf55ce07522e068911764f184}{set\+Domain} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a2cb736ad63119ddaafb08def2bd9bfd2}{set\+Dual\+Domain} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a7fc402728896d653973e8cbcffa393fc}{scat\+Mesh\+Array} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a96722a356fc4dcd49a4cdafd08ab5c16}{set\+Global\+Index} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_add73b3231bdd09083d2244fc30b31aa8}{set\+Dual\+Global\+Index} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_af8c95fb72e0dbda27eddebddb2862a41}{set\+Index\+Map} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a4e33c06383e49eff17051ee0a573db9d}{set\+Dual\+Index\+Map} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a6c8bba103054da68e38950604bfae0d8}{paint\+All\+Grid\+Point} (int status)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ad62702c94435bc99095af94ae2a5a2e2}{paint\+Solved\+Grid\+Point} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_af56e98eeed1392225a3990fcc12121db}{set\+Reference\+Pressure} ()
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{class_incompress___solver___smooth___basis_a10b32a6e970e4da9919e291080d087bb}{paint\+To\+Solve\+Grid\+Point} ()
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{class_incompress___solver___smooth___basis_a0aeb30dabdf2a501f6d4d471c73c9341}{next\+Connected\+Point} (int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int $\ast$, int, int $\ast$, int $\ast$)
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_add1059a795fb2eb925cd983088bb884d}{copy\+Mesh\+States} (void)=0
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a8d951b5c02243828b480de8eed32315c}{compute\+GradientQ} (void)=0
+\item 
+virtual void \hyperlink{class_incompress___solver___smooth___basis_a38d025139a192414bef50db30b81e893}{surface\+Tension} (double $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, double)=0
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a304a6c4575210fe7f21f12235b66552b}{get\+Rectangle\+Index} (int index\+Rectangle, int \&i, int \&j)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a7ff9bc51c0a84b4206a6225d590f6f01}{get\+Rectangle\+Index} (int index\+Rectangle, int \&i, int \&j, int \&k)
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_aabd75ec2f0d5bdfb86bea20c506ff9b4}{get\+Rectangle\+Component} (int index)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a1593054b9dd7870fcf5f856eea16fc2b}{get\+Rectangle\+Center} (int index, double $\ast$coords)
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a96061631c9a8212cc986e103a4a1695c}{get\+Distance} (double $\ast$coords0, double $\ast$coords1)
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a771b4c77ff4164b8639166c8a63b97dc}{get\+Component} (int $\ast$icoords)
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a1ccb12d77c7e05319dc670a138ee1d29}{get\+Component} (double $\ast$coords)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_adcdbd6047e035969c19bc6afc4e7e886}{save} (char $\ast$filename)
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a535f5d07878d23b177aaeef4cd12e1c4}{compute\+Field\+Point\+Div} (int $\ast$, double $\ast$$\ast$)
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a5f8602517f1970a9e6eb16ac87db43fa}{compute\+Dual\+Field\+Point\+Div} (int $\ast$, double $\ast$$\ast$)
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_ae3cc9803061614b52d8cb9a25a2ad07c}{compute\+Dual\+Mu} (int $\ast$, double $\ast$)
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a02412b6e6f60df2082488b1f59c400ba}{compute\+Field\+Point\+Mu\+Turb} (int $\ast$, double)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ac4818d2491e81112d5923f96f4971f5a}{compute\+Field\+Point\+Grad} (int $\ast$, double $\ast$, double $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a0aa9ce8a7e58b5acaf4cfddd381ae1ad}{compute\+Dual\+Field\+Point\+Grad} (int $\ast$, double $\ast$, double $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_aadc3be8fbe71622ac8835cd9efa13201}{check\+Velocity\+Div} (const char $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ab3a2da1806310a445654797d5443a369}{compute\+Dual\+Field\+Pointrho} (int $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_a854f0af5d09a6268a3a62ba93c035194}{compute\+Subgrid\+Model} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth___basis_ab2d41c73fbfdcade10cdabae9a0b35c5}{get\+Nearest\+Interface\+Point} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ab792d371ca86ec9ed21b4c95d1375a0b}{front}
+\item 
+\hyperlink{i_fluid_8h_d8/d1e/struct_i_f___p_a_r_a_m_s}{I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a8d8d786aa53fea726a52715c3f8caefc}{i\+Fparams}
+\item 
+\hyperlink{i_fluid_8h_a2b9d43f92a76a1ecbc4a940ad9edb5d8}{I\+F\+\_\+\+F\+I\+E\+LD} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a8cb594f11e27f7f9e74d414f16f8bf20}{field}
+\item 
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a70474023fb531a88f35d21e3c1e67f70}{top\+\_\+grid}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ad6665e3a882f7cc98fa27f252f443a6a}{array}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ab571615b4743bbd36e8eea358f7a7eed}{source}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a8c7b22a7f2e1e1a461ab929cc6b7239e}{diff\+\_\+coeff}
+\item 
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_aeab9406511f09a20b9ac8fa110b128e6}{top\+\_\+comp}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a393216337d81a2bc94f5263e1b79ae4a}{top\+\_\+gmax}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a09e96680610922612dc03030801fb0c8}{lbuf}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ae2f78a30196de260ba67c1af65eb6d8a}{ubuf}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_aafeefab070c926e03bb91edcbd25d4a5}{top\+\_\+L}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a1c8b0acd591d349f95db19942e7ebade}{top\+\_\+U}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_a92a1cb2b12cf1925338e048f39a97f32}{ij\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_ad55a7a51c64040bb6f36c540b58268a5}{I\+\_\+to\+\_\+ij}
+\item 
+int $\ast$$\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_a2aa800b669e602a85512bd90e12dfa44}{ijk\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_ac3957ab3e1845c86da4385d736421d60}{I\+\_\+to\+\_\+ijk}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a9e9f78b3d2bbe9b8f4e50831a32d14f8}{domain\+\_\+status}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a84d43b775b86c4d42a53bcea11f16d99}{smin} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a1cd3e8e54023a5bb9d37b7b27c48230f}{smax} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a19abf709c0951b6953e3fa5d903f9ec3}{imin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_aaded2f4ccb7807c15a722714d68a8605}{jmin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a7df6c2bf47b8525a12faeed5286421a7}{kmin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a32d17ea794b755254bd7e0cadfef0dc4}{imax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a7a130f7b577c2b0d88472f69bf06d86f}{jmax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_ad8d4888d36cde4a680b13834b1df5e5f}{kmax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a90e8970123b6bf442c07c9feae7c900d}{N\+Lblocks}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a46fbeab68314e00591e3252ed1857a8e}{ilower}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_adb5ec7c9649f109d8273ad8476b2ab34}{iupper}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_aa76a68ce1664b138921c0e92e7d17a34}{n\+\_\+dist}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a8c60af6f8549976d14b73debf0af7f24}{offset} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a1c2c21e2ad5d3ce17944d1379694798f}{ctop\+\_\+grid}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ab37e930fbc1b331ecee362b0015976a8}{carray}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_ad521876b2ad19878c7d187f8d9951949}{csource}
+\item 
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a2f2879d45b68eb6a80795dad5ba8e7ab}{ctop\+\_\+comp}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_acb44b0619cc69414bce1b5844925421b}{ctop\+\_\+gmax}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a4e0267711f069d259b792eba1bf759ef}{clbuf}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_af1a59a96084b11a5749e0e7ff6618428}{cubuf}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a4e8214e92490607926f54762b4924588}{ctop\+\_\+L}
+\item 
+double $\ast$ \hyperlink{class_incompress___solver___smooth___basis_a4cf07481cef6bd75f8db372b79ba8c0e}{ctop\+\_\+U}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_a4bb8f054186a093498fa708ca564f3e9}{cij\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_a48311afa503eceb389202dbefc69996b}{c\+I\+\_\+to\+\_\+ij}
+\item 
+int $\ast$$\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_a8b89615429ee63b331bdc6c908f7a83f}{cijk\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$ \hyperlink{class_incompress___solver___smooth___basis_aa5f61f97a3c87e1d58f9a914672ebc45}{c\+I\+\_\+to\+\_\+ijk}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_aca20c1aebb74f20bf446f5f9a8675fba}{cdomain\+\_\+status}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a4335cf7015977580c35b75d7580ecf6a}{csmin} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a1c86b020649913aa5900c6b1bb6c8ab2}{csmax} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_ab19a77f8d3f17131b328bd150219b08e}{cimin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a541203e6e096c6d940d23f23b14c15dd}{cjmin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a9cbb2473c03c2c8039c57ff265758e16}{ckmin}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a00e6fe0d0f41d930fdadfa0ae1c92608}{cimax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_ab6c202de6b73d242f8cf08a6d4995f73}{cjmax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_abe1377b088f050966025ffef7392b0fb}{ckmax}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a2a0ccf8fdae4b39b75e7ee01245a723a}{c\+N\+Lblocks}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a6c08c39817435a1e195f87dd6d33905c}{cilower}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a1d59bc812f0a4037a9d99d78cefb8de7}{ciupper}
+\item 
+int $\ast$ \hyperlink{class_incompress___solver___smooth___basis_aaf56518c3fe222d82b5c8c870d0242b3}{cn\+\_\+dist}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_a3dc2c9e1636f910b023b1dfb3f853579}{ishift} \mbox{[}\hyperlink{geom_8h_aabfcbcb5ac86a1edac4035264bc7d2b8ac79558c6c6666a44ddf7e701241b8211}{M\+A\+XD}\mbox{]}
+\item 
+std\+::vector$<$ \hyperlink{class_l___r_e_c_t_a_n_g_l_e}{L\+\_\+\+R\+E\+C\+T\+A\+N\+G\+LE} $>$ \hyperlink{class_incompress___solver___smooth___basis_a38f7b6f97b13c2ddc8551cce46b99cf8}{cell\+\_\+center}
+\item 
+int \hyperlink{class_incompress___solver___smooth___basis_af5728d3f5f062bd724d0b06e50f07df0}{m\+\_\+comp} \mbox{[}2\mbox{]}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a5e0e511ab568cfcfac643285cd1558e0}{m\+\_\+mu} \mbox{[}2\mbox{]}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_aa16db88edf1a6afa4e84b9d2b2dd5c8b}{m\+\_\+rho} \mbox{[}2\mbox{]}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a597f3989985b6e0beae0e509ee95b6d5}{m\+\_\+sigma}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a4bd26e5308fc79ccabc0d12e24807434}{m\+\_\+smoothing\+\_\+radius}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a066845265506ae00d2f2726ef71598b5}{hmin}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_aedf1ab3a1d4d10e395cbc0d1a7cc58d5}{mu\+\_\+min}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_afcd9f652c0b73b1650f5690855790f8f}{rho\+\_\+min}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_aae21fd7692451705730f6bf9d6d5d66f}{m\+\_\+t}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_ab057e99c6fb150ea8994597fe91fa6e4}{m\+\_\+t\+\_\+old}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_afaf9f90bca296738495dbd2d3816b405}{m\+\_\+t\+\_\+int}
+\item 
+double \hyperlink{class_incompress___solver___smooth___basis_a0a5ce1c4b184f360e5e9bc27d9dfb1d3}{m\+\_\+t\+\_\+new}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis(\+Front \&front)}{Incompress_Solver_Smooth_Basis(Front &front)}}]{\setlength{\rightskip}{0pt plus 5cm}Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} \&}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a5ad1a4d55273b8d06b4509dd729f5b0f}{}\label{class_incompress___solver___smooth___basis_a5ad1a4d55273b8d06b4509dd729f5b0f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!````~Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\index{````~Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis()}{~Incompress_Solver_Smooth_Basis()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth___basis_ad4ecce000d19dda60fc004490268b376}{}\label{class_incompress___solver___smooth___basis_ad4ecce000d19dda60fc004490268b376}
+
+
+\subsection{Member Function Documentation}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!application\+Set\+Component@{application\+Set\+Component}}
+\index{application\+Set\+Component@{application\+Set\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{application\+Set\+Component()}{applicationSetComponent()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::application\+Set\+Component (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_ad9fc0fca22f63d99376a70ed78154132}{}\label{class_incompress___solver___smooth___basis_ad9fc0fca22f63d99376a70ed78154132}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!application\+Set\+States@{application\+Set\+States}}
+\index{application\+Set\+States@{application\+Set\+States}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{application\+Set\+States()}{applicationSetStates()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::application\+Set\+States (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_aa1fe5d785f922fa711ca635aa98e10b0}{}\label{class_incompress___solver___smooth___basis_aa1fe5d785f922fa711ca635aa98e10b0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!check\+Velocity\+Div@{check\+Velocity\+Div}}
+\index{check\+Velocity\+Div@{check\+Velocity\+Div}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{check\+Velocity\+Div(const char $\ast$)}{checkVelocityDiv(const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::check\+Velocity\+Div (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aadc3be8fbe71622ac8835cd9efa13201}{}\label{class_incompress___solver___smooth___basis_aadc3be8fbe71622ac8835cd9efa13201}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Dual\+Field\+Point\+Div@{compute\+Dual\+Field\+Point\+Div}}
+\index{compute\+Dual\+Field\+Point\+Div@{compute\+Dual\+Field\+Point\+Div}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Dual\+Field\+Point\+Div(int $\ast$, double $\ast$$\ast$)}{computeDualFieldPointDiv(int *, double **)}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Dual\+Field\+Point\+Div (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double $\ast$$\ast$}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a5f8602517f1970a9e6eb16ac87db43fa}{}\label{class_incompress___solver___smooth___basis_a5f8602517f1970a9e6eb16ac87db43fa}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Dual\+Field\+Point\+Grad@{compute\+Dual\+Field\+Point\+Grad}}
+\index{compute\+Dual\+Field\+Point\+Grad@{compute\+Dual\+Field\+Point\+Grad}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Dual\+Field\+Point\+Grad(int $\ast$, double $\ast$, double $\ast$)}{computeDualFieldPointGrad(int *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Dual\+Field\+Point\+Grad (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double $\ast$}]{field, }
+\item[{double $\ast$}]{grad\+\_\+field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a0aa9ce8a7e58b5acaf4cfddd381ae1ad}{}\label{class_incompress___solver___smooth___basis_a0aa9ce8a7e58b5acaf4cfddd381ae1ad}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Dual\+Field\+Pointrho@{compute\+Dual\+Field\+Pointrho}}
+\index{compute\+Dual\+Field\+Pointrho@{compute\+Dual\+Field\+Pointrho}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Dual\+Field\+Pointrho(int $\ast$)}{computeDualFieldPointrho(int *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Dual\+Field\+Pointrho (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab3a2da1806310a445654797d5443a369}{}\label{class_incompress___solver___smooth___basis_ab3a2da1806310a445654797d5443a369}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Dual\+Mu@{compute\+Dual\+Mu}}
+\index{compute\+Dual\+Mu@{compute\+Dual\+Mu}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Dual\+Mu(int $\ast$, double $\ast$)}{computeDualMu(int *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Dual\+Mu (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double $\ast$}]{mu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ae3cc9803061614b52d8cb9a25a2ad07c}{}\label{class_incompress___solver___smooth___basis_ae3cc9803061614b52d8cb9a25a2ad07c}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Field\+Point\+Div@{compute\+Field\+Point\+Div}}
+\index{compute\+Field\+Point\+Div@{compute\+Field\+Point\+Div}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Field\+Point\+Div(int $\ast$, double $\ast$$\ast$)}{computeFieldPointDiv(int *, double **)}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Field\+Point\+Div (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double $\ast$$\ast$}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a535f5d07878d23b177aaeef4cd12e1c4}{}\label{class_incompress___solver___smooth___basis_a535f5d07878d23b177aaeef4cd12e1c4}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Field\+Point\+Grad@{compute\+Field\+Point\+Grad}}
+\index{compute\+Field\+Point\+Grad@{compute\+Field\+Point\+Grad}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Field\+Point\+Grad(int $\ast$, double $\ast$, double $\ast$)}{computeFieldPointGrad(int *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Field\+Point\+Grad (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double $\ast$}]{field, }
+\item[{double $\ast$}]{grad\+\_\+field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ac4818d2491e81112d5923f96f4971f5a}{}\label{class_incompress___solver___smooth___basis_ac4818d2491e81112d5923f96f4971f5a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Field\+Point\+Mu\+Turb@{compute\+Field\+Point\+Mu\+Turb}}
+\index{compute\+Field\+Point\+Mu\+Turb@{compute\+Field\+Point\+Mu\+Turb}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Field\+Point\+Mu\+Turb(int $\ast$, double)}{computeFieldPointMuTurb(int *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Field\+Point\+Mu\+Turb (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{double}]{dist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a02412b6e6f60df2082488b1f59c400ba}{}\label{class_incompress___solver___smooth___basis_a02412b6e6f60df2082488b1f59c400ba}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+GradientQ@{compute\+GradientQ}}
+\index{compute\+GradientQ@{compute\+GradientQ}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Gradient\+Q(void)=0}{computeGradientQ(void)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+GradientQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a8d951b5c02243828b480de8eed32315c}{}\label{class_incompress___solver___smooth___basis_a8d951b5c02243828b480de8eed32315c}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a8bb3ea8c259d5692ef66fe9699ab9ba2}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_a41402e490b20e941a64a0af7dc90ea50}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!compute\+Subgrid\+Model@{compute\+Subgrid\+Model}}
+\index{compute\+Subgrid\+Model@{compute\+Subgrid\+Model}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{compute\+Subgrid\+Model(void)}{computeSubgridModel(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::compute\+Subgrid\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a854f0af5d09a6268a3a62ba93c035194}{}\label{class_incompress___solver___smooth___basis_a854f0af5d09a6268a3a62ba93c035194}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!copy\+Mesh\+States@{copy\+Mesh\+States}}
+\index{copy\+Mesh\+States@{copy\+Mesh\+States}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{copy\+Mesh\+States(void)=0}{copyMeshStates(void)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::copy\+Mesh\+States (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_add1059a795fb2eb925cd983088bb884d}{}\label{class_incompress___solver___smooth___basis_add1059a795fb2eb925cd983088bb884d}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_afc6c5d36842d6c547a45be090f873307}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_ae8fc8cc18695a54ea08c06abb78ccffb}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Component(int $\ast$icoords)}{getComponent(int *icoords)}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a771b4c77ff4164b8639166c8a63b97dc}{}\label{class_incompress___solver___smooth___basis_a771b4c77ff4164b8639166c8a63b97dc}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Component(double $\ast$coords)}{getComponent(double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1ccb12d77c7e05319dc670a138ee1d29}{}\label{class_incompress___solver___smooth___basis_a1ccb12d77c7e05319dc670a138ee1d29}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Distance@{get\+Distance}}
+\index{get\+Distance@{get\+Distance}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Distance(double $\ast$coords0, double $\ast$coords1)}{getDistance(double *coords0, double *coords1)}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Distance (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords0, }
+\item[{double $\ast$}]{coords1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a96061631c9a8212cc986e103a4a1695c}{}\label{class_incompress___solver___smooth___basis_a96061631c9a8212cc986e103a4a1695c}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Nearest\+Interface\+Point@{get\+Nearest\+Interface\+Point}}
+\index{get\+Nearest\+Interface\+Point@{get\+Nearest\+Interface\+Point}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Interface\+Point(\+C\+O\+M\+P\+O\+N\+E\+N\+T, double $\ast$, double $\ast$, double $\ast$, double $\ast$)}{getNearestInterfacePoint(COMPONENT, double *, double *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Nearest\+Interface\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{q, }
+\item[{double $\ast$}]{nor, }
+\item[{double $\ast$}]{kappa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab2d41c73fbfdcade10cdabae9a0b35c5}{}\label{class_incompress___solver___smooth___basis_ab2d41c73fbfdcade10cdabae9a0b35c5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Rectangle\+Center@{get\+Rectangle\+Center}}
+\index{get\+Rectangle\+Center@{get\+Rectangle\+Center}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Rectangle\+Center(int index, double $\ast$coords)}{getRectangleCenter(int index, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Rectangle\+Center (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1593054b9dd7870fcf5f856eea16fc2b}{}\label{class_incompress___solver___smooth___basis_a1593054b9dd7870fcf5f856eea16fc2b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Rectangle\+Component@{get\+Rectangle\+Component}}
+\index{get\+Rectangle\+Component@{get\+Rectangle\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Rectangle\+Component(int index)}{getRectangleComponent(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Rectangle\+Component (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aabd75ec2f0d5bdfb86bea20c506ff9b4}{}\label{class_incompress___solver___smooth___basis_aabd75ec2f0d5bdfb86bea20c506ff9b4}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Rectangle\+Index@{get\+Rectangle\+Index}}
+\index{get\+Rectangle\+Index@{get\+Rectangle\+Index}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Rectangle\+Index(int index\+Rectangle, int \&i, int \&j)}{getRectangleIndex(int indexRectangle, int &i, int &j)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Rectangle\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{index\+Rectangle, }
+\item[{int \&}]{i, }
+\item[{int \&}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a304a6c4575210fe7f21f12235b66552b}{}\label{class_incompress___solver___smooth___basis_a304a6c4575210fe7f21f12235b66552b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Rectangle\+Index@{get\+Rectangle\+Index}}
+\index{get\+Rectangle\+Index@{get\+Rectangle\+Index}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Rectangle\+Index(int index\+Rectangle, int \&i, int \&j, int \&k)}{getRectangleIndex(int indexRectangle, int &i, int &j, int &k)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Rectangle\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{index\+Rectangle, }
+\item[{int \&}]{i, }
+\item[{int \&}]{j, }
+\item[{int \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a7ff9bc51c0a84b4206a6225d590f6f01}{}\label{class_incompress___solver___smooth___basis_a7ff9bc51c0a84b4206a6225d590f6f01}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Velocity(double $\ast$p, double $\ast$\+U)}{getVelocity(double *p, double *U)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Velocity (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a9c95810028cadb975424b5f0ce2d45c2}{}\label{class_incompress___solver___smooth___basis_a9c95810028cadb975424b5f0ce2d45c2}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!init\+Mesh@{init\+Mesh}}
+\index{init\+Mesh@{init\+Mesh}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{init\+Mesh(void)}{initMesh(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::init\+Mesh (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_aa162a2636c3cc1fe6df9659a0d31ae93}{}\label{class_incompress___solver___smooth___basis_aa162a2636c3cc1fe6df9659a0d31ae93}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!init\+Movie\+Variables@{init\+Movie\+Variables}}
+\index{init\+Movie\+Variables@{init\+Movie\+Variables}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{init\+Movie\+Variables(void)}{initMovieVariables(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::init\+Movie\+Variables (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a8e291964a201d9a7b2fdb99241091475}{}\label{class_incompress___solver___smooth___basis_a8e291964a201d9a7b2fdb99241091475}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!init\+Sample\+Velocity@{init\+Sample\+Velocity}}
+\index{init\+Sample\+Velocity@{init\+Sample\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{init\+Sample\+Velocity(char $\ast$in\+\_\+name)}{initSampleVelocity(char *in_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::init\+Sample\+Velocity (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a21691206778cebb29ecd2c3eb887b4ec}{}\label{class_incompress___solver___smooth___basis_a21691206778cebb29ecd2c3eb887b4ec}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!next\+Connected\+Point@{next\+Connected\+Point}}
+\index{next\+Connected\+Point@{next\+Connected\+Point}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{next\+Connected\+Point(int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, int $\ast$, int, int $\ast$, int $\ast$)}{nextConnectedPoint(int *, GRID_DIRECTION, int *, int, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::next\+Connected\+Point (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{ip, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int $\ast$}]{ipn, }
+\item[{int}]{paint\+\_\+method, }
+\item[{int $\ast$}]{smin, }
+\item[{int $\ast$}]{smax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a0aeb30dabdf2a501f6d4d471c73c9341}{}\label{class_incompress___solver___smooth___basis_a0aeb30dabdf2a501f6d4d471c73c9341}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!paint\+All\+Grid\+Point@{paint\+All\+Grid\+Point}}
+\index{paint\+All\+Grid\+Point@{paint\+All\+Grid\+Point}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{paint\+All\+Grid\+Point(int status)}{paintAllGridPoint(int status)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::paint\+All\+Grid\+Point (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a6c8bba103054da68e38950604bfae0d8}{}\label{class_incompress___solver___smooth___basis_a6c8bba103054da68e38950604bfae0d8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!paint\+Solved\+Grid\+Point@{paint\+Solved\+Grid\+Point}}
+\index{paint\+Solved\+Grid\+Point@{paint\+Solved\+Grid\+Point}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{paint\+Solved\+Grid\+Point()}{paintSolvedGridPoint()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::paint\+Solved\+Grid\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ad62702c94435bc99095af94ae2a5a2e2}{}\label{class_incompress___solver___smooth___basis_ad62702c94435bc99095af94ae2a5a2e2}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!paint\+To\+Solve\+Grid\+Point@{paint\+To\+Solve\+Grid\+Point}}
+\index{paint\+To\+Solve\+Grid\+Point@{paint\+To\+Solve\+Grid\+Point}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{paint\+To\+Solve\+Grid\+Point()}{paintToSolveGridPoint()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::paint\+To\+Solve\+Grid\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a10b32a6e970e4da9919e291080d087bb}{}\label{class_incompress___solver___smooth___basis_a10b32a6e970e4da9919e291080d087bb}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!print\+Front\+Interior\+States@{print\+Front\+Interior\+States}}
+\index{print\+Front\+Interior\+States@{print\+Front\+Interior\+States}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{print\+Front\+Interior\+States(char $\ast$state\+\_\+name)}{printFrontInteriorStates(char *state_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::print\+Front\+Interior\+States (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{state\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a6420056e127746c8b93961c5ffe29029}{}\label{class_incompress___solver___smooth___basis_a6420056e127746c8b93961c5ffe29029}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!Print\+Velocity@{Print\+Velocity}}
+\index{Print\+Velocity@{Print\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{Print\+Velocity(const char $\ast$, double $\ast$)}{PrintVelocity(const char *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+Print\+Velocity (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{double $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_aa17ecee1fcdfdb8053d194204324fa78}{}\label{class_incompress___solver___smooth___basis_aa17ecee1fcdfdb8053d194204324fa78}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!Print\+Velocity@{Print\+Velocity}}
+\index{Print\+Velocity@{Print\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{Print\+Velocity()}{PrintVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+Print\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_aeab5402ceb5fce1e1ce379aced80a6ca}{}\label{class_incompress___solver___smooth___basis_aeab5402ceb5fce1e1ce379aced80a6ca}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!read\+Front\+Interior\+States@{read\+Front\+Interior\+States}}
+\index{read\+Front\+Interior\+States@{read\+Front\+Interior\+States}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{read\+Front\+Interior\+States(char $\ast$state\+\_\+name)}{readFrontInteriorStates(char *state_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::read\+Front\+Interior\+States (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{state\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_ae9562ca2b06ab97f444177ee0bbee9ef}{}\label{class_incompress___solver___smooth___basis_ae9562ca2b06ab97f444177ee0bbee9ef}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!save@{save}}
+\index{save@{save}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{save(char $\ast$filename)}{save(char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::save (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_adcdbd6047e035969c19bc6afc4e7e886}{}\label{class_incompress___solver___smooth___basis_adcdbd6047e035969c19bc6afc4e7e886}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!scat\+Mesh\+Array@{scat\+Mesh\+Array}}
+\index{scat\+Mesh\+Array@{scat\+Mesh\+Array}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{scat\+Mesh\+Array(void)}{scatMeshArray(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::scat\+Mesh\+Array (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a7fc402728896d653973e8cbcffa393fc}{}\label{class_incompress___solver___smooth___basis_a7fc402728896d653973e8cbcffa393fc}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Advection\+Dt@{set\+Advection\+Dt}}
+\index{set\+Advection\+Dt@{set\+Advection\+Dt}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Advection\+Dt(void)}{setAdvectionDt(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Advection\+Dt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_a81599438a07e2c26421733ad068ca5d4}{}\label{class_incompress___solver___smooth___basis_a81599438a07e2c26421733ad068ca5d4}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Component@{set\+Component}}
+\index{set\+Component@{set\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Component(void)}{setComponent(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Component (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a69f6f20588a4bbba75984288d89b2781}{}\label{class_incompress___solver___smooth___basis_a69f6f20588a4bbba75984288d89b2781}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Domain@{set\+Domain}}
+\index{set\+Domain@{set\+Domain}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Domain()}{setDomain()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Domain (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab983f0caf55ce07522e068911764f184}{}\label{class_incompress___solver___smooth___basis_ab983f0caf55ce07522e068911764f184}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Dual\+Domain@{set\+Dual\+Domain}}
+\index{set\+Dual\+Domain@{set\+Dual\+Domain}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Dual\+Domain()}{setDualDomain()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Dual\+Domain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a2cb736ad63119ddaafb08def2bd9bfd2}{}\label{class_incompress___solver___smooth___basis_a2cb736ad63119ddaafb08def2bd9bfd2}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Dual\+Global\+Index@{set\+Dual\+Global\+Index}}
+\index{set\+Dual\+Global\+Index@{set\+Dual\+Global\+Index}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Dual\+Global\+Index(void)}{setDualGlobalIndex(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Dual\+Global\+Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_add73b3231bdd09083d2244fc30b31aa8}{}\label{class_incompress___solver___smooth___basis_add73b3231bdd09083d2244fc30b31aa8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Dual\+Index\+Map@{set\+Dual\+Index\+Map}}
+\index{set\+Dual\+Index\+Map@{set\+Dual\+Index\+Map}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Dual\+Index\+Map(void)}{setDualIndexMap(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Dual\+Index\+Map (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4e33c06383e49eff17051ee0a573db9d}{}\label{class_incompress___solver___smooth___basis_a4e33c06383e49eff17051ee0a573db9d}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Global\+Index@{set\+Global\+Index}}
+\index{set\+Global\+Index@{set\+Global\+Index}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Global\+Index(void)}{setGlobalIndex(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Global\+Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a96722a356fc4dcd49a4cdafd08ab5c16}{}\label{class_incompress___solver___smooth___basis_a96722a356fc4dcd49a4cdafd08ab5c16}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Index\+Map@{set\+Index\+Map}}
+\index{set\+Index\+Map@{set\+Index\+Map}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Index\+Map(void)}{setIndexMap(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Index\+Map (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_af8c95fb72e0dbda27eddebddb2862a41}{}\label{class_incompress___solver___smooth___basis_af8c95fb72e0dbda27eddebddb2862a41}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Initial\+Condition@{set\+Initial\+Condition}}
+\index{set\+Initial\+Condition@{set\+Initial\+Condition}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Initial\+Condition(void)=0}{setInitialCondition(void)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Initial\+Condition (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a1621441e8815f61c164474ebde60f51a}{}\label{class_incompress___solver___smooth___basis_a1621441e8815f61c164474ebde60f51a}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a9132e3e07ff5a882f31e65029b47e9bf}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_aa4b4f3bf96c6ebb02716ae054ac931dc}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Parallel\+Velocity@{set\+Parallel\+Velocity}}
+\index{set\+Parallel\+Velocity@{set\+Parallel\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Parallel\+Velocity(void)=0}{setParallelVelocity(void)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Parallel\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a011c6b8fc8c0051523bd684187678a90}{}\label{class_incompress___solver___smooth___basis_a011c6b8fc8c0051523bd684187678a90}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a0447dce243b01e7fa373d75589fb237a}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_ab8a4ef94126e47c674f254c3a82d8f4f}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Reference\+Pressure@{set\+Reference\+Pressure}}
+\index{set\+Reference\+Pressure@{set\+Reference\+Pressure}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Reference\+Pressure()}{setReferencePressure()}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Reference\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_af56e98eeed1392225a3990fcc12121db}{}\label{class_incompress___solver___smooth___basis_af56e98eeed1392225a3990fcc12121db}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!solve@{solve}}
+\index{solve@{solve}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{solve(double dt)=0}{solve(double dt)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::solve (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a23cb0b79f81e0d10dcf8765386e88192}{}\label{class_incompress___solver___smooth___basis_a23cb0b79f81e0d10dcf8765386e88192}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a83f96ca6c62297c2bcf4a6e8ff70d06b}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_af3b2e85b9739122cb610f55641ad13d5}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!solve\+Test@{solve\+Test}}
+\index{solve\+Test@{solve\+Test}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{solve\+Test(const char $\ast$msg)}{solveTest(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::solve\+Test (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth___basis_ad0e83204e58fc2952c196578a8d26d06}{}\label{class_incompress___solver___smooth___basis_ad0e83204e58fc2952c196578a8d26d06}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!surface\+Tension@{surface\+Tension}}
+\index{surface\+Tension@{surface\+Tension}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{surface\+Tension(double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, double)=0}{surfaceTension(double *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, double)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::surface\+Tension (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a38d025139a192414bef50db30b81e893}{}\label{class_incompress___solver___smooth___basis_a38d025139a192414bef50db30b81e893}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_ac84d66b3a087a5b496bf4e7d5032188b}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_a31f1c4db324c6c03fa348268a309d6bf}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!vtk\+\_\+plot\+\_\+scalar@{vtk\+\_\+plot\+\_\+scalar}}
+\index{vtk\+\_\+plot\+\_\+scalar@{vtk\+\_\+plot\+\_\+scalar}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+scalar(char $\ast$, const char $\ast$)=0}{vtk_plot_scalar(char *, const char *)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::vtk\+\_\+plot\+\_\+scalar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_incompress___solver___smooth___basis_a6b4a774a25fd752bfa05fe764cb55c4d}{}\label{class_incompress___solver___smooth___basis_a6b4a774a25fd752bfa05fe764cb55c4d}
+
+
+Implemented in \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a11aa45dcb3ecfe5f5400c984837300a7}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}, and \hyperlink{class_incompress___solver___smooth__2_d___cartesian_a902479c8510fbec7ff0ffe2126b5aef4}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+2\+D\+\_\+\+Cartesian}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!accum\+\_\+dt@{accum\+\_\+dt}}
+\index{accum\+\_\+dt@{accum\+\_\+dt}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{accum\+\_\+dt}{accum_dt}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::accum\+\_\+dt}\hypertarget{class_incompress___solver___smooth___basis_a32b48778fbfca8db41b1a387612b5c74}{}\label{class_incompress___solver___smooth___basis_a32b48778fbfca8db41b1a387612b5c74}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!array@{array}}
+\index{array@{array}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{array}{array}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::array\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ad6665e3a882f7cc98fa27f252f443a6a}{}\label{class_incompress___solver___smooth___basis_ad6665e3a882f7cc98fa27f252f443a6a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!carray@{carray}}
+\index{carray@{carray}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{carray}{carray}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::carray\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab37e930fbc1b331ecee362b0015976a8}{}\label{class_incompress___solver___smooth___basis_ab37e930fbc1b331ecee362b0015976a8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cdomain\+\_\+status@{cdomain\+\_\+status}}
+\index{cdomain\+\_\+status@{cdomain\+\_\+status}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cdomain\+\_\+status}{cdomain_status}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cdomain\+\_\+status\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aca20c1aebb74f20bf446f5f9a8675fba}{}\label{class_incompress___solver___smooth___basis_aca20c1aebb74f20bf446f5f9a8675fba}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cell\+\_\+center@{cell\+\_\+center}}
+\index{cell\+\_\+center@{cell\+\_\+center}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cell\+\_\+center}{cell_center}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf L\+\_\+\+R\+E\+C\+T\+A\+N\+G\+LE}$>$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cell\+\_\+center\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a38f7b6f97b13c2ddc8551cce46b99cf8}{}\label{class_incompress___solver___smooth___basis_a38f7b6f97b13c2ddc8551cce46b99cf8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!c\+I\+\_\+to\+\_\+ij@{c\+I\+\_\+to\+\_\+ij}}
+\index{c\+I\+\_\+to\+\_\+ij@{c\+I\+\_\+to\+\_\+ij}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{c\+I\+\_\+to\+\_\+ij}{cI_to_ij}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::c\+I\+\_\+to\+\_\+ij\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a48311afa503eceb389202dbefc69996b}{}\label{class_incompress___solver___smooth___basis_a48311afa503eceb389202dbefc69996b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!c\+I\+\_\+to\+\_\+ijk@{c\+I\+\_\+to\+\_\+ijk}}
+\index{c\+I\+\_\+to\+\_\+ijk@{c\+I\+\_\+to\+\_\+ijk}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{c\+I\+\_\+to\+\_\+ijk}{cI_to_ijk}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::c\+I\+\_\+to\+\_\+ijk\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aa5f61f97a3c87e1d58f9a914672ebc45}{}\label{class_incompress___solver___smooth___basis_aa5f61f97a3c87e1d58f9a914672ebc45}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cij\+\_\+to\+\_\+I@{cij\+\_\+to\+\_\+I}}
+\index{cij\+\_\+to\+\_\+I@{cij\+\_\+to\+\_\+I}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cij\+\_\+to\+\_\+I}{cij_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cij\+\_\+to\+\_\+I\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4bb8f054186a093498fa708ca564f3e9}{}\label{class_incompress___solver___smooth___basis_a4bb8f054186a093498fa708ca564f3e9}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cijk\+\_\+to\+\_\+I@{cijk\+\_\+to\+\_\+I}}
+\index{cijk\+\_\+to\+\_\+I@{cijk\+\_\+to\+\_\+I}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cijk\+\_\+to\+\_\+I}{cijk_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cijk\+\_\+to\+\_\+I\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a8b89615429ee63b331bdc6c908f7a83f}{}\label{class_incompress___solver___smooth___basis_a8b89615429ee63b331bdc6c908f7a83f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cilower@{cilower}}
+\index{cilower@{cilower}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cilower}{cilower}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cilower\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a6c08c39817435a1e195f87dd6d33905c}{}\label{class_incompress___solver___smooth___basis_a6c08c39817435a1e195f87dd6d33905c}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cimax@{cimax}}
+\index{cimax@{cimax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cimax}{cimax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cimax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a00e6fe0d0f41d930fdadfa0ae1c92608}{}\label{class_incompress___solver___smooth___basis_a00e6fe0d0f41d930fdadfa0ae1c92608}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cimin@{cimin}}
+\index{cimin@{cimin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cimin}{cimin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cimin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab19a77f8d3f17131b328bd150219b08e}{}\label{class_incompress___solver___smooth___basis_ab19a77f8d3f17131b328bd150219b08e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ciupper@{ciupper}}
+\index{ciupper@{ciupper}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ciupper}{ciupper}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ciupper\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1d59bc812f0a4037a9d99d78cefb8de7}{}\label{class_incompress___solver___smooth___basis_a1d59bc812f0a4037a9d99d78cefb8de7}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cjmax@{cjmax}}
+\index{cjmax@{cjmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cjmax}{cjmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cjmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab6c202de6b73d242f8cf08a6d4995f73}{}\label{class_incompress___solver___smooth___basis_ab6c202de6b73d242f8cf08a6d4995f73}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cjmin@{cjmin}}
+\index{cjmin@{cjmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cjmin}{cjmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cjmin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a541203e6e096c6d940d23f23b14c15dd}{}\label{class_incompress___solver___smooth___basis_a541203e6e096c6d940d23f23b14c15dd}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ckmax@{ckmax}}
+\index{ckmax@{ckmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ckmax}{ckmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ckmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_abe1377b088f050966025ffef7392b0fb}{}\label{class_incompress___solver___smooth___basis_abe1377b088f050966025ffef7392b0fb}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ckmin@{ckmin}}
+\index{ckmin@{ckmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ckmin}{ckmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ckmin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a9cbb2473c03c2c8039c57ff265758e16}{}\label{class_incompress___solver___smooth___basis_a9cbb2473c03c2c8039c57ff265758e16}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!clbuf@{clbuf}}
+\index{clbuf@{clbuf}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{clbuf}{clbuf}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::clbuf\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4e0267711f069d259b792eba1bf759ef}{}\label{class_incompress___solver___smooth___basis_a4e0267711f069d259b792eba1bf759ef}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cn\+\_\+dist@{cn\+\_\+dist}}
+\index{cn\+\_\+dist@{cn\+\_\+dist}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cn\+\_\+dist}{cn_dist}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cn\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aaf56518c3fe222d82b5c8c870d0242b3}{}\label{class_incompress___solver___smooth___basis_aaf56518c3fe222d82b5c8c870d0242b3}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!c\+N\+Lblocks@{c\+N\+Lblocks}}
+\index{c\+N\+Lblocks@{c\+N\+Lblocks}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{c\+N\+Lblocks}{cNLblocks}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::c\+N\+Lblocks\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a2a0ccf8fdae4b39b75e7ee01245a723a}{}\label{class_incompress___solver___smooth___basis_a2a0ccf8fdae4b39b75e7ee01245a723a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!csmax@{csmax}}
+\index{csmax@{csmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{csmax}{csmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::csmax\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1c86b020649913aa5900c6b1bb6c8ab2}{}\label{class_incompress___solver___smooth___basis_a1c86b020649913aa5900c6b1bb6c8ab2}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!csmin@{csmin}}
+\index{csmin@{csmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{csmin}{csmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::csmin\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4335cf7015977580c35b75d7580ecf6a}{}\label{class_incompress___solver___smooth___basis_a4335cf7015977580c35b75d7580ecf6a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!csource@{csource}}
+\index{csource@{csource}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{csource}{csource}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::csource\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ad521876b2ad19878c7d187f8d9951949}{}\label{class_incompress___solver___smooth___basis_ad521876b2ad19878c7d187f8d9951949}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ctop\+\_\+comp@{ctop\+\_\+comp}}
+\index{ctop\+\_\+comp@{ctop\+\_\+comp}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ctop\+\_\+comp}{ctop_comp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+O\+M\+P\+O\+N\+E\+NT}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ctop\+\_\+comp\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a2f2879d45b68eb6a80795dad5ba8e7ab}{}\label{class_incompress___solver___smooth___basis_a2f2879d45b68eb6a80795dad5ba8e7ab}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ctop\+\_\+gmax@{ctop\+\_\+gmax}}
+\index{ctop\+\_\+gmax@{ctop\+\_\+gmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ctop\+\_\+gmax}{ctop_gmax}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ctop\+\_\+gmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_acb44b0619cc69414bce1b5844925421b}{}\label{class_incompress___solver___smooth___basis_acb44b0619cc69414bce1b5844925421b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ctop\+\_\+grid@{ctop\+\_\+grid}}
+\index{ctop\+\_\+grid@{ctop\+\_\+grid}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ctop\+\_\+grid}{ctop_grid}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ctop\+\_\+grid\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1c2c21e2ad5d3ce17944d1379694798f}{}\label{class_incompress___solver___smooth___basis_a1c2c21e2ad5d3ce17944d1379694798f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ctop\+\_\+L@{ctop\+\_\+L}}
+\index{ctop\+\_\+L@{ctop\+\_\+L}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ctop\+\_\+L}{ctop_L}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ctop\+\_\+L\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4e8214e92490607926f54762b4924588}{}\label{class_incompress___solver___smooth___basis_a4e8214e92490607926f54762b4924588}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ctop\+\_\+U@{ctop\+\_\+U}}
+\index{ctop\+\_\+U@{ctop\+\_\+U}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ctop\+\_\+U}{ctop_U}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ctop\+\_\+U\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4cf07481cef6bd75f8db372b79ba8c0e}{}\label{class_incompress___solver___smooth___basis_a4cf07481cef6bd75f8db372b79ba8c0e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!cubuf@{cubuf}}
+\index{cubuf@{cubuf}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{cubuf}{cubuf}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::cubuf\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_af1a59a96084b11a5749e0e7ff6618428}{}\label{class_incompress___solver___smooth___basis_af1a59a96084b11a5749e0e7ff6618428}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!diff\+\_\+coeff@{diff\+\_\+coeff}}
+\index{diff\+\_\+coeff@{diff\+\_\+coeff}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{diff\+\_\+coeff}{diff_coeff}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::diff\+\_\+coeff\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a8c7b22a7f2e1e1a461ab929cc6b7239e}{}\label{class_incompress___solver___smooth___basis_a8c7b22a7f2e1e1a461ab929cc6b7239e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!dim@{dim}}
+\index{dim@{dim}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{dim}{dim}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::dim}\hypertarget{class_incompress___solver___smooth___basis_a339d3315db4ae6cae79f55a1e14fe672}{}\label{class_incompress___solver___smooth___basis_a339d3315db4ae6cae79f55a1e14fe672}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!domain\+\_\+status@{domain\+\_\+status}}
+\index{domain\+\_\+status@{domain\+\_\+status}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{domain\+\_\+status}{domain_status}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::domain\+\_\+status\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a9e9f78b3d2bbe9b8f4e50831a32d14f8}{}\label{class_incompress___solver___smooth___basis_a9e9f78b3d2bbe9b8f4e50831a32d14f8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!field@{field}}
+\index{field@{field}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{field}{field}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+F\+\_\+\+F\+I\+E\+LD}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::field\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a8cb594f11e27f7f9e74d414f16f8bf20}{}\label{class_incompress___solver___smooth___basis_a8cb594f11e27f7f9e74d414f16f8bf20}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!find\+State\+At\+C\+G\+Crossing@{find\+State\+At\+C\+G\+Crossing}}
+\index{find\+State\+At\+C\+G\+Crossing@{find\+State\+At\+C\+G\+Crossing}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{find\+State\+At\+C\+G\+Crossing}{findStateAtCGCrossing}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::find\+State\+At\+C\+G\+Crossing) ({\bf Front} $\ast$, int $\ast$, {\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, {\bf P\+O\+I\+N\+T\+ER} $\ast$, {\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)}\hypertarget{class_incompress___solver___smooth___basis_a3a9f5110ae80be1bca8d0d1903faed10}{}\label{class_incompress___solver___smooth___basis_a3a9f5110ae80be1bca8d0d1903faed10}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!find\+State\+At\+Crossing@{find\+State\+At\+Crossing}}
+\index{find\+State\+At\+Crossing@{find\+State\+At\+Crossing}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{find\+State\+At\+Crossing}{findStateAtCrossing}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::find\+State\+At\+Crossing) ({\bf Front} $\ast$, int $\ast$, {\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, {\bf P\+O\+I\+N\+T\+ER} $\ast$, {\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)}\hypertarget{class_incompress___solver___smooth___basis_a30cd8cfd805153f9576469ac4f78aebe}{}\label{class_incompress___solver___smooth___basis_a30cd8cfd805153f9576469ac4f78aebe}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!front@{front}}
+\index{front@{front}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{front}{front}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Front}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::front\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab792d371ca86ec9ed21b4c95d1375a0b}{}\label{class_incompress___solver___smooth___basis_ab792d371ca86ec9ed21b4c95d1375a0b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!get\+Initial\+State@{get\+Initial\+State}}
+\index{get\+Initial\+State@{get\+Initial\+State}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{get\+Initial\+State}{getInitialState}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::get\+Initial\+State) ({\bf C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, {\bf I\+F\+\_\+\+F\+I\+E\+LD} $\ast$, int, int, {\bf I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$)}\hypertarget{class_incompress___solver___smooth___basis_a99f48d4fd354fa555ec1d191a7fb568f}{}\label{class_incompress___solver___smooth___basis_a99f48d4fd354fa555ec1d191a7fb568f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!hmin@{hmin}}
+\index{hmin@{hmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{hmin}{hmin}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::hmin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a066845265506ae00d2f2726ef71598b5}{}\label{class_incompress___solver___smooth___basis_a066845265506ae00d2f2726ef71598b5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!I\+\_\+to\+\_\+ij@{I\+\_\+to\+\_\+ij}}
+\index{I\+\_\+to\+\_\+ij@{I\+\_\+to\+\_\+ij}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{I\+\_\+to\+\_\+ij}{I_to_ij}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+I\+\_\+to\+\_\+ij\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ad55a7a51c64040bb6f36c540b58268a5}{}\label{class_incompress___solver___smooth___basis_ad55a7a51c64040bb6f36c540b58268a5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!I\+\_\+to\+\_\+ijk@{I\+\_\+to\+\_\+ijk}}
+\index{I\+\_\+to\+\_\+ijk@{I\+\_\+to\+\_\+ijk}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{I\+\_\+to\+\_\+ijk}{I_to_ijk}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+I\+\_\+to\+\_\+ijk\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ac3957ab3e1845c86da4385d736421d60}{}\label{class_incompress___solver___smooth___basis_ac3957ab3e1845c86da4385d736421d60}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!icrds\+\_\+max@{icrds\+\_\+max}}
+\index{icrds\+\_\+max@{icrds\+\_\+max}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{icrds\+\_\+max}{icrds_max}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::icrds\+\_\+max\mbox{[}{\bf M\+A\+XD}\mbox{]}}\hypertarget{class_incompress___solver___smooth___basis_aeca5693a734c264eee923f8b0a99a4d2}{}\label{class_incompress___solver___smooth___basis_aeca5693a734c264eee923f8b0a99a4d2}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!i\+Fparams@{i\+Fparams}}
+\index{i\+Fparams@{i\+Fparams}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{i\+Fparams}{iFparams}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+F\+\_\+\+P\+A\+R\+A\+MS}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::i\+Fparams\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a8d8d786aa53fea726a52715c3f8caefc}{}\label{class_incompress___solver___smooth___basis_a8d8d786aa53fea726a52715c3f8caefc}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ij\+\_\+to\+\_\+I@{ij\+\_\+to\+\_\+I}}
+\index{ij\+\_\+to\+\_\+I@{ij\+\_\+to\+\_\+I}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ij\+\_\+to\+\_\+I}{ij_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ij\+\_\+to\+\_\+I\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a92a1cb2b12cf1925338e048f39a97f32}{}\label{class_incompress___solver___smooth___basis_a92a1cb2b12cf1925338e048f39a97f32}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ijk\+\_\+to\+\_\+I@{ijk\+\_\+to\+\_\+I}}
+\index{ijk\+\_\+to\+\_\+I@{ijk\+\_\+to\+\_\+I}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ijk\+\_\+to\+\_\+I}{ijk_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ijk\+\_\+to\+\_\+I\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a2aa800b669e602a85512bd90e12dfa44}{}\label{class_incompress___solver___smooth___basis_a2aa800b669e602a85512bd90e12dfa44}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ilower@{ilower}}
+\index{ilower@{ilower}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ilower}{ilower}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ilower\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a46fbeab68314e00591e3252ed1857a8e}{}\label{class_incompress___solver___smooth___basis_a46fbeab68314e00591e3252ed1857a8e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!imax@{imax}}
+\index{imax@{imax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{imax}{imax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::imax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a32d17ea794b755254bd7e0cadfef0dc4}{}\label{class_incompress___solver___smooth___basis_a32d17ea794b755254bd7e0cadfef0dc4}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!imin@{imin}}
+\index{imin@{imin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{imin}{imin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::imin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a19abf709c0951b6953e3fa5d903f9ec3}{}\label{class_incompress___solver___smooth___basis_a19abf709c0951b6953e3fa5d903f9ec3}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ishift@{ishift}}
+\index{ishift@{ishift}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ishift}{ishift}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ishift\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a3dc2c9e1636f910b023b1dfb3f853579}{}\label{class_incompress___solver___smooth___basis_a3dc2c9e1636f910b023b1dfb3f853579}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!iupper@{iupper}}
+\index{iupper@{iupper}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{iupper}{iupper}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::iupper\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_adb5ec7c9649f109d8273ad8476b2ab34}{}\label{class_incompress___solver___smooth___basis_adb5ec7c9649f109d8273ad8476b2ab34}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!jmax@{jmax}}
+\index{jmax@{jmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{jmax}{jmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::jmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a7a130f7b577c2b0d88472f69bf06d86f}{}\label{class_incompress___solver___smooth___basis_a7a130f7b577c2b0d88472f69bf06d86f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!jmin@{jmin}}
+\index{jmin@{jmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{jmin}{jmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::jmin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aaded2f4ccb7807c15a722714d68a8605}{}\label{class_incompress___solver___smooth___basis_aaded2f4ccb7807c15a722714d68a8605}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!kmax@{kmax}}
+\index{kmax@{kmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{kmax}{kmax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::kmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ad8d4888d36cde4a680b13834b1df5e5f}{}\label{class_incompress___solver___smooth___basis_ad8d4888d36cde4a680b13834b1df5e5f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!kmin@{kmin}}
+\index{kmin@{kmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{kmin}{kmin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::kmin\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a7df6c2bf47b8525a12faeed5286421a7}{}\label{class_incompress___solver___smooth___basis_a7df6c2bf47b8525a12faeed5286421a7}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!lbuf@{lbuf}}
+\index{lbuf@{lbuf}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{lbuf}{lbuf}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::lbuf\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a09e96680610922612dc03030801fb0c8}{}\label{class_incompress___solver___smooth___basis_a09e96680610922612dc03030801fb0c8}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+comp@{m\+\_\+comp}}
+\index{m\+\_\+comp@{m\+\_\+comp}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+comp}{m_comp}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+comp\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_af5728d3f5f062bd724d0b06e50f07df0}{}\label{class_incompress___solver___smooth___basis_af5728d3f5f062bd724d0b06e50f07df0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+dt@{m\+\_\+dt}}
+\index{m\+\_\+dt@{m\+\_\+dt}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+dt}{m_dt}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+dt}\hypertarget{class_incompress___solver___smooth___basis_a01a2748ba6a9fd98db8fa120074bb334}{}\label{class_incompress___solver___smooth___basis_a01a2748ba6a9fd98db8fa120074bb334}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+mu@{m\+\_\+mu}}
+\index{m\+\_\+mu@{m\+\_\+mu}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+mu}{m_mu}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+mu\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a5e0e511ab568cfcfac643285cd1558e0}{}\label{class_incompress___solver___smooth___basis_a5e0e511ab568cfcfac643285cd1558e0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+rho@{m\+\_\+rho}}
+\index{m\+\_\+rho@{m\+\_\+rho}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+rho}{m_rho}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+rho\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aa16db88edf1a6afa4e84b9d2b2dd5c8b}{}\label{class_incompress___solver___smooth___basis_aa16db88edf1a6afa4e84b9d2b2dd5c8b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+sigma@{m\+\_\+sigma}}
+\index{m\+\_\+sigma@{m\+\_\+sigma}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+sigma}{m_sigma}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+sigma\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a597f3989985b6e0beae0e509ee95b6d5}{}\label{class_incompress___solver___smooth___basis_a597f3989985b6e0beae0e509ee95b6d5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+smoothing\+\_\+radius@{m\+\_\+smoothing\+\_\+radius}}
+\index{m\+\_\+smoothing\+\_\+radius@{m\+\_\+smoothing\+\_\+radius}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+smoothing\+\_\+radius}{m_smoothing_radius}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+smoothing\+\_\+radius\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a4bd26e5308fc79ccabc0d12e24807434}{}\label{class_incompress___solver___smooth___basis_a4bd26e5308fc79ccabc0d12e24807434}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+t@{m\+\_\+t}}
+\index{m\+\_\+t@{m\+\_\+t}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+t}{m_t}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+t\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aae21fd7692451705730f6bf9d6d5d66f}{}\label{class_incompress___solver___smooth___basis_aae21fd7692451705730f6bf9d6d5d66f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+t\+\_\+int@{m\+\_\+t\+\_\+int}}
+\index{m\+\_\+t\+\_\+int@{m\+\_\+t\+\_\+int}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+t\+\_\+int}{m_t_int}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+t\+\_\+int\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_afaf9f90bca296738495dbd2d3816b405}{}\label{class_incompress___solver___smooth___basis_afaf9f90bca296738495dbd2d3816b405}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+t\+\_\+new@{m\+\_\+t\+\_\+new}}
+\index{m\+\_\+t\+\_\+new@{m\+\_\+t\+\_\+new}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+t\+\_\+new}{m_t_new}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+t\+\_\+new\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a0a5ce1c4b184f360e5e9bc27d9dfb1d3}{}\label{class_incompress___solver___smooth___basis_a0a5ce1c4b184f360e5e9bc27d9dfb1d3}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!m\+\_\+t\+\_\+old@{m\+\_\+t\+\_\+old}}
+\index{m\+\_\+t\+\_\+old@{m\+\_\+t\+\_\+old}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{m\+\_\+t\+\_\+old}{m_t_old}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::m\+\_\+t\+\_\+old\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab057e99c6fb150ea8994597fe91fa6e4}{}\label{class_incompress___solver___smooth___basis_ab057e99c6fb150ea8994597fe91fa6e4}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!max\+\_\+dt@{max\+\_\+dt}}
+\index{max\+\_\+dt@{max\+\_\+dt}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{max\+\_\+dt}{max_dt}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::max\+\_\+dt}\hypertarget{class_incompress___solver___smooth___basis_a96e9463787fc08bb925f939f63266e72}{}\label{class_incompress___solver___smooth___basis_a96e9463787fc08bb925f939f63266e72}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!max\+\_\+pressure@{max\+\_\+pressure}}
+\index{max\+\_\+pressure@{max\+\_\+pressure}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{max\+\_\+pressure}{max_pressure}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::max\+\_\+pressure}\hypertarget{class_incompress___solver___smooth___basis_a9123e8271d9c83b7b886fa6a983b65b9}{}\label{class_incompress___solver___smooth___basis_a9123e8271d9c83b7b886fa6a983b65b9}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!max\+\_\+speed@{max\+\_\+speed}}
+\index{max\+\_\+speed@{max\+\_\+speed}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{max\+\_\+speed}{max_speed}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::max\+\_\+speed}\hypertarget{class_incompress___solver___smooth___basis_aade48c95c92138da2ab4db924c960255}{}\label{class_incompress___solver___smooth___basis_aade48c95c92138da2ab4db924c960255}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!max\+\_\+value@{max\+\_\+value}}
+\index{max\+\_\+value@{max\+\_\+value}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{max\+\_\+value}{max_value}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::max\+\_\+value}\hypertarget{class_incompress___solver___smooth___basis_a3b56f4a603e152e1e8b24b624ba426f9}{}\label{class_incompress___solver___smooth___basis_a3b56f4a603e152e1e8b24b624ba426f9}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!min\+\_\+dt@{min\+\_\+dt}}
+\index{min\+\_\+dt@{min\+\_\+dt}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{min\+\_\+dt}{min_dt}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::min\+\_\+dt}\hypertarget{class_incompress___solver___smooth___basis_a5e3c3f602f0d8bb5a26fbde765eb500f}{}\label{class_incompress___solver___smooth___basis_a5e3c3f602f0d8bb5a26fbde765eb500f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!min\+\_\+pressure@{min\+\_\+pressure}}
+\index{min\+\_\+pressure@{min\+\_\+pressure}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{min\+\_\+pressure}{min_pressure}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::min\+\_\+pressure}\hypertarget{class_incompress___solver___smooth___basis_aea0ab50c8c45ab34bcd88439f32d9a4e}{}\label{class_incompress___solver___smooth___basis_aea0ab50c8c45ab34bcd88439f32d9a4e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!min\+\_\+value@{min\+\_\+value}}
+\index{min\+\_\+value@{min\+\_\+value}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{min\+\_\+value}{min_value}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::min\+\_\+value}\hypertarget{class_incompress___solver___smooth___basis_a59f256f38196b8666ab54c6f164b43a0}{}\label{class_incompress___solver___smooth___basis_a59f256f38196b8666ab54c6f164b43a0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!mu\+\_\+min@{mu\+\_\+min}}
+\index{mu\+\_\+min@{mu\+\_\+min}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{mu\+\_\+min}{mu_min}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::mu\+\_\+min\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aedf1ab3a1d4d10e395cbc0d1a7cc58d5}{}\label{class_incompress___solver___smooth___basis_aedf1ab3a1d4d10e395cbc0d1a7cc58d5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!n\+\_\+dist@{n\+\_\+dist}}
+\index{n\+\_\+dist@{n\+\_\+dist}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{n\+\_\+dist}{n_dist}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::n\+\_\+dist\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aa76a68ce1664b138921c0e92e7d17a34}{}\label{class_incompress___solver___smooth___basis_aa76a68ce1664b138921c0e92e7d17a34}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!N\+Lblocks@{N\+Lblocks}}
+\index{N\+Lblocks@{N\+Lblocks}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{N\+Lblocks}{NLblocks}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::\+N\+Lblocks\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a90e8970123b6bf442c07c9feae7c900d}{}\label{class_incompress___solver___smooth___basis_a90e8970123b6bf442c07c9feae7c900d}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!offset@{offset}}
+\index{offset@{offset}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{offset}{offset}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::offset\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a8c60af6f8549976d14b73debf0af7f24}{}\label{class_incompress___solver___smooth___basis_a8c60af6f8549976d14b73debf0af7f24}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!rho\+\_\+min@{rho\+\_\+min}}
+\index{rho\+\_\+min@{rho\+\_\+min}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{rho\+\_\+min}{rho_min}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::rho\+\_\+min\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_afcd9f652c0b73b1650f5690855790f8f}{}\label{class_incompress___solver___smooth___basis_afcd9f652c0b73b1650f5690855790f8f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!set\+Initial\+Velocity@{set\+Initial\+Velocity}}
+\index{set\+Initial\+Velocity@{set\+Initial\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{set\+Initial\+Velocity}{setInitialVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::set\+Initial\+Velocity) ({\bf C\+O\+M\+P\+O\+N\+E\+NT}, int $\ast$, double $\ast$, double $\ast$, double $\ast$, {\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, {\bf I\+F\+\_\+\+P\+A\+R\+A\+MS} $\ast$)}\hypertarget{class_incompress___solver___smooth___basis_ae687f7aa455c0a550b63bdb5b2386d2f}{}\label{class_incompress___solver___smooth___basis_ae687f7aa455c0a550b63bdb5b2386d2f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!smax@{smax}}
+\index{smax@{smax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{smax}{smax}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::smax\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1cd3e8e54023a5bb9d37b7b27c48230f}{}\label{class_incompress___solver___smooth___basis_a1cd3e8e54023a5bb9d37b7b27c48230f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!smin@{smin}}
+\index{smin@{smin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{smin}{smin}}]{\setlength{\rightskip}{0pt plus 5cm}int Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::smin\mbox{[}{\bf M\+A\+XD}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a84d43b775b86c4d42a53bcea11f16d99}{}\label{class_incompress___solver___smooth___basis_a84d43b775b86c4d42a53bcea11f16d99}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!source@{source}}
+\index{source@{source}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{source}{source}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::source\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ab571615b4743bbd36e8eea358f7a7eed}{}\label{class_incompress___solver___smooth___basis_ab571615b4743bbd36e8eea358f7a7eed}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+comp@{top\+\_\+comp}}
+\index{top\+\_\+comp@{top\+\_\+comp}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+comp}{top_comp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+O\+M\+P\+O\+N\+E\+NT}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+comp\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aeab9406511f09a20b9ac8fa110b128e6}{}\label{class_incompress___solver___smooth___basis_aeab9406511f09a20b9ac8fa110b128e6}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+gmax@{top\+\_\+gmax}}
+\index{top\+\_\+gmax@{top\+\_\+gmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+gmax}{top_gmax}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+gmax\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a393216337d81a2bc94f5263e1b79ae4a}{}\label{class_incompress___solver___smooth___basis_a393216337d81a2bc94f5263e1b79ae4a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+grid@{top\+\_\+grid}}
+\index{top\+\_\+grid@{top\+\_\+grid}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+grid}{top_grid}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID}$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+grid\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a70474023fb531a88f35d21e3c1e67f70}{}\label{class_incompress___solver___smooth___basis_a70474023fb531a88f35d21e3c1e67f70}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+h@{top\+\_\+h}}
+\index{top\+\_\+h@{top\+\_\+h}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+h}{top_h}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+h}\hypertarget{class_incompress___solver___smooth___basis_a4d10d59710621f01cdb2944a4b6024ed}{}\label{class_incompress___solver___smooth___basis_a4d10d59710621f01cdb2944a4b6024ed}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+L@{top\+\_\+L}}
+\index{top\+\_\+L@{top\+\_\+L}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+L}{top_L}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+L\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_aafeefab070c926e03bb91edcbd25d4a5}{}\label{class_incompress___solver___smooth___basis_aafeefab070c926e03bb91edcbd25d4a5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!top\+\_\+U@{top\+\_\+U}}
+\index{top\+\_\+U@{top\+\_\+U}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{top\+\_\+U}{top_U}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::top\+\_\+U\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_a1c8b0acd591d349f95db19942e7ebade}{}\label{class_incompress___solver___smooth___basis_a1c8b0acd591d349f95db19942e7ebade}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!ubuf@{ubuf}}
+\index{ubuf@{ubuf}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{ubuf}{ubuf}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::ubuf\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth___basis_ae2f78a30196de260ba67c1af65eb6d8a}{}\label{class_incompress___solver___smooth___basis_ae2f78a30196de260ba67c1af65eb6d8a}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!vmax@{vmax}}
+\index{vmax@{vmax}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{vmax}{vmax}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::vmax\mbox{[}{\bf M\+A\+XD}\mbox{]}}\hypertarget{class_incompress___solver___smooth___basis_a245b31f906cafcf80a2cc0910ff89d01}{}\label{class_incompress___solver___smooth___basis_a245b31f906cafcf80a2cc0910ff89d01}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}!vmin@{vmin}}
+\index{vmin@{vmin}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}}
+\subsubsection[{\texorpdfstring{vmin}{vmin}}]{\setlength{\rightskip}{0pt plus 5cm}double Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis\+::vmin\mbox{[}{\bf M\+A\+XD}\mbox{]}}\hypertarget{class_incompress___solver___smooth___basis_a0f5db6627058f29c053f3ac6e3fa6a7f}{}\label{class_incompress___solver___smooth___basis_a0f5db6627058f29c053f3ac6e3fa6a7f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+S/i\+Fluid/\hyperlink{i_fluid_8h}{i\+Fluid.\+h}\item 
+D\+N\+S/i\+Fluid/\hyperlink{i_fbasic_8cpp}{i\+Fbasic.\+cpp}\end{DoxyCompactItemize}

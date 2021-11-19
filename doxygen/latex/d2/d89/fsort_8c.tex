@@ -1,0 +1,180 @@
+\hypertarget{fsort_8c}{}\section{D\+N\+S/src/util/fsort.c File Reference}
+\label{fsort_8c}\index{D\+N\+S/src/util/fsort.\+c@{D\+N\+S/src/util/fsort.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$malloc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{fsort_8c_d5/d98/struct___n_a_m_e___l_i_s_t}{\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST}
+\item 
+struct \hyperlink{fsort_8c_da/d50/struct___f_l_i_s_t}{\+\_\+\+F\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{fsort_8c_d5/d98/struct___n_a_m_e___l_i_s_t}{\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST} \hyperlink{fsort_8c_a165fed1250e6820c1efcc81018978c22}{N\+A\+M\+E\+\_\+\+L\+I\+ST}
+\item 
+typedef struct \hyperlink{fsort_8c_da/d50/struct___f_l_i_s_t}{\+\_\+\+F\+L\+I\+ST} \hyperlink{fsort_8c_a29af2a7a5a5d79e551f5c30fc3e8ba00}{F\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fsort_8c_a6c810054d39df7ec88520fcbe8d99340}{in\+\_\+order} (\hyperlink{fsort_8c_a165fed1250e6820c1efcc81018978c22}{N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$, \hyperlink{fsort_8c_a165fed1250e6820c1efcc81018978c22}{N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fsort_8c_ac369d2313fa697f230b53d0e7dd988be}{sort\+\_\+list} (\hyperlink{fsort_8c_a165fed1250e6820c1efcc81018978c22}{N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$$\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fsort_8c_ad70d530c3aff4e5793909b3728b60af6}{swap} (\hyperlink{fsort_8c_a165fed1250e6820c1efcc81018978c22}{N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$$\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$$\ast$$\ast$ \hyperlink{fsort_8c_a564928388cc4fb377e33da1df463ff0f}{sort\+\_\+in\+\_\+files} (int nnames, const char $\ast$$\ast$fnames)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$$\ast$$\ast$ \hyperlink{fsort_8c_a831eeaf10a5e3712d61b715f37fc5ae7}{free\+\_\+infile\+\_\+list} (char $\ast$$\ast$$\ast$\hyperlink{climate_2_c_make_lists_8txt_a30dc08d289bd92b4ef9fcbaeea9460c2}{list})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} F\+I\+LE $\ast$ \hyperlink{fsort_8c_a53949429c10a0ba3391cb48ef60972f4}{Uncompress\+And\+Open\+File} (const char $\ast$fname, const char $\ast$type)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fsort_8c_aeaf724977b9c947777e4a84160d7fc17}{Close\+And\+Clean\+Up\+Tmp\+Files} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fsort_8c_a12a2017262f26d532bbb6227dbd75744}{Close\+And\+Clean\+Up\+All\+Files} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fsort_8c_a29af2a7a5a5d79e551f5c30fc3e8ba00}{F\+L\+I\+ST} $\ast$ \hyperlink{fsort_8c_a92555f2337168e5ebe91a5ddb06bbf0b}{uc\+\_\+head}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST@{\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST}}\label{struct___n_a_m_e___l_i_s_t}
+\hypertarget{fsort_8c_struct___n_a_m_e___l_i_s_t}{}
+\subsubsection{struct \+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST}
+\begin{DoxyFields}{Class Members}
+const char $\ast$\hypertarget{fsort_8c_a85415526ad642ea3ee9127096fd03972}{}\label{fsort_8c_a85415526ad642ea3ee9127096fd03972}
+&
+name&
+\\
+\hline
+
+int\hypertarget{fsort_8c_ae1f14efc56d95d088f3563bb4a5001ea}{}\label{fsort_8c_ae1f14efc56d95d088f3563bb4a5001ea}
+&
+node\+\_\+number&
+\\
+\hline
+
+int\hypertarget{fsort_8c_ae157dab1730adc6e2792cea660c072f9}{}\label{fsort_8c_ae157dab1730adc6e2792cea660c072f9}
+&
+time\+\_\+step&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+F\+L\+I\+ST@{\+\_\+\+F\+L\+I\+ST}}\label{struct___f_l_i_s_t}
+\hypertarget{fsort_8c_struct___f_l_i_s_t}{}
+\subsubsection{struct \+\_\+\+F\+L\+I\+ST}
+\begin{DoxyFields}{Class Members}
+F\+I\+LE $\ast$\hypertarget{fsort_8c_a012d321327a7647b22814ccc9c1cbaf4}{}\label{fsort_8c_a012d321327a7647b22814ccc9c1cbaf4}
+&
+file&
+\\
+\hline
+
+char\hypertarget{fsort_8c_a0743f39e5e3477ce014162b583da1ea5}{}\label{fsort_8c_a0743f39e5e3477ce014162b583da1ea5}
+&
+fname\mbox{[}512\mbox{]}&
+\\
+\hline
+
+struct \hyperlink{fsort_8c_da/d50/struct___f_l_i_s_t}{\+\_\+\+F\+L\+I\+ST} $\ast$\hypertarget{fsort_8c_a77823f275db426095b65550f0b811789}{}\label{fsort_8c_a77823f275db426095b65550f0b811789}
+&
+next&
+\\
+\hline
+
+struct \hyperlink{fsort_8c_da/d50/struct___f_l_i_s_t}{\+\_\+\+F\+L\+I\+ST} $\ast$\hypertarget{fsort_8c_a9ee9707f0a6d93263375dff07bc874a0}{}\label{fsort_8c_a9ee9707f0a6d93263375dff07bc874a0}
+&
+prev&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Typedef Documentation}
+\index{fsort.\+c@{fsort.\+c}!F\+L\+I\+ST@{F\+L\+I\+ST}}
+\index{F\+L\+I\+ST@{F\+L\+I\+ST}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{F\+L\+I\+ST}{FLIST}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+F\+L\+I\+ST} {\bf F\+L\+I\+ST}}\hypertarget{fsort_8c_a29af2a7a5a5d79e551f5c30fc3e8ba00}{}\label{fsort_8c_a29af2a7a5a5d79e551f5c30fc3e8ba00}
+\index{fsort.\+c@{fsort.\+c}!N\+A\+M\+E\+\_\+\+L\+I\+ST@{N\+A\+M\+E\+\_\+\+L\+I\+ST}}
+\index{N\+A\+M\+E\+\_\+\+L\+I\+ST@{N\+A\+M\+E\+\_\+\+L\+I\+ST}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{N\+A\+M\+E\+\_\+\+L\+I\+ST}{NAME_LIST}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+ST} {\bf N\+A\+M\+E\+\_\+\+L\+I\+ST}}\hypertarget{fsort_8c_a165fed1250e6820c1efcc81018978c22}{}\label{fsort_8c_a165fed1250e6820c1efcc81018978c22}
+
+
+\subsection{Function Documentation}
+\index{fsort.\+c@{fsort.\+c}!Close\+And\+Clean\+Up\+All\+Files@{Close\+And\+Clean\+Up\+All\+Files}}
+\index{Close\+And\+Clean\+Up\+All\+Files@{Close\+And\+Clean\+Up\+All\+Files}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{Close\+And\+Clean\+Up\+All\+Files(void)}{CloseAndCleanUpAllFiles(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Close\+And\+Clean\+Up\+All\+Files (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_a12a2017262f26d532bbb6227dbd75744}{}\label{fsort_8c_a12a2017262f26d532bbb6227dbd75744}
+\index{fsort.\+c@{fsort.\+c}!Close\+And\+Clean\+Up\+Tmp\+Files@{Close\+And\+Clean\+Up\+Tmp\+Files}}
+\index{Close\+And\+Clean\+Up\+Tmp\+Files@{Close\+And\+Clean\+Up\+Tmp\+Files}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{Close\+And\+Clean\+Up\+Tmp\+Files(\+F\+I\+L\+E $\ast$file)}{CloseAndCleanUpTmpFiles(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Close\+And\+Clean\+Up\+Tmp\+Files (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_aeaf724977b9c947777e4a84160d7fc17}{}\label{fsort_8c_aeaf724977b9c947777e4a84160d7fc17}
+\index{fsort.\+c@{fsort.\+c}!free\+\_\+infile\+\_\+list@{free\+\_\+infile\+\_\+list}}
+\index{free\+\_\+infile\+\_\+list@{free\+\_\+infile\+\_\+list}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+infile\+\_\+list(char $\ast$$\ast$$\ast$list)}{free_infile_list(char ***list)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$$\ast$$\ast$ free\+\_\+infile\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$$\ast$}]{list}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_a831eeaf10a5e3712d61b715f37fc5ae7}{}\label{fsort_8c_a831eeaf10a5e3712d61b715f37fc5ae7}
+\index{fsort.\+c@{fsort.\+c}!in\+\_\+order@{in\+\_\+order}}
+\index{in\+\_\+order@{in\+\_\+order}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{in\+\_\+order(\+N\+A\+M\+E\+\_\+\+L\+I\+S\+T $\ast$, N\+A\+M\+E\+\_\+\+L\+I\+S\+T $\ast$)}{in_order(NAME_LIST *, NAME_LIST *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int in\+\_\+order (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$}]{f1, }
+\item[{{\bf N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_a6c810054d39df7ec88520fcbe8d99340}{}\label{fsort_8c_a6c810054d39df7ec88520fcbe8d99340}
+\index{fsort.\+c@{fsort.\+c}!sort\+\_\+in\+\_\+files@{sort\+\_\+in\+\_\+files}}
+\index{sort\+\_\+in\+\_\+files@{sort\+\_\+in\+\_\+files}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{sort\+\_\+in\+\_\+files(int nnames, const char $\ast$$\ast$fnames)}{sort_in_files(int nnames, const char **fnames)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$$\ast$$\ast$ sort\+\_\+in\+\_\+files (
+\begin{DoxyParamCaption}
+\item[{int}]{nnames, }
+\item[{const char $\ast$$\ast$}]{fnames}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_a564928388cc4fb377e33da1df463ff0f}{}\label{fsort_8c_a564928388cc4fb377e33da1df463ff0f}
+\index{fsort.\+c@{fsort.\+c}!sort\+\_\+list@{sort\+\_\+list}}
+\index{sort\+\_\+list@{sort\+\_\+list}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{sort\+\_\+list(\+N\+A\+M\+E\+\_\+\+L\+I\+S\+T $\ast$$\ast$, int, int)}{sort_list(NAME_LIST **, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void sort\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$$\ast$}]{files, }
+\item[{int}]{left, }
+\item[{int}]{right}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_ac369d2313fa697f230b53d0e7dd988be}{}\label{fsort_8c_ac369d2313fa697f230b53d0e7dd988be}
+\index{fsort.\+c@{fsort.\+c}!swap@{swap}}
+\index{swap@{swap}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{swap(\+N\+A\+M\+E\+\_\+\+L\+I\+S\+T $\ast$$\ast$, int, int)}{swap(NAME_LIST **, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+A\+M\+E\+\_\+\+L\+I\+ST} $\ast$$\ast$}]{files, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_ad70d530c3aff4e5793909b3728b60af6}{}\label{fsort_8c_ad70d530c3aff4e5793909b3728b60af6}
+\index{fsort.\+c@{fsort.\+c}!Uncompress\+And\+Open\+File@{Uncompress\+And\+Open\+File}}
+\index{Uncompress\+And\+Open\+File@{Uncompress\+And\+Open\+File}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{Uncompress\+And\+Open\+File(const char $\ast$fname, const char $\ast$type)}{UncompressAndOpenFile(const char *fname, const char *type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} F\+I\+LE$\ast$ Uncompress\+And\+Open\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{const char $\ast$}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{fsort_8c_a53949429c10a0ba3391cb48ef60972f4}{}\label{fsort_8c_a53949429c10a0ba3391cb48ef60972f4}
+
+
+\subsection{Variable Documentation}
+\index{fsort.\+c@{fsort.\+c}!uc\+\_\+head@{uc\+\_\+head}}
+\index{uc\+\_\+head@{uc\+\_\+head}!fsort.\+c@{fsort.\+c}}
+\subsubsection[{\texorpdfstring{uc\+\_\+head}{uc_head}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+L\+I\+ST}$\ast$ uc\+\_\+head}\hypertarget{fsort_8c_a92555f2337168e5ebe91a5ddb06bbf0b}{}\label{fsort_8c_a92555f2337168e5ebe91a5ddb06bbf0b}

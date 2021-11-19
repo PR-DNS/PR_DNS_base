@@ -1,0 +1,157 @@
+\hypertarget{imap_8c}{}\section{D\+N\+S/src/intfc/imap.c File Reference}
+\label{imap_8c}\index{D\+N\+S/src/intfc/imap.\+c@{D\+N\+S/src/intfc/imap.\+c}}
+{\ttfamily \#include $<$intfc/int.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{imap_8c_a9e7439cd2cd92de9d011d48b2d223b1f}{curve\+\_\+of\+\_\+boundary\+\_\+hs} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imap_8c_af70040b59ac8c096de1963dfa6116453}{change\+\_\+vertex\+\_\+of\+\_\+tris} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$ \hyperlink{imap_8c_adb7c51ec84c94336195750ec384677d8}{crds\+To\+Point} (double $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$ \hyperlink{imap_8c_a83f1821b9bb1d09d054fece07ff63dd6}{Point\+On\+Curve} (double $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{imap_8c_a64c40466f0e6347503bf411d0f270867}{Point\+On\+Bond} (double $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___c_u_r_v_e_gaf5511b0669f7ce4f454eb2d266327c06}{I\+\_\+\+Move\+Node\+To\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em For closed curve, move the node to the given point. Do nothing if curve is not a closed one or the point is not on curve. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$ \hyperlink{group___c_u_r_v_e_gaa31257a485f0828bb60bfef19eeaec49}{I\+\_\+\+Split\+Curve} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em Split a curve into two curves at the given point pt, return two curves as a pointer array. Return N\+U\+LL if the point is not on the input curve. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_gace258538e7976901cedcbff9bda2bc67}{I\+\_\+\+Smooth\+Surf\+Color} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, int num\+\_\+rounds)
+\begin{DoxyCompactList}\small\item\em A utility function to smooth the color of the surface by averaging the color with neighboring triangles. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$ \hyperlink{group___s_u_r_f_a_c_e_ga495b2ece6a428d98433c026382353773}{I\+\_\+\+Copy\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function return a copy of the input surface on the same interface structure. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$ \hyperlink{group___s_u_r_f_a_c_e_ga6eaa182acdbd072af3d7487eb0117f33}{I\+\_\+\+Add\+Two\+Surfaces} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf1, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf2)
+\begin{DoxyCompactList}\small\item\em This function add tris of surf2 to surf1, delete surf2 and return surf1, no other operations is performed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_ga8d40b24606a741760d312b558d866511}{I\+\_\+\+Shift\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$displacement)
+\begin{DoxyCompactList}\small\item\em This function shift each point of the surface by given displacement. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___i_n_t_e_r_f_a_c_e_gacf18b3cd3e9421df100beaf98ac849a4}{I\+\_\+\+Trans\+Interior\+Intfc\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$disp)
+\begin{DoxyCompactList}\small\item\em This function makes translation of all interior points in the interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_a36cbf1d794cfb5e778de2f79244a1678}{I\+\_\+\+Spherical\+Rotate\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double phi, double theta, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_aceb8c54dac3650b475c7919593c023ea}{I\+\_\+\+Polar\+Rotate\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$center, double phi, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___p_o_i_n_t_ga76b4cb02b314900cb2775015a97f7d75}{I\+\_\+\+Rotate\+Point\+About\+Axis} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, double $\ast$dir, double $\ast$axis, double phi)
+\begin{DoxyCompactList}\small\item\em This function rotate the point about a line as axis. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_a35cee3755e0f2471cb2da66bc3d35230}{I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$center, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_a5d99c0d71ec46c68cb4b29b109e4b26c}{I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$center, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_aed4edccbe87b46ad3a2de71f1cf2219d}{I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, double $\ast$center, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imap_8c_a0dd9c00254f7dc892572a8af7597ecc7}{I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node, double $\ast$center, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga7033e33d9d5ed34627e184aa1a4ca83a}{I\+\_\+\+Num\+Of\+Surf\+Interior\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of interior points on the surface boundary (on curve or node) points are not included. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga2ad484a4da2b2fabdb2257429caec1be}{I\+\_\+\+Num\+Of\+Curve\+Interior\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of interior points on the curve boundary (on node) points are not included. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_gaa81b70b707d4e749bee586d509ca5859}{I\+\_\+\+Fold\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$dir, double $\ast$axis, double \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle}, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\begin{DoxyCompactList}\small\item\em This function fold the surface around the axis described by dir (direction) and axis (a point on the axis) with input angle. Only points on the input side of the axis will be rotated. The function does its job of the surface is flat and axis is a line on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___s_u_r_f_a_c_e_gaa967e7cfef31d8336ccfb657b0d255fa}{I\+\_\+\+Sew\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$crds\+\_\+start, double $\ast$crds\+\_\+end)
+\begin{DoxyCompactList}\small\item\em This function switches the surface along a line segment starting from crds\+\_\+start to crds\+\_\+end. The sewing line must be along existing curves with tolerance, else return NO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{imap.\+c@{imap.\+c}!change\+\_\+vertex\+\_\+of\+\_\+tris@{change\+\_\+vertex\+\_\+of\+\_\+tris}}
+\index{change\+\_\+vertex\+\_\+of\+\_\+tris@{change\+\_\+vertex\+\_\+of\+\_\+tris}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{change\+\_\+vertex\+\_\+of\+\_\+tris(\+P\+O\+I\+N\+T $\ast$, T\+R\+I $\ast$, P\+O\+I\+N\+T $\ast$)}{change_vertex_of_tris(POINT *, TRI *, POINT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void change\+\_\+vertex\+\_\+of\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pnew, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pold}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_af70040b59ac8c096de1963dfa6116453}{}\label{imap_8c_af70040b59ac8c096de1963dfa6116453}
+\index{imap.\+c@{imap.\+c}!crds\+To\+Point@{crds\+To\+Point}}
+\index{crds\+To\+Point@{crds\+To\+Point}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{crds\+To\+Point(double $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$)}{crdsToPoint(double *, BOND *, CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+O\+I\+NT} $\ast$ crds\+To\+Point (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{crds, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_adb7c51ec84c94336195750ec384677d8}{}\label{imap_8c_adb7c51ec84c94336195750ec384677d8}
+\index{imap.\+c@{imap.\+c}!curve\+\_\+of\+\_\+boundary\+\_\+hs@{curve\+\_\+of\+\_\+boundary\+\_\+hs}}
+\index{curve\+\_\+of\+\_\+boundary\+\_\+hs@{curve\+\_\+of\+\_\+boundary\+\_\+hs}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{curve\+\_\+of\+\_\+boundary\+\_\+hs(\+C\+U\+R\+V\+E $\ast$)}{curve_of_boundary_hs(CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} curve\+\_\+of\+\_\+boundary\+\_\+hs (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a9e7439cd2cd92de9d011d48b2d223b1f}{}\label{imap_8c_a9e7439cd2cd92de9d011d48b2d223b1f}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Polar\+Rotate\+Point@{I\+\_\+\+Polar\+Rotate\+Point}}
+\index{I\+\_\+\+Polar\+Rotate\+Point@{I\+\_\+\+Polar\+Rotate\+Point}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Polar\+Rotate\+Point(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double phi, boolean first)}{I_PolarRotatePoint(POINT *p, double *center, double phi, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Polar\+Rotate\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_aceb8c54dac3650b475c7919593c023ea}{}\label{imap_8c_aceb8c54dac3650b475c7919593c023ea}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points}}
+\index{I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points(\+C\+U\+R\+V\+E $\ast$curve, double $\ast$center, double phi, double theta)}{I_SphericalRotateInteriorCurvePoints(CURVE *curve, double *center, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Spherical\+Rotate\+Interior\+Curve\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_aed4edccbe87b46ad3a2de71f1cf2219d}{}\label{imap_8c_aed4edccbe87b46ad3a2de71f1cf2219d}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points}}
+\index{I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$center, double phi, double theta)}{I_SphericalRotateInteriorIntfcPoints(INTERFACE *intfc, double *center, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Spherical\+Rotate\+Interior\+Intfc\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a35cee3755e0f2471cb2da66bc3d35230}{}\label{imap_8c_a35cee3755e0f2471cb2da66bc3d35230}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points}}
+\index{I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points(\+N\+O\+D\+E $\ast$node, double $\ast$center, double phi, double theta)}{I_SphericalRotateInteriorNodePoints(NODE *node, double *center, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Spherical\+Rotate\+Interior\+Node\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a0dd9c00254f7dc892572a8af7597ecc7}{}\label{imap_8c_a0dd9c00254f7dc892572a8af7597ecc7}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points}}
+\index{I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points@{I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$center, double phi, double theta)}{I_SphericalRotateInteriorSurfPoints(SURFACE *surf, double *center, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Spherical\+Rotate\+Interior\+Surf\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a5d99c0d71ec46c68cb4b29b109e4b26c}{}\label{imap_8c_a5d99c0d71ec46c68cb4b29b109e4b26c}
+\index{imap.\+c@{imap.\+c}!I\+\_\+\+Spherical\+Rotate\+Point@{I\+\_\+\+Spherical\+Rotate\+Point}}
+\index{I\+\_\+\+Spherical\+Rotate\+Point@{I\+\_\+\+Spherical\+Rotate\+Point}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Spherical\+Rotate\+Point(\+P\+O\+I\+N\+T $\ast$p, double $\ast$center, double phi, double theta, boolean first)}{I_SphericalRotatePoint(POINT *p, double *center, double phi, double theta, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void I\+\_\+\+Spherical\+Rotate\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a36cbf1d794cfb5e778de2f79244a1678}{}\label{imap_8c_a36cbf1d794cfb5e778de2f79244a1678}
+\index{imap.\+c@{imap.\+c}!Point\+On\+Bond@{Point\+On\+Bond}}
+\index{Point\+On\+Bond@{Point\+On\+Bond}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{Point\+On\+Bond(double $\ast$, B\+O\+N\+D $\ast$)}{PointOnBond(double *, BOND *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} Point\+On\+Bond (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{crds, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a64c40466f0e6347503bf411d0f270867}{}\label{imap_8c_a64c40466f0e6347503bf411d0f270867}
+\index{imap.\+c@{imap.\+c}!Point\+On\+Curve@{Point\+On\+Curve}}
+\index{Point\+On\+Curve@{Point\+On\+Curve}!imap.\+c@{imap.\+c}}
+\subsubsection[{\texorpdfstring{Point\+On\+Curve(double $\ast$, C\+U\+R\+V\+E $\ast$)}{PointOnCurve(double *, CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf B\+O\+ND} $\ast$ Point\+On\+Curve (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{crds, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{imap_8c_a83f1821b9bb1d09d054fece07ff63dd6}{}\label{imap_8c_a83f1821b9bb1d09d054fece07ff63dd6}

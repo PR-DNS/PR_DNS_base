@@ -1,0 +1,200 @@
+\hypertarget{fbdry4_8c}{}\section{D\+N\+S/src/front/fbdry4.c File Reference}
+\label{fbdry4_8c}\index{D\+N\+S/src/front/fbdry4.\+c@{D\+N\+S/src/front/fbdry4.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbdry4_8c_ab0bb4782cd71989829159816fc7efb4e}{dist}(t)  ~\hyperlink{cdecs_8h_a38b33cf49cb08db0d280dc9b3fb3c37c}{sqr}(t$\ast$x21 -\/ x\+\_\+1) + \hyperlink{cdecs_8h_a38b33cf49cb08db0d280dc9b3fb3c37c}{sqr}(t$\ast$y21 -\/ y\+\_\+1)
+\item 
+\#define \hyperlink{fbdry4_8c_a455e4ee7bac9906ccae3e3b68c4e4c12}{E\+P\+S3}~(\hyperlink{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}{E\+P\+S\+I\+L\+ON}$\ast$\hyperlink{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}{E\+P\+S\+I\+L\+ON}$\ast$\hyperlink{geomutils_8c_a3cbbee03879ed6298dcda47989a734d0}{E\+P\+S\+I\+L\+ON})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a9ea412472bd4a5cf818cb710ea7895b5}{is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, double $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a2e56bf6759850b09d3c65d3ee068b7cd}{is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a7384838659fc586013fcaf529c49b23e}{nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fbdry4_8c_ad51d9af120d6933cd67bfc85b57ff512}{nearest\+\_\+bdry\+\_\+like\+\_\+point} (double, double, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double $\ast$, double $\ast$, double $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fbdry4_8c_a2f1ca57115ce43994ea3faedfab916fd}{short\+\_\+dist} (double, double, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$, double $\ast$, double $\ast$, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fbdry4_8c_a3f5cff25e4e0c12df904c2c84881b559}{transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE}, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fbdry4_8c_a048bc4481ba05a2a4eb359053f16f142}{f\+\_\+delete\+\_\+exterior\+\_\+curves} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$old\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_afa037cb87be1206706de37ff40a9f150}{f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a7aa8025a2dd226a1e2f99cf11311ad70}{all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a619786a2614dd54abe5a4c69bda48d24}{all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$old\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_ace03ef9d6c85da4c62f8a2bad5dbbefe}{c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, double hx, double hy)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fbdry4_8c_a68962d1b88f61abb1138d4d1d0bdbc19}{shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$pc, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} pc\+\_\+or, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$bc, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$bc\+\_\+or, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$is\+\_\+cw, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$is\+\_\+cw\+\_\+sub, double $\ast$cw\+\_\+len, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$is\+\_\+cc, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} $\ast$is\+\_\+cc\+\_\+sub, double $\ast$cc\+\_\+len)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fbdry4_8c_ad6f3e3a9057d94431a4a2de927704369}{shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$cp, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$cb\+\_\+in, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{fbdry4_8c_a0bd89a254a351e821c643ead3865ac28}{t\+\_\+last}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{fbdry4.\+c@{fbdry4.\+c}!dist@{dist}}
+\index{dist@{dist}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{dist}{dist}}]{\setlength{\rightskip}{0pt plus 5cm}\#define dist(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~{\bf sqr}(t$\ast$x21 -\/ x\+\_\+1) + {\bf sqr}(t$\ast$y21 -\/ y\+\_\+1)}\hypertarget{fbdry4_8c_ab0bb4782cd71989829159816fc7efb4e}{}\label{fbdry4_8c_ab0bb4782cd71989829159816fc7efb4e}
+\index{fbdry4.\+c@{fbdry4.\+c}!E\+P\+S3@{E\+P\+S3}}
+\index{E\+P\+S3@{E\+P\+S3}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{E\+P\+S3}{EPS3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+P\+S3~({\bf E\+P\+S\+I\+L\+ON}$\ast${\bf E\+P\+S\+I\+L\+ON}$\ast${\bf E\+P\+S\+I\+L\+ON})}\hypertarget{fbdry4_8c_a455e4ee7bac9906ccae3e3b68c4e4c12}{}\label{fbdry4_8c_a455e4ee7bac9906ccae3e3b68c4e4c12}
+
+
+\subsection{Function Documentation}
+\index{fbdry4.\+c@{fbdry4.\+c}!all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like@{all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like}}
+\index{all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like@{all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like(\+C\+U\+R\+V\+E $\ast$c, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$old\+\_\+intfc)}{all_pts_of_c_are_exterior_like(CURVE *c, INTERFACE *old_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} all\+\_\+pts\+\_\+of\+\_\+c\+\_\+are\+\_\+exterior\+\_\+like (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{old\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a619786a2614dd54abe5a4c69bda48d24}{}\label{fbdry4_8c_a619786a2614dd54abe5a4c69bda48d24}
+\index{fbdry4.\+c@{fbdry4.\+c}!all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect@{all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect}}
+\index{all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect@{all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect(\+C\+U\+R\+V\+E $\ast$c, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{all_pts_on_c_are_ext_to_rect(CURVE *c, RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} all\+\_\+pts\+\_\+on\+\_\+c\+\_\+are\+\_\+ext\+\_\+to\+\_\+rect (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a7aa8025a2dd226a1e2f99cf11311ad70}{}\label{fbdry4_8c_a7aa8025a2dd226a1e2f99cf11311ad70}
+\index{fbdry4.\+c@{fbdry4.\+c}!c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves@{c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves}}
+\index{c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves@{c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves(\+C\+U\+R\+V\+E $\ast$c, double hx, double hy)}{c_parallel_to_bdry_like_curves(CURVE *c, double hx, double hy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} c\+\_\+parallel\+\_\+to\+\_\+bdry\+\_\+like\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double}]{hx, }
+\item[{double}]{hy}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_ace03ef9d6c85da4c62f8a2bad5dbbefe}{}\label{fbdry4_8c_ace03ef9d6c85da4c62f8a2bad5dbbefe}
+\index{fbdry4.\+c@{fbdry4.\+c}!f\+\_\+delete\+\_\+exterior\+\_\+curves@{f\+\_\+delete\+\_\+exterior\+\_\+curves}}
+\index{f\+\_\+delete\+\_\+exterior\+\_\+curves@{f\+\_\+delete\+\_\+exterior\+\_\+curves}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+delete\+\_\+exterior\+\_\+curves(\+Front $\ast$fr, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$old\+\_\+intfc)}{f_delete_exterior_curves(Front *fr, INTERFACE *old_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+delete\+\_\+exterior\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{old\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a048bc4481ba05a2a4eb359053f16f142}{}\label{fbdry4_8c_a048bc4481ba05a2a4eb359053f16f142}
+\index{fbdry4.\+c@{fbdry4.\+c}!f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry@{f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry}}
+\index{f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry@{f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry(\+Front $\ast$fr)}{f_delete_phys_remn_on_bdry(Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+delete\+\_\+phys\+\_\+remn\+\_\+on\+\_\+bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_afa037cb87be1206706de37ff40a9f150}{}\label{fbdry4_8c_afa037cb87be1206706de37ff40a9f150}
+delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve(tc); \index{fbdry4.\+c@{fbdry4.\+c}!is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves@{is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves}}
+\index{is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves@{is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves(\+C\+U\+R\+V\+E $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, double $\ast$, boolean $\ast$, boolean $\ast$)}{is_loop_of_bdry_like_curves(CURVE *, ORIENTATION, ANGLE_DIRECTION, double *, boolean *, boolean *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} is\+\_\+loop\+\_\+of\+\_\+bdry\+\_\+like\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{pc, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{double $\ast$}]{len, }
+\item[{{\bf boolean} $\ast$}]{is\+\_\+subd, }
+\item[{{\bf boolean} $\ast$}]{pans}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a9ea412472bd4a5cf818cb710ea7895b5}{}\label{fbdry4_8c_a9ea412472bd4a5cf818cb710ea7895b5}
+\index{fbdry4.\+c@{fbdry4.\+c}!is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve@{is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve}}
+\index{is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve@{is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double, double, double, double)}{is_pt_near_bdry_like_curve(INTERFACE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} is\+\_\+pt\+\_\+near\+\_\+bdry\+\_\+like\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{tolx, }
+\item[{double}]{toly}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a2e56bf6759850b09d3c65d3ee068b7cd}{}\label{fbdry4_8c_a2e56bf6759850b09d3c65d3ee068b7cd}
+\index{fbdry4.\+c@{fbdry4.\+c}!nearest\+\_\+bdry\+\_\+like\+\_\+point@{nearest\+\_\+bdry\+\_\+like\+\_\+point}}
+\index{nearest\+\_\+bdry\+\_\+like\+\_\+point@{nearest\+\_\+bdry\+\_\+like\+\_\+point}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{nearest\+\_\+bdry\+\_\+like\+\_\+point(double, double, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double $\ast$, double $\ast$, double $\ast$, B\+O\+N\+D $\ast$$\ast$, C\+U\+R\+V\+E $\ast$$\ast$)}{nearest_bdry_like_point(double, double, INTERFACE *, double *, double *, double *, BOND **, CURVE **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void nearest\+\_\+bdry\+\_\+like\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{px, }
+\item[{double $\ast$}]{py, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{B, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{C}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_ad51d9af120d6933cd67bfc85b57ff512}{}\label{fbdry4_8c_ad51d9af120d6933cd67bfc85b57ff512}
+\index{fbdry4.\+c@{fbdry4.\+c}!nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path@{nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path}}
+\index{nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path@{nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path(\+C\+U\+R\+V\+E $\ast$)}{nodes_of_c_on_same_bdry_like_path(CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} nodes\+\_\+of\+\_\+c\+\_\+on\+\_\+same\+\_\+bdry\+\_\+like\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a7384838659fc586013fcaf529c49b23e}{}\label{fbdry4_8c_a7384838659fc586013fcaf529c49b23e}
+\index{fbdry4.\+c@{fbdry4.\+c}!shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves@{shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves}}
+\index{shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves@{shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves(\+C\+U\+R\+V\+E $\ast$cp, C\+U\+R\+V\+E $\ast$cb\+\_\+in, Front $\ast$fr)}{shift_c_states_to_bdry_curves(CURVE *cp, CURVE *cb_in, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void shift\+\_\+c\+\_\+states\+\_\+to\+\_\+bdry\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cp, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cb\+\_\+in, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_ad6f3e3a9057d94431a4a2de927704369}{}\label{fbdry4_8c_ad6f3e3a9057d94431a4a2de927704369}
+\index{fbdry4.\+c@{fbdry4.\+c}!short\+\_\+dist@{short\+\_\+dist}}
+\index{short\+\_\+dist@{short\+\_\+dist}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{short\+\_\+dist(double, double, B\+O\+N\+D $\ast$, P\+O\+I\+N\+T $\ast$$\ast$, double $\ast$, double $\ast$, S\+I\+D\+E $\ast$)}{short_dist(double, double, BOND *, POINT **, double *, double *, SIDE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void short\+\_\+dist (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{p, }
+\item[{double $\ast$}]{distance, }
+\item[{double $\ast$}]{norm\+\_\+dist, }
+\item[{{\bf S\+I\+DE} $\ast$}]{side}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a2f1ca57115ce43994ea3faedfab916fd}{}\label{fbdry4_8c_a2f1ca57115ce43994ea3faedfab916fd}
+\index{fbdry4.\+c@{fbdry4.\+c}!shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path@{shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path}}
+\index{shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path@{shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path(\+C\+U\+R\+V\+E $\ast$pc, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N pc\+\_\+or, C\+U\+R\+V\+E $\ast$$\ast$bc, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$bc\+\_\+or, boolean $\ast$is\+\_\+cw, boolean $\ast$is\+\_\+cw\+\_\+sub, double $\ast$cw\+\_\+len, boolean $\ast$is\+\_\+cc, boolean $\ast$is\+\_\+cc\+\_\+sub, double $\ast$cc\+\_\+len)}{shortest_connecting_bdry_like_path(CURVE *pc, ORIENTATION pc_or, CURVE **bc, ORIENTATION *bc_or, boolean *is_cw, boolean *is_cw_sub, double *cw_len, boolean *is_cc, boolean *is_cc_sub, double *cc_len)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} shortest\+\_\+connecting\+\_\+bdry\+\_\+like\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{pc, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{pc\+\_\+or, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{bc, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{bc\+\_\+or, }
+\item[{{\bf boolean} $\ast$}]{is\+\_\+cw, }
+\item[{{\bf boolean} $\ast$}]{is\+\_\+cw\+\_\+sub, }
+\item[{double $\ast$}]{cw\+\_\+len, }
+\item[{{\bf boolean} $\ast$}]{is\+\_\+cc, }
+\item[{{\bf boolean} $\ast$}]{is\+\_\+cc\+\_\+sub, }
+\item[{double $\ast$}]{cc\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a68962d1b88f61abb1138d4d1d0bdbc19}{}\label{fbdry4_8c_a68962d1b88f61abb1138d4d1d0bdbc19}
+\index{fbdry4.\+c@{fbdry4.\+c}!transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb@{transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb}}
+\index{transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb@{transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb(\+C\+U\+R\+V\+E $\ast$, S\+I\+D\+E, C\+U\+R\+V\+E $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, S\+I\+D\+E, Front $\ast$)}{transfer_states_cp_to_cb(CURVE *, SIDE, CURVE *, ORIENTATION, SIDE, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void transfer\+\_\+states\+\_\+cp\+\_\+to\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cp, }
+\item[{{\bf S\+I\+DE}}]{cp\+\_\+side, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cb, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{cb\+\_\+orient, }
+\item[{{\bf S\+I\+DE}}]{cb\+\_\+side, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fbdry4_8c_a3f5cff25e4e0c12df904c2c84881b559}{}\label{fbdry4_8c_a3f5cff25e4e0c12df904c2c84881b559}
+
+
+\subsection{Variable Documentation}
+\index{fbdry4.\+c@{fbdry4.\+c}!t\+\_\+last@{t\+\_\+last}}
+\index{t\+\_\+last@{t\+\_\+last}!fbdry4.\+c@{fbdry4.\+c}}
+\subsubsection[{\texorpdfstring{t\+\_\+last}{t_last}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double t\+\_\+last}\hypertarget{fbdry4_8c_a0bd89a254a351e821c643ead3865ac28}{}\label{fbdry4_8c_a0bd89a254a351e821c643ead3865ac28}

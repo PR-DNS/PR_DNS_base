@@ -1,0 +1,510 @@
+\hypertarget{iprt3d_8c}{}\section{D\+N\+S/src/intfc/iprt3d.c File Reference}
+\label{iprt3d_8c}\index{D\+N\+S/src/intfc/iprt3d.\+c@{D\+N\+S/src/intfc/iprt3d.\+c}}
+{\ttfamily \#include $<$plotdecs.\+h$>$}\\*
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}
+\item 
+struct \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}
+\item 
+struct \hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{iprt3d_8c_ac1f61a7c91df43d3155f4b980804732e}{P\+L\+O\+T\+F\+I\+LE}~\hyperlink{iprt3d_8c_a23ff9034237eb7d98bf0b1d3933c4270}{plotfile}
+\item 
+\#define \hyperlink{iprt3d_8c_a6635bb601ab9f964ee7376d6eb2746f2}{close\+\_\+frame}~\hyperlink{plotdecs_8h_aa2e5e36025884edb53f83db3da7d939e}{erase}()
+\item 
+\#define \hyperlink{iprt3d_8c_aa499b77bfcac7fa3ae80433c4f783484}{is\+\_\+draw\+\_\+point}(a,  sign)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{iprt3d_8c_aa874059540d0e7c7fad414ef4accaa09}{dot\+\_\+prod} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_abedbbb0a5c60c62844e741dfbb4f7837}{common\+\_\+lseg} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE}, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a3bae170f57efe78d20b2f45ab6f5b638}{common\+\_\+point} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, int $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a21bb841a9c4461cdaf2b538895927784}{draw\+\_\+tri} (\hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, int, int, int, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a1a4706bde805adfdb95ebbc28aea0686}{inconsistent\+\_\+sign} (double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a422137248fc912b065355939a86c4da2}{inside\+\_\+tri} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a259b7c9f6936a0cc5dc189f997af6bc0}{intersection} (double, double, double, double, double, double, double, double, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_aba5ced2a6b27c238aebb61819a1b11b5}{lseg\+\_\+before\+\_\+tri} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE}, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a46829ca00c16f02dd8af0977ded5a633}{lseg\+\_\+clip} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$, int $\ast$, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a17c80d90e5b35ab6f9c8b995ceb59651}{out\+\_\+of\+\_\+limit} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE}, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a100028f0ec1767f0479f64fa89a575d5}{point\+\_\+before\+\_\+tri} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a25a9d1058c5ccfb979ee4bf4cc834b20}{project\+\_\+point} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a11bbfafd83384b33d0a7b2f6f92442b7}{reassign\+\_\+lseg\+\_\+end} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a0d219f1b66de3466e671cd53a5c179bc}{same\+\_\+point} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a942549d78c6e4c43ac56dfdc5973bc00}{test\+\_\+and\+\_\+bifurcate} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$, \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI}, \hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a256277057ca2930f182230577af7eaa9}{visible} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_a5df1e086659ca485e3e64d82df1f0e02}{within} (double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a34b09f9051767e609746d0f62836bb7e}{Rotation\+\_\+matrix} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a04f3ec563e13dea6e3f2b88e38695f11}{assign\+\_\+point} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a51b66c5f4aac5ff9d854624c7335f1da}{cross\+\_\+prod} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_ae0957fc6180c6b123deaa13b18905a17}{find\+\_\+proj\+\_\+vector} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_aaf53709339eb5eadd7d670d00ff7cca8}{find\+\_\+window\+\_\+limit} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a13300bcc21ea0eaa015b322956bec803}{init\+\_\+3d\+\_\+graph\+\_\+params} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a02a7d93a50e41c538dbde9412e669e1e}{normalize} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_ad3d343fc09b5e900768e35f258a51f99}{open\+\_\+3d\+\_\+plot\+\_\+file} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a4d87d3be0535c1eee16764a5bc7de437}{process\+\_\+lseg} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE}, int, int, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a2f9976deb8f89fa6faddb326d514d4c3}{project\+\_\+lseg} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_aa30ba4ce33791d31a9c255f52c007c6e}{shift\+\_\+l\+\_\+seg} (\hyperlink{iprt3d_8c_d9/d9c/struct_g_l_i_n_e}{G\+L\+I\+NE} $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a539d3445d5b47347c54c6bcdca319a87}{three\+\_\+\+D\+\_\+pt\+\_\+trans} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_aa742bf079e70aa58a284f3bd45e5319a}{three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans} (void)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{iprt3d_8c_adfc27623b486448376ccef545b6e4814}{vec\+\_\+sub} (\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}, \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iprt3d_8c_a49f43bf9283a4954c51bd99afff77b38}{print\+\_\+c\+\_\+curve} (\hyperlink{int_8h_ab9d318565b50403cc79bb4b317be9337}{C\+\_\+\+C\+U\+R\+VE} $\ast$c\+\_\+curve, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iprt3d_8c_a35277d16c69274197434698fd50a3d43}{print\+\_\+c\+\_\+bond} (\hyperlink{int_8h_a100ad00b96391c34c63e6c5fd27e0857}{C\+\_\+\+B\+O\+ND} $\ast$cb, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iprt3d_8c_a62abe28142b2b7c3a80875df61c4472c}{print\+\_\+c\+\_\+surf} (\hyperlink{int_8h_a7297422be3cfbef5a42a63ae413e607a}{C\+\_\+\+S\+U\+RF} $\ast$cs, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{iprt3d_8c_a5ae81eda8ceea4116a7b696bf222e5bf}{print\+\_\+c\+\_\+surf\+\_\+flag} (\hyperlink{int_8h_a4cd63bb1d7d747158822b800a09923b1}{C\+\_\+\+S\+U\+R\+F\+\_\+\+F\+L\+AG} $\ast$flag)
+\item 
+\hyperlink{cdecs_8h_a0a3ee3d43067d2a2ad22c155985dc533}{L\+I\+B\+\_\+\+L\+O\+C\+AL} void \hyperlink{iprt3d_8c_a1523b16fcd00dada28d5fdce081e3c74}{threed\+\_\+interface\+\_\+plot} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_adf553332a927d16d50aa57cf11e9f3b6}{num\+\_\+tri} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{iprt3d_8c_d3/de2/struct_g_t_r_i}{G\+T\+RI} $\ast$ \hyperlink{iprt3d_8c_abfb7c8121d68bc49d011a194af9ed022}{tri\+\_\+list} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{iprt3d_8c_abe6dc604206d620a0406380de3aef9d0}{HR}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{iprt3d_8c_ad1c4bab32c00212868657599242bdd4e}{dir\+\_\+num} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} F\+I\+LE $\ast$ \hyperlink{iprt3d_8c_a23ff9034237eb7d98bf0b1d3933c4270}{plotfile} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{iprt3d_8c_accf41cc7db1df64f7bf06b1a4ca527a7}{M} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} \hyperlink{iprt3d_8c_a34e43d1ffff285ccbc92810b2f822adc}{VX}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT} \hyperlink{iprt3d_8c_a5baef671b1bcb49f6c7ae7dffa783879}{VY}
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{G\+PT@{G\+PT}}\label{struct_g_p_t}
+\hypertarget{iprt3d_8c_struct_g_p_t}{}
+\subsubsection{struct G\+PT}
+\begin{DoxyFields}{Class Members}
+double\hypertarget{iprt3d_8c_a26a38bbec936d8fc3eebc0062dc40c8a}{}\label{iprt3d_8c_a26a38bbec936d8fc3eebc0062dc40c8a}
+&
+coord\mbox{[}3\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{G\+T\+RI@{G\+T\+RI}}\label{struct_g_t_r_i}
+\hypertarget{iprt3d_8c_struct_g_t_r_i}{}
+\subsubsection{struct G\+T\+RI}
+\begin{DoxyFields}{Class Members}
+\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}\hypertarget{iprt3d_8c_a4a3c2ea4cf97627f5c2d5432261be639}{}\label{iprt3d_8c_a4a3c2ea4cf97627f5c2d5432261be639}
+&
+points\mbox{[}3\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+\index{G\+L\+I\+NE@{G\+L\+I\+NE}}\label{struct_g_l_i_n_e}
+\hypertarget{iprt3d_8c_struct_g_l_i_n_e}{}
+\subsubsection{struct G\+L\+I\+NE}
+\begin{DoxyFields}{Class Members}
+\hyperlink{iprt3d_8c_de/d00/struct_g_p_t}{G\+PT}\hypertarget{iprt3d_8c_a1c171a2aba6a9f6e9d5cf36e970cb746}{}\label{iprt3d_8c_a1c171a2aba6a9f6e9d5cf36e970cb746}
+&
+points\mbox{[}2\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{iprt3d.\+c@{iprt3d.\+c}!close\+\_\+frame@{close\+\_\+frame}}
+\index{close\+\_\+frame@{close\+\_\+frame}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{close\+\_\+frame}{close_frame}}]{\setlength{\rightskip}{0pt plus 5cm}\#define close\+\_\+frame~{\bf erase}()}\hypertarget{iprt3d_8c_a6635bb601ab9f964ee7376d6eb2746f2}{}\label{iprt3d_8c_a6635bb601ab9f964ee7376d6eb2746f2}
+\index{iprt3d.\+c@{iprt3d.\+c}!is\+\_\+draw\+\_\+point@{is\+\_\+draw\+\_\+point}}
+\index{is\+\_\+draw\+\_\+point@{is\+\_\+draw\+\_\+point}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+draw\+\_\+point}{is_draw_point}}]{\setlength{\rightskip}{0pt plus 5cm}\#define is\+\_\+draw\+\_\+point(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{sign}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aa499b77bfcac7fa3ae80433c4f783484}{}\label{iprt3d_8c_aa499b77bfcac7fa3ae80433c4f783484}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((a > 0 && sign > 0) || \(\backslash\)
+    (a < 0 && sign < 0)) ? \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{YES} : \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO})
+\end{DoxyCode}
+\index{iprt3d.\+c@{iprt3d.\+c}!P\+L\+O\+T\+F\+I\+LE@{P\+L\+O\+T\+F\+I\+LE}}
+\index{P\+L\+O\+T\+F\+I\+LE@{P\+L\+O\+T\+F\+I\+LE}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{P\+L\+O\+T\+F\+I\+LE}{PLOTFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+L\+O\+T\+F\+I\+LE~{\bf plotfile}}\hypertarget{iprt3d_8c_ac1f61a7c91df43d3155f4b980804732e}{}\label{iprt3d_8c_ac1f61a7c91df43d3155f4b980804732e}
+
+
+\subsection{Function Documentation}
+\index{iprt3d.\+c@{iprt3d.\+c}!assign\+\_\+point@{assign\+\_\+point}}
+\index{assign\+\_\+point@{assign\+\_\+point}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+point(\+G\+P\+T, G\+P\+T $\ast$)}{assign_point(GPT, GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{p1, }
+\item[{{\bf G\+PT} $\ast$}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a04f3ec563e13dea6e3f2b88e38695f11}{}\label{iprt3d_8c_a04f3ec563e13dea6e3f2b88e38695f11}
+\index{iprt3d.\+c@{iprt3d.\+c}!common\+\_\+lseg@{common\+\_\+lseg}}
+\index{common\+\_\+lseg@{common\+\_\+lseg}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{common\+\_\+lseg(\+G\+L\+I\+N\+E, G\+T\+R\+I, double)}{common_lseg(GLINE, GTRI, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int common\+\_\+lseg (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE}}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_abedbbb0a5c60c62844e741dfbb4f7837}{}\label{iprt3d_8c_abedbbb0a5c60c62844e741dfbb4f7837}
+\index{iprt3d.\+c@{iprt3d.\+c}!common\+\_\+point@{common\+\_\+point}}
+\index{common\+\_\+point@{common\+\_\+point}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{common\+\_\+point(\+G\+L\+I\+N\+E $\ast$, G\+T\+R\+I, int $\ast$, double)}{common_point(GLINE *, GTRI, int *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int common\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{int $\ast$}]{shift, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a3bae170f57efe78d20b2f45ab6f5b638}{}\label{iprt3d_8c_a3bae170f57efe78d20b2f45ab6f5b638}
+\index{iprt3d.\+c@{iprt3d.\+c}!cross\+\_\+prod@{cross\+\_\+prod}}
+\index{cross\+\_\+prod@{cross\+\_\+prod}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{cross\+\_\+prod(\+G\+P\+T, G\+P\+T, G\+P\+T $\ast$)}{cross_prod(GPT, GPT, GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void cross\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{v1, }
+\item[{{\bf G\+PT}}]{v2, }
+\item[{{\bf G\+PT} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a51b66c5f4aac5ff9d854624c7335f1da}{}\label{iprt3d_8c_a51b66c5f4aac5ff9d854624c7335f1da}
+\index{iprt3d.\+c@{iprt3d.\+c}!dot\+\_\+prod@{dot\+\_\+prod}}
+\index{dot\+\_\+prod@{dot\+\_\+prod}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{dot\+\_\+prod(\+G\+P\+T, G\+P\+T)}{dot_prod(GPT, GPT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double dot\+\_\+prod (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{v1, }
+\item[{{\bf G\+PT}}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aa874059540d0e7c7fad414ef4accaa09}{}\label{iprt3d_8c_aa874059540d0e7c7fad414ef4accaa09}
+\index{iprt3d.\+c@{iprt3d.\+c}!draw\+\_\+tri@{draw\+\_\+tri}}
+\index{draw\+\_\+tri@{draw\+\_\+tri}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{draw\+\_\+tri(\+G\+T\+R\+I, int, int, int, double)}{draw_tri(GTRI, int, int, int, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void draw\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{int}]{i\+\_\+tri, }
+\item[{int}]{flag, }
+\item[{int}]{HR, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a21bb841a9c4461cdaf2b538895927784}{}\label{iprt3d_8c_a21bb841a9c4461cdaf2b538895927784}
+\index{iprt3d.\+c@{iprt3d.\+c}!find\+\_\+proj\+\_\+vector@{find\+\_\+proj\+\_\+vector}}
+\index{find\+\_\+proj\+\_\+vector@{find\+\_\+proj\+\_\+vector}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+proj\+\_\+vector(void)}{find_proj_vector(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void find\+\_\+proj\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_ae0957fc6180c6b123deaa13b18905a17}{}\label{iprt3d_8c_ae0957fc6180c6b123deaa13b18905a17}
+\index{iprt3d.\+c@{iprt3d.\+c}!find\+\_\+window\+\_\+limit@{find\+\_\+window\+\_\+limit}}
+\index{find\+\_\+window\+\_\+limit@{find\+\_\+window\+\_\+limit}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+window\+\_\+limit(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, double $\ast$, double $\ast$, double $\ast$, double $\ast$)}{find_window_limit(RECT_GRID *, double *, double *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void find\+\_\+window\+\_\+limit (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid, }
+\item[{double $\ast$}]{xl, }
+\item[{double $\ast$}]{xu, }
+\item[{double $\ast$}]{yl, }
+\item[{double $\ast$}]{yu}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aaf53709339eb5eadd7d670d00ff7cca8}{}\label{iprt3d_8c_aaf53709339eb5eadd7d670d00ff7cca8}
+\index{iprt3d.\+c@{iprt3d.\+c}!inconsistent\+\_\+sign@{inconsistent\+\_\+sign}}
+\index{inconsistent\+\_\+sign@{inconsistent\+\_\+sign}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{inconsistent\+\_\+sign(double, double)}{inconsistent_sign(double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int inconsistent\+\_\+sign (
+\begin{DoxyParamCaption}
+\item[{double}]{x1, }
+\item[{double}]{x2}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a1a4706bde805adfdb95ebbc28aea0686}{}\label{iprt3d_8c_a1a4706bde805adfdb95ebbc28aea0686}
+\index{iprt3d.\+c@{iprt3d.\+c}!init\+\_\+3d\+\_\+graph\+\_\+params@{init\+\_\+3d\+\_\+graph\+\_\+params}}
+\index{init\+\_\+3d\+\_\+graph\+\_\+params@{init\+\_\+3d\+\_\+graph\+\_\+params}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+3d\+\_\+graph\+\_\+params(void)}{init_3d_graph_params(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void init\+\_\+3d\+\_\+graph\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a13300bcc21ea0eaa015b322956bec803}{}\label{iprt3d_8c_a13300bcc21ea0eaa015b322956bec803}
+\index{iprt3d.\+c@{iprt3d.\+c}!inside\+\_\+tri@{inside\+\_\+tri}}
+\index{inside\+\_\+tri@{inside\+\_\+tri}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{inside\+\_\+tri(\+G\+P\+T, G\+T\+R\+I)}{inside_tri(GPT, GTRI)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int inside\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{pt, }
+\item[{{\bf G\+T\+RI}}]{tri}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a422137248fc912b065355939a86c4da2}{}\label{iprt3d_8c_a422137248fc912b065355939a86c4da2}
+\index{iprt3d.\+c@{iprt3d.\+c}!intersection@{intersection}}
+\index{intersection@{intersection}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{intersection(double, double, double, double, double, double, double, double, double $\ast$, double $\ast$)}{intersection(double, double, double, double, double, double, double, double, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int intersection (
+\begin{DoxyParamCaption}
+\item[{double}]{x11, }
+\item[{double}]{x12, }
+\item[{double}]{y11, }
+\item[{double}]{y12, }
+\item[{double}]{x21, }
+\item[{double}]{x22, }
+\item[{double}]{y21, }
+\item[{double}]{y22, }
+\item[{double $\ast$}]{t1, }
+\item[{double $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a259b7c9f6936a0cc5dc189f997af6bc0}{}\label{iprt3d_8c_a259b7c9f6936a0cc5dc189f997af6bc0}
+\index{iprt3d.\+c@{iprt3d.\+c}!lseg\+\_\+before\+\_\+tri@{lseg\+\_\+before\+\_\+tri}}
+\index{lseg\+\_\+before\+\_\+tri@{lseg\+\_\+before\+\_\+tri}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{lseg\+\_\+before\+\_\+tri(\+G\+L\+I\+N\+E, G\+T\+R\+I)}{lseg_before_tri(GLINE, GTRI)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int lseg\+\_\+before\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE}}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aba5ced2a6b27c238aebb61819a1b11b5}{}\label{iprt3d_8c_aba5ced2a6b27c238aebb61819a1b11b5}
+\index{iprt3d.\+c@{iprt3d.\+c}!lseg\+\_\+clip@{lseg\+\_\+clip}}
+\index{lseg\+\_\+clip@{lseg\+\_\+clip}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{lseg\+\_\+clip(\+G\+L\+I\+N\+E $\ast$, int $\ast$, G\+T\+R\+I, double)}{lseg_clip(GLINE *, int *, GTRI, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void lseg\+\_\+clip (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{l\+\_\+seg, }
+\item[{int $\ast$}]{num\+\_\+seg, }
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a46829ca00c16f02dd8af0977ded5a633}{}\label{iprt3d_8c_a46829ca00c16f02dd8af0977ded5a633}
+\index{iprt3d.\+c@{iprt3d.\+c}!normalize@{normalize}}
+\index{normalize@{normalize}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{normalize(\+G\+P\+T $\ast$)}{normalize(GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void normalize (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a02a7d93a50e41c538dbde9412e669e1e}{}\label{iprt3d_8c_a02a7d93a50e41c538dbde9412e669e1e}
+\index{iprt3d.\+c@{iprt3d.\+c}!open\+\_\+3d\+\_\+plot\+\_\+file@{open\+\_\+3d\+\_\+plot\+\_\+file}}
+\index{open\+\_\+3d\+\_\+plot\+\_\+file@{open\+\_\+3d\+\_\+plot\+\_\+file}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{open\+\_\+3d\+\_\+plot\+\_\+file(void)}{open_3d_plot_file(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void open\+\_\+3d\+\_\+plot\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_ad3d343fc09b5e900768e35f258a51f99}{}\label{iprt3d_8c_ad3d343fc09b5e900768e35f258a51f99}
+\index{iprt3d.\+c@{iprt3d.\+c}!out\+\_\+of\+\_\+limit@{out\+\_\+of\+\_\+limit}}
+\index{out\+\_\+of\+\_\+limit@{out\+\_\+of\+\_\+limit}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{out\+\_\+of\+\_\+limit(\+G\+L\+I\+N\+E, G\+T\+R\+I)}{out_of_limit(GLINE, GTRI)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int out\+\_\+of\+\_\+limit (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE}}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a17c80d90e5b35ab6f9c8b995ceb59651}{}\label{iprt3d_8c_a17c80d90e5b35ab6f9c8b995ceb59651}
+\index{iprt3d.\+c@{iprt3d.\+c}!point\+\_\+before\+\_\+tri@{point\+\_\+before\+\_\+tri}}
+\index{point\+\_\+before\+\_\+tri@{point\+\_\+before\+\_\+tri}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{point\+\_\+before\+\_\+tri(\+G\+P\+T, G\+T\+R\+I)}{point_before_tri(GPT, GTRI)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int point\+\_\+before\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{pt, }
+\item[{{\bf G\+T\+RI}}]{tri}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a100028f0ec1767f0479f64fa89a575d5}{}\label{iprt3d_8c_a100028f0ec1767f0479f64fa89a575d5}
+\index{iprt3d.\+c@{iprt3d.\+c}!print\+\_\+c\+\_\+bond@{print\+\_\+c\+\_\+bond}}
+\index{print\+\_\+c\+\_\+bond@{print\+\_\+c\+\_\+bond}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+c\+\_\+bond(\+C\+\_\+\+B\+O\+N\+D $\ast$cb, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{print_c_bond(C_BOND *cb, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+c\+\_\+bond (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+B\+O\+ND} $\ast$}]{cb, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a35277d16c69274197434698fd50a3d43}{}\label{iprt3d_8c_a35277d16c69274197434698fd50a3d43}
+\index{iprt3d.\+c@{iprt3d.\+c}!print\+\_\+c\+\_\+curve@{print\+\_\+c\+\_\+curve}}
+\index{print\+\_\+c\+\_\+curve@{print\+\_\+c\+\_\+curve}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+c\+\_\+curve(\+C\+\_\+\+C\+U\+R\+V\+E $\ast$c\+\_\+curve, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{print_c_curve(C_CURVE *c_curve, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+c\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+C\+U\+R\+VE} $\ast$}]{c\+\_\+curve, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a49f43bf9283a4954c51bd99afff77b38}{}\label{iprt3d_8c_a49f43bf9283a4954c51bd99afff77b38}
+\index{iprt3d.\+c@{iprt3d.\+c}!print\+\_\+c\+\_\+surf@{print\+\_\+c\+\_\+surf}}
+\index{print\+\_\+c\+\_\+surf@{print\+\_\+c\+\_\+surf}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+c\+\_\+surf(\+C\+\_\+\+S\+U\+R\+F $\ast$cs, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{print_c_surf(C_SURF *cs, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+c\+\_\+surf (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+S\+U\+RF} $\ast$}]{cs, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a62abe28142b2b7c3a80875df61c4472c}{}\label{iprt3d_8c_a62abe28142b2b7c3a80875df61c4472c}
+\index{iprt3d.\+c@{iprt3d.\+c}!print\+\_\+c\+\_\+surf\+\_\+flag@{print\+\_\+c\+\_\+surf\+\_\+flag}}
+\index{print\+\_\+c\+\_\+surf\+\_\+flag@{print\+\_\+c\+\_\+surf\+\_\+flag}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+c\+\_\+surf\+\_\+flag(\+C\+\_\+\+S\+U\+R\+F\+\_\+\+F\+L\+A\+G $\ast$flag)}{print_c_surf_flag(C_SURF_FLAG *flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+c\+\_\+surf\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+\_\+\+S\+U\+R\+F\+\_\+\+F\+L\+AG} $\ast$}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a5ae81eda8ceea4116a7b696bf222e5bf}{}\label{iprt3d_8c_a5ae81eda8ceea4116a7b696bf222e5bf}
+\index{iprt3d.\+c@{iprt3d.\+c}!process\+\_\+lseg@{process\+\_\+lseg}}
+\index{process\+\_\+lseg@{process\+\_\+lseg}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{process\+\_\+lseg(\+G\+L\+I\+N\+E, int, int, double)}{process_lseg(GLINE, int, int, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void process\+\_\+lseg (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE}}]{lseg, }
+\item[{int}]{i\+\_\+tri, }
+\item[{int}]{HR, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a4d87d3be0535c1eee16764a5bc7de437}{}\label{iprt3d_8c_a4d87d3be0535c1eee16764a5bc7de437}
+\index{iprt3d.\+c@{iprt3d.\+c}!project\+\_\+lseg@{project\+\_\+lseg}}
+\index{project\+\_\+lseg@{project\+\_\+lseg}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{project\+\_\+lseg(\+G\+L\+I\+N\+E)}{project_lseg(GLINE)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void project\+\_\+lseg (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE}}]{lseg}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a2f9976deb8f89fa6faddb326d514d4c3}{}\label{iprt3d_8c_a2f9976deb8f89fa6faddb326d514d4c3}
+\index{iprt3d.\+c@{iprt3d.\+c}!project\+\_\+point@{project\+\_\+point}}
+\index{project\+\_\+point@{project\+\_\+point}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{project\+\_\+point(\+G\+P\+T, double $\ast$, double $\ast$)}{project_point(GPT, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void project\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{p, }
+\item[{double $\ast$}]{xp, }
+\item[{double $\ast$}]{yp}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a25a9d1058c5ccfb979ee4bf4cc834b20}{}\label{iprt3d_8c_a25a9d1058c5ccfb979ee4bf4cc834b20}
+\index{iprt3d.\+c@{iprt3d.\+c}!reassign\+\_\+lseg\+\_\+end@{reassign\+\_\+lseg\+\_\+end}}
+\index{reassign\+\_\+lseg\+\_\+end@{reassign\+\_\+lseg\+\_\+end}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{reassign\+\_\+lseg\+\_\+end(\+G\+L\+I\+N\+E $\ast$, G\+T\+R\+I, int)}{reassign_lseg_end(GLINE *, GTRI, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reassign\+\_\+lseg\+\_\+end (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{int}]{i\+\_\+in}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a11bbfafd83384b33d0a7b2f6f92442b7}{}\label{iprt3d_8c_a11bbfafd83384b33d0a7b2f6f92442b7}
+\index{iprt3d.\+c@{iprt3d.\+c}!Rotation\+\_\+matrix@{Rotation\+\_\+matrix}}
+\index{Rotation\+\_\+matrix@{Rotation\+\_\+matrix}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{Rotation\+\_\+matrix(void)}{Rotation_matrix(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void Rotation\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a34b09f9051767e609746d0f62836bb7e}{}\label{iprt3d_8c_a34b09f9051767e609746d0f62836bb7e}
+\index{iprt3d.\+c@{iprt3d.\+c}!same\+\_\+point@{same\+\_\+point}}
+\index{same\+\_\+point@{same\+\_\+point}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{same\+\_\+point(\+G\+P\+T, G\+P\+T, double)}{same_point(GPT, GPT, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int same\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{p1, }
+\item[{{\bf G\+PT}}]{p2, }
+\item[{double}]{ls}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a0d219f1b66de3466e671cd53a5c179bc}{}\label{iprt3d_8c_a0d219f1b66de3466e671cd53a5c179bc}
+\index{iprt3d.\+c@{iprt3d.\+c}!shift\+\_\+l\+\_\+seg@{shift\+\_\+l\+\_\+seg}}
+\index{shift\+\_\+l\+\_\+seg@{shift\+\_\+l\+\_\+seg}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{shift\+\_\+l\+\_\+seg(\+G\+L\+I\+N\+E $\ast$, int, int)}{shift_l_seg(GLINE *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void shift\+\_\+l\+\_\+seg (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{l\+\_\+seg, }
+\item[{int}]{i\+\_\+d, }
+\item[{int}]{num\+\_\+seg}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aa30ba4ce33791d31a9c255f52c007c6e}{}\label{iprt3d_8c_aa30ba4ce33791d31a9c255f52c007c6e}
+\index{iprt3d.\+c@{iprt3d.\+c}!test\+\_\+and\+\_\+bifurcate@{test\+\_\+and\+\_\+bifurcate}}
+\index{test\+\_\+and\+\_\+bifurcate@{test\+\_\+and\+\_\+bifurcate}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+and\+\_\+bifurcate(\+G\+L\+I\+N\+E $\ast$, G\+T\+R\+I, G\+L\+I\+N\+E $\ast$)}{test_and_bifurcate(GLINE *, GTRI, GLINE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int test\+\_\+and\+\_\+bifurcate (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{lseg, }
+\item[{{\bf G\+T\+RI}}]{tri, }
+\item[{{\bf G\+L\+I\+NE} $\ast$}]{l\+\_\+b}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a942549d78c6e4c43ac56dfdc5973bc00}{}\label{iprt3d_8c_a942549d78c6e4c43ac56dfdc5973bc00}
+\index{iprt3d.\+c@{iprt3d.\+c}!three\+\_\+\+D\+\_\+pt\+\_\+trans@{three\+\_\+\+D\+\_\+pt\+\_\+trans}}
+\index{three\+\_\+\+D\+\_\+pt\+\_\+trans@{three\+\_\+\+D\+\_\+pt\+\_\+trans}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{three\+\_\+\+D\+\_\+pt\+\_\+trans(\+G\+P\+T, G\+P\+T $\ast$)}{three_D_pt_trans(GPT, GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void three\+\_\+\+D\+\_\+pt\+\_\+trans (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{p, }
+\item[{{\bf G\+PT} $\ast$}]{p\+\_\+t}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a539d3445d5b47347c54c6bcdca319a87}{}\label{iprt3d_8c_a539d3445d5b47347c54c6bcdca319a87}
+\index{iprt3d.\+c@{iprt3d.\+c}!three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans@{three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans}}
+\index{three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans@{three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans(void)}{three_D_tri_list_trans(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void three\+\_\+\+D\+\_\+tri\+\_\+list\+\_\+trans (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_aa742bf079e70aa58a284f3bd45e5319a}{}\label{iprt3d_8c_aa742bf079e70aa58a284f3bd45e5319a}
+\index{iprt3d.\+c@{iprt3d.\+c}!threed\+\_\+interface\+\_\+plot@{threed\+\_\+interface\+\_\+plot}}
+\index{threed\+\_\+interface\+\_\+plot@{threed\+\_\+interface\+\_\+plot}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{threed\+\_\+interface\+\_\+plot(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid)}{threed_interface_plot(INTERFACE *intfc, RECT_GRID *grid)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+\_\+\+L\+O\+C\+AL} void threed\+\_\+interface\+\_\+plot (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a1523b16fcd00dada28d5fdce081e3c74}{}\label{iprt3d_8c_a1523b16fcd00dada28d5fdce081e3c74}
+\index{iprt3d.\+c@{iprt3d.\+c}!vec\+\_\+sub@{vec\+\_\+sub}}
+\index{vec\+\_\+sub@{vec\+\_\+sub}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{vec\+\_\+sub(\+G\+P\+T, G\+P\+T, G\+P\+T $\ast$)}{vec_sub(GPT, GPT, GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void vec\+\_\+sub (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT}}]{v1, }
+\item[{{\bf G\+PT}}]{v2, }
+\item[{{\bf G\+PT} $\ast$}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_adfc27623b486448376ccef545b6e4814}{}\label{iprt3d_8c_adfc27623b486448376ccef545b6e4814}
+\index{iprt3d.\+c@{iprt3d.\+c}!visible@{visible}}
+\index{visible@{visible}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{visible(\+G\+P\+T $\ast$)}{visible(GPT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int visible (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+PT} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a256277057ca2930f182230577af7eaa9}{}\label{iprt3d_8c_a256277057ca2930f182230577af7eaa9}
+\index{iprt3d.\+c@{iprt3d.\+c}!within@{within}}
+\index{within@{within}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{within(double)}{within(double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int within (
+\begin{DoxyParamCaption}
+\item[{double}]{arg}
+\end{DoxyParamCaption}
+)}\hypertarget{iprt3d_8c_a5df1e086659ca485e3e64d82df1f0e02}{}\label{iprt3d_8c_a5df1e086659ca485e3e64d82df1f0e02}
+
+
+\subsection{Variable Documentation}
+\index{iprt3d.\+c@{iprt3d.\+c}!dir\+\_\+num@{dir\+\_\+num}}
+\index{dir\+\_\+num@{dir\+\_\+num}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{dir\+\_\+num}{dir_num}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double dir\+\_\+num\mbox{[}3\mbox{]}}\hypertarget{iprt3d_8c_ad1c4bab32c00212868657599242bdd4e}{}\label{iprt3d_8c_ad1c4bab32c00212868657599242bdd4e}
+\index{iprt3d.\+c@{iprt3d.\+c}!HR@{HR}}
+\index{HR@{HR}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{HR}{HR}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int HR}\hypertarget{iprt3d_8c_abe6dc604206d620a0406380de3aef9d0}{}\label{iprt3d_8c_abe6dc604206d620a0406380de3aef9d0}
+\index{iprt3d.\+c@{iprt3d.\+c}!M@{M}}
+\index{M@{M}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{M}{M}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double M\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}\hypertarget{iprt3d_8c_accf41cc7db1df64f7bf06b1a4ca527a7}{}\label{iprt3d_8c_accf41cc7db1df64f7bf06b1a4ca527a7}
+\index{iprt3d.\+c@{iprt3d.\+c}!num\+\_\+tri@{num\+\_\+tri}}
+\index{num\+\_\+tri@{num\+\_\+tri}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{num\+\_\+tri}{num_tri}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int num\+\_\+tri = 0}\hypertarget{iprt3d_8c_adf553332a927d16d50aa57cf11e9f3b6}{}\label{iprt3d_8c_adf553332a927d16d50aa57cf11e9f3b6}
+\index{iprt3d.\+c@{iprt3d.\+c}!plotfile@{plotfile}}
+\index{plotfile@{plotfile}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{plotfile}{plotfile}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} F\+I\+LE$\ast$ plotfile = N\+U\+LL}\hypertarget{iprt3d_8c_a23ff9034237eb7d98bf0b1d3933c4270}{}\label{iprt3d_8c_a23ff9034237eb7d98bf0b1d3933c4270}
+\index{iprt3d.\+c@{iprt3d.\+c}!tri\+\_\+list@{tri\+\_\+list}}
+\index{tri\+\_\+list@{tri\+\_\+list}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{tri\+\_\+list}{tri_list}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf G\+T\+RI}$\ast$ tri\+\_\+list = N\+U\+LL}\hypertarget{iprt3d_8c_abfb7c8121d68bc49d011a194af9ed022}{}\label{iprt3d_8c_abfb7c8121d68bc49d011a194af9ed022}
+\index{iprt3d.\+c@{iprt3d.\+c}!VX@{VX}}
+\index{VX@{VX}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{VX}{VX}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf G\+PT} VX}\hypertarget{iprt3d_8c_a34e43d1ffff285ccbc92810b2f822adc}{}\label{iprt3d_8c_a34e43d1ffff285ccbc92810b2f822adc}
+\index{iprt3d.\+c@{iprt3d.\+c}!VY@{VY}}
+\index{VY@{VY}!iprt3d.\+c@{iprt3d.\+c}}
+\subsubsection[{\texorpdfstring{VY}{VY}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf G\+PT} VY}\hypertarget{iprt3d_8c_a5baef671b1bcb49f6c7ae7dffa783879}{}\label{iprt3d_8c_a5baef671b1bcb49f6c7ae7dffa783879}

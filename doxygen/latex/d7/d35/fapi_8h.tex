@@ -1,0 +1,781 @@
+\hypertarget{fapi_8h}{}\section{D\+N\+S/src/front/fapi.h File Reference}
+\label{fapi_8h}\index{D\+N\+S/src/front/fapi.\+h@{D\+N\+S/src/front/fapi.\+h}}
+
+
+The \hyperlink{fapi_8h}{fapi.\+h} contains the functions used to operate the interface.  
+
+
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaabc3a4a619100a7f79ccab041e56f13c}{F\+T\+\_\+\+Init} (int argc, char $\ast$$\ast$argv, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Process the command line arguments, set IO handles, and store initialization parameters in f\+\_\+basic, Including read the number of processors, the dimesension of the problem, partition of the computational domain, restart message, the input file and the output directory. -\/d dim -\/p nx \mbox{[}ny\mbox{]} \mbox{[}nz\mbox{]} -\/i input-\/name -\/o output-\/dir-\/name -\/r restart-\/dir-\/name -\/t restart-\/step. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga9f0c9eacbefffd97c78270a99028fcc4}{F\+T\+\_\+\+Read\+Space\+Domain} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Read from input file the computational domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga5691571dfcb374f3bfd1bab6e2185ae5}{F\+T\+\_\+\+Read\+Comparison\+Domain} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Read from input file the comparison domain information of the problem, including the domain limits, computational grid, and the types of the rectangular boundaries. The information is stored in the structure f\+\_\+basic. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga506f3542260db3b0a8ed36d5132835e3}{F\+T\+\_\+\+Start\+Up} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} $\ast$f\+\_\+basic)
+\begin{DoxyCompactList}\small\item\em Initialize front computational grid, interface and function hooks, default function calls, and if restart, read interface from restart directory. Constructor for Front object. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga689d30333f9c5885405c00cd5c19bdec}{F\+T\+\_\+\+Init\+Debug} (char $\ast$inname)
+\begin{DoxyCompactList}\small\item\em Initialize strings for debugging option of the problem, read the input file. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga51d0d72516f4d3312a9cd3e4bfdb3552}{F\+T\+\_\+\+Init\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a3a8db0030cbeafed0ec59f4c151377a5}{L\+E\+V\+E\+L\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$level\+\_\+func\+\_\+pack)
+\begin{DoxyCompactList}\small\item\em Initialize the interface interface curves (2D) and surfaces (3D) using level function and parameters, or in some cases, point set. Install boundary curves (2D) or surfaces (3D). For 2D, the boundary is installed by default. For 3D, the boundary is installed on request. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga2c959dd0460cbcafda590a48e9a75e7a}{F\+T\+\_\+\+Clip\+Intfc\+To\+Subdomain} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Clip the Initial interface of the front to a parallel subdomain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga1a5d78422a8649b43a530adbef947254}{F\+T\+\_\+\+Init\+Velo\+Func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a9726a0c7607082b8d5754acb01ff6008}{V\+E\+L\+O\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$velo\+\_\+func\+\_\+pack)
+\begin{DoxyCompactList}\small\item\em Initialize front velocity function for front point propagation. The velocity function use point and other related structures as input, must also supply parameters needed for the velocity function. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga62f9af5003ddf2150954b97148607186}{F\+T\+\_\+\+Read\+Time\+Control} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Read the time domain and control information from input file, including maximum time, maximum step, restart print interval, movie frame output interval, C\+FL factor, and redistribution step interval. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3858581907803fab14abd2c3addbcfdb}{F\+T\+\_\+\+Reset\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Reset the time to 0.\+0, time step to 0, print interval index to 0, movie interval index to 0. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$ \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaeb9c6b8ce8c744c05f0d4f7a9bbf9c2e}{F\+T\+\_\+\+Create\+Level\+Hyper\+Surfs} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int neg\+\_\+comp, int pos\+\_\+comp, double($\ast$func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, int w\+\_\+type, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function creates a set of hypersurfaces (curves in 2D and surfaces in 3D) using a level function (provided by the caller). The function return the handle for the array of hyper surfaces as (P\+O\+I\+N\+T\+E\+R$\ast$). \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_r_o_p_a_g_a_t_i_o_n_ga0c7f34093dfd543ebd66b2ccff8742cd}{F\+T\+\_\+\+Propagate} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Propagate the Front for one time step. The process includes advancing the front forward by one step to new positions, redistributing new interface mesh and resolving physical and topological bifurcations. The interface in the front is replaced by a new and propagated one and the old one is freed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga378a767ef50a2da96f44719ac4789f71}{F\+T\+\_\+\+Redist\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3d878dcf2802c64619bf0f524e002f61}{F\+T\+\_\+\+Optimize\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. The function will redistribute all curves and surfaces (3D). It will recursively do either 10 times or when nothing to be done. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga8b3cdb7ef9b0e6e8acd1ab613c10d5c4}{F\+T\+\_\+\+Optimize\+Surf\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of a surf mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more triangle to be redistributed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga826694560bce061d09012c44002c3031}{F\+T\+\_\+\+Optimize\+Curve\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of a curve mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more bond to be redistributed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga21cd4b5d3a9f3a6d36b028c998804291}{F\+T\+\_\+\+Set\+Curve\+Spacing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double scaled\+\_\+spacing)
+\begin{DoxyCompactList}\small\item\em This function set the optimal spacing for curve redistribution. The scaled spacing is in the unit of regular grid spacing h. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3c10b62e5748339743fd4f685ab8be17}{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of curve. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_ga09741004fb2b7edfeb175a53c99c9b0a}{F\+T\+\_\+\+Set\+Time\+Step} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Calculate front-\/$>$dt for next time step using the recorded maximum speed from previous time step, it step is reduced by a C\+FL factor to to ensure numerical stability. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga3ca82d7da0f0c28cada6f5d7abf30930}{F\+T\+\_\+\+Set\+Output\+Counter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function is used in restart to set the printing index and movie output index to appropiate number according to the restart time. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_gadd79a047c81eb97b79756e6798bde8e3}{F\+T\+\_\+\+Time\+Control\+Filter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em To further reduce time step if the printing or movie output time is smaller than the time after next time step. Increment priting or/and movie output index if either of both of them are met. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_gaaa75f808bfc48b58cef67f5db0e63b20}{F\+T\+\_\+\+Is\+Save\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for printing restart files. returns Y\+ES to indicate that restart file should be generated. This function does not write the output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_gaefbf5f750cbf1d02b7e1e15fb76954e9}{F\+T\+\_\+\+Is\+Movie\+Frame\+Time} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for output of a movie frame. returns Y\+ES to indicate that a movie frame should be generated. This function does not write the movie frame. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___t_i_m_e_ga869ebe5c3c2fbd15767e266febe88e46}{F\+T\+\_\+\+Time\+Limit\+Reached} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Signals that time is reached for termination of the run. Return Y\+ES either maximum time has been reached or maximum time step has been reached. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___t_i_m_e_ga9f007ed6e3de95b1e56c8f925b740a0c}{F\+T\+\_\+\+Record\+Max\+Front\+Speed} (int dir, double speed, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, double $\ast$coords, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function compare and record maximum speed of the front. The recorded speed will be used to determine the time step which must satisfy the C\+FL condition. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_r_o_p_a_g_a_t_i_o_n_ga51834b9206a288347040fe15e719e295}{F\+T\+\_\+\+Add\+Time\+Step\+To\+Counter} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Add front-\/$>$dt to front-\/$>$time after propagation. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_gafd7ac13ea02e0f3844ebcb1a9efc60c0}{F\+T\+\_\+\+Save} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{testfront_8c_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name})
+\begin{DoxyCompactList}\small\item\em Output front geometric data to the directory of out\+\_\+name. The data can be used for restart of the run. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_gad32bc73d7f3427bc42db9a86a7fad142}{F\+T\+\_\+\+Add\+Movie\+Frame} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{testfront_8c_ad6f54b1083a26246f3aa355cff73fa2c}{out\+\_\+name}, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{i_fluid_8cpp_a95d2bcffcf88447457ccd073a80718c1}{binary})
+\begin{DoxyCompactList}\small\item\em Output a movie frame, currently includes GD, hdf, vtk formats. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_u_t_p_u_t_ga4eb501b23f143596c39ede7060bb06db}{F\+T\+\_\+\+Xgraph\+Sample\+Line} (char $\ast$dirname, char $\ast$varname, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} data\+\_\+in\+\_\+domain, int size, double $\ast$x, double $\ast$var)
+\begin{DoxyCompactList}\small\item\em This function output variable sample along a grid line as xgraph data file. It considers parallelization of subdomains. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{F\+T\+\_\+\+Make\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Make a duplicate interface whose topological grid is the expanded dual grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga03dfa34f5478d732b91a297188a6bfb5}{F\+T\+\_\+\+Free\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space of grid crossing interface made by the function \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2bac4ec588ff38cb9ac1abba111146c9}{F\+T\+\_\+\+Make\+Grid\+Intfc()}. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga70d43787e4dee696c039d4286a904c5c}{F\+T\+\_\+\+Make\+Comp\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Make a duplicate interface whose topological grid is the expanded comp grid, currently with buffer of 4h for P\+E\+R\+I\+O\+D\+IC and S\+U\+B\+D\+O\+M\+A\+IN boundary, 1h for other boundaries. Install crossings of the interface and the expanded dual grid and store them in the interface table. These crossings can be used to interact with various P\+DE solvers. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a8526385a3c72b003d380258fb8f2456e}{F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_gaff71f10a5ea191217f1fa302e8c14224}{F\+T\+\_\+\+Free\+Old\+Grid\+Intfc} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space of grid crossing interface of front-\/$>$old\+\_\+grid\+\_\+intfc. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_gae8a4043d1a692d4650b0e70e08c481fa}{F\+T\+\_\+\+Free\+Front} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em Delete and free space occupied by the front including grid\+\_\+intfc if still there, and interf. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_gaf48a7313099d778293353fdc04359f2b}{F\+T\+\_\+\+Normal\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, double $\ast$nor, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\begin{DoxyCompactList}\small\item\em Standing at grid icoords, looking to the direction dir, this function looks for the nearest interface cross on the grid line segment. The function returns Y\+ES if the crossing exists, in such case, the crossing coordinates are copied to crx\+\_\+coords, the corresponding hyper surface (curce in 2D and surface in 3D) is assigned to hs, and the normal vector to the side of comp. If no crossing exists, the function return NO;. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fapi_8h_af47bffaaaad229f567f99a8fa11c0850}{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fapi_8h_a2679a9cdf5cc8d42a889bbde7a8880a6}{F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, double($\ast$state\+\_\+func)(\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}), double $\ast$ans, double $\ast$crx\+\_\+coords)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga99a4412d35cf4e8ba70f40ee8e021213}{F\+T\+\_\+\+Hyper\+Surf\+At\+Grid\+Crossing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Sitting at icoords and look to the direction dir, this function detects the nearest hyper surface (curve in 2D and surface in 3D) on the grid segment. Return pointer to hyper surface if there is one, return N\+U\+LL if no crossing hyper surface is found. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_ga4a0e84e0bbe322e0344144904b2d971b}{F\+T\+\_\+\+Intrp\+State\+Var\+At\+Coords} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double $\ast$ans, double $\ast$default\+\_\+ans)
+\begin{DoxyCompactList}\small\item\em Interpolate a state variable at a space point with coords. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_gaf8502ad50741cbb47b859d2a74421e4b}{F\+T\+\_\+\+Comp\+Grid\+Intrp\+State\+Var\+At\+Coords} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, double($\ast$state\+\_\+func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double $\ast$ans, double $\ast$default\+\_\+ans)
+\begin{DoxyCompactList}\small\item\em Interpolate a state variable at a space point with coords on computational grid. If comp == N\+O\+\_\+\+C\+O\+MP, it interpolates with no regard of interface. Otherwise it will interpolate in the subdomain of comp. The state\+\_\+func() is needed to tell the function how to retrieve the variable from the interface state. The interpolated variable is assigned in ans. Return Y\+ES if the interpolation is successful. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_r_i_d_i_n_t_f_c_ga2d9baf36c34acc36c027840cbbf80370}{F\+T\+\_\+\+Nearest\+Rect\+Grid\+Var\+In\+Range} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, double $\ast$var\+\_\+array, int range, double $\ast$ans)
+\begin{DoxyCompactList}\small\item\em Find the state variable on rectangular grid point which has the same component as the input and is nearest to the input coordinate. Return Y\+ES if such point is found, and NO if no such point is found. In the latter case, the value of the ans is set to zero. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fapi_8h_a9fdd2c7f159824ac9174a4c57cde6fd1}{F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int comp, double $\ast$coords, \hyperlink{int_8h_a53a78098f0847c37c09b2fa46cc16487}{U\+S\+E\+\_\+\+B\+O\+U\+N\+D\+A\+R\+I\+ES} bdry, double $\ast$intfc\+\_\+point, double $\ast$t, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, int range)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_e_o_m_e_t_r_y_ga062c15ef32cddf4e3afb55253a3b8cd1}{F\+T\+\_\+\+Normal\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$\hyperlink{fuserhooks_8c_a92beb80674cd0d86b6bcad12c062da8f}{normal}, int comp)
+\begin{DoxyCompactList}\small\item\em Get the normal vector at the point p. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_e_o_m_e_t_r_y_ga2a51e60553765389dc0450e69262c6e5}{F\+T\+\_\+\+Curvature\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$curvature)
+\begin{DoxyCompactList}\small\item\em Get the curvature at the point p. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{group___g_e_o_m_e_t_r_y_gaf8d4ea1b2375af651d0e98da238eb418}{F\+T\+\_\+\+Grid\+Size\+In\+Dir} (double $\ast$dir, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em The grid size in direction dir is (dir dot h). If h are the same in all directions (square mesh), it returns the h. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{fdecs_8h_a12a7b755de9f809f15bb18c3212eee18}{Nor\+\_\+stencil} $\ast$ \hyperlink{group___g_e_o_m_e_t_r_y_ga2154d670e36c43759fa37724a3890d96}{F\+T\+\_\+\+Create\+Normal\+Stencil} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, int comp, int num\+\_\+pts)
+\begin{DoxyCompactList}\small\item\em This function create a normal stencil at the interface point p with size (number of points) num\+\_\+pts. The normal stencil in in the ambient with component comp. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_e_o_m_e_t_r_y_ga7845d20e529f916b591757eba62672f8}{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$coords, int comp, double $\ast$coords\+\_\+bdry, double $\ast$coords\+\_\+ref, double $\ast$\hyperlink{fuserhooks_8c_a92beb80674cd0d86b6bcad12c062da8f}{normal})
+\begin{DoxyCompactList}\small\item\em Given the coordinates coords, this function find the reflected coordinates coordsrefl through the hypersurface hs, it also provide the normal vector nor at the reflection. Return NO if conditions not satisfied. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga04f16e2a6047664dfea1d69701676476}{F\+T\+\_\+\+Set\+Dirichlet\+Boundary} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), const char $\ast$state\+\_\+func\+\_\+name, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state\+\_\+func\+\_\+params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\begin{DoxyCompactList}\small\item\em This function sets state of a Dirichlet boundary as a hyper surface. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga060be793f512f0fa0217c9fed9484eba}{F\+T\+\_\+\+Insert\+Dirichlet\+Boundary} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, void($\ast$state\+\_\+func)(double $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), const char $\ast$state\+\_\+func\+\_\+name, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state\+\_\+func\+\_\+params, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, int index)
+\begin{DoxyCompactList}\small\item\em This function insert state to a Dirichlet boundary. The six (four for 2D) sides of the boundary memory has been allocated, this function fills in the content of the boundary state. It provide two methods to set the boundary\+: (a) set the boundary with a constant state, in this case, the address of the state as a pointer must be supplied as a pointer while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be set to N\+U\+LL; (b) set the boundary state through a state function, in this case, state must be set to N\+U\+LL while state\+\_\+func, state\+\_\+func\+\_\+name and state\+\_\+func\+\_\+params must be supplied. Currently only flow-\/through and time-\/dependent functions are available. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$ \hyperlink{group___b_o_u_n_d_a_r_y_gaf54c91ffe6263b6da327ef983043a4f8}{F\+T\+\_\+\+Mixed\+Boundary\+Hyp\+Surfs} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int idir, int nb, int w\+\_\+type, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function returns a set of hyper surfaces (curves in 2D and surfaces in 3D) whose wave type matches the input w\+\_\+type. If the boundary on idir and side nb is not M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY, the function returns N\+U\+LL. Otherwise it will return an array of hyper surfaces. The function also assign num\+\_\+hs, the total number of hyper surfaces in the returned set. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___b_o_u_n_d_a_r_y_ga7e6e2321cddf21da04485200e47087e3}{F\+T\+\_\+\+Prompt\+Set\+Mixed\+Type\+Boundary2d} (char $\ast$\hyperlink{testfront_8c_aade3fd761de40ee7c68bcad6339774cc}{in\+\_\+name}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function sets the node types and curve wave types of nodes and curves at the M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+U\+N\+D\+A\+RY side(s). This function is only for 2D. It will prompt and set nodes in ascending order and then curves between the node pairs. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga4d9374ec9ecc9610a746e12284b4bd42}{F\+T\+\_\+\+Dimension} ()
+\begin{DoxyCompactList}\small\item\em This function returns the spatial dimension of current run. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga1d60b2b7c1875fd799717fdee8ab42ee}{F\+T\+\_\+\+Rect\+Boundary\+Type} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function returns rectangular boundary type in direction dir and side side. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$ \hyperlink{group___q_u_e_r_y_ga448da7f0f1046c2719bde3e7bbd8789a}{F\+T\+\_\+\+Rect\+Boundary\+Hyp\+Surf} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type}, int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function looks for a boundary hyper surface (curve in 2D and surface in 3D) at the rectangular domain border with the given wave type of the hyper surface in direction dir and side side. Returns N\+U\+LL if no match is found and return pointer to the hyper surface if found. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$ \hyperlink{group___q_u_e_r_y_ga284615aa684afaf4edc86afab5d0ac3d}{F\+T\+\_\+\+Interior\+Hyp\+Surfs} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, int \hyperlink{fuserint_8h_aff856283a1093533d99780203d6d3e65}{wave\+\_\+type}, int $\ast$num\+\_\+hs)
+\begin{DoxyCompactList}\small\item\em This function looks for interior hyper surfaces (curve in 2D and surface in 3D) with the given wave type. Returns N\+U\+LL if no match is found and return pointer to an array of hyper surfaces if found. This function allocates the memory for the array of pointers to hyper surfaces. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga4f56672571ef59cb0be35967c460be8e}{F\+T\+\_\+\+Array\+Of\+Intfc\+Curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves in the intfc to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga2039349c92878e260d0d3232d0c24203}{F\+T\+\_\+\+Array\+Of\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$point\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of points on the curve to an array (already allocated with memory) point\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga6ee0e1dbcfc9a442dbb0e1fee99b4fae}{F\+T\+\_\+\+Num\+Of\+Node\+Curves} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\begin{DoxyCompactList}\small\item\em This function count number of curves attached to the node, including both in-\/curves and out curves. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaee7090b7b79ea5badcbba83f48c22666}{F\+T\+\_\+\+Num\+Of\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the curve including its nodes (closed node may be counted twice). \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gad43f164dc90250d6ac6c8536db801601}{F\+T\+\_\+\+Num\+Of\+Surf\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gae3903407c883aae3f4d9d881d0c685cc}{F\+T\+\_\+\+Num\+Of\+Intfc\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of point on the entire interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gad039b582da0a979747a806715aabcf15}{F\+T\+\_\+\+Num\+Of\+Intfc\+Nodes} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of node on the entire interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga7123212fc81e8409b178e53d0941a946}{F\+T\+\_\+\+Num\+Of\+Curve\+Bonds} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function count number of bond on a curve of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaae259bd9072e278989500c3eee87ba1c}{F\+T\+\_\+\+Num\+Of\+Intfc\+Bonds} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of bond on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gabb18997c449c383f0dbfa17e80159746}{F\+T\+\_\+\+Num\+Of\+Intfc\+Curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of curves on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga80e89d9000938aa938c80df2bfb608c6}{F\+T\+\_\+\+Num\+Of\+Intfc\+Surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of surfaces on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gab8fa81018080f61d1242431b5abe1e10}{F\+T\+\_\+\+Num\+Of\+Intfc\+Tris} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\begin{DoxyCompactList}\small\item\em This function count number of triangles on the entire interface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_gaedec9f2bbc41428ca15ddee32caf6891}{F\+T\+\_\+\+Num\+Of\+Surf\+Tris} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count number of triangles on the surface of the front. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_gadca1d64d064d0eb9f7cc41b67b950839}{F\+T\+\_\+\+Array\+Of\+Node\+Curves} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves on the node to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga63660f62a81443ac9dbd5976771b278b}{F\+T\+\_\+\+Array\+Of\+Curve\+Bonds} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$bond\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of bonds on the curve to an array (already allocated with memory) bond\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_gaa471f7452622a683f1e56d7e668b4196}{F\+T\+\_\+\+Array\+Of\+Surf\+Points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$point\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of points on the surface to an array (already allocated with memory) point\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___q_u_e_r_y_ga9ac9d06b332226a1c6f88a836801f38b}{F\+T\+\_\+\+Array\+Of\+Surf\+Curves} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve\+\_\+array)
+\begin{DoxyCompactList}\small\item\em This function put all the handles (pointers) of curves on the surface to an array (already allocated with memory) curve\+\_\+array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga50d1723179238b2a05ebea5d97ce19dc}{F\+T\+\_\+\+Num\+Of\+Surf\+Curves} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function count and return number of curves on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga9621e2519f36c3f27a8dcb3948f54f2f}{F\+T\+\_\+\+First\+Ring\+Tris\+Around\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$$\ast$tris)
+\begin{DoxyCompactList}\small\item\em This function searches for triangles in the first ring around the input point p, and return the number of tris in the first ring. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{group___q_u_e_r_y_ga82b5fdcda4ce961541d5675b4bbd9e19}{F\+T\+\_\+\+Curve\+Of\+Point} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$\hyperlink{triangle_8c_a1479cb0d7d80d051fa683ce4e5cdacc9}{bond})
+\begin{DoxyCompactList}\small\item\em This function looks for the curve on which the point is located. If found, it will return the handle (pointer) of the curve, otherwise it will return N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$ \hyperlink{group___q_u_e_r_y_gaadc19788c0b2abe61e6645c4333223e0}{F\+T\+\_\+\+Node\+Of\+Point} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point})
+\begin{DoxyCompactList}\small\item\em This function looks for the node on which the point is located. If found, it will return the handle (pointer) of the node, otherwise it will return N\+U\+LL. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_gac19fe575c3db8061a68071d9c0f36196}{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This is a root level parallel communication function for front interface geometry and states. It will cut the old buffer parts of the interface and patch it with new parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_gaa042f0a83036a09217d911c2c4b9f33b}{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer} (double $\ast$grid\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$symmetry)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for a double array on the expanded dual grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga59349c20bb1702967ded6600787ce63e}{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer} (double $\ast$grid\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$symmetry)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for a double array on the expanded comp grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga5e302e94034858bbc5e3925afb2e1cb2}{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$lbuf, int $\ast$ubuf, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ijk\+\_\+to\+\_\+I)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for the cell index on the expanded dual grid of the grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga2efb6c1cae43876327c0f8dfc35c4839}{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$lbuf, int $\ast$ubuf, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ijk\+\_\+to\+\_\+I)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for the dual cell index on the expanded comp grid of the comp\+\_\+grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___f_i_e_l_d_ga01d421aa00940cf885ed1c7d0f4f5701}{F\+T\+\_\+\+Get\+States\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$sl, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$sr)
+\begin{DoxyCompactList}\small\item\em This function retrieves the left and right states at a point. Since a point can be shared by different entities, the associated hyper surface element (bond in 2D and tri in 3D) and hyper surface (curve in 2D and surface in 3D) must be provided as input. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga888f56a3301f51e6aac40f551baeb4be}{F\+T\+\_\+\+Scalar\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a scalar. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga570eae212fd06f81b13cba40afab4f13}{F\+T\+\_\+\+Vector\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a vector. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gaf212e9156877eb00239c77ce67a1a605}{F\+T\+\_\+\+Matrix\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a matrix. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gabe5793d460243dc938707cee6c3240ee}{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a tri-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gacae5a3f530c605b817da658e8125d349}{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a quad-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga7d1eb9f91240b404f71aa5330a10db67}{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int n5, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a quin-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gaead680b732b97af8f9f87f68ce6a5a12}{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int n5, int n6, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a sex-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga679e45f3721591450a189f73b5da582f}{F\+T\+\_\+\+Set\+Global\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This function set global index for all point in the interface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga66158bee772523da70a72319d21ce78b}{F\+T\+\_\+\+Free\+These} (int n,...)
+\begin{DoxyCompactList}\small\item\em This function free memory of items allocated by F\+T\+\_\+...Memory\+Alloc() functions. The number of arguments is flexible, but needs to equal to the input integer n. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fapi_8h_a4d15ab28942a5c4a5f167a1629d93df5}{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, int comp, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$state, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$hse, double $\ast$crx\+\_\+coords)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{group___g_r_i_d_i_n_t_f_c_ga13c00f63b4a54734de6eae4efae45bda}{F\+T\+\_\+\+Compute\+Total\+Volume\+Fraction} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+vol)
+\begin{DoxyCompactList}\small\item\em This function compute the total volume fraction associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It returns the total volume fraction as a double precision value. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_r_i_d_i_n_t_f_c_ga84f55d47301bbcca08ccdd5706e6f286}{F\+T\+\_\+\+Compute\+Grid\+Volume\+Fraction} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp\+\_\+of\+\_\+vol, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$grid\+\_\+vol\+\_\+frac)
+\begin{DoxyCompactList}\small\item\em This function compute the volume fraction on the expanded dual grid associated the comp\+\_\+of\+\_\+vol based on crossing in front-\/$>$grid\+\_\+intfc. It passes the address of the grid volume fraction to the pointer grid\+\_\+vol\+\_\+frac. In 2D, it is a double$\ast$$\ast$, in 3D it is double$\ast$$\ast$$\ast$. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga476f95e9ffd195223a1aa5220ed601c2}{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$bs, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$be, int nb, double seg\+\_\+length, \hyperlink{fuserint_8h_a629ef72c8f466d71aac232a468417f65}{R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\begin{DoxyCompactList}\small\item\em This function set curve to constrained length (seg\+\_\+length), starting from the bond bs and end at bond be, with total of nb bonds. The cutting direction is the input dir. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{fapi_8h_aaa25d0220a1a1821e0069a8747da39bc}{F\+T\+\_\+\+Make\+Point\+Array\+Curve} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int num\+\_\+points, double $\ast$$\ast$point\+\_\+array, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{int_8h_a6b34654f52a3095e160399255f71f328}{is\+\_\+closed\+\_\+curve}, int w\+\_\+type)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a6b845d733ed98b219d4198a231613f0f}{F\+T\+\_\+\+Make\+Elliptic\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double $\ast$radius, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, int refinement\+\_\+level, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts an elliptic surface into the front with given information of center, radii, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a7bf56c5fa85ab3581898a7eccc66d04d}{F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double x0, double x1, double y0, double z0, double R, double r, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a dumbbell surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a08059891e7cebf0a930646fc756e47b2}{F\+T\+\_\+\+Make\+Projectile\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double R, double r, double h, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a projectile surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a24736da558e60ebf875e5a1a18ac62cc}{F\+T\+\_\+\+Rotate\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$center, double phi, double theta)
+\begin{DoxyCompactList}\small\item\em This function rorate surface with azimuthal angle theta and polar angle phi about the given center. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a8e4da687fb3289c1ca6de8b4cba6a00d}{F\+T\+\_\+\+Make\+Cuboid\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double $\ast$\hyperlink{triangle_8c_d3/d3a/structedge}{edge}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a cuboid surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a9cbdd61c5bea13075191c3b7ff2426dd}{F\+T\+\_\+\+Make\+Cylinder\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double radius, double height, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a cylinder surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a27f72ccf4820423173ed7bcc0a6f835e}{F\+T\+\_\+\+Make\+Cone\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double slope, double height, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a cone surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a6237e8c208063fd3a3a24039def4edfc}{F\+T\+\_\+\+Make\+Tetrahedron\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double radius, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a tetrahedron surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_aaca18050cae2258c81a5d62c2e1ca862}{F\+T\+\_\+\+Make\+Plane\+Surf} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$plane\+\_\+nor, double $\ast$plane\+\_\+pt, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} reset\+\_\+bdry\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function inserts a plane surface into the front with given information of its parameters, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a35e53ff8e87c8f96ba5f0355a24e430f}{F\+T\+\_\+\+Install\+Surf\+Edge} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, int \hyperlink{fuserint_8h_a1c035186310574c16da0fc197d864735}{hsbdry\+\_\+type})
+\begin{DoxyCompactList}\small\item\em This function install a curve at the surface boundary. The boundary of the surface should contain triangles with N\+U\+LL side. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a5148db589cadcdca28d62fd31e37ac36}{F\+T\+\_\+\+Cut\+Surf\+Bdry} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} constr\+\_\+func(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$$\ast$insert\+\_\+coords, int num\+\_\+pts, int insert\+\_\+idir)
+\begin{DoxyCompactList}\small\item\em This function cut surface at the boundary defined by the constrain function. It first insert significant corner points to make sure it cuts the surface accurately. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a7cfc9af10b00223d1bf65cab5aab5dd8}{F\+T\+\_\+\+Make\+Elliptic\+Curve} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$center, double $\ast$radius, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} neg\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} pos\+\_\+comp, int w\+\_\+type, int refinement\+\_\+level, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curve)
+\begin{DoxyCompactList}\small\item\em This function inserts an elliptic curve into the front with given information of center, radii, components, and wave type. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_f_o_gaf747478cd8163dd8774aeb5fd9916d6c}{F\+T\+\_\+\+Print\+Wave\+Type} (int w\+\_\+type)
+\begin{DoxyCompactList}\small\item\em This function print wave type as a string. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_f_o_gac8b1c6800c50ddeeb60ce53cba1e327d}{F\+T\+\_\+\+Print\+Boundary\+Type} (int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function print boundary type as a string. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} int \hyperlink{group___q_u_e_r_y_ga86e03a92306e9bed251fdefaa2c8f318}{F\+T\+\_\+\+Boundary\+Type} (int dir, int side)
+\begin{DoxyCompactList}\small\item\em This function return boundary type as an enumerated. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_gaa9ec67adaee0fd0b4498e0d0d2a36b40}{F\+T\+\_\+\+Grid\+Intfc\+TopL} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return lower bounds of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga906dd1fc0f6fcadadaea6f3950f0f642}{F\+T\+\_\+\+Grid\+Intfc\+TopU} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return upper bounds of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga7df01fa187bfed7f240c6883b356018c}{F\+T\+\_\+\+Grid\+Intfc\+Toph} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return grid spacing of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_gae5ea92169c297b2b18f4db76d2fd9729}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Comp} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return components of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga8fd41d6d6171f1266b0381c6568ab884}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Gmax} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return mesh sizes of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$ \hyperlink{group___g_r_i_d_i_n_t_f_c_ga6641e0a8a541513cdeb5cbd25a88a147}{F\+T\+\_\+\+Grid\+Intfc\+Top\+Grid} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\begin{DoxyCompactList}\small\item\em This function return grid structure of grid domain. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_a03b4dc86a41b3cd440632c03b7a3218d}{F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} preset\+\_\+bound, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} untracked, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} obst\+\_\+comp, const char $\ast$var\+\_\+name, int idir, double $\ast$var\+\_\+field, double($\ast$get\+State\+Func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), double max\+\_\+var, double min\+\_\+var)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gaa36db6cc7825fb05ec972758627c53af}{F\+T\+\_\+\+Add\+Vtk\+Vector\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name, double $\ast$$\ast$var\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Initialize a variable and information for vtk vector movie output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gad30a6da66424927bdd6c9a5d8ab195f2}{F\+T\+\_\+\+Add\+Vtk\+Scalar\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name, double $\ast$var\+\_\+field)
+\begin{DoxyCompactList}\small\item\em Initialize a variable and information for vtk scalar movie output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_gae690a760cc56fa5dbf52104a59e67e33}{F\+T\+\_\+\+Add\+Vtk\+Intfc\+Movie\+Variable} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, const char $\ast$var\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initialize the variable name for vtk interface movie output. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{fapi_8h_ae61efba6de221074dd87ea4753afeb82}{F\+T\+\_\+\+Reset\+Domain\+And\+Grid} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$L, double $\ast$U, int $\ast$gmax)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{fapi_8h}{fapi.\+h} contains the functions used to operate the interface. 
+
+
+
+\subsection{Function Documentation}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable@{F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable}}
+\index{F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable@{F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable(\+Front $\ast$front, boolean preset\+\_\+bound, boolean untracked, C\+O\+M\+P\+O\+N\+E\+N\+T obst\+\_\+comp, const char $\ast$var\+\_\+name, int idir, double $\ast$var\+\_\+field, double($\ast$get\+State\+Func)(\+P\+O\+I\+N\+T\+E\+R), double max\+\_\+var, double min\+\_\+var)}{FT_AddHdfMovieVariable(Front *front, boolean preset_bound, boolean untracked, COMPONENT obst_comp, const char *var_name, int idir, double *var_field, double(*getStateFunc)(POINTER), double max_var, double min_var)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void F\+T\+\_\+\+Add\+Hdf\+Movie\+Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf boolean}}]{preset\+\_\+bound, }
+\item[{{\bf boolean}}]{untracked, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{obst\+\_\+comp, }
+\item[{const char $\ast$}]{var\+\_\+name, }
+\item[{int}]{idir, }
+\item[{double $\ast$}]{var\+\_\+field, }
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER})}]{get\+State\+Func, }
+\item[{double}]{max\+\_\+var, }
+\item[{double}]{min\+\_\+var}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a03b4dc86a41b3cd440632c03b7a3218d}{}\label{fapi_8h_a03b4dc86a41b3cd440632c03b7a3218d}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Cut\+Surf\+Bdry@{F\+T\+\_\+\+Cut\+Surf\+Bdry}}
+\index{F\+T\+\_\+\+Cut\+Surf\+Bdry@{F\+T\+\_\+\+Cut\+Surf\+Bdry}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Cut\+Surf\+Bdry(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, boolean constr\+\_\+func(\+P\+O\+I\+N\+T\+E\+R, double $\ast$), P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$$\ast$insert\+\_\+coords, int num\+\_\+pts, int insert\+\_\+idir)}{FT_CutSurfBdry(SURFACE *surf, boolean constr_func(POINTER, double *), POINTER func_params, double **insert_coords, int num_pts, int insert_idir)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Cut\+Surf\+Bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf boolean} }]{constr\+\_\+funcP\+O\+I\+N\+T\+E\+R, double $\ast$, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$$\ast$}]{insert\+\_\+coords, }
+\item[{int}]{num\+\_\+pts, }
+\item[{int}]{insert\+\_\+idir}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a5148db589cadcdca28d62fd31e37ac36}{}\label{fapi_8h_a5148db589cadcdca28d62fd31e37ac36}
+
+
+This function cut surface at the boundary defined by the constrain function. It first insert significant corner points to make sure it cuts the surface accurately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Pointer to the surface to be cut. \\
+\hline
+{\em constr\+\_\+func} & {\bfseries in} constrain function defining the boundary. \\
+\hline
+{\em func\+\_\+params} & {\bfseries in} anonymous pointer of function parameters. \\
+\hline
+{\em insert\+\_\+coords} & {\bfseries in} coordinates of points to be inserted before cut. \\
+\hline
+{\em num\+\_\+pts} & {\bfseries in} number of points to be inserted before cut. \\
+\hline
+{\em insert\+\_\+idir} & {\bfseries in} insert point along this direction. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range@{F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range}}
+\index{F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range@{F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range(\+Front $\ast$front, int comp, double $\ast$coords, U\+S\+E\+\_\+\+B\+O\+U\+N\+D\+A\+R\+I\+E\+S bdry, double $\ast$intfc\+\_\+point, double $\ast$t, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$$\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, int range)}{FT_FindNearestIntfcPointInRange(Front *front, int comp, double *coords, USE_BOUNDARIES bdry, double *intfc_point, double *t, HYPER_SURF_ELEMENT **hse, HYPER_SURF **hs, int range)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} F\+T\+\_\+\+Find\+Nearest\+Intfc\+Point\+In\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf U\+S\+E\+\_\+\+B\+O\+U\+N\+D\+A\+R\+I\+ES}}]{bdry, }
+\item[{double $\ast$}]{intfc\+\_\+point, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a9fdd2c7f159824ac9174a4c57cde6fd1}{}\label{fapi_8h_a9fdd2c7f159824ac9174a4c57cde6fd1}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc}}
+\index{F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc@{F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc(\+Front $\ast$front)}{FT_FreeCompGridIntfc(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void F\+T\+\_\+\+Free\+Comp\+Grid\+Intfc (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a8526385a3c72b003d380258fb8f2456e}{}\label{fapi_8h_a8526385a3c72b003d380258fb8f2456e}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Install\+Surf\+Edge@{F\+T\+\_\+\+Install\+Surf\+Edge}}
+\index{F\+T\+\_\+\+Install\+Surf\+Edge@{F\+T\+\_\+\+Install\+Surf\+Edge}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Install\+Surf\+Edge(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, int hsbdry\+\_\+type)}{FT_InstallSurfEdge(SURFACE *surf, int hsbdry_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Install\+Surf\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{int}]{hsbdry\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a35e53ff8e87c8f96ba5f0355a24e430f}{}\label{fapi_8h_a35e53ff8e87c8f96ba5f0355a24e430f}
+
+
+This function install a curve at the surface boundary. The boundary of the surface should contain triangles with N\+U\+LL side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Pointer to the surface where edge to be installed. \\
+\hline
+{\em hsbdry\+\_\+type} & {\bfseries in} Boundary curve type. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Cone\+Surf@{F\+T\+\_\+\+Make\+Cone\+Surf}}
+\index{F\+T\+\_\+\+Make\+Cone\+Surf@{F\+T\+\_\+\+Make\+Cone\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Cone\+Surf(\+Front $\ast$front, double $\ast$center, double slope, double height, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeConeSurf(Front *front, double *center, double slope, double height, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Cone\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{slope, }
+\item[{double}]{height, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a27f72ccf4820423173ed7bcc0a6f835e}{}\label{fapi_8h_a27f72ccf4820423173ed7bcc0a6f835e}
+
+
+This function inserts a cone surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} vertex of the cone. \\
+\hline
+{\em slope} & {\bfseries in} slope of the cone. \\
+\hline
+{\em height} & {\bfseries in} height of the cone. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Cuboid\+Surf@{F\+T\+\_\+\+Make\+Cuboid\+Surf}}
+\index{F\+T\+\_\+\+Make\+Cuboid\+Surf@{F\+T\+\_\+\+Make\+Cuboid\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Cuboid\+Surf(\+Front $\ast$front, double $\ast$center, double $\ast$edge, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeCuboidSurf(Front *front, double *center, double *edge, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Cuboid\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double $\ast$}]{edge, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a8e4da687fb3289c1ca6de8b4cba6a00d}{}\label{fapi_8h_a8e4da687fb3289c1ca6de8b4cba6a00d}
+
+
+This function inserts a cuboid surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} center of the cuboid. \\
+\hline
+{\em edge} & {\bfseries in} edge of the cuboid. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Cylinder\+Surf@{F\+T\+\_\+\+Make\+Cylinder\+Surf}}
+\index{F\+T\+\_\+\+Make\+Cylinder\+Surf@{F\+T\+\_\+\+Make\+Cylinder\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Cylinder\+Surf(\+Front $\ast$front, double $\ast$center, double radius, double height, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeCylinderSurf(Front *front, double *center, double radius, double height, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Cylinder\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius, }
+\item[{double}]{height, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a9cbdd61c5bea13075191c3b7ff2426dd}{}\label{fapi_8h_a9cbdd61c5bea13075191c3b7ff2426dd}
+
+
+This function inserts a cylinder surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} center of the cylinder. \\
+\hline
+{\em edge} & {\bfseries in} radius of the cylinder. \\
+\hline
+{\em height} & {\bfseries in} height of the cylinder. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf@{F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf}}
+\index{F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf@{F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf(\+Front $\ast$front, double x0, double x1, double y0, double z0, double R, double r, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeDumbBellSurf(Front *front, double x0, double x1, double y0, double z0, double R, double r, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Dumb\+Bell\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double}]{x0, }
+\item[{double}]{x1, }
+\item[{double}]{y0, }
+\item[{double}]{z0, }
+\item[{double}]{R, }
+\item[{double}]{r, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a7bf56c5fa85ab3581898a7eccc66d04d}{}\label{fapi_8h_a7bf56c5fa85ab3581898a7eccc66d04d}
+
+
+This function inserts a dumbbell surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em x0} & {\bfseries in} x-\/coordinate of the left center. \\
+\hline
+{\em x0} & {\bfseries in} x-\/coordinate of the right center. \\
+\hline
+{\em y0} & {\bfseries in} y-\/coordinate of the axis. \\
+\hline
+{\em z0} & {\bfseries in} z-\/coordinate of the axis. \\
+\hline
+{\em R} & {\bfseries in} radius of the two end spheres. \\
+\hline
+{\em r} & {\bfseries in} radius cylinder connecting the two spheres. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Elliptic\+Curve@{F\+T\+\_\+\+Make\+Elliptic\+Curve}}
+\index{F\+T\+\_\+\+Make\+Elliptic\+Curve@{F\+T\+\_\+\+Make\+Elliptic\+Curve}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Elliptic\+Curve(\+Front $\ast$front, double $\ast$center, double $\ast$radius, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, int refinement\+\_\+level, C\+U\+R\+V\+E $\ast$$\ast$curve)}{FT_MakeEllipticCurve(Front *front, double *center, double *radius, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, int refinement_level, CURVE **curve)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Elliptic\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double $\ast$}]{radius, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{int}]{refinement\+\_\+level, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a7cfc9af10b00223d1bf65cab5aab5dd8}{}\label{fapi_8h_a7cfc9af10b00223d1bf65cab5aab5dd8}
+
+
+This function inserts an elliptic curve into the front with given information of center, radii, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which curve is inserted. \\
+\hline
+{\em center} & {\bfseries in} center of the ellipse. \\
+\hline
+{\em radius} & {\bfseries in} radii of the ellipse. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the curve (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the curve (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries int} wave type of the curve. \\
+\hline
+{\em refinement\+\_\+level} & {\bfseries int} level of refinement. \\
+\hline
+{\em curve} & {\bfseries out} curve made by this function. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Elliptic\+Surf@{F\+T\+\_\+\+Make\+Elliptic\+Surf}}
+\index{F\+T\+\_\+\+Make\+Elliptic\+Surf@{F\+T\+\_\+\+Make\+Elliptic\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Elliptic\+Surf(\+Front $\ast$front, double $\ast$center, double $\ast$radius, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, int refinement\+\_\+level, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeEllipticSurf(Front *front, double *center, double *radius, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, int refinement_level, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Elliptic\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double $\ast$}]{radius, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{int}]{refinement\+\_\+level, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a6b845d733ed98b219d4198a231613f0f}{}\label{fapi_8h_a6b845d733ed98b219d4198a231613f0f}
+
+
+This function inserts an elliptic surface into the front with given information of center, radii, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} center of the ellipsoid. \\
+\hline
+{\em radius} & {\bfseries in} radii of the ellipsoid. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries int} wave type of the surface. \\
+\hline
+{\em refinement\+\_\+level} & {\bfseries int} refinement level of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Plane\+Surf@{F\+T\+\_\+\+Make\+Plane\+Surf}}
+\index{F\+T\+\_\+\+Make\+Plane\+Surf@{F\+T\+\_\+\+Make\+Plane\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Plane\+Surf(\+Front $\ast$front, double $\ast$plane\+\_\+nor, double $\ast$plane\+\_\+pt, boolean reset\+\_\+bdry\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakePlaneSurf(Front *front, double *plane_nor, double *plane_pt, boolean reset_bdry_comp, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Plane\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{plane\+\_\+nor, }
+\item[{double $\ast$}]{plane\+\_\+pt, }
+\item[{{\bf boolean}}]{reset\+\_\+bdry\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_aaca18050cae2258c81a5d62c2e1ca862}{}\label{fapi_8h_aaca18050cae2258c81a5d62c2e1ca862}
+
+
+This function inserts a plane surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em plane\+\_\+nor} & {\bfseries in} normal vector of the plane. \\
+\hline
+{\em plane\+\_\+pt} & {\bfseries in} coordinates of a point on the plane. \\
+\hline
+{\em reset\+\_\+bdry\+\_\+comp} & {\bfseries in} if Y\+ES, reset boundary component. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Point\+Array\+Curve@{F\+T\+\_\+\+Make\+Point\+Array\+Curve}}
+\index{F\+T\+\_\+\+Make\+Point\+Array\+Curve@{F\+T\+\_\+\+Make\+Point\+Array\+Curve}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Point\+Array\+Curve(\+Front $\ast$front, int num\+\_\+points, double $\ast$$\ast$point\+\_\+array, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, boolean is\+\_\+closed\+\_\+curve, int w\+\_\+type)}{FT_MakePointArrayCurve(Front *front, int num_points, double **point_array, COMPONENT neg_comp, COMPONENT pos_comp, boolean is_closed_curve, int w_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ F\+T\+\_\+\+Make\+Point\+Array\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{num\+\_\+points, }
+\item[{double $\ast$$\ast$}]{point\+\_\+array, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{{\bf boolean}}]{is\+\_\+closed\+\_\+curve, }
+\item[{int}]{w\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_aaa25d0220a1a1821e0069a8747da39bc}{}\label{fapi_8h_aaa25d0220a1a1821e0069a8747da39bc}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Projectile\+Surf@{F\+T\+\_\+\+Make\+Projectile\+Surf}}
+\index{F\+T\+\_\+\+Make\+Projectile\+Surf@{F\+T\+\_\+\+Make\+Projectile\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Projectile\+Surf(\+Front $\ast$front, double $\ast$center, double R, double r, double h, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeProjectileSurf(Front *front, double *center, double R, double r, double h, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Projectile\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{R, }
+\item[{double}]{r, }
+\item[{double}]{h, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a08059891e7cebf0a930646fc756e47b2}{}\label{fapi_8h_a08059891e7cebf0a930646fc756e47b2}
+
+
+This function inserts a projectile surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} center-\/coordinate of the projectile. \\
+\hline
+{\em R} & {\bfseries in} cylindrical radius of the projectile. \\
+\hline
+{\em r} & {\bfseries in} head height of the projectile. \\
+\hline
+{\em h} & {\bfseries in} butt height of the projectile. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Make\+Tetrahedron\+Surf@{F\+T\+\_\+\+Make\+Tetrahedron\+Surf}}
+\index{F\+T\+\_\+\+Make\+Tetrahedron\+Surf@{F\+T\+\_\+\+Make\+Tetrahedron\+Surf}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Make\+Tetrahedron\+Surf(\+Front $\ast$front, double $\ast$center, double radius, C\+O\+M\+P\+O\+N\+E\+N\+T neg\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T pos\+\_\+comp, int w\+\_\+type, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surf)}{FT_MakeTetrahedronSurf(Front *front, double *center, double radius, COMPONENT neg_comp, COMPONENT pos_comp, int w_type, SURFACE **surf)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Make\+Tetrahedron\+Surf (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{radius, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{neg\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{pos\+\_\+comp, }
+\item[{int}]{w\+\_\+type, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a6237e8c208063fd3a3a24039def4edfc}{}\label{fapi_8h_a6237e8c208063fd3a3a24039def4edfc}
+
+
+This function inserts a tetrahedron surface into the front with given information of its parameters, components, and wave type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to the front in which surface is inserted. \\
+\hline
+{\em center} & {\bfseries in} center of the tetrahedron. \\
+\hline
+{\em radius} & {\bfseries in} circumcircle of the tetrahedron. \\
+\hline
+{\em neg\+\_\+comp} & {\bfseries in} index for negative side of the surface (inner side). \\
+\hline
+{\em pos\+\_\+comp} & {\bfseries in} index for positive side of the surface (outer side). \\
+\hline
+{\em w\+\_\+type} & {\bfseries in} wave type of the surface. \\
+\hline
+{\em surf} & {\bfseries out} surface made by this function \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Reset\+Domain\+And\+Grid@{F\+T\+\_\+\+Reset\+Domain\+And\+Grid}}
+\index{F\+T\+\_\+\+Reset\+Domain\+And\+Grid@{F\+T\+\_\+\+Reset\+Domain\+And\+Grid}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Reset\+Domain\+And\+Grid(\+Front $\ast$front, double $\ast$\+L, double $\ast$\+U, int $\ast$gmax)}{FT_ResetDomainAndGrid(Front *front, double *L, double *U, int *gmax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void F\+T\+\_\+\+Reset\+Domain\+And\+Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int $\ast$}]{gmax}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_ae61efba6de221074dd87ea4753afeb82}{}\label{fapi_8h_ae61efba6de221074dd87ea4753afeb82}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+Rotate\+Surface@{F\+T\+\_\+\+Rotate\+Surface}}
+\index{F\+T\+\_\+\+Rotate\+Surface@{F\+T\+\_\+\+Rotate\+Surface}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Rotate\+Surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$center, double phi, double theta)}{FT_RotateSurface(SURFACE *surf, double *center, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Rotate\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{center, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a24736da558e60ebf875e5a1a18ac62cc}{}\label{fapi_8h_a24736da558e60ebf875e5a1a18ac62cc}
+
+
+This function rorate surface with azimuthal angle theta and polar angle phi about the given center. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Pointer to the surface to be rotated. \\
+\hline
+{\em center} & {\bfseries in} center-\/coordinate for the rotation. \\
+\hline
+{\em phi} & {\bfseries in} polar angle of the rotation. \\
+\hline
+{\em theta} & {\bfseries in} azimuthal angle of the rotation. \\
+\hline
+\end{DoxyParams}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing@{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing}}
+\index{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing@{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing(\+Front $\ast$front, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, P\+O\+I\+N\+T\+E\+R $\ast$state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, double $\ast$crx\+\_\+coords)}{FT_StateStructAtGridCrossing(Front *front, INTERFACE *grid_intfc, int *icoords, GRID_DIRECTION dir, int comp, POINTER *state, HYPER_SURF **hs, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_af47bffaaaad229f567f99a8fa11c0850}{}\label{fapi_8h_af47bffaaaad229f567f99a8fa11c0850}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2@{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2}}
+\index{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2@{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, P\+O\+I\+N\+T\+E\+R $\ast$state, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$$\ast$hse, double $\ast$crx\+\_\+coords)}{FT_StateStructAtGridCrossing2(Front *front, int *icoords, GRID_DIRECTION dir, int comp, POINTER *state, HYPER_SURF **hs, HYPER_SURF_ELEMENT **hse, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} F\+T\+\_\+\+State\+Struct\+At\+Grid\+Crossing2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{state, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$}]{hse, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a4d15ab28942a5c4a5f167a1629d93df5}{}\label{fapi_8h_a4d15ab28942a5c4a5f167a1629d93df5}
+\index{fapi.\+h@{fapi.\+h}!F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing@{F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing}}
+\index{F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing@{F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing}!fapi.\+h@{fapi.\+h}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing(\+Front $\ast$front, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, int comp, double($\ast$state\+\_\+func)(\+Locstate), double $\ast$ans, double $\ast$crx\+\_\+coords)}{FT_StateVarAtGridCrossing(Front *front, int *icoords, GRID_DIRECTION dir, int comp, double(*state_func)(Locstate), double *ans, double *crx_coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} {\bf boolean} F\+T\+\_\+\+State\+Var\+At\+Grid\+Crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{int}]{comp, }
+\item[{double($\ast$)({\bf Locstate})}]{state\+\_\+func, }
+\item[{double $\ast$}]{ans, }
+\item[{double $\ast$}]{crx\+\_\+coords}
+\end{DoxyParamCaption}
+)}\hypertarget{fapi_8h_a2679a9cdf5cc8d42a889bbde7a8880a6}{}\label{fapi_8h_a2679a9cdf5cc8d42a889bbde7a8880a6}

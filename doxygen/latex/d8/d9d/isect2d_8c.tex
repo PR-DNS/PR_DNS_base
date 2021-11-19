@@ -1,0 +1,64 @@
+\hypertarget{isect2d_8c}{}\section{D\+N\+S/src/intfc/isect2d.c File Reference}
+\label{isect2d_8c}\index{D\+N\+S/src/intfc/isect2d.\+c@{D\+N\+S/src/intfc/isect2d.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a0a3ee3d43067d2a2ad22c155985dc533}{L\+I\+B\+\_\+\+L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{isect2d_8c_afdcc1cd67d1fba19302dcc32bdf515cd}{i\+\_\+intersections2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$$\ast$cross, const \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} bdry)
+\item 
+\hyperlink{cdecs_8h_a0a3ee3d43067d2a2ad22c155985dc533}{L\+I\+B\+\_\+\+L\+O\+C\+AL} void \hyperlink{isect2d_8c_ab02725a716d4ace142ffd06b0ab165a1}{i\+\_\+print\+\_\+intersections2d} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cross, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a0a3ee3d43067d2a2ad22c155985dc533}{L\+I\+B\+\_\+\+L\+O\+C\+AL} void \hyperlink{isect2d_8c_ac365ad959e579afabc1551ef83e653c9}{i\+\_\+print\+\_\+crossing\+\_\+elements2d} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cross, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{isect2d_8c_ac7a2f26075c730c083eab7aa65bd4cd5}{bond\+\_\+crosses\+\_\+curve} (\hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$bcurve, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{isect2d_8c_a093f5c7598ac16170df446d881df8aaf}{cross\+\_\+bonds} (\hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b1, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b2, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{isect2d.\+c@{isect2d.\+c}!bond\+\_\+crosses\+\_\+curve@{bond\+\_\+crosses\+\_\+curve}}
+\index{bond\+\_\+crosses\+\_\+curve@{bond\+\_\+crosses\+\_\+curve}!isect2d.\+c@{isect2d.\+c}}
+\subsubsection[{\texorpdfstring{bond\+\_\+crosses\+\_\+curve(\+B\+O\+N\+D $\ast$b, C\+U\+R\+V\+E $\ast$c, P\+O\+I\+N\+T $\ast$p, B\+O\+N\+D $\ast$$\ast$bcurve, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient)}{bond_crosses_curve(BOND *b, CURVE *c, POINT *p, BOND **bcurve, ORIENTATION orient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} bond\+\_\+crosses\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{bcurve, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{isect2d_8c_ac7a2f26075c730c083eab7aa65bd4cd5}{}\label{isect2d_8c_ac7a2f26075c730c083eab7aa65bd4cd5}
+\index{isect2d.\+c@{isect2d.\+c}!cross\+\_\+bonds@{cross\+\_\+bonds}}
+\index{cross\+\_\+bonds@{cross\+\_\+bonds}!isect2d.\+c@{isect2d.\+c}}
+\subsubsection[{\texorpdfstring{cross\+\_\+bonds(\+B\+O\+N\+D $\ast$b1, B\+O\+N\+D $\ast$b2, P\+O\+I\+N\+T $\ast$p)}{cross_bonds(BOND *b1, BOND *b2, POINT *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} cross\+\_\+bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+ND} $\ast$}]{b1, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b2, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{isect2d_8c_a093f5c7598ac16170df446d881df8aaf}{}\label{isect2d_8c_a093f5c7598ac16170df446d881df8aaf}
+\index{isect2d.\+c@{isect2d.\+c}!i\+\_\+intersections2d@{i\+\_\+intersections2d}}
+\index{i\+\_\+intersections2d@{i\+\_\+intersections2d}!isect2d.\+c@{isect2d.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+intersections2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+R\+O\+S\+S $\ast$$\ast$cross, const boolean bdry)}{i_intersections2d(INTERFACE *intfc, CROSS **cross, const boolean bdry)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+\_\+\+L\+O\+C\+AL} {\bf boolean} i\+\_\+intersections2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+R\+O\+SS} $\ast$$\ast$}]{cross, }
+\item[{const {\bf boolean}}]{bdry}
+\end{DoxyParamCaption}
+)}\hypertarget{isect2d_8c_afdcc1cd67d1fba19302dcc32bdf515cd}{}\label{isect2d_8c_afdcc1cd67d1fba19302dcc32bdf515cd}
+\index{isect2d.\+c@{isect2d.\+c}!i\+\_\+print\+\_\+crossing\+\_\+elements2d@{i\+\_\+print\+\_\+crossing\+\_\+elements2d}}
+\index{i\+\_\+print\+\_\+crossing\+\_\+elements2d@{i\+\_\+print\+\_\+crossing\+\_\+elements2d}!isect2d.\+c@{isect2d.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+print\+\_\+crossing\+\_\+elements2d(\+C\+R\+O\+S\+S $\ast$cross, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{i_print_crossing_elements2d(CROSS *cross, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+\_\+\+L\+O\+C\+AL} void i\+\_\+print\+\_\+crossing\+\_\+elements2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cross, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{isect2d_8c_ac365ad959e579afabc1551ef83e653c9}{}\label{isect2d_8c_ac365ad959e579afabc1551ef83e653c9}
+\index{isect2d.\+c@{isect2d.\+c}!i\+\_\+print\+\_\+intersections2d@{i\+\_\+print\+\_\+intersections2d}}
+\index{i\+\_\+print\+\_\+intersections2d@{i\+\_\+print\+\_\+intersections2d}!isect2d.\+c@{isect2d.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+print\+\_\+intersections2d(\+C\+R\+O\+S\+S $\ast$cross, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{i_print_intersections2d(CROSS *cross, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+\_\+\+L\+O\+C\+AL} void i\+\_\+print\+\_\+intersections2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cross, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{isect2d_8c_ab02725a716d4ace142ffd06b0ab165a1}{}\label{isect2d_8c_ab02725a716d4ace142ffd06b0ab165a1}

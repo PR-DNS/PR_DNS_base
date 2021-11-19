@@ -1,0 +1,98 @@
+\hypertarget{other_8c}{}\section{D\+N\+S/src/util/other.c File Reference}
+\label{other_8c}\index{D\+N\+S/src/util/other.\+c@{D\+N\+S/src/util/other.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{other_8c_aa156d1cebb38c8a65846c4d9c006012aa15b0440761261858bb03d2c1b095d225}{M\+A\+X\+\_\+\+F\+L\+O\+A\+TS} = 255
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{other_8c_a12ecc1e8786ace7c4605f9e7c6cc2f64}{print\+\_\+line\+\_\+of\+\_\+floats} (int number,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{other_8c_aef60e7de3386d9cfdc6b0ddd8757c1a9}{fprint\+\_\+line\+\_\+of\+\_\+floats} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int number,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{other_8c_a49cf98e2b22929056c41aa462683c708}{right\+\_\+flush} (int n, int ndigits)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{other_8c_a58e47c561be04b6fa6be3ff4ee4c3d54}{y\+\_\+or\+\_\+n} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} arg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{other_8c_a22dddba9c1ef2cd6c7f68bfaacb0e393}{ordinal\+\_\+suffix} (int i)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{other_8c_acb758ae2cf51d5ad99c021a866f3acd9}{base\+\_\+and\+\_\+dir\+\_\+name} (const char $\ast$name, char $\ast$$\ast$dname, char $\ast$$\ast$bname)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{other_8c_a39ac69d35ce47515d9ecab3b16e17cd8}{print\+\_\+boolean} (const char $\ast$mesg1, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} b, const char $\ast$mesg2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{other_8c_aa156d1cebb38c8a65846c4d9c006012a}{}\label{other_8c_aa156d1cebb38c8a65846c4d9c006012a}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+F\+L\+O\+A\+TS@{M\+A\+X\+\_\+\+F\+L\+O\+A\+TS}!other.\+c@{other.\+c}}\index{other.\+c@{other.\+c}!M\+A\+X\+\_\+\+F\+L\+O\+A\+TS@{M\+A\+X\+\_\+\+F\+L\+O\+A\+TS}}\item[{\em 
+M\+A\+X\+\_\+\+F\+L\+O\+A\+TS\hypertarget{other_8c_aa156d1cebb38c8a65846c4d9c006012aa15b0440761261858bb03d2c1b095d225}{}\label{other_8c_aa156d1cebb38c8a65846c4d9c006012aa15b0440761261858bb03d2c1b095d225}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{other.\+c@{other.\+c}!base\+\_\+and\+\_\+dir\+\_\+name@{base\+\_\+and\+\_\+dir\+\_\+name}}
+\index{base\+\_\+and\+\_\+dir\+\_\+name@{base\+\_\+and\+\_\+dir\+\_\+name}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{base\+\_\+and\+\_\+dir\+\_\+name(const char $\ast$name, char $\ast$$\ast$dname, char $\ast$$\ast$bname)}{base_and_dir_name(const char *name, char **dname, char **bname)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void base\+\_\+and\+\_\+dir\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{dname, }
+\item[{char $\ast$$\ast$}]{bname}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_acb758ae2cf51d5ad99c021a866f3acd9}{}\label{other_8c_acb758ae2cf51d5ad99c021a866f3acd9}
+\index{other.\+c@{other.\+c}!fprint\+\_\+line\+\_\+of\+\_\+floats@{fprint\+\_\+line\+\_\+of\+\_\+floats}}
+\index{fprint\+\_\+line\+\_\+of\+\_\+floats@{fprint\+\_\+line\+\_\+of\+\_\+floats}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+line\+\_\+of\+\_\+floats(\+F\+I\+L\+E $\ast$file, int number,...)}{fprint_line_of_floats(FILE *file, int number,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fprint\+\_\+line\+\_\+of\+\_\+floats (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{number, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_aef60e7de3386d9cfdc6b0ddd8757c1a9}{}\label{other_8c_aef60e7de3386d9cfdc6b0ddd8757c1a9}
+\index{other.\+c@{other.\+c}!ordinal\+\_\+suffix@{ordinal\+\_\+suffix}}
+\index{ordinal\+\_\+suffix@{ordinal\+\_\+suffix}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{ordinal\+\_\+suffix(int i)}{ordinal_suffix(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ ordinal\+\_\+suffix (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_a22dddba9c1ef2cd6c7f68bfaacb0e393}{}\label{other_8c_a22dddba9c1ef2cd6c7f68bfaacb0e393}
+\index{other.\+c@{other.\+c}!print\+\_\+boolean@{print\+\_\+boolean}}
+\index{print\+\_\+boolean@{print\+\_\+boolean}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+boolean(const char $\ast$mesg1, boolean b, const char $\ast$mesg2)}{print_boolean(const char *mesg1, boolean b, const char *mesg2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+boolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg1, }
+\item[{{\bf boolean}}]{b, }
+\item[{const char $\ast$}]{mesg2}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_a39ac69d35ce47515d9ecab3b16e17cd8}{}\label{other_8c_a39ac69d35ce47515d9ecab3b16e17cd8}
+\index{other.\+c@{other.\+c}!print\+\_\+line\+\_\+of\+\_\+floats@{print\+\_\+line\+\_\+of\+\_\+floats}}
+\index{print\+\_\+line\+\_\+of\+\_\+floats@{print\+\_\+line\+\_\+of\+\_\+floats}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+line\+\_\+of\+\_\+floats(int number,...)}{print_line_of_floats(int number,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+line\+\_\+of\+\_\+floats (
+\begin{DoxyParamCaption}
+\item[{int}]{number, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_a12ecc1e8786ace7c4605f9e7c6cc2f64}{}\label{other_8c_a12ecc1e8786ace7c4605f9e7c6cc2f64}
+\index{other.\+c@{other.\+c}!right\+\_\+flush@{right\+\_\+flush}}
+\index{right\+\_\+flush@{right\+\_\+flush}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{right\+\_\+flush(int n, int ndigits)}{right_flush(int n, int ndigits)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ right\+\_\+flush (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{ndigits}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_a49cf98e2b22929056c41aa462683c708}{}\label{other_8c_a49cf98e2b22929056c41aa462683c708}
+\index{other.\+c@{other.\+c}!y\+\_\+or\+\_\+n@{y\+\_\+or\+\_\+n}}
+\index{y\+\_\+or\+\_\+n@{y\+\_\+or\+\_\+n}!other.\+c@{other.\+c}}
+\subsubsection[{\texorpdfstring{y\+\_\+or\+\_\+n(boolean arg)}{y_or_n(boolean arg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ y\+\_\+or\+\_\+n (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{arg}
+\end{DoxyParamCaption}
+)}\hypertarget{other_8c_a58e47c561be04b6fa6be3ff4ee4c3d54}{}\label{other_8c_a58e47c561be04b6fa6be3ff4ee4c3d54}

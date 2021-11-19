@@ -1,0 +1,146 @@
+\hypertarget{group___g_e_o_m_e_t_r_y}{}\section{Fron\+Tier Interface Geometry Functions}
+\label{group___g_e_o_m_e_t_r_y}\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_e_o_m_e_t_r_y_ga062c15ef32cddf4e3afb55253a3b8cd1}{F\+T\+\_\+\+Normal\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$\hyperlink{fuserhooks_8c_a92beb80674cd0d86b6bcad12c062da8f}{normal}, int comp)
+\begin{DoxyCompactList}\small\item\em Get the normal vector at the point p. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___g_e_o_m_e_t_r_y_ga2a51e60553765389dc0450e69262c6e5}{F\+T\+\_\+\+Curvature\+At\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double $\ast$curvature)
+\begin{DoxyCompactList}\small\item\em Get the curvature at the point p. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} double \hyperlink{group___g_e_o_m_e_t_r_y_gaf8d4ea1b2375af651d0e98da238eb418}{F\+T\+\_\+\+Grid\+Size\+In\+Dir} (double $\ast$dir, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em The grid size in direction dir is (dir dot h). If h are the same in all directions (square mesh), it returns the h. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{fdecs_8h_a12a7b755de9f809f15bb18c3212eee18}{Nor\+\_\+stencil} $\ast$ \hyperlink{group___g_e_o_m_e_t_r_y_ga2154d670e36c43759fa37724a3890d96}{F\+T\+\_\+\+Create\+Normal\+Stencil} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, int comp, int num\+\_\+pts)
+\begin{DoxyCompactList}\small\item\em This function create a normal stencil at the interface point p with size (number of points) num\+\_\+pts. The normal stencil in in the ambient with component comp. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___g_e_o_m_e_t_r_y_ga7845d20e529f916b591757eba62672f8}{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$coords, int comp, double $\ast$coords\+\_\+bdry, double $\ast$coords\+\_\+ref, double $\ast$\hyperlink{fuserhooks_8c_a92beb80674cd0d86b6bcad12c062da8f}{normal})
+\begin{DoxyCompactList}\small\item\em Given the coordinates coords, this function find the reflected coordinates coordsrefl through the hypersurface hs, it also provide the normal vector nor at the reflection. Return NO if conditions not satisfied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}!F\+T\+\_\+\+Create\+Normal\+Stencil@{F\+T\+\_\+\+Create\+Normal\+Stencil}}
+\index{F\+T\+\_\+\+Create\+Normal\+Stencil@{F\+T\+\_\+\+Create\+Normal\+Stencil}!Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Create\+Normal\+Stencil(\+Front $\ast$front, P\+O\+I\+N\+T $\ast$p, int comp, int num\+\_\+pts)}{FT_CreateNormalStencil(Front *front, POINT *p, int comp, int num_pts)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nor\+\_\+stencil} $\ast$ F\+T\+\_\+\+Create\+Normal\+Stencil (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{int}]{comp, }
+\item[{int}]{num\+\_\+pts}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_e_o_m_e_t_r_y_ga2154d670e36c43759fa37724a3890d96}{}\label{group___g_e_o_m_e_t_r_y_ga2154d670e36c43759fa37724a3890d96}
+
+
+This function create a normal stencil at the interface point p with size (number of points) num\+\_\+pts. The normal stencil in in the ambient with component comp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em p} & {\bfseries in} Pointer to the point. \\
+\hline
+{\em comp} & {\bfseries in} Index of the region of the stencil. \\
+\hline
+{\em num\+\_\+pts} & {\bfseries in} Number of point in the normal stencel. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}!F\+T\+\_\+\+Curvature\+At\+Point@{F\+T\+\_\+\+Curvature\+At\+Point}}
+\index{F\+T\+\_\+\+Curvature\+At\+Point@{F\+T\+\_\+\+Curvature\+At\+Point}!Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Curvature\+At\+Point(\+P\+O\+I\+N\+T $\ast$p, Front $\ast$front, double $\ast$curvature)}{FT_CurvatureAtPoint(POINT *p, Front *front, double *curvature)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Curvature\+At\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{curvature}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_e_o_m_e_t_r_y_ga2a51e60553765389dc0450e69262c6e5}{}\label{group___g_e_o_m_e_t_r_y_ga2a51e60553765389dc0450e69262c6e5}
+
+
+Get the curvature at the point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\bfseries in} Pointer to a valid point on interface of the front. \\
+\hline
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em curvature} & {\bfseries out} The address where the curvature is to be assigned. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}!F\+T\+\_\+\+Grid\+Size\+In\+Dir@{F\+T\+\_\+\+Grid\+Size\+In\+Dir}}
+\index{F\+T\+\_\+\+Grid\+Size\+In\+Dir@{F\+T\+\_\+\+Grid\+Size\+In\+Dir}!Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Grid\+Size\+In\+Dir(double $\ast$dir, Front $\ast$front)}{FT_GridSizeInDir(double *dir, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}double F\+T\+\_\+\+Grid\+Size\+In\+Dir (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{dir, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_e_o_m_e_t_r_y_gaf8d4ea1b2375af651d0e98da238eb418}{}\label{group___g_e_o_m_e_t_r_y_gaf8d4ea1b2375af651d0e98da238eb418}
+
+
+The grid size in direction dir is (dir dot h). If h are the same in all directions (square mesh), it returns the h. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & {\bfseries in} The unit vector of the direction. \\
+\hline
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}!F\+T\+\_\+\+Normal\+At\+Point@{F\+T\+\_\+\+Normal\+At\+Point}}
+\index{F\+T\+\_\+\+Normal\+At\+Point@{F\+T\+\_\+\+Normal\+At\+Point}!Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Normal\+At\+Point(\+P\+O\+I\+N\+T $\ast$p, Front $\ast$front, double $\ast$normal, int comp)}{FT_NormalAtPoint(POINT *p, Front *front, double *normal, int comp)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Normal\+At\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double $\ast$}]{normal, }
+\item[{int}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_e_o_m_e_t_r_y_ga062c15ef32cddf4e3afb55253a3b8cd1}{}\label{group___g_e_o_m_e_t_r_y_ga062c15ef32cddf4e3afb55253a3b8cd1}
+
+
+Get the normal vector at the point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\bfseries in} Pointer to a valid point on interface of the front. \\
+\hline
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em normal} & {\bfseries out} The normal vector. \\
+\hline
+{\em comp} & {\bfseries in} The component of the side which the normal is pointing to. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}!F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry@{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry}}
+\index{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry@{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry}!Fron\+Tier Interface Geometry Functions@{Fron\+Tier Interface Geometry Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry(\+Front $\ast$front, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$coords, int comp, double $\ast$coords\+\_\+bdry, double $\ast$coords\+\_\+ref, double $\ast$normal)}{FT_ReflectPointThroughBdry(Front *front, HYPER_SURF *hs, double *coords, int comp, double *coords_bdry, double *coords_ref, double *normal)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Reflect\+Point\+Through\+Bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{coords, }
+\item[{int}]{comp, }
+\item[{double $\ast$}]{coords\+\_\+bdry, }
+\item[{double $\ast$}]{coords\+\_\+ref, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{group___g_e_o_m_e_t_r_y_ga7845d20e529f916b591757eba62672f8}{}\label{group___g_e_o_m_e_t_r_y_ga7845d20e529f916b591757eba62672f8}
+
+
+Given the coordinates coords, this function find the reflected coordinates coordsrefl through the hypersurface hs, it also provide the normal vector nor at the reflection. Return NO if conditions not satisfied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em hs} & {\bfseries in} Pointer to the hypersurface (curve in 2D, surface in 3D). \\
+\hline
+{\em comp} & {\bfseries in} Component of the ambient. \\
+\hline
+{\em coords} & {\bfseries in} Coordinates to be reflected. \\
+\hline
+{\em coords\+\_\+bdry} & {\bfseries out} boundary point of reflection. \\
+\hline
+{\em coords\+\_\+ref} & {\bfseries out} Coordinates after reflection. \\
+\hline
+{\em nor} & {\bfseries out} Normal vector at reflection. \\
+\hline
+\end{DoxyParams}

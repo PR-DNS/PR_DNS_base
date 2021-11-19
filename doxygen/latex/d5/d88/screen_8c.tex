@@ -1,0 +1,77 @@
+\hypertarget{screen_8c}{}\section{D\+N\+S/src/util/screen.c File Reference}
+\label{screen_8c}\index{D\+N\+S/src/util/screen.\+c@{D\+N\+S/src/util/screen.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{screen_8c_aca35d25203e69f737ebf6238f7fcdbae}{search\+\_\+for} (char)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{screen_8c_a8464d969d954643da3d705e0e27f0344}{deblank} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{screen_8c_afb429c6e96acf34080a04816a7345dc7}{screen} (const char $\ast$fmt,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{screen_8c_a7b6b66b359ea986a7c89ff08c97e318a}{Scanf} (const char $\ast$fmt,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{screen_8c_a6537eb726a6f6473ded4967b0f137978}{Gets} (char $\ast$s)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{screen_8c_ab786fb578e54685a8b2fbf190b19368d}{screen\+\_\+print\+\_\+long\+\_\+string} (const char $\ast$s)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{screen_8c_ae7e0a255315dc12beab5dac44ad9b597}{suppress\+\_\+prompts} = \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{screen.\+c@{screen.\+c}!deblank@{deblank}}
+\index{deblank@{deblank}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{deblank(void)}{deblank(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void deblank (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_a8464d969d954643da3d705e0e27f0344}{}\label{screen_8c_a8464d969d954643da3d705e0e27f0344}
+\index{screen.\+c@{screen.\+c}!Gets@{Gets}}
+\index{Gets@{Gets}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{Gets(char $\ast$s)}{Gets(char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$ Gets (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_a6537eb726a6f6473ded4967b0f137978}{}\label{screen_8c_a6537eb726a6f6473ded4967b0f137978}
+\index{screen.\+c@{screen.\+c}!Scanf@{Scanf}}
+\index{Scanf@{Scanf}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{Scanf(const char $\ast$fmt,...)}{Scanf(const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int Scanf (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_a7b6b66b359ea986a7c89ff08c97e318a}{}\label{screen_8c_a7b6b66b359ea986a7c89ff08c97e318a}
+\index{screen.\+c@{screen.\+c}!screen@{screen}}
+\index{screen@{screen}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{screen(const char $\ast$fmt,...)}{screen(const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void screen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_afb429c6e96acf34080a04816a7345dc7}{}\label{screen_8c_afb429c6e96acf34080a04816a7345dc7}
+\index{screen.\+c@{screen.\+c}!screen\+\_\+print\+\_\+long\+\_\+string@{screen\+\_\+print\+\_\+long\+\_\+string}}
+\index{screen\+\_\+print\+\_\+long\+\_\+string@{screen\+\_\+print\+\_\+long\+\_\+string}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{screen\+\_\+print\+\_\+long\+\_\+string(const char $\ast$s)}{screen_print_long_string(const char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void screen\+\_\+print\+\_\+long\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_ab786fb578e54685a8b2fbf190b19368d}{}\label{screen_8c_ab786fb578e54685a8b2fbf190b19368d}
+\index{screen.\+c@{screen.\+c}!search\+\_\+for@{search\+\_\+for}}
+\index{search\+\_\+for@{search\+\_\+for}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{search\+\_\+for(char)}{search_for(char)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int search\+\_\+for (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}\hypertarget{screen_8c_aca35d25203e69f737ebf6238f7fcdbae}{}\label{screen_8c_aca35d25203e69f737ebf6238f7fcdbae}
+
+
+\subsection{Variable Documentation}
+\index{screen.\+c@{screen.\+c}!suppress\+\_\+prompts@{suppress\+\_\+prompts}}
+\index{suppress\+\_\+prompts@{suppress\+\_\+prompts}!screen.\+c@{screen.\+c}}
+\subsubsection[{\texorpdfstring{suppress\+\_\+prompts}{suppress_prompts}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} suppress\+\_\+prompts = {\bf NO}}\hypertarget{screen_8c_ae7e0a255315dc12beab5dac44ad9b597}{}\label{screen_8c_ae7e0a255315dc12beab5dac44ad9b597}

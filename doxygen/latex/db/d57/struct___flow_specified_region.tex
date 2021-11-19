@@ -1,0 +1,67 @@
+\hypertarget{struct___flow_specified_region}{}\section{\+\_\+\+Flow\+Specified\+Region Struct Reference}
+\label{struct___flow_specified_region}\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+
+
+{\ttfamily \#include $<$fdecs.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} \hyperlink{struct___flow_specified_region_a5fce4f0a8a05cf23a93104d0c7580d00}{comp}
+\item 
+char \hyperlink{struct___flow_specified_region_a67b785a9f602ba9ff1ef48c6ed4a48c0}{type} \mbox{[}100\mbox{]}
+\item 
+struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$ \hyperlink{struct___flow_specified_region_a6498b836807b6b21689af01da4af0439}{next}
+\item 
+struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$ \hyperlink{struct___flow_specified_region_a51ef4882bf1c349a6bc4a23c600ad0a4}{prev}
+\item 
+struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$ \hyperlink{struct___flow_specified_region_a5e51bd32d4a24a009f2361bfabe44cf4}{head}
+\item 
+struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$ \hyperlink{struct___flow_specified_region_a2a325be693b70780a41515fce2a235e9}{tail}
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$ \hyperlink{struct___flow_specified_region_a6566a46ef3bd72417e1fc7068285b124}{\+\_\+\+Components\+Match} )(\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$ \hyperlink{struct___flow_specified_region_ac64cd108cfd301ac1a19a6d9cc7bb312}{\+\_\+\+Set\+Flow\+Specified\+State} )(\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, double $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void($\ast$ \hyperlink{struct___flow_specified_region_abae94c0810c1b47db6793d3afd47cb39}{\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data} )(F\+I\+LE $\ast$, struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+void($\ast$ \hyperlink{struct___flow_specified_region_a5fd0392a9ab4313dd4ca64ef633d49c8}{\+\_\+\+Destroy\+Flow\+Specified\+Region} )(struct \hyperlink{struct___flow_specified_region}{\+\_\+\+Flow\+Specified\+Region} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!\+\_\+\+Components\+Match@{\+\_\+\+Components\+Match}}
+\index{\+\_\+\+Components\+Match@{\+\_\+\+Components\+Match}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Components\+Match}{_ComponentsMatch}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean}($\ast$ \+\_\+\+Flow\+Specified\+Region\+::\+\_\+\+Components\+Match) ({\bf C\+O\+M\+P\+O\+N\+E\+NT}, {\bf C\+O\+M\+P\+O\+N\+E\+NT}, {\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)}\hypertarget{struct___flow_specified_region_a6566a46ef3bd72417e1fc7068285b124}{}\label{struct___flow_specified_region_a6566a46ef3bd72417e1fc7068285b124}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!\+\_\+\+Destroy\+Flow\+Specified\+Region@{\+\_\+\+Destroy\+Flow\+Specified\+Region}}
+\index{\+\_\+\+Destroy\+Flow\+Specified\+Region@{\+\_\+\+Destroy\+Flow\+Specified\+Region}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Destroy\+Flow\+Specified\+Region}{_DestroyFlowSpecifiedRegion}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ \+\_\+\+Flow\+Specified\+Region\+::\+\_\+\+Destroy\+Flow\+Specified\+Region) (struct {\bf \+\_\+\+Flow\+Specified\+Region} $\ast$)}\hypertarget{struct___flow_specified_region_a5fd0392a9ab4313dd4ca64ef633d49c8}{}\label{struct___flow_specified_region_a5fd0392a9ab4313dd4ca64ef633d49c8}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data@{\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data}}
+\index{\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data@{\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data}{_fprint_FlowSpecifiedRegion_data}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ \+\_\+\+Flow\+Specified\+Region\+::\+\_\+fprint\+\_\+\+Flow\+Specified\+Region\+\_\+data) (F\+I\+LE $\ast$, struct {\bf \+\_\+\+Flow\+Specified\+Region} $\ast$, {\bf Front} $\ast$)}\hypertarget{struct___flow_specified_region_abae94c0810c1b47db6793d3afd47cb39}{}\label{struct___flow_specified_region_abae94c0810c1b47db6793d3afd47cb39}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!\+\_\+\+Set\+Flow\+Specified\+State@{\+\_\+\+Set\+Flow\+Specified\+State}}
+\index{\+\_\+\+Set\+Flow\+Specified\+State@{\+\_\+\+Set\+Flow\+Specified\+State}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Set\+Flow\+Specified\+State}{_SetFlowSpecifiedState}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean}($\ast$ \+\_\+\+Flow\+Specified\+Region\+::\+\_\+\+Set\+Flow\+Specified\+State) ({\bf Locstate}, {\bf Locstate}, double $\ast$, {\bf C\+O\+M\+P\+O\+N\+E\+NT}, struct {\bf \+\_\+\+Flow\+Specified\+Region} $\ast$, {\bf Front} $\ast$)}\hypertarget{struct___flow_specified_region_ac64cd108cfd301ac1a19a6d9cc7bb312}{}\label{struct___flow_specified_region_ac64cd108cfd301ac1a19a6d9cc7bb312}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!comp@{comp}}
+\index{comp@{comp}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{comp}{comp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+O\+M\+P\+O\+N\+E\+NT} \+\_\+\+Flow\+Specified\+Region\+::comp}\hypertarget{struct___flow_specified_region_a5fce4f0a8a05cf23a93104d0c7580d00}{}\label{struct___flow_specified_region_a5fce4f0a8a05cf23a93104d0c7580d00}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!head@{head}}
+\index{head@{head}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{head}{head}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+\+Flow\+Specified\+Region}$\ast$ \+\_\+\+Flow\+Specified\+Region\+::head}\hypertarget{struct___flow_specified_region_a5e51bd32d4a24a009f2361bfabe44cf4}{}\label{struct___flow_specified_region_a5e51bd32d4a24a009f2361bfabe44cf4}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!next@{next}}
+\index{next@{next}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+\+Flow\+Specified\+Region}$\ast$ \+\_\+\+Flow\+Specified\+Region\+::next}\hypertarget{struct___flow_specified_region_a6498b836807b6b21689af01da4af0439}{}\label{struct___flow_specified_region_a6498b836807b6b21689af01da4af0439}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!prev@{prev}}
+\index{prev@{prev}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{prev}{prev}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+\+Flow\+Specified\+Region} $\ast$ \+\_\+\+Flow\+Specified\+Region\+::prev}\hypertarget{struct___flow_specified_region_a51ef4882bf1c349a6bc4a23c600ad0a4}{}\label{struct___flow_specified_region_a51ef4882bf1c349a6bc4a23c600ad0a4}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!tail@{tail}}
+\index{tail@{tail}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{tail}{tail}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+\+Flow\+Specified\+Region} $\ast$ \+\_\+\+Flow\+Specified\+Region\+::tail}\hypertarget{struct___flow_specified_region_a2a325be693b70780a41515fce2a235e9}{}\label{struct___flow_specified_region_a2a325be693b70780a41515fce2a235e9}
+\index{\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}!type@{type}}
+\index{type@{type}!\+\_\+\+Flow\+Specified\+Region@{\+\_\+\+Flow\+Specified\+Region}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}char \+\_\+\+Flow\+Specified\+Region\+::type\mbox{[}100\mbox{]}}\hypertarget{struct___flow_specified_region_a67b785a9f602ba9ff1ef48c6ed4a48c0}{}\label{struct___flow_specified_region_a67b785a9f602ba9ff1ef48c6ed4a48c0}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+S/src/front/\hyperlink{fdecs_8h}{fdecs.\+h}\end{DoxyCompactItemize}

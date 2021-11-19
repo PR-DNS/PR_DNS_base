@@ -1,0 +1,149 @@
+\hypertarget{group___s_u_r_f_a_c_e}{}\section{S\+U\+R\+F\+A\+CE Functions}
+\label{group___s_u_r_f_a_c_e}\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_gace258538e7976901cedcbff9bda2bc67}{I\+\_\+\+Smooth\+Surf\+Color} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, int num\+\_\+rounds)
+\begin{DoxyCompactList}\small\item\em A utility function to smooth the color of the surface by averaging the color with neighboring triangles. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$ \hyperlink{group___s_u_r_f_a_c_e_ga495b2ece6a428d98433c026382353773}{I\+\_\+\+Copy\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf)
+\begin{DoxyCompactList}\small\item\em This function return a copy of the input surface on the same interface structure. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_ga8d40b24606a741760d312b558d866511}{I\+\_\+\+Shift\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$displacement)
+\begin{DoxyCompactList}\small\item\em This function shift each point of the surface by given displacement. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$ \hyperlink{group___s_u_r_f_a_c_e_ga6eaa182acdbd072af3d7487eb0117f33}{I\+\_\+\+Add\+Two\+Surfaces} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf1, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf2)
+\begin{DoxyCompactList}\small\item\em This function add tris of surf2 to surf1, delete surf2 and return surf1, no other operations is performed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___s_u_r_f_a_c_e_gaa81b70b707d4e749bee586d509ca5859}{I\+\_\+\+Fold\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$dir, double $\ast$axis, double \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle}, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} first)
+\begin{DoxyCompactList}\small\item\em This function fold the surface around the axis described by dir (direction) and axis (a point on the axis) with input angle. Only points on the input side of the axis will be rotated. The function does its job of the surface is flat and axis is a line on the surface. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___s_u_r_f_a_c_e_gaa967e7cfef31d8336ccfb657b0d255fa}{I\+\_\+\+Sew\+Surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, double $\ast$crds\+\_\+start, double $\ast$crds\+\_\+end)
+\begin{DoxyCompactList}\small\item\em This function switches the surface along a line segment starting from crds\+\_\+start to crds\+\_\+end. The sewing line must be along existing curves with tolerance, else return NO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+/$\ast$! 
+
+\subsection{Function Documentation}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Add\+Two\+Surfaces@{I\+\_\+\+Add\+Two\+Surfaces}}
+\index{I\+\_\+\+Add\+Two\+Surfaces@{I\+\_\+\+Add\+Two\+Surfaces}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Add\+Two\+Surfaces(\+S\+U\+R\+F\+A\+C\+E $\ast$surf1, S\+U\+R\+F\+A\+C\+E $\ast$surf2)}{I_AddTwoSurfaces(SURFACE *surf1, SURFACE *surf2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+U\+R\+F\+A\+CE} $\ast$ I\+\_\+\+Add\+Two\+Surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf1, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf2}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_ga6eaa182acdbd072af3d7487eb0117f33}{}\label{group___s_u_r_f_a_c_e_ga6eaa182acdbd072af3d7487eb0117f33}
+
+
+This function add tris of surf2 to surf1, delete surf2 and return surf1, no other operations is performed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf1} & {\bfseries in} Input of the surface 1. \\
+\hline
+{\em surf2} & {\bfseries in} Input of the surface 2. \\
+\hline
+\end{DoxyParams}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Copy\+Surface@{I\+\_\+\+Copy\+Surface}}
+\index{I\+\_\+\+Copy\+Surface@{I\+\_\+\+Copy\+Surface}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Copy\+Surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf)}{I_CopySurface(SURFACE *surf)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+U\+R\+F\+A\+CE} $\ast$ I\+\_\+\+Copy\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_ga495b2ece6a428d98433c026382353773}{}\label{group___s_u_r_f_a_c_e_ga495b2ece6a428d98433c026382353773}
+
+
+This function return a copy of the input surface on the same interface structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries in} Input of the surface. \\
+\hline
+\end{DoxyParams}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Fold\+Surface@{I\+\_\+\+Fold\+Surface}}
+\index{I\+\_\+\+Fold\+Surface@{I\+\_\+\+Fold\+Surface}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Fold\+Surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$dir, double $\ast$axis, double angle, S\+I\+D\+E side, boolean first)}{I_FoldSurface(SURFACE *surf, double *dir, double *axis, double angle, SIDE side, boolean first)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+\_\+\+Fold\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{dir, }
+\item[{double $\ast$}]{axis, }
+\item[{double}]{angle, }
+\item[{{\bf S\+I\+DE}}]{side, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_gaa81b70b707d4e749bee586d509ca5859}{}\label{group___s_u_r_f_a_c_e_gaa81b70b707d4e749bee586d509ca5859}
+
+
+This function fold the surface around the axis described by dir (direction) and axis (a point on the axis) with input angle. Only points on the input side of the axis will be rotated. The function does its job of the surface is flat and axis is a line on the surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Input of the surface to be folded. \\
+\hline
+{\em dir} & {\bfseries in} direction of the folding axis. \\
+\hline
+{\em axis} & {\bfseries in} a point on the folding axis. \\
+\hline
+{\em angle} & {\bfseries in} angle of folding. \\
+\hline
+{\em side} & {\bfseries in} indicating point on the side to be rotated (folded). \\
+\hline
+{\em first} & {\bfseries in} if true, reset all the point of the surface. \\
+\hline
+\end{DoxyParams}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Sew\+Surface@{I\+\_\+\+Sew\+Surface}}
+\index{I\+\_\+\+Sew\+Surface@{I\+\_\+\+Sew\+Surface}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Sew\+Surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$crds\+\_\+start, double $\ast$crds\+\_\+end)}{I_SewSurface(SURFACE *surf, double *crds_start, double *crds_end)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} I\+\_\+\+Sew\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{crds\+\_\+start, }
+\item[{double $\ast$}]{crds\+\_\+end}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_gaa967e7cfef31d8336ccfb657b0d255fa}{}\label{group___s_u_r_f_a_c_e_gaa967e7cfef31d8336ccfb657b0d255fa}
+
+
+This function switches the surface along a line segment starting from crds\+\_\+start to crds\+\_\+end. The sewing line must be along existing curves with tolerance, else return NO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Input of the surface to be sewed. \\
+\hline
+{\em crds\+\_\+start} & {\bfseries in} start coordinates of sewing line segment. \\
+\hline
+{\em crds\+\_\+end} & {\bfseries in} end coordinates of sewing line segment. \\
+\hline
+\end{DoxyParams}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Shift\+Surface@{I\+\_\+\+Shift\+Surface}}
+\index{I\+\_\+\+Shift\+Surface@{I\+\_\+\+Shift\+Surface}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Shift\+Surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, double $\ast$displacement)}{I_ShiftSurface(SURFACE *surf, double *displacement)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+\_\+\+Shift\+Surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{displacement}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_ga8d40b24606a741760d312b558d866511}{}\label{group___s_u_r_f_a_c_e_ga8d40b24606a741760d312b558d866511}
+
+
+This function shift each point of the surface by given displacement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Input of the surface to be operated. \\
+\hline
+{\em displacement} & {\bfseries in} displacement each point is to be shifted. \\
+\hline
+\end{DoxyParams}
+\index{S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}!I\+\_\+\+Smooth\+Surf\+Color@{I\+\_\+\+Smooth\+Surf\+Color}}
+\index{I\+\_\+\+Smooth\+Surf\+Color@{I\+\_\+\+Smooth\+Surf\+Color}!S\+U\+R\+F\+A\+C\+E Functions@{S\+U\+R\+F\+A\+C\+E Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Smooth\+Surf\+Color(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, int num\+\_\+rounds)}{I_SmoothSurfColor(SURFACE *surf, int num_rounds)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+\_\+\+Smooth\+Surf\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{int}]{num\+\_\+rounds}
+\end{DoxyParamCaption}
+)}\hypertarget{group___s_u_r_f_a_c_e_gace258538e7976901cedcbff9bda2bc67}{}\label{group___s_u_r_f_a_c_e_gace258538e7976901cedcbff9bda2bc67}
+
+
+A utility function to smooth the color of the surface by averaging the color with neighboring triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surf} & {\bfseries inout} Address of surface to smooth color \\
+\hline
+{\em num\+\_\+round} & {\bfseries in} number of round of smoothing \\
+\hline
+\end{DoxyParams}

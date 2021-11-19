@@ -1,0 +1,375 @@
+\hypertarget{fscatter_8c}{}\section{D\+N\+S/src/front/fscatter.c File Reference}
+\label{fscatter_8c}\index{D\+N\+S/src/front/fscatter.\+c@{D\+N\+S/src/front/fscatter.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fscatter_8c_afe759d2b6c4ff043628d467079aa4539}{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}fscatter\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a1c72d7c7222f4e8e6b6b0997b5002e80}{bundle\+\_\+array\+\_\+buffer} (int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, \hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a2063dda4831c13772bf4273c1ab67c6b}{unbundle\+\_\+array\+\_\+buffer} (int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, \hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fscatter_8c_a7ace8dfcf4f620e703ab9cfb6f38b1d4}{set\+\_\+send\+\_\+buffer\+\_\+limits} (int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fscatter_8c_a1917977b45b1f47141f66eb41fc2c2bd}{set\+\_\+recv\+\_\+buffer\+\_\+limits} (int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a72f6a87c463b0f3eb916bd5813dce3a2}{reflect\+\_\+array\+\_\+buffer} (int, int, int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fscatter_8c_a9ba624fc0a5c50c32ee0569548f4457e}{set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits} (int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{fscatter_8c_a23d118b34cf3a2257e30341ce347ac03}{set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits} (int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fscatter_8c_aba3cf24f93a68a14e88218a51e22bf56}{scatter\+\_\+front} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$ \hyperlink{fscatter_8c_ac975227fed84a2ed195d5fdf1deda3d0}{f\+\_\+zoom\+\_\+interface} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, double $\ast$L, double $\ast$U, double $\ast$$\ast$Q)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_ae06fa71d176ec9460a2efdd899e29bd8}{delete\+\_\+subdomain\+\_\+boundaries} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a353db0cfbcb61072806b3c3d93c31f4c}{clip\+\_\+front\+\_\+to\+\_\+subdomain} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a5bfd06546361e4e022e35d653e2a0773}{pp\+\_\+clip\+\_\+rect\+\_\+grids} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int rbt\mbox{[}3\mbox{]}\mbox{[}2\mbox{]})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a8bba484116e564675ad8fcd2f960d1b4}{set\+\_\+front\+\_\+pp\+\_\+grid} (\hyperlink{cdecs_8h_a18423d263765f9b6e78d8f1089446c91}{I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$init, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a4f2b8521dce71ab662e40f3fdbb0329b}{scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array} (\hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}{G\+R\+I\+D\+\_\+\+T\+Y\+PE} grid\+\_\+type, double $\ast$solute, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$symmetry)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fscatter_8c_ad77cf0cbe5ca36840762299851ef10c0}{cpu\+\_\+adapt\+\_\+front} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double \hyperlink{uprotos_8h_adcc15001e2d4aa8653e6a90d1b7c2bbc}{cpu\+\_\+time}, int $\ast$lexpand, int $\ast$uexpand)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a07ae899cbae547c15a2f7724c708cb40}{pack\+\_\+index\+\_\+in\+\_\+dir} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a09e60c13eef682dc62e9f5ae9e9c4a20}{unpack\+\_\+index\+\_\+in\+\_\+dir} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_af7262da56d1f567d9541d4401351b062}{reflect\+\_\+index\+\_\+in\+\_\+dir} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a92277d9c7673ef50abb471aeed08b2b6}{pack\+\_\+index\+\_\+in\+\_\+dir2d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a1688ecef4d6c544322fa0559d5b3ef12}{unpack\+\_\+index\+\_\+in\+\_\+dir2d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a5e942b91c59af1f2e8012a91965a1281}{reflect\+\_\+index\+\_\+in\+\_\+dir2d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a76eeca9895f4f36bef0832a2935ff7ce}{pack\+\_\+index\+\_\+in\+\_\+dir3d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a7bd3cac56b4fc781e8ff239cf75eca35}{unpack\+\_\+index\+\_\+in\+\_\+dir3d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fscatter_8c_a5b33317f1e849fe2bdf61e085c96aaad}{reflect\+\_\+index\+\_\+in\+\_\+dir3d} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a921fb4506ba3b04acb9e31c15f9bf431}{scatter\+\_\+cell\+\_\+index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, int $\ast$lbuf, int $\ast$ubuf, \hyperlink{geom_8h_ab275e4206577b8f345fa1ec67e64d18b}{G\+R\+I\+D\+\_\+\+T\+Y\+PE} grid\+\_\+type, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ijk\+\_\+to\+\_\+I)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fscatter_8c_a42deb4df75ed356e7ceea3f4d9b4c25c}{clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{fscatter.\+c@{fscatter.\+c}!D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}{DEBUG_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}fscatter\char`\"{}}\hypertarget{fscatter_8c_afe759d2b6c4ff043628d467079aa4539}{}\label{fscatter_8c_afe759d2b6c4ff043628d467079aa4539}
+
+
+\subsection{Function Documentation}
+\index{fscatter.\+c@{fscatter.\+c}!bundle\+\_\+array\+\_\+buffer@{bundle\+\_\+array\+\_\+buffer}}
+\index{bundle\+\_\+array\+\_\+buffer@{bundle\+\_\+array\+\_\+buffer}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{bundle\+\_\+array\+\_\+buffer(int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, byte $\ast$)}{bundle_array_buffer(int, int *, int *, int *, double *, byte *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void bundle\+\_\+array\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int $\ast$}]{gmax, }
+\item[{double $\ast$}]{array, }
+\item[{{\bf byte} $\ast$}]{storage}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a1c72d7c7222f4e8e6b6b0997b5002e80}{}\label{fscatter_8c_a1c72d7c7222f4e8e6b6b0997b5002e80}
+\index{fscatter.\+c@{fscatter.\+c}!clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type@{clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type}}
+\index{clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type@{clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type(\+Front $\ast$front)}{clip_front_to_rect_boundary_type(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void clip\+\_\+front\+\_\+to\+\_\+rect\+\_\+boundary\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a42deb4df75ed356e7ceea3f4d9b4c25c}{}\label{fscatter_8c_a42deb4df75ed356e7ceea3f4d9b4c25c}
+\index{fscatter.\+c@{fscatter.\+c}!clip\+\_\+front\+\_\+to\+\_\+subdomain@{clip\+\_\+front\+\_\+to\+\_\+subdomain}}
+\index{clip\+\_\+front\+\_\+to\+\_\+subdomain@{clip\+\_\+front\+\_\+to\+\_\+subdomain}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{clip\+\_\+front\+\_\+to\+\_\+subdomain(\+Front $\ast$front)}{clip_front_to_subdomain(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void clip\+\_\+front\+\_\+to\+\_\+subdomain (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a353db0cfbcb61072806b3c3d93c31f4c}{}\label{fscatter_8c_a353db0cfbcb61072806b3c3d93c31f4c}
+\index{fscatter.\+c@{fscatter.\+c}!cpu\+\_\+adapt\+\_\+front@{cpu\+\_\+adapt\+\_\+front}}
+\index{cpu\+\_\+adapt\+\_\+front@{cpu\+\_\+adapt\+\_\+front}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{cpu\+\_\+adapt\+\_\+front(\+Front $\ast$front, double cpu\+\_\+time, int $\ast$lexpand, int $\ast$uexpand)}{cpu_adapt_front(Front *front, double cpu_time, int *lexpand, int *uexpand)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} cpu\+\_\+adapt\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double}]{cpu\+\_\+time, }
+\item[{int $\ast$}]{lexpand, }
+\item[{int $\ast$}]{uexpand}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_ad77cf0cbe5ca36840762299851ef10c0}{}\label{fscatter_8c_ad77cf0cbe5ca36840762299851ef10c0}
+\index{fscatter.\+c@{fscatter.\+c}!delete\+\_\+subdomain\+\_\+boundaries@{delete\+\_\+subdomain\+\_\+boundaries}}
+\index{delete\+\_\+subdomain\+\_\+boundaries@{delete\+\_\+subdomain\+\_\+boundaries}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{delete\+\_\+subdomain\+\_\+boundaries(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{delete_subdomain_boundaries(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void delete\+\_\+subdomain\+\_\+boundaries (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_ae06fa71d176ec9460a2efdd899e29bd8}{}\label{fscatter_8c_ae06fa71d176ec9460a2efdd899e29bd8}
+\index{fscatter.\+c@{fscatter.\+c}!f\+\_\+zoom\+\_\+interface@{f\+\_\+zoom\+\_\+interface}}
+\index{f\+\_\+zoom\+\_\+interface@{f\+\_\+zoom\+\_\+interface}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+zoom\+\_\+interface(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, double $\ast$\+L, double $\ast$\+U, double $\ast$$\ast$\+Q)}{f_zoom_interface(INTERFACE *intfc, RECT_GRID *gr, double *L, double *U, double **Q)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf I\+N\+T\+E\+R\+F\+A\+CE}$\ast$ f\+\_\+zoom\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{double $\ast$$\ast$}]{Q}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_ac975227fed84a2ed195d5fdf1deda3d0}{}\label{fscatter_8c_ac975227fed84a2ed195d5fdf1deda3d0}
+\index{fscatter.\+c@{fscatter.\+c}!pack\+\_\+index\+\_\+in\+\_\+dir@{pack\+\_\+index\+\_\+in\+\_\+dir}}
+\index{pack\+\_\+index\+\_\+in\+\_\+dir@{pack\+\_\+index\+\_\+in\+\_\+dir}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{pack\+\_\+index\+\_\+in\+\_\+dir(\+Front $\ast$, P\+O\+I\+N\+T\+E\+R, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{pack_index_in_dir(Front *, POINTER, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pack\+\_\+index\+\_\+in\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfs, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a07ae899cbae547c15a2f7724c708cb40}{}\label{fscatter_8c_a07ae899cbae547c15a2f7724c708cb40}
+\index{fscatter.\+c@{fscatter.\+c}!pack\+\_\+index\+\_\+in\+\_\+dir2d@{pack\+\_\+index\+\_\+in\+\_\+dir2d}}
+\index{pack\+\_\+index\+\_\+in\+\_\+dir2d@{pack\+\_\+index\+\_\+in\+\_\+dir2d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{pack\+\_\+index\+\_\+in\+\_\+dir2d(\+Front $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{pack_index_in_dir2d(Front *, int **, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pack\+\_\+index\+\_\+in\+\_\+dir2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfs, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a92277d9c7673ef50abb471aeed08b2b6}{}\label{fscatter_8c_a92277d9c7673ef50abb471aeed08b2b6}
+\index{fscatter.\+c@{fscatter.\+c}!pack\+\_\+index\+\_\+in\+\_\+dir3d@{pack\+\_\+index\+\_\+in\+\_\+dir3d}}
+\index{pack\+\_\+index\+\_\+in\+\_\+dir3d@{pack\+\_\+index\+\_\+in\+\_\+dir3d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{pack\+\_\+index\+\_\+in\+\_\+dir3d(\+Front $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{pack_index_in_dir3d(Front *, int ***, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void pack\+\_\+index\+\_\+in\+\_\+dir3d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfs, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a76eeca9895f4f36bef0832a2935ff7ce}{}\label{fscatter_8c_a76eeca9895f4f36bef0832a2935ff7ce}
+\index{fscatter.\+c@{fscatter.\+c}!pp\+\_\+clip\+\_\+rect\+\_\+grids@{pp\+\_\+clip\+\_\+rect\+\_\+grids}}
+\index{pp\+\_\+clip\+\_\+rect\+\_\+grids@{pp\+\_\+clip\+\_\+rect\+\_\+grids}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{pp\+\_\+clip\+\_\+rect\+\_\+grids(\+Front $\ast$front, int rbt[3][2])}{pp_clip_rect_grids(Front *front, int rbt[3][2])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void pp\+\_\+clip\+\_\+rect\+\_\+grids (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int}]{rbt\mbox{[}3\mbox{]}\mbox{[}2\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a5bfd06546361e4e022e35d653e2a0773}{}\label{fscatter_8c_a5bfd06546361e4e022e35d653e2a0773}
+\index{fscatter.\+c@{fscatter.\+c}!reflect\+\_\+array\+\_\+buffer@{reflect\+\_\+array\+\_\+buffer}}
+\index{reflect\+\_\+array\+\_\+buffer@{reflect\+\_\+array\+\_\+buffer}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{reflect\+\_\+array\+\_\+buffer(int, int, int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, int)}{reflect_array_buffer(int, int, int, int *, int *, int *, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reflect\+\_\+array\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{double $\ast$}]{solute, }
+\item[{int}]{symmetry}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a72f6a87c463b0f3eb916bd5813dce3a2}{}\label{fscatter_8c_a72f6a87c463b0f3eb916bd5813dce3a2}
+\index{fscatter.\+c@{fscatter.\+c}!reflect\+\_\+index\+\_\+in\+\_\+dir@{reflect\+\_\+index\+\_\+in\+\_\+dir}}
+\index{reflect\+\_\+index\+\_\+in\+\_\+dir@{reflect\+\_\+index\+\_\+in\+\_\+dir}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{reflect\+\_\+index\+\_\+in\+\_\+dir(\+Front $\ast$, P\+O\+I\+N\+T\+E\+R, int $\ast$, int $\ast$, int $\ast$, int, int)}{reflect_index_in_dir(Front *, POINTER, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reflect\+\_\+index\+\_\+in\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_af7262da56d1f567d9541d4401351b062}{}\label{fscatter_8c_af7262da56d1f567d9541d4401351b062}
+\index{fscatter.\+c@{fscatter.\+c}!reflect\+\_\+index\+\_\+in\+\_\+dir2d@{reflect\+\_\+index\+\_\+in\+\_\+dir2d}}
+\index{reflect\+\_\+index\+\_\+in\+\_\+dir2d@{reflect\+\_\+index\+\_\+in\+\_\+dir2d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{reflect\+\_\+index\+\_\+in\+\_\+dir2d(\+Front $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{reflect_index_in_dir2d(Front *, int **, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reflect\+\_\+index\+\_\+in\+\_\+dir2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a5e942b91c59af1f2e8012a91965a1281}{}\label{fscatter_8c_a5e942b91c59af1f2e8012a91965a1281}
+\index{fscatter.\+c@{fscatter.\+c}!reflect\+\_\+index\+\_\+in\+\_\+dir3d@{reflect\+\_\+index\+\_\+in\+\_\+dir3d}}
+\index{reflect\+\_\+index\+\_\+in\+\_\+dir3d@{reflect\+\_\+index\+\_\+in\+\_\+dir3d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{reflect\+\_\+index\+\_\+in\+\_\+dir3d(\+Front $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{reflect_index_in_dir3d(Front *, int ***, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reflect\+\_\+index\+\_\+in\+\_\+dir3d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a5b33317f1e849fe2bdf61e085c96aaad}{}\label{fscatter_8c_a5b33317f1e849fe2bdf61e085c96aaad}
+\index{fscatter.\+c@{fscatter.\+c}!scatter\+\_\+cell\+\_\+index@{scatter\+\_\+cell\+\_\+index}}
+\index{scatter\+\_\+cell\+\_\+index@{scatter\+\_\+cell\+\_\+index}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{scatter\+\_\+cell\+\_\+index(\+Front $\ast$fr, int $\ast$lbuf, int $\ast$ubuf, G\+R\+I\+D\+\_\+\+T\+Y\+P\+E grid\+\_\+type, P\+O\+I\+N\+T\+E\+R ijk\+\_\+to\+\_\+\+I)}{scatter_cell_index(Front *fr, int *lbuf, int *ubuf, GRID_TYPE grid_type, POINTER ijk_to_I)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void scatter\+\_\+cell\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+T\+Y\+PE}}]{grid\+\_\+type, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{ijk\+\_\+to\+\_\+I}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a921fb4506ba3b04acb9e31c15f9bf431}{}\label{fscatter_8c_a921fb4506ba3b04acb9e31c15f9bf431}
+\index{fscatter.\+c@{fscatter.\+c}!scatter\+\_\+front@{scatter\+\_\+front}}
+\index{scatter\+\_\+front@{scatter\+\_\+front}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{scatter\+\_\+front(\+Front $\ast$front)}{scatter_front(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} scatter\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_aba3cf24f93a68a14e88218a51e22bf56}{}\label{fscatter_8c_aba3cf24f93a68a14e88218a51e22bf56}
+\index{fscatter.\+c@{fscatter.\+c}!scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array@{scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array}}
+\index{scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array@{scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array(\+G\+R\+I\+D\+\_\+\+T\+Y\+P\+E grid\+\_\+type, double $\ast$solute, Front $\ast$front, int $\ast$symmetry)}{scatter_top_grid_float_array(GRID_TYPE grid_type, double *solute, Front *front, int *symmetry)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void scatter\+\_\+top\+\_\+grid\+\_\+float\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D\+\_\+\+T\+Y\+PE}}]{grid\+\_\+type, }
+\item[{double $\ast$}]{solute, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{symmetry}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a4f2b8521dce71ab662e40f3fdbb0329b}{}\label{fscatter_8c_a4f2b8521dce71ab662e40f3fdbb0329b}
+\index{fscatter.\+c@{fscatter.\+c}!set\+\_\+front\+\_\+pp\+\_\+grid@{set\+\_\+front\+\_\+pp\+\_\+grid}}
+\index{set\+\_\+front\+\_\+pp\+\_\+grid@{set\+\_\+front\+\_\+pp\+\_\+grid}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+front\+\_\+pp\+\_\+grid(\+I\+N\+I\+T\+\_\+\+D\+A\+T\+A $\ast$init, Front $\ast$front)}{set_front_pp_grid(INIT_DATA *init, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+front\+\_\+pp\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$}]{init, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a8bba484116e564675ad8fcd2f960d1b4}{}\label{fscatter_8c_a8bba484116e564675ad8fcd2f960d1b4}
+\index{fscatter.\+c@{fscatter.\+c}!set\+\_\+recv\+\_\+buffer\+\_\+limits@{set\+\_\+recv\+\_\+buffer\+\_\+limits}}
+\index{set\+\_\+recv\+\_\+buffer\+\_\+limits@{set\+\_\+recv\+\_\+buffer\+\_\+limits}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+recv\+\_\+buffer\+\_\+limits(int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)}{set_recv_buffer_limits(int, int *, int *, int, int, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+recv\+\_\+buffer\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{gmax}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a1917977b45b1f47141f66eb41fc2c2bd}{}\label{fscatter_8c_a1917977b45b1f47141f66eb41fc2c2bd}
+\index{fscatter.\+c@{fscatter.\+c}!set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits@{set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits}}
+\index{set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits@{set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits(int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)}{set_recv_comp_buffer_limits(int, int *, int *, int, int, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+recv\+\_\+comp\+\_\+buffer\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{gmax}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a23d118b34cf3a2257e30341ce347ac03}{}\label{fscatter_8c_a23d118b34cf3a2257e30341ce347ac03}
+\index{fscatter.\+c@{fscatter.\+c}!set\+\_\+send\+\_\+buffer\+\_\+limits@{set\+\_\+send\+\_\+buffer\+\_\+limits}}
+\index{set\+\_\+send\+\_\+buffer\+\_\+limits@{set\+\_\+send\+\_\+buffer\+\_\+limits}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+send\+\_\+buffer\+\_\+limits(int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)}{set_send_buffer_limits(int, int *, int *, int, int, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+send\+\_\+buffer\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{gmax}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a7ace8dfcf4f620e703ab9cfb6f38b1d4}{}\label{fscatter_8c_a7ace8dfcf4f620e703ab9cfb6f38b1d4}
+\index{fscatter.\+c@{fscatter.\+c}!set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits@{set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits}}
+\index{set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits@{set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits(int, int $\ast$, int $\ast$, int, int, int $\ast$, int $\ast$, int $\ast$)}{set_send_comp_buffer_limits(int, int *, int *, int, int, int *, int *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int set\+\_\+send\+\_\+comp\+\_\+buffer\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int}]{dir, }
+\item[{int}]{side, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{gmax}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a9ba624fc0a5c50c32ee0569548f4457e}{}\label{fscatter_8c_a9ba624fc0a5c50c32ee0569548f4457e}
+\index{fscatter.\+c@{fscatter.\+c}!unbundle\+\_\+array\+\_\+buffer@{unbundle\+\_\+array\+\_\+buffer}}
+\index{unbundle\+\_\+array\+\_\+buffer@{unbundle\+\_\+array\+\_\+buffer}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{unbundle\+\_\+array\+\_\+buffer(int, int $\ast$, int $\ast$, int $\ast$, double $\ast$, byte $\ast$)}{unbundle_array_buffer(int, int *, int *, int *, double *, byte *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void unbundle\+\_\+array\+\_\+buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{int $\ast$}]{bmin, }
+\item[{int $\ast$}]{bmax, }
+\item[{int $\ast$}]{gmax, }
+\item[{double $\ast$}]{array, }
+\item[{{\bf byte} $\ast$}]{storage}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a2063dda4831c13772bf4273c1ab67c6b}{}\label{fscatter_8c_a2063dda4831c13772bf4273c1ab67c6b}
+\index{fscatter.\+c@{fscatter.\+c}!unpack\+\_\+index\+\_\+in\+\_\+dir@{unpack\+\_\+index\+\_\+in\+\_\+dir}}
+\index{unpack\+\_\+index\+\_\+in\+\_\+dir@{unpack\+\_\+index\+\_\+in\+\_\+dir}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{unpack\+\_\+index\+\_\+in\+\_\+dir(\+Front $\ast$, P\+O\+I\+N\+T\+E\+R, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{unpack_index_in_dir(Front *, POINTER, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void unpack\+\_\+index\+\_\+in\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfr, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a09e60c13eef682dc62e9f5ae9e9c4a20}{}\label{fscatter_8c_a09e60c13eef682dc62e9f5ae9e9c4a20}
+\index{fscatter.\+c@{fscatter.\+c}!unpack\+\_\+index\+\_\+in\+\_\+dir2d@{unpack\+\_\+index\+\_\+in\+\_\+dir2d}}
+\index{unpack\+\_\+index\+\_\+in\+\_\+dir2d@{unpack\+\_\+index\+\_\+in\+\_\+dir2d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{unpack\+\_\+index\+\_\+in\+\_\+dir2d(\+Front $\ast$, int $\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{unpack_index_in_dir2d(Front *, int **, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void unpack\+\_\+index\+\_\+in\+\_\+dir2d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfr, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a1688ecef4d6c544322fa0559d5b3ef12}{}\label{fscatter_8c_a1688ecef4d6c544322fa0559d5b3ef12}
+\index{fscatter.\+c@{fscatter.\+c}!unpack\+\_\+index\+\_\+in\+\_\+dir3d@{unpack\+\_\+index\+\_\+in\+\_\+dir3d}}
+\index{unpack\+\_\+index\+\_\+in\+\_\+dir3d@{unpack\+\_\+index\+\_\+in\+\_\+dir3d}!fscatter.\+c@{fscatter.\+c}}
+\subsubsection[{\texorpdfstring{unpack\+\_\+index\+\_\+in\+\_\+dir3d(\+Front $\ast$, int $\ast$$\ast$$\ast$, int $\ast$, int $\ast$, int $\ast$, int $\ast$, int, int)}{unpack_index_in_dir3d(Front *, int ***, int *, int *, int *, int *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void unpack\+\_\+index\+\_\+in\+\_\+dir3d (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{int $\ast$$\ast$$\ast$}]{I\+J\+K\+\_\+to\+\_\+I, }
+\item[{int $\ast$}]{gmax, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{int $\ast$}]{bfs, }
+\item[{int}]{dir, }
+\item[{int}]{nb}
+\end{DoxyParamCaption}
+)}\hypertarget{fscatter_8c_a7bd3cac56b4fc781e8ff239cf75eca35}{}\label{fscatter_8c_a7bd3cac56b4fc781e8ff239cf75eca35}

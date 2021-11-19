@@ -1,0 +1,119 @@
+\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r}{}\section{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER Class Reference}
+\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r}\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+
+
+{\ttfamily \#include $<$solver.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ac3f87eb147ca1c9ead0b481eb4563c06}{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} \&front)
+\item 
+void \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a4167d269d96379c6f17b15b6a18d0e8f}{set\+\_\+solver\+\_\+domain} (void)
+\item 
+void \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aef69551bf44e25da05e7ef0d00175166}{solve} (double $\ast$\hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ab3ebabe6f5e175663822836a63ca32b8}{soln})
+\item 
+double \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aeab5e4fe128f1e1b582418e66e0175e4}{check\+Solver} (int $\ast$icoords, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} print\+\_\+details)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_afdd4a98623f46ae45d7e50979977334f}{i\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa78cd4f05f48d0fd191ffda00818d9ca}{ij\+\_\+to\+\_\+I}
+\item 
+int $\ast$$\ast$$\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aec704912cd1699b7bdc6c39c9bcb5bb4}{ijk\+\_\+to\+\_\+I}
+\item 
+int \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a551654bdb25dbf17b09ff7bae149d9f4}{ilower}
+\item 
+int \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ad47e0c3569a46b01a96ca076e2237530}{iupper}
+\item 
+double \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_adcbff58b7b9fec4de3221de4432c2c8f}{obst\+\_\+comp}
+\item 
+double $\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ab3ebabe6f5e175663822836a63ca32b8}{soln}
+\item 
+double $\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a17e1d162f2a626babc280614fa8a8a01}{source}
+\item 
+double $\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa86014d1a317246473e56c68a5a5cc4f}{D}
+\item 
+double($\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a8027bbe3442b5dfa15e1881232b34675}{get\+State\+Var} )(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})
+\item 
+int($\ast$ \hyperlink{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a07adeb521e1be848a675ffdb11133c3a}{find\+State\+At\+Crossing} )(\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R(\+Front \&front)}{DUAL_ELLIPTIC_SOLVER(Front &front)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::\+D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} \&}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ac3f87eb147ca1c9ead0b481eb4563c06}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ac3f87eb147ca1c9ead0b481eb4563c06}
+
+
+\subsection{Member Function Documentation}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!check\+Solver@{check\+Solver}}
+\index{check\+Solver@{check\+Solver}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{check\+Solver(int $\ast$icoords, boolean print\+\_\+details)}{checkSolver(int *icoords, boolean print_details)}}]{\setlength{\rightskip}{0pt plus 5cm}double D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::check\+Solver (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf boolean}}]{print\+\_\+details}
+\end{DoxyParamCaption}
+)}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aeab5e4fe128f1e1b582418e66e0175e4}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aeab5e4fe128f1e1b582418e66e0175e4}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!set\+\_\+solver\+\_\+domain@{set\+\_\+solver\+\_\+domain}}
+\index{set\+\_\+solver\+\_\+domain@{set\+\_\+solver\+\_\+domain}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{set\+\_\+solver\+\_\+domain(void)}{set_solver_domain(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::set\+\_\+solver\+\_\+domain (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a4167d269d96379c6f17b15b6a18d0e8f}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a4167d269d96379c6f17b15b6a18d0e8f}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!solve@{solve}}
+\index{solve@{solve}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{solve(double $\ast$soln)}{solve(double *soln)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::solve (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{soln}
+\end{DoxyParamCaption}
+)}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aef69551bf44e25da05e7ef0d00175166}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aef69551bf44e25da05e7ef0d00175166}
+
+
+\subsection{Member Data Documentation}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!D@{D}}
+\index{D@{D}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{D}{D}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::D}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa86014d1a317246473e56c68a5a5cc4f}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa86014d1a317246473e56c68a5a5cc4f}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!find\+State\+At\+Crossing@{find\+State\+At\+Crossing}}
+\index{find\+State\+At\+Crossing@{find\+State\+At\+Crossing}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{find\+State\+At\+Crossing}{findStateAtCrossing}}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::find\+State\+At\+Crossing) ({\bf Front} $\ast$, int $\ast$, {\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, int, {\bf P\+O\+I\+N\+T\+ER} $\ast$, {\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, double $\ast$)}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a07adeb521e1be848a675ffdb11133c3a}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a07adeb521e1be848a675ffdb11133c3a}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!get\+State\+Var@{get\+State\+Var}}
+\index{get\+State\+Var@{get\+State\+Var}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{get\+State\+Var}{getStateVar}}]{\setlength{\rightskip}{0pt plus 5cm}double($\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::get\+State\+Var) ({\bf P\+O\+I\+N\+T\+ER})}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a8027bbe3442b5dfa15e1881232b34675}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a8027bbe3442b5dfa15e1881232b34675}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!i\+\_\+to\+\_\+I@{i\+\_\+to\+\_\+I}}
+\index{i\+\_\+to\+\_\+I@{i\+\_\+to\+\_\+I}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{i\+\_\+to\+\_\+I}{i_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::i\+\_\+to\+\_\+I}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_afdd4a98623f46ae45d7e50979977334f}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_afdd4a98623f46ae45d7e50979977334f}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!ij\+\_\+to\+\_\+I@{ij\+\_\+to\+\_\+I}}
+\index{ij\+\_\+to\+\_\+I@{ij\+\_\+to\+\_\+I}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{ij\+\_\+to\+\_\+I}{ij_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::ij\+\_\+to\+\_\+I}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa78cd4f05f48d0fd191ffda00818d9ca}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aa78cd4f05f48d0fd191ffda00818d9ca}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!ijk\+\_\+to\+\_\+I@{ijk\+\_\+to\+\_\+I}}
+\index{ijk\+\_\+to\+\_\+I@{ijk\+\_\+to\+\_\+I}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{ijk\+\_\+to\+\_\+I}{ijk_to_I}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::ijk\+\_\+to\+\_\+I}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aec704912cd1699b7bdc6c39c9bcb5bb4}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_aec704912cd1699b7bdc6c39c9bcb5bb4}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!ilower@{ilower}}
+\index{ilower@{ilower}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{ilower}{ilower}}]{\setlength{\rightskip}{0pt plus 5cm}int D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::ilower}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a551654bdb25dbf17b09ff7bae149d9f4}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a551654bdb25dbf17b09ff7bae149d9f4}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!iupper@{iupper}}
+\index{iupper@{iupper}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{iupper}{iupper}}]{\setlength{\rightskip}{0pt plus 5cm}int D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::iupper}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ad47e0c3569a46b01a96ca076e2237530}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ad47e0c3569a46b01a96ca076e2237530}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!obst\+\_\+comp@{obst\+\_\+comp}}
+\index{obst\+\_\+comp@{obst\+\_\+comp}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{obst\+\_\+comp}{obst_comp}}]{\setlength{\rightskip}{0pt plus 5cm}double D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::obst\+\_\+comp}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_adcbff58b7b9fec4de3221de4432c2c8f}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_adcbff58b7b9fec4de3221de4432c2c8f}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!soln@{soln}}
+\index{soln@{soln}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{soln}{soln}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::soln}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ab3ebabe6f5e175663822836a63ca32b8}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_ab3ebabe6f5e175663822836a63ca32b8}
+\index{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}!source@{source}}
+\index{source@{source}!D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER@{D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+ER}}
+\subsubsection[{\texorpdfstring{source}{source}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ D\+U\+A\+L\+\_\+\+E\+L\+L\+I\+P\+T\+I\+C\+\_\+\+S\+O\+L\+V\+E\+R\+::source}\hypertarget{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a17e1d162f2a626babc280614fa8a8a01}{}\label{class_d_u_a_l___e_l_l_i_p_t_i_c___s_o_l_v_e_r_a17e1d162f2a626babc280614fa8a8a01}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+S/solver/\hyperlink{solver_8h}{solver.\+h}\item 
+D\+N\+S/solver/\hyperlink{dual__ellip_8cpp}{dual\+\_\+ellip.\+cpp}\end{DoxyCompactItemize}

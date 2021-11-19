@@ -1,0 +1,69 @@
+\hypertarget{clminit_8cpp}{}\section{D\+N\+S/climate/clminit.cpp File Reference}
+\label{clminit_8cpp}\index{D\+N\+S/climate/clminit.\+cpp@{D\+N\+S/climate/clminit.\+cpp}}
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}climate.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{clminit_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{clminit_8cpp_a76a94886afb1284948106628b9b9c4f2}{read\+\_\+\+C\+L\+\_\+prob\+\_\+type} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clminit_8cpp_aac27f6b66ffef35b4ca7a01dc65d3c31}{read\+Phase\+Params} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clminit_8cpp_a6e5283438a493e61f356eb6094757299}{read\+Water\+Drops\+Params} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, char $\ast$\hyperlink{i_fluid_8cpp_a32e9821b258f94e23297294d14c55744}{restart\+\_\+name})
+\item 
+void \hyperlink{clminit_8cpp_a2facf1e4f58ab27a2c57e12058d3cc7f}{init\+Water\+Drops} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+void \hyperlink{clminit_8cpp_a0fd97064149426a40f312ed45255f59b}{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data} (char $\ast$inname, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_aa0691918b7151755ba8c2abfbde73314}{F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA} f\+\_\+basic)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{clminit.\+cpp@{clminit.\+cpp}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL}{MAX_NUM_VERTEX_IN_CELL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+\_\+\+C\+E\+LL~20}\hypertarget{clminit_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}{}\label{clminit_8cpp_a314a8ece97ca53a83d2fc8e5b9a5ed38}
+
+
+\subsection{Function Documentation}
+\index{clminit.\+cpp@{clminit.\+cpp}!init\+Water\+Drops@{init\+Water\+Drops}}
+\index{init\+Water\+Drops@{init\+Water\+Drops}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+Water\+Drops(\+Front $\ast$front)}{initWaterDrops(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Water\+Drops (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clminit_8cpp_a2facf1e4f58ab27a2c57e12058d3cc7f}{}\label{clminit_8cpp_a2facf1e4f58ab27a2c57e12058d3cc7f}
+\index{clminit.\+cpp@{clminit.\+cpp}!read\+\_\+\+C\+L\+\_\+prob\+\_\+type@{read\+\_\+\+C\+L\+\_\+prob\+\_\+type}}
+\index{read\+\_\+\+C\+L\+\_\+prob\+\_\+type@{read\+\_\+\+C\+L\+\_\+prob\+\_\+type}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+\_\+\+C\+L\+\_\+prob\+\_\+type(\+Front $\ast$front)}{read_CL_prob_type(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+\+C\+L\+\_\+prob\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clminit_8cpp_a76a94886afb1284948106628b9b9c4f2}{}\label{clminit_8cpp_a76a94886afb1284948106628b9b9c4f2}
+\index{clminit.\+cpp@{clminit.\+cpp}!read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data}}
+\index{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data@{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data(char $\ast$inname, Front $\ast$front, F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+T\+A f\+\_\+basic)}{read_crt_dirichlet_bdry_data(char *inname, Front *front, F_BASIC_DATA f_basic)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+crt\+\_\+dirichlet\+\_\+bdry\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{inname, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf F\+\_\+\+B\+A\+S\+I\+C\+\_\+\+D\+A\+TA}}]{f\+\_\+basic}
+\end{DoxyParamCaption}
+)}\hypertarget{clminit_8cpp_a0fd97064149426a40f312ed45255f59b}{}\label{clminit_8cpp_a0fd97064149426a40f312ed45255f59b}
+\index{clminit.\+cpp@{clminit.\+cpp}!read\+Phase\+Params@{read\+Phase\+Params}}
+\index{read\+Phase\+Params@{read\+Phase\+Params}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Phase\+Params(\+Front $\ast$front)}{readPhaseParams(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Phase\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{clminit_8cpp_aac27f6b66ffef35b4ca7a01dc65d3c31}{}\label{clminit_8cpp_aac27f6b66ffef35b4ca7a01dc65d3c31}
+\index{clminit.\+cpp@{clminit.\+cpp}!read\+Water\+Drops\+Params@{read\+Water\+Drops\+Params}}
+\index{read\+Water\+Drops\+Params@{read\+Water\+Drops\+Params}!clminit.\+cpp@{clminit.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Water\+Drops\+Params(\+Front $\ast$front, char $\ast$restart\+\_\+name)}{readWaterDropsParams(Front *front, char *restart_name)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Water\+Drops\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{char $\ast$}]{restart\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{clminit_8cpp_a6e5283438a493e61f356eb6094757299}{}\label{clminit_8cpp_a6e5283438a493e61f356eb6094757299}

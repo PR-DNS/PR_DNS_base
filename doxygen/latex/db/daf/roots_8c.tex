@@ -1,0 +1,113 @@
+\hypertarget{roots_8c}{}\section{D\+N\+S/src/util/roots.c File Reference}
+\label{roots_8c}\index{D\+N\+S/src/util/roots.\+c@{D\+N\+S/src/util/roots.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{roots_8c_a9334a5b9057f32da96db9b5c6a045d67a06954b2ea5fc1655c7221d4cd2761841}{N\+U\+M\+\_\+\+I\+T\+ER} = 50
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{roots_8c_a9ec9364c652099e5fcb8fe56382c17fe}{bisection\+\_\+find\+\_\+root} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$f)(double, double $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} f\+\_\+params, double y, double $\ast$px, double x0, double x1, double \hyperlink{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{epsilon}, double delta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{roots_8c_ab34192dbc627d192b94b58b938daa315}{find\+\_\+separation\+\_\+point} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$f)(double, double $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} f\+\_\+params, double y, double $\ast$px, double x0, double x1, double $\ast$\hyperlink{triangle_8c_aba741a529c231da12cd9b593ced09f85}{xmin}, double $\ast$fmin, double \hyperlink{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{epsilon})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{roots_8c_ac109770c55e0dc3de60750132f6b2d52}{find\+\_\+root} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$f)(double, double $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} f\+\_\+params, double y, double $\ast$px, double x0, double x1, double \hyperlink{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{epsilon}, double delta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{roots_8c_a82ece0bcdc89bf82e3e7d51138c76965}{search\+\_\+harder\+\_\+for\+\_\+root} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$f)(double, double $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} f\+\_\+params, double y, double $\ast$px, double a, double b, double $\ast$amin, double $\ast$bmax, double min\+\_\+a, double max\+\_\+b, int N, double \hyperlink{triangle_8c_a702a31c2820170bd7d70d14a09ee79e8}{epsilon}, double delta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{roots_8c_ae333c35bc3b557e0a385d7fc7c31aef8}{print\+\_\+function\+\_\+values} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}($\ast$f)(double, double $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} f\+\_\+params, double y, double x0, double x1, int npts, const char $\ast$msg, F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{roots_8c_a9334a5b9057f32da96db9b5c6a045d67}{}\label{roots_8c_a9334a5b9057f32da96db9b5c6a045d67}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+U\+M\+\_\+\+I\+T\+ER@{N\+U\+M\+\_\+\+I\+T\+ER}!roots.\+c@{roots.\+c}}\index{roots.\+c@{roots.\+c}!N\+U\+M\+\_\+\+I\+T\+ER@{N\+U\+M\+\_\+\+I\+T\+ER}}\item[{\em 
+N\+U\+M\+\_\+\+I\+T\+ER\hypertarget{roots_8c_a9334a5b9057f32da96db9b5c6a045d67a06954b2ea5fc1655c7221d4cd2761841}{}\label{roots_8c_a9334a5b9057f32da96db9b5c6a045d67a06954b2ea5fc1655c7221d4cd2761841}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{roots.\+c@{roots.\+c}!bisection\+\_\+find\+\_\+root@{bisection\+\_\+find\+\_\+root}}
+\index{bisection\+\_\+find\+\_\+root@{bisection\+\_\+find\+\_\+root}!roots.\+c@{roots.\+c}}
+\subsubsection[{\texorpdfstring{bisection\+\_\+find\+\_\+root(boolean($\ast$f)(double, double $\ast$, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R f\+\_\+params, double y, double $\ast$px, double x0, double x1, double epsilon, double delta)}{bisection_find_root(boolean(*f)(double, double *, POINTER), POINTER f_params, double y, double *px, double x0, double x1, double epsilon, double delta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} bisection\+\_\+find\+\_\+root (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{f\+\_\+params, }
+\item[{double}]{y, }
+\item[{double $\ast$}]{px, }
+\item[{double}]{x0, }
+\item[{double}]{x1, }
+\item[{double}]{epsilon, }
+\item[{double}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{roots_8c_a9ec9364c652099e5fcb8fe56382c17fe}{}\label{roots_8c_a9ec9364c652099e5fcb8fe56382c17fe}
+\index{roots.\+c@{roots.\+c}!find\+\_\+root@{find\+\_\+root}}
+\index{find\+\_\+root@{find\+\_\+root}!roots.\+c@{roots.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+root(boolean($\ast$f)(double, double $\ast$, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R f\+\_\+params, double y, double $\ast$px, double x0, double x1, double epsilon, double delta)}{find_root(boolean(*f)(double, double *, POINTER), POINTER f_params, double y, double *px, double x0, double x1, double epsilon, double delta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} find\+\_\+root (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{f\+\_\+params, }
+\item[{double}]{y, }
+\item[{double $\ast$}]{px, }
+\item[{double}]{x0, }
+\item[{double}]{x1, }
+\item[{double}]{epsilon, }
+\item[{double}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{roots_8c_ac109770c55e0dc3de60750132f6b2d52}{}\label{roots_8c_ac109770c55e0dc3de60750132f6b2d52}
+\index{roots.\+c@{roots.\+c}!find\+\_\+separation\+\_\+point@{find\+\_\+separation\+\_\+point}}
+\index{find\+\_\+separation\+\_\+point@{find\+\_\+separation\+\_\+point}!roots.\+c@{roots.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+separation\+\_\+point(boolean($\ast$f)(double, double $\ast$, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R f\+\_\+params, double y, double $\ast$px, double x0, double x1, double $\ast$xmin, double $\ast$fmin, double epsilon)}{find_separation_point(boolean(*f)(double, double *, POINTER), POINTER f_params, double y, double *px, double x0, double x1, double *xmin, double *fmin, double epsilon)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} find\+\_\+separation\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{f\+\_\+params, }
+\item[{double}]{y, }
+\item[{double $\ast$}]{px, }
+\item[{double}]{x0, }
+\item[{double}]{x1, }
+\item[{double $\ast$}]{xmin, }
+\item[{double $\ast$}]{fmin, }
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+)}\hypertarget{roots_8c_ab34192dbc627d192b94b58b938daa315}{}\label{roots_8c_ab34192dbc627d192b94b58b938daa315}
+\index{roots.\+c@{roots.\+c}!print\+\_\+function\+\_\+values@{print\+\_\+function\+\_\+values}}
+\index{print\+\_\+function\+\_\+values@{print\+\_\+function\+\_\+values}!roots.\+c@{roots.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+function\+\_\+values(boolean($\ast$f)(double, double $\ast$, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R f\+\_\+params, double y, double x0, double x1, int npts, const char $\ast$msg, F\+I\+L\+E $\ast$file)}{print_function_values(boolean(*f)(double, double *, POINTER), POINTER f_params, double y, double x0, double x1, int npts, const char *msg, FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+function\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{f\+\_\+params, }
+\item[{double}]{y, }
+\item[{double}]{x0, }
+\item[{double}]{x1, }
+\item[{int}]{npts, }
+\item[{const char $\ast$}]{msg, }
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{roots_8c_ae333c35bc3b557e0a385d7fc7c31aef8}{}\label{roots_8c_ae333c35bc3b557e0a385d7fc7c31aef8}
+\index{roots.\+c@{roots.\+c}!search\+\_\+harder\+\_\+for\+\_\+root@{search\+\_\+harder\+\_\+for\+\_\+root}}
+\index{search\+\_\+harder\+\_\+for\+\_\+root@{search\+\_\+harder\+\_\+for\+\_\+root}!roots.\+c@{roots.\+c}}
+\subsubsection[{\texorpdfstring{search\+\_\+harder\+\_\+for\+\_\+root(boolean($\ast$f)(double, double $\ast$, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R f\+\_\+params, double y, double $\ast$px, double a, double b, double $\ast$amin, double $\ast$bmax, double min\+\_\+a, double max\+\_\+b, int N, double epsilon, double delta)}{search_harder_for_root(boolean(*f)(double, double *, POINTER), POINTER f_params, double y, double *px, double a, double b, double *amin, double *bmax, double min_a, double max_b, int N, double epsilon, double delta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} search\+\_\+harder\+\_\+for\+\_\+root (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(double, double $\ast$, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{f\+\_\+params, }
+\item[{double}]{y, }
+\item[{double $\ast$}]{px, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double $\ast$}]{amin, }
+\item[{double $\ast$}]{bmax, }
+\item[{double}]{min\+\_\+a, }
+\item[{double}]{max\+\_\+b, }
+\item[{int}]{N, }
+\item[{double}]{epsilon, }
+\item[{double}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{roots_8c_a82ece0bcdc89bf82e3e7d51138c76965}{}\label{roots_8c_a82ece0bcdc89bf82e3e7d51138c76965}

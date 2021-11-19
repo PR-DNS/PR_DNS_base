@@ -1,0 +1,94 @@
+\hypertarget{sphhar_8c}{}\section{D\+N\+S/src/util/sphhar.c File Reference}
+\label{sphhar_8c}\index{D\+N\+S/src/util/sphhar.\+c@{D\+N\+S/src/util/sphhar.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{sphhar_8c_a17e420dfb99b2d51676e01359f678842}{dnlft} (int, int, double, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sphhar_8c_ade32dfccb45fcbd642fdce3893f93721}{dnlfk} (int, int, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{sphhar_8c_a4bef3c22aa67994ed32195d5dceac241}{N\+A\+Legendre} (int m, int n, double phi)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double $\ast$ \hyperlink{sphhar_8c_a965e70a7a965e9a8eeff37b7ee9cf5df}{Spherical\+Harmonic} (double $\ast$Yval, int m, int n, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{sphhar_8c_a1a74e22c2e15cc52d44afcfb0fa423fd}{Spherical\+Harmonic\+\_\+r} (int m, int n, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{sphhar_8c_ae3f2a452b73750419a5e9ad49639eaa2}{Spherical\+Harmonic\+\_\+i} (int m, int n, double phi, double theta)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{sphhar_8c_a6f0b6c79093de3ede3fc12f2746fb38b}{Spherical\+Harmonic\+\_\+s} (int m, int n, double phi, double theta, double phase)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sphhar.\+c@{sphhar.\+c}!dnlfk@{dnlfk}}
+\index{dnlfk@{dnlfk}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{dnlfk(int, int, double $\ast$)}{dnlfk(int, int, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void dnlfk (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double $\ast$}]{cp}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_ade32dfccb45fcbd642fdce3893f93721}{}\label{sphhar_8c_ade32dfccb45fcbd642fdce3893f93721}
+\index{sphhar.\+c@{sphhar.\+c}!dnlft@{dnlft}}
+\index{dnlft@{dnlft}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{dnlft(int, int, double, double $\ast$)}{dnlft(int, int, double, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double dnlft (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi, }
+\item[{double $\ast$}]{cp}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_a17e420dfb99b2d51676e01359f678842}{}\label{sphhar_8c_a17e420dfb99b2d51676e01359f678842}
+\index{sphhar.\+c@{sphhar.\+c}!N\+A\+Legendre@{N\+A\+Legendre}}
+\index{N\+A\+Legendre@{N\+A\+Legendre}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{N\+A\+Legendre(int m, int n, double phi)}{NALegendre(int m, int n, double phi)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double N\+A\+Legendre (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_a4bef3c22aa67994ed32195d5dceac241}{}\label{sphhar_8c_a4bef3c22aa67994ed32195d5dceac241}
+\index{sphhar.\+c@{sphhar.\+c}!Spherical\+Harmonic@{Spherical\+Harmonic}}
+\index{Spherical\+Harmonic@{Spherical\+Harmonic}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonic(double $\ast$\+Yval, int m, int n, double phi, double theta)}{SphericalHarmonic(double *Yval, int m, int n, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double$\ast$ Spherical\+Harmonic (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Yval, }
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_a965e70a7a965e9a8eeff37b7ee9cf5df}{}\label{sphhar_8c_a965e70a7a965e9a8eeff37b7ee9cf5df}
+\index{sphhar.\+c@{sphhar.\+c}!Spherical\+Harmonic\+\_\+i@{Spherical\+Harmonic\+\_\+i}}
+\index{Spherical\+Harmonic\+\_\+i@{Spherical\+Harmonic\+\_\+i}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonic\+\_\+i(int m, int n, double phi, double theta)}{SphericalHarmonic_i(int m, int n, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double Spherical\+Harmonic\+\_\+i (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_ae3f2a452b73750419a5e9ad49639eaa2}{}\label{sphhar_8c_ae3f2a452b73750419a5e9ad49639eaa2}
+\index{sphhar.\+c@{sphhar.\+c}!Spherical\+Harmonic\+\_\+r@{Spherical\+Harmonic\+\_\+r}}
+\index{Spherical\+Harmonic\+\_\+r@{Spherical\+Harmonic\+\_\+r}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonic\+\_\+r(int m, int n, double phi, double theta)}{SphericalHarmonic_r(int m, int n, double phi, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double Spherical\+Harmonic\+\_\+r (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_a1a74e22c2e15cc52d44afcfb0fa423fd}{}\label{sphhar_8c_a1a74e22c2e15cc52d44afcfb0fa423fd}
+\index{sphhar.\+c@{sphhar.\+c}!Spherical\+Harmonic\+\_\+s@{Spherical\+Harmonic\+\_\+s}}
+\index{Spherical\+Harmonic\+\_\+s@{Spherical\+Harmonic\+\_\+s}!sphhar.\+c@{sphhar.\+c}}
+\subsubsection[{\texorpdfstring{Spherical\+Harmonic\+\_\+s(int m, int n, double phi, double theta, double phase)}{SphericalHarmonic_s(int m, int n, double phi, double theta, double phase)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double Spherical\+Harmonic\+\_\+s (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n, }
+\item[{double}]{phi, }
+\item[{double}]{theta, }
+\item[{double}]{phase}
+\end{DoxyParamCaption}
+)}\hypertarget{sphhar_8c_a6f0b6c79093de3ede3fc12f2746fb38b}{}\label{sphhar_8c_a6f0b6c79093de3ede3fc12f2746fb38b}

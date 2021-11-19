@@ -1,0 +1,216 @@
+\hypertarget{ifourier_8c}{}\section{D\+N\+S/src/intfc/ifourier.c File Reference}
+\label{ifourier_8c}\index{D\+N\+S/src/intfc/ifourier.\+c@{D\+N\+S/src/intfc/ifourier.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ifourier_8c_a4dcb62f04c33f311e888f906fb39ac54}{prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes} (int, int, \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ifourier_8c_a177e0992d7cd4ac7640cfa4c5272d1fa}{prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes} (double, int, int, double $\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a96b024c69cf0a2de208fb6bce439c550}{allocate\+\_\+fourier\+\_\+poly} (int nmodes, int dim, \hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN} $\ast$fpstore)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{ifourier_8c_a474e4a16bed51dabe6426c0219081fe7}{fourier\+\_\+poly} (double $\ast$coords, \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$fpoly)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_aec65bc3e9dab687ca44b706b5737dd63}{get\+\_\+fourier\+\_\+coeffs} (double $\ast$L, double $\ast$U, int dim, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a668568fcabaf14549b4cce1bb3b2d93c}{get\+\_\+fourier\+\_\+random} (double $\ast$L, double $\ast$U, int dim, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_aa3ccf4fd8377b5ec7c741d11575b44c4}{get\+\_\+fourier\+\_\+mixed} (double $\ast$L, double $\ast$U, int dim, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a1651a1174752795f0e7af72ec49e5432}{get\+\_\+fourier\+\_\+bubble} (double $\ast$L, double $\ast$U, int dim, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a5e0d844bade013e183811faa560a4ff2}{get\+\_\+fourier\+\_\+multi\+\_\+mode} (double $\ast$L, double $\ast$U, int dim, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ifourier_8c_aff65968c00c2ca88d10fd926a5deefd1}{init\+\_\+random\+\_\+modes} (int offset, int min\+\_\+n, int max\+\_\+n, int nmodes, \hyperlink{geom_8h_d5/d08/struct_f_o_u_r_i_e_r___p_o_l_y}{F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$fpoly, double $\ast$L, double $\ast$U)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{ifourier_8c_ab012e763e8170fde4c21dd4af674bf53}{random\+\_\+bubble\+\_\+num\+\_\+modes} (const char $\ast$mesg, int $\ast$min\+\_\+n, int $\ast$max\+\_\+n, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_aa98eb3ed36e1ddfbd18de3b879c433ed}{allocate\+\_\+legendre\+\_\+poly} (int max\+\_\+degree, \hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN} $\ast$lpstore)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{ifourier_8c_a9c0122f55540250a55d13017531c2f79}{legendre\+\_\+poly} (double x, \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$lpoly)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a3e83923f3835b7669ea66f869379ef97}{get\+\_\+legendre\+\_\+coeffs} (double a0, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_abacb267fce9ada53577799f3af120d2f}{get\+\_\+legendre\+\_\+multi\+\_\+mode} (double a0, const char $\ast$mesg1, const char $\ast$mesg2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a381ad86f4869210407d1bd8c575d8887}{get\+\_\+legendre\+\_\+random} (double a0, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{geom_8h_de/d4e/struct_l_e_g_e_n_d_r_e___p_o_l_y}{L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$ \hyperlink{ifourier_8c_a250a0435ebb5e2b5ed1f45b671eace0f}{get\+\_\+legendre\+\_\+mixed} (double a0, const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{ifourier_8c_ae97c3c2d64be7266b2a11c1ce11d9017}{spherical\+\_\+num\+\_\+modes} (const char $\ast$mesg, int $\ast$min\+\_\+n, int $\ast$max\+\_\+n, double $\ast$U)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{ifourier.\+c@{ifourier.\+c}!allocate\+\_\+fourier\+\_\+poly@{allocate\+\_\+fourier\+\_\+poly}}
+\index{allocate\+\_\+fourier\+\_\+poly@{allocate\+\_\+fourier\+\_\+poly}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{allocate\+\_\+fourier\+\_\+poly(int nmodes, int dim, A\+L\+I\+G\+N $\ast$fpstore)}{allocate_fourier_poly(int nmodes, int dim, ALIGN *fpstore)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ allocate\+\_\+fourier\+\_\+poly (
+\begin{DoxyParamCaption}
+\item[{int}]{nmodes, }
+\item[{int}]{dim, }
+\item[{{\bf A\+L\+I\+GN} $\ast$}]{fpstore}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a96b024c69cf0a2de208fb6bce439c550}{}\label{ifourier_8c_a96b024c69cf0a2de208fb6bce439c550}
+\index{ifourier.\+c@{ifourier.\+c}!allocate\+\_\+legendre\+\_\+poly@{allocate\+\_\+legendre\+\_\+poly}}
+\index{allocate\+\_\+legendre\+\_\+poly@{allocate\+\_\+legendre\+\_\+poly}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{allocate\+\_\+legendre\+\_\+poly(int max\+\_\+degree, A\+L\+I\+G\+N $\ast$lpstore)}{allocate_legendre_poly(int max_degree, ALIGN *lpstore)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}$\ast$ allocate\+\_\+legendre\+\_\+poly (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+\_\+degree, }
+\item[{{\bf A\+L\+I\+GN} $\ast$}]{lpstore}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_aa98eb3ed36e1ddfbd18de3b879c433ed}{}\label{ifourier_8c_aa98eb3ed36e1ddfbd18de3b879c433ed}
+\index{ifourier.\+c@{ifourier.\+c}!fourier\+\_\+poly@{fourier\+\_\+poly}}
+\index{fourier\+\_\+poly@{fourier\+\_\+poly}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{fourier\+\_\+poly(double $\ast$coords, F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+L\+Y $\ast$fpoly)}{fourier_poly(double *coords, FOURIER_POLY *fpoly)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double fourier\+\_\+poly (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$}]{fpoly}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a474e4a16bed51dabe6426c0219081fe7}{}\label{ifourier_8c_a474e4a16bed51dabe6426c0219081fe7}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+fourier\+\_\+bubble@{get\+\_\+fourier\+\_\+bubble}}
+\index{get\+\_\+fourier\+\_\+bubble@{get\+\_\+fourier\+\_\+bubble}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+fourier\+\_\+bubble(double $\ast$\+L, double $\ast$\+U, int dim, const char $\ast$mesg)}{get_fourier_bubble(double *L, double *U, int dim, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+fourier\+\_\+bubble (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a1651a1174752795f0e7af72ec49e5432}{}\label{ifourier_8c_a1651a1174752795f0e7af72ec49e5432}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+fourier\+\_\+coeffs@{get\+\_\+fourier\+\_\+coeffs}}
+\index{get\+\_\+fourier\+\_\+coeffs@{get\+\_\+fourier\+\_\+coeffs}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+fourier\+\_\+coeffs(double $\ast$\+L, double $\ast$\+U, int dim, const char $\ast$mesg)}{get_fourier_coeffs(double *L, double *U, int dim, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+fourier\+\_\+coeffs (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_aec65bc3e9dab687ca44b706b5737dd63}{}\label{ifourier_8c_aec65bc3e9dab687ca44b706b5737dd63}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+fourier\+\_\+mixed@{get\+\_\+fourier\+\_\+mixed}}
+\index{get\+\_\+fourier\+\_\+mixed@{get\+\_\+fourier\+\_\+mixed}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+fourier\+\_\+mixed(double $\ast$\+L, double $\ast$\+U, int dim, const char $\ast$mesg)}{get_fourier_mixed(double *L, double *U, int dim, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+fourier\+\_\+mixed (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_aa3ccf4fd8377b5ec7c741d11575b44c4}{}\label{ifourier_8c_aa3ccf4fd8377b5ec7c741d11575b44c4}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+fourier\+\_\+multi\+\_\+mode@{get\+\_\+fourier\+\_\+multi\+\_\+mode}}
+\index{get\+\_\+fourier\+\_\+multi\+\_\+mode@{get\+\_\+fourier\+\_\+multi\+\_\+mode}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+fourier\+\_\+multi\+\_\+mode(double $\ast$\+L, double $\ast$\+U, int dim, const char $\ast$mesg)}{get_fourier_multi_mode(double *L, double *U, int dim, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+fourier\+\_\+multi\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a5e0d844bade013e183811faa560a4ff2}{}\label{ifourier_8c_a5e0d844bade013e183811faa560a4ff2}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+fourier\+\_\+random@{get\+\_\+fourier\+\_\+random}}
+\index{get\+\_\+fourier\+\_\+random@{get\+\_\+fourier\+\_\+random}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+fourier\+\_\+random(double $\ast$\+L, double $\ast$\+U, int dim, const char $\ast$mesg)}{get_fourier_random(double *L, double *U, int dim, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+fourier\+\_\+random (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{int}]{dim, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a668568fcabaf14549b4cce1bb3b2d93c}{}\label{ifourier_8c_a668568fcabaf14549b4cce1bb3b2d93c}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+legendre\+\_\+coeffs@{get\+\_\+legendre\+\_\+coeffs}}
+\index{get\+\_\+legendre\+\_\+coeffs@{get\+\_\+legendre\+\_\+coeffs}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+legendre\+\_\+coeffs(double a0, const char $\ast$mesg)}{get_legendre_coeffs(double a0, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+legendre\+\_\+coeffs (
+\begin{DoxyParamCaption}
+\item[{double}]{a0, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a3e83923f3835b7669ea66f869379ef97}{}\label{ifourier_8c_a3e83923f3835b7669ea66f869379ef97}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+legendre\+\_\+mixed@{get\+\_\+legendre\+\_\+mixed}}
+\index{get\+\_\+legendre\+\_\+mixed@{get\+\_\+legendre\+\_\+mixed}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+legendre\+\_\+mixed(double a0, const char $\ast$mesg)}{get_legendre_mixed(double a0, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+legendre\+\_\+mixed (
+\begin{DoxyParamCaption}
+\item[{double}]{a0, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a250a0435ebb5e2b5ed1f45b671eace0f}{}\label{ifourier_8c_a250a0435ebb5e2b5ed1f45b671eace0f}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+legendre\+\_\+multi\+\_\+mode@{get\+\_\+legendre\+\_\+multi\+\_\+mode}}
+\index{get\+\_\+legendre\+\_\+multi\+\_\+mode@{get\+\_\+legendre\+\_\+multi\+\_\+mode}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+legendre\+\_\+multi\+\_\+mode(double a0, const char $\ast$mesg1, const char $\ast$mesg2)}{get_legendre_multi_mode(double a0, const char *mesg1, const char *mesg2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+legendre\+\_\+multi\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{double}]{a0, }
+\item[{const char $\ast$}]{mesg1, }
+\item[{const char $\ast$}]{mesg2}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_abacb267fce9ada53577799f3af120d2f}{}\label{ifourier_8c_abacb267fce9ada53577799f3af120d2f}
+\index{ifourier.\+c@{ifourier.\+c}!get\+\_\+legendre\+\_\+random@{get\+\_\+legendre\+\_\+random}}
+\index{get\+\_\+legendre\+\_\+random@{get\+\_\+legendre\+\_\+random}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+legendre\+\_\+random(double a0, const char $\ast$mesg)}{get_legendre_random(double a0, const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY}$\ast$ get\+\_\+legendre\+\_\+random (
+\begin{DoxyParamCaption}
+\item[{double}]{a0, }
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a381ad86f4869210407d1bd8c575d8887}{}\label{ifourier_8c_a381ad86f4869210407d1bd8c575d8887}
+\index{ifourier.\+c@{ifourier.\+c}!init\+\_\+random\+\_\+modes@{init\+\_\+random\+\_\+modes}}
+\index{init\+\_\+random\+\_\+modes@{init\+\_\+random\+\_\+modes}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+random\+\_\+modes(int offset, int min\+\_\+n, int max\+\_\+n, int nmodes, F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+L\+Y $\ast$fpoly, double $\ast$\+L, double $\ast$\+U)}{init_random_modes(int offset, int min_n, int max_n, int nmodes, FOURIER_POLY *fpoly, double *L, double *U)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+random\+\_\+modes (
+\begin{DoxyParamCaption}
+\item[{int}]{offset, }
+\item[{int}]{min\+\_\+n, }
+\item[{int}]{max\+\_\+n, }
+\item[{int}]{nmodes, }
+\item[{{\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$}]{fpoly, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_aff65968c00c2ca88d10fd926a5deefd1}{}\label{ifourier_8c_aff65968c00c2ca88d10fd926a5deefd1}
+\index{ifourier.\+c@{ifourier.\+c}!legendre\+\_\+poly@{legendre\+\_\+poly}}
+\index{legendre\+\_\+poly@{legendre\+\_\+poly}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{legendre\+\_\+poly(double x, L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+L\+Y $\ast$lpoly)}{legendre_poly(double x, LEGENDRE_POLY *lpoly)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double legendre\+\_\+poly (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{{\bf L\+E\+G\+E\+N\+D\+R\+E\+\_\+\+P\+O\+LY} $\ast$}]{lpoly}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a9c0122f55540250a55d13017531c2f79}{}\label{ifourier_8c_a9c0122f55540250a55d13017531c2f79}
+\index{ifourier.\+c@{ifourier.\+c}!prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes@{prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes}}
+\index{prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes@{prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes(int, int, F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+L\+Y $\ast$, double $\ast$, double $\ast$)}{prompt_for_fourier_multi_modes(int, int, FOURIER_POLY *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void prompt\+\_\+for\+\_\+fourier\+\_\+multi\+\_\+modes (
+\begin{DoxyParamCaption}
+\item[{int}]{offset, }
+\item[{int}]{num\+\_\+modes, }
+\item[{{\bf F\+O\+U\+R\+I\+E\+R\+\_\+\+P\+O\+LY} $\ast$}]{fpoly, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a4dcb62f04c33f311e888f906fb39ac54}{}\label{ifourier_8c_a4dcb62f04c33f311e888f906fb39ac54}
+\index{ifourier.\+c@{ifourier.\+c}!prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes@{prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes}}
+\index{prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes@{prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes(double, int, int, double $\ast$, int $\ast$)}{prompt_for_legendre_multi_modes(double, int, int, double *, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void prompt\+\_\+for\+\_\+legendre\+\_\+multi\+\_\+modes (
+\begin{DoxyParamCaption}
+\item[{double}]{a0, }
+\item[{int}]{default\+\_\+mode0\+\_\+degree, }
+\item[{int}]{num\+\_\+modes, }
+\item[{double $\ast$}]{amplitude, }
+\item[{int $\ast$}]{mode\+\_\+degree}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_a177e0992d7cd4ac7640cfa4c5272d1fa}{}\label{ifourier_8c_a177e0992d7cd4ac7640cfa4c5272d1fa}
+\index{ifourier.\+c@{ifourier.\+c}!random\+\_\+bubble\+\_\+num\+\_\+modes@{random\+\_\+bubble\+\_\+num\+\_\+modes}}
+\index{random\+\_\+bubble\+\_\+num\+\_\+modes@{random\+\_\+bubble\+\_\+num\+\_\+modes}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{random\+\_\+bubble\+\_\+num\+\_\+modes(const char $\ast$mesg, int $\ast$min\+\_\+n, int $\ast$max\+\_\+n, int dim)}{random_bubble_num_modes(const char *mesg, int *min_n, int *max_n, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int random\+\_\+bubble\+\_\+num\+\_\+modes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg, }
+\item[{int $\ast$}]{min\+\_\+n, }
+\item[{int $\ast$}]{max\+\_\+n, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_ab012e763e8170fde4c21dd4af674bf53}{}\label{ifourier_8c_ab012e763e8170fde4c21dd4af674bf53}
+\index{ifourier.\+c@{ifourier.\+c}!spherical\+\_\+num\+\_\+modes@{spherical\+\_\+num\+\_\+modes}}
+\index{spherical\+\_\+num\+\_\+modes@{spherical\+\_\+num\+\_\+modes}!ifourier.\+c@{ifourier.\+c}}
+\subsubsection[{\texorpdfstring{spherical\+\_\+num\+\_\+modes(const char $\ast$mesg, int $\ast$min\+\_\+n, int $\ast$max\+\_\+n, double $\ast$\+U)}{spherical_num_modes(const char *mesg, int *min_n, int *max_n, double *U)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int spherical\+\_\+num\+\_\+modes (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg, }
+\item[{int $\ast$}]{min\+\_\+n, }
+\item[{int $\ast$}]{max\+\_\+n, }
+\item[{double $\ast$}]{U}
+\end{DoxyParamCaption}
+)}\hypertarget{ifourier_8c_ae97c3c2d64be7266b2a11c1ce11d9017}{}\label{ifourier_8c_ae97c3c2d64be7266b2a11c1ce11d9017}

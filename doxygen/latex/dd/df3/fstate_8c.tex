@@ -1,0 +1,223 @@
+\hypertarget{fstate_8c}{}\section{D\+N\+S/src/front/fstate.c File Reference}
+\label{fstate_8c}\index{D\+N\+S/src/front/fstate.\+c@{D\+N\+S/src/front/fstate.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$ \hyperlink{fstate_8c_aae9d56ba89e524ecbddc7ac8b8c2a8b6}{F\+S\+R\+\_\+for\+\_\+comp} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a2869cbe840d97c710017dcb8925f3e29}{Set\+Constant\+Region\+State} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, double $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a58174e87db76cfd2021b97d44b7b05e5}{Set\+Skip\+Component\+State} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, double $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a7ae42924144976036e3069ce6823427d}{Skip\+All\+Comps} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fstate_8c_a81dcb9f639e136ea58c8dce15a5b1c27}{Destroy\+Constant\+Flow\+Region} (\hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fstate_8c_a6a55a9390753bd2c98632210e156e7c2}{Destroy\+Skip\+Component\+Region} (\hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fstate_8c_a34b82c3df2d4cadceb3a86ef9ab205cf}{fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data} (F\+I\+LE $\ast$, \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate_8c_a663379db4fe3d312d3d759ea35d9dad3}{f\+\_\+alloc\+\_\+state} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$state, size\+\_\+t sizest)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} \hyperlink{fstate_8c_a060b81c5a560ea530766e916bf206616}{f\+\_\+alloc\+\_\+intfc\+\_\+state} (size\+\_\+t sizest)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate_8c_a5fba979faabf71285779683f0360eccb}{f\+\_\+clear\+\_\+state} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} state, size\+\_\+t sizest)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate_8c_a3078d832c377d11e5787039673274445}{nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt} (double $\ast$coords, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$newfront, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} state, double $\ast$coords\+\_\+on, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$hs\+\_\+on)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$ \hyperlink{fstate_8c_a4ced8ad3c70e59aaaec6fa31d0f1f777}{Add\+To\+Fsr\+List} (\hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$fsr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a8bdebf6d9246d8e2bae98f1736419989}{Region\+Is\+Flow\+Specified} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} nst, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} ost, double $\ast$coords, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} new\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} old\+\_\+comp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a470b997301c74590003c834b692234cf}{Component\+Is\+Flow\+Specified} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate_8c_a8a562ea13e86758ebba75eeec17d67dc}{Set\+Active\+Flow\+Component} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fdecs_8h_aa4cb09d74b0b5f8c74daf85a1bce1eab}{Constant\+Flow\+Region} $\ast$ \hyperlink{fstate_8c_ab7897d06aacf64a2169416003924987c}{Set\+Constant\+Flow\+Region} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} state, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$ \hyperlink{fstate_8c_a32127662426913a7f5180b6d04873d4c}{Set\+Skip\+Component\+Region} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} comp)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fdecs_8h_a3bd11a4258f7c5a978a34c46743cafc5}{Flow\+Specified\+Region} $\ast$ \hyperlink{fstate_8c_a34a98fc7eccf53db3056434166237bb1}{Set\+Skip\+All\+Components} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a328465c0dc46fa81f2acf749e9995a36}{f\+\_\+sort\+\_\+bond\+\_\+tris} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fstate_8c_a8bcbc6eb1410d8df1377c7e031f377a0}{f\+\_\+assign\+\_\+btri\+\_\+states} (\hyperlink{int_8h_a3a85dcb733a9517c6ac6d810374b3d02}{B\+O\+N\+D\+\_\+\+T\+RI} $\ast$newbtri, \hyperlink{int_8h_a3a85dcb733a9517c6ac6d810374b3d02}{B\+O\+N\+D\+\_\+\+T\+RI} $\ast$btri)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fstate.\+c@{fstate.\+c}!Add\+To\+Fsr\+List@{Add\+To\+Fsr\+List}}
+\index{Add\+To\+Fsr\+List@{Add\+To\+Fsr\+List}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Add\+To\+Fsr\+List(\+Flow\+Specified\+Region $\ast$fsr)}{AddToFsrList(FlowSpecifiedRegion *fsr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf Flow\+Specified\+Region}$\ast$ Add\+To\+Fsr\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a4ced8ad3c70e59aaaec6fa31d0f1f777}{}\label{fstate_8c_a4ced8ad3c70e59aaaec6fa31d0f1f777}
+\index{fstate.\+c@{fstate.\+c}!Component\+Is\+Flow\+Specified@{Component\+Is\+Flow\+Specified}}
+\index{Component\+Is\+Flow\+Specified@{Component\+Is\+Flow\+Specified}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Component\+Is\+Flow\+Specified(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp, Front $\ast$fr)}{ComponentIsFlowSpecified(COMPONENT comp, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} Component\+Is\+Flow\+Specified (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a470b997301c74590003c834b692234cf}{}\label{fstate_8c_a470b997301c74590003c834b692234cf}
+\index{fstate.\+c@{fstate.\+c}!Destroy\+Constant\+Flow\+Region@{Destroy\+Constant\+Flow\+Region}}
+\index{Destroy\+Constant\+Flow\+Region@{Destroy\+Constant\+Flow\+Region}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Destroy\+Constant\+Flow\+Region(\+Flow\+Specified\+Region $\ast$)}{DestroyConstantFlowRegion(FlowSpecifiedRegion *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void Destroy\+Constant\+Flow\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a81dcb9f639e136ea58c8dce15a5b1c27}{}\label{fstate_8c_a81dcb9f639e136ea58c8dce15a5b1c27}
+\index{fstate.\+c@{fstate.\+c}!Destroy\+Skip\+Component\+Region@{Destroy\+Skip\+Component\+Region}}
+\index{Destroy\+Skip\+Component\+Region@{Destroy\+Skip\+Component\+Region}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Destroy\+Skip\+Component\+Region(\+Flow\+Specified\+Region $\ast$)}{DestroySkipComponentRegion(FlowSpecifiedRegion *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void Destroy\+Skip\+Component\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a6a55a9390753bd2c98632210e156e7c2}{}\label{fstate_8c_a6a55a9390753bd2c98632210e156e7c2}
+\index{fstate.\+c@{fstate.\+c}!f\+\_\+alloc\+\_\+intfc\+\_\+state@{f\+\_\+alloc\+\_\+intfc\+\_\+state}}
+\index{f\+\_\+alloc\+\_\+intfc\+\_\+state@{f\+\_\+alloc\+\_\+intfc\+\_\+state}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+alloc\+\_\+intfc\+\_\+state(size\+\_\+t sizest)}{f_alloc_intfc_state(size_t sizest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf Locstate} f\+\_\+alloc\+\_\+intfc\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{sizest}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a060b81c5a560ea530766e916bf206616}{}\label{fstate_8c_a060b81c5a560ea530766e916bf206616}
+\index{fstate.\+c@{fstate.\+c}!f\+\_\+alloc\+\_\+state@{f\+\_\+alloc\+\_\+state}}
+\index{f\+\_\+alloc\+\_\+state@{f\+\_\+alloc\+\_\+state}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+alloc\+\_\+state(\+Locstate $\ast$state, size\+\_\+t sizest)}{f_alloc_state(Locstate *state, size_t sizest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+alloc\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate} $\ast$}]{state, }
+\item[{size\+\_\+t}]{sizest}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a663379db4fe3d312d3d759ea35d9dad3}{}\label{fstate_8c_a663379db4fe3d312d3d759ea35d9dad3}
+\index{fstate.\+c@{fstate.\+c}!f\+\_\+assign\+\_\+btri\+\_\+states@{f\+\_\+assign\+\_\+btri\+\_\+states}}
+\index{f\+\_\+assign\+\_\+btri\+\_\+states@{f\+\_\+assign\+\_\+btri\+\_\+states}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+assign\+\_\+btri\+\_\+states(\+B\+O\+N\+D\+\_\+\+T\+R\+I $\ast$newbtri, B\+O\+N\+D\+\_\+\+T\+R\+I $\ast$btri)}{f_assign_btri_states(BOND_TRI *newbtri, BOND_TRI *btri)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+assign\+\_\+btri\+\_\+states (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+N\+D\+\_\+\+T\+RI} $\ast$}]{newbtri, }
+\item[{{\bf B\+O\+N\+D\+\_\+\+T\+RI} $\ast$}]{btri}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a8bcbc6eb1410d8df1377c7e031f377a0}{}\label{fstate_8c_a8bcbc6eb1410d8df1377c7e031f377a0}
+\index{fstate.\+c@{fstate.\+c}!f\+\_\+clear\+\_\+state@{f\+\_\+clear\+\_\+state}}
+\index{f\+\_\+clear\+\_\+state@{f\+\_\+clear\+\_\+state}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+clear\+\_\+state(\+Locstate state, size\+\_\+t sizest)}{f_clear_state(Locstate state, size_t sizest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+clear\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate}}]{state, }
+\item[{size\+\_\+t}]{sizest}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a5fba979faabf71285779683f0360eccb}{}\label{fstate_8c_a5fba979faabf71285779683f0360eccb}
+\index{fstate.\+c@{fstate.\+c}!f\+\_\+sort\+\_\+bond\+\_\+tris@{f\+\_\+sort\+\_\+bond\+\_\+tris}}
+\index{f\+\_\+sort\+\_\+bond\+\_\+tris@{f\+\_\+sort\+\_\+bond\+\_\+tris}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+sort\+\_\+bond\+\_\+tris(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{f_sort_bond_tris(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+sort\+\_\+bond\+\_\+tris (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a328465c0dc46fa81f2acf749e9995a36}{}\label{fstate_8c_a328465c0dc46fa81f2acf749e9995a36}
+\index{fstate.\+c@{fstate.\+c}!fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data@{fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data}}
+\index{fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data@{fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data(\+F\+I\+L\+E $\ast$, Flow\+Specified\+Region $\ast$, Front $\ast$)}{fprint_ConstantFlowRegion_data(FILE *, FlowSpecifiedRegion *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fprint\+\_\+\+Constant\+Flow\+Region\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a34b82c3df2d4cadceb3a86ef9ab205cf}{}\label{fstate_8c_a34b82c3df2d4cadceb3a86ef9ab205cf}
+\index{fstate.\+c@{fstate.\+c}!F\+S\+R\+\_\+for\+\_\+comp@{F\+S\+R\+\_\+for\+\_\+comp}}
+\index{F\+S\+R\+\_\+for\+\_\+comp@{F\+S\+R\+\_\+for\+\_\+comp}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{F\+S\+R\+\_\+for\+\_\+comp(\+C\+O\+M\+P\+O\+N\+E\+N\+T, Front $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{FSR_for_comp(COMPONENT, Front *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Flow\+Specified\+Region} $\ast$ F\+S\+R\+\_\+for\+\_\+comp (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_aae9d56ba89e524ecbddc7ac8b8c2a8b6}{}\label{fstate_8c_aae9d56ba89e524ecbddc7ac8b8c2a8b6}
+\index{fstate.\+c@{fstate.\+c}!nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt@{nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt}}
+\index{nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt@{nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt(double $\ast$coords, C\+O\+M\+P\+O\+N\+E\+N\+T comp, Front $\ast$front, Front $\ast$newfront, Locstate state, double $\ast$coords\+\_\+on, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$hs\+\_\+on)}{nearest_intfc_state_and_pt(double *coords, COMPONENT comp, Front *front, Front *newfront, Locstate state, double *coords_on, HYPER_SURF **hs_on)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void nearest\+\_\+intfc\+\_\+state\+\_\+and\+\_\+pt (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf Front} $\ast$}]{newfront, }
+\item[{{\bf Locstate}}]{state, }
+\item[{double $\ast$}]{coords\+\_\+on, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{hs\+\_\+on}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a3078d832c377d11e5787039673274445}{}\label{fstate_8c_a3078d832c377d11e5787039673274445}
+\index{fstate.\+c@{fstate.\+c}!Region\+Is\+Flow\+Specified@{Region\+Is\+Flow\+Specified}}
+\index{Region\+Is\+Flow\+Specified@{Region\+Is\+Flow\+Specified}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Region\+Is\+Flow\+Specified(\+Locstate nst, Locstate ost, double $\ast$coords, C\+O\+M\+P\+O\+N\+E\+N\+T new\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T old\+\_\+comp, Front $\ast$fr)}{RegionIsFlowSpecified(Locstate nst, Locstate ost, double *coords, COMPONENT new_comp, COMPONENT old_comp, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} Region\+Is\+Flow\+Specified (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate}}]{nst, }
+\item[{{\bf Locstate}}]{ost, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{new\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{old\+\_\+comp, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a8bdebf6d9246d8e2bae98f1736419989}{}\label{fstate_8c_a8bdebf6d9246d8e2bae98f1736419989}
+\index{fstate.\+c@{fstate.\+c}!Set\+Active\+Flow\+Component@{Set\+Active\+Flow\+Component}}
+\index{Set\+Active\+Flow\+Component@{Set\+Active\+Flow\+Component}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Active\+Flow\+Component(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp, Front $\ast$front)}{SetActiveFlowComponent(COMPONENT comp, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Set\+Active\+Flow\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a8a562ea13e86758ebba75eeec17d67dc}{}\label{fstate_8c_a8a562ea13e86758ebba75eeec17d67dc}
+\index{fstate.\+c@{fstate.\+c}!Set\+Constant\+Flow\+Region@{Set\+Constant\+Flow\+Region}}
+\index{Set\+Constant\+Flow\+Region@{Set\+Constant\+Flow\+Region}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Constant\+Flow\+Region(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp, Locstate state, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{SetConstantFlowRegion(COMPONENT comp, Locstate state, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf Constant\+Flow\+Region}$\ast$ Set\+Constant\+Flow\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{{\bf Locstate}}]{state, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_ab7897d06aacf64a2169416003924987c}{}\label{fstate_8c_ab7897d06aacf64a2169416003924987c}
+\index{fstate.\+c@{fstate.\+c}!Set\+Constant\+Region\+State@{Set\+Constant\+Region\+State}}
+\index{Set\+Constant\+Region\+State@{Set\+Constant\+Region\+State}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Constant\+Region\+State(\+Locstate, Locstate, double $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, Flow\+Specified\+Region $\ast$, Front $\ast$)}{SetConstantRegionState(Locstate, Locstate, double *, COMPONENT, FlowSpecifiedRegion *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} Set\+Constant\+Region\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate}}]{nst, }
+\item[{{\bf Locstate}}]{ost, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{old\+\_\+comp, }
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a2869cbe840d97c710017dcb8925f3e29}{}\label{fstate_8c_a2869cbe840d97c710017dcb8925f3e29}
+\index{fstate.\+c@{fstate.\+c}!Set\+Skip\+All\+Components@{Set\+Skip\+All\+Components}}
+\index{Set\+Skip\+All\+Components@{Set\+Skip\+All\+Components}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Skip\+All\+Components(void)}{SetSkipAllComponents(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf Flow\+Specified\+Region}$\ast$ Set\+Skip\+All\+Components (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a34a98fc7eccf53db3056434166237bb1}{}\label{fstate_8c_a34a98fc7eccf53db3056434166237bb1}
+\index{fstate.\+c@{fstate.\+c}!Set\+Skip\+Component\+Region@{Set\+Skip\+Component\+Region}}
+\index{Set\+Skip\+Component\+Region@{Set\+Skip\+Component\+Region}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Skip\+Component\+Region(\+C\+O\+M\+P\+O\+N\+E\+N\+T comp)}{SetSkipComponentRegion(COMPONENT comp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf Flow\+Specified\+Region}$\ast$ Set\+Skip\+Component\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a32127662426913a7f5180b6d04873d4c}{}\label{fstate_8c_a32127662426913a7f5180b6d04873d4c}
+\index{fstate.\+c@{fstate.\+c}!Set\+Skip\+Component\+State@{Set\+Skip\+Component\+State}}
+\index{Set\+Skip\+Component\+State@{Set\+Skip\+Component\+State}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Set\+Skip\+Component\+State(\+Locstate, Locstate, double $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, Flow\+Specified\+Region $\ast$, Front $\ast$)}{SetSkipComponentState(Locstate, Locstate, double *, COMPONENT, FlowSpecifiedRegion *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} Set\+Skip\+Component\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate}}]{nst, }
+\item[{{\bf Locstate}}]{ost, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{old\+\_\+comp, }
+\item[{{\bf Flow\+Specified\+Region} $\ast$}]{fsr, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a58174e87db76cfd2021b97d44b7b05e5}{}\label{fstate_8c_a58174e87db76cfd2021b97d44b7b05e5}
+\index{fstate.\+c@{fstate.\+c}!Skip\+All\+Comps@{Skip\+All\+Comps}}
+\index{Skip\+All\+Comps@{Skip\+All\+Comps}!fstate.\+c@{fstate.\+c}}
+\subsubsection[{\texorpdfstring{Skip\+All\+Comps(\+C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{SkipAllComps(COMPONENT, COMPONENT, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} Skip\+All\+Comps (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp1, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp2, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate_8c_a7ae42924144976036e3069ce6823427d}{}\label{fstate_8c_a7ae42924144976036e3069ce6823427d}

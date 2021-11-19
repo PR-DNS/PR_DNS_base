@@ -1,0 +1,691 @@
+\hypertarget{sigplot_8c}{}\section{D\+N\+S/src/util/sigplot.c File Reference}
+\label{sigplot_8c}\index{D\+N\+S/src/util/sigplot.\+c@{D\+N\+S/src/util/sigplot.\+c}}
+{\ttfamily \#include $<$plotdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sigplot_8c_a109011d22a09d10f40c6ed90d8147958}{binary\+\_\+plot}~((\hyperlink{uprotos_8h_acba62b0faf57df9e9291b3ea95335b67}{is\+\_\+binary\+\_\+output}()==\hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a99f136a862ba5c7d16967231c29f09d6}{Y\+ES})?B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+O\+N\+:\+N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON)
+\item 
+\#define \hyperlink{sigplot_8c_ac3aa94f718122501f1863ad3ded27579}{F\+Output}(\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})~(void) \hyperlink{uprotos_8h_a9aeb2e3c324b8220c410dfadc9291ec2}{foutput}(\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}),(void) putc(\textquotesingle{}\textbackslash{}n\textquotesingle{},\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a315c81c4a8bba49e81a525902fa1f7ad}{fputbf1} (F\+I\+LE $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a8b70283730c152240119425367bd2721}{fputbf2} (F\+I\+LE $\ast$, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a4a99d63d194c1a17864e42bc7acc26dd}{fputbf3} (F\+I\+LE $\ast$, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a74e93015f4198a02f2071044c6bf5004}{fputbf4} (F\+I\+LE $\ast$, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a493a8a462e5e23d3502f158db8183dcf}{fputbf6} (F\+I\+LE $\ast$, double, double, double, double, double, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_ac1f575989971715df0656585ccd32acc}{fputbi1} (F\+I\+LE $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{sigplot_8c_a8fc1bc93afdd9c8ea07bfd422b7b2cdb}{fputbi2} (F\+I\+LE $\ast$, int, int)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a7c2580d9a22ccb36bb9b3ba864a9d05f}{fset\+\_\+binary\+\_\+mode} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int state)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a8f65e39db06d165867801de34d1d17e0}{fopenpl} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a484d9c7b23f76cbdd18957f0fbdd9264}{fclosepl} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a7b0f6b256886aad86915fdfeae9f5e0b}{fspace} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x1, double y1, double x2, double y2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad492e55977d21d04498c51168f957e9f}{frotate} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double xc, double yc, double \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a7c69dfac8d61c28fb4afda398f436a1e}{fwindow} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x1, double y1, double x2, double y2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a0afce5e669f15545a79d343df1a2497a}{fviewport} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x1, double y1, double x2, double y2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a7f5767024aaa7d0ee275fdcc1e9bdaf8}{fline} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x1, double y1, double x2, double y2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_addf07dfca55dfb70ba1f3c37a0ebcc9b}{fmove} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_aff983a94cc994d28c9e663594e6b02e9}{fcont} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a9cdaf608630ab10bdeac2272088f8f9b}{fpolygon} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int m, double $\ast$v)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ac37fe87050f2c43caa1763241c855171}{frectangle} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double $\ast$v)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a42f3baab98062d535a3c6f7342c6b299}{fset\+\_\+text\+\_\+precision} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int precision, int font, double slant)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ab262900b2ed8bc9497cd69a54b45d184}{fset\+\_\+text\+\_\+size} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double height, double width, double spce, double \hyperlink{geomutils_8c_a3b0540d922a851790bae4f7b442cb60b}{angle})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a206631de228a5f388f7f9a6af0f308b0}{ftext\+\_\+height\+\_\+angle} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double h, double a)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a13fc2b0f6a442b64b9a5d10760cd63da}{flabel} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_aafce0d665dd95a4b3241f0a3b57dd7ab}{ferase} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_abe95475315978d9ae8e10892293efc82}{frepeat} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_acc7be4275e44ba0a92f691455e1fba39}{fpoint} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ae77d79040dfa5149818281b5e062c643}{fset\+\_\+up\+\_\+colors} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a36dd7288610a722e2d6b077e02dddec9}{fset\+\_\+color} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int col)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a946f8f4e01b94ab2165c9ebac6a66904}{fset\+\_\+up\+\_\+color\+\_\+palette} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a72ec2ba39dff807a8fab56aaf2d38755}{fset\+\_\+up\+\_\+color\+\_\+table} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_aaeb38eadcde9a0e13893a25c9cc274a0}{fset\+\_\+color\+\_\+from\+\_\+palette} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double col\+\_\+frac)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a2029e37a3c088d8551bff7614c4f9f80}{fset\+\_\+color\+\_\+from\+\_\+table} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int col)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a534cf1125726c05249e84351ea6dd675}{fset\+\_\+color\+\_\+rgb} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double red, double green, double blue)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a4e2c59fd6f81e3bf7a01a117b4f38217}{fset\+\_\+background\+\_\+color} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int col)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a29bf198e80dacf188b70d32203b135f4}{fset\+\_\+color\+\_\+bar\+\_\+data} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double mn, double mx, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad282950581a4ffafa8f4de70d813e7e8}{fshade} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a51afbde52ba651dae139678b3c97d0fe}{flinemod} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ac5320bc50337e3758b33a1c42d8086f0}{fset\+\_\+linestyle} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$style)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad1a12038763fa079a4e92462c213bc86}{farc} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double xc, double yc, double x1, double y1, double x2, double y2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad56b4f591fdcf57c89412fdf12e85ec2}{farrow} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double xc, double yc, double xl, double yl)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a83e869138cd1f8bafda83ceeb03e382d}{fclosevt} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a9d31a7665c4debcfa79b11cee1ea65df}{fcreate\+\_\+segment} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_adaa281a542bc2dc051b27fb345c21ecb}{fclose\+\_\+segment} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a2bd92d43759ce55d40bee45a12931a5b}{fdelete\+\_\+segment} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a6a53ecf14410a6e7471d5a17b2adc685}{fset\+\_\+visibility} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int num, int state)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad6e148425d2f3a18bc886b4d1fbdaf16}{frename\+\_\+segment} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int n1, int n2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a76b5772512bb293c0f2f71b521a0ce43}{fset\+\_\+projection} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$type, double x, double y, double z)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a648387cf92503e6d8ea8ad7e1aff3a37}{fset\+\_\+view\+\_\+reference\+\_\+point} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y, double z)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a5ed28f767f9094ffc3da2b419025ef64}{fset\+\_\+view\+\_\+plane\+\_\+normal} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double nx, double ny, double nz)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a7990f8ff6536c0ee5625fd534ce04a45}{fset\+\_\+view\+\_\+up\+\_\+vector} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double nx, double ny, double nz)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a6b96534d4328d611f0d33326ee29042c}{fline\+\_\+3} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x1, double y1, double z1, double x2, double y2, double z2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a1795bfc90e71593e0b8f4020865527a2}{fmove\+\_\+3} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y, double z)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a1b017b45cf6f6176574940ada448cf96}{fcont\+\_\+3} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y, double z)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a4aeb93cf07426cb417156eba663964f0}{farrow\+\_\+3} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double x, double y, double z, double vx, double vy, double vz)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a4782bfaad155529b71861e06af77346f}{fpolygon\+\_\+3} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double col, int m, double $\ast$v)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a05fff12aa5e4d8f676785cac88de1836}{fset\+\_\+hidden\+\_\+surface\+\_\+removal} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int flag)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a52bff73e7bf70d103588b5c3ed13b9dd}{fset\+\_\+hidden\+\_\+line\+\_\+removal} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int flag)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_a1988267b0652052126745c86bb2a96f2}{fset\+\_\+convex\+\_\+polyhedra} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, int flag)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{sigplot_8c_ad4a473689a45e245b4006fa5de7fb47c}{fmagnify} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, double xl, double yl, double xu, double yu)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{sigplot.\+c@{sigplot.\+c}!binary\+\_\+plot@{binary\+\_\+plot}}
+\index{binary\+\_\+plot@{binary\+\_\+plot}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{binary\+\_\+plot}{binary_plot}}]{\setlength{\rightskip}{0pt plus 5cm}\#define binary\+\_\+plot~(({\bf is\+\_\+binary\+\_\+output}()=={\bf Y\+ES})?B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+O\+N\+:\+N\+O\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+E\+R\+S\+I\+ON)}\hypertarget{sigplot_8c_a109011d22a09d10f40c6ed90d8147958}{}\label{sigplot_8c_a109011d22a09d10f40c6ed90d8147958}
+\index{sigplot.\+c@{sigplot.\+c}!F\+Output@{F\+Output}}
+\index{F\+Output@{F\+Output}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{F\+Output}{FOutput}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+Output(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf file}}
+\end{DoxyParamCaption}
+)~(void) {\bf foutput}({\bf file}),(void) putc(\textquotesingle{}\textbackslash{}n\textquotesingle{},{\bf file})}\hypertarget{sigplot_8c_ac3aa94f718122501f1863ad3ded27579}{}\label{sigplot_8c_ac3aa94f718122501f1863ad3ded27579}
+
+
+\subsection{Function Documentation}
+\index{sigplot.\+c@{sigplot.\+c}!farc@{farc}}
+\index{farc@{farc}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{farc(\+F\+I\+L\+E $\ast$file, double xc, double yc, double x1, double y1, double x2, double y2)}{farc(FILE *file, double xc, double yc, double x1, double y1, double x2, double y2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void farc (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{xc, }
+\item[{double}]{yc, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad1a12038763fa079a4e92462c213bc86}{}\label{sigplot_8c_ad1a12038763fa079a4e92462c213bc86}
+\index{sigplot.\+c@{sigplot.\+c}!farrow@{farrow}}
+\index{farrow@{farrow}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{farrow(\+F\+I\+L\+E $\ast$file, double xc, double yc, double xl, double yl)}{farrow(FILE *file, double xc, double yc, double xl, double yl)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void farrow (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{xc, }
+\item[{double}]{yc, }
+\item[{double}]{xl, }
+\item[{double}]{yl}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad56b4f591fdcf57c89412fdf12e85ec2}{}\label{sigplot_8c_ad56b4f591fdcf57c89412fdf12e85ec2}
+\index{sigplot.\+c@{sigplot.\+c}!farrow\+\_\+3@{farrow\+\_\+3}}
+\index{farrow\+\_\+3@{farrow\+\_\+3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{farrow\+\_\+3(\+F\+I\+L\+E $\ast$file, double x, double y, double z, double vx, double vy, double vz)}{farrow_3(FILE *file, double x, double y, double z, double vx, double vy, double vz)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void farrow\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a4aeb93cf07426cb417156eba663964f0}{}\label{sigplot_8c_a4aeb93cf07426cb417156eba663964f0}
+\index{sigplot.\+c@{sigplot.\+c}!fclose\+\_\+segment@{fclose\+\_\+segment}}
+\index{fclose\+\_\+segment@{fclose\+\_\+segment}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fclose\+\_\+segment(\+F\+I\+L\+E $\ast$file)}{fclose_segment(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fclose\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_adaa281a542bc2dc051b27fb345c21ecb}{}\label{sigplot_8c_adaa281a542bc2dc051b27fb345c21ecb}
+\index{sigplot.\+c@{sigplot.\+c}!fclosepl@{fclosepl}}
+\index{fclosepl@{fclosepl}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fclosepl(\+F\+I\+L\+E $\ast$file)}{fclosepl(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fclosepl (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a484d9c7b23f76cbdd18957f0fbdd9264}{}\label{sigplot_8c_a484d9c7b23f76cbdd18957f0fbdd9264}
+\index{sigplot.\+c@{sigplot.\+c}!fclosevt@{fclosevt}}
+\index{fclosevt@{fclosevt}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fclosevt(\+F\+I\+L\+E $\ast$file)}{fclosevt(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fclosevt (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a83e869138cd1f8bafda83ceeb03e382d}{}\label{sigplot_8c_a83e869138cd1f8bafda83ceeb03e382d}
+\index{sigplot.\+c@{sigplot.\+c}!fcont@{fcont}}
+\index{fcont@{fcont}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fcont(\+F\+I\+L\+E $\ast$file, double x, double y)}{fcont(FILE *file, double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fcont (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_aff983a94cc994d28c9e663594e6b02e9}{}\label{sigplot_8c_aff983a94cc994d28c9e663594e6b02e9}
+\index{sigplot.\+c@{sigplot.\+c}!fcont\+\_\+3@{fcont\+\_\+3}}
+\index{fcont\+\_\+3@{fcont\+\_\+3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fcont\+\_\+3(\+F\+I\+L\+E $\ast$file, double x, double y, double z)}{fcont_3(FILE *file, double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fcont\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a1b017b45cf6f6176574940ada448cf96}{}\label{sigplot_8c_a1b017b45cf6f6176574940ada448cf96}
+\index{sigplot.\+c@{sigplot.\+c}!fcreate\+\_\+segment@{fcreate\+\_\+segment}}
+\index{fcreate\+\_\+segment@{fcreate\+\_\+segment}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fcreate\+\_\+segment(\+F\+I\+L\+E $\ast$file, int num)}{fcreate_segment(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fcreate\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a9d31a7665c4debcfa79b11cee1ea65df}{}\label{sigplot_8c_a9d31a7665c4debcfa79b11cee1ea65df}
+\index{sigplot.\+c@{sigplot.\+c}!fdelete\+\_\+segment@{fdelete\+\_\+segment}}
+\index{fdelete\+\_\+segment@{fdelete\+\_\+segment}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fdelete\+\_\+segment(\+F\+I\+L\+E $\ast$file, int num)}{fdelete_segment(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fdelete\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a2bd92d43759ce55d40bee45a12931a5b}{}\label{sigplot_8c_a2bd92d43759ce55d40bee45a12931a5b}
+\index{sigplot.\+c@{sigplot.\+c}!ferase@{ferase}}
+\index{ferase@{ferase}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{ferase(\+F\+I\+L\+E $\ast$file)}{ferase(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void ferase (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_aafce0d665dd95a4b3241f0a3b57dd7ab}{}\label{sigplot_8c_aafce0d665dd95a4b3241f0a3b57dd7ab}
+\index{sigplot.\+c@{sigplot.\+c}!flabel@{flabel}}
+\index{flabel@{flabel}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{flabel(\+F\+I\+L\+E $\ast$file, const char $\ast$strng)}{flabel(FILE *file, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void flabel (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a13fc2b0f6a442b64b9a5d10760cd63da}{}\label{sigplot_8c_a13fc2b0f6a442b64b9a5d10760cd63da}
+\index{sigplot.\+c@{sigplot.\+c}!fline@{fline}}
+\index{fline@{fline}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fline(\+F\+I\+L\+E $\ast$file, double x1, double y1, double x2, double y2)}{fline(FILE *file, double x1, double y1, double x2, double y2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fline (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a7f5767024aaa7d0ee275fdcc1e9bdaf8}{}\label{sigplot_8c_a7f5767024aaa7d0ee275fdcc1e9bdaf8}
+\index{sigplot.\+c@{sigplot.\+c}!fline\+\_\+3@{fline\+\_\+3}}
+\index{fline\+\_\+3@{fline\+\_\+3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fline\+\_\+3(\+F\+I\+L\+E $\ast$file, double x1, double y1, double z1, double x2, double y2, double z2)}{fline_3(FILE *file, double x1, double y1, double z1, double x2, double y2, double z2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fline\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{z1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{double}]{z2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a6b96534d4328d611f0d33326ee29042c}{}\label{sigplot_8c_a6b96534d4328d611f0d33326ee29042c}
+\index{sigplot.\+c@{sigplot.\+c}!flinemod@{flinemod}}
+\index{flinemod@{flinemod}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{flinemod(\+F\+I\+L\+E $\ast$file, const char $\ast$strng)}{flinemod(FILE *file, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void flinemod (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a51afbde52ba651dae139678b3c97d0fe}{}\label{sigplot_8c_a51afbde52ba651dae139678b3c97d0fe}
+\index{sigplot.\+c@{sigplot.\+c}!fmagnify@{fmagnify}}
+\index{fmagnify@{fmagnify}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fmagnify(\+F\+I\+L\+E $\ast$file, double xl, double yl, double xu, double yu)}{fmagnify(FILE *file, double xl, double yl, double xu, double yu)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fmagnify (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{xl, }
+\item[{double}]{yl, }
+\item[{double}]{xu, }
+\item[{double}]{yu}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad4a473689a45e245b4006fa5de7fb47c}{}\label{sigplot_8c_ad4a473689a45e245b4006fa5de7fb47c}
+\index{sigplot.\+c@{sigplot.\+c}!fmove@{fmove}}
+\index{fmove@{fmove}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fmove(\+F\+I\+L\+E $\ast$file, double x, double y)}{fmove(FILE *file, double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fmove (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_addf07dfca55dfb70ba1f3c37a0ebcc9b}{}\label{sigplot_8c_addf07dfca55dfb70ba1f3c37a0ebcc9b}
+\index{sigplot.\+c@{sigplot.\+c}!fmove\+\_\+3@{fmove\+\_\+3}}
+\index{fmove\+\_\+3@{fmove\+\_\+3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fmove\+\_\+3(\+F\+I\+L\+E $\ast$file, double x, double y, double z)}{fmove_3(FILE *file, double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fmove\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a1795bfc90e71593e0b8f4020865527a2}{}\label{sigplot_8c_a1795bfc90e71593e0b8f4020865527a2}
+\index{sigplot.\+c@{sigplot.\+c}!fopenpl@{fopenpl}}
+\index{fopenpl@{fopenpl}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fopenpl(\+F\+I\+L\+E $\ast$file)}{fopenpl(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fopenpl (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a8f65e39db06d165867801de34d1d17e0}{}\label{sigplot_8c_a8f65e39db06d165867801de34d1d17e0}
+\index{sigplot.\+c@{sigplot.\+c}!fpoint@{fpoint}}
+\index{fpoint@{fpoint}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fpoint(\+F\+I\+L\+E $\ast$file, double x, double y)}{fpoint(FILE *file, double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fpoint (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_acc7be4275e44ba0a92f691455e1fba39}{}\label{sigplot_8c_acc7be4275e44ba0a92f691455e1fba39}
+\index{sigplot.\+c@{sigplot.\+c}!fpolygon@{fpolygon}}
+\index{fpolygon@{fpolygon}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fpolygon(\+F\+I\+L\+E $\ast$file, int m, double $\ast$v)}{fpolygon(FILE *file, int m, double *v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fpolygon (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{m, }
+\item[{double $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a9cdaf608630ab10bdeac2272088f8f9b}{}\label{sigplot_8c_a9cdaf608630ab10bdeac2272088f8f9b}
+\index{sigplot.\+c@{sigplot.\+c}!fpolygon\+\_\+3@{fpolygon\+\_\+3}}
+\index{fpolygon\+\_\+3@{fpolygon\+\_\+3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fpolygon\+\_\+3(\+F\+I\+L\+E $\ast$file, double col, int m, double $\ast$v)}{fpolygon_3(FILE *file, double col, int m, double *v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fpolygon\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{col, }
+\item[{int}]{m, }
+\item[{double $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a4782bfaad155529b71861e06af77346f}{}\label{sigplot_8c_a4782bfaad155529b71861e06af77346f}
+\index{sigplot.\+c@{sigplot.\+c}!fputbf1@{fputbf1}}
+\index{fputbf1@{fputbf1}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbf1(\+F\+I\+L\+E $\ast$, double)}{fputbf1(FILE *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbf1 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{f1}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a315c81c4a8bba49e81a525902fa1f7ad}{}\label{sigplot_8c_a315c81c4a8bba49e81a525902fa1f7ad}
+\index{sigplot.\+c@{sigplot.\+c}!fputbf2@{fputbf2}}
+\index{fputbf2@{fputbf2}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbf2(\+F\+I\+L\+E $\ast$, double, double)}{fputbf2(FILE *, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbf2 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{f1, }
+\item[{double}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a8b70283730c152240119425367bd2721}{}\label{sigplot_8c_a8b70283730c152240119425367bd2721}
+\index{sigplot.\+c@{sigplot.\+c}!fputbf3@{fputbf3}}
+\index{fputbf3@{fputbf3}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbf3(\+F\+I\+L\+E $\ast$, double, double, double)}{fputbf3(FILE *, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbf3 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{f1, }
+\item[{double}]{f2, }
+\item[{double}]{f3}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a4a99d63d194c1a17864e42bc7acc26dd}{}\label{sigplot_8c_a4a99d63d194c1a17864e42bc7acc26dd}
+\index{sigplot.\+c@{sigplot.\+c}!fputbf4@{fputbf4}}
+\index{fputbf4@{fputbf4}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbf4(\+F\+I\+L\+E $\ast$, double, double, double, double)}{fputbf4(FILE *, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbf4 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{f1, }
+\item[{double}]{f2, }
+\item[{double}]{f3, }
+\item[{double}]{f4}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a74e93015f4198a02f2071044c6bf5004}{}\label{sigplot_8c_a74e93015f4198a02f2071044c6bf5004}
+\index{sigplot.\+c@{sigplot.\+c}!fputbf6@{fputbf6}}
+\index{fputbf6@{fputbf6}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbf6(\+F\+I\+L\+E $\ast$, double, double, double, double, double, double)}{fputbf6(FILE *, double, double, double, double, double, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbf6 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{f1, }
+\item[{double}]{f2, }
+\item[{double}]{f3, }
+\item[{double}]{f4, }
+\item[{double}]{f5, }
+\item[{double}]{f6}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a493a8a462e5e23d3502f158db8183dcf}{}\label{sigplot_8c_a493a8a462e5e23d3502f158db8183dcf}
+\index{sigplot.\+c@{sigplot.\+c}!fputbi1@{fputbi1}}
+\index{fputbi1@{fputbi1}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbi1(\+F\+I\+L\+E $\ast$, int)}{fputbi1(FILE *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbi1 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ac1f575989971715df0656585ccd32acc}{}\label{sigplot_8c_ac1f575989971715df0656585ccd32acc}
+\index{sigplot.\+c@{sigplot.\+c}!fputbi2@{fputbi2}}
+\index{fputbi2@{fputbi2}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fputbi2(\+F\+I\+L\+E $\ast$, int, int)}{fputbi2(FILE *, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void fputbi2 (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{i1, }
+\item[{int}]{i2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a8fc1bc93afdd9c8ea07bfd422b7b2cdb}{}\label{sigplot_8c_a8fc1bc93afdd9c8ea07bfd422b7b2cdb}
+\index{sigplot.\+c@{sigplot.\+c}!frectangle@{frectangle}}
+\index{frectangle@{frectangle}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{frectangle(\+F\+I\+L\+E $\ast$file, double $\ast$v)}{frectangle(FILE *file, double *v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void frectangle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ac37fe87050f2c43caa1763241c855171}{}\label{sigplot_8c_ac37fe87050f2c43caa1763241c855171}
+\index{sigplot.\+c@{sigplot.\+c}!frename\+\_\+segment@{frename\+\_\+segment}}
+\index{frename\+\_\+segment@{frename\+\_\+segment}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{frename\+\_\+segment(\+F\+I\+L\+E $\ast$file, int n1, int n2)}{frename_segment(FILE *file, int n1, int n2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void frename\+\_\+segment (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{n1, }
+\item[{int}]{n2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad6e148425d2f3a18bc886b4d1fbdaf16}{}\label{sigplot_8c_ad6e148425d2f3a18bc886b4d1fbdaf16}
+\index{sigplot.\+c@{sigplot.\+c}!frepeat@{frepeat}}
+\index{frepeat@{frepeat}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{frepeat(\+F\+I\+L\+E $\ast$file, int num)}{frepeat(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void frepeat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_abe95475315978d9ae8e10892293efc82}{}\label{sigplot_8c_abe95475315978d9ae8e10892293efc82}
+\index{sigplot.\+c@{sigplot.\+c}!frotate@{frotate}}
+\index{frotate@{frotate}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{frotate(\+F\+I\+L\+E $\ast$file, double xc, double yc, double angle)}{frotate(FILE *file, double xc, double yc, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void frotate (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{xc, }
+\item[{double}]{yc, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad492e55977d21d04498c51168f957e9f}{}\label{sigplot_8c_ad492e55977d21d04498c51168f957e9f}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+background\+\_\+color@{fset\+\_\+background\+\_\+color}}
+\index{fset\+\_\+background\+\_\+color@{fset\+\_\+background\+\_\+color}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+background\+\_\+color(\+F\+I\+L\+E $\ast$file, int col)}{fset_background_color(FILE *file, int col)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+background\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a4e2c59fd6f81e3bf7a01a117b4f38217}{}\label{sigplot_8c_a4e2c59fd6f81e3bf7a01a117b4f38217}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+binary\+\_\+mode@{fset\+\_\+binary\+\_\+mode}}
+\index{fset\+\_\+binary\+\_\+mode@{fset\+\_\+binary\+\_\+mode}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+binary\+\_\+mode(\+F\+I\+L\+E $\ast$file, int state)}{fset_binary_mode(FILE *file, int state)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+binary\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a7c2580d9a22ccb36bb9b3ba864a9d05f}{}\label{sigplot_8c_a7c2580d9a22ccb36bb9b3ba864a9d05f}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+color@{fset\+\_\+color}}
+\index{fset\+\_\+color@{fset\+\_\+color}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color(\+F\+I\+L\+E $\ast$file, int col)}{fset_color(FILE *file, int col)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a36dd7288610a722e2d6b077e02dddec9}{}\label{sigplot_8c_a36dd7288610a722e2d6b077e02dddec9}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+color\+\_\+bar\+\_\+data@{fset\+\_\+color\+\_\+bar\+\_\+data}}
+\index{fset\+\_\+color\+\_\+bar\+\_\+data@{fset\+\_\+color\+\_\+bar\+\_\+data}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+bar\+\_\+data(\+F\+I\+L\+E $\ast$file, double mn, double mx, const char $\ast$strng)}{fset_color_bar_data(FILE *file, double mn, double mx, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+color\+\_\+bar\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{mn, }
+\item[{double}]{mx, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a29bf198e80dacf188b70d32203b135f4}{}\label{sigplot_8c_a29bf198e80dacf188b70d32203b135f4}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+color\+\_\+from\+\_\+palette@{fset\+\_\+color\+\_\+from\+\_\+palette}}
+\index{fset\+\_\+color\+\_\+from\+\_\+palette@{fset\+\_\+color\+\_\+from\+\_\+palette}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+from\+\_\+palette(\+F\+I\+L\+E $\ast$file, double col\+\_\+frac)}{fset_color_from_palette(FILE *file, double col_frac)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+color\+\_\+from\+\_\+palette (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{col\+\_\+frac}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_aaeb38eadcde9a0e13893a25c9cc274a0}{}\label{sigplot_8c_aaeb38eadcde9a0e13893a25c9cc274a0}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+color\+\_\+from\+\_\+table@{fset\+\_\+color\+\_\+from\+\_\+table}}
+\index{fset\+\_\+color\+\_\+from\+\_\+table@{fset\+\_\+color\+\_\+from\+\_\+table}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+from\+\_\+table(\+F\+I\+L\+E $\ast$file, int col)}{fset_color_from_table(FILE *file, int col)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+color\+\_\+from\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a2029e37a3c088d8551bff7614c4f9f80}{}\label{sigplot_8c_a2029e37a3c088d8551bff7614c4f9f80}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+color\+\_\+rgb@{fset\+\_\+color\+\_\+rgb}}
+\index{fset\+\_\+color\+\_\+rgb@{fset\+\_\+color\+\_\+rgb}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+color\+\_\+rgb(\+F\+I\+L\+E $\ast$file, double red, double green, double blue)}{fset_color_rgb(FILE *file, double red, double green, double blue)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+color\+\_\+rgb (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{red, }
+\item[{double}]{green, }
+\item[{double}]{blue}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a534cf1125726c05249e84351ea6dd675}{}\label{sigplot_8c_a534cf1125726c05249e84351ea6dd675}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+convex\+\_\+polyhedra@{fset\+\_\+convex\+\_\+polyhedra}}
+\index{fset\+\_\+convex\+\_\+polyhedra@{fset\+\_\+convex\+\_\+polyhedra}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+convex\+\_\+polyhedra(\+F\+I\+L\+E $\ast$file, int flag)}{fset_convex_polyhedra(FILE *file, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+convex\+\_\+polyhedra (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a1988267b0652052126745c86bb2a96f2}{}\label{sigplot_8c_a1988267b0652052126745c86bb2a96f2}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+hidden\+\_\+line\+\_\+removal@{fset\+\_\+hidden\+\_\+line\+\_\+removal}}
+\index{fset\+\_\+hidden\+\_\+line\+\_\+removal@{fset\+\_\+hidden\+\_\+line\+\_\+removal}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+hidden\+\_\+line\+\_\+removal(\+F\+I\+L\+E $\ast$file, int flag)}{fset_hidden_line_removal(FILE *file, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+hidden\+\_\+line\+\_\+removal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a52bff73e7bf70d103588b5c3ed13b9dd}{}\label{sigplot_8c_a52bff73e7bf70d103588b5c3ed13b9dd}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+hidden\+\_\+surface\+\_\+removal@{fset\+\_\+hidden\+\_\+surface\+\_\+removal}}
+\index{fset\+\_\+hidden\+\_\+surface\+\_\+removal@{fset\+\_\+hidden\+\_\+surface\+\_\+removal}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+hidden\+\_\+surface\+\_\+removal(\+F\+I\+L\+E $\ast$file, int flag)}{fset_hidden_surface_removal(FILE *file, int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+hidden\+\_\+surface\+\_\+removal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a05fff12aa5e4d8f676785cac88de1836}{}\label{sigplot_8c_a05fff12aa5e4d8f676785cac88de1836}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+linestyle@{fset\+\_\+linestyle}}
+\index{fset\+\_\+linestyle@{fset\+\_\+linestyle}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+linestyle(\+F\+I\+L\+E $\ast$file, const char $\ast$style)}{fset_linestyle(FILE *file, const char *style)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+linestyle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{style}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ac5320bc50337e3758b33a1c42d8086f0}{}\label{sigplot_8c_ac5320bc50337e3758b33a1c42d8086f0}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+projection@{fset\+\_\+projection}}
+\index{fset\+\_\+projection@{fset\+\_\+projection}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+projection(\+F\+I\+L\+E $\ast$file, const char $\ast$type, double x, double y, double z)}{fset_projection(FILE *file, const char *type, double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+projection (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{type, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a76b5772512bb293c0f2f71b521a0ce43}{}\label{sigplot_8c_a76b5772512bb293c0f2f71b521a0ce43}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+text\+\_\+precision@{fset\+\_\+text\+\_\+precision}}
+\index{fset\+\_\+text\+\_\+precision@{fset\+\_\+text\+\_\+precision}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+text\+\_\+precision(\+F\+I\+L\+E $\ast$file, int precision, int font, double slant)}{fset_text_precision(FILE *file, int precision, int font, double slant)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+text\+\_\+precision (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{precision, }
+\item[{int}]{font, }
+\item[{double}]{slant}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a42f3baab98062d535a3c6f7342c6b299}{}\label{sigplot_8c_a42f3baab98062d535a3c6f7342c6b299}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+text\+\_\+size@{fset\+\_\+text\+\_\+size}}
+\index{fset\+\_\+text\+\_\+size@{fset\+\_\+text\+\_\+size}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+text\+\_\+size(\+F\+I\+L\+E $\ast$file, double height, double width, double spce, double angle)}{fset_text_size(FILE *file, double height, double width, double spce, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+text\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{height, }
+\item[{double}]{width, }
+\item[{double}]{spce, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ab262900b2ed8bc9497cd69a54b45d184}{}\label{sigplot_8c_ab262900b2ed8bc9497cd69a54b45d184}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+up\+\_\+color\+\_\+palette@{fset\+\_\+up\+\_\+color\+\_\+palette}}
+\index{fset\+\_\+up\+\_\+color\+\_\+palette@{fset\+\_\+up\+\_\+color\+\_\+palette}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+color\+\_\+palette(\+F\+I\+L\+E $\ast$file, int num)}{fset_up_color_palette(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+up\+\_\+color\+\_\+palette (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a946f8f4e01b94ab2165c9ebac6a66904}{}\label{sigplot_8c_a946f8f4e01b94ab2165c9ebac6a66904}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+up\+\_\+color\+\_\+table@{fset\+\_\+up\+\_\+color\+\_\+table}}
+\index{fset\+\_\+up\+\_\+color\+\_\+table@{fset\+\_\+up\+\_\+color\+\_\+table}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+color\+\_\+table(\+F\+I\+L\+E $\ast$file, int num)}{fset_up_color_table(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+up\+\_\+color\+\_\+table (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a72ec2ba39dff807a8fab56aaf2d38755}{}\label{sigplot_8c_a72ec2ba39dff807a8fab56aaf2d38755}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+up\+\_\+colors@{fset\+\_\+up\+\_\+colors}}
+\index{fset\+\_\+up\+\_\+colors@{fset\+\_\+up\+\_\+colors}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+up\+\_\+colors(\+F\+I\+L\+E $\ast$file, int num)}{fset_up_colors(FILE *file, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+up\+\_\+colors (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ae77d79040dfa5149818281b5e062c643}{}\label{sigplot_8c_ae77d79040dfa5149818281b5e062c643}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+view\+\_\+plane\+\_\+normal@{fset\+\_\+view\+\_\+plane\+\_\+normal}}
+\index{fset\+\_\+view\+\_\+plane\+\_\+normal@{fset\+\_\+view\+\_\+plane\+\_\+normal}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+plane\+\_\+normal(\+F\+I\+L\+E $\ast$file, double nx, double ny, double nz)}{fset_view_plane_normal(FILE *file, double nx, double ny, double nz)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+view\+\_\+plane\+\_\+normal (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{nx, }
+\item[{double}]{ny, }
+\item[{double}]{nz}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a5ed28f767f9094ffc3da2b419025ef64}{}\label{sigplot_8c_a5ed28f767f9094ffc3da2b419025ef64}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+view\+\_\+reference\+\_\+point@{fset\+\_\+view\+\_\+reference\+\_\+point}}
+\index{fset\+\_\+view\+\_\+reference\+\_\+point@{fset\+\_\+view\+\_\+reference\+\_\+point}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+reference\+\_\+point(\+F\+I\+L\+E $\ast$file, double x, double y, double z)}{fset_view_reference_point(FILE *file, double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+view\+\_\+reference\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a648387cf92503e6d8ea8ad7e1aff3a37}{}\label{sigplot_8c_a648387cf92503e6d8ea8ad7e1aff3a37}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+view\+\_\+up\+\_\+vector@{fset\+\_\+view\+\_\+up\+\_\+vector}}
+\index{fset\+\_\+view\+\_\+up\+\_\+vector@{fset\+\_\+view\+\_\+up\+\_\+vector}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+view\+\_\+up\+\_\+vector(\+F\+I\+L\+E $\ast$file, double nx, double ny, double nz)}{fset_view_up_vector(FILE *file, double nx, double ny, double nz)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+view\+\_\+up\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{nx, }
+\item[{double}]{ny, }
+\item[{double}]{nz}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a7990f8ff6536c0ee5625fd534ce04a45}{}\label{sigplot_8c_a7990f8ff6536c0ee5625fd534ce04a45}
+\index{sigplot.\+c@{sigplot.\+c}!fset\+\_\+visibility@{fset\+\_\+visibility}}
+\index{fset\+\_\+visibility@{fset\+\_\+visibility}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fset\+\_\+visibility(\+F\+I\+L\+E $\ast$file, int num, int state)}{fset_visibility(FILE *file, int num, int state)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fset\+\_\+visibility (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{int}]{num, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a6a53ecf14410a6e7471d5a17b2adc685}{}\label{sigplot_8c_a6a53ecf14410a6e7471d5a17b2adc685}
+\index{sigplot.\+c@{sigplot.\+c}!fshade@{fshade}}
+\index{fshade@{fshade}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fshade(\+F\+I\+L\+E $\ast$file)}{fshade(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fshade (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_ad282950581a4ffafa8f4de70d813e7e8}{}\label{sigplot_8c_ad282950581a4ffafa8f4de70d813e7e8}
+\index{sigplot.\+c@{sigplot.\+c}!fspace@{fspace}}
+\index{fspace@{fspace}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fspace(\+F\+I\+L\+E $\ast$file, double x1, double y1, double x2, double y2)}{fspace(FILE *file, double x1, double y1, double x2, double y2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fspace (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a7b0f6b256886aad86915fdfeae9f5e0b}{}\label{sigplot_8c_a7b0f6b256886aad86915fdfeae9f5e0b}
+\index{sigplot.\+c@{sigplot.\+c}!ftext\+\_\+height\+\_\+angle@{ftext\+\_\+height\+\_\+angle}}
+\index{ftext\+\_\+height\+\_\+angle@{ftext\+\_\+height\+\_\+angle}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{ftext\+\_\+height\+\_\+angle(\+F\+I\+L\+E $\ast$file, double h, double a)}{ftext_height_angle(FILE *file, double h, double a)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void ftext\+\_\+height\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{h, }
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a206631de228a5f388f7f9a6af0f308b0}{}\label{sigplot_8c_a206631de228a5f388f7f9a6af0f308b0}
+\index{sigplot.\+c@{sigplot.\+c}!fviewport@{fviewport}}
+\index{fviewport@{fviewport}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fviewport(\+F\+I\+L\+E $\ast$file, double x1, double y1, double x2, double y2)}{fviewport(FILE *file, double x1, double y1, double x2, double y2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fviewport (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a0afce5e669f15545a79d343df1a2497a}{}\label{sigplot_8c_a0afce5e669f15545a79d343df1a2497a}
+\index{sigplot.\+c@{sigplot.\+c}!fwindow@{fwindow}}
+\index{fwindow@{fwindow}!sigplot.\+c@{sigplot.\+c}}
+\subsubsection[{\texorpdfstring{fwindow(\+F\+I\+L\+E $\ast$file, double x1, double y1, double x2, double y2)}{fwindow(FILE *file, double x1, double y1, double x2, double y2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void fwindow (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{sigplot_8c_a7c69dfac8d61c28fb4afda398f436a1e}{}\label{sigplot_8c_a7c69dfac8d61c28fb4afda398f436a1e}

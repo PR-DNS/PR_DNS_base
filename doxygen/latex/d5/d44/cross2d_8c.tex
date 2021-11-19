@@ -1,0 +1,162 @@
+\hypertarget{cross2d_8c}{}\section{D\+N\+S/src/intfc/cross2d.c File Reference}
+\label{cross2d_8c}\index{D\+N\+S/src/intfc/cross2d.\+c@{D\+N\+S/src/intfc/cross2d.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{cross2d_8c_a312d72374f0c2b36a51e68abfa1c2d2e}{distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{cross2d_8c_a639afbf3aae70a0c76d0f75d7328e922}{num\+\_\+physical\+\_\+sectors} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{cross2d_8c_a03b9f581abaaf0fa13a37f09e7cd4ff9}{same\+\_\+curves\+\_\+cross} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cross2d_8c_a5a998b8773baf9d9363cbd0aba950ade}{reset\+\_\+cross} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a1441b59c8531f1c34b1405156c31c043}{add\+\_\+to\+\_\+cross\+\_\+list} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$$\ast$cross, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c1, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b1, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c2, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b2, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_aee73636099dd3d7b974d35411e8a724c}{insert\+\_\+in\+\_\+cross\+\_\+list} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr0)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_afc55ac6091e77cbfd172ff623a3ecd70}{rcl\+\_\+after\+\_\+split} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$csplit)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a5cd2f58cb238214d9f3e5a511e8e9513}{rcl\+\_\+after\+\_\+join} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c1, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a54089f41b424ff1c5410d6eeac1ea5b1}{rcl\+\_\+after\+\_\+insert\+\_\+point} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a33953102134a43975a0efbd3c398903a}{rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a573544ccd7d9843d0fa9e28c320436f7}{print\+\_\+cross} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cross2d_8c_a2c4d0e01e91b71c42d5f9ea189a2662f}{print\+\_\+cross\+\_\+list} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cross)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{cross2d_8c_a7b5d9de3d191b0b70a213b55e6af6b1a}{find\+\_\+companion\+\_\+cross} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cross, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$$\ast$cross1, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$c1\+\_\+orient, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$c2\+\_\+orient, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$c11\+\_\+orient, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$c12\+\_\+orient)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cross2d.\+c@{cross2d.\+c}!add\+\_\+to\+\_\+cross\+\_\+list@{add\+\_\+to\+\_\+cross\+\_\+list}}
+\index{add\+\_\+to\+\_\+cross\+\_\+list@{add\+\_\+to\+\_\+cross\+\_\+list}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{add\+\_\+to\+\_\+cross\+\_\+list(\+C\+R\+O\+S\+S $\ast$$\ast$cross, C\+U\+R\+V\+E $\ast$c1, B\+O\+N\+D $\ast$b1, C\+U\+R\+V\+E $\ast$c2, B\+O\+N\+D $\ast$b2, P\+O\+I\+N\+T $\ast$p)}{add_to_cross_list(CROSS **cross, CURVE *c1, BOND *b1, CURVE *c2, BOND *b2, POINT *p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void add\+\_\+to\+\_\+cross\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$$\ast$}]{cross, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c1, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b1, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c2, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b2, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a1441b59c8531f1c34b1405156c31c043}{}\label{cross2d_8c_a1441b59c8531f1c34b1405156c31c043}
+\index{cross2d.\+c@{cross2d.\+c}!distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve@{distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve}}
+\index{distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve@{distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve(\+P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N)}{distance_between_points_on_curve(POINT *, BOND *, POINT *, BOND *, CURVE *, ORIENTATION)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double distance\+\_\+between\+\_\+points\+\_\+on\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{ps, }
+\item[{{\bf B\+O\+ND} $\ast$}]{bs, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pe, }
+\item[{{\bf B\+O\+ND} $\ast$}]{be, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a312d72374f0c2b36a51e68abfa1c2d2e}{}\label{cross2d_8c_a312d72374f0c2b36a51e68abfa1c2d2e}
+\index{cross2d.\+c@{cross2d.\+c}!find\+\_\+companion\+\_\+cross@{find\+\_\+companion\+\_\+cross}}
+\index{find\+\_\+companion\+\_\+cross@{find\+\_\+companion\+\_\+cross}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+companion\+\_\+cross(\+C\+R\+O\+S\+S $\ast$cross, C\+R\+O\+S\+S $\ast$$\ast$cross1, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$c1\+\_\+orient, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$c2\+\_\+orient, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$c11\+\_\+orient, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$c12\+\_\+orient)}{find_companion_cross(CROSS *cross, CROSS **cross1, ORIENTATION *c1_orient, ORIENTATION *c2_orient, ORIENTATION *c11_orient, ORIENTATION *c12_orient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int find\+\_\+companion\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cross, }
+\item[{{\bf C\+R\+O\+SS} $\ast$$\ast$}]{cross1, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{c1\+\_\+orient, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{c2\+\_\+orient, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{c11\+\_\+orient, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{c12\+\_\+orient}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a7b5d9de3d191b0b70a213b55e6af6b1a}{}\label{cross2d_8c_a7b5d9de3d191b0b70a213b55e6af6b1a}
+\index{cross2d.\+c@{cross2d.\+c}!insert\+\_\+in\+\_\+cross\+\_\+list@{insert\+\_\+in\+\_\+cross\+\_\+list}}
+\index{insert\+\_\+in\+\_\+cross\+\_\+list@{insert\+\_\+in\+\_\+cross\+\_\+list}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+in\+\_\+cross\+\_\+list(\+C\+R\+O\+S\+S $\ast$cr, C\+R\+O\+S\+S $\ast$cr0)}{insert_in_cross_list(CROSS *cr, CROSS *cr0)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void insert\+\_\+in\+\_\+cross\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr0}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_aee73636099dd3d7b974d35411e8a724c}{}\label{cross2d_8c_aee73636099dd3d7b974d35411e8a724c}
+\index{cross2d.\+c@{cross2d.\+c}!num\+\_\+physical\+\_\+sectors@{num\+\_\+physical\+\_\+sectors}}
+\index{num\+\_\+physical\+\_\+sectors@{num\+\_\+physical\+\_\+sectors}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{num\+\_\+physical\+\_\+sectors(\+C\+R\+O\+S\+S $\ast$)}{num_physical_sectors(CROSS *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int num\+\_\+physical\+\_\+sectors (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a639afbf3aae70a0c76d0f75d7328e922}{}\label{cross2d_8c_a639afbf3aae70a0c76d0f75d7328e922}
+\index{cross2d.\+c@{cross2d.\+c}!print\+\_\+cross@{print\+\_\+cross}}
+\index{print\+\_\+cross@{print\+\_\+cross}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+cross(\+C\+R\+O\+S\+S $\ast$cr)}{print_cross(CROSS *cr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a573544ccd7d9843d0fa9e28c320436f7}{}\label{cross2d_8c_a573544ccd7d9843d0fa9e28c320436f7}
+\index{cross2d.\+c@{cross2d.\+c}!print\+\_\+cross\+\_\+list@{print\+\_\+cross\+\_\+list}}
+\index{print\+\_\+cross\+\_\+list@{print\+\_\+cross\+\_\+list}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+cross\+\_\+list(\+C\+R\+O\+S\+S $\ast$cross)}{print_cross_list(CROSS *cross)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+cross\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cross}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a2c4d0e01e91b71c42d5f9ea189a2662f}{}\label{cross2d_8c_a2c4d0e01e91b71c42d5f9ea189a2662f}
+\index{cross2d.\+c@{cross2d.\+c}!rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node@{rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node}}
+\index{rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node@{rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node(\+C\+R\+O\+S\+S $\ast$cr, P\+O\+I\+N\+T $\ast$p, C\+U\+R\+V\+E $\ast$c, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient)}{rcl_after_delete_bond_fragment_at_node(CROSS *cr, POINT *p, CURVE *c, ORIENTATION orient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rcl\+\_\+after\+\_\+delete\+\_\+bond\+\_\+fragment\+\_\+at\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a33953102134a43975a0efbd3c398903a}{}\label{cross2d_8c_a33953102134a43975a0efbd3c398903a}
+\index{cross2d.\+c@{cross2d.\+c}!rcl\+\_\+after\+\_\+insert\+\_\+point@{rcl\+\_\+after\+\_\+insert\+\_\+point}}
+\index{rcl\+\_\+after\+\_\+insert\+\_\+point@{rcl\+\_\+after\+\_\+insert\+\_\+point}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{rcl\+\_\+after\+\_\+insert\+\_\+point(\+C\+R\+O\+S\+S $\ast$cr, P\+O\+I\+N\+T $\ast$p, B\+O\+N\+D $\ast$b)}{rcl_after_insert_point(CROSS *cr, POINT *p, BOND *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rcl\+\_\+after\+\_\+insert\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a54089f41b424ff1c5410d6eeac1ea5b1}{}\label{cross2d_8c_a54089f41b424ff1c5410d6eeac1ea5b1}
+\index{cross2d.\+c@{cross2d.\+c}!rcl\+\_\+after\+\_\+join@{rcl\+\_\+after\+\_\+join}}
+\index{rcl\+\_\+after\+\_\+join@{rcl\+\_\+after\+\_\+join}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{rcl\+\_\+after\+\_\+join(\+C\+R\+O\+S\+S $\ast$cr, C\+U\+R\+V\+E $\ast$c, C\+U\+R\+V\+E $\ast$c1, C\+U\+R\+V\+E $\ast$c2)}{rcl_after_join(CROSS *cr, CURVE *c, CURVE *c1, CURVE *c2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rcl\+\_\+after\+\_\+join (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c1, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c2}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a5cd2f58cb238214d9f3e5a511e8e9513}{}\label{cross2d_8c_a5cd2f58cb238214d9f3e5a511e8e9513}
+\index{cross2d.\+c@{cross2d.\+c}!rcl\+\_\+after\+\_\+split@{rcl\+\_\+after\+\_\+split}}
+\index{rcl\+\_\+after\+\_\+split@{rcl\+\_\+after\+\_\+split}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{rcl\+\_\+after\+\_\+split(\+C\+R\+O\+S\+S $\ast$cr, P\+O\+I\+N\+T $\ast$p, B\+O\+N\+D $\ast$b, C\+U\+R\+V\+E $\ast$c, C\+U\+R\+V\+E $\ast$$\ast$csplit)}{rcl_after_split(CROSS *cr, POINT *p, BOND *b, CURVE *c, CURVE **csplit)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rcl\+\_\+after\+\_\+split (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{csplit}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_afc55ac6091e77cbfd172ff623a3ecd70}{}\label{cross2d_8c_afc55ac6091e77cbfd172ff623a3ecd70}
+\index{cross2d.\+c@{cross2d.\+c}!reset\+\_\+cross@{reset\+\_\+cross}}
+\index{reset\+\_\+cross@{reset\+\_\+cross}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{reset\+\_\+cross(\+P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$$\ast$, C\+U\+R\+V\+E $\ast$$\ast$, P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$, C\+U\+R\+V\+E $\ast$, C\+U\+R\+V\+E $\ast$)}{reset_cross(POINT *, BOND **, CURVE **, POINT *, BOND *, CURVE *, CURVE *, CURVE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reset\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{later\+\_\+pt, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{later\+\_\+bond, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{later\+\_\+curve, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{old\+\_\+pt, }
+\item[{{\bf B\+O\+ND} $\ast$}]{old\+\_\+bond, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{old\+\_\+curve, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{new\+\_\+c0, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{new\+\_\+c1}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a5a998b8773baf9d9363cbd0aba950ade}{}\label{cross2d_8c_a5a998b8773baf9d9363cbd0aba950ade}
+\index{cross2d.\+c@{cross2d.\+c}!same\+\_\+curves\+\_\+cross@{same\+\_\+curves\+\_\+cross}}
+\index{same\+\_\+curves\+\_\+cross@{same\+\_\+curves\+\_\+cross}!cross2d.\+c@{cross2d.\+c}}
+\subsubsection[{\texorpdfstring{same\+\_\+curves\+\_\+cross(\+C\+R\+O\+S\+S $\ast$, C\+R\+O\+S\+S $\ast$)}{same_curves_cross(CROSS *, CROSS *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int same\+\_\+curves\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr1, }
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr2}
+\end{DoxyParamCaption}
+)}\hypertarget{cross2d_8c_a03b9f581abaaf0fa13a37f09e7cd4ff9}{}\label{cross2d_8c_a03b9f581abaaf0fa13a37f09e7cd4ff9}

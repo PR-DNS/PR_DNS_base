@@ -1,0 +1,446 @@
+\hypertarget{triangledefs_8h}{}\section{D\+N\+S/src/intfc/triangledefs.h File Reference}
+\label{triangledefs_8h}\index{D\+N\+S/src/intfc/triangledefs.\+h@{D\+N\+S/src/intfc/triangledefs.\+h}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{triangledefs_8h_de/d23/struct_triangulate_opts}{Triangulate\+Opts}
+\item 
+struct \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{triangledefs_8h_afb5fba7c1f9959ac54eb2ecdc8e047bf}{Triangulate\+Neighbor\+On\+Side}(i,  j,  out)~(out).neighborlist\mbox{[}3$\ast$i+\hyperlink{geom_8h_a75fae88ee8940cebaa78357c94b183b2}{Prev\+\_\+m3}(j)\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}{Binary\+Digit} \hyperlink{triangledefs_8h_abc9ef7c472619a5680e5fbe1b3c24689}{Binary\+Digit}
+\item 
+typedef struct \hyperlink{triangledefs_8h_de/d23/struct_triangulate_opts}{Triangulate\+Opts} \hyperlink{triangledefs_8h_acc031b522bf61d77bccd31ce88e8adf2}{Triangulate\+Opts}
+\item 
+typedef struct \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} \hyperlink{triangledefs_8h_aa6467a98cf079a16f45a28918136deb1}{triangulateio}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}{Binary\+Digit} \{ \hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eeae117e3533122c80b262257b49b21cddf}{Z\+E\+RO} = 0, 
+\hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eea7a725f13af144bdef532d0389ba75e0d}{O\+NE} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{triangledefs_8h_a06e0232698b2ef40d9e81c9eccc14e9d}{print\+\_\+triangulateio} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{triangledefs_8h_a82cf687a49bd82bd3bedd6ed4ec3f143}{triangulate} (\hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$, \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$, \hyperlink{triangledefs_8h_d8/d0f/structtriangulateio}{triangulateio} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{Triangulate\+Opts@{Triangulate\+Opts}}\label{struct_triangulate_opts}
+\hypertarget{triangledefs_8h_struct_triangulate_opts}{}
+\subsubsection{struct Triangulate\+Opts}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a800a7ef6b009ae641af314f542f41411}{}\label{triangledefs_8h_a800a7ef6b009ae641af314f542f41411}
+&
+convex&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_af0988d1ad12cc0d96210b7160d299dd0}{}\label{triangledefs_8h_af0988d1ad12cc0d96210b7160d299dd0}
+&
+edgesout&
+\\
+\hline
+
+\hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}{Binary\+Digit}\hypertarget{triangledefs_8h_afed3b2b61f58bb238db4342a2cfd0e54}{}\label{triangledefs_8h_afed3b2b61f58bb238db4342a2cfd0e54}
+&
+firstnumber&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL}\hypertarget{triangledefs_8h_a545b1f84a500198df05c35aec4308a64}{}\label{triangledefs_8h_a545b1f84a500198df05c35aec4308a64}
+&
+minangle&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a495d98bb48c2084cbca705950c15e1fd}{}\label{triangledefs_8h_a495d98bb48c2084cbca705950c15e1fd}
+&
+neighbors&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_af2f99c57a2065baaf6c9d244eb974c5e}{}\label{triangledefs_8h_af2f99c57a2065baaf6c9d244eb974c5e}
+&
+nobisect&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_ae16a88d7281d0d13b5d9ebf6c181aa44}{}\label{triangledefs_8h_ae16a88d7281d0d13b5d9ebf6c181aa44}
+&
+nobound&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_aa399c98c522ed8ee1f23bf9ca097c229}{}\label{triangledefs_8h_aa399c98c522ed8ee1f23bf9ca097c229}
+&
+nodwyer&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_acc7846aca4667a911319c7854799d32e}{}\label{triangledefs_8h_acc7846aca4667a911319c7854799d32e}
+&
+noelewritten&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a0dd10a792683c4413f47f74bdff821c3}{}\label{triangledefs_8h_a0dd10a792683c4413f47f74bdff821c3}
+&
+noexact&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_ab275ee4a537810db3fc8832fc356f143}{}\label{triangledefs_8h_ab275ee4a537810db3fc8832fc356f143}
+&
+noholes&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a4cd89c7dbb3869883224aa120735b884}{}\label{triangledefs_8h_a4cd89c7dbb3869883224aa120735b884}
+&
+noiterationnum&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a6628b4b97a859cc3885d3bbeb9e0e356}{}\label{triangledefs_8h_a6628b4b97a859cc3885d3bbeb9e0e356}
+&
+nonodewritten&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a25a987f74a0a75fc43efb5f3faf5d710}{}\label{triangledefs_8h_a25a987f74a0a75fc43efb5f3faf5d710}
+&
+nopolywritten&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_a2149acb431b86e34d9ed49b800b784ed}{}\label{triangledefs_8h_a2149acb431b86e34d9ed49b800b784ed}
+&
+order&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_ab4c8bdb4c49c0bb187150bd383f08b4e}{}\label{triangledefs_8h_ab4c8bdb4c49c0bb187150bd383f08b4e}
+&
+poly&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a3e3b018f741dd5434caaf52f360a5484}{}\label{triangledefs_8h_a3e3b018f741dd5434caaf52f360a5484}
+&
+refine&
+\\
+\hline
+
+\hyperlink{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}{Binary\+Digit}\hypertarget{triangledefs_8h_a517003ad322b30b09daa9c5a9ddee1e1}{}\label{triangledefs_8h_a517003ad322b30b09daa9c5a9ddee1e1}
+&
+regionattrib&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_acc9e0e0663d7019ed186a85a495cb18c}{}\label{triangledefs_8h_acc9e0e0663d7019ed186a85a495cb18c}
+&
+steiner&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_aacb29132bab14e16e38910e73e5a9671}{}\label{triangledefs_8h_aacb29132bab14e16e38910e73e5a9671}
+&
+vararea&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean}\hypertarget{triangledefs_8h_a5de963c76de6a4bfbb32b8cf7b225d70}{}\label{triangledefs_8h_a5de963c76de6a4bfbb32b8cf7b225d70}
+&
+voronoi&
+\\
+\hline
+
+\end{DoxyFields}
+\index{triangulateio@{triangulateio}}\label{structtriangulateio}
+\hypertarget{triangledefs_8h_structtriangulateio}{}
+\subsubsection{struct triangulateio}
+\begin{DoxyFields}{Class Members}
+int $\ast$\hypertarget{triangledefs_8h_af8374f90431a318b694bb5424814f111}{}\label{triangledefs_8h_af8374f90431a318b694bb5424814f111}
+&
+edgelist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_a3f9be953734099d409f54736c3cd72af}{}\label{triangledefs_8h_a3f9be953734099d409f54736c3cd72af}
+&
+edgemarkerlist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_add7f801876142b9dd595d2200101a36e}{}\label{triangledefs_8h_add7f801876142b9dd595d2200101a36e}
+&
+holelist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_a266c62c74f443a4a50c986ccf97e74c7}{}\label{triangledefs_8h_a266c62c74f443a4a50c986ccf97e74c7}
+&
+neighborlist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_a4ab8acf52940830bbf613981bc83ff57}{}\label{triangledefs_8h_a4ab8acf52940830bbf613981bc83ff57}
+&
+normlist&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_aaeeda011ca1f51696fcc5a460b81c18d}{}\label{triangledefs_8h_aaeeda011ca1f51696fcc5a460b81c18d}
+&
+numberofcorners&
+\\
+\hline
+
+long\hypertarget{triangledefs_8h_a49cbdfe2d22e0fec85d4f58f25c40357}{}\label{triangledefs_8h_a49cbdfe2d22e0fec85d4f58f25c40357}
+&
+numberofedges&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_a91deb1af3dd2ef937f1b6b7e38261e99}{}\label{triangledefs_8h_a91deb1af3dd2ef937f1b6b7e38261e99}
+&
+numberofholes&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_aaac6a34f7d7bf1d1476ce7672f15d976}{}\label{triangledefs_8h_aaac6a34f7d7bf1d1476ce7672f15d976}
+&
+numberofpointattributes&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_a29be46ad3fc4f8c84235e420f7e606ec}{}\label{triangledefs_8h_a29be46ad3fc4f8c84235e420f7e606ec}
+&
+numberofpoints&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_ac1082ccae35526598ba0977068da9278}{}\label{triangledefs_8h_ac1082ccae35526598ba0977068da9278}
+&
+numberofregions&
+\\
+\hline
+
+long\hypertarget{triangledefs_8h_a89ce1358f3116b5d09e0b7d9c5a1487b}{}\label{triangledefs_8h_a89ce1358f3116b5d09e0b7d9c5a1487b}
+&
+numberofsegments&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_a272ba3b8730997b1bd6c367328b1abf8}{}\label{triangledefs_8h_a272ba3b8730997b1bd6c367328b1abf8}
+&
+numberoftriangleattributes&
+\\
+\hline
+
+int\hypertarget{triangledefs_8h_a6455c22dba63bdb0584d44fdf35a321f}{}\label{triangledefs_8h_a6455c22dba63bdb0584d44fdf35a321f}
+&
+numberoftriangles&
+\\
+\hline
+
+\hyperlink{triangledefs_8h_de/d23/struct_triangulate_opts}{Triangulate\+Opts}\hypertarget{triangledefs_8h_a269b9eb927370cd8618dfa09f71a78ce}{}\label{triangledefs_8h_a269b9eb927370cd8618dfa09f71a78ce}
+&
+Opts&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_a021a4a5e40fb34039fb7be0f86958254}{}\label{triangledefs_8h_a021a4a5e40fb34039fb7be0f86958254}
+&
+pointattributelist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_a896f5bd7f2215e07131fd9bc706bcd91}{}\label{triangledefs_8h_a896f5bd7f2215e07131fd9bc706bcd91}
+&
+pointlist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_acb2a9792412a2c3051fb869e88cfa602}{}\label{triangledefs_8h_acb2a9792412a2c3051fb869e88cfa602}
+&
+pointmarkerlist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_a9973779edbe12a9773cb4169a62b6d6f}{}\label{triangledefs_8h_a9973779edbe12a9773cb4169a62b6d6f}
+&
+regionlist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_ad45fec0a70058760450e09b949a3d1c0}{}\label{triangledefs_8h_ad45fec0a70058760450e09b949a3d1c0}
+&
+segmentlist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_a8d88affa03ad1156b1d087448166bf04}{}\label{triangledefs_8h_a8d88affa03ad1156b1d087448166bf04}
+&
+segmentmarkerlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a88d6a8a0193aff7e1935345b42b28eee}{}\label{triangledefs_8h_a88d6a8a0193aff7e1935345b42b28eee}
+&
+size\+\_\+edgelist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_ac1773f397b6635f380af5b9d7b75f7c8}{}\label{triangledefs_8h_ac1773f397b6635f380af5b9d7b75f7c8}
+&
+size\+\_\+edgemarkerlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a5344ef8186957bd18718649783dcde6f}{}\label{triangledefs_8h_a5344ef8186957bd18718649783dcde6f}
+&
+size\+\_\+neighborlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a3d410099711e01e2247694ae481fdb2d}{}\label{triangledefs_8h_a3d410099711e01e2247694ae481fdb2d}
+&
+size\+\_\+normlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a997ef4a8b1d68bbdcb7a781b136a2f6b}{}\label{triangledefs_8h_a997ef4a8b1d68bbdcb7a781b136a2f6b}
+&
+size\+\_\+pointattributelist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_ade60a443ab9e7be0e240919733215ea0}{}\label{triangledefs_8h_ade60a443ab9e7be0e240919733215ea0}
+&
+size\+\_\+pointlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a64444b02ad32f6aaf4de1c61ede21e1d}{}\label{triangledefs_8h_a64444b02ad32f6aaf4de1c61ede21e1d}
+&
+size\+\_\+pointmarkerlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a66d9d45704c5b418f179278bcd51ddd9}{}\label{triangledefs_8h_a66d9d45704c5b418f179278bcd51ddd9}
+&
+size\+\_\+segmentlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_a6a7d422d81f1196c7676e0ac45c2c362}{}\label{triangledefs_8h_a6a7d422d81f1196c7676e0ac45c2c362}
+&
+size\+\_\+segmentmarkerlist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_aff743bfb247500639b90130996690d37}{}\label{triangledefs_8h_aff743bfb247500639b90130996690d37}
+&
+size\+\_\+triangleattributelist&
+\\
+\hline
+
+size\+\_\+t\hypertarget{triangledefs_8h_addb7c2978fffeb16646efb8b8bb4df22}{}\label{triangledefs_8h_addb7c2978fffeb16646efb8b8bb4df22}
+&
+size\+\_\+trianglelist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_a6656e96fa38a24bb7c781be4b1d0e19b}{}\label{triangledefs_8h_a6656e96fa38a24bb7c781be4b1d0e19b}
+&
+trianglearealist&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a4b654506f18b8bfd61ad2a29a7e38c25}{R\+E\+AL} $\ast$\hypertarget{triangledefs_8h_ad850240fe096d32c922c1ae4694ae259}{}\label{triangledefs_8h_ad850240fe096d32c922c1ae4694ae259}
+&
+triangleattributelist&
+\\
+\hline
+
+int $\ast$\hypertarget{triangledefs_8h_a7d0f1c11cd6dc624ae61dbbbcc68b8cb}{}\label{triangledefs_8h_a7d0f1c11cd6dc624ae61dbbbcc68b8cb}
+&
+trianglelist&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{triangledefs.\+h@{triangledefs.\+h}!Triangulate\+Neighbor\+On\+Side@{Triangulate\+Neighbor\+On\+Side}}
+\index{Triangulate\+Neighbor\+On\+Side@{Triangulate\+Neighbor\+On\+Side}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{Triangulate\+Neighbor\+On\+Side}{TriangulateNeighborOnSide}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Triangulate\+Neighbor\+On\+Side(
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{out}
+\end{DoxyParamCaption}
+)~(out).neighborlist\mbox{[}3$\ast$i+{\bf Prev\+\_\+m3}(j)\mbox{]}}\hypertarget{triangledefs_8h_afb5fba7c1f9959ac54eb2ecdc8e047bf}{}\label{triangledefs_8h_afb5fba7c1f9959ac54eb2ecdc8e047bf}
+
+
+\subsection{Typedef Documentation}
+\index{triangledefs.\+h@{triangledefs.\+h}!Binary\+Digit@{Binary\+Digit}}
+\index{Binary\+Digit@{Binary\+Digit}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{Binary\+Digit}{BinaryDigit}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf Binary\+Digit} {\bf Binary\+Digit}}\hypertarget{triangledefs_8h_abc9ef7c472619a5680e5fbe1b3c24689}{}\label{triangledefs_8h_abc9ef7c472619a5680e5fbe1b3c24689}
+\index{triangledefs.\+h@{triangledefs.\+h}!triangulateio@{triangulateio}}
+\index{triangulateio@{triangulateio}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{triangulateio}{triangulateio}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf triangulateio} {\bf triangulateio}}\hypertarget{triangledefs_8h_aa6467a98cf079a16f45a28918136deb1}{}\label{triangledefs_8h_aa6467a98cf079a16f45a28918136deb1}
+\index{triangledefs.\+h@{triangledefs.\+h}!Triangulate\+Opts@{Triangulate\+Opts}}
+\index{Triangulate\+Opts@{Triangulate\+Opts}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{Triangulate\+Opts}{TriangulateOpts}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Triangulate\+Opts} {\bf Triangulate\+Opts}}\hypertarget{triangledefs_8h_acc031b522bf61d77bccd31ce88e8adf2}{}\label{triangledefs_8h_acc031b522bf61d77bccd31ce88e8adf2}
+
+
+\subsection{Enumeration Type Documentation}
+\index{triangledefs.\+h@{triangledefs.\+h}!Binary\+Digit@{Binary\+Digit}}
+\index{Binary\+Digit@{Binary\+Digit}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{Binary\+Digit}{BinaryDigit}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Binary\+Digit}}\hypertarget{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}{}\label{triangledefs_8h_a217d42dca122120c8d5e382938bdc0ee}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Z\+E\+RO@{Z\+E\+RO}!triangledefs.\+h@{triangledefs.\+h}}\index{triangledefs.\+h@{triangledefs.\+h}!Z\+E\+RO@{Z\+E\+RO}}\item[{\em 
+Z\+E\+RO\hypertarget{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eeae117e3533122c80b262257b49b21cddf}{}\label{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eeae117e3533122c80b262257b49b21cddf}
+}]\index{O\+NE@{O\+NE}!triangledefs.\+h@{triangledefs.\+h}}\index{triangledefs.\+h@{triangledefs.\+h}!O\+NE@{O\+NE}}\item[{\em 
+O\+NE\hypertarget{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eea7a725f13af144bdef532d0389ba75e0d}{}\label{triangledefs_8h_a217d42dca122120c8d5e382938bdc0eea7a725f13af144bdef532d0389ba75e0d}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{triangledefs.\+h@{triangledefs.\+h}!print\+\_\+triangulateio@{print\+\_\+triangulateio}}
+\index{print\+\_\+triangulateio@{print\+\_\+triangulateio}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+triangulateio(triangulateio $\ast$)}{print_triangulateio(triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void print\+\_\+triangulateio (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangledefs_8h_a06e0232698b2ef40d9e81c9eccc14e9d}{}\label{triangledefs_8h_a06e0232698b2ef40d9e81c9eccc14e9d}
+\index{triangledefs.\+h@{triangledefs.\+h}!triangulate@{triangulate}}
+\index{triangulate@{triangulate}!triangledefs.\+h@{triangledefs.\+h}}
+\subsubsection[{\texorpdfstring{triangulate(triangulateio $\ast$, triangulateio $\ast$, triangulateio $\ast$)}{triangulate(triangulateio *, triangulateio *, triangulateio *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} void triangulate (
+\begin{DoxyParamCaption}
+\item[{{\bf triangulateio} $\ast$}]{, }
+\item[{{\bf triangulateio} $\ast$}]{, }
+\item[{{\bf triangulateio} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{triangledefs_8h_a82cf687a49bd82bd3bedd6ed4ec3f143}{}\label{triangledefs_8h_a82cf687a49bd82bd3bedd6ed4ec3f143}

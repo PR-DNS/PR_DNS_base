@@ -1,0 +1,131 @@
+\hypertarget{group___p_a_r_a_l_l_e_l}{}\section{Fron\+Tier Parallel Communication Functions}
+\label{group___p_a_r_a_l_l_e_l}\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_gac19fe575c3db8061a68071d9c0f36196}{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This is a root level parallel communication function for front interface geometry and states. It will cut the old buffer parts of the interface and patch it with new parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_gaa042f0a83036a09217d911c2c4b9f33b}{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer} (double $\ast$grid\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$symmetry)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for a double array on the expanded dual grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga59349c20bb1702967ded6600787ce63e}{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer} (double $\ast$grid\+\_\+array, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$symmetry)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for a double array on the expanded comp grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga5e302e94034858bbc5e3925afb2e1cb2}{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$lbuf, int $\ast$ubuf, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ijk\+\_\+to\+\_\+I)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for the cell index on the expanded dual grid of the grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___p_a_r_a_l_l_e_l_ga2efb6c1cae43876327c0f8dfc35c4839}{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, int $\ast$lbuf, int $\ast$ubuf, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ijk\+\_\+to\+\_\+I)
+\begin{DoxyCompactList}\small\item\em This is a parallel communication function for the dual cell index on the expanded comp grid of the comp\+\_\+grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}!F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index@{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index}}
+\index{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index@{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index}!Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index(\+Front $\ast$front, int $\ast$lbuf, int $\ast$ubuf, P\+O\+I\+N\+T\+E\+R ijk\+\_\+to\+\_\+\+I)}{FT_ParallelExchCellIndex(Front *front, int *lbuf, int *ubuf, POINTER ijk_to_I)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Parallel\+Exch\+Cell\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{ijk\+\_\+to\+\_\+I}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_a_r_a_l_l_e_l_ga5e302e94034858bbc5e3925afb2e1cb2}{}\label{group___p_a_r_a_l_l_e_l_ga5e302e94034858bbc5e3925afb2e1cb2}
+
+
+This is a parallel communication function for the cell index on the expanded dual grid of the grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em lbuf} & {\bfseries in} size of buffer on the lower side. \\
+\hline
+{\em ubuf} & {\bfseries in} size of buffer on the upper side. \\
+\hline
+{\em ijk\+\_\+to\+\_\+I} & {\bfseries inout} Pointer to array of indices on the expanded dual grid (ij\+\_\+to\+\_\+I for 2D). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}!F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer}}
+\index{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer}!Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer(double $\ast$grid\+\_\+array, Front $\ast$front, int $\ast$symmetry)}{FT_ParallelExchCompGridArrayBuffer(double *grid_array, Front *front, int *symmetry)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Array\+Buffer (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{grid\+\_\+array, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{symmetry}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_a_r_a_l_l_e_l_ga59349c20bb1702967ded6600787ce63e}{}\label{group___p_a_r_a_l_l_e_l_ga59349c20bb1702967ded6600787ce63e}
+
+
+This is a parallel communication function for a double array on the expanded comp grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+\_\+array} & {\bfseries inout} A double array of variable on expanded comp grid. \\
+\hline
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em symmetry} & {\bfseries in} Flag of symmetry in each direction (in reflection). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}!F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index@{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index}}
+\index{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index@{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index}!Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index(\+Front $\ast$front, int $\ast$lbuf, int $\ast$ubuf, P\+O\+I\+N\+T\+E\+R ijk\+\_\+to\+\_\+\+I)}{FT_ParallelExchCompGridCellIndex(Front *front, int *lbuf, int *ubuf, POINTER ijk_to_I)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Parallel\+Exch\+Comp\+Grid\+Cell\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{lbuf, }
+\item[{int $\ast$}]{ubuf, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{ijk\+\_\+to\+\_\+I}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_a_r_a_l_l_e_l_ga2efb6c1cae43876327c0f8dfc35c4839}{}\label{group___p_a_r_a_l_l_e_l_ga2efb6c1cae43876327c0f8dfc35c4839}
+
+
+This is a parallel communication function for the dual cell index on the expanded comp grid of the comp\+\_\+grid\+\_\+intfc in front. The cell index translate the nD (n=2,3) icoordinates to a one dimensional index sequence. The indices are parallely globalized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em lbuf} & {\bfseries in} size of buffer on the lower side. \\
+\hline
+{\em ubuf} & {\bfseries in} size of buffer on the upper side. \\
+\hline
+{\em ijk\+\_\+to\+\_\+I} & {\bfseries inout} Pointer to array of indices on the expanded dual grid (ij\+\_\+to\+\_\+I for 2D). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}!F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer}}
+\index{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer}!Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer(double $\ast$grid\+\_\+array, Front $\ast$front, int $\ast$symmetry)}{FT_ParallelExchGridArrayBuffer(double *grid_array, Front *front, int *symmetry)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Parallel\+Exch\+Grid\+Array\+Buffer (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{grid\+\_\+array, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{int $\ast$}]{symmetry}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_a_r_a_l_l_e_l_gaa042f0a83036a09217d911c2c4b9f33b}{}\label{group___p_a_r_a_l_l_e_l_gaa042f0a83036a09217d911c2c4b9f33b}
+
+
+This is a parallel communication function for a double array on the expanded dual grid of the grid\+\_\+intfc in front. It will cut the old buffer parts of the array and patch it with new buffer parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+\_\+array} & {\bfseries inout} A double array of variable on expanded duel grid. \\
+\hline
+{\em front} & {\bfseries in} Pointer to Front. \\
+\hline
+{\em symmetry} & {\bfseries in} Flag of symmetry in each direction (in reflection). \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}!F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer}}
+\index{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer@{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer}!Fron\+Tier Parallel Communication Functions@{Fron\+Tier Parallel Communication Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer(\+Front $\ast$front)}{FT_ParallelExchIntfcBuffer(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Parallel\+Exch\+Intfc\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___p_a_r_a_l_l_e_l_gac19fe575c3db8061a68071d9c0f36196}{}\label{group___p_a_r_a_l_l_e_l_gac19fe575c3db8061a68071d9c0f36196}
+
+
+This is a root level parallel communication function for front interface geometry and states. It will cut the old buffer parts of the interface and patch it with new parts received from other subdomains or periodically shifted sides. This is a synchronous function and must be called synchronously by every processor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front. \\
+\hline
+\end{DoxyParams}

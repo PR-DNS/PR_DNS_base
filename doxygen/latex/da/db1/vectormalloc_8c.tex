@@ -1,0 +1,304 @@
+\hypertarget{vectormalloc_8c}{}\section{D\+N\+S/src/util/vectormalloc.c File Reference}
+\label{vectormalloc_8c}\index{D\+N\+S/src/util/vectormalloc.\+c@{D\+N\+S/src/util/vectormalloc.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$malloc.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{vectormalloc_8c_dd/df7/struct___a_l_l_o_c___h_e_a_d_e_r}{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vectormalloc_8c_a9ee56ad2090f0b8bae078349b519858b}{S\+H\+O\+W\+\_\+\+A\+L\+L\+OC}
+\item 
+\#define \hyperlink{vectormalloc_8c_ac7d31c716a80d7112aff8e7114dfd9a3}{B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}(h)
+\item 
+\#define \hyperlink{vectormalloc_8c_a486e30a16732a479a580c90069ad52ed}{block\+\_\+from\+\_\+header}(h)~((\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER})((\hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(h) + \hyperlink{vectormalloc_8c_a2dbe8b4702dfaba817ed60329c2c0f03}{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}))
+\item 
+\#define \hyperlink{vectormalloc_8c_a4198bfb6dc9f4ca2a856917408bb7d50}{header\+\_\+from\+\_\+block}(b)~((\hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$)((\hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(b) -\/ \hyperlink{vectormalloc_8c_a2dbe8b4702dfaba817ed60329c2c0f03}{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{vectormalloc_8c_dd/df7/struct___a_l_l_o_c___h_e_a_d_e_r}{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} \hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62afa2c2a207fc5bdbef81abcb4ce99f1cf}{M\+A\+X\+\_\+\+O\+R\+D\+ER} = 10
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{vectormalloc_8c_a56712d55b67f352299b89b98750afd67}{print\+\_\+alloc\+\_\+header} (\hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{vectormalloc_8c_a7fe728d0188f36e59989afa48145539b}{set\+\_\+pointers} (int, int $\ast$, int, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{vectormalloc_8c_aca6d4718a3060b937a03700af9bb574d}{test\+\_\+vmalloc\+\_\+integrity} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{array\+\_\+T} (const char $\ast$name\+\_\+A, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$pA, int \hyperlink{triangle_8c_a80adbd8c4abbb5a23a121d7c19e82c92}{order},...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{vectormalloc_8c_a755477bc08784f606c88ade4f0b57cdd}{f\+\_\+ree} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} p, const char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{vectormalloc_8c_a55e873f4cb1759ecb77dce2113686ffb}{free\+\_\+these} (int n,...)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{vectormalloc_8c_aa99fc7c4fe780599f4acd869034c2822}{free\+\_\+from\+\_\+T} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} ptr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{vectormalloc_8c_ac5e86faf98166b949beb53a0f186da49}{alloc\+\_\+view} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{vectormalloc_8c_a82e205e16275c4b007e0fe795856ef2a}{long\+\_\+alloc\+\_\+view} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{vectormalloc_8c_acf86b668a453e1aa648c48bc08c623ce}{get\+\_\+vmalloc\+\_\+storage\+\_\+use} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{vectormalloc_8c_ac257cc354cd3f4ecab442e2d4a1346e4}{vmalloc\+\_\+debug\+\_\+on} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{vectormalloc_8c_aac9d97ebcf0ad3857859770f4386ff1c}{total\+\_\+alloc} = 0
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN} \hyperlink{vectormalloc_8c_a9b802fd38cb0863f2985ecd7f56aa393}{End\+Of\+Block\+Tag}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const int \hyperlink{vectormalloc_8c_a2dbe8b4702dfaba817ed60329c2c0f03}{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET} = sizeof(\hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN})$\ast$\hyperlink{cdecs_8h_a7806ba7b7a0ee615a6a31dc86de713f6}{num\+\_\+aligns}(sizeof(\hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}))
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$ \hyperlink{vectormalloc_8c_a1d433ccb55487bf33f97ade962b66293}{first\+\_\+header} = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$ \hyperlink{vectormalloc_8c_a6213f7498bc04952e5867fe8e9c22539}{last\+\_\+header} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER@{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}}\label{struct___a_l_l_o_c___h_e_a_d_e_r}
+\hypertarget{vectormalloc_8c_struct___a_l_l_o_c___h_e_a_d_e_r}{}
+\subsubsection{struct \+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN} $\ast$\hypertarget{vectormalloc_8c_a92c8c44e376edb7471d7b0997301ad88}{}\label{vectormalloc_8c_a92c8c44e376edb7471d7b0997301ad88}
+&
+aligns&
+\\
+\hline
+
+\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}\hypertarget{vectormalloc_8c_a20d399c84b2f9f7a2ae32903a8031e92}{}\label{vectormalloc_8c_a20d399c84b2f9f7a2ae32903a8031e92}
+&
+block&
+\\
+\hline
+
+unsigned int\hypertarget{vectormalloc_8c_a28997400ef87a7dc63911fd75238245f}{}\label{vectormalloc_8c_a28997400ef87a7dc63911fd75238245f}
+&
+dim\mbox{[}\hyperlink{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62afa2c2a207fc5bdbef81abcb4ce99f1cf}{M\+A\+X\+\_\+\+O\+R\+D\+ER}\mbox{]}&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a50d6a0519a3955bc300cbd3477c91b6a}{A\+L\+I\+GN} $\ast$\hypertarget{vectormalloc_8c_ad552befad72e561e0153c88ab1891198}{}\label{vectormalloc_8c_ad552befad72e561e0153c88ab1891198}
+&
+End\+Of\+Block&
+\\
+\hline
+
+const char $\ast$\hypertarget{vectormalloc_8c_ac18880d71250b72ccac679c62e3e02c2}{}\label{vectormalloc_8c_ac18880d71250b72ccac679c62e3e02c2}
+&
+name&
+\\
+\hline
+
+struct \hyperlink{vectormalloc_8c_dd/df7/struct___a_l_l_o_c___h_e_a_d_e_r}{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$\hypertarget{vectormalloc_8c_a095564f12cd90ca043928f1be608b9fe}{}\label{vectormalloc_8c_a095564f12cd90ca043928f1be608b9fe}
+&
+next&
+\\
+\hline
+
+unsigned int\hypertarget{vectormalloc_8c_ab4c60c164c2efba5f577c69603a89905}{}\label{vectormalloc_8c_ab4c60c164c2efba5f577c69603a89905}
+&
+order&
+\\
+\hline
+
+struct \hyperlink{vectormalloc_8c_dd/df7/struct___a_l_l_o_c___h_e_a_d_e_r}{\+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$\hypertarget{vectormalloc_8c_aeaa1a9eb15d8cf652fb91c8d06be1a84}{}\label{vectormalloc_8c_aeaa1a9eb15d8cf652fb91c8d06be1a84}
+&
+prev&
+\\
+\hline
+
+unsigned int\hypertarget{vectormalloc_8c_ac4a60423fbdc4e5d02b857a7d5fc4398}{}\label{vectormalloc_8c_ac4a60423fbdc4e5d02b857a7d5fc4398}
+&
+size&
+\\
+\hline
+
+size\+\_\+t\hypertarget{vectormalloc_8c_a3595b63c992aecb6f65edc279ec7f7b3}{}\label{vectormalloc_8c_a3595b63c992aecb6f65edc279ec7f7b3}
+&
+space&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED@{B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}}
+\index{B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED@{B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}{BLOCK_CORRUPTED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+L\+O\+C\+K\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED(
+\begin{DoxyParamCaption}
+\item[{}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_ac7d31c716a80d7112aff8e7114dfd9a3}{}\label{vectormalloc_8c_ac7d31c716a80d7112aff8e7114dfd9a3}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( ((h)->block != \hyperlink{vectormalloc_8c_a486e30a16732a479a580c90069ad52ed}{block\_from\_header}(h)) || \(\backslash\)
+                                  (*(h)->EndOfBlock != \hyperlink{vectormalloc_8c_a9b802fd38cb0863f2985ecd7f56aa393}{EndOfBlockTag}) )
+\end{DoxyCode}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!block\+\_\+from\+\_\+header@{block\+\_\+from\+\_\+header}}
+\index{block\+\_\+from\+\_\+header@{block\+\_\+from\+\_\+header}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{block\+\_\+from\+\_\+header}{block_from_header}}]{\setlength{\rightskip}{0pt plus 5cm}\#define block\+\_\+from\+\_\+header(
+\begin{DoxyParamCaption}
+\item[{}]{h}
+\end{DoxyParamCaption}
+)~(({\bf P\+O\+I\+N\+T\+ER})(({\bf byte}$\ast$)(h) + {\bf H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}))}\hypertarget{vectormalloc_8c_a486e30a16732a479a580c90069ad52ed}{}\label{vectormalloc_8c_a486e30a16732a479a580c90069ad52ed}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!header\+\_\+from\+\_\+block@{header\+\_\+from\+\_\+block}}
+\index{header\+\_\+from\+\_\+block@{header\+\_\+from\+\_\+block}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{header\+\_\+from\+\_\+block}{header_from_block}}]{\setlength{\rightskip}{0pt plus 5cm}\#define header\+\_\+from\+\_\+block(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(({\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$)(({\bf byte}$\ast$)(b) -\/ {\bf H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}))}\hypertarget{vectormalloc_8c_a4198bfb6dc9f4ca2a856917408bb7d50}{}\label{vectormalloc_8c_a4198bfb6dc9f4ca2a856917408bb7d50}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!S\+H\+O\+W\+\_\+\+A\+L\+L\+OC@{S\+H\+O\+W\+\_\+\+A\+L\+L\+OC}}
+\index{S\+H\+O\+W\+\_\+\+A\+L\+L\+OC@{S\+H\+O\+W\+\_\+\+A\+L\+L\+OC}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{S\+H\+O\+W\+\_\+\+A\+L\+L\+OC}{SHOW_ALLOC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+H\+O\+W\+\_\+\+A\+L\+L\+OC}\hypertarget{vectormalloc_8c_a9ee56ad2090f0b8bae078349b519858b}{}\label{vectormalloc_8c_a9ee56ad2090f0b8bae078349b519858b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch} (\hyperlink{vectormalloc_8c_ac257cc354cd3f4ecab442e2d4a1346e4}{vmalloc\_debug\_on})    \(\backslash\)
+    \{                            \(\backslash\)
+    case 4:                      \(\backslash\)
+        alloc\_view(stdout);      \(\backslash\)
+        break;                   \(\backslash\)
+    case 5:                      \(\backslash\)
+        long\_alloc\_view(stdout); \(\backslash\)
+        break;                   \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER@{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}}
+\index{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER@{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}{ALLOC_HEADER}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} {\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}}\hypertarget{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}{}\label{vectormalloc_8c_a41496ec4c9c519b4a65dab2da6676a5e}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62}{}\label{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+X\+\_\+\+O\+R\+D\+ER@{M\+A\+X\+\_\+\+O\+R\+D\+ER}!vectormalloc.\+c@{vectormalloc.\+c}}\index{vectormalloc.\+c@{vectormalloc.\+c}!M\+A\+X\+\_\+\+O\+R\+D\+ER@{M\+A\+X\+\_\+\+O\+R\+D\+ER}}\item[{\em 
+M\+A\+X\+\_\+\+O\+R\+D\+ER\hypertarget{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62afa2c2a207fc5bdbef81abcb4ce99f1cf}{}\label{vectormalloc_8c_a8628933cde20921c453a6d2607bdad62afa2c2a207fc5bdbef81abcb4ce99f1cf}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!alloc\+\_\+view@{alloc\+\_\+view}}
+\index{alloc\+\_\+view@{alloc\+\_\+view}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+view(\+F\+I\+L\+E $\ast$file)}{alloc_view(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void alloc\+\_\+view (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_ac5e86faf98166b949beb53a0f186da49}{}\label{vectormalloc_8c_ac5e86faf98166b949beb53a0f186da49}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!array\+\_\+T@{array\+\_\+T}}
+\index{array\+\_\+T@{array\+\_\+T}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{array\+\_\+\+T(const char $\ast$name\+\_\+\+A, P\+O\+I\+N\+T\+E\+R $\ast$p\+A, int order,...)}{array_T(const char *name_A, POINTER *pA, int order,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} array\+\_\+T (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\+\_\+A, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{pA, }
+\item[{int}]{order, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}{}\label{vectormalloc_8c_a1151ca96d65857aea9206acb41fe3360}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!f\+\_\+ree@{f\+\_\+ree}}
+\index{f\+\_\+ree@{f\+\_\+ree}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+ree(\+P\+O\+I\+N\+T\+E\+R p, const char $\ast$name)}{f_ree(POINTER p, const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+ree (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{p, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a755477bc08784f606c88ade4f0b57cdd}{}\label{vectormalloc_8c_a755477bc08784f606c88ade4f0b57cdd}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!free\+\_\+from\+\_\+T@{free\+\_\+from\+\_\+T}}
+\index{free\+\_\+from\+\_\+T@{free\+\_\+from\+\_\+T}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+from\+\_\+\+T(\+P\+O\+I\+N\+T\+E\+R ptr)}{free_from_T(POINTER ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int free\+\_\+from\+\_\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_aa99fc7c4fe780599f4acd869034c2822}{}\label{vectormalloc_8c_aa99fc7c4fe780599f4acd869034c2822}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!free\+\_\+these@{free\+\_\+these}}
+\index{free\+\_\+these@{free\+\_\+these}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+these(int n,...)}{free_these(int n,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void free\+\_\+these (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a55e873f4cb1759ecb77dce2113686ffb}{}\label{vectormalloc_8c_a55e873f4cb1759ecb77dce2113686ffb}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!get\+\_\+vmalloc\+\_\+storage\+\_\+use@{get\+\_\+vmalloc\+\_\+storage\+\_\+use}}
+\index{get\+\_\+vmalloc\+\_\+storage\+\_\+use@{get\+\_\+vmalloc\+\_\+storage\+\_\+use}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+vmalloc\+\_\+storage\+\_\+use(void)}{get_vmalloc_storage_use(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int get\+\_\+vmalloc\+\_\+storage\+\_\+use (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_acf86b668a453e1aa648c48bc08c623ce}{}\label{vectormalloc_8c_acf86b668a453e1aa648c48bc08c623ce}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!long\+\_\+alloc\+\_\+view@{long\+\_\+alloc\+\_\+view}}
+\index{long\+\_\+alloc\+\_\+view@{long\+\_\+alloc\+\_\+view}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{long\+\_\+alloc\+\_\+view(\+F\+I\+L\+E $\ast$file)}{long_alloc_view(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void long\+\_\+alloc\+\_\+view (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a82e205e16275c4b007e0fe795856ef2a}{}\label{vectormalloc_8c_a82e205e16275c4b007e0fe795856ef2a}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!print\+\_\+alloc\+\_\+header@{print\+\_\+alloc\+\_\+header}}
+\index{print\+\_\+alloc\+\_\+header@{print\+\_\+alloc\+\_\+header}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+alloc\+\_\+header(\+A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+E\+R $\ast$)}{print_alloc_header(ALLOC_HEADER *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+alloc\+\_\+header (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a56712d55b67f352299b89b98750afd67}{}\label{vectormalloc_8c_a56712d55b67f352299b89b98750afd67}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!set\+\_\+pointers@{set\+\_\+pointers}}
+\index{set\+\_\+pointers@{set\+\_\+pointers}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+pointers(int, int $\ast$, int, P\+O\+I\+N\+T\+E\+R $\ast$, P\+O\+I\+N\+T\+E\+R, int)}{set_pointers(int, int *, int, POINTER *, POINTER, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+pointers (
+\begin{DoxyParamCaption}
+\item[{int}]{order, }
+\item[{int $\ast$}]{dim, }
+\item[{int}]{num\+\_\+ptrs, }
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{pointers, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{location, }
+\item[{int}]{size\+\_\+object}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_a7fe728d0188f36e59989afa48145539b}{}\label{vectormalloc_8c_a7fe728d0188f36e59989afa48145539b}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!test\+\_\+vmalloc\+\_\+integrity@{test\+\_\+vmalloc\+\_\+integrity}}
+\index{test\+\_\+vmalloc\+\_\+integrity@{test\+\_\+vmalloc\+\_\+integrity}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{test\+\_\+vmalloc\+\_\+integrity(void)}{test_vmalloc_integrity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void test\+\_\+vmalloc\+\_\+integrity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{vectormalloc_8c_aca6d4718a3060b937a03700af9bb574d}{}\label{vectormalloc_8c_aca6d4718a3060b937a03700af9bb574d}
+
+
+\subsection{Variable Documentation}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!End\+Of\+Block\+Tag@{End\+Of\+Block\+Tag}}
+\index{End\+Of\+Block\+Tag@{End\+Of\+Block\+Tag}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{End\+Of\+Block\+Tag}{EndOfBlockTag}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf A\+L\+I\+GN} End\+Of\+Block\+Tag}\hypertarget{vectormalloc_8c_a9b802fd38cb0863f2985ecd7f56aa393}{}\label{vectormalloc_8c_a9b802fd38cb0863f2985ecd7f56aa393}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!first\+\_\+header@{first\+\_\+header}}
+\index{first\+\_\+header@{first\+\_\+header}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{first\+\_\+header}{first_header}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}$\ast$ first\+\_\+header = N\+U\+LL}\hypertarget{vectormalloc_8c_a1d433ccb55487bf33f97ade962b66293}{}\label{vectormalloc_8c_a1d433ccb55487bf33f97ade962b66293}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET@{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}}
+\index{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET@{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET}{HEADER_OFFSET}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const int H\+E\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET = sizeof({\bf A\+L\+I\+GN})$\ast${\bf num\+\_\+aligns}(sizeof({\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER}))}\hypertarget{vectormalloc_8c_a2dbe8b4702dfaba817ed60329c2c0f03}{}\label{vectormalloc_8c_a2dbe8b4702dfaba817ed60329c2c0f03}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!last\+\_\+header@{last\+\_\+header}}
+\index{last\+\_\+header@{last\+\_\+header}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{last\+\_\+header}{last_header}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf A\+L\+L\+O\+C\+\_\+\+H\+E\+A\+D\+ER} $\ast$ last\+\_\+header = N\+U\+LL}\hypertarget{vectormalloc_8c_a6213f7498bc04952e5867fe8e9c22539}{}\label{vectormalloc_8c_a6213f7498bc04952e5867fe8e9c22539}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!total\+\_\+alloc@{total\+\_\+alloc}}
+\index{total\+\_\+alloc@{total\+\_\+alloc}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{total\+\_\+alloc}{total_alloc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int total\+\_\+alloc = 0}\hypertarget{vectormalloc_8c_aac9d97ebcf0ad3857859770f4386ff1c}{}\label{vectormalloc_8c_aac9d97ebcf0ad3857859770f4386ff1c}
+\index{vectormalloc.\+c@{vectormalloc.\+c}!vmalloc\+\_\+debug\+\_\+on@{vmalloc\+\_\+debug\+\_\+on}}
+\index{vmalloc\+\_\+debug\+\_\+on@{vmalloc\+\_\+debug\+\_\+on}!vectormalloc.\+c@{vectormalloc.\+c}}
+\subsubsection[{\texorpdfstring{vmalloc\+\_\+debug\+\_\+on}{vmalloc_debug_on}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int vmalloc\+\_\+debug\+\_\+on = 0}\hypertarget{vectormalloc_8c_ac257cc354cd3f4ecab442e2d4a1346e4}{}\label{vectormalloc_8c_ac257cc354cd3f4ecab442e2d4a1346e4}

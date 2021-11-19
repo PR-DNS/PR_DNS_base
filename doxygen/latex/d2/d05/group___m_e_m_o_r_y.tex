@@ -1,0 +1,240 @@
+\hypertarget{group___m_e_m_o_r_y}{}\section{Fron\+Tier Memory Management Functions}
+\label{group___m_e_m_o_r_y}\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga888f56a3301f51e6aac40f551baeb4be}{F\+T\+\_\+\+Scalar\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a scalar. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga570eae212fd06f81b13cba40afab4f13}{F\+T\+\_\+\+Vector\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a vector. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gaf212e9156877eb00239c77ce67a1a605}{F\+T\+\_\+\+Matrix\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a matrix. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gabe5793d460243dc938707cee6c3240ee}{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a tri-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gacae5a3f530c605b817da658e8125d349}{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a quad-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga7d1eb9f91240b404f71aa5330a10db67}{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int n5, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a quin-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_gaead680b732b97af8f9f87f68ce6a5a12}{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$a, int n1, int n2, int n3, int n4, int n5, int n6, int size)
+\begin{DoxyCompactList}\small\item\em This function allocate the memory for a sex-\/array. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___m_e_m_o_r_y_ga66158bee772523da70a72319d21ce78b}{F\+T\+\_\+\+Free\+These} (int n,...)
+\begin{DoxyCompactList}\small\item\em This function free memory of items allocated by F\+T\+\_\+...Memory\+Alloc() functions. The number of arguments is flexible, but needs to equal to the input integer n. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Free\+These@{F\+T\+\_\+\+Free\+These}}
+\index{F\+T\+\_\+\+Free\+These@{F\+T\+\_\+\+Free\+These}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Free\+These(int n,...)}{FT_FreeThese(int n,...)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Free\+These (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_ga66158bee772523da70a72319d21ce78b}{}\label{group___m_e_m_o_r_y_ga66158bee772523da70a72319d21ce78b}
+
+
+This function free memory of items allocated by F\+T\+\_\+...Memory\+Alloc() functions. The number of arguments is flexible, but needs to equal to the input integer n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} front in which the interfac global index is to be set. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Matrix\+Memory\+Alloc@{F\+T\+\_\+\+Matrix\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Matrix\+Memory\+Alloc@{F\+T\+\_\+\+Matrix\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Matrix\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int n2, int size)}{FT_MatrixMemoryAlloc(POINTER *a, int n1, int n2, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Matrix\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{n2, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_gaf212e9156877eb00239c77ce67a1a605}{}\label{group___m_e_m_o_r_y_gaf212e9156877eb00239c77ce67a1a605}
+
+
+This function allocate the memory for a matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the matrix pointer. \\
+\hline
+{\em n1} & {\bfseries in} First dimension of the matrix. \\
+\hline
+{\em n2} & {\bfseries in} Second dimension of the matrix. \\
+\hline
+{\em size} & {\bfseries in} size of the matrix entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int n2, int n3, int n4, int size)}{FT_QuadArrayMemoryAlloc(POINTER *a, int n1, int n2, int n3, int n4, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Quad\+Array\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{n2, }
+\item[{int}]{n3, }
+\item[{int}]{n4, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_gacae5a3f530c605b817da658e8125d349}{}\label{group___m_e_m_o_r_y_gacae5a3f530c605b817da658e8125d349}
+
+
+This function allocate the memory for a quad-\/array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the quad-\/array pointer. \\
+\hline
+{\em n1} & {\bfseries in} First dimension of the quad-\/array. \\
+\hline
+{\em n2} & {\bfseries in} Second dimension of the quad-\/array. \\
+\hline
+{\em n3} & {\bfseries in} Third dimension of the quad-\/array. \\
+\hline
+{\em n4} & {\bfseries in} Fourth dimension of the quad-\/array. \\
+\hline
+{\em size} & {\bfseries in} size of the quad-\/array entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int n2, int n3, int n4, int n5, int size)}{FT_QuinArrayMemoryAlloc(POINTER *a, int n1, int n2, int n3, int n4, int n5, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Quin\+Array\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{n2, }
+\item[{int}]{n3, }
+\item[{int}]{n4, }
+\item[{int}]{n5, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_ga7d1eb9f91240b404f71aa5330a10db67}{}\label{group___m_e_m_o_r_y_ga7d1eb9f91240b404f71aa5330a10db67}
+
+
+This function allocate the memory for a quin-\/array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the quin-\/array pointer. \\
+\hline
+{\em n1} & {\bfseries in} First dimension of the quin-\/array. \\
+\hline
+{\em n2} & {\bfseries in} Second dimension of the quin-\/array. \\
+\hline
+{\em n3} & {\bfseries in} Third dimension of the quin-\/array. \\
+\hline
+{\em n4} & {\bfseries in} Fourth dimension of the quin-\/array. \\
+\hline
+{\em n5} & {\bfseries in} Fifth dimension of the quin-\/array. \\
+\hline
+{\em size} & {\bfseries in} size of the quin-\/array entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Scalar\+Memory\+Alloc@{F\+T\+\_\+\+Scalar\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Scalar\+Memory\+Alloc@{F\+T\+\_\+\+Scalar\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Scalar\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int size)}{FT_ScalarMemoryAlloc(POINTER *a, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Scalar\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_ga888f56a3301f51e6aac40f551baeb4be}{}\label{group___m_e_m_o_r_y_ga888f56a3301f51e6aac40f551baeb4be}
+
+
+This function allocate the memory for a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the scalar pointer. \\
+\hline
+{\em size} & {\bfseries in} size of the scalar entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int n2, int n3, int n4, int n5, int n6, int size)}{FT_SexArrayMemoryAlloc(POINTER *a, int n1, int n2, int n3, int n4, int n5, int n6, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Sex\+Array\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{n2, }
+\item[{int}]{n3, }
+\item[{int}]{n4, }
+\item[{int}]{n5, }
+\item[{int}]{n6, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_gaead680b732b97af8f9f87f68ce6a5a12}{}\label{group___m_e_m_o_r_y_gaead680b732b97af8f9f87f68ce6a5a12}
+
+
+This function allocate the memory for a sex-\/array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the sex-\/array pointer. \\
+\hline
+{\em n1} & {\bfseries in} First dimension of the sex-\/array. \\
+\hline
+{\em n2} & {\bfseries in} Second dimension of the sex-\/array. \\
+\hline
+{\em n3} & {\bfseries in} Third dimension of the sex-\/array. \\
+\hline
+{\em n4} & {\bfseries in} Fourth dimension of the sex-\/array. \\
+\hline
+{\em n5} & {\bfseries in} Fifth dimension of the sex-\/array. \\
+\hline
+{\em n6} & {\bfseries in} Sixth dimension of the sex-\/array. \\
+\hline
+{\em size} & {\bfseries in} size of the sex-\/array entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc@{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int n2, int n3, int size)}{FT_TriArrayMemoryAlloc(POINTER *a, int n1, int n2, int n3, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Tri\+Array\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{n2, }
+\item[{int}]{n3, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_gabe5793d460243dc938707cee6c3240ee}{}\label{group___m_e_m_o_r_y_gabe5793d460243dc938707cee6c3240ee}
+
+
+This function allocate the memory for a tri-\/array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the tri-\/array pointer. \\
+\hline
+{\em n1} & {\bfseries in} First dimension of the tri-\/array. \\
+\hline
+{\em n2} & {\bfseries in} Second dimension of the tri-\/array. \\
+\hline
+{\em n3} & {\bfseries in} Third dimension of the tri-\/array. \\
+\hline
+{\em size} & {\bfseries in} size of the tri-\/array entity. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}!F\+T\+\_\+\+Vector\+Memory\+Alloc@{F\+T\+\_\+\+Vector\+Memory\+Alloc}}
+\index{F\+T\+\_\+\+Vector\+Memory\+Alloc@{F\+T\+\_\+\+Vector\+Memory\+Alloc}!Fron\+Tier Memory Management Functions@{Fron\+Tier Memory Management Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Vector\+Memory\+Alloc(\+P\+O\+I\+N\+T\+E\+R $\ast$a, int n1, int size)}{FT_VectorMemoryAlloc(POINTER *a, int n1, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Vector\+Memory\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{a, }
+\item[{int}]{n1, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{group___m_e_m_o_r_y_ga570eae212fd06f81b13cba40afab4f13}{}\label{group___m_e_m_o_r_y_ga570eae212fd06f81b13cba40afab4f13}
+
+
+This function allocate the memory for a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & {\bfseries out} Address of the vector pointer. \\
+\hline
+{\em n1} & {\bfseries in} Dimension of the vector. \\
+\hline
+{\em size} & {\bfseries in} size of the vector entity. \\
+\hline
+\end{DoxyParams}

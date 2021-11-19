@@ -1,0 +1,90 @@
+\hypertarget{hyperb_8cpp}{}\section{D\+N\+S/solver/hyperb.cpp File Reference}
+\label{hyperb_8cpp}\index{D\+N\+S/solver/hyperb.\+cpp@{D\+N\+S/solver/hyperb.\+cpp}}
+{\ttfamily \#include \char`\"{}solver.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hyperb_8cpp_a6e53c0f3508626f669a4b0b970f6d331}{rho\+\_\+of\+\_\+comp}(comp)~(((comp) == soln\+\_\+comp1) ? rho1 \+: rho2)
+\item 
+\#define \hyperlink{hyperb_8cpp_a52e44be2141e044ce8e8edc9aa4a2aef}{soln\+\_\+comp}(comp)~((comp) == soln\+\_\+comp1 $\vert$$\vert$ (comp) == soln\+\_\+comp2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{hyperb_8cpp_a021af437263ad57feecdeef57626a5da}{upwind\+\_\+flux} (\hyperlink{solver_8h_a855a15ac4311672d2bab54f187373c27}{S\+W\+E\+EP} $\ast$vst, \hyperlink{solver_8h_a41e79be3c9129cd834be3b9874d08de6}{F\+S\+W\+E\+EP} $\ast$vflux, double lambda, int n, int dir, int dim)
+\item 
+void \hyperlink{hyperb_8cpp_a26ed84dc4ce8fb4e762489004fceeb9b}{Weno5\+\_\+\+Get\+\_\+\+Flux} (double $\ast$u, double $\ast$v, double $\ast$flux, double lambda, int n)
+\item 
+void \hyperlink{hyperb_8cpp_a9919b8b932c155ff7e993ccc6b4de43c}{weno5\+\_\+flux} (\hyperlink{solver_8h_a855a15ac4311672d2bab54f187373c27}{S\+W\+E\+EP} $\ast$vst, \hyperlink{solver_8h_a41e79be3c9129cd834be3b9874d08de6}{F\+S\+W\+E\+EP} $\ast$vflux, double lambda, int n, int dir, int dim)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double($\ast$ \hyperlink{hyperb_8cpp_a9e982e7f296256677518d1a1dc99b29f}{flux\+\_\+func} )(double, double)
+\item 
+double($\ast$ \hyperlink{hyperb_8cpp_a294725fdd3f20839e6aba6a0653e1d4f}{dF} )(double, double)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!rho\+\_\+of\+\_\+comp@{rho\+\_\+of\+\_\+comp}}
+\index{rho\+\_\+of\+\_\+comp@{rho\+\_\+of\+\_\+comp}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{rho\+\_\+of\+\_\+comp}{rho_of_comp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define rho\+\_\+of\+\_\+comp(
+\begin{DoxyParamCaption}
+\item[{}]{comp}
+\end{DoxyParamCaption}
+)~(((comp) == soln\+\_\+comp1) ? rho1 \+: rho2)}\hypertarget{hyperb_8cpp_a6e53c0f3508626f669a4b0b970f6d331}{}\label{hyperb_8cpp_a6e53c0f3508626f669a4b0b970f6d331}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!soln\+\_\+comp@{soln\+\_\+comp}}
+\index{soln\+\_\+comp@{soln\+\_\+comp}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{soln\+\_\+comp}{soln_comp}}]{\setlength{\rightskip}{0pt plus 5cm}\#define soln\+\_\+comp(
+\begin{DoxyParamCaption}
+\item[{}]{comp}
+\end{DoxyParamCaption}
+)~((comp) == soln\+\_\+comp1 $\vert$$\vert$ (comp) == soln\+\_\+comp2)}\hypertarget{hyperb_8cpp_a52e44be2141e044ce8e8edc9aa4a2aef}{}\label{hyperb_8cpp_a52e44be2141e044ce8e8edc9aa4a2aef}
+
+
+\subsection{Function Documentation}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!upwind\+\_\+flux@{upwind\+\_\+flux}}
+\index{upwind\+\_\+flux@{upwind\+\_\+flux}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{upwind\+\_\+flux(\+S\+W\+E\+E\+P $\ast$vst, F\+S\+W\+E\+E\+P $\ast$vflux, double lambda, int n, int dir, int dim)}{upwind_flux(SWEEP *vst, FSWEEP *vflux, double lambda, int n, int dir, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}void upwind\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+W\+E\+EP} $\ast$}]{vst, }
+\item[{{\bf F\+S\+W\+E\+EP} $\ast$}]{vflux, }
+\item[{double}]{lambda, }
+\item[{int}]{n, }
+\item[{int}]{dir, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{hyperb_8cpp_a021af437263ad57feecdeef57626a5da}{}\label{hyperb_8cpp_a021af437263ad57feecdeef57626a5da}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!weno5\+\_\+flux@{weno5\+\_\+flux}}
+\index{weno5\+\_\+flux@{weno5\+\_\+flux}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{weno5\+\_\+flux(\+S\+W\+E\+E\+P $\ast$vst, F\+S\+W\+E\+E\+P $\ast$vflux, double lambda, int n, int dir, int dim)}{weno5_flux(SWEEP *vst, FSWEEP *vflux, double lambda, int n, int dir, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}void weno5\+\_\+flux (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+W\+E\+EP} $\ast$}]{vst, }
+\item[{{\bf F\+S\+W\+E\+EP} $\ast$}]{vflux, }
+\item[{double}]{lambda, }
+\item[{int}]{n, }
+\item[{int}]{dir, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{hyperb_8cpp_a9919b8b932c155ff7e993ccc6b4de43c}{}\label{hyperb_8cpp_a9919b8b932c155ff7e993ccc6b4de43c}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!Weno5\+\_\+\+Get\+\_\+\+Flux@{Weno5\+\_\+\+Get\+\_\+\+Flux}}
+\index{Weno5\+\_\+\+Get\+\_\+\+Flux@{Weno5\+\_\+\+Get\+\_\+\+Flux}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{Weno5\+\_\+\+Get\+\_\+\+Flux(double $\ast$u, double $\ast$v, double $\ast$flux, double lambda, int n)}{Weno5_Get_Flux(double *u, double *v, double *flux, double lambda, int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void Weno5\+\_\+\+Get\+\_\+\+Flux (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{u, }
+\item[{double $\ast$}]{v, }
+\item[{double $\ast$}]{flux, }
+\item[{double}]{lambda, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{hyperb_8cpp_a26ed84dc4ce8fb4e762489004fceeb9b}{}\label{hyperb_8cpp_a26ed84dc4ce8fb4e762489004fceeb9b}
+
+
+\subsection{Variable Documentation}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!dF@{dF}}
+\index{dF@{dF}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{dF}{dF}}]{\setlength{\rightskip}{0pt plus 5cm}double($\ast$ dF) (double, double)}\hypertarget{hyperb_8cpp_a294725fdd3f20839e6aba6a0653e1d4f}{}\label{hyperb_8cpp_a294725fdd3f20839e6aba6a0653e1d4f}
+\index{hyperb.\+cpp@{hyperb.\+cpp}!flux\+\_\+func@{flux\+\_\+func}}
+\index{flux\+\_\+func@{flux\+\_\+func}!hyperb.\+cpp@{hyperb.\+cpp}}
+\subsubsection[{\texorpdfstring{flux\+\_\+func}{flux_func}}]{\setlength{\rightskip}{0pt plus 5cm}double($\ast$ flux\+\_\+func) (double, double)}\hypertarget{hyperb_8cpp_a9e982e7f296256677518d1a1dc99b29f}{}\label{hyperb_8cpp_a9e982e7f296256677518d1a1dc99b29f}

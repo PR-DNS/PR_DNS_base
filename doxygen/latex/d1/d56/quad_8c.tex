@@ -1,0 +1,55 @@
+\hypertarget{quad_8c}{}\section{D\+N\+S/src/util/quad.c File Reference}
+\label{quad_8c}\index{D\+N\+S/src/util/quad.\+c@{D\+N\+S/src/util/quad.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{quad_8c_a7418f19130eaa435938d96cd15de83cf}{dqng} (double($\ast$f)(double, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} prms, double a, double b, double epsabs, double epsrel, double $\ast$pabserr, int $\ast$pneval, \hyperlink{cdecs_8h_aa7a358d86e80aca10f7ea4b912617793}{Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+US} $\ast$pier)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{quad_8c_a7d2c9e731e99d296b56751664c13ef24}{Simp\+Rule} (double($\ast$f)(double, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} prms, double a, double b, double epsabs, double epsrel, double $\ast$pabserr, int $\ast$pneval, \hyperlink{cdecs_8h_aa7a358d86e80aca10f7ea4b912617793}{Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+US} $\ast$pier)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const double \hyperlink{quad_8c_aa9d38e692d00f53e840ece07295b701e}{T\+I\+NY} = 5e-\/29
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{quad.\+c@{quad.\+c}!dqng@{dqng}}
+\index{dqng@{dqng}!quad.\+c@{quad.\+c}}
+\subsubsection[{\texorpdfstring{dqng(double($\ast$f)(double, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R prms, double a, double b, double epsabs, double epsrel, double $\ast$pabserr, int $\ast$pneval, Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+U\+S $\ast$pier)}{dqng(double(*f)(double, POINTER), POINTER prms, double a, double b, double epsabs, double epsrel, double *pabserr, int *pneval, QUADRATURE_STATUS *pier)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double dqng (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)(double, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{prms, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{epsabs, }
+\item[{double}]{epsrel, }
+\item[{double $\ast$}]{pabserr, }
+\item[{int $\ast$}]{pneval, }
+\item[{{\bf Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+US} $\ast$}]{pier}
+\end{DoxyParamCaption}
+)}\hypertarget{quad_8c_a7418f19130eaa435938d96cd15de83cf}{}\label{quad_8c_a7418f19130eaa435938d96cd15de83cf}
+\index{quad.\+c@{quad.\+c}!Simp\+Rule@{Simp\+Rule}}
+\index{Simp\+Rule@{Simp\+Rule}!quad.\+c@{quad.\+c}}
+\subsubsection[{\texorpdfstring{Simp\+Rule(double($\ast$f)(double, P\+O\+I\+N\+T\+E\+R), P\+O\+I\+N\+T\+E\+R prms, double a, double b, double epsabs, double epsrel, double $\ast$pabserr, int $\ast$pneval, Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+U\+S $\ast$pier)}{SimpRule(double(*f)(double, POINTER), POINTER prms, double a, double b, double epsabs, double epsrel, double *pabserr, int *pneval, QUADRATURE_STATUS *pier)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double Simp\+Rule (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)(double, {\bf P\+O\+I\+N\+T\+ER})}]{f, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{prms, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{epsabs, }
+\item[{double}]{epsrel, }
+\item[{double $\ast$}]{pabserr, }
+\item[{int $\ast$}]{pneval, }
+\item[{{\bf Q\+U\+A\+D\+R\+A\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+US} $\ast$}]{pier}
+\end{DoxyParamCaption}
+)}\hypertarget{quad_8c_a7d2c9e731e99d296b56751664c13ef24}{}\label{quad_8c_a7d2c9e731e99d296b56751664c13ef24}
+
+
+\subsection{Variable Documentation}
+\index{quad.\+c@{quad.\+c}!T\+I\+NY@{T\+I\+NY}}
+\index{T\+I\+NY@{T\+I\+NY}!quad.\+c@{quad.\+c}}
+\subsubsection[{\texorpdfstring{T\+I\+NY}{TINY}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const double T\+I\+NY = 5e-\/29}\hypertarget{quad_8c_aa9d38e692d00f53e840ece07295b701e}{}\label{quad_8c_aa9d38e692d00f53e840ece07295b701e}

@@ -1,0 +1,162 @@
+\hypertarget{trisurf_8c}{}\section{D\+N\+S/src/intfc/trisurf.c File Reference}
+\label{trisurf_8c}\index{D\+N\+S/src/intfc/trisurf.\+c@{D\+N\+S/src/intfc/trisurf.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{trisurf_8c_a0f439184c875b7226f70284dfac1de5c}{Next\+\_\+m4}(n)                        ~(((n) + 1) \% 4)
+\item 
+\#define \hyperlink{trisurf_8c_a59dd70e8defd4b29eab37ad66959fc84}{Prev\+\_\+m4}(n)                        ~(((n) + 3) \% 4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{trisurf_8c_ade9ddf89f398492ee13e186aa5ca388a}{id\+\_\+curve\+\_\+by\+\_\+points} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} \hyperlink{trisurf_8c_a52609632ddbd28a8115636cf251e423c}{is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{trisurf_8c_a760d015bd24257afb8eae6ce172d2710}{value\+\_\+x} (double $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{trisurf_8c_ad5d82b7480b792edee0333e2bb9df034}{value\+\_\+y} (double $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{trisurf_8c_ab18509ed8cbbcd4072402bc43014f404}{value\+\_\+z} (double $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{trisurf_8c_a13d3c84adcb51d545b0684a13cf61786}{set\+\_\+curve\+\_\+bdry\+\_\+flag} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{trisurf_8c_adbe0c74534f810832eae36d6ee9a508f}{normal\+\_\+of\+\_\+plane\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{trisurf_8c_a6ef827d41515ad12570c2d8f6c182b50}{strip\+\_\+curves\+\_\+in\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{trisurf_8c_af3901a111538b4c70cd651593d4e038c}{right\+\_\+planar\+\_\+surface\+\_\+triangulation} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{trisurf_8c_ad8054625cd76310ed01917f366c4df8c}{planar\+\_\+surface\+\_\+triangulation} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$grid, const \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} expand\+\_\+buffer\+\_\+zones)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{trisurf_8c_a1cd792f47904be61ce3ce379911daad4}{planar\+\_\+hole\+\_\+surface\+\_\+triangulation} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pmin, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pmel, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pmeu, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pmax)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{trisurf_8c_abdbf449b44fd64f9e028b1ac8a753829}{oblique\+\_\+planar\+\_\+surface\+\_\+triangulation} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{trisurf.\+c@{trisurf.\+c}!Next\+\_\+m4@{Next\+\_\+m4}}
+\index{Next\+\_\+m4@{Next\+\_\+m4}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{Next\+\_\+m4}{Next_m4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Next\+\_\+m4(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n) + 1) \% 4)}\hypertarget{trisurf_8c_a0f439184c875b7226f70284dfac1de5c}{}\label{trisurf_8c_a0f439184c875b7226f70284dfac1de5c}
+\index{trisurf.\+c@{trisurf.\+c}!Prev\+\_\+m4@{Prev\+\_\+m4}}
+\index{Prev\+\_\+m4@{Prev\+\_\+m4}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{Prev\+\_\+m4}{Prev_m4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prev\+\_\+m4(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n) + 3) \% 4)}\hypertarget{trisurf_8c_a59dd70e8defd4b29eab37ad66959fc84}{}\label{trisurf_8c_a59dd70e8defd4b29eab37ad66959fc84}
+
+
+\subsection{Function Documentation}
+\index{trisurf.\+c@{trisurf.\+c}!id\+\_\+curve\+\_\+by\+\_\+points@{id\+\_\+curve\+\_\+by\+\_\+points}}
+\index{id\+\_\+curve\+\_\+by\+\_\+points@{id\+\_\+curve\+\_\+by\+\_\+points}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{id\+\_\+curve\+\_\+by\+\_\+points(\+S\+U\+R\+F\+A\+C\+E $\ast$, P\+O\+I\+N\+T $\ast$, P\+O\+I\+N\+T $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N $\ast$)}{id_curve_by_points(SURFACE *, POINT *, POINT *, ORIENTATION *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf C\+U\+R\+VE} $\ast$ id\+\_\+curve\+\_\+by\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{ps, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pe, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} $\ast$}]{orientation}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_ade9ddf89f398492ee13e186aa5ca388a}{}\label{trisurf_8c_ade9ddf89f398492ee13e186aa5ca388a}
+\index{trisurf.\+c@{trisurf.\+c}!is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve@{is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve}}
+\index{is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve@{is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve(\+C\+U\+R\+V\+E $\ast$, P\+O\+I\+N\+T $\ast$)}{is_point_a_node_of_curve(CURVE *, POINT *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} is\+\_\+point\+\_\+a\+\_\+node\+\_\+of\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_a52609632ddbd28a8115636cf251e423c}{}\label{trisurf_8c_a52609632ddbd28a8115636cf251e423c}
+\index{trisurf.\+c@{trisurf.\+c}!normal\+\_\+of\+\_\+plane\+\_\+surface@{normal\+\_\+of\+\_\+plane\+\_\+surface}}
+\index{normal\+\_\+of\+\_\+plane\+\_\+surface@{normal\+\_\+of\+\_\+plane\+\_\+surface}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{normal\+\_\+of\+\_\+plane\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$, double $\ast$)}{normal_of_plane_surface(SURFACE *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void normal\+\_\+of\+\_\+plane\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_adbe0c74534f810832eae36d6ee9a508f}{}\label{trisurf_8c_adbe0c74534f810832eae36d6ee9a508f}
+\index{trisurf.\+c@{trisurf.\+c}!oblique\+\_\+planar\+\_\+surface\+\_\+triangulation@{oblique\+\_\+planar\+\_\+surface\+\_\+triangulation}}
+\index{oblique\+\_\+planar\+\_\+surface\+\_\+triangulation@{oblique\+\_\+planar\+\_\+surface\+\_\+triangulation}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{oblique\+\_\+planar\+\_\+surface\+\_\+triangulation(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{oblique_planar_surface_triangulation(SURFACE *surf, RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void oblique\+\_\+planar\+\_\+surface\+\_\+triangulation (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_abdbf449b44fd64f9e028b1ac8a753829}{}\label{trisurf_8c_abdbf449b44fd64f9e028b1ac8a753829}
+\index{trisurf.\+c@{trisurf.\+c}!planar\+\_\+hole\+\_\+surface\+\_\+triangulation@{planar\+\_\+hole\+\_\+surface\+\_\+triangulation}}
+\index{planar\+\_\+hole\+\_\+surface\+\_\+triangulation@{planar\+\_\+hole\+\_\+surface\+\_\+triangulation}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{planar\+\_\+hole\+\_\+surface\+\_\+triangulation(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, P\+O\+I\+N\+T $\ast$pmin, P\+O\+I\+N\+T $\ast$pmel, P\+O\+I\+N\+T $\ast$pmeu, P\+O\+I\+N\+T $\ast$pmax)}{planar_hole_surface_triangulation(SURFACE *surf, RECT_GRID *gr, POINT *pmin, POINT *pmel, POINT *pmeu, POINT *pmax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void planar\+\_\+hole\+\_\+surface\+\_\+triangulation (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pmin, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pmel, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pmeu, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pmax}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_a1cd792f47904be61ce3ce379911daad4}{}\label{trisurf_8c_a1cd792f47904be61ce3ce379911daad4}
+\index{trisurf.\+c@{trisurf.\+c}!planar\+\_\+surface\+\_\+triangulation@{planar\+\_\+surface\+\_\+triangulation}}
+\index{planar\+\_\+surface\+\_\+triangulation@{planar\+\_\+surface\+\_\+triangulation}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{planar\+\_\+surface\+\_\+triangulation(\+S\+U\+R\+F\+A\+C\+E $\ast$surf, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$grid, const boolean expand\+\_\+buffer\+\_\+zones)}{planar_surface_triangulation(SURFACE *surf, RECT_GRID *grid, const boolean expand_buffer_zones)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void planar\+\_\+surface\+\_\+triangulation (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid, }
+\item[{const {\bf boolean}}]{expand\+\_\+buffer\+\_\+zones}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_ad8054625cd76310ed01917f366c4df8c}{}\label{trisurf_8c_ad8054625cd76310ed01917f366c4df8c}
+\index{trisurf.\+c@{trisurf.\+c}!right\+\_\+planar\+\_\+surface\+\_\+triangulation@{right\+\_\+planar\+\_\+surface\+\_\+triangulation}}
+\index{right\+\_\+planar\+\_\+surface\+\_\+triangulation@{right\+\_\+planar\+\_\+surface\+\_\+triangulation}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{right\+\_\+planar\+\_\+surface\+\_\+triangulation(\+S\+U\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{right_planar_surface_triangulation(SURFACE *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void right\+\_\+planar\+\_\+surface\+\_\+triangulation (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_af3901a111538b4c70cd651593d4e038c}{}\label{trisurf_8c_af3901a111538b4c70cd651593d4e038c}
+\index{trisurf.\+c@{trisurf.\+c}!set\+\_\+curve\+\_\+bdry\+\_\+flag@{set\+\_\+curve\+\_\+bdry\+\_\+flag}}
+\index{set\+\_\+curve\+\_\+bdry\+\_\+flag@{set\+\_\+curve\+\_\+bdry\+\_\+flag}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+curve\+\_\+bdry\+\_\+flag(\+C\+U\+R\+V\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{set_curve_bdry_flag(CURVE *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+curve\+\_\+bdry\+\_\+flag (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_a13d3c84adcb51d545b0684a13cf61786}{}\label{trisurf_8c_a13d3c84adcb51d545b0684a13cf61786}
+\index{trisurf.\+c@{trisurf.\+c}!strip\+\_\+curves\+\_\+in\+\_\+surface@{strip\+\_\+curves\+\_\+in\+\_\+surface}}
+\index{strip\+\_\+curves\+\_\+in\+\_\+surface@{strip\+\_\+curves\+\_\+in\+\_\+surface}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{strip\+\_\+curves\+\_\+in\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$)}{strip_curves_in_surface(SURFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void strip\+\_\+curves\+\_\+in\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_a6ef827d41515ad12570c2d8f6c182b50}{}\label{trisurf_8c_a6ef827d41515ad12570c2d8f6c182b50}
+\index{trisurf.\+c@{trisurf.\+c}!value\+\_\+x@{value\+\_\+x}}
+\index{value\+\_\+x@{value\+\_\+x}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{value\+\_\+x(double $\ast$, P\+O\+I\+N\+T $\ast$, double $\ast$)}{value_x(double *, POINT *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double value\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{corner, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_a760d015bd24257afb8eae6ce172d2710}{}\label{trisurf_8c_a760d015bd24257afb8eae6ce172d2710}
+\index{trisurf.\+c@{trisurf.\+c}!value\+\_\+y@{value\+\_\+y}}
+\index{value\+\_\+y@{value\+\_\+y}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{value\+\_\+y(double $\ast$, P\+O\+I\+N\+T $\ast$, double $\ast$)}{value_y(double *, POINT *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double value\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{corner, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_ad5d82b7480b792edee0333e2bb9df034}{}\label{trisurf_8c_ad5d82b7480b792edee0333e2bb9df034}
+\index{trisurf.\+c@{trisurf.\+c}!value\+\_\+z@{value\+\_\+z}}
+\index{value\+\_\+z@{value\+\_\+z}!trisurf.\+c@{trisurf.\+c}}
+\subsubsection[{\texorpdfstring{value\+\_\+z(double $\ast$, P\+O\+I\+N\+T $\ast$, double $\ast$)}{value_z(double *, POINT *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double value\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{corner, }
+\item[{double $\ast$}]{nor}
+\end{DoxyParamCaption}
+)}\hypertarget{trisurf_8c_ab18509ed8cbbcd4072402bc43014f404}{}\label{trisurf_8c_ab18509ed8cbbcd4072402bc43014f404}

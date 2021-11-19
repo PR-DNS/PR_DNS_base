@@ -1,0 +1,289 @@
+\hypertarget{fvelo_8c}{}\section{D\+N\+S/src/front/fvelo.c File Reference}
+\label{fvelo_8c}\index{D\+N\+S/src/front/fvelo.\+c@{D\+N\+S/src/front/fvelo.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a3cb598d88d200e5454ea93cf25ee2a7c}{init\+\_\+translation\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a374a5e40a59e126b2444431e5cc7cdff}{init\+\_\+sine\+\_\+motion\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a57b02d2240f7875760389b1f5d1d067f}{init\+\_\+radial\+\_\+motion\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_aeaa3f5f2a01c381497226dbee7a388ad}{init\+\_\+shear\+\_\+motion\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_aa89c4fcd1ed5f1ebf98599c5016db635}{init\+\_\+circular\+\_\+rotation\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a356ed6886fb71a82b1271c738322e996}{init\+\_\+norv\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_ab7827aa4a211f641ed9e53dfab68661e}{init\+\_\+curvature\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a5450df343a8cb3de57e1b03ff26de9b5}{init\+\_\+flame\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_ad79bf3f5d2c55dbdfc7fb97bbfead4ac}{init\+\_\+burgers\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a62a0c401ce3764f79abd501e064a214f}{init\+\_\+bipolar\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fvelo_8c_a2850ebb61c405c727b2397776cbc0ace}{init\+\_\+vortex\+\_\+params} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} $\ast$params, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a5e30614986c35bf758266c14b065f6c1}{sine\+\_\+motion\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a7b3e99fd02327cdb9acfcbdc0e8a6a0b}{translation\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_af63c2e77ccf64c3d0fe9b587c6d36043}{radial\+\_\+motion\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a3ca1d6247c71b8529a4ecc63ebcac1e5}{burgers\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_adf9b27d6f08abf91058e89ed7322dade}{shear\+\_\+motion\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a85468cae6cd6518db00cbb64c82d0f95}{circular\+\_\+rotation\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a12962454285d950947dfb3777e4da69b}{normal\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a6948a7c1347e6d82d1b08921d0ba8492}{curvature\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a2cbb2c7117647ca062c17b2fd551e829}{flame\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a6a7dee836f2230ceff2dcd7211077be2}{bipolar\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_a2a8f863b32e74a5aff547ffc4240d06f}{vortex\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{fvelo_8c_aaed157585d9c8268e9e01152f6f2d8d2}{double\+\_\+vortex\+\_\+vel} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} params, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, double $\ast$vel)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{group___i_n_i_t_i_a_l_i_z_a_t_i_o_n_ga1a5d78422a8649b43a530adbef947254}{F\+T\+\_\+\+Init\+Velo\+Func} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_a9726a0c7607082b8d5754acb01ff6008}{V\+E\+L\+O\+\_\+\+F\+U\+N\+C\+\_\+\+P\+A\+CK} $\ast$velo\+\_\+func\+\_\+pack)
+\begin{DoxyCompactList}\small\item\em Initialize front velocity function for front point propagation. The velocity function use point and other related structures as input, must also supply parameters needed for the velocity function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fvelo.\+c@{fvelo.\+c}!bipolar\+\_\+vel@{bipolar\+\_\+vel}}
+\index{bipolar\+\_\+vel@{bipolar\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{bipolar\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{bipolar_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int bipolar\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a6a7dee836f2230ceff2dcd7211077be2}{}\label{fvelo_8c_a6a7dee836f2230ceff2dcd7211077be2}
+\index{fvelo.\+c@{fvelo.\+c}!burgers\+\_\+vel@{burgers\+\_\+vel}}
+\index{burgers\+\_\+vel@{burgers\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{burgers\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{burgers_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int burgers\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a3ca1d6247c71b8529a4ecc63ebcac1e5}{}\label{fvelo_8c_a3ca1d6247c71b8529a4ecc63ebcac1e5}
+\index{fvelo.\+c@{fvelo.\+c}!circular\+\_\+rotation\+\_\+vel@{circular\+\_\+rotation\+\_\+vel}}
+\index{circular\+\_\+rotation\+\_\+vel@{circular\+\_\+rotation\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{circular\+\_\+rotation\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{circular_rotation_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int circular\+\_\+rotation\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a85468cae6cd6518db00cbb64c82d0f95}{}\label{fvelo_8c_a85468cae6cd6518db00cbb64c82d0f95}
+\index{fvelo.\+c@{fvelo.\+c}!curvature\+\_\+vel@{curvature\+\_\+vel}}
+\index{curvature\+\_\+vel@{curvature\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{curvature\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{curvature_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int curvature\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a6948a7c1347e6d82d1b08921d0ba8492}{}\label{fvelo_8c_a6948a7c1347e6d82d1b08921d0ba8492}
+\index{fvelo.\+c@{fvelo.\+c}!double\+\_\+vortex\+\_\+vel@{double\+\_\+vortex\+\_\+vel}}
+\index{double\+\_\+vortex\+\_\+vel@{double\+\_\+vortex\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{double\+\_\+vortex\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{double_vortex_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int double\+\_\+vortex\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_aaed157585d9c8268e9e01152f6f2d8d2}{}\label{fvelo_8c_aaed157585d9c8268e9e01152f6f2d8d2}
+\index{fvelo.\+c@{fvelo.\+c}!flame\+\_\+vel@{flame\+\_\+vel}}
+\index{flame\+\_\+vel@{flame\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{flame\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{flame_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int flame\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a2cbb2c7117647ca062c17b2fd551e829}{}\label{fvelo_8c_a2cbb2c7117647ca062c17b2fd551e829}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+bipolar\+\_\+params@{init\+\_\+bipolar\+\_\+params}}
+\index{init\+\_\+bipolar\+\_\+params@{init\+\_\+bipolar\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+bipolar\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_bipolar_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+bipolar\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a62a0c401ce3764f79abd501e064a214f}{}\label{fvelo_8c_a62a0c401ce3764f79abd501e064a214f}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+burgers\+\_\+params@{init\+\_\+burgers\+\_\+params}}
+\index{init\+\_\+burgers\+\_\+params@{init\+\_\+burgers\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+burgers\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_burgers_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+burgers\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_ad79bf3f5d2c55dbdfc7fb97bbfead4ac}{}\label{fvelo_8c_ad79bf3f5d2c55dbdfc7fb97bbfead4ac}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+circular\+\_\+rotation\+\_\+params@{init\+\_\+circular\+\_\+rotation\+\_\+params}}
+\index{init\+\_\+circular\+\_\+rotation\+\_\+params@{init\+\_\+circular\+\_\+rotation\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+circular\+\_\+rotation\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_circular_rotation_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+circular\+\_\+rotation\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_aa89c4fcd1ed5f1ebf98599c5016db635}{}\label{fvelo_8c_aa89c4fcd1ed5f1ebf98599c5016db635}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+curvature\+\_\+params@{init\+\_\+curvature\+\_\+params}}
+\index{init\+\_\+curvature\+\_\+params@{init\+\_\+curvature\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+curvature\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_curvature_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+curvature\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_ab7827aa4a211f641ed9e53dfab68661e}{}\label{fvelo_8c_ab7827aa4a211f641ed9e53dfab68661e}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+flame\+\_\+params@{init\+\_\+flame\+\_\+params}}
+\index{init\+\_\+flame\+\_\+params@{init\+\_\+flame\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+flame\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_flame_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+flame\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a5450df343a8cb3de57e1b03ff26de9b5}{}\label{fvelo_8c_a5450df343a8cb3de57e1b03ff26de9b5}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+norv\+\_\+params@{init\+\_\+norv\+\_\+params}}
+\index{init\+\_\+norv\+\_\+params@{init\+\_\+norv\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+norv\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_norv_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+norv\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a356ed6886fb71a82b1271c738322e996}{}\label{fvelo_8c_a356ed6886fb71a82b1271c738322e996}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+radial\+\_\+motion\+\_\+params@{init\+\_\+radial\+\_\+motion\+\_\+params}}
+\index{init\+\_\+radial\+\_\+motion\+\_\+params@{init\+\_\+radial\+\_\+motion\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+radial\+\_\+motion\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_radial_motion_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+radial\+\_\+motion\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a57b02d2240f7875760389b1f5d1d067f}{}\label{fvelo_8c_a57b02d2240f7875760389b1f5d1d067f}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+shear\+\_\+motion\+\_\+params@{init\+\_\+shear\+\_\+motion\+\_\+params}}
+\index{init\+\_\+shear\+\_\+motion\+\_\+params@{init\+\_\+shear\+\_\+motion\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+shear\+\_\+motion\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_shear_motion_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+shear\+\_\+motion\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_aeaa3f5f2a01c381497226dbee7a388ad}{}\label{fvelo_8c_aeaa3f5f2a01c381497226dbee7a388ad}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+sine\+\_\+motion\+\_\+params@{init\+\_\+sine\+\_\+motion\+\_\+params}}
+\index{init\+\_\+sine\+\_\+motion\+\_\+params@{init\+\_\+sine\+\_\+motion\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+sine\+\_\+motion\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_sine_motion_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+sine\+\_\+motion\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a374a5e40a59e126b2444431e5cc7cdff}{}\label{fvelo_8c_a374a5e40a59e126b2444431e5cc7cdff}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+translation\+\_\+params@{init\+\_\+translation\+\_\+params}}
+\index{init\+\_\+translation\+\_\+params@{init\+\_\+translation\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+translation\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_translation_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+translation\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a3cb598d88d200e5454ea93cf25ee2a7c}{}\label{fvelo_8c_a3cb598d88d200e5454ea93cf25ee2a7c}
+\index{fvelo.\+c@{fvelo.\+c}!init\+\_\+vortex\+\_\+params@{init\+\_\+vortex\+\_\+params}}
+\index{init\+\_\+vortex\+\_\+params@{init\+\_\+vortex\+\_\+params}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+vortex\+\_\+params(\+P\+O\+I\+N\+T\+E\+R $\ast$params, int dim)}{init_vortex_params(POINTER *params, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+vortex\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER} $\ast$}]{params, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a2850ebb61c405c727b2397776cbc0ace}{}\label{fvelo_8c_a2850ebb61c405c727b2397776cbc0ace}
+\index{fvelo.\+c@{fvelo.\+c}!normal\+\_\+vel@{normal\+\_\+vel}}
+\index{normal\+\_\+vel@{normal\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{normal\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{normal_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int normal\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a12962454285d950947dfb3777e4da69b}{}\label{fvelo_8c_a12962454285d950947dfb3777e4da69b}
+\index{fvelo.\+c@{fvelo.\+c}!radial\+\_\+motion\+\_\+vel@{radial\+\_\+motion\+\_\+vel}}
+\index{radial\+\_\+motion\+\_\+vel@{radial\+\_\+motion\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{radial\+\_\+motion\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{radial_motion_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int radial\+\_\+motion\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_af63c2e77ccf64c3d0fe9b587c6d36043}{}\label{fvelo_8c_af63c2e77ccf64c3d0fe9b587c6d36043}
+\index{fvelo.\+c@{fvelo.\+c}!shear\+\_\+motion\+\_\+vel@{shear\+\_\+motion\+\_\+vel}}
+\index{shear\+\_\+motion\+\_\+vel@{shear\+\_\+motion\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{shear\+\_\+motion\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{shear_motion_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int shear\+\_\+motion\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_adf9b27d6f08abf91058e89ed7322dade}{}\label{fvelo_8c_adf9b27d6f08abf91058e89ed7322dade}
+\index{fvelo.\+c@{fvelo.\+c}!sine\+\_\+motion\+\_\+vel@{sine\+\_\+motion\+\_\+vel}}
+\index{sine\+\_\+motion\+\_\+vel@{sine\+\_\+motion\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{sine\+\_\+motion\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{sine_motion_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int sine\+\_\+motion\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a5e30614986c35bf758266c14b065f6c1}{}\label{fvelo_8c_a5e30614986c35bf758266c14b065f6c1}
+\index{fvelo.\+c@{fvelo.\+c}!translation\+\_\+vel@{translation\+\_\+vel}}
+\index{translation\+\_\+vel@{translation\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{translation\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{translation_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int translation\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a7b3e99fd02327cdb9acfcbdc0e8a6a0b}{}\label{fvelo_8c_a7b3e99fd02327cdb9acfcbdc0e8a6a0b}
+\index{fvelo.\+c@{fvelo.\+c}!vortex\+\_\+vel@{vortex\+\_\+vel}}
+\index{vortex\+\_\+vel@{vortex\+\_\+vel}!fvelo.\+c@{fvelo.\+c}}
+\subsubsection[{\texorpdfstring{vortex\+\_\+vel(\+P\+O\+I\+N\+T\+E\+R params, Front $\ast$front, P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, double $\ast$vel)}{vortex_vel(POINTER params, Front *front, POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, double *vel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int vortex\+\_\+vel (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{params, }
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{vel}
+\end{DoxyParamCaption}
+)}\hypertarget{fvelo_8c_a2a8f863b32e74a5aff547ffc4240d06f}{}\label{fvelo_8c_a2a8f863b32e74a5aff547ffc4240d06f}

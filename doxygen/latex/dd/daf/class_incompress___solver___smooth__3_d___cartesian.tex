@@ -1,0 +1,344 @@
+\hypertarget{class_incompress___solver___smooth__3_d___cartesian}{}\section{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian Class Reference}
+\label{class_incompress___solver___smooth__3_d___cartesian}\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+
+
+{\ttfamily \#include $<$i\+Fluid.\+h$>$}
+
+Inheritance diagram for Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{dd/daf/class_incompress___solver___smooth__3_d___cartesian}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_incompress___solver___smooth__3_d___cartesian_a340f080b83c254c4465b2c799a1e2042}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} \&\hyperlink{class_incompress___solver___smooth___basis_ab792d371ca86ec9ed21b4c95d1375a0b}{front})
+\item 
+\hyperlink{class_incompress___solver___smooth__3_d___cartesian_a02fc9cf67696ae8cca303f02970030ca}{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian} ()
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a9132e3e07ff5a882f31e65029b47e9bf}{set\+Initial\+Condition} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a0447dce243b01e7fa373d75589fb237a}{set\+Parallel\+Velocity} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a83f96ca6c62297c2bcf4a6e8ff70d06b}{solve} (double dt)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a2f9ee9e030082434f5958472f0ddaf82}{solve\+Test} (const char $\ast$msg)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a11aa45dcb3ecfe5f5400c984837300a7}{vtk\+\_\+plot\+\_\+scalar} (char $\ast$, const char $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_afc6c5d36842d6c547a45be090f873307}{copy\+Mesh\+States} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a14ea9d542b42ab712bf22b59a5584b7e}{compute\+Advection} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_aab70b28dad3c6a6493bf0f5ffa688e1e}{compute\+Diffusion} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_ad55dd47d4b8fcc640bbb0f992027ba39}{compute\+Diffusion\+CN} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_aaeb90693f28464217f1905cab6358d3b}{compute\+Diffusion\+Explicit} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_aff5125550a47f0d166a6c98d139c17f5}{compute\+Diffusion\+Implicit} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a0be8e8269218ea173e4df935ecf3622e}{compute\+Diffusion\+Parab} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a74c5c4cce7eff56b0162f65ca20454a3}{compute\+Projection} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a417ae41c054fc7cd3f36d65324545005}{compute\+Projection\+Cim} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a9948ab87b8764043a78adc66cbaf0906}{compute\+Projection\+Simple} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_afdb007bf3b2542fb01d5c43041008262}{compute\+Projection\+Double} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_acbc7b75da1f65b6e448bb0f6e397982d}{compute\+Projection\+Dual} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_ad84e1f124fee9687edd1c1e438254eed}{compute\+Pressure} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a5c843a9e8d5c8096ea0135645e0278ff}{compute\+Pressure\+PmI} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_ade561a891b0c3a3db38ed578e488dae0}{compute\+Pressure\+Pm\+II} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a363559ad04403ef188665b2006bf93be}{compute\+Pressure\+Pm\+I\+II} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a8bb3ea8c259d5692ef66fe9699ab9ba2}{compute\+GradientQ} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_aecc3b55bc2b356964135aff82f52d388}{compute\+New\+Velocity} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_af6353428b83cc87520ce05ad0b2cf678}{compute\+New\+Velocity\+Dual} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a4becbc3b96f04b5c7e531ff1ecceee5f}{update\+Component} (void)
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{class_incompress___solver___smooth__3_d___cartesian_a3d1fa018b4f3d657ff3e9d6b8a3176e0}{Inside\+Solid} (int $\ast$)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_adfbcd4f2fed9189d1f8ebbbd03c4bc15}{extract\+Flow\+Through\+Velocity} (void)
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_aeb0be785e1af0989e773598e4e442f28}{compute\+Source\+Term} (double $\ast$coords, double $\ast$\hyperlink{class_incompress___solver___smooth___basis_ab571615b4743bbd36e8eea358f7a7eed}{source})
+\item 
+void \hyperlink{class_incompress___solver___smooth__3_d___cartesian_ac84d66b3a087a5b496bf4e7d5032188b}{surface\+Tension} (double $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, double)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian(\+Front \&front)}{Incompress_Solver_Smooth_3D_Cartesian(Front &front)}}]{\setlength{\rightskip}{0pt plus 5cm}Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} \&}]{front}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a340f080b83c254c4465b2c799a1e2042}{}\label{class_incompress___solver___smooth__3_d___cartesian_a340f080b83c254c4465b2c799a1e2042}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!````~Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\index{````~Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian()}{~Incompress_Solver_Smooth_3D_Cartesian()}}]{\setlength{\rightskip}{0pt plus 5cm}Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::$\sim$\+Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a02fc9cf67696ae8cca303f02970030ca}{}\label{class_incompress___solver___smooth__3_d___cartesian_a02fc9cf67696ae8cca303f02970030ca}
+
+
+\subsection{Member Function Documentation}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Advection@{compute\+Advection}}
+\index{compute\+Advection@{compute\+Advection}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Advection(void)}{computeAdvection(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Advection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a14ea9d542b42ab712bf22b59a5584b7e}{}\label{class_incompress___solver___smooth__3_d___cartesian_a14ea9d542b42ab712bf22b59a5584b7e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Diffusion@{compute\+Diffusion}}
+\index{compute\+Diffusion@{compute\+Diffusion}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Diffusion(void)}{computeDiffusion(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Diffusion (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_aab70b28dad3c6a6493bf0f5ffa688e1e}{}\label{class_incompress___solver___smooth__3_d___cartesian_aab70b28dad3c6a6493bf0f5ffa688e1e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Diffusion\+CN@{compute\+Diffusion\+CN}}
+\index{compute\+Diffusion\+CN@{compute\+Diffusion\+CN}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Diffusion\+C\+N(void)}{computeDiffusionCN(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Diffusion\+CN (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_ad55dd47d4b8fcc640bbb0f992027ba39}{}\label{class_incompress___solver___smooth__3_d___cartesian_ad55dd47d4b8fcc640bbb0f992027ba39}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Diffusion\+Explicit@{compute\+Diffusion\+Explicit}}
+\index{compute\+Diffusion\+Explicit@{compute\+Diffusion\+Explicit}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Diffusion\+Explicit(void)}{computeDiffusionExplicit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Diffusion\+Explicit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_aaeb90693f28464217f1905cab6358d3b}{}\label{class_incompress___solver___smooth__3_d___cartesian_aaeb90693f28464217f1905cab6358d3b}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Diffusion\+Implicit@{compute\+Diffusion\+Implicit}}
+\index{compute\+Diffusion\+Implicit@{compute\+Diffusion\+Implicit}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Diffusion\+Implicit(void)}{computeDiffusionImplicit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Diffusion\+Implicit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_aff5125550a47f0d166a6c98d139c17f5}{}\label{class_incompress___solver___smooth__3_d___cartesian_aff5125550a47f0d166a6c98d139c17f5}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Diffusion\+Parab@{compute\+Diffusion\+Parab}}
+\index{compute\+Diffusion\+Parab@{compute\+Diffusion\+Parab}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Diffusion\+Parab(void)}{computeDiffusionParab(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Diffusion\+Parab (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a0be8e8269218ea173e4df935ecf3622e}{}\label{class_incompress___solver___smooth__3_d___cartesian_a0be8e8269218ea173e4df935ecf3622e}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+GradientQ@{compute\+GradientQ}}
+\index{compute\+GradientQ@{compute\+GradientQ}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Gradient\+Q(void)}{computeGradientQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+GradientQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a8bb3ea8c259d5692ef66fe9699ab9ba2}{}\label{class_incompress___solver___smooth__3_d___cartesian_a8bb3ea8c259d5692ef66fe9699ab9ba2}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a8d951b5c02243828b480de8eed32315c}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+New\+Velocity@{compute\+New\+Velocity}}
+\index{compute\+New\+Velocity@{compute\+New\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+New\+Velocity(void)}{computeNewVelocity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+New\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_aecc3b55bc2b356964135aff82f52d388}{}\label{class_incompress___solver___smooth__3_d___cartesian_aecc3b55bc2b356964135aff82f52d388}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+New\+Velocity\+Dual@{compute\+New\+Velocity\+Dual}}
+\index{compute\+New\+Velocity\+Dual@{compute\+New\+Velocity\+Dual}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+New\+Velocity\+Dual(void)}{computeNewVelocityDual(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+New\+Velocity\+Dual (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_af6353428b83cc87520ce05ad0b2cf678}{}\label{class_incompress___solver___smooth__3_d___cartesian_af6353428b83cc87520ce05ad0b2cf678}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Pressure@{compute\+Pressure}}
+\index{compute\+Pressure@{compute\+Pressure}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Pressure(void)}{computePressure(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Pressure (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_ad84e1f124fee9687edd1c1e438254eed}{}\label{class_incompress___solver___smooth__3_d___cartesian_ad84e1f124fee9687edd1c1e438254eed}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Pressure\+PmI@{compute\+Pressure\+PmI}}
+\index{compute\+Pressure\+PmI@{compute\+Pressure\+PmI}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Pressure\+Pm\+I(void)}{computePressurePmI(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Pressure\+PmI (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a5c843a9e8d5c8096ea0135645e0278ff}{}\label{class_incompress___solver___smooth__3_d___cartesian_a5c843a9e8d5c8096ea0135645e0278ff}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Pressure\+Pm\+II@{compute\+Pressure\+Pm\+II}}
+\index{compute\+Pressure\+Pm\+II@{compute\+Pressure\+Pm\+II}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Pressure\+Pm\+I\+I(void)}{computePressurePmII(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Pressure\+Pm\+II (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_ade561a891b0c3a3db38ed578e488dae0}{}\label{class_incompress___solver___smooth__3_d___cartesian_ade561a891b0c3a3db38ed578e488dae0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Pressure\+Pm\+I\+II@{compute\+Pressure\+Pm\+I\+II}}
+\index{compute\+Pressure\+Pm\+I\+II@{compute\+Pressure\+Pm\+I\+II}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Pressure\+Pm\+I\+I\+I(void)}{computePressurePmIII(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Pressure\+Pm\+I\+II (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a363559ad04403ef188665b2006bf93be}{}\label{class_incompress___solver___smooth__3_d___cartesian_a363559ad04403ef188665b2006bf93be}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Projection@{compute\+Projection}}
+\index{compute\+Projection@{compute\+Projection}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Projection(void)}{computeProjection(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Projection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a74c5c4cce7eff56b0162f65ca20454a3}{}\label{class_incompress___solver___smooth__3_d___cartesian_a74c5c4cce7eff56b0162f65ca20454a3}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Projection\+Cim@{compute\+Projection\+Cim}}
+\index{compute\+Projection\+Cim@{compute\+Projection\+Cim}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Projection\+Cim(void)}{computeProjectionCim(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Projection\+Cim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a417ae41c054fc7cd3f36d65324545005}{}\label{class_incompress___solver___smooth__3_d___cartesian_a417ae41c054fc7cd3f36d65324545005}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Projection\+Double@{compute\+Projection\+Double}}
+\index{compute\+Projection\+Double@{compute\+Projection\+Double}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Projection\+Double(void)}{computeProjectionDouble(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Projection\+Double (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_afdb007bf3b2542fb01d5c43041008262}{}\label{class_incompress___solver___smooth__3_d___cartesian_afdb007bf3b2542fb01d5c43041008262}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Projection\+Dual@{compute\+Projection\+Dual}}
+\index{compute\+Projection\+Dual@{compute\+Projection\+Dual}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Projection\+Dual(void)}{computeProjectionDual(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Projection\+Dual (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_acbc7b75da1f65b6e448bb0f6e397982d}{}\label{class_incompress___solver___smooth__3_d___cartesian_acbc7b75da1f65b6e448bb0f6e397982d}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Projection\+Simple@{compute\+Projection\+Simple}}
+\index{compute\+Projection\+Simple@{compute\+Projection\+Simple}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Projection\+Simple(void)}{computeProjectionSimple(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Projection\+Simple (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a9948ab87b8764043a78adc66cbaf0906}{}\label{class_incompress___solver___smooth__3_d___cartesian_a9948ab87b8764043a78adc66cbaf0906}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!compute\+Source\+Term@{compute\+Source\+Term}}
+\index{compute\+Source\+Term@{compute\+Source\+Term}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{compute\+Source\+Term(double $\ast$coords, double $\ast$source)}{computeSourceTerm(double *coords, double *source)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::compute\+Source\+Term (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{double $\ast$}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_aeb0be785e1af0989e773598e4e442f28}{}\label{class_incompress___solver___smooth__3_d___cartesian_aeb0be785e1af0989e773598e4e442f28}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!copy\+Mesh\+States@{copy\+Mesh\+States}}
+\index{copy\+Mesh\+States@{copy\+Mesh\+States}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{copy\+Mesh\+States(void)}{copyMeshStates(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::copy\+Mesh\+States (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_afc6c5d36842d6c547a45be090f873307}{}\label{class_incompress___solver___smooth__3_d___cartesian_afc6c5d36842d6c547a45be090f873307}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_add1059a795fb2eb925cd983088bb884d}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!extract\+Flow\+Through\+Velocity@{extract\+Flow\+Through\+Velocity}}
+\index{extract\+Flow\+Through\+Velocity@{extract\+Flow\+Through\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{extract\+Flow\+Through\+Velocity(void)}{extractFlowThroughVelocity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::extract\+Flow\+Through\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_adfbcd4f2fed9189d1f8ebbbd03c4bc15}{}\label{class_incompress___solver___smooth__3_d___cartesian_adfbcd4f2fed9189d1f8ebbbd03c4bc15}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!Inside\+Solid@{Inside\+Solid}}
+\index{Inside\+Solid@{Inside\+Solid}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{Inside\+Solid(int $\ast$)}{InsideSolid(int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::\+Inside\+Solid (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{icoords}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a3d1fa018b4f3d657ff3e9d6b8a3176e0}{}\label{class_incompress___solver___smooth__3_d___cartesian_a3d1fa018b4f3d657ff3e9d6b8a3176e0}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!set\+Initial\+Condition@{set\+Initial\+Condition}}
+\index{set\+Initial\+Condition@{set\+Initial\+Condition}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{set\+Initial\+Condition(void)}{setInitialCondition(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::set\+Initial\+Condition (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a9132e3e07ff5a882f31e65029b47e9bf}{}\label{class_incompress___solver___smooth__3_d___cartesian_a9132e3e07ff5a882f31e65029b47e9bf}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a1621441e8815f61c164474ebde60f51a}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!set\+Parallel\+Velocity@{set\+Parallel\+Velocity}}
+\index{set\+Parallel\+Velocity@{set\+Parallel\+Velocity}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{set\+Parallel\+Velocity(void)}{setParallelVelocity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::set\+Parallel\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a0447dce243b01e7fa373d75589fb237a}{}\label{class_incompress___solver___smooth__3_d___cartesian_a0447dce243b01e7fa373d75589fb237a}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a011c6b8fc8c0051523bd684187678a90}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!solve@{solve}}
+\index{solve@{solve}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{solve(double dt)}{solve(double dt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::solve (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a83f96ca6c62297c2bcf4a6e8ff70d06b}{}\label{class_incompress___solver___smooth__3_d___cartesian_a83f96ca6c62297c2bcf4a6e8ff70d06b}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a23cb0b79f81e0d10dcf8765386e88192}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!solve\+Test@{solve\+Test}}
+\index{solve\+Test@{solve\+Test}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{solve\+Test(const char $\ast$msg)}{solveTest(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::solve\+Test (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a2f9ee9e030082434f5958472f0ddaf82}{}\label{class_incompress___solver___smooth__3_d___cartesian_a2f9ee9e030082434f5958472f0ddaf82}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!surface\+Tension@{surface\+Tension}}
+\index{surface\+Tension@{surface\+Tension}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{surface\+Tension(double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, double)}{surfaceTension(double *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::surface\+Tension (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{coords, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{force, }
+\item[{double}]{sigma}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_ac84d66b3a087a5b496bf4e7d5032188b}{}\label{class_incompress___solver___smooth__3_d___cartesian_ac84d66b3a087a5b496bf4e7d5032188b}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a38d025139a192414bef50db30b81e893}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!update\+Component@{update\+Component}}
+\index{update\+Component@{update\+Component}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{update\+Component(void)}{updateComponent(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::update\+Component (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a4becbc3b96f04b5c7e531ff1ecceee5f}{}\label{class_incompress___solver___smooth__3_d___cartesian_a4becbc3b96f04b5c7e531ff1ecceee5f}
+\index{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}!vtk\+\_\+plot\+\_\+scalar@{vtk\+\_\+plot\+\_\+scalar}}
+\index{vtk\+\_\+plot\+\_\+scalar@{vtk\+\_\+plot\+\_\+scalar}!Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian@{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian}}
+\subsubsection[{\texorpdfstring{vtk\+\_\+plot\+\_\+scalar(char $\ast$, const char $\ast$)}{vtk_plot_scalar(char *, const char *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+3\+D\+\_\+\+Cartesian\+::vtk\+\_\+plot\+\_\+scalar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{outname, }
+\item[{const char $\ast$}]{varname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_incompress___solver___smooth__3_d___cartesian_a11aa45dcb3ecfe5f5400c984837300a7}{}\label{class_incompress___solver___smooth__3_d___cartesian_a11aa45dcb3ecfe5f5400c984837300a7}
+
+
+Implements \hyperlink{class_incompress___solver___smooth___basis_a6b4a774a25fd752bfa05fe764cb55c4d}{Incompress\+\_\+\+Solver\+\_\+\+Smooth\+\_\+\+Basis}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+S/i\+Fluid/\hyperlink{i_fluid_8h}{i\+Fluid.\+h}\item 
+D\+N\+S/i\+Fluid/\hyperlink{i_fcartsn3d_8cpp}{i\+Fcartsn3d.\+cpp}\end{DoxyCompactItemize}

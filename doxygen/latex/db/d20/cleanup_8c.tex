@@ -1,0 +1,275 @@
+\hypertarget{cleanup_8c}{}\section{D\+N\+S/src/util/cleanup.c File Reference}
+\label{cleanup_8c}\index{D\+N\+S/src/util/cleanup.\+c@{D\+N\+S/src/util/cleanup.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$execinfo.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cleanup_8c_a5b18681408704a9576ecb0d3aa1c8bbe}{C\+L\+E\+A\+N\+\_\+\+UP}~\hyperlink{cleanup_8c_ab0be14dbfeb11b4e9869f7991c9680da}{clean\+\_\+up\+\_\+handler}
+\item 
+\#define \hyperlink{cleanup_8c_a853a99e135ee528f06cc62ee8736dee7}{S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP}~\hyperlink{cleanup_8c_ac8361066a0eab13b11a6702ae26b9958}{second\+\_\+clean\+\_\+up\+\_\+handler}
+\item 
+\#define \hyperlink{cleanup_8c_ad111e603bbebe5d87f6bc39264ce4733}{E\+X\+IT}~\hyperlink{cleanup_8c_aed31c9ff0e167f57a7c0c9ca206d3589}{terminate\+\_\+run\+\_\+handler}
+\item 
+\#define \hyperlink{cleanup_8c_ac357485a1918ea29ea68c67e3b7b9e47}{S\+A\+\_\+\+F\+L\+A\+GS}~0
+\item 
+\#define \hyperlink{cleanup_8c_af267ea8cd2b876a6c7d25236004d692e}{debug\+\_\+enter}(fname)
+\item 
+\#define \hyperlink{cleanup_8c_a498a46f3851aed5c886d9834cd465c94}{debug\+\_\+leave}(fname)
+\item 
+\#define \hyperlink{cleanup_8c_a2a971101a3f3f22abcdf15745876b32e}{debug\+\_\+mesg\+\_\+and\+\_\+int}(mesg,  sig)
+\item 
+\#define \hyperlink{cleanup_8c_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}~20  /$\ast$number of functions need to traceback$\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void( \hyperlink{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{Error\+\_\+handler}) (int)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cleanup_8c_a2c4485ec58a1037fecff014aca547457}{sigsetmask} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} const char $\ast$ \hyperlink{cleanup_8c_ad695ce6ef119ee3523cb29cc780b8d9b}{error\+\_\+name} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_a18861758452853315386ca8c9b0ad02f}{clear\+\_\+pp\+\_\+trap} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_aa12ecbbe6686bec269432014c4d50b92}{print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_ac9bc6977ba780a4badb359742933fd4e}{second\+\_\+clean\+\_\+up} (int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_ad6a900cf2154bd6270d29b552add8916}{set\+\_\+error\+\_\+handler} (\hyperlink{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{Error\+\_\+handler} $\ast$, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_a41334ac1b796b823a6391466f21bf801}{terminate\+\_\+run} (int)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cleanup_8c_a88acb1c1b81cca96aa42c0a4e3b16cbb}{init\+\_\+clean\+\_\+up} (void($\ast$\+\_\+user\+\_\+clean\+\_\+up)(void), void($\ast$\+\_\+clean\+\_\+up\+\_\+printout)(int))
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_a2df1d3f88516f10421df0a8550fbf31d}{trace\+\_\+back} ()
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cleanup_8c_aef807511a901163038ea5329c29d98eb}{clean\+\_\+upp} (int error)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cleanup_8c_ab72b3797398329626beed9167e4d818e}{print\+\_\+storage} (const char $\ast$s, const char $\ast$s1)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cleanup_8c_aab5d4ea408302a3e375e8e0172aed99f}{set\+\_\+dump\+\_\+core} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} dodump)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_ab0be14dbfeb11b4e9869f7991c9680da}{clean\+\_\+up\+\_\+handler} (int error)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_ac8361066a0eab13b11a6702ae26b9958}{second\+\_\+clean\+\_\+up\+\_\+handler} (int error)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{cleanup_8c_aed31c9ff0e167f57a7c0c9ca206d3589}{terminate\+\_\+run\+\_\+handler} (int error)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{cleanup_8c_a55ca813e8ff856138558fcf6569be36c}{print\+\_\+call\+\_\+stack} (const char $\ast$mesg)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{cleanup_8c_a641c7062f44f7580a8ed17298052c739}{is\+\_\+floating\+\_\+point} (double x)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{cleanup_8c_a88c82ecc9d6d33a844d2806944dd8bb2}{dump\+\_\+core} = \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{Error\+\_\+handler} \hyperlink{cleanup_8c_abad23c6c5a00756e4b2b0180b546b520}{clean\+\_\+up\+\_\+handler}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{Error\+\_\+handler} \hyperlink{cleanup_8c_ae1e1457e7ed17d6bd99c34f6f63e874d}{second\+\_\+clean\+\_\+up\+\_\+handler}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{Error\+\_\+handler} \hyperlink{cleanup_8c_a03d201d79b1752366c0f25eb807a20ab}{terminate\+\_\+run\+\_\+handler}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void($\ast$ \hyperlink{cleanup_8c_a0180a243fbf80b9c078ca5256eead990}{clean\+\_\+up\+\_\+printout} )(int) = N\+U\+LL
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void($\ast$ \hyperlink{cleanup_8c_aabd4f209ea742bf86f53c66068cf4609}{user\+\_\+clean\+\_\+up} )(void) = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{cleanup.\+c@{cleanup.\+c}!C\+L\+E\+A\+N\+\_\+\+UP@{C\+L\+E\+A\+N\+\_\+\+UP}}
+\index{C\+L\+E\+A\+N\+\_\+\+UP@{C\+L\+E\+A\+N\+\_\+\+UP}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{C\+L\+E\+A\+N\+\_\+\+UP}{CLEAN_UP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+E\+A\+N\+\_\+\+UP~{\bf clean\+\_\+up\+\_\+handler}}\hypertarget{cleanup_8c_a5b18681408704a9576ecb0d3aa1c8bbe}{}\label{cleanup_8c_a5b18681408704a9576ecb0d3aa1c8bbe}
+\index{cleanup.\+c@{cleanup.\+c}!debug\+\_\+enter@{debug\+\_\+enter}}
+\index{debug\+\_\+enter@{debug\+\_\+enter}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+enter}{debug_enter}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+enter(
+\begin{DoxyParamCaption}
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_af267ea8cd2b876a6c7d25236004d692e}{}\label{cleanup_8c_af267ea8cd2b876a6c7d25236004d692e}
+\index{cleanup.\+c@{cleanup.\+c}!debug\+\_\+leave@{debug\+\_\+leave}}
+\index{debug\+\_\+leave@{debug\+\_\+leave}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+leave}{debug_leave}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+leave(
+\begin{DoxyParamCaption}
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a498a46f3851aed5c886d9834cd465c94}{}\label{cleanup_8c_a498a46f3851aed5c886d9834cd465c94}
+\index{cleanup.\+c@{cleanup.\+c}!debug\+\_\+mesg\+\_\+and\+\_\+int@{debug\+\_\+mesg\+\_\+and\+\_\+int}}
+\index{debug\+\_\+mesg\+\_\+and\+\_\+int@{debug\+\_\+mesg\+\_\+and\+\_\+int}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{debug\+\_\+mesg\+\_\+and\+\_\+int}{debug_mesg_and_int}}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug\+\_\+mesg\+\_\+and\+\_\+int(
+\begin{DoxyParamCaption}
+\item[{}]{mesg, }
+\item[{}]{sig}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a2a971101a3f3f22abcdf15745876b32e}{}\label{cleanup_8c_a2a971101a3f3f22abcdf15745876b32e}
+\index{cleanup.\+c@{cleanup.\+c}!E\+X\+IT@{E\+X\+IT}}
+\index{E\+X\+IT@{E\+X\+IT}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{E\+X\+IT}{EXIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+IT~{\bf terminate\+\_\+run\+\_\+handler}}\hypertarget{cleanup_8c_ad111e603bbebe5d87f6bc39264ce4733}{}\label{cleanup_8c_ad111e603bbebe5d87f6bc39264ce4733}
+\index{cleanup.\+c@{cleanup.\+c}!S\+A\+\_\+\+F\+L\+A\+GS@{S\+A\+\_\+\+F\+L\+A\+GS}}
+\index{S\+A\+\_\+\+F\+L\+A\+GS@{S\+A\+\_\+\+F\+L\+A\+GS}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{S\+A\+\_\+\+F\+L\+A\+GS}{SA_FLAGS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+A\+\_\+\+F\+L\+A\+GS~0}\hypertarget{cleanup_8c_ac357485a1918ea29ea68c67e3b7b9e47}{}\label{cleanup_8c_ac357485a1918ea29ea68c67e3b7b9e47}
+\index{cleanup.\+c@{cleanup.\+c}!S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP@{S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP}}
+\index{S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP@{S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP}{SECOND_CLEAN_UP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+C\+O\+N\+D\+\_\+\+C\+L\+E\+A\+N\+\_\+\+UP~{\bf second\+\_\+clean\+\_\+up\+\_\+handler}}\hypertarget{cleanup_8c_a853a99e135ee528f06cc62ee8736dee7}{}\label{cleanup_8c_a853a99e135ee528f06cc62ee8736dee7}
+\index{cleanup.\+c@{cleanup.\+c}!S\+I\+ZE@{S\+I\+ZE}}
+\index{S\+I\+ZE@{S\+I\+ZE}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{S\+I\+ZE}{SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+I\+ZE~20  /$\ast$number of functions need to traceback$\ast$/}\hypertarget{cleanup_8c_a70ed59adcb4159ac551058053e649640}{}\label{cleanup_8c_a70ed59adcb4159ac551058053e649640}
+
+
+\subsection{Typedef Documentation}
+\index{cleanup.\+c@{cleanup.\+c}!Error\+\_\+handler@{Error\+\_\+handler}}
+\index{Error\+\_\+handler@{Error\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{Error\+\_\+handler}{Error_handler}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( Error\+\_\+handler) (int)}\hypertarget{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}{}\label{cleanup_8c_add37ad912058cea96bc7d2a65853af0c}
+defined(\+\_\+\+H\+P\+U\+X\+\_\+\+S\+O\+U\+R\+C\+E) \&\& !(defined($<$strong$>$\+S\+U\+N\+P\+R\+O\+\_\+\+C) $\vert$$\vert$ defined(\+\_\+\+\_\+\+S\+U\+N\+P\+R\+O\+\_\+\+C\+C)) \&\& !defined(\+\_\+\+\_\+\+G\+N\+UC) 
+
+\subsection{Function Documentation}
+\index{cleanup.\+c@{cleanup.\+c}!clean\+\_\+up\+\_\+handler@{clean\+\_\+up\+\_\+handler}}
+\index{clean\+\_\+up\+\_\+handler@{clean\+\_\+up\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{clean\+\_\+up\+\_\+handler(int error)}{clean_up_handler(int error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void clean\+\_\+up\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ab0be14dbfeb11b4e9869f7991c9680da}{}\label{cleanup_8c_ab0be14dbfeb11b4e9869f7991c9680da}
+\index{cleanup.\+c@{cleanup.\+c}!clean\+\_\+upp@{clean\+\_\+upp}}
+\index{clean\+\_\+upp@{clean\+\_\+upp}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{clean\+\_\+upp(int error)}{clean_upp(int error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void clean\+\_\+upp (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_aef807511a901163038ea5329c29d98eb}{}\label{cleanup_8c_aef807511a901163038ea5329c29d98eb}
+\index{cleanup.\+c@{cleanup.\+c}!clear\+\_\+pp\+\_\+trap@{clear\+\_\+pp\+\_\+trap}}
+\index{clear\+\_\+pp\+\_\+trap@{clear\+\_\+pp\+\_\+trap}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{clear\+\_\+pp\+\_\+trap(int)}{clear_pp_trap(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void clear\+\_\+pp\+\_\+trap (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a18861758452853315386ca8c9b0ad02f}{}\label{cleanup_8c_a18861758452853315386ca8c9b0ad02f}
+\index{cleanup.\+c@{cleanup.\+c}!error\+\_\+name@{error\+\_\+name}}
+\index{error\+\_\+name@{error\+\_\+name}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{error\+\_\+name(int)}{error_name(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} const char $\ast$ error\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ad695ce6ef119ee3523cb29cc780b8d9b}{}\label{cleanup_8c_ad695ce6ef119ee3523cb29cc780b8d9b}
+\index{cleanup.\+c@{cleanup.\+c}!init\+\_\+clean\+\_\+up@{init\+\_\+clean\+\_\+up}}
+\index{init\+\_\+clean\+\_\+up@{init\+\_\+clean\+\_\+up}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+clean\+\_\+up(void($\ast$\+\_\+user\+\_\+clean\+\_\+up)(void), void($\ast$\+\_\+clean\+\_\+up\+\_\+printout)(int))}{init_clean_up(void(*_user_clean_up)(void), void(*_clean_up_printout)(int))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void init\+\_\+clean\+\_\+up (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{\+\_\+user\+\_\+clean\+\_\+up, }
+\item[{void($\ast$)(int)}]{\+\_\+clean\+\_\+up\+\_\+printout}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a88acb1c1b81cca96aa42c0a4e3b16cbb}{}\label{cleanup_8c_a88acb1c1b81cca96aa42c0a4e3b16cbb}
+\index{cleanup.\+c@{cleanup.\+c}!is\+\_\+floating\+\_\+point@{is\+\_\+floating\+\_\+point}}
+\index{is\+\_\+floating\+\_\+point@{is\+\_\+floating\+\_\+point}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+floating\+\_\+point(double x)}{is_floating_point(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int is\+\_\+floating\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a641c7062f44f7580a8ed17298052c739}{}\label{cleanup_8c_a641c7062f44f7580a8ed17298052c739}
+\index{cleanup.\+c@{cleanup.\+c}!print\+\_\+call\+\_\+stack@{print\+\_\+call\+\_\+stack}}
+\index{print\+\_\+call\+\_\+stack@{print\+\_\+call\+\_\+stack}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+call\+\_\+stack(const char $\ast$mesg)}{print_call_stack(const char *mesg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+call\+\_\+stack (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{mesg}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a55ca813e8ff856138558fcf6569be36c}{}\label{cleanup_8c_a55ca813e8ff856138558fcf6569be36c}
+\index{cleanup.\+c@{cleanup.\+c}!print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error@{print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error}}
+\index{print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error@{print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error(int)}{print_final_storage_and_error(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void print\+\_\+final\+\_\+storage\+\_\+and\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_aa12ecbbe6686bec269432014c4d50b92}{}\label{cleanup_8c_aa12ecbbe6686bec269432014c4d50b92}
+\index{cleanup.\+c@{cleanup.\+c}!print\+\_\+storage@{print\+\_\+storage}}
+\index{print\+\_\+storage@{print\+\_\+storage}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+storage(const char $\ast$s, const char $\ast$s1)}{print_storage(const char *s, const char *s1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void print\+\_\+storage (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{const char $\ast$}]{s1}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ab72b3797398329626beed9167e4d818e}{}\label{cleanup_8c_ab72b3797398329626beed9167e4d818e}
+\index{cleanup.\+c@{cleanup.\+c}!second\+\_\+clean\+\_\+up@{second\+\_\+clean\+\_\+up}}
+\index{second\+\_\+clean\+\_\+up@{second\+\_\+clean\+\_\+up}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{second\+\_\+clean\+\_\+up(int)}{second_clean_up(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void second\+\_\+clean\+\_\+up (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ac9bc6977ba780a4badb359742933fd4e}{}\label{cleanup_8c_ac9bc6977ba780a4badb359742933fd4e}
+\index{cleanup.\+c@{cleanup.\+c}!second\+\_\+clean\+\_\+up\+\_\+handler@{second\+\_\+clean\+\_\+up\+\_\+handler}}
+\index{second\+\_\+clean\+\_\+up\+\_\+handler@{second\+\_\+clean\+\_\+up\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{second\+\_\+clean\+\_\+up\+\_\+handler(int error)}{second_clean_up_handler(int error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void second\+\_\+clean\+\_\+up\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ac8361066a0eab13b11a6702ae26b9958}{}\label{cleanup_8c_ac8361066a0eab13b11a6702ae26b9958}
+\index{cleanup.\+c@{cleanup.\+c}!set\+\_\+dump\+\_\+core@{set\+\_\+dump\+\_\+core}}
+\index{set\+\_\+dump\+\_\+core@{set\+\_\+dump\+\_\+core}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+dump\+\_\+core(boolean dodump)}{set_dump_core(boolean dodump)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+dump\+\_\+core (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{dodump}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_aab5d4ea408302a3e375e8e0172aed99f}{}\label{cleanup_8c_aab5d4ea408302a3e375e8e0172aed99f}
+\index{cleanup.\+c@{cleanup.\+c}!set\+\_\+error\+\_\+handler@{set\+\_\+error\+\_\+handler}}
+\index{set\+\_\+error\+\_\+handler@{set\+\_\+error\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+error\+\_\+handler(\+Error\+\_\+handler $\ast$, boolean)}{set_error_handler(Error_handler *, boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void set\+\_\+error\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+\_\+handler} $\ast$}]{func, }
+\item[{{\bf boolean}}]{first}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_ad6a900cf2154bd6270d29b552add8916}{}\label{cleanup_8c_ad6a900cf2154bd6270d29b552add8916}
+\index{cleanup.\+c@{cleanup.\+c}!sigsetmask@{sigsetmask}}
+\index{sigsetmask@{sigsetmask}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{sigsetmask(int)}{sigsetmask(int)}}]{\setlength{\rightskip}{0pt plus 5cm}int sigsetmask (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a2c4485ec58a1037fecff014aca547457}{}\label{cleanup_8c_a2c4485ec58a1037fecff014aca547457}
+\index{cleanup.\+c@{cleanup.\+c}!terminate\+\_\+run@{terminate\+\_\+run}}
+\index{terminate\+\_\+run@{terminate\+\_\+run}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{terminate\+\_\+run(int)}{terminate_run(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void terminate\+\_\+run (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a41334ac1b796b823a6391466f21bf801}{}\label{cleanup_8c_a41334ac1b796b823a6391466f21bf801}
+\index{cleanup.\+c@{cleanup.\+c}!terminate\+\_\+run\+\_\+handler@{terminate\+\_\+run\+\_\+handler}}
+\index{terminate\+\_\+run\+\_\+handler@{terminate\+\_\+run\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{terminate\+\_\+run\+\_\+handler(int error)}{terminate_run_handler(int error)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void terminate\+\_\+run\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{int}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_aed31c9ff0e167f57a7c0c9ca206d3589}{}\label{cleanup_8c_aed31c9ff0e167f57a7c0c9ca206d3589}
+\index{cleanup.\+c@{cleanup.\+c}!trace\+\_\+back@{trace\+\_\+back}}
+\index{trace\+\_\+back@{trace\+\_\+back}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{trace\+\_\+back()}{trace_back()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void trace\+\_\+back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{cleanup_8c_a2df1d3f88516f10421df0a8550fbf31d}{}\label{cleanup_8c_a2df1d3f88516f10421df0a8550fbf31d}
+
+
+\subsection{Variable Documentation}
+\index{cleanup.\+c@{cleanup.\+c}!clean\+\_\+up\+\_\+handler@{clean\+\_\+up\+\_\+handler}}
+\index{clean\+\_\+up\+\_\+handler@{clean\+\_\+up\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{clean\+\_\+up\+\_\+handler}{clean_up_handler}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Error\+\_\+handler} clean\+\_\+up\+\_\+handler}\hypertarget{cleanup_8c_abad23c6c5a00756e4b2b0180b546b520}{}\label{cleanup_8c_abad23c6c5a00756e4b2b0180b546b520}
+\index{cleanup.\+c@{cleanup.\+c}!clean\+\_\+up\+\_\+printout@{clean\+\_\+up\+\_\+printout}}
+\index{clean\+\_\+up\+\_\+printout@{clean\+\_\+up\+\_\+printout}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{clean\+\_\+up\+\_\+printout}{clean_up_printout}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void($\ast$ clean\+\_\+up\+\_\+printout) (int) = N\+U\+LL}\hypertarget{cleanup_8c_a0180a243fbf80b9c078ca5256eead990}{}\label{cleanup_8c_a0180a243fbf80b9c078ca5256eead990}
+\index{cleanup.\+c@{cleanup.\+c}!dump\+\_\+core@{dump\+\_\+core}}
+\index{dump\+\_\+core@{dump\+\_\+core}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{dump\+\_\+core}{dump_core}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} dump\+\_\+core = {\bf NO}}\hypertarget{cleanup_8c_a88c82ecc9d6d33a844d2806944dd8bb2}{}\label{cleanup_8c_a88c82ecc9d6d33a844d2806944dd8bb2}
+\index{cleanup.\+c@{cleanup.\+c}!second\+\_\+clean\+\_\+up\+\_\+handler@{second\+\_\+clean\+\_\+up\+\_\+handler}}
+\index{second\+\_\+clean\+\_\+up\+\_\+handler@{second\+\_\+clean\+\_\+up\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{second\+\_\+clean\+\_\+up\+\_\+handler}{second_clean_up_handler}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Error\+\_\+handler} second\+\_\+clean\+\_\+up\+\_\+handler}\hypertarget{cleanup_8c_ae1e1457e7ed17d6bd99c34f6f63e874d}{}\label{cleanup_8c_ae1e1457e7ed17d6bd99c34f6f63e874d}
+\index{cleanup.\+c@{cleanup.\+c}!terminate\+\_\+run\+\_\+handler@{terminate\+\_\+run\+\_\+handler}}
+\index{terminate\+\_\+run\+\_\+handler@{terminate\+\_\+run\+\_\+handler}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{terminate\+\_\+run\+\_\+handler}{terminate_run_handler}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Error\+\_\+handler} terminate\+\_\+run\+\_\+handler}\hypertarget{cleanup_8c_a03d201d79b1752366c0f25eb807a20ab}{}\label{cleanup_8c_a03d201d79b1752366c0f25eb807a20ab}
+\index{cleanup.\+c@{cleanup.\+c}!user\+\_\+clean\+\_\+up@{user\+\_\+clean\+\_\+up}}
+\index{user\+\_\+clean\+\_\+up@{user\+\_\+clean\+\_\+up}!cleanup.\+c@{cleanup.\+c}}
+\subsubsection[{\texorpdfstring{user\+\_\+clean\+\_\+up}{user_clean_up}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void($\ast$ user\+\_\+clean\+\_\+up) (void) = N\+U\+LL}\hypertarget{cleanup_8c_aabd4f209ea742bf86f53c66068cf4609}{}\label{cleanup_8c_aabd4f209ea742bf86f53c66068cf4609}

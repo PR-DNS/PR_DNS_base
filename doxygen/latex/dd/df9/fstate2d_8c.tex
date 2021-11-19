@@ -1,0 +1,222 @@
+\hypertarget{fstate2d_8c}{}\section{D\+N\+S/src/front/fstate2d.c File Reference}
+\label{fstate2d_8c}\index{D\+N\+S/src/front/fstate2d.\+c@{D\+N\+S/src/front/fstate2d.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{fstate2d_8c_d4/dd3/struct___d_u_m_m_y___a_r_r_a_y}{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}
+\item 
+union \hyperlink{fstate2d_8c_de/d0b/union___d_u_m_m_y___a_r_r_a_y_8da}{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y.\+da}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fstate2d_8c_a4e9ea77fae55fd71328e022313b4b0d4}{at\+\_\+beginning}(p,  b,  orient)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{fstate2d_8c_d4/dd3/struct___d_u_m_m_y___a_r_r_a_y}{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} \hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ \hyperlink{fstate2d_8c_a732a85c564de960099a2379e677eca70}{alloc\+\_\+dummy\+\_\+array} (\hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$, int, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ \hyperlink{fstate2d_8c_a8ddf32f84d605b7da8263a4fe37ec51d}{alloc\+\_\+dummy\+\_\+point\+\_\+array} (\hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$, int, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ \hyperlink{fstate2d_8c_a85ab33d8f1721e3e716a34aae73299a1}{alloc\+\_\+dummy\+\_\+state\+\_\+array} (\hyperlink{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$, int, size\+\_\+t)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fstate2d_8c_a6ef2b2eb825f7e6804b07f09c2655ef4}{no\+\_\+continuation\+\_\+along\+\_\+curve} (int, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, int, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$, double $\ast$, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate2d_8c_abd882cbfac5691cc9217a6776c4e96d3}{states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient, double ds, int npts, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$left, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$right, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$curr\+\_\+hs, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$curr\+\_\+hse, double $\ast$t, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$posn, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fstate2d_8c_a983cc7cb2a092dc14d1fbfe06781b35d}{set\+\_\+states\+\_\+by\+\_\+interpolation} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$bs, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$be, \hyperlink{geom_8h_afd566e7928ff7b31ca7bcff47aae57b3}{S\+I\+DE} side, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} start, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} end, size\+\_\+t sizest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY@{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}}\label{struct___d_u_m_m_y___a_r_r_a_y}
+\hypertarget{fstate2d_8c_struct___d_u_m_m_y___a_r_r_a_y}{}
+\subsubsection{struct \+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}
+\begin{DoxyFields}{Class Members}
+union \hyperlink{fstate2d_8c_de/d0b/union___d_u_m_m_y___a_r_r_a_y_8da}{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}\hypertarget{fstate2d_8c_af3dde64633a619135667e7df8e966cee}{}\label{fstate2d_8c_af3dde64633a619135667e7df8e966cee}
+&
+da&
+\\
+\hline
+
+int\hypertarget{fstate2d_8c_a7f7b9b89baaea2a3f39ab0ab013021e4}{}\label{fstate2d_8c_a7f7b9b89baaea2a3f39ab0ab013021e4}
+&
+len&
+\\
+\hline
+
+int\hypertarget{fstate2d_8c_a899ab5ab558a65f3e82dd2f0da5ca712}{}\label{fstate2d_8c_a899ab5ab558a65f3e82dd2f0da5ca712}
+&
+rad&
+\\
+\hline
+
+size\+\_\+t\hypertarget{fstate2d_8c_ac8cd5abafe5d38be11cf868cca084995}{}\label{fstate2d_8c_ac8cd5abafe5d38be11cf868cca084995}
+&
+size&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$\hypertarget{fstate2d_8c_ac3d2fe05c273af933215366dabb00ef7}{}\label{fstate2d_8c_ac3d2fe05c273af933215366dabb00ef7}
+&
+store&
+\\
+\hline
+
+\hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$\hypertarget{fstate2d_8c_aa2ea9f8a81dbfe11d54c31d89349e2d5}{}\label{fstate2d_8c_aa2ea9f8a81dbfe11d54c31d89349e2d5}
+&
+ststore&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y.\+da@{\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y.\+da}}\label{union___d_u_m_m_y___a_r_r_a_y_8da}
+\hypertarget{fstate2d_8c_union___d_u_m_m_y___a_r_r_a_y_8da}{}
+\subsubsection{union \+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y.\+da}
+\begin{DoxyFields}{Class Members}
+\hyperlink{cdecs_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$\hypertarget{fstate2d_8c_a4b3a6218bb3e3a7303e8a171a60fcf92}{}\label{fstate2d_8c_a4b3a6218bb3e3a7303e8a171a60fcf92}
+&
+bytes&
+\\
+\hline
+
+\hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$\hypertarget{fstate2d_8c_a789406d01073ca1782d86293dcfc0764}{}\label{fstate2d_8c_a789406d01073ca1782d86293dcfc0764}
+&
+hs&
+\\
+\hline
+
+\hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$\hypertarget{fstate2d_8c_aff85fdbd9ba2a43896908930c9048fd5}{}\label{fstate2d_8c_aff85fdbd9ba2a43896908930c9048fd5}
+&
+hse&
+\\
+\hline
+
+\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$\hypertarget{fstate2d_8c_a83878c91171338902e0fe0fb97a8c47a}{}\label{fstate2d_8c_a83878c91171338902e0fe0fb97a8c47a}
+&
+p&
+\\
+\hline
+
+\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$\hypertarget{fstate2d_8c_a627fcdb6cc9a5e16d657ca6cdef0a6bb}{}\label{fstate2d_8c_a627fcdb6cc9a5e16d657ca6cdef0a6bb}
+&
+st&
+\\
+\hline
+
+double $\ast$\hypertarget{fstate2d_8c_ae358efa489f58062f10dd7316b65649e}{}\label{fstate2d_8c_ae358efa489f58062f10dd7316b65649e}
+&
+t&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{fstate2d.\+c@{fstate2d.\+c}!at\+\_\+beginning@{at\+\_\+beginning}}
+\index{at\+\_\+beginning@{at\+\_\+beginning}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{at\+\_\+beginning}{at_beginning}}]{\setlength{\rightskip}{0pt plus 5cm}\#define at\+\_\+beginning(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{b, }
+\item[{}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a4e9ea77fae55fd71328e022313b4b0d4}{}\label{fstate2d_8c_a4e9ea77fae55fd71328e022313b4b0d4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(  (orient == \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4caf4a03ccb67c757dc1898961486ab7ea5}{POSITIVE\_ORIENTATION} && p == b->start)        \(\backslash\)
+    || (orient == \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4ca0aff14ac2a0ae953ed1cb2ca745e944e}{NEGATIVE\_ORIENTATION} && p == b->end))
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\index{fstate2d.\+c@{fstate2d.\+c}!D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY@{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}}
+\index{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY@{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}{DUMMY_ARRAY}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} {\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY}}\hypertarget{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}{}\label{fstate2d_8c_aca2e3799b8bac52b918205cd57734e2c}
+
+
+\subsection{Function Documentation}
+\index{fstate2d.\+c@{fstate2d.\+c}!alloc\+\_\+dummy\+\_\+array@{alloc\+\_\+dummy\+\_\+array}}
+\index{alloc\+\_\+dummy\+\_\+array@{alloc\+\_\+dummy\+\_\+array}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+dummy\+\_\+array(\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y $\ast$, int, size\+\_\+t)}{alloc_dummy_array(DUMMY_ARRAY *, int, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ alloc\+\_\+dummy\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$}]{dpa, }
+\item[{int}]{rad, }
+\item[{size\+\_\+t}]{size\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a732a85c564de960099a2379e677eca70}{}\label{fstate2d_8c_a732a85c564de960099a2379e677eca70}
+\index{fstate2d.\+c@{fstate2d.\+c}!alloc\+\_\+dummy\+\_\+point\+\_\+array@{alloc\+\_\+dummy\+\_\+point\+\_\+array}}
+\index{alloc\+\_\+dummy\+\_\+point\+\_\+array@{alloc\+\_\+dummy\+\_\+point\+\_\+array}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+dummy\+\_\+point\+\_\+array(\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y $\ast$, int, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{alloc_dummy_point_array(DUMMY_ARRAY *, int, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ alloc\+\_\+dummy\+\_\+point\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$}]{dpa, }
+\item[{int}]{rad, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a8ddf32f84d605b7da8263a4fe37ec51d}{}\label{fstate2d_8c_a8ddf32f84d605b7da8263a4fe37ec51d}
+\index{fstate2d.\+c@{fstate2d.\+c}!alloc\+\_\+dummy\+\_\+state\+\_\+array@{alloc\+\_\+dummy\+\_\+state\+\_\+array}}
+\index{alloc\+\_\+dummy\+\_\+state\+\_\+array@{alloc\+\_\+dummy\+\_\+state\+\_\+array}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+dummy\+\_\+state\+\_\+array(\+D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+A\+Y $\ast$, int, size\+\_\+t)}{alloc_dummy_state_array(DUMMY_ARRAY *, int, size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$ alloc\+\_\+dummy\+\_\+state\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+U\+M\+M\+Y\+\_\+\+A\+R\+R\+AY} $\ast$}]{dpa, }
+\item[{int}]{rad, }
+\item[{size\+\_\+t}]{sizest}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a85ab33d8f1721e3e716a34aae73299a1}{}\label{fstate2d_8c_a85ab33d8f1721e3e716a34aae73299a1}
+\index{fstate2d.\+c@{fstate2d.\+c}!no\+\_\+continuation\+\_\+along\+\_\+curve@{no\+\_\+continuation\+\_\+along\+\_\+curve}}
+\index{no\+\_\+continuation\+\_\+along\+\_\+curve@{no\+\_\+continuation\+\_\+along\+\_\+curve}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{no\+\_\+continuation\+\_\+along\+\_\+curve(int, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, int, Locstate $\ast$, Locstate $\ast$, C\+U\+R\+V\+E $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$$\ast$, double $\ast$, P\+O\+I\+N\+T $\ast$$\ast$, Front $\ast$)}{no_continuation_along_curve(int, ORIENTATION, int, Locstate *, Locstate *, CURVE *, HYPER_SURF **, HYPER_SURF_ELEMENT **, double *, POINT **, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void no\+\_\+continuation\+\_\+along\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{int}]{indx, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient, }
+\item[{int}]{npts, }
+\item[{{\bf Locstate} $\ast$}]{left, }
+\item[{{\bf Locstate} $\ast$}]{right, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{cc, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{curr\+\_\+hs, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$}]{curr\+\_\+hse, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{posn, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a6ef2b2eb825f7e6804b07f09c2655ef4}{}\label{fstate2d_8c_a6ef2b2eb825f7e6804b07f09c2655ef4}
+\index{fstate2d.\+c@{fstate2d.\+c}!set\+\_\+states\+\_\+by\+\_\+interpolation@{set\+\_\+states\+\_\+by\+\_\+interpolation}}
+\index{set\+\_\+states\+\_\+by\+\_\+interpolation@{set\+\_\+states\+\_\+by\+\_\+interpolation}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+states\+\_\+by\+\_\+interpolation(\+C\+U\+R\+V\+E $\ast$c, B\+O\+N\+D $\ast$bs, B\+O\+N\+D $\ast$be, S\+I\+D\+E side, Locstate start, Locstate end, size\+\_\+t sizest)}{set_states_by_interpolation(CURVE *c, BOND *bs, BOND *be, SIDE side, Locstate start, Locstate end, size_t sizest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+states\+\_\+by\+\_\+interpolation (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf B\+O\+ND} $\ast$}]{bs, }
+\item[{{\bf B\+O\+ND} $\ast$}]{be, }
+\item[{{\bf S\+I\+DE}}]{side, }
+\item[{{\bf Locstate}}]{start, }
+\item[{{\bf Locstate}}]{end, }
+\item[{size\+\_\+t}]{sizest}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_a983cc7cb2a092dc14d1fbfe06781b35d}{}\label{fstate2d_8c_a983cc7cb2a092dc14d1fbfe06781b35d}
+\index{fstate2d.\+c@{fstate2d.\+c}!states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve@{states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve}}
+\index{states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve@{states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve}!fstate2d.\+c@{fstate2d.\+c}}
+\subsubsection[{\texorpdfstring{states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve(\+P\+O\+I\+N\+T $\ast$p, B\+O\+N\+D $\ast$b, C\+U\+R\+V\+E $\ast$c, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient, double ds, int npts, Locstate $\ast$left, Locstate $\ast$right, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$$\ast$curr\+\_\+hs, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$$\ast$curr\+\_\+hse, double $\ast$t, P\+O\+I\+N\+T $\ast$$\ast$posn, Front $\ast$fr)}{states_at_distance_along_curve(POINT *p, BOND *b, CURVE *c, ORIENTATION orient, double ds, int npts, Locstate *left, Locstate *right, HYPER_SURF **curr_hs, HYPER_SURF_ELEMENT **curr_hse, double *t, POINT **posn, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void states\+\_\+at\+\_\+distance\+\_\+along\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient, }
+\item[{double}]{ds, }
+\item[{int}]{npts, }
+\item[{{\bf Locstate} $\ast$}]{left, }
+\item[{{\bf Locstate} $\ast$}]{right, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$$\ast$}]{curr\+\_\+hs, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$$\ast$}]{curr\+\_\+hse, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{posn, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{fstate2d_8c_abd882cbfac5691cc9217a6776c4e96d3}{}\label{fstate2d_8c_abd882cbfac5691cc9217a6776c4e96d3}

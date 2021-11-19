@@ -1,0 +1,121 @@
+\hypertarget{zoom_8c}{}\section{D\+N\+S/src/intfc/zoom.c File Reference}
+\label{zoom_8c}\index{D\+N\+S/src/intfc/zoom.\+c@{D\+N\+S/src/intfc/zoom.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{zoom_8c_a1522a1268eb644df4e70c0e2c874c671}{is\+\_\+identity\+\_\+matrix} (double $\ast$$\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{zoom_8c_aeb49d71a2ee2a7d9a41d2d20dba06208}{calculate\+\_\+box} (double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{zoom_8c_a4d32e94d554c576614e264812a18e47c}{rotate\+\_\+interface} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double $\ast$, double $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{zoom_8c_a7818f81cb3124a3729bbb1bfae2974ea}{rotate\+\_\+point} (double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$, int)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{zoom_8c_acfcb61d710b9d70923147d110271669f}{exterior\+\_\+curve} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{zoom_8c_ad00f763ad57cfaf900c4f5389a7db97f}{exterior\+\_\+point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{zoom_8c_abf25c94f1784fa2a9fe77268bc5c17f7}{insert\+\_\+cuts\+\_\+and\+\_\+bdry2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$ \hyperlink{zoom_8c_a1e3318f1bdf73a1cda1b8926f4dc0e95}{i\+\_\+zoom\+\_\+interface} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$given\+\_\+intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, double $\ast$L, double $\ast$U, double $\ast$$\ast$Q)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{zoom_8c_a58d73e5161953407c204c9aa5ea052f9}{rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, double $\ast$L, double $\ast$U, double $\ast$$\ast$Q)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{zoom_8c_adff35307e916581a8207efb125a2cba3}{clip\+\_\+interface2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{zoom.\+c@{zoom.\+c}!calculate\+\_\+box@{calculate\+\_\+box}}
+\index{calculate\+\_\+box@{calculate\+\_\+box}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{calculate\+\_\+box(double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$$\ast$, double $\ast$$\ast$, int)}{calculate_box(double *, double *, double **, double **, double **, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void calculate\+\_\+box (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{double $\ast$$\ast$}]{rot\+\_\+box, }
+\item[{double $\ast$$\ast$}]{Q, }
+\item[{double $\ast$$\ast$}]{Qi, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_aeb49d71a2ee2a7d9a41d2d20dba06208}{}\label{zoom_8c_aeb49d71a2ee2a7d9a41d2d20dba06208}
+\index{zoom.\+c@{zoom.\+c}!clip\+\_\+interface2d@{clip\+\_\+interface2d}}
+\index{clip\+\_\+interface2d@{clip\+\_\+interface2d}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{clip\+\_\+interface2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{clip_interface2d(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void clip\+\_\+interface2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_adff35307e916581a8207efb125a2cba3}{}\label{zoom_8c_adff35307e916581a8207efb125a2cba3}
+\index{zoom.\+c@{zoom.\+c}!exterior\+\_\+curve@{exterior\+\_\+curve}}
+\index{exterior\+\_\+curve@{exterior\+\_\+curve}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{exterior\+\_\+curve(\+C\+U\+R\+V\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{exterior_curve(CURVE *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} exterior\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_acfcb61d710b9d70923147d110271669f}{}\label{zoom_8c_acfcb61d710b9d70923147d110271669f}
+\index{zoom.\+c@{zoom.\+c}!exterior\+\_\+point@{exterior\+\_\+point}}
+\index{exterior\+\_\+point@{exterior\+\_\+point}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{exterior\+\_\+point(\+P\+O\+I\+N\+T $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{exterior_point(POINT *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} exterior\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_ad00f763ad57cfaf900c4f5389a7db97f}{}\label{zoom_8c_ad00f763ad57cfaf900c4f5389a7db97f}
+\index{zoom.\+c@{zoom.\+c}!i\+\_\+zoom\+\_\+interface@{i\+\_\+zoom\+\_\+interface}}
+\index{i\+\_\+zoom\+\_\+interface@{i\+\_\+zoom\+\_\+interface}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{i\+\_\+zoom\+\_\+interface(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$given\+\_\+intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, double $\ast$\+L, double $\ast$\+U, double $\ast$$\ast$\+Q)}{i_zoom_interface(INTERFACE *given_intfc, RECT_GRID *gr, double *L, double *U, double **Q)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf I\+N\+T\+E\+R\+F\+A\+CE}$\ast$ i\+\_\+zoom\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{given\+\_\+intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{double $\ast$$\ast$}]{Q}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_a1e3318f1bdf73a1cda1b8926f4dc0e95}{}\label{zoom_8c_a1e3318f1bdf73a1cda1b8926f4dc0e95}
+\index{zoom.\+c@{zoom.\+c}!insert\+\_\+cuts\+\_\+and\+\_\+bdry2d@{insert\+\_\+cuts\+\_\+and\+\_\+bdry2d}}
+\index{insert\+\_\+cuts\+\_\+and\+\_\+bdry2d@{insert\+\_\+cuts\+\_\+and\+\_\+bdry2d}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{insert\+\_\+cuts\+\_\+and\+\_\+bdry2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double $\ast$$\ast$)}{insert_cuts_and_bdry2d(INTERFACE *, double **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void insert\+\_\+cuts\+\_\+and\+\_\+bdry2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$$\ast$}]{pc}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_abf25c94f1784fa2a9fe77268bc5c17f7}{}\label{zoom_8c_abf25c94f1784fa2a9fe77268bc5c17f7}
+\index{zoom.\+c@{zoom.\+c}!is\+\_\+identity\+\_\+matrix@{is\+\_\+identity\+\_\+matrix}}
+\index{is\+\_\+identity\+\_\+matrix@{is\+\_\+identity\+\_\+matrix}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+identity\+\_\+matrix(double $\ast$$\ast$, int)}{is_identity_matrix(double **, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} is\+\_\+identity\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{Q, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_a1522a1268eb644df4e70c0e2c874c671}{}\label{zoom_8c_a1522a1268eb644df4e70c0e2c874c671}
+\index{zoom.\+c@{zoom.\+c}!rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid@{rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid}}
+\index{rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid@{rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, double $\ast$\+L, double $\ast$\+U, double $\ast$$\ast$\+Q)}{rotate_and_zoom_rect_grid(RECT_GRID *gr, double *L, double *U, double **Q)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void rotate\+\_\+and\+\_\+zoom\+\_\+rect\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double $\ast$}]{L, }
+\item[{double $\ast$}]{U, }
+\item[{double $\ast$$\ast$}]{Q}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_a58d73e5161953407c204c9aa5ea052f9}{}\label{zoom_8c_a58d73e5161953407c204c9aa5ea052f9}
+\index{zoom.\+c@{zoom.\+c}!rotate\+\_\+interface@{rotate\+\_\+interface}}
+\index{rotate\+\_\+interface@{rotate\+\_\+interface}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+interface(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double $\ast$, double $\ast$$\ast$)}{rotate_interface(INTERFACE *, double *, double **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void rotate\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{origin, }
+\item[{double $\ast$$\ast$}]{Q}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_a4d32e94d554c576614e264812a18e47c}{}\label{zoom_8c_a4d32e94d554c576614e264812a18e47c}
+\index{zoom.\+c@{zoom.\+c}!rotate\+\_\+point@{rotate\+\_\+point}}
+\index{rotate\+\_\+point@{rotate\+\_\+point}!zoom.\+c@{zoom.\+c}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+point(double $\ast$, double $\ast$, double $\ast$$\ast$, double $\ast$, int)}{rotate_point(double *, double *, double **, double *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void rotate\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{origin, }
+\item[{double $\ast$}]{old\+\_\+pt, }
+\item[{double $\ast$$\ast$}]{Q, }
+\item[{double $\ast$}]{new\+\_\+pt, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{zoom_8c_a7818f81cb3124a3729bbb1bfae2974ea}{}\label{zoom_8c_a7818f81cb3124a3729bbb1bfae2974ea}

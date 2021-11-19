@@ -1,0 +1,72 @@
+\hypertarget{fft_8cpp}{}\section{D\+N\+S/climate/fft.cpp File Reference}
+\label{fft_8cpp}\index{D\+N\+S/climate/fft.\+cpp@{D\+N\+S/climate/fft.\+cpp}}
+{\ttfamily \#include $<$fftw3.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{fft_8cpp_ab13f20969e1f8a8dd434edad3e7311e9}{fftnd} (fftw\+\_\+complex $\ast$in, int dim, int $\ast$N, int dir)
+\item 
+void \hyperlink{fft_8cpp_a371d3214945291611cfa858a1ac2430a}{print\+Matrix} (const char $\ast$, fftw\+\_\+complex $\ast$, int)
+\item 
+int \hyperlink{fft_8cpp_a79b762987171444263eb396d336e86e0}{one\+\_\+dim\+\_\+test} ()
+\item 
+int \hyperlink{fft_8cpp_a31dcb7e6b72a7bc3cad5be34a7b03774}{two\+\_\+dim\+\_\+test} ()
+\item 
+int \hyperlink{fft_8cpp_a821964858043b9a386b8158ad75d337f}{three\+\_\+dim\+\_\+test} ()
+\item 
+int \hyperlink{fft_8cpp_ace3e4aa9538547222cffa04540a6a9a6}{two\+\_\+dim\+\_\+filter} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fft.\+cpp@{fft.\+cpp}!fftnd@{fftnd}}
+\index{fftnd@{fftnd}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{fftnd(fftw\+\_\+complex $\ast$in, int dim, int $\ast$\+N, int dir)}{fftnd(fftw_complex *in, int dim, int *N, int dir)}}]{\setlength{\rightskip}{0pt plus 5cm}bool fftnd (
+\begin{DoxyParamCaption}
+\item[{fftw\+\_\+complex $\ast$}]{in, }
+\item[{int}]{dim, }
+\item[{int $\ast$}]{N, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_ab13f20969e1f8a8dd434edad3e7311e9}{}\label{fft_8cpp_ab13f20969e1f8a8dd434edad3e7311e9}
+\index{fft.\+cpp@{fft.\+cpp}!one\+\_\+dim\+\_\+test@{one\+\_\+dim\+\_\+test}}
+\index{one\+\_\+dim\+\_\+test@{one\+\_\+dim\+\_\+test}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{one\+\_\+dim\+\_\+test()}{one_dim_test()}}]{\setlength{\rightskip}{0pt plus 5cm}int one\+\_\+dim\+\_\+test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_a79b762987171444263eb396d336e86e0}{}\label{fft_8cpp_a79b762987171444263eb396d336e86e0}
+\index{fft.\+cpp@{fft.\+cpp}!print\+Matrix@{print\+Matrix}}
+\index{print\+Matrix@{print\+Matrix}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+Matrix(const char $\ast$, fftw\+\_\+complex $\ast$, int)}{printMatrix(const char *, fftw_complex *, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{fftw\+\_\+complex $\ast$}]{complex\+\_\+array, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_a371d3214945291611cfa858a1ac2430a}{}\label{fft_8cpp_a371d3214945291611cfa858a1ac2430a}
+\index{fft.\+cpp@{fft.\+cpp}!three\+\_\+dim\+\_\+test@{three\+\_\+dim\+\_\+test}}
+\index{three\+\_\+dim\+\_\+test@{three\+\_\+dim\+\_\+test}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{three\+\_\+dim\+\_\+test()}{three_dim_test()}}]{\setlength{\rightskip}{0pt plus 5cm}int three\+\_\+dim\+\_\+test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_a821964858043b9a386b8158ad75d337f}{}\label{fft_8cpp_a821964858043b9a386b8158ad75d337f}
+\index{fft.\+cpp@{fft.\+cpp}!two\+\_\+dim\+\_\+filter@{two\+\_\+dim\+\_\+filter}}
+\index{two\+\_\+dim\+\_\+filter@{two\+\_\+dim\+\_\+filter}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{two\+\_\+dim\+\_\+filter()}{two_dim_filter()}}]{\setlength{\rightskip}{0pt plus 5cm}int two\+\_\+dim\+\_\+filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_ace3e4aa9538547222cffa04540a6a9a6}{}\label{fft_8cpp_ace3e4aa9538547222cffa04540a6a9a6}
+\index{fft.\+cpp@{fft.\+cpp}!two\+\_\+dim\+\_\+test@{two\+\_\+dim\+\_\+test}}
+\index{two\+\_\+dim\+\_\+test@{two\+\_\+dim\+\_\+test}!fft.\+cpp@{fft.\+cpp}}
+\subsubsection[{\texorpdfstring{two\+\_\+dim\+\_\+test()}{two_dim_test()}}]{\setlength{\rightskip}{0pt plus 5cm}int two\+\_\+dim\+\_\+test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8cpp_a31dcb7e6b72a7bc3cad5be34a7b03774}{}\label{fft_8cpp_a31dcb7e6b72a7bc3cad5be34a7b03774}

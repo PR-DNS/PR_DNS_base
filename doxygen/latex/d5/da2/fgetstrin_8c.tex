@@ -1,0 +1,72 @@
+\hypertarget{fgetstrin_8c}{}\section{D\+N\+S/src/util/fgetstrin.c File Reference}
+\label{fgetstrin_8c}\index{D\+N\+S/src/util/fgetstrin.\+c@{D\+N\+S/src/util/fgetstrin.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgetstrin_8c_aaf5f2d4311027d12ffc09d73a5110c7f}{fgetstring} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fgetstrin_8c_aac8223784ca20131b3c5f859a51cdc0d}{Cursor\+After\+String} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgetstrin_8c_a8839650fb83b2f33478d4a60288950dc}{Cursor\+After\+String\+Opt} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{fgetstrin_8c_a507166fd280671054b2aa95d780a81fb}{sgetstring} (const char $\ast$S, const char $\ast$strng)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{fgetstrin_8c_a99d1440af06b9ef841bcfef6c8232499}{copy\+\_\+until} (char $\ast$st, F\+I\+LE $\ast$ifile, F\+I\+LE $\ast$ofile, int copy)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fgetstrin_8c_a82724d63a10a2a99fb86071bbb0f4002}{fgetstring\+\_\+debug} = \hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!copy\+\_\+until@{copy\+\_\+until}}
+\index{copy\+\_\+until@{copy\+\_\+until}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{copy\+\_\+until(char $\ast$st, F\+I\+L\+E $\ast$ifile, F\+I\+L\+E $\ast$ofile, int copy)}{copy_until(char *st, FILE *ifile, FILE *ofile, int copy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$ copy\+\_\+until (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{st, }
+\item[{F\+I\+LE $\ast$}]{ifile, }
+\item[{F\+I\+LE $\ast$}]{ofile, }
+\item[{int}]{copy}
+\end{DoxyParamCaption}
+)}\hypertarget{fgetstrin_8c_a99d1440af06b9ef841bcfef6c8232499}{}\label{fgetstrin_8c_a99d1440af06b9ef841bcfef6c8232499}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!Cursor\+After\+String@{Cursor\+After\+String}}
+\index{Cursor\+After\+String@{Cursor\+After\+String}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{Cursor\+After\+String(\+F\+I\+L\+E $\ast$file, const char $\ast$strng)}{CursorAfterString(FILE *file, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Cursor\+After\+String (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{fgetstrin_8c_aac8223784ca20131b3c5f859a51cdc0d}{}\label{fgetstrin_8c_aac8223784ca20131b3c5f859a51cdc0d}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!Cursor\+After\+String\+Opt@{Cursor\+After\+String\+Opt}}
+\index{Cursor\+After\+String\+Opt@{Cursor\+After\+String\+Opt}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{Cursor\+After\+String\+Opt(\+F\+I\+L\+E $\ast$file, const char $\ast$strng)}{CursorAfterStringOpt(FILE *file, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} Cursor\+After\+String\+Opt (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{fgetstrin_8c_a8839650fb83b2f33478d4a60288950dc}{}\label{fgetstrin_8c_a8839650fb83b2f33478d4a60288950dc}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!fgetstring@{fgetstring}}
+\index{fgetstring@{fgetstring}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{fgetstring(\+F\+I\+L\+E $\ast$file, const char $\ast$strng)}{fgetstring(FILE *file, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} fgetstring (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{fgetstrin_8c_aaf5f2d4311027d12ffc09d73a5110c7f}{}\label{fgetstrin_8c_aaf5f2d4311027d12ffc09d73a5110c7f}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!sgetstring@{sgetstring}}
+\index{sgetstring@{sgetstring}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{sgetstring(const char $\ast$\+S, const char $\ast$strng)}{sgetstring(const char *S, const char *strng)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ sgetstring (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{S, }
+\item[{const char $\ast$}]{strng}
+\end{DoxyParamCaption}
+)}\hypertarget{fgetstrin_8c_a507166fd280671054b2aa95d780a81fb}{}\label{fgetstrin_8c_a507166fd280671054b2aa95d780a81fb}
+
+
+\subsection{Variable Documentation}
+\index{fgetstrin.\+c@{fgetstrin.\+c}!fgetstring\+\_\+debug@{fgetstring\+\_\+debug}}
+\index{fgetstring\+\_\+debug@{fgetstring\+\_\+debug}!fgetstrin.\+c@{fgetstrin.\+c}}
+\subsubsection[{\texorpdfstring{fgetstring\+\_\+debug}{fgetstring_debug}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} fgetstring\+\_\+debug = {\bf NO}}\hypertarget{fgetstrin_8c_a82724d63a10a2a99fb86071bbb0f4002}{}\label{fgetstrin_8c_a82724d63a10a2a99fb86071bbb0f4002}

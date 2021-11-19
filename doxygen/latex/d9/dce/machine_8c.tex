@@ -1,0 +1,82 @@
+\hypertarget{machine_8c}{}\section{D\+N\+S/src/util/machine.c File Reference}
+\label{machine_8c}\index{D\+N\+S/src/util/machine.\+c@{D\+N\+S/src/util/machine.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{machine_8c_a98753abad2951b13a9d2fc340db40c81}{d1\+\_\+mach} (int i)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ac0fce25368f217d8684ad61d92bcf651}{T\+R\+U\+Efloat} \hyperlink{machine_8c_a77e5611ad876a7263f5a308dd9bee5dd}{r1\+\_\+mach} (int i)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_a663efd0d6fb4ee6d6815f99d3b822199}{F\+T\+\_\+\+E\+N\+D\+I\+AN} \hyperlink{machine_8c_ae89706a0ddbb0a3116ad0e76e69c16ac}{ft\+\_\+endian\+\_\+type} (void)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} const char $\ast$ \hyperlink{machine_8c_aa274431c81b9cebb9b6847e2ce0d6614}{ft\+\_\+endian\+\_\+name} (\hyperlink{cdecs_8h_a663efd0d6fb4ee6d6815f99d3b822199}{F\+T\+\_\+\+E\+N\+D\+I\+AN} endian)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{machine_8c_a54e60f8839793540fb415d71f0f6c3b0}{reverse\+\_\+string} (char $\ast$s, size\+\_\+t n)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{machine_8c_a30f96fa289bc2aab47fdbee999f23bb0}{irint} (double x)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{machine_8c_a030133b403dfbdc2923c3ad827d40d42}{get\+\_\+basename} (char $\ast$name)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} char $\ast$ \hyperlink{machine_8c_a9a9ed852848843248514c54a13d84f35}{get\+\_\+dirname} (char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{machine.\+c@{machine.\+c}!d1\+\_\+mach@{d1\+\_\+mach}}
+\index{d1\+\_\+mach@{d1\+\_\+mach}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{d1\+\_\+mach(int i)}{d1_mach(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double d1\+\_\+mach (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a98753abad2951b13a9d2fc340db40c81}{}\label{machine_8c_a98753abad2951b13a9d2fc340db40c81}
+\index{machine.\+c@{machine.\+c}!ft\+\_\+endian\+\_\+name@{ft\+\_\+endian\+\_\+name}}
+\index{ft\+\_\+endian\+\_\+name@{ft\+\_\+endian\+\_\+name}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{ft\+\_\+endian\+\_\+name(\+F\+T\+\_\+\+E\+N\+D\+I\+A\+N endian)}{ft_endian_name(FT_ENDIAN endian)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} const char$\ast$ ft\+\_\+endian\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+T\+\_\+\+E\+N\+D\+I\+AN}}]{endian}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_aa274431c81b9cebb9b6847e2ce0d6614}{}\label{machine_8c_aa274431c81b9cebb9b6847e2ce0d6614}
+\index{machine.\+c@{machine.\+c}!ft\+\_\+endian\+\_\+type@{ft\+\_\+endian\+\_\+type}}
+\index{ft\+\_\+endian\+\_\+type@{ft\+\_\+endian\+\_\+type}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{ft\+\_\+endian\+\_\+type(void)}{ft_endian_type(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+T\+\_\+\+E\+N\+D\+I\+AN} ft\+\_\+endian\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_ae89706a0ddbb0a3116ad0e76e69c16ac}{}\label{machine_8c_ae89706a0ddbb0a3116ad0e76e69c16ac}
+\index{machine.\+c@{machine.\+c}!get\+\_\+basename@{get\+\_\+basename}}
+\index{get\+\_\+basename@{get\+\_\+basename}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+basename(char $\ast$name)}{get_basename(char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$ get\+\_\+basename (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a030133b403dfbdc2923c3ad827d40d42}{}\label{machine_8c_a030133b403dfbdc2923c3ad827d40d42}
+\index{machine.\+c@{machine.\+c}!get\+\_\+dirname@{get\+\_\+dirname}}
+\index{get\+\_\+dirname@{get\+\_\+dirname}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+dirname(char $\ast$name)}{get_dirname(char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} char$\ast$ get\+\_\+dirname (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a9a9ed852848843248514c54a13d84f35}{}\label{machine_8c_a9a9ed852848843248514c54a13d84f35}
+\index{machine.\+c@{machine.\+c}!irint@{irint}}
+\index{irint@{irint}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{irint(double x)}{irint(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int irint (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a30f96fa289bc2aab47fdbee999f23bb0}{}\label{machine_8c_a30f96fa289bc2aab47fdbee999f23bb0}
+\index{machine.\+c@{machine.\+c}!r1\+\_\+mach@{r1\+\_\+mach}}
+\index{r1\+\_\+mach@{r1\+\_\+mach}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{r1\+\_\+mach(int i)}{r1_mach(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf T\+R\+U\+Efloat} r1\+\_\+mach (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a77e5611ad876a7263f5a308dd9bee5dd}{}\label{machine_8c_a77e5611ad876a7263f5a308dd9bee5dd}
+\index{machine.\+c@{machine.\+c}!reverse\+\_\+string@{reverse\+\_\+string}}
+\index{reverse\+\_\+string@{reverse\+\_\+string}!machine.\+c@{machine.\+c}}
+\subsubsection[{\texorpdfstring{reverse\+\_\+string(char $\ast$s, size\+\_\+t n)}{reverse_string(char *s, size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void reverse\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{machine_8c_a54e60f8839793540fb415d71f0f6c3b0}{}\label{machine_8c_a54e60f8839793540fb415d71f0f6c3b0}

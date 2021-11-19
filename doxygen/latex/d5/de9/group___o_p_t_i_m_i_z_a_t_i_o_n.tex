@@ -1,0 +1,173 @@
+\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n}{}\section{Fron\+Tier Interface Optimization Functions}
+\label{group___o_p_t_i_m_i_z_a_t_i_o_n}\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga378a767ef50a2da96f44719ac4789f71}{F\+T\+\_\+\+Redist\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3d878dcf2802c64619bf0f524e002f61}{F\+T\+\_\+\+Optimize\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. The function will redistribute all curves and surfaces (3D). It will recursively do either 10 times or when nothing to be done. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga8b3cdb7ef9b0e6e8acd1ab613c10d5c4}{F\+T\+\_\+\+Optimize\+Surf\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surf, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of a surf mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more triangle to be redistributed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga826694560bce061d09012c44002c3031}{F\+T\+\_\+\+Optimize\+Curve\+Mesh} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, \hyperlink{int_8h_a02cf0c2d24dc56fb5019b39d817aa801}{S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS} params)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of a curve mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more bond to be redistributed. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga21cd4b5d3a9f3a6d36b028c998804291}{F\+T\+\_\+\+Set\+Curve\+Spacing} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, double scaled\+\_\+spacing)
+\begin{DoxyCompactList}\small\item\em This function set the optimal spacing for curve redistribution. The scaled spacing is in the unit of regular grid spacing h. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3c10b62e5748339743fd4f685ab8be17}{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This is an independent call for redistribution and optimization of curve. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___o_p_t_i_m_i_z_a_t_i_o_n_ga476f95e9ffd195223a1aa5220ed601c2}{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$bs, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$be, int nb, double seg\+\_\+length, \hyperlink{fuserint_8h_a629ef72c8f466d71aac232a468417f65}{R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\begin{DoxyCompactList}\small\item\em This function set curve to constrained length (seg\+\_\+length), starting from the bond bs and end at bond be, with total of nb bonds. The cutting direction is the input dir. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Curve\+Seg\+Length\+Constr@{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr}}
+\index{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr@{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Curve\+Seg\+Length\+Constr(\+C\+U\+R\+V\+E $\ast$c, B\+O\+N\+D $\ast$bs, B\+O\+N\+D $\ast$be, int nb, double seg\+\_\+length, R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir)}{FT_CurveSegLengthConstr(CURVE *c, BOND *bs, BOND *be, int nb, double seg_length, REDISTRIBUTION_DIRECTION dir)}}]{\setlength{\rightskip}{0pt plus 5cm}double F\+T\+\_\+\+Curve\+Seg\+Length\+Constr (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf B\+O\+ND} $\ast$}]{bs, }
+\item[{{\bf B\+O\+ND} $\ast$}]{be, }
+\item[{int}]{nb, }
+\item[{double}]{seg\+\_\+length, }
+\item[{{\bf R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga476f95e9ffd195223a1aa5220ed601c2}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga476f95e9ffd195223a1aa5220ed601c2}
+
+
+This function set curve to constrained length (seg\+\_\+length), starting from the bond bs and end at bond be, with total of nb bonds. The cutting direction is the input dir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & {\bfseries pointer} to the curve. \\
+\hline
+{\em bs} & {\bfseries pointer} to the start bond. \\
+\hline
+{\em be} & {\bfseries pointer} to the end bond. \\
+\hline
+{\em nb} & {\bfseries number} of bonds. \\
+\hline
+{\em seg\+\_\+length} & {\bfseries total} length of the curve. \\
+\hline
+{\em dir} & {\bfseries direction} of the redistribution (F\+O\+R\+W\+A\+R\+D\+\_\+\+R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N/\+B\+A\+C\+K\+W\+A\+R\+D\+\_\+\+R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+ON. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Optimize\+Curve\+Mesh@{F\+T\+\_\+\+Optimize\+Curve\+Mesh}}
+\index{F\+T\+\_\+\+Optimize\+Curve\+Mesh@{F\+T\+\_\+\+Optimize\+Curve\+Mesh}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Optimize\+Curve\+Mesh(\+Front $\ast$front, C\+U\+R\+V\+E $\ast$curve, S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+M\+S params)}{FT_OptimizeCurveMesh(Front *front, CURVE *curve, SCALED_REDIST_PARAMS params)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Optimize\+Curve\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS}}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga826694560bce061d09012c44002c3031}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga826694560bce061d09012c44002c3031}
+
+
+This is an independent call for redistribution and optimization of a curve mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more bond to be redistributed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front to be redistributed \\
+\hline
+{\em curve} & {\bfseries inout} Pointer to the curve to be redistributed \\
+\hline
+{\em params} & {\bfseries in} structure of scaled redistribution parameters. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds@{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds}}
+\index{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds@{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds(\+Front $\ast$front, C\+U\+R\+V\+E $\ast$curve)}{FT_OptimizeCurveMeshWithEqualBonds(Front *front, CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Optimize\+Curve\+Mesh\+With\+Equal\+Bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3c10b62e5748339743fd4f685ab8be17}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3c10b62e5748339743fd4f685ab8be17}
+
+
+This is an independent call for redistribution and optimization of curve. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front of the curve to be redistributed \\
+\hline
+{\em curve} & {\bfseries inout} Pointer to curve to be redistributed \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Optimize\+Mesh@{F\+T\+\_\+\+Optimize\+Mesh}}
+\index{F\+T\+\_\+\+Optimize\+Mesh@{F\+T\+\_\+\+Optimize\+Mesh}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Optimize\+Mesh(\+Front $\ast$front, S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+M\+S params)}{FT_OptimizeMesh(Front *front, SCALED_REDIST_PARAMS params)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Optimize\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS}}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3d878dcf2802c64619bf0f524e002f61}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga3d878dcf2802c64619bf0f524e002f61}
+
+
+This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. The function will redistribute all curves and surfaces (3D). It will recursively do either 10 times or when nothing to be done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front to be redistributed \\
+\hline
+{\em params} & {\bfseries in} structure of scaled redistribution parameters. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Optimize\+Surf\+Mesh@{F\+T\+\_\+\+Optimize\+Surf\+Mesh}}
+\index{F\+T\+\_\+\+Optimize\+Surf\+Mesh@{F\+T\+\_\+\+Optimize\+Surf\+Mesh}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Optimize\+Surf\+Mesh(\+Front $\ast$front, S\+U\+R\+F\+A\+C\+E $\ast$surf, S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+M\+S params)}{FT_OptimizeSurfMesh(Front *front, SURFACE *surf, SCALED_REDIST_PARAMS params)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Optimize\+Surf\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surf, }
+\item[{{\bf S\+C\+A\+L\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+\_\+\+P\+A\+R\+A\+MS}}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga8b3cdb7ef9b0e6e8acd1ab613c10d5c4}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga8b3cdb7ef9b0e6e8acd1ab613c10d5c4}
+
+
+This is an independent call for redistribution and optimization of a surf mesh. No parallel communication is called after redistribution. Return Y\+ES (nothing\+\_\+done == Y\+ES) if no more triangle to be redistributed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front to be redistributed \\
+\hline
+{\em surf} & {\bfseries inout} Pointer to the surface to be redistributed \\
+\hline
+{\em params} & {\bfseries in} structure of scaled redistribution parameters. \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Redist\+Mesh@{F\+T\+\_\+\+Redist\+Mesh}}
+\index{F\+T\+\_\+\+Redist\+Mesh@{F\+T\+\_\+\+Redist\+Mesh}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Redist\+Mesh(\+Front $\ast$front)}{FT_RedistMesh(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Redist\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga378a767ef50a2da96f44719ac4789f71}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga378a767ef50a2da96f44719ac4789f71}
+
+
+This is an independent call for redistribution and optimization of the interface mesh. A parallel communication of front should be called following this call to ensure that the redistribution is consistent globally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front to be redistributed \\
+\hline
+\end{DoxyParams}
+\index{Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}!F\+T\+\_\+\+Set\+Curve\+Spacing@{F\+T\+\_\+\+Set\+Curve\+Spacing}}
+\index{F\+T\+\_\+\+Set\+Curve\+Spacing@{F\+T\+\_\+\+Set\+Curve\+Spacing}!Fron\+Tier Interface Optimization Functions@{Fron\+Tier Interface Optimization Functions}}
+\subsubsection[{\texorpdfstring{F\+T\+\_\+\+Set\+Curve\+Spacing(\+Front $\ast$front, double scaled\+\_\+spacing)}{FT_SetCurveSpacing(Front *front, double scaled_spacing)}}]{\setlength{\rightskip}{0pt plus 5cm}void F\+T\+\_\+\+Set\+Curve\+Spacing (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{double}]{scaled\+\_\+spacing}
+\end{DoxyParamCaption}
+)}\hypertarget{group___o_p_t_i_m_i_z_a_t_i_o_n_ga21cd4b5d3a9f3a6d36b028c998804291}{}\label{group___o_p_t_i_m_i_z_a_t_i_o_n_ga21cd4b5d3a9f3a6d36b028c998804291}
+
+
+This function set the optimal spacing for curve redistribution. The scaled spacing is in the unit of regular grid spacing h. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & {\bfseries inout} Pointer to Front to be redistributed \\
+\hline
+{\em scaled\+\_\+spacing} & {\bfseries in} value of front spacing to be set. \\
+\hline
+\end{DoxyParams}

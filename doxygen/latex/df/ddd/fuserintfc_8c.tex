@@ -1,0 +1,554 @@
+\hypertarget{fuserintfc_8c}{}\section{D\+N\+S/src/front/fuserintfc.c File Reference}
+\label{fuserintfc_8c}\index{D\+N\+S/src/front/fuserintfc.\+c@{D\+N\+S/src/front/fuserintfc.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} \hyperlink{fuserintfc_8c_a621a044f3c62bab94c9e9052bc415658}{f\+\_\+read\+\_\+print\+\_\+state\+\_\+data} (\hyperlink{cdecs_8h_a18423d263765f9b6e78d8f1089446c91}{I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$, const \hyperlink{cdecs_8h_ab53ca65803ae78b17636e622a6f2a062}{I\+O\+\_\+\+T\+Y\+PE} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{fuserintfc_8c_aa7e5fd2abb8203bea92cec9c6e7b7fa1}{f\+\_\+cross\+\_\+tolerance} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_ab39e5857ab08362be3cc9d1f29dd16d4}{f\+\_\+fprint\+\_\+intfc\+\_\+state} (F\+I\+LE $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_afe4200627ca4d6daf53a21bf6f455b3f}{f\+\_\+fprint\+\_\+state\+\_\+data} (F\+I\+LE $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a5ad006649aba8778bf938ecb1c54b5b3}{f\+\_\+reflect\+\_\+state} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double $\ast$, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_ac71340ccd0f6accdbda3042bb0820d1b}{f\+\_\+tangent} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a2bd48982a3a02545a6db0ca3dd27d9ab}{f\+\_\+fshow\+\_\+intfc\+\_\+states1d} (F\+I\+LE $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a78a18691dab44f5bbb589be24a371ce7}{normal1d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a8dc32d255306b637c21675cc078a220c}{slsr1d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_ae69d6c95795048ef08ea6ff80cb26bf2}{state\+\_\+at\+\_\+point} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a64abdb101812fa33b629dc4a67236d8c}{assign\+\_\+boundary\+\_\+node\+\_\+type} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a42e12da4151ae03e53930fd6de0ab558}{assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a5419a3541a819660598bf38fb6400005}{assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{fuserintfc_8c_a209d8c92afa8417a0a29732cfe12bd06}{lagrangian\+\_\+n\+\_\+pt} (int, double, double $\ast$, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fuserintfc_8c_a886899ddbd0ca1f40e152880a1f6b58f}{f\+\_\+set\+\_\+boundary1d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fuserintfc_8c_ab4d6bb7847dc18cf233dd9d4adbc1986}{f\+\_\+set\+\_\+boundary2d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a966d267ec8bcf6462e5900d2c1b2a546}{f\+\_\+fshow\+\_\+intfc\+\_\+states2d} (F\+I\+LE $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a85f1f3d926727d185936ff10592a6d02}{f\+\_\+lagrangian\+\_\+tangent} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a142371be4c6a37b132a3f5d59b4ad724}{f\+\_\+wlsp\+\_\+tangent} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a59d48eff9108d478bea516ec4dac2607}{first\+\_\+order\+\_\+normal2d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a1bc4aaf46bed1e81d9acb51342a021a6}{f\+\_\+normal2d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_aa6d6bc46f5013b2af338701c9dee037a}{slsr2d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_af059884ea4cc67df99631dad82affe76}{state\+\_\+along\+\_\+bond} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_adb00567c4fc7406f1693539d1586c409}{f\+\_\+area\+\_\+weighted\+\_\+normal3d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a3687cf81f7c369d7e297a0189faa8950}{f\+\_\+sine\+\_\+weighted\+\_\+normal3d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a84400abd0bcd11702138c83ef6aef7bd}{f\+\_\+plane\+\_\+fit\+\_\+normal3d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a18260ca78ccd72f2ff3f239b909343b0}{f\+\_\+wlsp\+\_\+normal} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, double $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fuserintfc_8c_a39df7051781659da7db79934131888c2}{f\+\_\+set\+\_\+boundary3d} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a0fa0a34c0b65f047bb46bf20968accef}{f\+\_\+fshow\+\_\+intfc\+\_\+states3d} (F\+I\+LE $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a37c79823637a217c4dd66e2255c5c3f1}{f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a9ec7ab4b1353a522415b48bfc4d9c063}{slsr3d} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_aa9f28a072f444745791352ef97e47ce9}{state\+\_\+in\+\_\+tri} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, double $\ast$, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{fuserint_8h_a11755525a9fa5be02b2a852d4ec826bf}{F\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE} $\ast$ \hyperlink{fuserintfc_8c_a263a9d44707e16af36003ce4b79d1873}{f\+\_\+user\+\_\+hook} (int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a4ce57c6aa70e53ccbf01542cf427a51f}{f\+\_\+preserve\+\_\+user\+\_\+hooks} (int dim, \hyperlink{userint_8h_a0b05f1bfffa66f9eb474f3773398ec89}{P\+R\+E\+S\+E\+R\+V\+E\+\_\+\+U\+S\+E\+R\+\_\+\+H\+O\+O\+KS} flag)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a3c6fabc386619517695418629ad26803}{f\+\_\+set\+\_\+interface\+\_\+hooks} (int dim, \hyperlink{cdecs_8h_a18423d263765f9b6e78d8f1089446c91}{I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$init)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a85cdde9f00c3a5e78b23e606a9ce8d4d}{linear\+\_\+state\+\_\+interpolator} (double alpha, double beta, double $\ast$crds1, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} st1, double $\ast$crds2, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} st2, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} answer)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fuserintfc_8c_a3b324d82685608c88dc5ebd01de290ce}{linear\+\_\+tri\+\_\+state\+\_\+interpolator} (double alpha, double beta, double gamma, double $\ast$crds0, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} st0, double $\ast$crds1, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} st1, double $\ast$crds2, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} st2, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} answer)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a47ebba3cc9f049bcfc81c8fd84b59006}{set\+\_\+tangent\+\_\+operator} (\hyperlink{fdecs_8h_aa9c5eadb567c98d3f5fcb5eb46450d72}{T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+OD} tan\+\_\+meth, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_aa5f7071ecdd0570d60c20690fa42cf7c}{f\+\_\+set\+\_\+normal\+\_\+function} (const char $\ast$s, \hyperlink{fuserint_8h_a3e3bd260955ac448c42e60e8db22ab36}{N\+O\+R\+M\+A\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON} $\ast$nf, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_ae4b29f0d754fdcc481dd53963e77fa50}{f\+\_\+set\+\_\+tangent\+\_\+function} (const char $\ast$s, \hyperlink{fuserint_8h_aea2be6782ccf43066926630ba9874168}{T\+A\+N\+G\+E\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+ON} $\ast$tf, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{fuserintfc_8c_a774e47e0d9831edfeaac08e59af8d5cc}{slsr3d\+\_\+error\+\_\+info} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris, int ntris)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fuserintfc_8c_abf0cb6b1137cc4904e82770e0eb3a074}{state\+\_\+on\+\_\+bdry\+\_\+point} (\hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$sl, \hyperlink{fdecs_8h_ace3c795e1cf7a6b6e5444944f0b59bcd}{Locstate} $\ast$sr, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$tri, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a298e914c0ba27a3079a203bc2b56313c}{set\+\_\+normal3d\+\_\+method} (\hyperlink{fdecs_8h_a0091fc912d97a7e23c645557949aa316}{N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+OD} nor3d\+\_\+meth, int dim)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{fuserintfc_8c_ab8f5fb5e446e11ed2ca9fa458b571ee3}{f\+\_\+wlsp\+\_\+curvature} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a17e21ae7174174d7a55516f8c9a8f12f}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$hse, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{fuserintfc_8c_a9345056286a547e0398e120685307fa7}{Front\+Set\+Geom\+Var\+Methods} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front, \hyperlink{fdecs_8h_aa9c5eadb567c98d3f5fcb5eb46450d72}{T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+OD} t\+\_\+method, \hyperlink{fdecs_8h_a0091fc912d97a7e23c645557949aa316}{N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+OD} n\+\_\+method, \hyperlink{fdecs_8h_adb0006261713735f3e9082bda8db44f3}{C\+U\+R\+V\+A\+T\+U\+R\+E\+\_\+\+M\+E\+T\+H\+OD} c\+\_\+method)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type@{assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type}}
+\index{assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type@{assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type(\+C\+U\+R\+V\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, double)}{assign_boundary_curve_wave_type(CURVE *, INTERFACE *, RECT_GRID *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+boundary\+\_\+curve\+\_\+wave\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a42e12da4151ae03e53930fd6de0ab558}{}\label{fuserintfc_8c_a42e12da4151ae03e53930fd6de0ab558}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!assign\+\_\+boundary\+\_\+node\+\_\+type@{assign\+\_\+boundary\+\_\+node\+\_\+type}}
+\index{assign\+\_\+boundary\+\_\+node\+\_\+type@{assign\+\_\+boundary\+\_\+node\+\_\+type}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+boundary\+\_\+node\+\_\+type(\+N\+O\+D\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, double)}{assign_boundary_node_type(NODE *, INTERFACE *, RECT_GRID *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+boundary\+\_\+node\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a64abdb101812fa33b629dc4a67236d8c}{}\label{fuserintfc_8c_a64abdb101812fa33b629dc4a67236d8c}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type@{assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type}}
+\index{assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type@{assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type(\+P\+O\+I\+N\+T $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, double)}{assign_boundary_point_wave_type(POINT *, INTERFACE *, RECT_GRID *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+boundary\+\_\+point\+\_\+wave\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{point, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a5419a3541a819660598bf38fb6400005}{}\label{fuserintfc_8c_a5419a3541a819660598bf38fb6400005}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+area\+\_\+weighted\+\_\+normal3d@{f\+\_\+area\+\_\+weighted\+\_\+normal3d}}
+\index{f\+\_\+area\+\_\+weighted\+\_\+normal3d@{f\+\_\+area\+\_\+weighted\+\_\+normal3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+area\+\_\+weighted\+\_\+normal3d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{f_area_weighted_normal3d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+area\+\_\+weighted\+\_\+normal3d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_adb00567c4fc7406f1693539d1586c409}{}\label{fuserintfc_8c_adb00567c4fc7406f1693539d1586c409}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+cross\+\_\+tolerance@{f\+\_\+cross\+\_\+tolerance}}
+\index{f\+\_\+cross\+\_\+tolerance@{f\+\_\+cross\+\_\+tolerance}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+cross\+\_\+tolerance(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_cross_tolerance(INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double f\+\_\+cross\+\_\+tolerance (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_aa7e5fd2abb8203bea92cec9c6e7b7fa1}{}\label{fuserintfc_8c_aa7e5fd2abb8203bea92cec9c6e7b7fa1}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+fprint\+\_\+intfc\+\_\+state@{f\+\_\+fprint\+\_\+intfc\+\_\+state}}
+\index{f\+\_\+fprint\+\_\+intfc\+\_\+state@{f\+\_\+fprint\+\_\+intfc\+\_\+state}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fprint\+\_\+intfc\+\_\+state(\+F\+I\+L\+E $\ast$, Locstate, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_fprint_intfc_state(FILE *, Locstate, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+fprint\+\_\+intfc\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf Locstate}}]{state, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ab39e5857ab08362be3cc9d1f29dd16d4}{}\label{fuserintfc_8c_ab39e5857ab08362be3cc9d1f29dd16d4}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+fprint\+\_\+state\+\_\+data@{f\+\_\+fprint\+\_\+state\+\_\+data}}
+\index{f\+\_\+fprint\+\_\+state\+\_\+data@{f\+\_\+fprint\+\_\+state\+\_\+data}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fprint\+\_\+state\+\_\+data(\+F\+I\+L\+E $\ast$, Locstate, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_fprint_state_data(FILE *, Locstate, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+fprint\+\_\+state\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf Locstate}}]{state, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_afe4200627ca4d6daf53a21bf6f455b3f}{}\label{fuserintfc_8c_afe4200627ca4d6daf53a21bf6f455b3f}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+fshow\+\_\+intfc\+\_\+states1d@{f\+\_\+fshow\+\_\+intfc\+\_\+states1d}}
+\index{f\+\_\+fshow\+\_\+intfc\+\_\+states1d@{f\+\_\+fshow\+\_\+intfc\+\_\+states1d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fshow\+\_\+intfc\+\_\+states1d(\+F\+I\+L\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_fshow_intfc_states1d(FILE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+fshow\+\_\+intfc\+\_\+states1d (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a2bd48982a3a02545a6db0ca3dd27d9ab}{}\label{fuserintfc_8c_a2bd48982a3a02545a6db0ca3dd27d9ab}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+fshow\+\_\+intfc\+\_\+states2d@{f\+\_\+fshow\+\_\+intfc\+\_\+states2d}}
+\index{f\+\_\+fshow\+\_\+intfc\+\_\+states2d@{f\+\_\+fshow\+\_\+intfc\+\_\+states2d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fshow\+\_\+intfc\+\_\+states2d(\+F\+I\+L\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_fshow_intfc_states2d(FILE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+fshow\+\_\+intfc\+\_\+states2d (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a966d267ec8bcf6462e5900d2c1b2a546}{}\label{fuserintfc_8c_a966d267ec8bcf6462e5900d2c1b2a546}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+fshow\+\_\+intfc\+\_\+states3d@{f\+\_\+fshow\+\_\+intfc\+\_\+states3d}}
+\index{f\+\_\+fshow\+\_\+intfc\+\_\+states3d@{f\+\_\+fshow\+\_\+intfc\+\_\+states3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fshow\+\_\+intfc\+\_\+states3d(\+F\+I\+L\+E $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_fshow_intfc_states3d(FILE *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+fshow\+\_\+intfc\+\_\+states3d (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a0fa0a34c0b65f047bb46bf20968accef}{}\label{fuserintfc_8c_a0fa0a34c0b65f047bb46bf20968accef}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+lagrangian\+\_\+tangent@{f\+\_\+lagrangian\+\_\+tangent}}
+\index{f\+\_\+lagrangian\+\_\+tangent@{f\+\_\+lagrangian\+\_\+tangent}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+lagrangian\+\_\+tangent(\+P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$, double $\ast$, Front $\ast$)}{f_lagrangian_tangent(POINT *, BOND *, CURVE *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+lagrangian\+\_\+tangent (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a85f1f3d926727d185936ff10592a6d02}{}\label{fuserintfc_8c_a85f1f3d926727d185936ff10592a6d02}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+normal2d@{f\+\_\+normal2d}}
+\index{f\+\_\+normal2d@{f\+\_\+normal2d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+normal2d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{f_normal2d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+normal2d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a1bc4aaf46bed1e81d9acb51342a021a6}{}\label{fuserintfc_8c_a1bc4aaf46bed1e81d9acb51342a021a6}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+plane\+\_\+fit\+\_\+normal3d@{f\+\_\+plane\+\_\+fit\+\_\+normal3d}}
+\index{f\+\_\+plane\+\_\+fit\+\_\+normal3d@{f\+\_\+plane\+\_\+fit\+\_\+normal3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+plane\+\_\+fit\+\_\+normal3d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{f_plane_fit_normal3d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+plane\+\_\+fit\+\_\+normal3d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a84400abd0bcd11702138c83ef6aef7bd}{}\label{fuserintfc_8c_a84400abd0bcd11702138c83ef6aef7bd}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+preserve\+\_\+user\+\_\+hooks@{f\+\_\+preserve\+\_\+user\+\_\+hooks}}
+\index{f\+\_\+preserve\+\_\+user\+\_\+hooks@{f\+\_\+preserve\+\_\+user\+\_\+hooks}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+preserve\+\_\+user\+\_\+hooks(int dim, P\+R\+E\+S\+E\+R\+V\+E\+\_\+\+U\+S\+E\+R\+\_\+\+H\+O\+O\+K\+S flag)}{f_preserve_user_hooks(int dim, PRESERVE_USER_HOOKS flag)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+preserve\+\_\+user\+\_\+hooks (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{{\bf P\+R\+E\+S\+E\+R\+V\+E\+\_\+\+U\+S\+E\+R\+\_\+\+H\+O\+O\+KS}}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a4ce57c6aa70e53ccbf01542cf427a51f}{}\label{fuserintfc_8c_a4ce57c6aa70e53ccbf01542cf427a51f}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+read\+\_\+print\+\_\+state\+\_\+data@{f\+\_\+read\+\_\+print\+\_\+state\+\_\+data}}
+\index{f\+\_\+read\+\_\+print\+\_\+state\+\_\+data@{f\+\_\+read\+\_\+print\+\_\+state\+\_\+data}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+read\+\_\+print\+\_\+state\+\_\+data(\+I\+N\+I\+T\+\_\+\+D\+A\+T\+A $\ast$, const I\+O\+\_\+\+T\+Y\+P\+E $\ast$, Locstate, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_read_print_state_data(INIT_DATA *, const IO_TYPE *, Locstate, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf Locstate} f\+\_\+read\+\_\+print\+\_\+state\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$}]{init, }
+\item[{const {\bf I\+O\+\_\+\+T\+Y\+PE} $\ast$}]{io\+\_\+type, }
+\item[{{\bf Locstate}}]{state, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a621a044f3c62bab94c9e9052bc415658}{}\label{fuserintfc_8c_a621a044f3c62bab94c9e9052bc415658}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+reflect\+\_\+state@{f\+\_\+reflect\+\_\+state}}
+\index{f\+\_\+reflect\+\_\+state@{f\+\_\+reflect\+\_\+state}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reflect\+\_\+state(\+Locstate, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double $\ast$, double $\ast$, double $\ast$)}{f_reflect_state(Locstate, INTERFACE *, double *, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+reflect\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate}}]{state, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{pt, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a5ad006649aba8778bf938ecb1c54b5b3}{}\label{fuserintfc_8c_a5ad006649aba8778bf938ecb1c54b5b3}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+boundary1d@{f\+\_\+set\+\_\+boundary1d}}
+\index{f\+\_\+set\+\_\+boundary1d@{f\+\_\+set\+\_\+boundary1d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+boundary1d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, double)}{f_set_boundary1d(INTERFACE *, RECT_GRID *, COMPONENT, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} f\+\_\+set\+\_\+boundary1d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{default\+\_\+comp, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a886899ddbd0ca1f40e152880a1f6b58f}{}\label{fuserintfc_8c_a886899ddbd0ca1f40e152880a1f6b58f}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+boundary2d@{f\+\_\+set\+\_\+boundary2d}}
+\index{f\+\_\+set\+\_\+boundary2d@{f\+\_\+set\+\_\+boundary2d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+boundary2d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, double)}{f_set_boundary2d(INTERFACE *, RECT_GRID *, COMPONENT, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} f\+\_\+set\+\_\+boundary2d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{default\+\_\+comp, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ab4d6bb7847dc18cf233dd9d4adbc1986}{}\label{fuserintfc_8c_ab4d6bb7847dc18cf233dd9d4adbc1986}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+boundary3d@{f\+\_\+set\+\_\+boundary3d}}
+\index{f\+\_\+set\+\_\+boundary3d@{f\+\_\+set\+\_\+boundary3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+boundary3d(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, double)}{f_set_boundary3d(INTERFACE *, RECT_GRID *, COMPONENT, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} f\+\_\+set\+\_\+boundary3d (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{default\+\_\+comp, }
+\item[{double}]{eps}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a39df7051781659da7db79934131888c2}{}\label{fuserintfc_8c_a39df7051781659da7db79934131888c2}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+interface\+\_\+hooks@{f\+\_\+set\+\_\+interface\+\_\+hooks}}
+\index{f\+\_\+set\+\_\+interface\+\_\+hooks@{f\+\_\+set\+\_\+interface\+\_\+hooks}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+interface\+\_\+hooks(int dim, I\+N\+I\+T\+\_\+\+D\+A\+T\+A $\ast$init)}{f_set_interface_hooks(int dim, INIT_DATA *init)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+set\+\_\+interface\+\_\+hooks (
+\begin{DoxyParamCaption}
+\item[{int}]{dim, }
+\item[{{\bf I\+N\+I\+T\+\_\+\+D\+A\+TA} $\ast$}]{init}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a3c6fabc386619517695418629ad26803}{}\label{fuserintfc_8c_a3c6fabc386619517695418629ad26803}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+normal\+\_\+function@{f\+\_\+set\+\_\+normal\+\_\+function}}
+\index{f\+\_\+set\+\_\+normal\+\_\+function@{f\+\_\+set\+\_\+normal\+\_\+function}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+normal\+\_\+function(const char $\ast$s, N\+O\+R\+M\+A\+L\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N $\ast$nf, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{f_set_normal_function(const char *s, NORMAL_FUNCTION *nf, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+set\+\_\+normal\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf N\+O\+R\+M\+A\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON} $\ast$}]{nf, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_aa5f7071ecdd0570d60c20690fa42cf7c}{}\label{fuserintfc_8c_aa5f7071ecdd0570d60c20690fa42cf7c}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+set\+\_\+tangent\+\_\+function@{f\+\_\+set\+\_\+tangent\+\_\+function}}
+\index{f\+\_\+set\+\_\+tangent\+\_\+function@{f\+\_\+set\+\_\+tangent\+\_\+function}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+set\+\_\+tangent\+\_\+function(const char $\ast$s, T\+A\+N\+G\+E\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N $\ast$tf, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{f_set_tangent_function(const char *s, TANGENT_FUNCTION *tf, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+set\+\_\+tangent\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{{\bf T\+A\+N\+G\+E\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+ON} $\ast$}]{tf, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ae4b29f0d754fdcc481dd53963e77fa50}{}\label{fuserintfc_8c_ae4b29f0d754fdcc481dd53963e77fa50}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+sine\+\_\+weighted\+\_\+normal3d@{f\+\_\+sine\+\_\+weighted\+\_\+normal3d}}
+\index{f\+\_\+sine\+\_\+weighted\+\_\+normal3d@{f\+\_\+sine\+\_\+weighted\+\_\+normal3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+sine\+\_\+weighted\+\_\+normal3d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{f_sine_weighted_normal3d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+sine\+\_\+weighted\+\_\+normal3d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a3687cf81f7c369d7e297a0189faa8950}{}\label{fuserintfc_8c_a3687cf81f7c369d7e297a0189faa8950}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+tangent@{f\+\_\+tangent}}
+\index{f\+\_\+tangent@{f\+\_\+tangent}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+tangent(\+P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$, double $\ast$, Front $\ast$)}{f_tangent(POINT *, BOND *, CURVE *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+tangent (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ac71340ccd0f6accdbda3042bb0820d1b}{}\label{fuserintfc_8c_ac71340ccd0f6accdbda3042bb0820d1b}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+user\+\_\+hook@{f\+\_\+user\+\_\+hook}}
+\index{f\+\_\+user\+\_\+hook@{f\+\_\+user\+\_\+hook}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+user\+\_\+hook(int dim)}{f_user_hook(int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf F\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}$\ast$ f\+\_\+user\+\_\+hook (
+\begin{DoxyParamCaption}
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a263a9d44707e16af36003ce4b79d1873}{}\label{fuserintfc_8c_a263a9d44707e16af36003ce4b79d1873}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+wlsp\+\_\+curvature@{f\+\_\+wlsp\+\_\+curvature}}
+\index{f\+\_\+wlsp\+\_\+curvature@{f\+\_\+wlsp\+\_\+curvature}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+wlsp\+\_\+curvature(\+P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, Front $\ast$front)}{f_wlsp_curvature(POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double f\+\_\+wlsp\+\_\+curvature (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ab8f5fb5e446e11ed2ca9fa458b571ee3}{}\label{fuserintfc_8c_ab8f5fb5e446e11ed2ca9fa458b571ee3}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+wlsp\+\_\+normal@{f\+\_\+wlsp\+\_\+normal}}
+\index{f\+\_\+wlsp\+\_\+normal@{f\+\_\+wlsp\+\_\+normal}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+wlsp\+\_\+normal(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{f_wlsp_normal(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+wlsp\+\_\+normal (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a18260ca78ccd72f2ff3f239b909343b0}{}\label{fuserintfc_8c_a18260ca78ccd72f2ff3f239b909343b0}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom@{f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom}}
+\index{f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom@{f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom(\+Front $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{f_WLSP_set_intfc_geom(Front *, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+\+W\+L\+S\+P\+\_\+set\+\_\+intfc\+\_\+geom (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a37c79823637a217c4dd66e2255c5c3f1}{}\label{fuserintfc_8c_a37c79823637a217c4dd66e2255c5c3f1}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!f\+\_\+wlsp\+\_\+tangent@{f\+\_\+wlsp\+\_\+tangent}}
+\index{f\+\_\+wlsp\+\_\+tangent@{f\+\_\+wlsp\+\_\+tangent}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+wlsp\+\_\+tangent(\+P\+O\+I\+N\+T $\ast$, B\+O\+N\+D $\ast$, C\+U\+R\+V\+E $\ast$, double $\ast$, Front $\ast$)}{f_wlsp_tangent(POINT *, BOND *, CURVE *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void f\+\_\+wlsp\+\_\+tangent (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double $\ast$}]{tgnt, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a142371be4c6a37b132a3f5d59b4ad724}{}\label{fuserintfc_8c_a142371be4c6a37b132a3f5d59b4ad724}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!first\+\_\+order\+\_\+normal2d@{first\+\_\+order\+\_\+normal2d}}
+\index{first\+\_\+order\+\_\+normal2d@{first\+\_\+order\+\_\+normal2d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{first\+\_\+order\+\_\+normal2d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{first_order_normal2d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void first\+\_\+order\+\_\+normal2d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a59d48eff9108d478bea516ec4dac2607}{}\label{fuserintfc_8c_a59d48eff9108d478bea516ec4dac2607}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!Front\+Set\+Geom\+Var\+Methods@{Front\+Set\+Geom\+Var\+Methods}}
+\index{Front\+Set\+Geom\+Var\+Methods@{Front\+Set\+Geom\+Var\+Methods}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{Front\+Set\+Geom\+Var\+Methods(\+Front $\ast$front, T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+O\+D t\+\_\+method, N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+O\+D n\+\_\+method, C\+U\+R\+V\+A\+T\+U\+R\+E\+\_\+\+M\+E\+T\+H\+O\+D c\+\_\+method)}{FrontSetGeomVarMethods(Front *front, TANGENT_METHOD t_method, NORMAL_METHOD n_method, CURVATURE_METHOD c_method)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Front\+Set\+Geom\+Var\+Methods (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front, }
+\item[{{\bf T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+OD}}]{t\+\_\+method, }
+\item[{{\bf N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+OD}}]{n\+\_\+method, }
+\item[{{\bf C\+U\+R\+V\+A\+T\+U\+R\+E\+\_\+\+M\+E\+T\+H\+OD}}]{c\+\_\+method}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a9345056286a547e0398e120685307fa7}{}\label{fuserintfc_8c_a9345056286a547e0398e120685307fa7}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!lagrangian\+\_\+n\+\_\+pt@{lagrangian\+\_\+n\+\_\+pt}}
+\index{lagrangian\+\_\+n\+\_\+pt@{lagrangian\+\_\+n\+\_\+pt}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{lagrangian\+\_\+n\+\_\+pt(int, double, double $\ast$, double $\ast$)}{lagrangian_n_pt(int, double, double *, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double lagrangian\+\_\+n\+\_\+pt (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{double}]{xx, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a209d8c92afa8417a0a29732cfe12bd06}{}\label{fuserintfc_8c_a209d8c92afa8417a0a29732cfe12bd06}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!linear\+\_\+state\+\_\+interpolator@{linear\+\_\+state\+\_\+interpolator}}
+\index{linear\+\_\+state\+\_\+interpolator@{linear\+\_\+state\+\_\+interpolator}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{linear\+\_\+state\+\_\+interpolator(double alpha, double beta, double $\ast$crds1, Locstate st1, double $\ast$crds2, Locstate st2, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, Locstate answer)}{linear_state_interpolator(double alpha, double beta, double *crds1, Locstate st1, double *crds2, Locstate st2, RECT_GRID *gr, Locstate answer)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void linear\+\_\+state\+\_\+interpolator (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha, }
+\item[{double}]{beta, }
+\item[{double $\ast$}]{crds1, }
+\item[{{\bf Locstate}}]{st1, }
+\item[{double $\ast$}]{crds2, }
+\item[{{\bf Locstate}}]{st2, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf Locstate}}]{answer}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a85cdde9f00c3a5e78b23e606a9ce8d4d}{}\label{fuserintfc_8c_a85cdde9f00c3a5e78b23e606a9ce8d4d}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!linear\+\_\+tri\+\_\+state\+\_\+interpolator@{linear\+\_\+tri\+\_\+state\+\_\+interpolator}}
+\index{linear\+\_\+tri\+\_\+state\+\_\+interpolator@{linear\+\_\+tri\+\_\+state\+\_\+interpolator}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{linear\+\_\+tri\+\_\+state\+\_\+interpolator(double alpha, double beta, double gamma, double $\ast$crds0, Locstate st0, double $\ast$crds1, Locstate st1, double $\ast$crds2, Locstate st2, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, Locstate answer)}{linear_tri_state_interpolator(double alpha, double beta, double gamma, double *crds0, Locstate st0, double *crds1, Locstate st1, double *crds2, Locstate st2, RECT_GRID *gr, Locstate answer)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} linear\+\_\+tri\+\_\+state\+\_\+interpolator (
+\begin{DoxyParamCaption}
+\item[{double}]{alpha, }
+\item[{double}]{beta, }
+\item[{double}]{gamma, }
+\item[{double $\ast$}]{crds0, }
+\item[{{\bf Locstate}}]{st0, }
+\item[{double $\ast$}]{crds1, }
+\item[{{\bf Locstate}}]{st1, }
+\item[{double $\ast$}]{crds2, }
+\item[{{\bf Locstate}}]{st2, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf Locstate}}]{answer}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a3b324d82685608c88dc5ebd01de290ce}{}\label{fuserintfc_8c_a3b324d82685608c88dc5ebd01de290ce}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!normal1d@{normal1d}}
+\index{normal1d@{normal1d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{normal1d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, double $\ast$, Front $\ast$)}{normal1d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, double *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void normal1d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{double $\ast$}]{nor, }
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a78a18691dab44f5bbb589be24a371ce7}{}\label{fuserintfc_8c_a78a18691dab44f5bbb589be24a371ce7}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!set\+\_\+normal3d\+\_\+method@{set\+\_\+normal3d\+\_\+method}}
+\index{set\+\_\+normal3d\+\_\+method@{set\+\_\+normal3d\+\_\+method}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+normal3d\+\_\+method(\+N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+O\+D nor3d\+\_\+meth, int dim)}{set_normal3d_method(NORMAL_METHOD nor3d_meth, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+normal3d\+\_\+method (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+R\+M\+A\+L\+\_\+\+M\+E\+T\+H\+OD}}]{nor3d\+\_\+meth, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a298e914c0ba27a3079a203bc2b56313c}{}\label{fuserintfc_8c_a298e914c0ba27a3079a203bc2b56313c}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!set\+\_\+tangent\+\_\+operator@{set\+\_\+tangent\+\_\+operator}}
+\index{set\+\_\+tangent\+\_\+operator@{set\+\_\+tangent\+\_\+operator}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+tangent\+\_\+operator(\+T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+O\+D tan\+\_\+meth, int dim)}{set_tangent_operator(TANGENT_METHOD tan_meth, int dim)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void set\+\_\+tangent\+\_\+operator (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+A\+N\+G\+E\+N\+T\+\_\+\+M\+E\+T\+H\+OD}}]{tan\+\_\+meth, }
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a47ebba3cc9f049bcfc81c8fd84b59006}{}\label{fuserintfc_8c_a47ebba3cc9f049bcfc81c8fd84b59006}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!slsr1d@{slsr1d}}
+\index{slsr1d@{slsr1d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{slsr1d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate $\ast$, Locstate $\ast$)}{slsr1d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate *, Locstate *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void slsr1d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate} $\ast$}]{sl, }
+\item[{{\bf Locstate} $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a8dc32d255306b637c21675cc078a220c}{}\label{fuserintfc_8c_a8dc32d255306b637c21675cc078a220c}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!slsr2d@{slsr2d}}
+\index{slsr2d@{slsr2d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{slsr2d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate $\ast$, Locstate $\ast$)}{slsr2d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate *, Locstate *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void slsr2d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate} $\ast$}]{sl, }
+\item[{{\bf Locstate} $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_aa6d6bc46f5013b2af338701c9dee037a}{}\label{fuserintfc_8c_aa6d6bc46f5013b2af338701c9dee037a}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!slsr3d@{slsr3d}}
+\index{slsr3d@{slsr3d}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{slsr3d(\+P\+O\+I\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate $\ast$, Locstate $\ast$)}{slsr3d(POINT *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate *, Locstate *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void slsr3d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate} $\ast$}]{sl, }
+\item[{{\bf Locstate} $\ast$}]{sr}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a9ec7ab4b1353a522415b48bfc4d9c063}{}\label{fuserintfc_8c_a9ec7ab4b1353a522415b48bfc4d9c063}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!slsr3d\+\_\+error\+\_\+info@{slsr3d\+\_\+error\+\_\+info}}
+\index{slsr3d\+\_\+error\+\_\+info@{slsr3d\+\_\+error\+\_\+info}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{slsr3d\+\_\+error\+\_\+info(\+P\+O\+I\+N\+T $\ast$p, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$hse, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs, T\+R\+I $\ast$tri, T\+R\+I $\ast$$\ast$tris, int ntris)}{slsr3d_error_info(POINT *p, HYPER_SURF_ELEMENT *hse, HYPER_SURF *hs, TRI *tri, TRI **tris, int ntris)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void slsr3d\+\_\+error\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris, }
+\item[{int}]{ntris}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_a774e47e0d9831edfeaac08e59af8d5cc}{}\label{fuserintfc_8c_a774e47e0d9831edfeaac08e59af8d5cc}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!state\+\_\+along\+\_\+bond@{state\+\_\+along\+\_\+bond}}
+\index{state\+\_\+along\+\_\+bond@{state\+\_\+along\+\_\+bond}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{state\+\_\+along\+\_\+bond(\+C\+O\+M\+P\+O\+N\+E\+N\+T, double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate)}{state_along_bond(COMPONENT, double *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void state\+\_\+along\+\_\+bond (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_af059884ea4cc67df99631dad82affe76}{}\label{fuserintfc_8c_af059884ea4cc67df99631dad82affe76}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!state\+\_\+at\+\_\+point@{state\+\_\+at\+\_\+point}}
+\index{state\+\_\+at\+\_\+point@{state\+\_\+at\+\_\+point}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{state\+\_\+at\+\_\+point(\+C\+O\+M\+P\+O\+N\+E\+N\+T, double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate)}{state_at_point(COMPONENT, double *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void state\+\_\+at\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_ae69d6c95795048ef08ea6ff80cb26bf2}{}\label{fuserintfc_8c_ae69d6c95795048ef08ea6ff80cb26bf2}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!state\+\_\+in\+\_\+tri@{state\+\_\+in\+\_\+tri}}
+\index{state\+\_\+in\+\_\+tri@{state\+\_\+in\+\_\+tri}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{state\+\_\+in\+\_\+tri(\+C\+O\+M\+P\+O\+N\+E\+N\+T, double $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+N\+T $\ast$, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$, Locstate)}{state_in_tri(COMPONENT, double *, HYPER_SURF_ELEMENT *, HYPER_SURF *, Locstate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void state\+\_\+in\+\_\+tri (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{comp, }
+\item[{double $\ast$}]{t, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F\+\_\+\+E\+L\+E\+M\+E\+NT} $\ast$}]{hse, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs, }
+\item[{{\bf Locstate}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_aa9f28a072f444745791352ef97e47ce9}{}\label{fuserintfc_8c_aa9f28a072f444745791352ef97e47ce9}
+\index{fuserintfc.\+c@{fuserintfc.\+c}!state\+\_\+on\+\_\+bdry\+\_\+point@{state\+\_\+on\+\_\+bdry\+\_\+point}}
+\index{state\+\_\+on\+\_\+bdry\+\_\+point@{state\+\_\+on\+\_\+bdry\+\_\+point}!fuserintfc.\+c@{fuserintfc.\+c}}
+\subsubsection[{\texorpdfstring{state\+\_\+on\+\_\+bdry\+\_\+point(\+Locstate $\ast$sl, Locstate $\ast$sr, P\+O\+I\+N\+T $\ast$p, T\+R\+I $\ast$tri, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs)}{state_on_bdry_point(Locstate *sl, Locstate *sr, POINT *p, TRI *tri, HYPER_SURF *hs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} state\+\_\+on\+\_\+bdry\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Locstate} $\ast$}]{sl, }
+\item[{{\bf Locstate} $\ast$}]{sr, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf T\+RI} $\ast$}]{tri, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs}
+\end{DoxyParamCaption}
+)}\hypertarget{fuserintfc_8c_abf0cb6b1137cc4904e82770e0eb3a074}{}\label{fuserintfc_8c_abf0cb6b1137cc4904e82770e0eb3a074}

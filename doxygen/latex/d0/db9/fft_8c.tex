@@ -1,0 +1,45 @@
+\hypertarget{fft_8c}{}\section{D\+N\+S/src/util/fft.c File Reference}
+\label{fft_8c}\index{D\+N\+S/src/util/fft.\+c@{D\+N\+S/src/util/fft.\+c}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$vmalloc.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fft_8c_a3b74ee90e5f6b71d108745dbd972684d}{fft2d} (\hyperlink{cdecs_8h_a1637b6e452cd4c0c3dab84ede47c0f36}{C\+O\+M\+P\+L\+EX} $\ast$$\ast$c, int nx, int ny, int dir)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fft_8c_a7cf66667636abe22e12d71ef5fb22ff3}{fft} (int dir, int m, double $\ast$x, double $\ast$y)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{fft_8c_ad3a7392c732998acc80c17ba2f282c87}{Powerof2} (int N, int $\ast$m, int $\ast$pwm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{fft.\+c@{fft.\+c}!fft@{fft}}
+\index{fft@{fft}!fft.\+c@{fft.\+c}}
+\subsubsection[{\texorpdfstring{fft(int dir, int m, double $\ast$x, double $\ast$y)}{fft(int dir, int m, double *x, double *y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} fft (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{int}]{m, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8c_a7cf66667636abe22e12d71ef5fb22ff3}{}\label{fft_8c_a7cf66667636abe22e12d71ef5fb22ff3}
+\index{fft.\+c@{fft.\+c}!fft2d@{fft2d}}
+\index{fft2d@{fft2d}!fft.\+c@{fft.\+c}}
+\subsubsection[{\texorpdfstring{fft2d(\+C\+O\+M\+P\+L\+E\+X $\ast$$\ast$c, int nx, int ny, int dir)}{fft2d(COMPLEX **c, int nx, int ny, int dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} fft2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+L\+EX} $\ast$$\ast$}]{c, }
+\item[{int}]{nx, }
+\item[{int}]{ny, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8c_a3b74ee90e5f6b71d108745dbd972684d}{}\label{fft_8c_a3b74ee90e5f6b71d108745dbd972684d}
+\index{fft.\+c@{fft.\+c}!Powerof2@{Powerof2}}
+\index{Powerof2@{Powerof2}!fft.\+c@{fft.\+c}}
+\subsubsection[{\texorpdfstring{Powerof2(int N, int $\ast$m, int $\ast$pwm)}{Powerof2(int N, int *m, int *pwm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} Powerof2 (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int $\ast$}]{m, }
+\item[{int $\ast$}]{pwm}
+\end{DoxyParamCaption}
+)}\hypertarget{fft_8c_ad3a7392c732998acc80c17ba2f282c87}{}\label{fft_8c_ad3a7392c732998acc80c17ba2f282c87}

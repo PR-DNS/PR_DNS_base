@@ -1,0 +1,371 @@
+\hypertarget{ftop_8c}{}\section{D\+N\+S/src/front/ftop.c File Reference}
+\label{ftop_8c}\index{D\+N\+S/src/front/ftop.\+c@{D\+N\+S/src/front/ftop.\+c}}
+{\ttfamily \#include $<$front/fdecs.\+h$>$}\\*
+{\ttfamily \#include $<$plotdecs.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{ftop_8c_d2/d55/struct___c_l_i_s_t}{\+\_\+\+C\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{ftop_8c_d2/d55/struct___c_l_i_s_t}{\+\_\+\+C\+L\+I\+ST} \hyperlink{ftop_8c_a87f9117a63587850dcce59e2347da540}{C\+L\+I\+ST}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{ftop_8c_a8ec9a8deaf0b3e4b1ad8bc6eab54a1f0}{merge\+\_\+cross\+\_\+with\+\_\+node} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}, \hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{ftop_8c_a0bebecff38fbabd273c6d4d5b0dc7bc2}{split\+\_\+bond\+\_\+at\+\_\+cross} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$, int, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$, double, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{ftop_8c_a003f5c4ca7920632f020ea2d05af5bb2}{resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$, int $\ast$, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_ad8434222bb9f67da758e635121a2f634}{f\+\_\+reflect\+\_\+point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$\hyperlink{triangle_8c_a27e17773e4939632f373e0938d62cc4f}{point}, double $\ast$p, double $\ast$n, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a69889a7ce2e4be964d5ae050fb29c594}{f\+\_\+is\+\_\+subdomain\+\_\+boundary} (\hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{ftop_8c_a1497bf4fce774e6e75fb90f2dc5a178c}{synchronize\+\_\+untangle\+\_\+status} (int status)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a2020af4d18a6b324027e21f87c822f35}{f\+\_\+invert\+\_\+curve} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_abe08b751add58cc4de0754530133d920}{f\+\_\+reverse\+\_\+curve} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a9784f7f40560a8d7adcab991ffcb86ac}{f\+\_\+untrack\+\_\+point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} newcomp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a8a2a2a91de9c20e32051cc42b032c1e0}{f\+\_\+reflect\+\_\+curve2d} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve, double $\ast$p, double $\ast$n)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_af2396c652a33e835e505b2904be3f807}{f\+\_\+reflect\+\_\+node2d} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node, double $\ast$p, double $\ast$n)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a9128f21ec5437357715a8570496d3e13}{f\+\_\+is\+\_\+subdomain\+\_\+node} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_ac0a6c6d8cebab0af7d35094d65f73915}{f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a484ae530701c40ad6db91454e2752377}{split\+\_\+curves\+\_\+at\+\_\+cross} (\hyperlink{int_8h_ade0b8470b483dfba2e7378f5dad9eebd}{C\+R\+O\+SS} $\ast$cr, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$$\ast$newn, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curves1, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ncomp1, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$pcomp1, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$curves2, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ncomp2, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$pcomp2, double min\+\_\+sc\+\_\+sep, \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} rp)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a9502bcc602f321b151d5dfb372d7821e}{f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{ftop_8c_a2a12d8689e86af703cc4b73fc2446229}{f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c1, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b, \hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$n)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a4808c778e7e62855198f78c4d9f5adda}{intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_aad07b534d9e9eb8f973f0a3652f986fb}{f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, double min\+\_\+sc\+\_\+sep, int $\ast$found, int $\ast$zl\+\_\+c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_aaddf888c3539399f32a5295bba757587}{f\+\_\+delete\+\_\+small\+\_\+loops} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a9e04d7b269188413752539b305aa6e1d}{intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$front)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a36ead80d5c7fe47b5e53cdc1956b8980}{curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a24d484a94cb1d86db52475f2c3c108a5}{is\+\_\+stationary\+\_\+node} (\hyperlink{int_8h_a65acc517559b106aa8e5fe339247ddcd}{N\+O\+DE} $\ast$node)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{ftop_8c_ac7d96ae70db7221f3f2b5b1e71aebf31}{f\+\_\+area\+\_\+of\+\_\+loop} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c1, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient1, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c2)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_aa0783514a10f70ad85eb2f1fc081f3e3}{O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY} $\ast$ \hyperlink{ftop_8c_afa6928b06c7a08dbd84801eeda673abc}{find\+\_\+loop} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} c\+\_\+orient, \hyperlink{geom_8h_a13077ae8532df1d89c9dd91d5def48cb}{A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} ang\+\_\+dir)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_a5070ffab757655a69d6e6b1af22da35f}{f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, \hyperlink{geom_8h_adc460053ab2088d3fe74b8b90a7a1c4c}{O\+R\+I\+E\+N\+T\+A\+T\+I\+ON} orient)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a083c54fd09b57a1b2ba8abce959a6575}{delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve} (\hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_a90f7a3246890eeafbec9ff23d076e0f6}{f\+\_\+reflect\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surface, double $\ast$p, double $\ast$n)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_af9a3aab50febdb79d9bd0c99ed0bce4f}{f\+\_\+untrack\+\_\+surface} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$s, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} newcomp, \hyperlink{fdecs_8h_ac32202b798f848095c489cfd04c4ca5f}{Front} $\ast$fr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{ftop_8c_ac1b4a018a70e09fc0648f544d5ff658f}{cross\+\_\+rect\+\_\+grid\+\_\+bdry} (\hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$b, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{ftop_8c_aab8eabfd20e54d7298370b884730b9bd}{f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color} (F\+I\+LE $\ast$\hyperlink{src_2_c_make_lists_8txt_ad3991a11c9e0af528624ad3c5649fbeb}{file}, \hyperlink{int_8h_acef50fa4757ce0d3f75c97fab5a175bc}{H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$hs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+C\+L\+I\+ST@{\+\_\+\+C\+L\+I\+ST}}\label{struct___c_l_i_s_t}
+\hypertarget{ftop_8c_struct___c_l_i_s_t}{}
+\subsubsection{struct \+\_\+\+C\+L\+I\+ST}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$\hypertarget{ftop_8c_abf3c37005595c5fb9ca8606da695704d}{}\label{ftop_8c_abf3c37005595c5fb9ca8606da695704d}
+&
+curve&
+\\
+\hline
+
+struct \hyperlink{ftop_8c_d2/d55/struct___c_l_i_s_t}{\+\_\+\+C\+L\+I\+ST} $\ast$\hypertarget{ftop_8c_a5a713f7d16eb75975d4717c03647270d}{}\label{ftop_8c_a5a713f7d16eb75975d4717c03647270d}
+&
+next&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Typedef Documentation}
+\index{ftop.\+c@{ftop.\+c}!C\+L\+I\+ST@{C\+L\+I\+ST}}
+\index{C\+L\+I\+ST@{C\+L\+I\+ST}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{C\+L\+I\+ST}{CLIST}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+L\+I\+ST} {\bf C\+L\+I\+ST}}\hypertarget{ftop_8c_a87f9117a63587850dcce59e2347da540}{}\label{ftop_8c_a87f9117a63587850dcce59e2347da540}
+
+
+\subsection{Function Documentation}
+\index{ftop.\+c@{ftop.\+c}!cross\+\_\+rect\+\_\+grid\+\_\+bdry@{cross\+\_\+rect\+\_\+grid\+\_\+bdry}}
+\index{cross\+\_\+rect\+\_\+grid\+\_\+bdry@{cross\+\_\+rect\+\_\+grid\+\_\+bdry}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{cross\+\_\+rect\+\_\+grid\+\_\+bdry(\+B\+O\+N\+D $\ast$b, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr)}{cross_rect_grid_bdry(BOND *b, RECT_GRID *rgr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} cross\+\_\+rect\+\_\+grid\+\_\+bdry (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_ac1b4a018a70e09fc0648f544d5ff658f}{}\label{ftop_8c_ac1b4a018a70e09fc0648f544d5ff658f}
+\index{ftop.\+c@{ftop.\+c}!curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds@{curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds}}
+\index{curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds@{curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds(\+C\+U\+R\+V\+E $\ast$c)}{curve_delete_very_short_bonds(CURVE *c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void curve\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a36ead80d5c7fe47b5e53cdc1956b8980}{}\label{ftop_8c_a36ead80d5c7fe47b5e53cdc1956b8980}
+\index{ftop.\+c@{ftop.\+c}!delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve@{delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve}}
+\index{delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve@{delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve(\+Front $\ast$fr, C\+U\+R\+V\+E $\ast$curve)}{delete_interior_points_of_curve(Front *fr, CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void delete\+\_\+interior\+\_\+points\+\_\+of\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a083c54fd09b57a1b2ba8abce959a6575}{}\label{ftop_8c_a083c54fd09b57a1b2ba8abce959a6575}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+area\+\_\+of\+\_\+loop@{f\+\_\+area\+\_\+of\+\_\+loop}}
+\index{f\+\_\+area\+\_\+of\+\_\+loop@{f\+\_\+area\+\_\+of\+\_\+loop}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+area\+\_\+of\+\_\+loop(\+C\+U\+R\+V\+E $\ast$c1, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient1, C\+U\+R\+V\+E $\ast$c2)}{f_area_of_loop(CURVE *c1, ORIENTATION orient1, CURVE *c2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double f\+\_\+area\+\_\+of\+\_\+loop (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c1, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient1, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c2}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_ac7d96ae70db7221f3f2b5b1e71aebf31}{}\label{ftop_8c_ac7d96ae70db7221f3f2b5b1e71aebf31}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node@{f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node}}
+\index{f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node@{f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node(\+C\+U\+R\+V\+E $\ast$c1, P\+O\+I\+N\+T $\ast$p, B\+O\+N\+D $\ast$b, N\+O\+D\+E $\ast$n)}{f_attach_curve_to_node(CURVE *c1, POINT *p, BOND *b, NODE *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ f\+\_\+attach\+\_\+curve\+\_\+to\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c1, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b, }
+\item[{{\bf N\+O\+DE} $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a2a12d8689e86af703cc4b73fc2446229}{}\label{ftop_8c_a2a12d8689e86af703cc4b73fc2446229}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds@{f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds}}
+\index{f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds@{f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds(\+Front $\ast$fr, C\+U\+R\+V\+E $\ast$c, double min\+\_\+sc\+\_\+sep, int $\ast$found, int $\ast$zl\+\_\+c)}{f_delete_fold_back_bonds(Front *fr, CURVE *c, double min_sc_sep, int *found, int *zl_c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double}]{min\+\_\+sc\+\_\+sep, }
+\item[{int $\ast$}]{found, }
+\item[{int $\ast$}]{zl\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_aad07b534d9e9eb8f973f0a3652f986fb}{}\label{ftop_8c_aad07b534d9e9eb8f973f0a3652f986fb}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node@{f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node}}
+\index{f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node@{f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node(\+Front $\ast$fr, C\+U\+R\+V\+E $\ast$c, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N orient)}{f_delete_point_adjacent_to_node(Front *fr, CURVE *c, ORIENTATION orient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+delete\+\_\+point\+\_\+adjacent\+\_\+to\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{orient}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a5070ffab757655a69d6e6b1af22da35f}{}\label{ftop_8c_a5070ffab757655a69d6e6b1af22da35f}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+delete\+\_\+small\+\_\+loops@{f\+\_\+delete\+\_\+small\+\_\+loops}}
+\index{f\+\_\+delete\+\_\+small\+\_\+loops@{f\+\_\+delete\+\_\+small\+\_\+loops}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+delete\+\_\+small\+\_\+loops(\+Front $\ast$fr)}{f_delete_small_loops(Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+delete\+\_\+small\+\_\+loops (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_aaddf888c3539399f32a5295bba757587}{}\label{ftop_8c_aaddf888c3539399f32a5295bba757587}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color@{f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color}}
+\index{f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color@{f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color(\+F\+I\+L\+E $\ast$file, H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs)}{f_fset_hyper_surf_color(FILE *file, HYPER_SURF *hs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+fset\+\_\+hyper\+\_\+surf\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file, }
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_aab8eabfd20e54d7298370b884730b9bd}{}\label{ftop_8c_aab8eabfd20e54d7298370b884730b9bd}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+invert\+\_\+curve@{f\+\_\+invert\+\_\+curve}}
+\index{f\+\_\+invert\+\_\+curve@{f\+\_\+invert\+\_\+curve}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+invert\+\_\+curve(\+C\+U\+R\+V\+E $\ast$c)}{f_invert_curve(CURVE *c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+invert\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a2020af4d18a6b324027e21f87c822f35}{}\label{ftop_8c_a2020af4d18a6b324027e21f87c822f35}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+is\+\_\+subdomain\+\_\+boundary@{f\+\_\+is\+\_\+subdomain\+\_\+boundary}}
+\index{f\+\_\+is\+\_\+subdomain\+\_\+boundary@{f\+\_\+is\+\_\+subdomain\+\_\+boundary}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+is\+\_\+subdomain\+\_\+boundary(\+H\+Y\+P\+E\+R\+\_\+\+S\+U\+R\+F $\ast$hs)}{f_is_subdomain_boundary(HYPER_SURF *hs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+is\+\_\+subdomain\+\_\+boundary (
+\begin{DoxyParamCaption}
+\item[{{\bf H\+Y\+P\+E\+R\+\_\+\+S\+U\+RF} $\ast$}]{hs}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a69889a7ce2e4be964d5ae050fb29c594}{}\label{ftop_8c_a69889a7ce2e4be964d5ae050fb29c594}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+is\+\_\+subdomain\+\_\+node@{f\+\_\+is\+\_\+subdomain\+\_\+node}}
+\index{f\+\_\+is\+\_\+subdomain\+\_\+node@{f\+\_\+is\+\_\+subdomain\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+is\+\_\+subdomain\+\_\+node(\+N\+O\+D\+E $\ast$node)}{f_is_subdomain_node(NODE *node)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+is\+\_\+subdomain\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a9128f21ec5437357715a8570496d3e13}{}\label{ftop_8c_a9128f21ec5437357715a8570496d3e13}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node@{f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node}}
+\index{f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node@{f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node(\+N\+O\+D\+E $\ast$node)}{f_is_virtual_fixed_node(NODE *node)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+is\+\_\+virtual\+\_\+fixed\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_ac0a6c6d8cebab0af7d35094d65f73915}{}\label{ftop_8c_ac0a6c6d8cebab0af7d35094d65f73915}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node@{f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node}}
+\index{f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node@{f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node(\+C\+U\+R\+V\+E $\ast$c, B\+O\+N\+D $\ast$b)}{f_move_closed_loop_node(CURVE *c, BOND *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+move\+\_\+closed\+\_\+loop\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf B\+O\+ND} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a9502bcc602f321b151d5dfb372d7821e}{}\label{ftop_8c_a9502bcc602f321b151d5dfb372d7821e}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+reflect\+\_\+curve2d@{f\+\_\+reflect\+\_\+curve2d}}
+\index{f\+\_\+reflect\+\_\+curve2d@{f\+\_\+reflect\+\_\+curve2d}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reflect\+\_\+curve2d(\+C\+U\+R\+V\+E $\ast$curve, double $\ast$p, double $\ast$n)}{f_reflect_curve2d(CURVE *curve, double *p, double *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+reflect\+\_\+curve2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a8a2a2a91de9c20e32051cc42b032c1e0}{}\label{ftop_8c_a8a2a2a91de9c20e32051cc42b032c1e0}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+reflect\+\_\+node2d@{f\+\_\+reflect\+\_\+node2d}}
+\index{f\+\_\+reflect\+\_\+node2d@{f\+\_\+reflect\+\_\+node2d}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reflect\+\_\+node2d(\+N\+O\+D\+E $\ast$node, double $\ast$p, double $\ast$n)}{f_reflect_node2d(NODE *node, double *p, double *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+reflect\+\_\+node2d (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_af2396c652a33e835e505b2904be3f807}{}\label{ftop_8c_af2396c652a33e835e505b2904be3f807}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+reflect\+\_\+point@{f\+\_\+reflect\+\_\+point}}
+\index{f\+\_\+reflect\+\_\+point@{f\+\_\+reflect\+\_\+point}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reflect\+\_\+point(\+P\+O\+I\+N\+T $\ast$point, double $\ast$p, double $\ast$n, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{f_reflect_point(POINT *point, double *p, double *n, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+reflect\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{point, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{n, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_ad8434222bb9f67da758e635121a2f634}{}\label{ftop_8c_ad8434222bb9f67da758e635121a2f634}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+reflect\+\_\+surface@{f\+\_\+reflect\+\_\+surface}}
+\index{f\+\_\+reflect\+\_\+surface@{f\+\_\+reflect\+\_\+surface}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reflect\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$surface, double $\ast$p, double $\ast$n)}{f_reflect_surface(SURFACE *surface, double *p, double *n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+reflect\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surface, }
+\item[{double $\ast$}]{p, }
+\item[{double $\ast$}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a90f7a3246890eeafbec9ff23d076e0f6}{}\label{ftop_8c_a90f7a3246890eeafbec9ff23d076e0f6}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+reverse\+\_\+curve@{f\+\_\+reverse\+\_\+curve}}
+\index{f\+\_\+reverse\+\_\+curve@{f\+\_\+reverse\+\_\+curve}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+reverse\+\_\+curve(\+C\+U\+R\+V\+E $\ast$c)}{f_reverse_curve(CURVE *c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void f\+\_\+reverse\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_abe08b751add58cc4de0754530133d920}{}\label{ftop_8c_abe08b751add58cc4de0754530133d920}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+untrack\+\_\+point@{f\+\_\+untrack\+\_\+point}}
+\index{f\+\_\+untrack\+\_\+point@{f\+\_\+untrack\+\_\+point}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+untrack\+\_\+point(\+P\+O\+I\+N\+T $\ast$p, C\+O\+M\+P\+O\+N\+E\+N\+T newcomp, Front $\ast$fr)}{f_untrack_point(POINT *p, COMPONENT newcomp, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+untrack\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{newcomp, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a9784f7f40560a8d7adcab991ffcb86ac}{}\label{ftop_8c_a9784f7f40560a8d7adcab991ffcb86ac}
+\index{ftop.\+c@{ftop.\+c}!f\+\_\+untrack\+\_\+surface@{f\+\_\+untrack\+\_\+surface}}
+\index{f\+\_\+untrack\+\_\+surface@{f\+\_\+untrack\+\_\+surface}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{f\+\_\+untrack\+\_\+surface(\+S\+U\+R\+F\+A\+C\+E $\ast$s, C\+O\+M\+P\+O\+N\+E\+N\+T newcomp, Front $\ast$fr)}{f_untrack_surface(SURFACE *s, COMPONENT newcomp, Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} f\+\_\+untrack\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{s, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{newcomp, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_af9a3aab50febdb79d9bd0c99ed0bce4f}{}\label{ftop_8c_af9a3aab50febdb79d9bd0c99ed0bce4f}
+\index{ftop.\+c@{ftop.\+c}!find\+\_\+loop@{find\+\_\+loop}}
+\index{find\+\_\+loop@{find\+\_\+loop}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{find\+\_\+loop(\+C\+U\+R\+V\+E $\ast$c, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N c\+\_\+orient, A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N ang\+\_\+dir)}{find_loop(CURVE *c, ORIENTATION c_orient, ANGLE_DIRECTION ang_dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf O\+\_\+\+C\+U\+R\+V\+E\+\_\+\+F\+A\+M\+I\+LY}$\ast$ find\+\_\+loop (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{c\+\_\+orient, }
+\item[{{\bf A\+N\+G\+L\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{ang\+\_\+dir}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_afa6928b06c7a08dbd84801eeda673abc}{}\label{ftop_8c_afa6928b06c7a08dbd84801eeda673abc}
+\index{ftop.\+c@{ftop.\+c}!intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds@{intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds}}
+\index{intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds@{intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds(\+Front $\ast$fr)}{intfc_delete_fold_back_bonds(Front *fr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} intfc\+\_\+delete\+\_\+fold\+\_\+back\+\_\+bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a4808c778e7e62855198f78c4d9f5adda}{}\label{ftop_8c_a4808c778e7e62855198f78c4d9f5adda}
+\index{ftop.\+c@{ftop.\+c}!intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds@{intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds}}
+\index{intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds@{intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds(\+Front $\ast$front)}{intfc_delete_very_short_bonds(Front *front)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void intfc\+\_\+delete\+\_\+very\+\_\+short\+\_\+bonds (
+\begin{DoxyParamCaption}
+\item[{{\bf Front} $\ast$}]{front}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a9e04d7b269188413752539b305aa6e1d}{}\label{ftop_8c_a9e04d7b269188413752539b305aa6e1d}
+\index{ftop.\+c@{ftop.\+c}!is\+\_\+stationary\+\_\+node@{is\+\_\+stationary\+\_\+node}}
+\index{is\+\_\+stationary\+\_\+node@{is\+\_\+stationary\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+stationary\+\_\+node(\+N\+O\+D\+E $\ast$node)}{is_stationary_node(NODE *node)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} is\+\_\+stationary\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a24d484a94cb1d86db52475f2c3c108a5}{}\label{ftop_8c_a24d484a94cb1d86db52475f2c3c108a5}
+\index{ftop.\+c@{ftop.\+c}!merge\+\_\+cross\+\_\+with\+\_\+node@{merge\+\_\+cross\+\_\+with\+\_\+node}}
+\index{merge\+\_\+cross\+\_\+with\+\_\+node@{merge\+\_\+cross\+\_\+with\+\_\+node}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{merge\+\_\+cross\+\_\+with\+\_\+node(\+C\+U\+R\+V\+E $\ast$, O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N, C\+R\+O\+S\+S $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, C\+U\+R\+V\+E $\ast$$\ast$)}{merge_cross_with_node(CURVE *, ORIENTATION, CROSS *, COMPONENT *, COMPONENT *, CURVE **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int merge\+\_\+cross\+\_\+with\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{{\bf O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}]{c\+\_\+orient, }
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{l\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{r\+\_\+comp, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curves}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a8ec9a8deaf0b3e4b1ad8bc6eab54a1f0}{}\label{ftop_8c_a8ec9a8deaf0b3e4b1ad8bc6eab54a1f0}
+\index{ftop.\+c@{ftop.\+c}!resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs@{resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs}}
+\index{resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs@{resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs(\+N\+O\+D\+E $\ast$, int $\ast$, Front $\ast$)}{resolve_sink_node_fold_backs(NODE *, int *, Front *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void resolve\+\_\+sink\+\_\+node\+\_\+fold\+\_\+backs (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+DE} $\ast$}]{n, }
+\item[{int $\ast$}]{found, }
+\item[{{\bf Front} $\ast$}]{fr}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a003f5c4ca7920632f020ea2d05af5bb2}{}\label{ftop_8c_a003f5c4ca7920632f020ea2d05af5bb2}
+\index{ftop.\+c@{ftop.\+c}!split\+\_\+bond\+\_\+at\+\_\+cross@{split\+\_\+bond\+\_\+at\+\_\+cross}}
+\index{split\+\_\+bond\+\_\+at\+\_\+cross@{split\+\_\+bond\+\_\+at\+\_\+cross}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{split\+\_\+bond\+\_\+at\+\_\+cross(\+C\+R\+O\+S\+S $\ast$, int, C\+U\+R\+V\+E $\ast$$\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$, double, P\+O\+I\+N\+T\+E\+R, N\+O\+D\+E $\ast$$\ast$)}{split_bond_at_cross(CROSS *, int, CURVE **, COMPONENT *, COMPONENT *, INTERFACE *, double, POINTER, NODE **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int split\+\_\+bond\+\_\+at\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{int}]{curve\+\_\+to\+\_\+split, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curves, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{l\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{r\+\_\+comp, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double}]{min\+\_\+sc\+\_\+sep, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{rp, }
+\item[{{\bf N\+O\+DE} $\ast$$\ast$}]{newn}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a0bebecff38fbabd273c6d4d5b0dc7bc2}{}\label{ftop_8c_a0bebecff38fbabd273c6d4d5b0dc7bc2}
+\index{ftop.\+c@{ftop.\+c}!split\+\_\+curves\+\_\+at\+\_\+cross@{split\+\_\+curves\+\_\+at\+\_\+cross}}
+\index{split\+\_\+curves\+\_\+at\+\_\+cross@{split\+\_\+curves\+\_\+at\+\_\+cross}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{split\+\_\+curves\+\_\+at\+\_\+cross(\+C\+R\+O\+S\+S $\ast$cr, Front $\ast$fr, N\+O\+D\+E $\ast$$\ast$newn, C\+U\+R\+V\+E $\ast$$\ast$curves1, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$ncomp1, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$pcomp1, C\+U\+R\+V\+E $\ast$$\ast$curves2, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$ncomp2, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$pcomp2, double min\+\_\+sc\+\_\+sep, P\+O\+I\+N\+T\+E\+R rp)}{split_curves_at_cross(CROSS *cr, Front *fr, NODE **newn, CURVE **curves1, COMPONENT *ncomp1, COMPONENT *pcomp1, CURVE **curves2, COMPONENT *ncomp2, COMPONENT *pcomp2, double min_sc_sep, POINTER rp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void split\+\_\+curves\+\_\+at\+\_\+cross (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+O\+SS} $\ast$}]{cr, }
+\item[{{\bf Front} $\ast$}]{fr, }
+\item[{{\bf N\+O\+DE} $\ast$$\ast$}]{newn, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curves1, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{ncomp1, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{pcomp1, }
+\item[{{\bf C\+U\+R\+VE} $\ast$$\ast$}]{curves2, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{ncomp2, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{pcomp2, }
+\item[{double}]{min\+\_\+sc\+\_\+sep, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{rp}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a484ae530701c40ad6db91454e2752377}{}\label{ftop_8c_a484ae530701c40ad6db91454e2752377}
+\index{ftop.\+c@{ftop.\+c}!synchronize\+\_\+untangle\+\_\+status@{synchronize\+\_\+untangle\+\_\+status}}
+\index{synchronize\+\_\+untangle\+\_\+status@{synchronize\+\_\+untangle\+\_\+status}!ftop.\+c@{ftop.\+c}}
+\subsubsection[{\texorpdfstring{synchronize\+\_\+untangle\+\_\+status(int status)}{synchronize_untangle_status(int status)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int synchronize\+\_\+untangle\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)}\hypertarget{ftop_8c_a1497bf4fce774e6e75fb90f2dc5a178c}{}\label{ftop_8c_a1497bf4fce774e6e75fb90f2dc5a178c}

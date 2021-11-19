@@ -1,0 +1,720 @@
+\hypertarget{imkcurve_8c}{}\section{D\+N\+S/src/intfc/imkcurve.c File Reference}
+\label{imkcurve_8c}\index{D\+N\+S/src/intfc/imkcurve.\+c@{D\+N\+S/src/intfc/imkcurve.\+c}}
+{\ttfamily \#include $<$intfc/int.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{imkcurve_8c_d4/d85/struct___e_g___c_r_x__2_d}{\+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D}
+\item 
+struct \hyperlink{imkcurve_8c_d8/dfc/struct___b_l_k___c_r_x__2_d}{\+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{imkcurve_8c_afe759d2b6c4ff043628d467079aa4539}{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}i\+\_\+make\+\_\+curve\char`\"{}
+\item 
+\#define \hyperlink{imkcurve_8c_a07637107a4454700a4840c49dcfe658d}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{imkcurve_8c_d4/d85/struct___e_g___c_r_x__2_d}{\+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D} \hyperlink{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{E\+G\+\_\+\+C\+R\+X\+\_\+2D}
+\item 
+typedef struct \hyperlink{imkcurve_8c_d8/dfc/struct___b_l_k___c_r_x__2_d}{\+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} \hyperlink{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}
+\item 
+typedef enum \hyperlink{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0f}{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US} \hyperlink{imkcurve_8c_aba63ded2bf22ea08eb6994c88a2f53d4}{B\+O\+X\+\_\+\+S\+T\+A\+T\+US}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0f}{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US} \{ \hyperlink{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa1ba920503b168d72e71575871de42c97}{W\+I\+T\+H\+I\+N\+\_\+\+B\+OX} = 1, 
+\hyperlink{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fab7e6a03555150eba084143acb7de90b4}{L\+O\+W\+E\+R\+\_\+\+O\+UT}, 
+\hyperlink{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa5be55a60eb46f36a502d6998d61cceba}{U\+P\+P\+E\+R\+\_\+\+O\+UT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{imkcurve_8c_a69bdd47637f666a4d3ce161d2247b4ba}{onfront\+\_\+block2d} (int, int, const \hyperlink{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{imkcurve_8c_a295ac3e5b12b31950fd5dcdee4b851d0}{increment\+\_\+theta} (double $\ast$, double, double, double, \hyperlink{geom_8h_d3/d31/struct_e_l_l_i_p___p_a_r_a_m_s}{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$, double $\ast$, double)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imkcurve_8c_a356e767dc4194682131e6cb7480ff849}{reset\+\_\+domain\+\_\+comp2d} (\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imkcurve_8c_a6ce0e152b98346a9794cc643c19053b9}{assign\+\_\+two\+\_\+comp\+\_\+domain2d} (double($\ast$func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imkcurve_8c_ada18499422cb3d3999f6e30d727d273f}{make\+\_\+grid\+\_\+curves} (\hyperlink{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$, const \hyperlink{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$, int $\ast$, \hyperlink{int_8h_a13b5a9ccac0e6d04386af2ef62582540}{B\+O\+ND} $\ast$$\ast$, int $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imkcurve_8c_aa3b3da5d0723e9afa7928dd18400d32b}{assign\+\_\+blk\+\_\+crx2d} (\hyperlink{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$, int, int, const \hyperlink{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} void \hyperlink{imkcurve_8c_adbd6b2b62f711d903a1ae8b27ff299a5}{connect\+\_\+adj\+\_\+blk} (\hyperlink{int_8h_a53456f4ae4e6937a6021e8fd6b0ec864}{B\+L\+K\+\_\+\+B\+O\+ND} $\ast$, \hyperlink{int_8h_a53456f4ae4e6937a6021e8fd6b0ec864}{B\+L\+K\+\_\+\+B\+O\+ND} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{imkcurve_8c_ad3b971d0e97209f8140431be23a07f21}{count\+\_\+crx\+\_\+through\+\_\+comp2d} (int $\ast$, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{imkcurve_8c_a2585d191ce833e2e0fa91eab6fedb823}{install\+\_\+grid\+\_\+crx2d} (double($\ast$func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, \hyperlink{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{imkcurve_8c_abb887877498aa123075f0d32ed0ec2bc}{construct\+\_\+comp2\+\_\+blk2d} (\hyperlink{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$, \hyperlink{int_8h_a53456f4ae4e6937a6021e8fd6b0ec864}{B\+L\+K\+\_\+\+B\+O\+ND} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$ \hyperlink{imkcurve_8c_a5bd87cfa7853e9753196383135b14d5d}{alloc\+\_\+blk\+\_\+crx2d} (\hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean})
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a1506e43ea9be685df69783bb91643abc}{init\+\_\+line\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a4cbde46433b78f219a228d0549665968}{init\+\_\+multi\+\_\+circle\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_af28276377f2f3728f63f897a7b341daa}{init\+\_\+sine\+\_\+wave\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_ae674be01d17bd38d0bbf5f6f2b39841c}{init\+\_\+test\+\_\+disk\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} double \hyperlink{imkcurve_8c_a0e5fdfda76f075971ec51132e9e92a05}{line\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{imkcurve_8c_a800ca2f8013b0e092853d598aa89ac13}{make\+\_\+elliptic\+\_\+curve} (\hyperlink{geom_8h_d3/d31/struct_e_l_l_i_p___p_a_r_a_m_s}{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$ellip, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} compin, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} compout, double \hyperlink{plotdecs_8h_ab4742bf6ccc339b8c96685b560377eb3}{space})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imkcurve_8c_a4fbce8fc3a6b39f7d7984e31a663bf74}{coords\+\_\+on\+\_\+ellips} (double $\ast$theta, double $\ast$coords, \hyperlink{geom_8h_d3/d31/struct_e_l_l_i_p___p_a_r_a_m_s}{E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$ellip)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a362586f65887837cf0f59fd3aa293549}{multi\+\_\+sine\+\_\+mode\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$ \hyperlink{imkcurve_8c_ab2f4ad5710b8e423d96301d402f33782}{make\+\_\+level\+\_\+curves} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$rgr, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} left\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} right\+\_\+comp, double($\ast$func)(\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER}, double $\ast$), \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} use\+\_\+dual\+\_\+grid, int $\ast$num\+\_\+segs)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{imkcurve_8c_a34736178c0d1f3c3e20013a69ffaf6d3}{prompt\+\_\+make\+\_\+linear\+\_\+curve} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{imkcurve_8c_a3864df5e0485c24a024975283cc40253}{prompt\+\_\+make\+\_\+elliptic\+\_\+curve} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{imkcurve_8c_af01b906aa84f88b6d474eb02d285dba6}{prompt\+\_\+make\+\_\+level\+\_\+curves} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$left\+\_\+c, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$right\+\_\+c)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a29528a6ef78a120f22506017f620a2a7}{init\+\_\+ellipse\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_abddc29cf916f8b4a14ca84ea8e9238e4}{init\+\_\+ellipse\+\_\+tilt\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a4a752ac5e1653131bba7fba52981cc9a}{init\+\_\+triangle\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a447b65b47ad5eb4aff1107d43bd0ea09}{init\+\_\+rectangle\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a99fdeb6d0a72658d665c53b3112d9ff6}{init\+\_\+cosmos\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a1af4fd167adeea5789f7fe110f40b641}{init\+\_\+taegeuk\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a0fff47a7b957bb05e1de88c220415453}{init\+\_\+wing\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} \hyperlink{imkcurve_8c_a8ed1c3d1f4c3e2de3ecd7852e5c1ebd5}{init\+\_\+propeller\+\_\+params} (\hyperlink{geom_8h_a983fdb6b46c9b99969bffa62eae7d31d}{R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$gr)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a08e99739231ba8dac8cb1edf1d50fac2}{multi\+\_\+circle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a2acc9f06cb8cd718ba10b77f0ceaba72}{ellipse\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a16da8d7b6a656684794ef5cdd61b2469}{ellipse\+\_\+tilt\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a2fc2640aab48f59ef7911aa50ed4189f}{triangle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a417de0ae20dcec261cd6b6db514e74aa}{rectangle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_af3de19019201a3917196ffad38aef39a}{cosmos\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_abd93e250b40370405e2609489013eb65}{taegeuk\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_ad4e823fdc6ebf6fce779f36eff8dc944}{wing\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a68e4b81f50d0cf55d8bb3d12746bb261}{propeller\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a09e01870a410373f991a0ff1c170c720}{slotted\+\_\+disk\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a79fe288eb546f3e05c0ab5803d4b72be}{level\+\_\+wave\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a279f4267e63403a39ccebd99b700698e}{level\+\_\+circle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+double \hyperlink{imkcurve_8c_a3d0fe2ad1f8816c6e47c652d4a535a50}{seed\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_aef403ca018c1c822473418a06beeb164}{rect\+\_\+box\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$ \hyperlink{imkcurve_8c_af19140c47959f1d88ee19b7ed0faf14d}{make\+\_\+array\+\_\+curve} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} left\+\_\+comp, \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} right\+\_\+comp, int num\+\_\+points, double $\ast$$\ast$point\+\_\+array, \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{int_8h_a6b34654f52a3095e160399255f71f328}{is\+\_\+closed\+\_\+curve})
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_a6a0fd5a75245757b68ef0a6fa822c9b8}{projectile\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_ab9a20a4679a264c4f9ac793995b7349d}{slotted\+\_\+circle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} double \hyperlink{imkcurve_8c_ad757f904d054a0d6e5eaaa568838ff60}{four\+\_\+slotted\+\_\+circle\+\_\+func} (\hyperlink{cdecs_8h_ae51a81000f343b8ec43bca1f6a723d7b}{P\+O\+I\+N\+T\+ER} func\+\_\+params, double $\ast$coords)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{\+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D@{\+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D}}\label{struct___e_g___c_r_x__2_d}
+\hypertarget{imkcurve_8c_struct___e_g___c_r_x__2_d}{}
+\subsubsection{struct \+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$\hypertarget{imkcurve_8c_a81a8c0833e6862db94112429cf620438}{}\label{imkcurve_8c_a81a8c0833e6862db94112429cf620438}
+&
+comp&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$\hypertarget{imkcurve_8c_a5da090f4d32c01e25fcfef2f2b45eec8}{}\label{imkcurve_8c_a5da090f4d32c01e25fcfef2f2b45eec8}
+&
+crx\+\_\+store&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_a362d1b401c2a7a992300bf63d3288d91}{}\label{imkcurve_8c_a362d1b401c2a7a992300bf63d3288d91}
+&
+node\+\_\+crx&
+\\
+\hline
+
+\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$\hypertarget{imkcurve_8c_a10245407945b07c707f60eef5ccdfe36}{}\label{imkcurve_8c_a10245407945b07c707f60eef5ccdfe36}
+&
+nodes&
+\\
+\hline
+
+int\hypertarget{imkcurve_8c_a046bedf61d1bb76f54e1a68370475e03}{}\label{imkcurve_8c_a046bedf61d1bb76f54e1a68370475e03}
+&
+num\+\_\+nodes&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_a90cb309f9c0217f05252e5d0ac916b1c}{}\label{imkcurve_8c_a90cb309f9c0217f05252e5d0ac916b1c}
+&
+x\+\_\+crx&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_a3c11d9fd2a4cadcf7d469fbfe67cb279}{}\label{imkcurve_8c_a3c11d9fd2a4cadcf7d469fbfe67cb279}
+&
+x\+\_\+curve\+\_\+crx&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_a88840071e4986856556f859bb20bcf4f}{}\label{imkcurve_8c_a88840071e4986856556f859bb20bcf4f}
+&
+y\+\_\+crx&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_a0ea073738721e3dd09dffdb9db638857}{}\label{imkcurve_8c_a0ea073738721e3dd09dffdb9db638857}
+&
+y\+\_\+curve\+\_\+crx&
+\\
+\hline
+
+\end{DoxyFields}
+\index{\+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D@{\+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}}\label{struct___b_l_k___c_r_x__2_d}
+\hypertarget{imkcurve_8c_struct___b_l_k___c_r_x__2_d}{}
+\subsubsection{struct \+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}
+\begin{DoxyFields}{Class Members}
+\hyperlink{int_8h_a3f146ae8fb12ab5d3c8f8f5004f399c5}{B\+L\+K\+\_\+\+I\+N\+FO} $\ast$\hypertarget{imkcurve_8c_a36dc08291194630f15a0e6bb4687c120}{}\label{imkcurve_8c_a36dc08291194630f15a0e6bb4687c120}
+&
+blk\+\_\+info&
+\\
+\hline
+
+\hyperlink{int_8h_ac45457625cd46b4046c5291c9d519d53}{B\+L\+K\+\_\+\+T\+Y\+PE}\hypertarget{imkcurve_8c_a27af2f76b039c3284c0e8be83a8fb2c0}{}\label{imkcurve_8c_a27af2f76b039c3284c0e8be83a8fb2c0}
+&
+blk\+\_\+type&
+\\
+\hline
+
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$\hypertarget{imkcurve_8c_abea079cb6697831e85578ba985582799}{}\label{imkcurve_8c_abea079cb6697831e85578ba985582799}
+&
+comp&
+\\
+\hline
+
+\hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT}\hypertarget{imkcurve_8c_a0c6658e0ae90a71411f6f7e0cdd33ebc}{}\label{imkcurve_8c_a0c6658e0ae90a71411f6f7e0cdd33ebc}
+&
+comps\mbox{[}4\mbox{]}&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$$\ast$$\ast$\hypertarget{imkcurve_8c_adae42d75c2bb4b819c0829b5301617a5}{}\label{imkcurve_8c_adae42d75c2bb4b819c0829b5301617a5}
+&
+crx&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$\hypertarget{imkcurve_8c_a3a4b1c3935ef9079d1a329b55464e288}{}\label{imkcurve_8c_a3a4b1c3935ef9079d1a329b55464e288}
+&
+crx\+\_\+store&
+\\
+\hline
+
+int $\ast$$\ast$\hypertarget{imkcurve_8c_abc47e3dce3d129de52e52db8c6125675}{}\label{imkcurve_8c_abc47e3dce3d129de52e52db8c6125675}
+&
+ix&
+\\
+\hline
+
+int $\ast$$\ast$\hypertarget{imkcurve_8c_a0060a0c67767ed1926d9b73259ca6988}{}\label{imkcurve_8c_a0060a0c67767ed1926d9b73259ca6988}
+&
+iy&
+\\
+\hline
+
+\hyperlink{int_8h_acae19963688ef448676dbbb26bbae7a9}{B\+B\+I\+\_\+\+P\+O\+I\+NT} $\ast$\hypertarget{imkcurve_8c_a09e7877afb431cc66b14fa13716d4db9}{}\label{imkcurve_8c_a09e7877afb431cc66b14fa13716d4db9}
+&
+node\+\_\+crx&
+\\
+\hline
+
+int\hypertarget{imkcurve_8c_a56c84ba79678920670fccff4508d3cb8}{}\label{imkcurve_8c_a56c84ba79678920670fccff4508d3cb8}
+&
+num\+\_\+comps&
+\\
+\hline
+
+int\hypertarget{imkcurve_8c_a86ecaa907efc414f7ae611083050f4ad}{}\label{imkcurve_8c_a86ecaa907efc414f7ae611083050f4ad}
+&
+nv\mbox{[}4\mbox{]}&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsection{Macro Definition Documentation}
+\index{imkcurve.\+c@{imkcurve.\+c}!D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG@{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG}{DEBUG_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}i\+\_\+make\+\_\+curve\char`\"{}}\hypertarget{imkcurve_8c_afe759d2b6c4ff043628d467079aa4539}{}\label{imkcurve_8c_afe759d2b6c4ff043628d467079aa4539}
+\index{imkcurve.\+c@{imkcurve.\+c}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS}{MAX_NUM_SEGMENTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+S\+E\+G\+M\+E\+N\+TS~100}\hypertarget{imkcurve_8c_a07637107a4454700a4840c49dcfe658d}{}\label{imkcurve_8c_a07637107a4454700a4840c49dcfe658d}
+
+
+\subsection{Typedef Documentation}
+\index{imkcurve.\+c@{imkcurve.\+c}!B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D@{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}}
+\index{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D@{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}{BLK_CRX_2D}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} {\bf B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D}}\hypertarget{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}{}\label{imkcurve_8c_a1cfd40b202e2b755058d5f1960e36838}
+\index{imkcurve.\+c@{imkcurve.\+c}!B\+O\+X\+\_\+\+S\+T\+A\+T\+US@{B\+O\+X\+\_\+\+S\+T\+A\+T\+US}}
+\index{B\+O\+X\+\_\+\+S\+T\+A\+T\+US@{B\+O\+X\+\_\+\+S\+T\+A\+T\+US}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{B\+O\+X\+\_\+\+S\+T\+A\+T\+US}{BOX_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US} {\bf B\+O\+X\+\_\+\+S\+T\+A\+T\+US}}\hypertarget{imkcurve_8c_aba63ded2bf22ea08eb6994c88a2f53d4}{}\label{imkcurve_8c_aba63ded2bf22ea08eb6994c88a2f53d4}
+\index{imkcurve.\+c@{imkcurve.\+c}!E\+G\+\_\+\+C\+R\+X\+\_\+2D@{E\+G\+\_\+\+C\+R\+X\+\_\+2D}}
+\index{E\+G\+\_\+\+C\+R\+X\+\_\+2D@{E\+G\+\_\+\+C\+R\+X\+\_\+2D}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{E\+G\+\_\+\+C\+R\+X\+\_\+2D}{EG_CRX_2D}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+E\+G\+\_\+\+C\+R\+X\+\_\+2D} {\bf E\+G\+\_\+\+C\+R\+X\+\_\+2D}}\hypertarget{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}{}\label{imkcurve_8c_a423223d9ecb1914a418d8c0b09202ea6}
+
+
+\subsection{Enumeration Type Documentation}
+\index{imkcurve.\+c@{imkcurve.\+c}!\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US@{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US}}
+\index{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US@{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US}{_BOX_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+B\+O\+X\+\_\+\+S\+T\+A\+T\+US}}\hypertarget{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0f}{}\label{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+I\+T\+H\+I\+N\+\_\+\+B\+OX@{W\+I\+T\+H\+I\+N\+\_\+\+B\+OX}!imkcurve.\+c@{imkcurve.\+c}}\index{imkcurve.\+c@{imkcurve.\+c}!W\+I\+T\+H\+I\+N\+\_\+\+B\+OX@{W\+I\+T\+H\+I\+N\+\_\+\+B\+OX}}\item[{\em 
+W\+I\+T\+H\+I\+N\+\_\+\+B\+OX\hypertarget{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa1ba920503b168d72e71575871de42c97}{}\label{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa1ba920503b168d72e71575871de42c97}
+}]\index{L\+O\+W\+E\+R\+\_\+\+O\+UT@{L\+O\+W\+E\+R\+\_\+\+O\+UT}!imkcurve.\+c@{imkcurve.\+c}}\index{imkcurve.\+c@{imkcurve.\+c}!L\+O\+W\+E\+R\+\_\+\+O\+UT@{L\+O\+W\+E\+R\+\_\+\+O\+UT}}\item[{\em 
+L\+O\+W\+E\+R\+\_\+\+O\+UT\hypertarget{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fab7e6a03555150eba084143acb7de90b4}{}\label{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fab7e6a03555150eba084143acb7de90b4}
+}]\index{U\+P\+P\+E\+R\+\_\+\+O\+UT@{U\+P\+P\+E\+R\+\_\+\+O\+UT}!imkcurve.\+c@{imkcurve.\+c}}\index{imkcurve.\+c@{imkcurve.\+c}!U\+P\+P\+E\+R\+\_\+\+O\+UT@{U\+P\+P\+E\+R\+\_\+\+O\+UT}}\item[{\em 
+U\+P\+P\+E\+R\+\_\+\+O\+UT\hypertarget{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa5be55a60eb46f36a502d6998d61cceba}{}\label{imkcurve_8c_a181d03ac4ab9c19a52d0d0907106fb0fa5be55a60eb46f36a502d6998d61cceba}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{imkcurve.\+c@{imkcurve.\+c}!alloc\+\_\+blk\+\_\+crx2d@{alloc\+\_\+blk\+\_\+crx2d}}
+\index{alloc\+\_\+blk\+\_\+crx2d@{alloc\+\_\+blk\+\_\+crx2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{alloc\+\_\+blk\+\_\+crx2d(boolean)}{alloc_blk_crx2d(boolean)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$ alloc\+\_\+blk\+\_\+crx2d (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{alloc\+\_\+\+B\+B\+I\+\_\+\+P\+O\+I\+NT}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a5bd87cfa7853e9753196383135b14d5d}{}\label{imkcurve_8c_a5bd87cfa7853e9753196383135b14d5d}
+\index{imkcurve.\+c@{imkcurve.\+c}!assign\+\_\+blk\+\_\+crx2d@{assign\+\_\+blk\+\_\+crx2d}}
+\index{assign\+\_\+blk\+\_\+crx2d@{assign\+\_\+blk\+\_\+crx2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+blk\+\_\+crx2d(\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$, int, int, const E\+G\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$)}{assign_blk_crx2d(BLK_CRX_2D *, int, int, const EG_CRX_2D *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+blk\+\_\+crx2d (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{blk\+\_\+crx, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{const {\bf E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{eg\+\_\+crx}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_aa3b3da5d0723e9afa7928dd18400d32b}{}\label{imkcurve_8c_aa3b3da5d0723e9afa7928dd18400d32b}
+\index{imkcurve.\+c@{imkcurve.\+c}!assign\+\_\+two\+\_\+comp\+\_\+domain2d@{assign\+\_\+two\+\_\+comp\+\_\+domain2d}}
+\index{assign\+\_\+two\+\_\+comp\+\_\+domain2d@{assign\+\_\+two\+\_\+comp\+\_\+domain2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{assign\+\_\+two\+\_\+comp\+\_\+domain2d(double($\ast$func)(\+P\+O\+I\+N\+T\+E\+R, double $\ast$), P\+O\+I\+N\+T\+E\+R, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$$\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T, C\+O\+M\+P\+O\+N\+E\+N\+T)}{assign_two_comp_domain2d(double(*func)(POINTER, double *), POINTER, COMPONENT **, RECT_GRID *, COMPONENT, COMPONENT)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void assign\+\_\+two\+\_\+comp\+\_\+domain2d (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER}, double $\ast$)}]{func, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$}]{comp, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{left\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{right\+\_\+comp}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a6ce0e152b98346a9794cc643c19053b9}{}\label{imkcurve_8c_a6ce0e152b98346a9794cc643c19053b9}
+\index{imkcurve.\+c@{imkcurve.\+c}!connect\+\_\+adj\+\_\+blk@{connect\+\_\+adj\+\_\+blk}}
+\index{connect\+\_\+adj\+\_\+blk@{connect\+\_\+adj\+\_\+blk}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{connect\+\_\+adj\+\_\+blk(\+B\+L\+K\+\_\+\+B\+O\+N\+D $\ast$, B\+L\+K\+\_\+\+B\+O\+N\+D $\ast$)}{connect_adj_blk(BLK_BOND *, BLK_BOND *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void connect\+\_\+adj\+\_\+blk (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+L\+K\+\_\+\+B\+O\+ND} $\ast$}]{bm1, }
+\item[{{\bf B\+L\+K\+\_\+\+B\+O\+ND} $\ast$}]{bm2}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_adbd6b2b62f711d903a1ae8b27ff299a5}{}\label{imkcurve_8c_adbd6b2b62f711d903a1ae8b27ff299a5}
+\index{imkcurve.\+c@{imkcurve.\+c}!construct\+\_\+comp2\+\_\+blk2d@{construct\+\_\+comp2\+\_\+blk2d}}
+\index{construct\+\_\+comp2\+\_\+blk2d@{construct\+\_\+comp2\+\_\+blk2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{construct\+\_\+comp2\+\_\+blk2d(\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$, B\+L\+K\+\_\+\+B\+O\+N\+D $\ast$)}{construct_comp2_blk2d(BLK_CRX_2D *, BLK_BOND *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int construct\+\_\+comp2\+\_\+blk2d (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{blk\+\_\+crx, }
+\item[{{\bf B\+L\+K\+\_\+\+B\+O\+ND} $\ast$}]{blk\+\_\+mem}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_abb887877498aa123075f0d32ed0ec2bc}{}\label{imkcurve_8c_abb887877498aa123075f0d32ed0ec2bc}
+\index{imkcurve.\+c@{imkcurve.\+c}!coords\+\_\+on\+\_\+ellips@{coords\+\_\+on\+\_\+ellips}}
+\index{coords\+\_\+on\+\_\+ellips@{coords\+\_\+on\+\_\+ellips}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{coords\+\_\+on\+\_\+ellips(double $\ast$theta, double $\ast$coords, E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+M\+S $\ast$ellip)}{coords_on_ellips(double *theta, double *coords, ELLIP_PARAMS *ellip)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void coords\+\_\+on\+\_\+ellips (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{theta, }
+\item[{double $\ast$}]{coords, }
+\item[{{\bf E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{ellip}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a4fbce8fc3a6b39f7d7984e31a663bf74}{}\label{imkcurve_8c_a4fbce8fc3a6b39f7d7984e31a663bf74}
+\index{imkcurve.\+c@{imkcurve.\+c}!cosmos\+\_\+func@{cosmos\+\_\+func}}
+\index{cosmos\+\_\+func@{cosmos\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{cosmos\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{cosmos_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double cosmos\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_af3de19019201a3917196ffad38aef39a}{}\label{imkcurve_8c_af3de19019201a3917196ffad38aef39a}
+\index{imkcurve.\+c@{imkcurve.\+c}!count\+\_\+crx\+\_\+through\+\_\+comp2d@{count\+\_\+crx\+\_\+through\+\_\+comp2d}}
+\index{count\+\_\+crx\+\_\+through\+\_\+comp2d@{count\+\_\+crx\+\_\+through\+\_\+comp2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{count\+\_\+crx\+\_\+through\+\_\+comp2d(int $\ast$, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$$\ast$)}{count_crx_through_comp2d(int *, COMPONENT **)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int count\+\_\+crx\+\_\+through\+\_\+comp2d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ad3b971d0e97209f8140431be23a07f21}{}\label{imkcurve_8c_ad3b971d0e97209f8140431be23a07f21}
+\index{imkcurve.\+c@{imkcurve.\+c}!ellipse\+\_\+func@{ellipse\+\_\+func}}
+\index{ellipse\+\_\+func@{ellipse\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{ellipse\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{ellipse_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double ellipse\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a2acc9f06cb8cd718ba10b77f0ceaba72}{}\label{imkcurve_8c_a2acc9f06cb8cd718ba10b77f0ceaba72}
+\index{imkcurve.\+c@{imkcurve.\+c}!ellipse\+\_\+tilt\+\_\+func@{ellipse\+\_\+tilt\+\_\+func}}
+\index{ellipse\+\_\+tilt\+\_\+func@{ellipse\+\_\+tilt\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{ellipse\+\_\+tilt\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{ellipse_tilt_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double ellipse\+\_\+tilt\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a16da8d7b6a656684794ef5cdd61b2469}{}\label{imkcurve_8c_a16da8d7b6a656684794ef5cdd61b2469}
+\index{imkcurve.\+c@{imkcurve.\+c}!four\+\_\+slotted\+\_\+circle\+\_\+func@{four\+\_\+slotted\+\_\+circle\+\_\+func}}
+\index{four\+\_\+slotted\+\_\+circle\+\_\+func@{four\+\_\+slotted\+\_\+circle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{four\+\_\+slotted\+\_\+circle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{four_slotted_circle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double four\+\_\+slotted\+\_\+circle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ad757f904d054a0d6e5eaaa568838ff60}{}\label{imkcurve_8c_ad757f904d054a0d6e5eaaa568838ff60}
+\index{imkcurve.\+c@{imkcurve.\+c}!increment\+\_\+theta@{increment\+\_\+theta}}
+\index{increment\+\_\+theta@{increment\+\_\+theta}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{increment\+\_\+theta(double $\ast$, double, double, double, E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+M\+S $\ast$, double $\ast$, double)}{increment_theta(double *, double, double, double, ELLIP_PARAMS *, double *, double)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} increment\+\_\+theta (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{theta, }
+\item[{double}]{theta\+\_\+s, }
+\item[{double}]{theta\+\_\+e, }
+\item[{double}]{sgn, }
+\item[{{\bf E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{ellip, }
+\item[{double $\ast$}]{h, }
+\item[{double}]{space}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a295ac3e5b12b31950fd5dcdee4b851d0}{}\label{imkcurve_8c_a295ac3e5b12b31950fd5dcdee4b851d0}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+cosmos\+\_\+params@{init\+\_\+cosmos\+\_\+params}}
+\index{init\+\_\+cosmos\+\_\+params@{init\+\_\+cosmos\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+cosmos\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_cosmos_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+cosmos\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a99fdeb6d0a72658d665c53b3112d9ff6}{}\label{imkcurve_8c_a99fdeb6d0a72658d665c53b3112d9ff6}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+ellipse\+\_\+params@{init\+\_\+ellipse\+\_\+params}}
+\index{init\+\_\+ellipse\+\_\+params@{init\+\_\+ellipse\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+ellipse\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_ellipse_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+ellipse\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a29528a6ef78a120f22506017f620a2a7}{}\label{imkcurve_8c_a29528a6ef78a120f22506017f620a2a7}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+ellipse\+\_\+tilt\+\_\+params@{init\+\_\+ellipse\+\_\+tilt\+\_\+params}}
+\index{init\+\_\+ellipse\+\_\+tilt\+\_\+params@{init\+\_\+ellipse\+\_\+tilt\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+ellipse\+\_\+tilt\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_ellipse_tilt_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+ellipse\+\_\+tilt\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_abddc29cf916f8b4a14ca84ea8e9238e4}{}\label{imkcurve_8c_abddc29cf916f8b4a14ca84ea8e9238e4}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+line\+\_\+params@{init\+\_\+line\+\_\+params}}
+\index{init\+\_\+line\+\_\+params@{init\+\_\+line\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+line\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{init_line_params(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+line\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a1506e43ea9be685df69783bb91643abc}{}\label{imkcurve_8c_a1506e43ea9be685df69783bb91643abc}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+multi\+\_\+circle\+\_\+params@{init\+\_\+multi\+\_\+circle\+\_\+params}}
+\index{init\+\_\+multi\+\_\+circle\+\_\+params@{init\+\_\+multi\+\_\+circle\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+multi\+\_\+circle\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{init_multi_circle_params(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+multi\+\_\+circle\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a4cbde46433b78f219a228d0549665968}{}\label{imkcurve_8c_a4cbde46433b78f219a228d0549665968}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+propeller\+\_\+params@{init\+\_\+propeller\+\_\+params}}
+\index{init\+\_\+propeller\+\_\+params@{init\+\_\+propeller\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+propeller\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_propeller_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+propeller\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a8ed1c3d1f4c3e2de3ecd7852e5c1ebd5}{}\label{imkcurve_8c_a8ed1c3d1f4c3e2de3ecd7852e5c1ebd5}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+rectangle\+\_\+params@{init\+\_\+rectangle\+\_\+params}}
+\index{init\+\_\+rectangle\+\_\+params@{init\+\_\+rectangle\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+rectangle\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_rectangle_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+rectangle\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a447b65b47ad5eb4aff1107d43bd0ea09}{}\label{imkcurve_8c_a447b65b47ad5eb4aff1107d43bd0ea09}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+sine\+\_\+wave\+\_\+params@{init\+\_\+sine\+\_\+wave\+\_\+params}}
+\index{init\+\_\+sine\+\_\+wave\+\_\+params@{init\+\_\+sine\+\_\+wave\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+sine\+\_\+wave\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{init_sine_wave_params(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+sine\+\_\+wave\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_af28276377f2f3728f63f897a7b341daa}{}\label{imkcurve_8c_af28276377f2f3728f63f897a7b341daa}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+taegeuk\+\_\+params@{init\+\_\+taegeuk\+\_\+params}}
+\index{init\+\_\+taegeuk\+\_\+params@{init\+\_\+taegeuk\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+taegeuk\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_taegeuk_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+taegeuk\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a1af4fd167adeea5789f7fe110f40b641}{}\label{imkcurve_8c_a1af4fd167adeea5789f7fe110f40b641}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+test\+\_\+disk\+\_\+params@{init\+\_\+test\+\_\+disk\+\_\+params}}
+\index{init\+\_\+test\+\_\+disk\+\_\+params@{init\+\_\+test\+\_\+disk\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+test\+\_\+disk\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{init_test_disk_params(RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+test\+\_\+disk\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ae674be01d17bd38d0bbf5f6f2b39841c}{}\label{imkcurve_8c_ae674be01d17bd38d0bbf5f6f2b39841c}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+triangle\+\_\+params@{init\+\_\+triangle\+\_\+params}}
+\index{init\+\_\+triangle\+\_\+params@{init\+\_\+triangle\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+triangle\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_triangle_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+triangle\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a4a752ac5e1653131bba7fba52981cc9a}{}\label{imkcurve_8c_a4a752ac5e1653131bba7fba52981cc9a}
+\index{imkcurve.\+c@{imkcurve.\+c}!init\+\_\+wing\+\_\+params@{init\+\_\+wing\+\_\+params}}
+\index{init\+\_\+wing\+\_\+params@{init\+\_\+wing\+\_\+params}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+wing\+\_\+params(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{init_wing_params(RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf P\+O\+I\+N\+T\+ER} init\+\_\+wing\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a0fff47a7b957bb05e1de88c220415453}{}\label{imkcurve_8c_a0fff47a7b957bb05e1de88c220415453}
+\index{imkcurve.\+c@{imkcurve.\+c}!install\+\_\+grid\+\_\+crx2d@{install\+\_\+grid\+\_\+crx2d}}
+\index{install\+\_\+grid\+\_\+crx2d@{install\+\_\+grid\+\_\+crx2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{install\+\_\+grid\+\_\+crx2d(double($\ast$func)(\+P\+O\+I\+N\+T\+E\+R, double $\ast$), P\+O\+I\+N\+T\+E\+R, E\+G\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{install_grid_crx2d(double(*func)(POINTER, double *), POINTER, EG_CRX_2D *, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int install\+\_\+grid\+\_\+crx2d (
+\begin{DoxyParamCaption}
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER}, double $\ast$)}]{func, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{{\bf E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{eg\+\_\+crx, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a2585d191ce833e2e0fa91eab6fedb823}{}\label{imkcurve_8c_a2585d191ce833e2e0fa91eab6fedb823}
+\index{imkcurve.\+c@{imkcurve.\+c}!level\+\_\+circle\+\_\+func@{level\+\_\+circle\+\_\+func}}
+\index{level\+\_\+circle\+\_\+func@{level\+\_\+circle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{level\+\_\+circle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{level_circle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double level\+\_\+circle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a279f4267e63403a39ccebd99b700698e}{}\label{imkcurve_8c_a279f4267e63403a39ccebd99b700698e}
+\index{imkcurve.\+c@{imkcurve.\+c}!level\+\_\+wave\+\_\+func@{level\+\_\+wave\+\_\+func}}
+\index{level\+\_\+wave\+\_\+func@{level\+\_\+wave\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{level\+\_\+wave\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{level_wave_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double level\+\_\+wave\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a79fe288eb546f3e05c0ab5803d4b72be}{}\label{imkcurve_8c_a79fe288eb546f3e05c0ab5803d4b72be}
+\index{imkcurve.\+c@{imkcurve.\+c}!line\+\_\+func@{line\+\_\+func}}
+\index{line\+\_\+func@{line\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{line\+\_\+func(\+P\+O\+I\+N\+T\+E\+R, double $\ast$)}{line_func(POINTER, double *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} double line\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a0e5fdfda76f075971ec51132e9e92a05}{}\label{imkcurve_8c_a0e5fdfda76f075971ec51132e9e92a05}
+\index{imkcurve.\+c@{imkcurve.\+c}!make\+\_\+array\+\_\+curve@{make\+\_\+array\+\_\+curve}}
+\index{make\+\_\+array\+\_\+curve@{make\+\_\+array\+\_\+curve}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+array\+\_\+curve(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+O\+M\+P\+O\+N\+E\+N\+T left\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T right\+\_\+comp, int num\+\_\+points, double $\ast$$\ast$point\+\_\+array, boolean is\+\_\+closed\+\_\+curve)}{make_array_curve(INTERFACE *intfc, COMPONENT left_comp, COMPONENT right_comp, int num_points, double **point_array, boolean is_closed_curve)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ make\+\_\+array\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{left\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{right\+\_\+comp, }
+\item[{int}]{num\+\_\+points, }
+\item[{double $\ast$$\ast$}]{point\+\_\+array, }
+\item[{{\bf boolean}}]{is\+\_\+closed\+\_\+curve}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_af19140c47959f1d88ee19b7ed0faf14d}{}\label{imkcurve_8c_af19140c47959f1d88ee19b7ed0faf14d}
+\index{imkcurve.\+c@{imkcurve.\+c}!make\+\_\+elliptic\+\_\+curve@{make\+\_\+elliptic\+\_\+curve}}
+\index{make\+\_\+elliptic\+\_\+curve@{make\+\_\+elliptic\+\_\+curve}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+elliptic\+\_\+curve(\+E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+M\+S $\ast$ellip, C\+O\+M\+P\+O\+N\+E\+N\+T compin, C\+O\+M\+P\+O\+N\+E\+N\+T compout, double space)}{make_elliptic_curve(ELLIP_PARAMS *ellip, COMPONENT compin, COMPONENT compout, double space)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ make\+\_\+elliptic\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+L\+L\+I\+P\+\_\+\+P\+A\+R\+A\+MS} $\ast$}]{ellip, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{compin, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{compout, }
+\item[{double}]{space}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a800ca2f8013b0e092853d598aa89ac13}{}\label{imkcurve_8c_a800ca2f8013b0e092853d598aa89ac13}
+\index{imkcurve.\+c@{imkcurve.\+c}!make\+\_\+grid\+\_\+curves@{make\+\_\+grid\+\_\+curves}}
+\index{make\+\_\+grid\+\_\+curves@{make\+\_\+grid\+\_\+curves}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+grid\+\_\+curves(\+B\+L\+K\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$, const E\+G\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$, int $\ast$, B\+O\+N\+D $\ast$$\ast$, int $\ast$)}{make_grid_curves(BLK_CRX_2D *, const EG_CRX_2D *, int *, BOND **, int *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void make\+\_\+grid\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+L\+K\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{blk\+\_\+crx, }
+\item[{const {\bf E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{eg\+\_\+crx, }
+\item[{int $\ast$}]{gmax, }
+\item[{{\bf B\+O\+ND} $\ast$$\ast$}]{first, }
+\item[{int $\ast$}]{num\+\_\+segs}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ada18499422cb3d3999f6e30d727d273f}{}\label{imkcurve_8c_ada18499422cb3d3999f6e30d727d273f}
+\index{imkcurve.\+c@{imkcurve.\+c}!make\+\_\+level\+\_\+curves@{make\+\_\+level\+\_\+curves}}
+\index{make\+\_\+level\+\_\+curves@{make\+\_\+level\+\_\+curves}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{make\+\_\+level\+\_\+curves(\+R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$rgr, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, C\+O\+M\+P\+O\+N\+E\+N\+T left\+\_\+comp, C\+O\+M\+P\+O\+N\+E\+N\+T right\+\_\+comp, double($\ast$func)(\+P\+O\+I\+N\+T\+E\+R, double $\ast$), P\+O\+I\+N\+T\+E\+R func\+\_\+params, boolean use\+\_\+dual\+\_\+grid, int $\ast$num\+\_\+segs)}{make_level_curves(RECT_GRID *rgr, INTERFACE *intfc, COMPONENT left_comp, COMPONENT right_comp, double(*func)(POINTER, double *), POINTER func_params, boolean use_dual_grid, int *num_segs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$$\ast$ make\+\_\+level\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{rgr, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{left\+\_\+comp, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT}}]{right\+\_\+comp, }
+\item[{double($\ast$)({\bf P\+O\+I\+N\+T\+ER}, double $\ast$)}]{func, }
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{{\bf boolean}}]{use\+\_\+dual\+\_\+grid, }
+\item[{int $\ast$}]{num\+\_\+segs}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ab2f4ad5710b8e423d96301d402f33782}{}\label{imkcurve_8c_ab2f4ad5710b8e423d96301d402f33782}
+\index{imkcurve.\+c@{imkcurve.\+c}!multi\+\_\+circle\+\_\+func@{multi\+\_\+circle\+\_\+func}}
+\index{multi\+\_\+circle\+\_\+func@{multi\+\_\+circle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{multi\+\_\+circle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{multi_circle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double multi\+\_\+circle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a08e99739231ba8dac8cb1edf1d50fac2}{}\label{imkcurve_8c_a08e99739231ba8dac8cb1edf1d50fac2}
+\index{imkcurve.\+c@{imkcurve.\+c}!multi\+\_\+sine\+\_\+mode\+\_\+func@{multi\+\_\+sine\+\_\+mode\+\_\+func}}
+\index{multi\+\_\+sine\+\_\+mode\+\_\+func@{multi\+\_\+sine\+\_\+mode\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{multi\+\_\+sine\+\_\+mode\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{multi_sine_mode_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double multi\+\_\+sine\+\_\+mode\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a362586f65887837cf0f59fd3aa293549}{}\label{imkcurve_8c_a362586f65887837cf0f59fd3aa293549}
+\index{imkcurve.\+c@{imkcurve.\+c}!onfront\+\_\+block2d@{onfront\+\_\+block2d}}
+\index{onfront\+\_\+block2d@{onfront\+\_\+block2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{onfront\+\_\+block2d(int, int, const E\+G\+\_\+\+C\+R\+X\+\_\+2\+D $\ast$)}{onfront_block2d(int, int, const EG_CRX_2D *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} {\bf boolean} onfront\+\_\+block2d (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{const {\bf E\+G\+\_\+\+C\+R\+X\+\_\+2D} $\ast$}]{eg\+\_\+crx}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a69bdd47637f666a4d3ce161d2247b4ba}{}\label{imkcurve_8c_a69bdd47637f666a4d3ce161d2247b4ba}
+\index{imkcurve.\+c@{imkcurve.\+c}!projectile\+\_\+func@{projectile\+\_\+func}}
+\index{projectile\+\_\+func@{projectile\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{projectile\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{projectile_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double projectile\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a6a0fd5a75245757b68ef0a6fa822c9b8}{}\label{imkcurve_8c_a6a0fd5a75245757b68ef0a6fa822c9b8}
+\index{imkcurve.\+c@{imkcurve.\+c}!prompt\+\_\+make\+\_\+elliptic\+\_\+curve@{prompt\+\_\+make\+\_\+elliptic\+\_\+curve}}
+\index{prompt\+\_\+make\+\_\+elliptic\+\_\+curve@{prompt\+\_\+make\+\_\+elliptic\+\_\+curve}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+make\+\_\+elliptic\+\_\+curve(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{prompt_make_elliptic_curve(INTERFACE *intfc, RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ prompt\+\_\+make\+\_\+elliptic\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a3864df5e0485c24a024975283cc40253}{}\label{imkcurve_8c_a3864df5e0485c24a024975283cc40253}
+\index{imkcurve.\+c@{imkcurve.\+c}!prompt\+\_\+make\+\_\+level\+\_\+curves@{prompt\+\_\+make\+\_\+level\+\_\+curves}}
+\index{prompt\+\_\+make\+\_\+level\+\_\+curves@{prompt\+\_\+make\+\_\+level\+\_\+curves}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+make\+\_\+level\+\_\+curves(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$left\+\_\+c, C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$right\+\_\+c)}{prompt_make_level_curves(INTERFACE *intfc, RECT_GRID *gr, COMPONENT *left_c, COMPONENT *right_c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void prompt\+\_\+make\+\_\+level\+\_\+curves (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{left\+\_\+c, }
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$}]{right\+\_\+c}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_af01b906aa84f88b6d474eb02d285dba6}{}\label{imkcurve_8c_af01b906aa84f88b6d474eb02d285dba6}
+\index{imkcurve.\+c@{imkcurve.\+c}!prompt\+\_\+make\+\_\+linear\+\_\+curve@{prompt\+\_\+make\+\_\+linear\+\_\+curve}}
+\index{prompt\+\_\+make\+\_\+linear\+\_\+curve@{prompt\+\_\+make\+\_\+linear\+\_\+curve}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{prompt\+\_\+make\+\_\+linear\+\_\+curve(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$gr)}{prompt_make_linear_curve(INTERFACE *intfc, RECT_GRID *gr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+U\+R\+VE}$\ast$ prompt\+\_\+make\+\_\+linear\+\_\+curve (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a34736178c0d1f3c3e20013a69ffaf6d3}{}\label{imkcurve_8c_a34736178c0d1f3c3e20013a69ffaf6d3}
+\index{imkcurve.\+c@{imkcurve.\+c}!propeller\+\_\+func@{propeller\+\_\+func}}
+\index{propeller\+\_\+func@{propeller\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{propeller\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{propeller_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double propeller\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a68e4b81f50d0cf55d8bb3d12746bb261}{}\label{imkcurve_8c_a68e4b81f50d0cf55d8bb3d12746bb261}
+\index{imkcurve.\+c@{imkcurve.\+c}!rect\+\_\+box\+\_\+func@{rect\+\_\+box\+\_\+func}}
+\index{rect\+\_\+box\+\_\+func@{rect\+\_\+box\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{rect\+\_\+box\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{rect_box_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double rect\+\_\+box\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_aef403ca018c1c822473418a06beeb164}{}\label{imkcurve_8c_aef403ca018c1c822473418a06beeb164}
+\index{imkcurve.\+c@{imkcurve.\+c}!rectangle\+\_\+func@{rectangle\+\_\+func}}
+\index{rectangle\+\_\+func@{rectangle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{rectangle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{rectangle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double rectangle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a417de0ae20dcec261cd6b6db514e74aa}{}\label{imkcurve_8c_a417de0ae20dcec261cd6b6db514e74aa}
+\index{imkcurve.\+c@{imkcurve.\+c}!reset\+\_\+domain\+\_\+comp2d@{reset\+\_\+domain\+\_\+comp2d}}
+\index{reset\+\_\+domain\+\_\+comp2d@{reset\+\_\+domain\+\_\+comp2d}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{reset\+\_\+domain\+\_\+comp2d(\+C\+O\+M\+P\+O\+N\+E\+N\+T $\ast$$\ast$, R\+E\+C\+T\+\_\+\+G\+R\+I\+D $\ast$)}{reset_domain_comp2d(COMPONENT **, RECT_GRID *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} void reset\+\_\+domain\+\_\+comp2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+O\+M\+P\+O\+N\+E\+NT} $\ast$$\ast$}]{comp, }
+\item[{{\bf R\+E\+C\+T\+\_\+\+G\+R\+ID} $\ast$}]{gr}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a356e767dc4194682131e6cb7480ff849}{}\label{imkcurve_8c_a356e767dc4194682131e6cb7480ff849}
+\index{imkcurve.\+c@{imkcurve.\+c}!seed\+\_\+func@{seed\+\_\+func}}
+\index{seed\+\_\+func@{seed\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{seed\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{seed_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}double seed\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a3d0fe2ad1f8816c6e47c652d4a535a50}{}\label{imkcurve_8c_a3d0fe2ad1f8816c6e47c652d4a535a50}
+\index{imkcurve.\+c@{imkcurve.\+c}!slotted\+\_\+circle\+\_\+func@{slotted\+\_\+circle\+\_\+func}}
+\index{slotted\+\_\+circle\+\_\+func@{slotted\+\_\+circle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{slotted\+\_\+circle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{slotted_circle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double slotted\+\_\+circle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ab9a20a4679a264c4f9ac793995b7349d}{}\label{imkcurve_8c_ab9a20a4679a264c4f9ac793995b7349d}
+\index{imkcurve.\+c@{imkcurve.\+c}!slotted\+\_\+disk\+\_\+func@{slotted\+\_\+disk\+\_\+func}}
+\index{slotted\+\_\+disk\+\_\+func@{slotted\+\_\+disk\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{slotted\+\_\+disk\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{slotted_disk_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+M\+P\+O\+RT} double slotted\+\_\+disk\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a09e01870a410373f991a0ff1c170c720}{}\label{imkcurve_8c_a09e01870a410373f991a0ff1c170c720}
+\index{imkcurve.\+c@{imkcurve.\+c}!taegeuk\+\_\+func@{taegeuk\+\_\+func}}
+\index{taegeuk\+\_\+func@{taegeuk\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{taegeuk\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{taegeuk_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double taegeuk\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_abd93e250b40370405e2609489013eb65}{}\label{imkcurve_8c_abd93e250b40370405e2609489013eb65}
+\index{imkcurve.\+c@{imkcurve.\+c}!triangle\+\_\+func@{triangle\+\_\+func}}
+\index{triangle\+\_\+func@{triangle\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{triangle\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{triangle_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double triangle\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_a2fc2640aab48f59ef7911aa50ed4189f}{}\label{imkcurve_8c_a2fc2640aab48f59ef7911aa50ed4189f}
+\index{imkcurve.\+c@{imkcurve.\+c}!wing\+\_\+func@{wing\+\_\+func}}
+\index{wing\+\_\+func@{wing\+\_\+func}!imkcurve.\+c@{imkcurve.\+c}}
+\subsubsection[{\texorpdfstring{wing\+\_\+func(\+P\+O\+I\+N\+T\+E\+R func\+\_\+params, double $\ast$coords)}{wing_func(POINTER func_params, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} double wing\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+N\+T\+ER}}]{func\+\_\+params, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{imkcurve_8c_ad4e823fdc6ebf6fce779f36eff8dc944}{}\label{imkcurve_8c_ad4e823fdc6ebf6fce779f36eff8dc944}

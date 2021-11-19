@@ -1,0 +1,181 @@
+\hypertarget{map_8c}{}\section{D\+N\+S/src/intfc/map.c File Reference}
+\label{map_8c}\index{D\+N\+S/src/intfc/map.\+c@{D\+N\+S/src/intfc/map.\+c}}
+{\ttfamily \#include $<$intfc/iloc.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{map_8c_a2d1650506cb06c7ea97838f2539495af}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG}~10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{map_8c_a4983e60e9296b217fab8078bd92cba0a}{crossings\+\_\+in\+\_\+direction1d} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$$\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{map_8c_ae8d49dbbb3a17e9e982fb90a1fd8b24c}{crossings\+\_\+in\+\_\+direction2d} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$$\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a3758dd5d300a594312c95bc393378df0}{L\+O\+C\+AL} int \hyperlink{map_8c_ab81080fcde32378ca9eba18f5e9d6956}{crossings\+\_\+in\+\_\+direction3d} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$$\ast$, int $\ast$, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$)
+\item 
+\hyperlink{cdecs_8h_a0a3ee3d43067d2a2ad22c155985dc533}{L\+I\+B\+\_\+\+L\+O\+C\+AL} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{map_8c_a0ed17a87f3d4aecb8bbc186c4e266761}{is\+\_\+interior\+\_\+vertex} (\hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$t, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$p, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$t\+\_\+begin, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_acdfb50316234a0aed4d7d0e927c47a62}{Array\+Of\+Curve\+Points} (\hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$c, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_a54210a1d408b111872201936d0b7a9a8}{Array\+Of\+Intfc\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$coords)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_af9a5474601e9ed969d847b4153a3a615}{Array\+Of\+Surfaces} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$$\ast$surfaces)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_a69c3fb28a9d89d44a8106b28eb6e5668}{Array\+Of\+Surf\+Tris\+\_\+\+FT} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surface, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_aa628d85abb9c9e47ad242716a6e9d37b}{Array\+Of\+Surf\+Tris} (\hyperlink{int_8h_a1520d8870b5eafd76bd401aecb121ffd}{S\+U\+R\+F\+A\+CE} $\ast$surface, double $\ast$coords, int $\ast$vertices\+\_\+index)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_a935da761916cd173f134f11616acc770}{Array\+Of\+Intfc\+Tris\+\_\+\+FT} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, \hyperlink{int_8h_a7622658c6e0bfd01663f692ffb85b8e6}{T\+RI} $\ast$$\ast$tris)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} void \hyperlink{map_8c_a2875a73cae5d0bd334ea8a874e14a196}{Array\+Of\+Intfc\+Tris} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc, double $\ast$coords, int $\ast$vertex\+\_\+indices)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{map_8c_a8211644567c14d0164c55722e73b3ef4}{Grid\+Seg\+Crossing} (\hyperlink{int_8h_a78251f3b4d080216a8e511b7dc1ad97c}{C\+R\+X\+I\+NG} $\ast$$\ast$crx\+\_\+list, int $\ast$icoords, \hyperlink{int_8h_aa7cc507beba6455174c0996f89fdc8c3}{G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON} dir, \hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} int \hyperlink{map_8c_a393dd07aa5316118df78721cad7c68d7}{Num\+Of\+Interior\+Points} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{int_8h_a2bb7be12ca59ea6443c8757df0a7c278}{C\+O\+M\+P\+O\+N\+E\+NT} $\ast$ \hyperlink{map_8c_a0c034ee90c1472718eb7cb4f669b54ef}{Grid\+Intfc\+Comp} (\hyperlink{int_8h_a58cf562d0d320a608294b7310ea167dc}{I\+N\+T\+E\+R\+F\+A\+CE} $\ast$grid\+\_\+intfc)
+\item 
+\hyperlink{cdecs_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT} \hyperlink{cdecs_8h_ad048433382a936258fb49e2ec4f148e1}{boolean} \hyperlink{map_8c_a0b98ff963f7630ab3b898736b1cbba76}{Intfc\+Get\+Point\+Chain} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pc, \hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$$\ast$pts, int num\+\_\+pts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{map.\+c@{map.\+c}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG}{MAX_NUM_CRXINGS_ON_SEG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+R\+X\+I\+N\+G\+S\+\_\+\+O\+N\+\_\+\+S\+EG~10}\hypertarget{map_8c_a2d1650506cb06c7ea97838f2539495af}{}\label{map_8c_a2d1650506cb06c7ea97838f2539495af}
+
+
+\subsection{Function Documentation}
+\index{map.\+c@{map.\+c}!Array\+Of\+Curve\+Points@{Array\+Of\+Curve\+Points}}
+\index{Array\+Of\+Curve\+Points@{Array\+Of\+Curve\+Points}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Curve\+Points(\+C\+U\+R\+V\+E $\ast$c, double $\ast$coords)}{ArrayOfCurvePoints(CURVE *c, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Curve\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{c, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_acdfb50316234a0aed4d7d0e927c47a62}{}\label{map_8c_acdfb50316234a0aed4d7d0e927c47a62}
+\index{map.\+c@{map.\+c}!Array\+Of\+Intfc\+Points@{Array\+Of\+Intfc\+Points}}
+\index{Array\+Of\+Intfc\+Points@{Array\+Of\+Intfc\+Points}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Intfc\+Points(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$coords)}{ArrayOfIntfcPoints(INTERFACE *intfc, double *coords)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Intfc\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{coords}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a54210a1d408b111872201936d0b7a9a8}{}\label{map_8c_a54210a1d408b111872201936d0b7a9a8}
+\index{map.\+c@{map.\+c}!Array\+Of\+Intfc\+Tris@{Array\+Of\+Intfc\+Tris}}
+\index{Array\+Of\+Intfc\+Tris@{Array\+Of\+Intfc\+Tris}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Intfc\+Tris(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, double $\ast$coords, int $\ast$vertex\+\_\+indices)}{ArrayOfIntfcTris(INTERFACE *intfc, double *coords, int *vertex_indices)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Intfc\+Tris (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{double $\ast$}]{coords, }
+\item[{int $\ast$}]{vertex\+\_\+indices}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a2875a73cae5d0bd334ea8a874e14a196}{}\label{map_8c_a2875a73cae5d0bd334ea8a874e14a196}
+\index{map.\+c@{map.\+c}!Array\+Of\+Intfc\+Tris\+\_\+\+FT@{Array\+Of\+Intfc\+Tris\+\_\+\+FT}}
+\index{Array\+Of\+Intfc\+Tris\+\_\+\+FT@{Array\+Of\+Intfc\+Tris\+\_\+\+FT}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Intfc\+Tris\+\_\+\+F\+T(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, T\+R\+I $\ast$$\ast$tris)}{ArrayOfIntfcTris_FT(INTERFACE *intfc, TRI **tris)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Intfc\+Tris\+\_\+\+FT (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a935da761916cd173f134f11616acc770}{}\label{map_8c_a935da761916cd173f134f11616acc770}
+\index{map.\+c@{map.\+c}!Array\+Of\+Surfaces@{Array\+Of\+Surfaces}}
+\index{Array\+Of\+Surfaces@{Array\+Of\+Surfaces}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Surfaces(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc, S\+U\+R\+F\+A\+C\+E $\ast$$\ast$surfaces)}{ArrayOfSurfaces(INTERFACE *intfc, SURFACE **surfaces)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Surfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc, }
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$$\ast$}]{surfaces}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_af9a5474601e9ed969d847b4153a3a615}{}\label{map_8c_af9a5474601e9ed969d847b4153a3a615}
+\index{map.\+c@{map.\+c}!Array\+Of\+Surf\+Tris@{Array\+Of\+Surf\+Tris}}
+\index{Array\+Of\+Surf\+Tris@{Array\+Of\+Surf\+Tris}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Surf\+Tris(\+S\+U\+R\+F\+A\+C\+E $\ast$surface, double $\ast$coords, int $\ast$vertices\+\_\+index)}{ArrayOfSurfTris(SURFACE *surface, double *coords, int *vertices_index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Surf\+Tris (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surface, }
+\item[{double $\ast$}]{coords, }
+\item[{int $\ast$}]{vertices\+\_\+index}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_aa628d85abb9c9e47ad242716a6e9d37b}{}\label{map_8c_aa628d85abb9c9e47ad242716a6e9d37b}
+\index{map.\+c@{map.\+c}!Array\+Of\+Surf\+Tris\+\_\+\+FT@{Array\+Of\+Surf\+Tris\+\_\+\+FT}}
+\index{Array\+Of\+Surf\+Tris\+\_\+\+FT@{Array\+Of\+Surf\+Tris\+\_\+\+FT}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Array\+Of\+Surf\+Tris\+\_\+\+F\+T(\+S\+U\+R\+F\+A\+C\+E $\ast$surface, T\+R\+I $\ast$$\ast$tris)}{ArrayOfSurfTris_FT(SURFACE *surface, TRI **tris)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} void Array\+Of\+Surf\+Tris\+\_\+\+FT (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+U\+R\+F\+A\+CE} $\ast$}]{surface, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{tris}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a69c3fb28a9d89d44a8106b28eb6e5668}{}\label{map_8c_a69c3fb28a9d89d44a8106b28eb6e5668}
+\index{map.\+c@{map.\+c}!crossings\+\_\+in\+\_\+direction1d@{crossings\+\_\+in\+\_\+direction1d}}
+\index{crossings\+\_\+in\+\_\+direction1d@{crossings\+\_\+in\+\_\+direction1d}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{crossings\+\_\+in\+\_\+direction1d(\+C\+R\+X\+I\+N\+G $\ast$$\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{crossings_in_direction1d(CRXING **, int *, GRID_DIRECTION, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crossings\+\_\+in\+\_\+direction1d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$$\ast$}]{crx\+\_\+list, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a4983e60e9296b217fab8078bd92cba0a}{}\label{map_8c_a4983e60e9296b217fab8078bd92cba0a}
+\index{map.\+c@{map.\+c}!crossings\+\_\+in\+\_\+direction2d@{crossings\+\_\+in\+\_\+direction2d}}
+\index{crossings\+\_\+in\+\_\+direction2d@{crossings\+\_\+in\+\_\+direction2d}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{crossings\+\_\+in\+\_\+direction2d(\+C\+R\+X\+I\+N\+G $\ast$$\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{crossings_in_direction2d(CRXING **, int *, GRID_DIRECTION, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crossings\+\_\+in\+\_\+direction2d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$$\ast$}]{crx\+\_\+list, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_ae8d49dbbb3a17e9e982fb90a1fd8b24c}{}\label{map_8c_ae8d49dbbb3a17e9e982fb90a1fd8b24c}
+\index{map.\+c@{map.\+c}!crossings\+\_\+in\+\_\+direction3d@{crossings\+\_\+in\+\_\+direction3d}}
+\index{crossings\+\_\+in\+\_\+direction3d@{crossings\+\_\+in\+\_\+direction3d}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{crossings\+\_\+in\+\_\+direction3d(\+C\+R\+X\+I\+N\+G $\ast$$\ast$, int $\ast$, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$)}{crossings_in_direction3d(CRXING **, int *, GRID_DIRECTION, INTERFACE *)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+C\+AL} int crossings\+\_\+in\+\_\+direction3d (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$$\ast$}]{crx\+\_\+list, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_ab81080fcde32378ca9eba18f5e9d6956}{}\label{map_8c_ab81080fcde32378ca9eba18f5e9d6956}
+\index{map.\+c@{map.\+c}!Grid\+Intfc\+Comp@{Grid\+Intfc\+Comp}}
+\index{Grid\+Intfc\+Comp@{Grid\+Intfc\+Comp}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Grid\+Intfc\+Comp(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{GridIntfcComp(INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf C\+O\+M\+P\+O\+N\+E\+NT}$\ast$ Grid\+Intfc\+Comp (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a0c034ee90c1472718eb7cb4f669b54ef}{}\label{map_8c_a0c034ee90c1472718eb7cb4f669b54ef}
+\index{map.\+c@{map.\+c}!Grid\+Seg\+Crossing@{Grid\+Seg\+Crossing}}
+\index{Grid\+Seg\+Crossing@{Grid\+Seg\+Crossing}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Grid\+Seg\+Crossing(\+C\+R\+X\+I\+N\+G $\ast$$\ast$crx\+\_\+list, int $\ast$icoords, G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N dir, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$grid\+\_\+intfc)}{GridSegCrossing(CRXING **crx_list, int *icoords, GRID_DIRECTION dir, INTERFACE *grid_intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int Grid\+Seg\+Crossing (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+R\+X\+I\+NG} $\ast$$\ast$}]{crx\+\_\+list, }
+\item[{int $\ast$}]{icoords, }
+\item[{{\bf G\+R\+I\+D\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}]{dir, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{grid\+\_\+intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a8211644567c14d0164c55722e73b3ef4}{}\label{map_8c_a8211644567c14d0164c55722e73b3ef4}
+\index{map.\+c@{map.\+c}!Intfc\+Get\+Point\+Chain@{Intfc\+Get\+Point\+Chain}}
+\index{Intfc\+Get\+Point\+Chain@{Intfc\+Get\+Point\+Chain}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Intfc\+Get\+Point\+Chain(\+P\+O\+I\+N\+T $\ast$pc, P\+O\+I\+N\+T $\ast$$\ast$pts, int num\+\_\+pts)}{IntfcGetPointChain(POINT *pc, POINT **pts, int num_pts)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} {\bf boolean} Intfc\+Get\+Point\+Chain (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pc, }
+\item[{{\bf P\+O\+I\+NT} $\ast$$\ast$}]{pts, }
+\item[{int}]{num\+\_\+pts}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a0b98ff963f7630ab3b898736b1cbba76}{}\label{map_8c_a0b98ff963f7630ab3b898736b1cbba76}
+\index{map.\+c@{map.\+c}!is\+\_\+interior\+\_\+vertex@{is\+\_\+interior\+\_\+vertex}}
+\index{is\+\_\+interior\+\_\+vertex@{is\+\_\+interior\+\_\+vertex}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+interior\+\_\+vertex(\+T\+R\+I $\ast$t, P\+O\+I\+N\+T $\ast$p, T\+R\+I $\ast$$\ast$t\+\_\+begin, I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{is_interior_vertex(TRI *t, POINT *p, TRI **t_begin, INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+B\+\_\+\+L\+O\+C\+AL} {\bf boolean} is\+\_\+interior\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+RI} $\ast$}]{t, }
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{p, }
+\item[{{\bf T\+RI} $\ast$$\ast$}]{t\+\_\+begin, }
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a0ed17a87f3d4aecb8bbc186c4e266761}{}\label{map_8c_a0ed17a87f3d4aecb8bbc186c4e266761}
+\index{map.\+c@{map.\+c}!Num\+Of\+Interior\+Points@{Num\+Of\+Interior\+Points}}
+\index{Num\+Of\+Interior\+Points@{Num\+Of\+Interior\+Points}!map.\+c@{map.\+c}}
+\subsubsection[{\texorpdfstring{Num\+Of\+Interior\+Points(\+I\+N\+T\+E\+R\+F\+A\+C\+E $\ast$intfc)}{NumOfInteriorPoints(INTERFACE *intfc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+P\+O\+RT} int Num\+Of\+Interior\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T\+E\+R\+F\+A\+CE} $\ast$}]{intfc}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8c_a393dd07aa5316118df78721cad7c68d7}{}\label{map_8c_a393dd07aa5316118df78721cad7c68d7}

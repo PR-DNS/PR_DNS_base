@@ -1,0 +1,53 @@
+\hypertarget{fnamedebug_8h}{}\section{D\+N\+S/src/util/fnamedebug.h File Reference}
+\label{fnamedebug_8h}\index{D\+N\+S/src/util/fnamedebug.\+h@{D\+N\+S/src/util/fnamedebug.\+h}}
+{\ttfamily \#include $<$cdecs.\+h$>$}\\*
+{\ttfamily \#include $<$navdecs.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fnamedebug_8h_a75f6b2d46d1615ac2a25e663cecf6608}{Check\+\_\+return}(func,  fname)
+\item 
+\#define \hyperlink{fnamedebug_8h_adde4f9bfc38fae7b5126cf0714770ab9}{D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER}(fname)
+\item 
+\#define \hyperlink{fnamedebug_8h_a6238cdc28d2299d75037c3ee5d99275c}{D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE}(fname)
+\item 
+\#define \hyperlink{fnamedebug_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+UG}~\hyperlink{cdecs_8h_a9c5d49ad0707338514c8507f234afaa8a0d077f5b932ce05e5b9f30c6087a2f31}{NO}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{fnamedebug.\+h@{fnamedebug.\+h}!Check\+\_\+return@{Check\+\_\+return}}
+\index{Check\+\_\+return@{Check\+\_\+return}!fnamedebug.\+h@{fnamedebug.\+h}}
+\subsubsection[{\texorpdfstring{Check\+\_\+return}{Check_return}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Check\+\_\+return(
+\begin{DoxyParamCaption}
+\item[{}]{func, }
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{fnamedebug_8h_a75f6b2d46d1615ac2a25e663cecf6608}{}\label{fnamedebug_8h_a75f6b2d46d1615ac2a25e663cecf6608}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                \(\backslash\)
+        if (! (func))                        \(\backslash\)
+        \{                                    \(\backslash\)
+            (void) printf(\textcolor{stringliteral}{"ERROR in %s(), %s failed\(\backslash\)n"},#fname,#func);\(\backslash\)
+            clean\_up(\hyperlink{cdecs_8h_afccd240f973cf154952fb917c9209719a2fd6f336d08340583bd620a7f5694c90}{ERROR});                        \(\backslash\)
+        \}                                    \(\backslash\)
+    \}
+\end{DoxyCode}
+\index{fnamedebug.\+h@{fnamedebug.\+h}!D\+E\+B\+UG@{D\+E\+B\+UG}}
+\index{D\+E\+B\+UG@{D\+E\+B\+UG}!fnamedebug.\+h@{fnamedebug.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+UG}{DEBUG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+UG~{\bf NO}}\hypertarget{fnamedebug_8h_ad72dbcf6d0153db1b8d8a58001feed83}{}\label{fnamedebug_8h_ad72dbcf6d0153db1b8d8a58001feed83}
+\index{fnamedebug.\+h@{fnamedebug.\+h}!D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER@{D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER}}
+\index{D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER@{D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER}!fnamedebug.\+h@{fnamedebug.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER}{DEBUG_ENTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+E\+N\+T\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{fnamedebug_8h_adde4f9bfc38fae7b5126cf0714770ab9}{}\label{fnamedebug_8h_adde4f9bfc38fae7b5126cf0714770ab9}
+\index{fnamedebug.\+h@{fnamedebug.\+h}!D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE@{D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE}}
+\index{D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE@{D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE}!fnamedebug.\+h@{fnamedebug.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE}{DEBUG_LEAVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+L\+E\+A\+VE(
+\begin{DoxyParamCaption}
+\item[{}]{fname}
+\end{DoxyParamCaption}
+)}\hypertarget{fnamedebug_8h_a6238cdc28d2299d75037c3ee5d99275c}{}\label{fnamedebug_8h_a6238cdc28d2299d75037c3ee5d99275c}

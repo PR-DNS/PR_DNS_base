@@ -1,0 +1,53 @@
+\hypertarget{group___c_u_r_v_e}{}\section{Curve Functions}
+\label{group___c_u_r_v_e}\index{Curve Functions@{Curve Functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} void \hyperlink{group___c_u_r_v_e_gaf5511b0669f7ce4f454eb2d266327c06}{I\+\_\+\+Move\+Node\+To\+Point} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em For closed curve, move the node to the given point. Do nothing if curve is not a closed one or the point is not on curve. \end{DoxyCompactList}\item 
+\hyperlink{cdecs_8h_a773175d74e73776d69c3e538f17de1ee}{I\+M\+P\+O\+RT} \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$$\ast$ \hyperlink{group___c_u_r_v_e_gaa31257a485f0828bb60bfef19eeaec49}{I\+\_\+\+Split\+Curve} (\hyperlink{int_8h_a3a87c5c9d0146e30a4bf720f701e5a63}{P\+O\+I\+NT} $\ast$pt, \hyperlink{int_8h_a4c1c272bef898dbaa20b055af85cd685}{C\+U\+R\+VE} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em Split a curve into two curves at the given point pt, return two curves as a pointer array. Return N\+U\+LL if the point is not on the input curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+/$\ast$! 
+
+\subsection{Function Documentation}
+\index{Curve Functions@{Curve Functions}!I\+\_\+\+Move\+Node\+To\+Point@{I\+\_\+\+Move\+Node\+To\+Point}}
+\index{I\+\_\+\+Move\+Node\+To\+Point@{I\+\_\+\+Move\+Node\+To\+Point}!Curve Functions@{Curve Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Move\+Node\+To\+Point(\+P\+O\+I\+N\+T $\ast$pt, C\+U\+R\+V\+E $\ast$curve)}{I_MoveNodeToPoint(POINT *pt, CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+\_\+\+Move\+Node\+To\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pt, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___c_u_r_v_e_gaf5511b0669f7ce4f454eb2d266327c06}{}\label{group___c_u_r_v_e_gaf5511b0669f7ce4f454eb2d266327c06}
+
+
+For closed curve, move the node to the given point. Do nothing if curve is not a closed one or the point is not on curve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & {\bfseries in} Address of point the closed node to be moved to \\
+\hline
+{\em curve} & {\bfseries inout} Address of curve to be operated on \\
+\hline
+\end{DoxyParams}
+\index{Curve Functions@{Curve Functions}!I\+\_\+\+Split\+Curve@{I\+\_\+\+Split\+Curve}}
+\index{I\+\_\+\+Split\+Curve@{I\+\_\+\+Split\+Curve}!Curve Functions@{Curve Functions}}
+\subsubsection[{\texorpdfstring{I\+\_\+\+Split\+Curve(\+P\+O\+I\+N\+T $\ast$pt, C\+U\+R\+V\+E $\ast$curve)}{I_SplitCurve(POINT *pt, CURVE *curve)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+U\+R\+VE} $\ast$$\ast$ I\+\_\+\+Split\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT} $\ast$}]{pt, }
+\item[{{\bf C\+U\+R\+VE} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}\hypertarget{group___c_u_r_v_e_gaa31257a485f0828bb60bfef19eeaec49}{}\label{group___c_u_r_v_e_gaa31257a485f0828bb60bfef19eeaec49}
+
+
+Split a curve into two curves at the given point pt, return two curves as a pointer array. Return N\+U\+LL if the point is not on the input curve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & {\bfseries in} Address of point the curve is to split at \\
+\hline
+{\em curve} & {\bfseries inout} Address of curve to be operated on \\
+\hline
+\end{DoxyParams}
