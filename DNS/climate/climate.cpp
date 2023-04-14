@@ -30,7 +30,8 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 *	Copyright 1999 by The University at Stony Brook, All rights reserved.
 *
 */
-
+#include <petscdm.h>
+#include <petscdmda.h>
 #include "../iFluid/iFluid.h"
 #include "../iFluid/ifluid_basic.h"
 #include "climate.h"
@@ -98,6 +99,8 @@ int main(int argc, char **argv)
     printf("zhangtao: %d in file %s\n", __LINE__, __FILE__);
     FT_ReadSpaceDomain(in_name,&f_basic);
     printf("zhangtao: %d in file %s\n", __LINE__, __FILE__);
+    printf("restart_state_name=%s\n", restart_state_name);
+    printf("restart_name=%s\n", restart_name);
 
 	FT_StartUp(&front,&f_basic);
 	FT_InitDebug(in_name);
@@ -239,6 +242,9 @@ static  void melting_flow_driver(
 	    l_cartesian->solve(front->dt); /*compute pressure for vapor equation*/
 
 	    v_cartesian->solve(front->dt); /*solve vapor equation*/
+        l_cartesian->printFrontInteriorStates(out_name);
+
+
 	    printf("passed solving vapor and temperature\n\n");
 	    /*For entrainment problem, droplets in area with supersat > 0*/
 	    /*This step must be after one step of v_catesian solver*/
@@ -276,7 +282,8 @@ static  void melting_flow_driver(
 
 	FT_TimeControlFilter(front);
 	/*Record the initial condition*/
-	/*v_cartesian->recordField(out_name,"velocity");*/
+	//v_cartesian->recordField(field->vel,"velocity");
+    v_cartesian->output_vel();
     if (eqn_params->prob_type == PARTICLE_TRACKING)
 	    v_cartesian->output();
 
@@ -285,6 +292,7 @@ static  void melting_flow_driver(
         gettimeofday(&tv1, NULL);
 	    FT_Propagate(front);
 	    l_cartesian->solve(front->dt);
+        gettimeofday(&tv2, NULL);
 	    printf("Passed solving NS equations\n");
 	    v_cartesian->recordTKE();
 
@@ -304,11 +312,13 @@ static  void melting_flow_driver(
                  }
 	    }
 
+        v_cartesian->output_vel();
+
 	    FT_AddTimeStepToCounter(front);
 	    FT_SetTimeStep(front);
 	    front->dt = FT_Min(front->dt,CFL*l_cartesian->max_dt);
 
-        gettimeofday(&tv2, NULL);
+        //gettimeofday(&tv2, NULL);
         runtime=(tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec);
         printf("\nruntime = %10.2f  time = %10.9f   step = %7d   dt = %10.9f\n",
                         runtime,front->time,front->step,front->dt);
