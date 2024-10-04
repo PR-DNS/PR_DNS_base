@@ -302,10 +302,17 @@ static  void melting_flow_driver(
     for (;;)
     {
         gettimeofday(&tv1, NULL);
+            printf("Before FT_Propagate()\n");
+            fflush(stdout);
 	    FT_Propagate(front);
+            printf("Before l_carterian->solve()\n");
+            fflush(stdout);
 	    l_cartesian->solve(front->dt);
 	    printf("Passed solving NS equations\n");
-	    v_cartesian->recordTKE();
+            fflush(stdout);
+	    //v_cartesian->recordTKE();
+            //printf("After v_carterian->recordTKE()\n");
+            //fflush(stdout);
 
 	    if (eqn_params->if_volume_force && front->time < 1.0)
 	    {
@@ -349,6 +356,8 @@ static  void melting_flow_driver(
         printf("\nruntime = %10.2f,   total runtime = %10.2f,  time = %10.9f   step = %7d   dt = %10.9f\n\n\n",
                         runtime, totaltime, front->time,front->step,front->dt);
         fflush(stdout);
+        printf("After fflush()\n");
+        fflush(stdout);
 	    
         if (FT_IsSaveTime(front))
 	    {
@@ -379,6 +388,8 @@ static  void melting_flow_driver(
 
 	    FT_TimeControlFilter(front);
         }
+        printf("End of the loop\n");
+        fflush(stdout);
 }       /* end melting_flow_driver */
 
 static void read_movie_options(

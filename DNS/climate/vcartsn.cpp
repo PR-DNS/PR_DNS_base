@@ -1066,30 +1066,30 @@ void VCARTESIAN::computeAdvectionCN(COMPONENT sub_comp,double* Temp,const double
 // 		computeSourceTerm();
 void VCARTESIAN::solve(double dt)
 {
-	if (debugging("trace")) printf("Entering solve()\n");
+	if (debugging("trace")) printf("Entering solve()\n"); fflush(stdout);
 	m_dt = dt;
 	start_clock("solve");
 
 	setDomain();
-        if (debugging("trace")) printf("Passing setDomain()\n");
+        if (debugging("trace")) printf("Passing setDomain()\n"); fflush(stdout);
 
 	setComponent();
-	if (debugging("trace")) printf("Passing setComponent()\n");
+	if (debugging("trace")) printf("Passing setComponent()\n"); fflush(stdout);
 	
 	computeSource();
-	if (debugging("trace")) printf("Passing computeSource()\n");
+	if (debugging("trace")) printf("Passing computeSource()\n"); fflush(stdout);
 	
 	computeAdvection();
-	if (debugging("trace")) printf("Passing computeAdvection()\n");
+	if (debugging("trace")) printf("Passing computeAdvection()\n"); fflush(stdout);
 	
 	computeSupersat();
-	if (debugging("trace")) printf("Passing computeSupersat()\n");
+	if (debugging("trace")) printf("Passing computeSupersat()\n"); fflush(stdout);
 
 	setAdvectionDt();
-	if (debugging("trace")) printf("Passing setAdvectionDt()\n");
+	if (debugging("trace")) printf("Passing setAdvectionDt()\n"); fflush(stdout);
 	stop_clock("solve");
 
-	if (debugging("trace")) printf("Leaving solve()\n");
+	if (debugging("trace")) printf("Leaving solve()\n"); fflush(stdout);
 }
 
 void VCARTESIAN::computeSupersat()
@@ -2920,6 +2920,7 @@ void VCARTESIAN::recordPDF(char *outname, const char *varname)
 
 void VCARTESIAN::recordTKE()
 {
+
         double **vel = field->vel;
         int i,j,k,count,index,l;
         static boolean first = YES;
@@ -2939,6 +2940,7 @@ void VCARTESIAN::recordTKE()
 	    else
                 file = fopen(fname,"a");
 	}
+
 	
 	E = 0.0;
 	count = 0;
@@ -2970,6 +2972,8 @@ void VCARTESIAN::recordTKE()
 		printf("Unknown dim = %d\n",dim);
                 clean_up(ERROR);
 	}
+
+
 	/*MPI communications*/
 	pp_gsync();
 	ReduceBuff[0] = E;
@@ -2980,8 +2984,10 @@ void VCARTESIAN::recordTKE()
 	E = E/count;
         if (pp_mynode() == 0)
 	{
-	    fprintf(file,"%f  %20.19f\n",front->time,E);
-	    fclose(file);
+            if(file != 0) {
+	        fprintf(file,"%f  %20.19f\n",front->time,E);
+	        fclose(file);
+            }
 	}
 	first = NO;
 }

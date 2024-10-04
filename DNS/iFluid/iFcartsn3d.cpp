@@ -423,19 +423,16 @@ printf("%d %d %d\n",i,j,k);
 }
 clean_up(0);
 */
-	if (debugging("trace"))
-	    printf("Passed setComponent()\n");
+	if (debugging("trace")) printf("Passed setComponent()\n"); fflush(stdout);
 
 	paintAllGridPoint(TO_SOLVE);
 	setGlobalIndex();
-	if (debugging("trace"))
-	    printf("Passed setGlobalIndex()\n");
+	if (debugging("trace")) printf("Passed setGlobalIndex()\n"); fflush(stdout);
 
 	start_clock("setSmoothedProperties");
 	setSmoothedProperties();
 	stop_clock("setSmoothedProperties");
-	if (debugging("trace"))
-	    printf("Passed setSmoothedProperties()\n");
+	if (debugging("trace")) printf("Passed setSmoothedProperties()\n"); fflush(stdout);
 	
 	// 1) solve for intermediate velocity
 	start_clock("computeAdvection");
@@ -448,6 +445,9 @@ clean_up(0);
 	    (void) printf("max speed occured at (%d %d %d)\n",icrds_max[0],
 				icrds_max[1],icrds_max[2]);
 	}
+        
+        printf("l_cartesian->solve() - 1\n"); fflush(stdout);
+
 	if (debugging("sample_velocity"))
 	    sampleVelocity();
 	
@@ -464,26 +464,35 @@ clean_up(0);
 	if (debugging("sample_velocity"))
 	    sampleVelocity();
 
+
+        printf("l_cartesian->solve() - 2\n"); fflush(stdout);
+
+
 	// 2) projection step
 	accum_dt += m_dt;
 	if (accum_dt >= min_dt)
 	{
+            printf("l_cartesian->solve() - 2 - 1\n"); fflush(stdout);
 	    start_clock("computeProjection");
 	    computeProjection();
 	    stop_clock("computeProjection");
+            printf("l_cartesian->solve() - 2 - 2\n"); fflush(stdout);
 
 	    start_clock("computePressure");
 	    computePressure();
 	    stop_clock("computePressure");
-	    if (debugging("trace"))
-		printf("min_pressure = %f  max_pressure = %f\n",
-			min_pressure,max_pressure);
+            printf("l_cartesian->solve() - 2 - 3\n"); fflush(stdout);
+	    if (debugging("trace")) printf("min_pressure = %f  max_pressure = %f\n", min_pressure,max_pressure); fflush(stdout);
 
 	    start_clock("computeNewVelocity");
 	    computeNewVelocity();
 	    stop_clock("computeNewVelocity");
 	    accum_dt = 0.0;
+            printf("l_cartesian->solve() - 2 - 4\n"); fflush(stdout);
 	}
+
+
+        printf("l_cartesian->solve() - 3\n"); fflush(stdout);
 
 	if (debugging("step_size"))
 	{
@@ -495,15 +504,27 @@ clean_up(0);
 	if (debugging("sample_velocity"))
 	    sampleVelocity();
 
+
+        printf("l_cartesian->solve() - 4\n"); fflush(stdout);
+
 	start_clock("copyMeshStates");
 	copyMeshStates();
 	stop_clock("copyMeshStates");
 
+
+        printf("l_cartesian->solve() - 5\n"); fflush(stdout);
+
+
         if(iFparams->if_ref_pres == YES)
             setReferencePressure();
 
+        printf("l_cartesian->solve() - 6\n"); fflush(stdout);
+
+
 	setAdvectionDt();
 	stop_clock("solve");
+
+        printf("l_cartesian->solve() - 7\n"); fflush(stdout);
 }	/* end solve */
 
 
@@ -1578,8 +1599,7 @@ void Incompress_Solver_Smooth_3D_Cartesian::computeProjectionSimple(void)
 	double min_phi,max_phi;
 	int icrds_max[MAXD],icrds_min[MAXD];
 
-	if (debugging("trace"))
-	    (void) printf("Entering computeProjectionSimple()\n");
+	if (debugging("trace")) printf("Entering computeProjectionSimple()\n"); fflush(stdout);
 
 	for (l = 0; l < dim; ++l)
         {
@@ -1720,8 +1740,7 @@ void Incompress_Solver_Smooth_3D_Cartesian::computeProjectionSimple(void)
 			max_phi,icrds_max[0],icrds_max[1],icrds_max[2]);
 	    (void) printf("diff_phi = %f\n",max_phi-min_phi);
 	}
-	if (debugging("trace"))
-	    (void) printf("Leaving computeProjectionSimple()\n");
+	if (debugging("trace")) printf("Leaving computeProjectionSimple()\n"); fflush(stdout);
 }	/* end computeProjectionSimple */
 
 void Incompress_Solver_Smooth_3D_Cartesian::solveTest(const char *msg)
