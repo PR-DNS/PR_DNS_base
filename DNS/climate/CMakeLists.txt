@@ -1,4 +1,4 @@
-file(GLOB climate_source "*.cpp" "*.h")
+file(GLOB climate_source "*.cpp" "*.h" "*.cu")
 
 #create excutable
 add_executable(climate ${climate_source})
@@ -40,4 +40,4 @@ target_include_directories(climate PUBLIC
 
 #link libraries
 target_link_libraries(climate frontier solver ifluid ${FFTW3_LIBRARY} ${MPI_C_LIBRARIES})
-
+target_link_libraries(climate Heffte::Heffte)

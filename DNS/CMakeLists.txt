@@ -1,11 +1,29 @@
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 3.20.0)
 project (climate C CXX)
+##project (climate C CXX CUDA)
 
-set (CMAKE_C_FLAGS)
-set (CMAKE_CXX_FLAGS "-fopenmp -ljpeg")
+set (CMAKE_C_FLAGS "-Wno-implicit-function-declaration")
+set (CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -fopenmp -D__HDF5__ ") 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp -D__HDF5__ ") 
+##set (CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -D__NO_RND__")      # uncomment to disable random numbers for reproducibility
+##set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__NO_RND__")      # uncomment to disable random numbers for reproducibility
+set (CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -D__PRDNS_TIMER__") # uncomment to enable detailed timings
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__PRDNS_TIMER__") # uncomment to enable detailed timings
+#set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ljpeg")
+##set (CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -D__CUDA__ -I/hpcgpfs01/software/openmpi/4.1.1-gcc9.3.0/include -L/hpcgpfs01/software/openmpi/4.1.1-gcc9.3.0/lib -lmpi -O3 \
+##-gencode=arch=compute_60,code=sm_60 \
+##-gencode=arch=compute_61,code=sm_61 \
+##-gencode=arch=compute_70,code=sm_70 \
+##-gencode=arch=compute_75,code=sm_75 \
+##-gencode=arch=compute_80,code=sm_80 \
+##-gencode=arch=compute_86,code=sm_86 \
+##")
+set (CMAKE_CUDA_FLAGS "-I/opt/cray/pe/mpich/8.1.25/ofi/gnu/9.1/include/ -L/opt/cray/pe/mpich/8.1.25/ofi/gnu/9.1/lib -lmpi")
+##set (CMAKE_CUDA_FLAGS "-I/global/homes/a/atif/packages/openmpi-4.1.1/include -L/global/homes/a/atif/packages/openmpi-4.1.1/lib -lmpi -O3")
+##set (CMAKE_CUDA_FLAGS "-I/global/common/software/nersc/pe/mpich/4.1.1/gnu/include -L/global/common/software/nersc/pe/mpich/4.1.1/gnu/lib -lmpi")
 
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -rdynamic")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -rdynamic")
+#set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g ")
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g ")
 
 
 #detect dependencies
@@ -16,6 +34,9 @@ find_package (MPI REQUIRED)
 find_package (HDF4 QUIET)
 
 find_package (GD QUIET)
+
+set (heFFTe_PATH "/global/homes/a/atif/packages/heffte-2.4.0/")
+find_package(Heffte 2.4.0 REQUIRED PATHS ${heFFTe_PATH})
 
 if (MPI_FOUND) 
     MESSAGE(STATUS "Found MPI: ${MPI_LIBRARIES}")
@@ -37,6 +58,12 @@ if (GD_FOUND)
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__GD__")
 else ()
     MESSAGE(WARNING "GD cannot be found. Set GD_DIR if gd animation is needed. Build continues ...")
+endif()
+
+if (Heffte_FFTW_FOUND)
+    MESSAGE(STATUS "Found heFFTe ${heFFTe_PATH}")
+else ()
+    MESSAGE(WARNING "heFFTe cannot be found. Build continues ...")
 endif()
 
 #dependencies detection finished
@@ -73,6 +100,11 @@ endif()
 if (HDF4_FOUND)
 	list( APPEND external_include_dir ${HDF4_INCLUDE_DIR})
 	list( APPEND external_lib_dir ${HDF4_LIBRARIES})
+endif()
+
+if (Heffte_FFTW_FOUND)
+	list( APPEND external_include_dir "${heFFTe_PATH}/include")
+	list( APPEND external_lib_dir "${heFFTe_PATH}/lib")
 endif()
 
 # Recurse into the following subdirectories

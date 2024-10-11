@@ -23,10 +23,14 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ******************************************************************************/
 
-
 #include <iFluid.h>
 #include "climate.h"
 #include <time.h>
+#include <sys/time.h>
+#include <iostream>
+#include <sched.h>
+#include <omp.h>
+#include "heffte.h"
         /*  Function Declarations */
 static void zero_state(COMPONENT,double*,IF_FIELD*,int,int,IF_PARAMS*);
 static void rand_state(COMPONENT,double*,IF_FIELD*,int,int,IF_PARAMS*);
@@ -36,6 +40,8 @@ static void Fourier_state(COMPONENT,int*,double*,double*,double*,
 			RECT_GRID*,IF_PARAMS*);
 static void Rogallo_state(COMPONENT,int*,double*,double*,double*,
 			RECT_GRID*,IF_PARAMS*);
+static void Rogallo_state_heffte(COMPONENT,int*,double*,double*,double*,
+			int*,int*,RECT_GRID*,IF_PARAMS*);
 static double intrp_between(double,double,double,double,double);
 static double (*getStateVel[MAXD])(POINTER) = {getStateXvel,getStateYvel,
                                         getStateZvel};
@@ -72,6 +78,7 @@ extern void melt_flowThroughBoundaryState(
         STATE  **sts;
         int i,j,dim = front->rect_grid->dim;
         int nrad = 2;
+        double timer[3];
 
         if (debugging("flow_through"))
             printf("Entering melt_flowThroughBoundaryState()\n");
@@ -181,19 +188,19 @@ extern void melt_flowThroughBoundaryState(
         {
             double vtmp;
             FT_IntrpStateVarAtCoords(front,comp,nsten->pts[1],
-                        iF_field->vel[i],getStateVel[i],&vtmp,&sts[0]->vel[i]);
+                        iF_field->vel[i],getStateVel[i],&vtmp,&sts[0]->vel[i],timer);
             u[2] += vtmp*dir[i];
             v[2][i] = vtmp*(1.0 - dir[i]);
         }
         if (dim == 2)
         {
             FT_IntrpStateVarAtCoords(front,comp,nsten->pts[1],
-                        iF_field->vort,getStateVort,&vort[2],&sts[1]->vort);
+                        iF_field->vort,getStateVort,&vort[2],&sts[1]->vort,timer);
         }
         FT_IntrpStateVarAtCoords(front,comp,nsten->pts[1],iF_field->pres,
-                            getStatePres,&pres[2],&sts[1]->pres);
+                            getStatePres,&pres[2],&sts[1]->pres,timer);
         FT_IntrpStateVarAtCoords(front,comp,nsten->pts[1],pH_field->temperature,
-                            getStateTemperature,&temp[2],&sts[1]->temperature);
+                            getStateTemperature,&temp[2],&sts[1]->temperature,timer);
 
         f_u = burger_flux(u[0],u[1],u[2]);
         for (i = 0; i < dim; ++i)
@@ -411,6 +418,8 @@ void init_fluid_state_func(
 		break;
 	    case FOURIER_STATE:
 		l_cartesian->setInitialVelocity = Rogallo_state;
+	    case FOURIER_STATE_HEFFTE:
+		l_cartesian->setInitialVelocityHeffte = Rogallo_state_heffte;
 		break;
             default:
                 l_cartesian->getInitialState = zero_state;
@@ -427,7 +436,7 @@ static void Rogallo_state(
 	IF_PARAMS *iFparams)
 {
 	if (debugging("trace"))
-	    printf("Entering Fourier_state()\n");
+	    printf("Entering Rogallo_state()\n");
 	int gmax[MAXD],icrds[MAXD]; 
 	int i, j, k, l, ll, ld, Nr, index, dim;
 	double wn, w0, L[MAXD], w[MAXD];
@@ -448,7 +457,7 @@ static void Rogallo_state(
 	    gmax[i] = N[i];
 	    Nr *= N[i];
 	}
-	w0 = 2.449489743;
+	w0 = 6.0;//2.449489743;
 	gmax[dim-1] = N[dim-1]/2 + 1; 
 	U = new fftw_complex[Nr];
 	V = new fftw_complex[Nr];
@@ -486,7 +495,11 @@ static void Rogallo_state(
 		    }
 		    wn = sqrt(wn);
 		    
+#if defined __NO_RND__
+		    theta  = 0.5 *(2*M_PI);
+#else
 		    theta  = (double)rand() / (RAND_MAX + 1.0) *(2*M_PI);
+#endif
 		    E = 16.0/sqrt(0.5*M_PI)*u0*u0*pow(wn,4)/pow(w0,5)
 			* exp(-2.0*wn*wn/(w0*w0)); 
 		    alpha[0] = sqrt(E/(4.0*M_PI*wn*wn))*cos(theta);
@@ -541,14 +554,26 @@ static void Rogallo_state(
 		    }
 		    wn = sqrt(wn);
 		    
+#if defined __NO_RND__		    
+		    phi  = 0.5 * (2*M_PI);
+#else
 		    phi  = (double)rand() / (RAND_MAX + 1.0) * (2*M_PI);
+#endif
 		    E = 16.0/sqrt(0.5*M_PI)*u0*u0*pow(wn,4)/pow(w0,5)
 			* exp(-2.0*wn*wn/(w0*w0)); 
+#if defined __NO_RND__		    
+		    theta  = 0.5 *(2*M_PI);
+#else
 		    theta  = (double)rand() / (RAND_MAX + 1.0) *(2*M_PI);
+#endif
 		    alpha[0] = sqrt(E/(4.0*M_PI*wn*wn))*cos(theta)*cos(phi);
 		    alpha[1] = sqrt(E/(4.0*M_PI*wn*wn))*sin(theta)*cos(phi);
 		    /*use different theta for alpha and beta*/
+#if defined __NO_RND__		    
+		    theta  = 0.5 *(2*M_PI);
+#else
 		    theta  = (double)rand() / (RAND_MAX + 1.0) *(2*M_PI);
+#endif
 		    beta[0] = sqrt(E/(4.0*M_PI*wn*wn))*cos(theta)*sin(phi);
 		    beta[1] = sqrt(E/(4.0*M_PI*wn*wn))*sin(theta)*sin(phi);
 		    if (w[0] == 0 && w[1] == 0)
@@ -610,9 +635,189 @@ static void Rogallo_state(
 	}
 
 	if (debugging("trace"))
-	    printf("Leaving Fourier_state()\n");
+	    printf("Leaving Rogallo_state()\n");
 }
 /*end Rogallo_state*/
+
+static void Rogallo_state_heffte(
+	COMPONENT comp,
+	int *N,
+	double *vel_x,
+	double *vel_y,
+	double *vel_z,
+	int *pp_icoords,
+	int *num_grid_points,
+	RECT_GRID *gr,
+	IF_PARAMS *iFparams)
+{
+	if (debugging("trace"))
+	    printf("Entering Rogallo_state_heffte()\n");
+	int gmax[MAXD],icrds[MAXD]; 
+	int l, ll, ld, Nr, index, dim;
+	double wn, w0, L[MAXD], w[MAXD];
+	double phi, theta, E;
+	double u0 = iFparams->Urms;
+	double alpha[2], beta[2];
+	if (u0 == 0.0)
+	{
+	    printf("initial Urms is not given!\n");
+	    printf("Enter initial velocity(m/s):\n");
+	    clean_up(ERROR);
+	}
+	dim = gr->dim;
+	Nr = 1; 
+	for (int i = 0; i < dim; i++)
+	{
+	    L[i] = gr->GU[i]-gr->GL[i];
+	    gmax[i] = N[i];
+	    Nr *= num_grid_points[i];
+	}
+	w0 = 6.0;//2.449489743;
+
+	int lmin[3] = {num_grid_points[0]*pp_icoords[0], 
+		       num_grid_points[1]*pp_icoords[1], 
+		       num_grid_points[2]*pp_icoords[2]};
+	int lmax[3] = {num_grid_points[0]*pp_icoords[0] + num_grid_points[0],
+		       num_grid_points[1]*pp_icoords[1] + num_grid_points[1], 
+		       num_grid_points[2]*pp_icoords[2] + num_grid_points[2]};
+	heffte::box3d<> const my_box = { {lmin[0],   lmin[1],   lmin[2]}, 
+		                         {lmax[0]-1, lmax[1]-1, lmax[2]-1} };
+	
+	// define the heffte class and the input and output geometry
+        //using backend_tag = heffte::backend::default_backend<heffte::tag::cpu>::type;
+	//heffte::fft3d_r2c<backend_tag> fft(my_box, my_box, 2, MPI_COMM_WORLD);
+	heffte::fft3d<heffte::backend::fftw> fft(my_box, my_box, MPI_COMM_WORLD);
+
+        // vectors with the correct sizes to store the input data
+	std::vector<std::complex<double>> U(fft.size_inbox());
+	std::vector<std::complex<double>> V(fft.size_inbox());
+	std::vector<std::complex<double>> W(fft.size_inbox());
+	std::vector<std::complex<double>> Div(fft.size_inbox());
+
+	// vectors with the correct sizes to store the output data
+	std::vector<std::complex<double>> Uhat(fft.size_outbox());
+	std::vector<std::complex<double>> Vhat(fft.size_outbox());
+	std::vector<std::complex<double>> What(fft.size_outbox());
+	
+        // reset the input to zero
+	std::fill(U.begin(),  U.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(V.begin(),  V.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(W.begin(),  W.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(Div.begin(),  Div.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(Uhat.begin(),  Uhat.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(Vhat.begin(),  Vhat.end(),  std::complex<double>(0.0, 0.0));
+	std::fill(What.begin(),  What.end(),  std::complex<double>(0.0, 0.0));
+
+	switch (dim)
+	{
+	    case 2:
+		printf("Dim can only be 3 with heffte, unknown dim = %d!\n",dim);
+	 	break;
+	    case 3:
+                for (int kl = 0; kl < num_grid_points[2]; kl++) // mpi local coords
+                for (int jl = 0; jl < num_grid_points[1]; jl++)
+		for (int il = 0; il < num_grid_points[0]; il++)
+                {
+		    int i = num_grid_points[0]*pp_icoords[0] + il;	
+		    int j = num_grid_points[1]*pp_icoords[1] + jl;	
+		    int k = num_grid_points[2]*pp_icoords[2] + kl;	
+		    if (i == 0 && j == 0 && k == 0)
+			continue;
+                    //index = k + N[2]*(j + N[1]*i); /*row major format*/ 
+                    index = kl + num_grid_points[2]*(jl + num_grid_points[1]*il); /*row major format*/
+		    icrds[0] = i; 
+		    icrds[1] = j;
+		    icrds[2] = k;
+		    /*map indices to wavenumber*/
+		    for (l = 0; l < dim; l++)
+		    {
+		        if (icrds[l] > N[l]/2)
+		            icrds[l] = (icrds[l]-N[l]);
+		    }
+		    wn = 0.0;
+		    for (l = 0; l < dim; l++)
+		    {
+			w[l] = (icrds[l]);
+			wn += w[l]*w[l];
+		    }
+		    wn = sqrt(wn);
+#if defined __NO_RND__		    
+		    phi  = 0.5 * (2*M_PI);
+#else
+		    phi  = (double)rand() / (RAND_MAX + 1.0) * (2*M_PI);
+#endif
+		    E = 16.0/sqrt(0.5*M_PI)*u0*u0*pow(wn,4)/pow(w0,5)
+			* exp(-2.0*wn*wn/(w0*w0)); 
+#if defined __NO_RND__		    
+		    theta  = 0.5 *(2*M_PI);
+#else
+		    theta  = (double)rand() / (RAND_MAX + 1.0) *(2*M_PI);
+#endif
+		    alpha[0] = sqrt(E/(4.0*M_PI*wn*wn))*cos(theta)*cos(phi);
+		    alpha[1] = sqrt(E/(4.0*M_PI*wn*wn))*sin(theta)*cos(phi);
+		    /*use different theta for alpha and beta*/
+#if defined __NO_RND__		    
+		    theta  = 0.5 *(2*M_PI);
+#else
+		    theta  = (double)rand() / (RAND_MAX + 1.0) *(2*M_PI);
+#endif
+		    beta[0] = sqrt(E/(4.0*M_PI*wn*wn))*cos(theta)*sin(phi);
+		    beta[1] = sqrt(E/(4.0*M_PI*wn*wn))*sin(theta)*sin(phi);
+		    if (w[0] == 0 && w[1] == 0)
+			continue;
+		    Uhat.at(index).real( (alpha[0]*wn*w[1]+beta[0]*w[0]*w[2]) / (wn*sqrt(w[0]*w[0]+w[1]*w[1])));
+		    Uhat.at(index).imag( (alpha[1]*wn*w[1]+beta[1]*w[0]*w[2]) / (wn*sqrt(w[0]*w[0]+w[1]*w[1])));
+	 	    Vhat.at(index).real( (beta[0]*w[1]*w[2]-alpha[0]*wn*w[0]) / (wn*sqrt(w[0]*w[0]+w[1]*w[1])));
+                    Vhat.at(index).imag( (beta[1]*w[1]*w[2]-alpha[0]*wn*w[0]) / (wn*sqrt(w[0]*w[0]+w[1]*w[1])));
+		    What.at(index).real( -(beta[0]*sqrt(w[0]*w[0]+w[1]*w[1])) / wn);
+		    What.at(index).imag( -(beta[1]*sqrt(w[0]*w[0]+w[1]*w[1])) / wn);
+		    Div.at(index).real( U.at(index).real()*w[0] + V.at(index).real()*w[1] + W.at(index).real()*w[2]);
+		    Div.at(index).imag( U.at(index).imag());
+                }
+		/*iFFT*/
+	        // perform a backward DFT
+	        fft.backward(Uhat.data(), U.data());// , heffte::scale::full
+	        fft.backward(Vhat.data(), V.data());// , heffte::scale::full
+	        fft.backward(What.data(), W.data());// , heffte::scale::full
+	
+		/*get solution from iFFT*/
+		for (int i = 0; i < Nr; i++)
+		{
+	    	    vel_x[i] = U.at(i).real(); 
+	    	    vel_y[i] = V.at(i).real(); 
+	      	    vel_z[i] = W.at(i).real(); 
+		}
+                break;
+	    default:
+		printf("Dim can only be 2 and 3, unknown dim = %d!\n",dim);
+		clean_up(ERROR);
+	}
+
+	if (debugging("init_vel") and pp_mynode() == 0)
+	{
+	    FILE* file = fopen("init_vel","w");
+	    for (int i = 0; i < Nr; i++)
+	    {
+		if (dim == 3)
+	    	  fprintf(file,"i %d = %9.8f %9.8f %9.8f\n",i,vel_x[i],vel_y[i],vel_z[i]);
+		else if (dim == 2)
+	    	  fprintf(file,"i %d = %9.8f %9.8f\n",i,vel_x[i],vel_y[i]);
+	    }
+	    fclose(file);
+	}
+	if (debugging("init_vel") and pp_mynode() == 0)
+	{
+	    FILE* file = fopen("FFT_div","w");
+	    for (int i = 0; i < Nr; i++)
+	    	  fprintf(file,"%9.8f %9.8f\n",Div.at(index).real(),Div.at(index).imag());
+	    fclose(file);
+	}
+
+	if (debugging("trace"))
+	    printf("Leaving Rogallo_state_heffte()\n");
+}
+/*end Rogallo_state_heffte*/
+
 
 /*Fourier_state*/
 /*only used in setParallelVelocity, no for-loops needed*/
@@ -657,7 +862,11 @@ static void Fourier_state(
 		 	continue;
 		    }
 		    wn = (2*M_PI/L[0])*sqrt(i*i+j*j);
+#if defined __NO_RND__		    
+		    phi  = 0.5;
+#else
 		    phi  = (double)rand() / (RAND_MAX + 1.0);
+#endif
 		    U[index][0] = wn*wn*exp(-wn*wn/pow(2*M_PI*4.7568/L[0],2))
                                  * cos(2*M_PI*phi);
                     U[index][1] = wn*wn*exp(-wn*wn/pow(2*M_PI*4.7568/L[0],2))
@@ -676,7 +885,11 @@ static void Fourier_state(
                         continue;
                     }
                     wn = (2*M_PI/L[0])*sqrt(i*i+j*j+k*k);
+#if defined __NO_RND__		    
+                    phi  = 0.5;
+#else
                     phi  = (double)rand() / (RAND_MAX + 1.0);
+#endif
                     U[index][0] = wn*wn*exp(-wn*wn/pow(2*M_PI*4.7568/L[0],2))
                                  * cos(2*M_PI*phi);
                     U[index][1] = wn*wn*exp(-wn*wn/pow(2*M_PI*4.7568/L[0],2))
@@ -1039,49 +1252,72 @@ LOCAL  void ParallelExchParticle(PARTICLE** particle_array,Front *front)
 
 extern void ParticlePropagate(Front *fr)
 {
+        struct timeval tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9;
+	double t1(0.),t2(0.),t3(0.),t4(0.),timer_intrp[3]={0.};
+#ifdef __PRDNS_TIMER__
+        gettimeofday(&tv1, NULL);
+#endif
 	if (debugging("trace"))
 	    printf("Entering ParticlePropage()\n");
 	start_clock("ParticlePropagate");
-        RECT_GRID *gr = FT_GridIntfcTopGrid(fr);
+	RECT_GRID *gr = FT_GridIntfcTopGrid(fr);
         RECT_GRID *rect_grid = &(fr->pp_grid->Global_grid);
         IF_PARAMS *iFparams = (IF_PARAMS*)fr->extra1;
-	PARAMS *eqn_params = (PARAMS*)fr->extra2;
+        PARAMS *eqn_params = (PARAMS*)fr->extra2;
 	PARTICLE* particle_array = eqn_params->particle_array;
 	double **vel = iFparams->field->vel;
-	double *supersat = eqn_params->field->supersat;
-	double *gravity = iFparams->gravity;
+        double *supersat = eqn_params->field->supersat;
+    	double *gravity = iFparams->gravity;
         int *gmax = FT_GridIntfcTopGmax(fr);
-	int i, j, index, dim = gr->dim;
-	double T;
-	int ic[MAXD];
-	double u[MAXD];
-	double *center;
-	double s; /*restore local supersaturation*/
-	double *cvel; /*center velocity for droplets*/
-	double a;  /*acceleration*/
-	double dt = fr->dt;
+	int dim = gr->dim;
+        //double T;
+        //int ic[MAXD];
+	//double u[MAXD];
+	//double *center;
+	//double s; /*restore local supersaturation*/
+	//double *cvel; /*center velocity for droplets*/
+	//double a;  /*acceleration*/
+    	double dt = fr->dt;
 
         /*computing finite respone time*/
+	//double R, rho, tau_p, delta_R;
         double rho_0    = iFparams->rho2;/*fluid density*/
         double mu       = iFparams->mu2;/*viscosity*/
-	double R, rho, tau_p, delta_R;
 	double R_max = 0;
 	double R_min = HUGE;
 	double w = 2*PI/5.0;
-	
-	for (i = 0; i < eqn_params->num_drops; i++)
+  
+#ifdef __PRDNS_TIMER__
+        gettimeofday(&tv2, NULL);
+#endif
+
+        //#pragma omp parallel for num_threads(8) //private(R_min)	
+	for (int i = 0; i < eqn_params->num_drops; i++)
 	{
+#ifdef __PRDNS_TIMER__
+            gettimeofday(&tv5, NULL);
+#endif
+            //if( 0 == i and 0 == omp_get_thread_num())
+            //   printf("num threads = %d \n", omp_get_num_threads() );
             /*computing finite respone time*/
-            R        = particle_array[i].radius;/*droplet radius*/
-            rho      = particle_array[i].rho;/*water droplet density*/
-            tau_p    = 2 * rho*R*R/(9*rho_0*mu);/*response time*/
+
+    	    int j, index;
+	    double R        = particle_array[i].radius;/*droplet radius*/
+            double rho      = particle_array[i].rho;/*water droplet density*/
+            double tau_p    = 2 * rho*R*R/(9*rho_0*mu);/*response time*/
 
 	    if (R == 0)
 	    {
 		R_min = 0;
 	        continue;
 	    }
-	    /*find index at coords*/
+		
+	    int ic[MAXD];
+	    double u[MAXD];
+            double *center;
+	    double s; /*restore local supersaturation*/
+	    double *cvel; /*center velocity for droplets*/
+            /*find index at coords*/
 	    center = particle_array[i].center;
 	    rect_in_which(center,ic,gr);
 	    index = d_index(ic,gmax,dim);
@@ -1089,12 +1325,22 @@ extern void ParticlePropagate(Front *fr)
 	    /*compute radius for particle[i]*/
 	    s = supersat[index];
 
+#ifdef __PRDNS_TIMER__
+            gettimeofday(&tv8, NULL);
+#endif
 	    for (j = 0; j < dim; j++)
 	     FT_IntrpStateVarAtCoords(fr,LIQUID_COMP,center,
-				vel[j],getStateVel[j],&u[j],&vel[j][index]);
+				vel[j],getStateVel[j],&u[j],&vel[j][index],timer_intrp);
 	    FT_IntrpStateVarAtCoords(fr,LIQUID_COMP,center,
-				supersat,getStateSuper,&s,&s);
+				supersat,getStateSuper,&s,&s,timer_intrp);
+#ifdef __PRDNS_TIMER__
+            gettimeofday(&tv9, NULL);
+#endif
 
+	    //for (j = 0; j < dim; j++)
+            //printf("%d center[%d]=%f at if %f %f %f %f %f\n", i, j, center[j], tau_p, (1-exp(-dt/tau_p)), cvel[j], u[j], gravity[j]);
+
+            double delta_R;
 	    if (eqn_params->if_condensation == YES)
 	        delta_R = R*R+2*eqn_params->K*s*dt;
 	    else
@@ -1111,6 +1357,9 @@ extern void ParticlePropagate(Front *fr)
 		R_max = R;
 	    if(R < R_min)
 		R_min = R;
+#ifdef __PRDNS_TIMER__
+            gettimeofday(&tv6, NULL);
+#endif
 	    /*compute velocity for particle[i] with implicit method*/
 	    for(j = 0; j < dim; ++j)
             {
@@ -1119,22 +1368,44 @@ extern void ParticlePropagate(Front *fr)
                 //dx/dt = v
                 //dv/dt = (u-v)/tau + g
                 //assume tau and u are constant within one step
+               
+                //added by Atif 
+                const double exp_mindt_by_taup = exp(-dt/tau_p); 
+                const double taup_minus_taup_into_exp_term = tau_p - tau_p * exp_mindt_by_taup; 
+                const double u_plus_taup_into_gr = u[j] + gravity[j]*tau_p;
                 if (eqn_params->if_sedimentation)
                 {
-                        center[j] += tau_p*(1-exp(-dt/tau_p))*cvel[j]
-                                        +(dt-tau_p+tau_p*exp(-dt/tau_p))
-                                        *(u[j]+gravity[j]*tau_p);
-                        cvel[j] = exp(-dt/tau_p)*cvel[j]
-                                + (1-exp(-dt/tau_p))*(u[j]+gravity[j]*tau_p);
+                        center[j] += taup_minus_taup_into_exp_term * cvel[j]
+                                        + (dt - taup_minus_taup_into_exp_term)
+                                        * u_plus_taup_into_gr;
+                        cvel[j] = exp_mindt_by_taup * cvel[j]
+                                + (1 - exp_mindt_by_taup) * u_plus_taup_into_gr;
                 }
                 else
                 {
-                        center[j] += tau_p*(1-exp(-dt/tau_p))*cvel[j]
-                                        +(dt-tau_p+tau_p*exp(-dt/tau_p))
-                                        *(u[j]);
-                        cvel[j] = exp(-dt/tau_p)*cvel[j]
-                                + (1-exp(-dt/tau_p))*(u[j]);
+                        center[j] += taup_minus_taup_into_exp_term * cvel[j]
+                                        + (dt - taup_minus_taup_into_exp_term)
+                                        * (u[j]);
+                        cvel[j] = exp_mindt_by_taup * cvel[j]
+                                + (1 - exp_mindt_by_taup)*(u[j]);
                 }
+
+                //if (eqn_params->if_sedimentation)
+                //{
+                //        center[j] += tau_p*(1-exp(-dt/tau_p))*cvel[j]
+                //                        +(dt-tau_p+tau_p*exp(-dt/tau_p))
+                //                        *(u[j]+gravity[j]*tau_p);
+                //        cvel[j] = exp(-dt/tau_p)*cvel[j]
+                //                + (1-exp(-dt/tau_p))*(u[j]+gravity[j]*tau_p);
+                //}
+                //else
+                //{
+                //        center[j] += tau_p*(1-exp(-dt/tau_p))*cvel[j]
+                //                        +(dt-tau_p+tau_p*exp(-dt/tau_p))
+                //                        *(u[j]);
+                //        cvel[j] = exp(-dt/tau_p)*cvel[j]
+                //                + (1-exp(-dt/tau_p))*(u[j]);
+                //}
 
 		/*compute velocity
 		if (eqn_params->if_sedimentation == YES) 
@@ -1150,7 +1421,7 @@ extern void ParticlePropagate(Front *fr)
 		if(pp_numnodes() > 1)
 		    continue;
 		/*handle periodic drops for one processor*/
-		T = rect_grid->U[j]-rect_grid->L[j];	
+		double T = rect_grid->U[j]-rect_grid->L[j];	
 		if (center[j] > rect_grid->U[j])
 		    center[j] = rect_grid->L[j]+fmod(center[j],T);
 		if (center[j] < rect_grid->L[j])
@@ -1158,11 +1429,25 @@ extern void ParticlePropagate(Front *fr)
 
 		if(isnan(center[j]))
 		{
-		    printf("center[%d]=nan, T = %f, domain=[%f,%f]\n",
+                    printf("center[%d]=nan, T = %f, domain=[%f,%f]\n",
 				j,T,rect_grid->L[j],rect_grid->U[j]);
 		    clean_up(ERROR);
 		}
 	    }
+#ifdef __PRDNS_TIMER__
+            gettimeofday(&tv7, NULL);
+            t1 += (tv8.tv_usec - tv5.tv_usec)/1000000.0 + (tv8.tv_sec - tv5.tv_sec);
+            t3 += (tv9.tv_usec - tv8.tv_usec)/1000000.0 + (tv9.tv_sec - tv8.tv_sec);
+            t4 += (tv6.tv_usec - tv9.tv_usec)/1000000.0 + (tv6.tv_sec - tv9.tv_sec);
+	    t2 += (tv7.tv_usec - tv6.tv_usec)/1000000.0 + (tv7.tv_sec - tv6.tv_sec);
+#endif
+
+#if defined __NO_RND__		    
+            if (i%1548586 == 0)
+               printf("droplet %d index of %d drops %d thread %d of %d running on cpu ID %d at %f %f %f with u= %f %f %f cvel= %f %f %f\n", 
+			  i, index, eqn_params->num_drops, omp_get_thread_num(), omp_get_num_threads(), 
+			  sched_getcpu(), center[0], center[1], center[2], u[0], u[1], u[2], cvel[0], cvel[1], cvel[2]);
+#endif
 
 	    if (debugging("single_particle"))
 	    {
@@ -1179,6 +1464,8 @@ extern void ParticlePropagate(Front *fr)
 	        printf("Response time = %f\n",tau_p);
 	    }
 	}
+            
+        gettimeofday(&tv3, NULL);
 	if(pp_numnodes() > 1)
 	{
 	    start_clock("ParallelExchangeParticle");
@@ -1189,6 +1476,20 @@ extern void ParticlePropagate(Front *fr)
 	stop_clock("ParticlePropagate");
 	printf("%d droplets in subdomain, max radius = %e, min radius = %e\n",
 	eqn_params->num_drops,R_max,R_min);
+#ifdef __PRDNS_TIMER__
+        gettimeofday(&tv4, NULL);
+        printf("\n atif5  Particle Propagate                    :      %10.2f", (tv4.tv_usec - tv1.tv_usec)/1000000.0 + (tv4.tv_sec - tv1.tv_sec));
+        printf("\n atif6  Initialize                            :          %10.2f", (tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec));
+        printf("\n atif7  Loop over num_drops                   :          %10.2f", (tv3.tv_usec - tv2.tv_usec)/1000000.0 + (tv3.tv_sec - tv2.tv_sec));
+        printf("\n atif8  rect_in_which + index                 :              %10.2f", t1);
+        printf("\n atif9  FT_IntrpStateVarAtCoords              :              %10.2f", t3);
+        printf("\n atif13                                       :                  %10.2f", timer_intrp[0]);
+        printf("\n atif14                                       :                  %10.2f", timer_intrp[1]);
+        printf("\n atif15                                       :                  %10.2f", timer_intrp[2]);
+        printf("\n atif10 delta_R R computations                :              %10.2f", t4);
+        printf("\n atif11 Loop over dim + sedimentation         :              %10.2f", t2);
+        printf("\n atif12 ParallelExchParticle + particle array :          %10.2f", (tv4.tv_usec - tv3.tv_usec)/1000000.0 + (tv4.tv_sec - tv3.tv_sec));
+#endif
 }
 
 extern void setParticleGroupIndex(
@@ -1655,6 +1956,10 @@ extern double* ComputePDF(
 
 	var_min =  HUGE;
 	var_max = -HUGE;
+
+        struct timeval tv1,tv2;
+        double time;
+
 	
 	if (debugging("trace"))
 	    printf("Entering computePDF\n");
@@ -1666,12 +1971,22 @@ extern double* ComputePDF(
 		var_max = array[i];
 	}
 
+
+
+        gettimeofday(&tv1, NULL);
 #if defined __MPI__
 	pp_gsync();
 	pp_global_max(&var_max,1);	
 	pp_global_min(&var_min,1);	
 
 #endif
+        gettimeofday(&tv2, NULL);
+        time = (tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec);
+        //printf("ComputePDF() : part 1 : %f\n", time);
+
+
+
+        gettimeofday(&tv1, NULL);
 	bin_size = (var_max - var_min)/(num_bins-1);
 	//num_bins = ceil((var_max - var_min)/bin_size);
 	if (num_bins > max_bin_num)
@@ -1689,6 +2004,9 @@ extern double* ComputePDF(
 	    num_bins = 1;
 	    return PDF;
 	}
+
+        //printf("VCARTESIAN::ComputePDF() : num_bins : %d, size : %d\n", num_bins, size);
+
 	for (j = 0; j < num_bins; j++)
 		PDF[j] = 0.0;
 
@@ -1706,10 +2024,20 @@ extern double* ComputePDF(
 	        }
 	    }
 	}
+        gettimeofday(&tv2, NULL);
+        time = (tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec);
+        //printf("ComputePDF() : part 2 : %f\n", time);
+
+        gettimeofday(&tv1, NULL);
 #if defined __MPI__	
 	pp_gsync();
 	pp_global_sum(PDF,num_bins);
- #endif
+#endif
+        gettimeofday(&tv2, NULL);
+        time = (tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec);
+        //printf("ComputePDF() : part 3 : %f\n", time);
+
+        gettimeofday(&tv1, NULL);
 	total_num = 0;
 	/*normalize PDF*/
 	for (j = 0; j < num_bins; j++)
@@ -1719,5 +2047,11 @@ extern double* ComputePDF(
 	    PDF[j] = double(PDF[j])/(bin_size*double(total_num));
 	if (debugging("trace"))
 	    printf("Leaving computePDF\n");
+        gettimeofday(&tv2, NULL);
+        time = (tv2.tv_usec - tv1.tv_usec)/1000000.0 + (tv2.tv_sec - tv1.tv_sec);
+        //printf("ComputePDF() : part 4 : %f\n", time);
+
+
+
 	return PDF;
 }

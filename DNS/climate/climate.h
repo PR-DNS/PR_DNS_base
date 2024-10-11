@@ -4,11 +4,24 @@
 #include <assert.h>
 #include <iFluid.h>
 #include "fftw3.h"
+#include "heffte.h"
 
 #define         LIQUID_COMP2           3
 #define         SOLID_COMP             1
 #define		alternate_comp(comp) 					\
 		(comp) == LIQUID_COMP2 ? SOLID_COMP : LIQUID_COMP2
+#ifndef __CUDA__
+//#define __CUDA__
+#endif
+
+#ifdef __CUDA__
+extern double* g_particle_buffer;
+extern double* g_particle_buffer_D;
+extern int g_max_num_particle;
+extern double* g_particle_input;
+extern double* g_particle_input_D;
+#endif
+
 
 enum _CL_PROB_TYPE {
 	PARTICLE_TRACKING = 1,
@@ -34,6 +47,7 @@ enum _INIT_STATE{
 	TAYLOR_STATE,
 	PRESET_STATE,
 	FOURIER_STATE,
+	FOURIER_STATE_HEFFTE,
 	SINE_STATE,
 	ABC_STATE,
 	LR_STATE, /*left and right state*/
@@ -217,6 +231,23 @@ public:
 	int             NLblocks,ilower,iupper;
         int             *n_dist;
 
+
+public:
+#ifdef __CUDA__
+        // These three are moved to global scope.
+        //double* particle_buffer;
+        //double* particle_buffer_D;
+        //int max_num_particle;
+
+        double* source_D;
+        double* drops_D;
+        double* cloud_D;
+        double* supersat_D;
+        int max_comp_size;
+        int initFlg;
+#endif
+
+public:
 	// mesh: full cells mesh
 	void initMesh(void);		// setup the cartesian grid
 	void setDomain(void);
@@ -315,12 +346,30 @@ public:
 	void recordTKE();
 	void computeVolumeForce();
 	void computeVolumeForceFourier();
+	void computeVolumeForceFourierHeffte();
+	void computeVolumeForceFourierHefftePlain();
 	void computeVolumeForceLinear();
 	double computeDspRate();
 	double computeDspRateLinear();
 #ifdef __HDF5__
 	int write_hdf5_field(double*,const char*,const char*);
 #endif
+
+public:
+#ifdef __CUDA__
+        void initDevice();
+        void cleanDevice();
+        void initOutput();
+	void computeVaporSource_DropsInCell(int gmax0, int gmax1, double rho_0, double a3); // Definition: vcartsn.cu
+        void uploadParticle();
+        void uploadSupersat();
+        void retrieveResult(double* source, double* drops, double* cloud);
+
+
+        void computeVaporSource_CUDA(int num_drops, PARAMS* eqn_params, int gmax0, int gmax1, double rho_0, double a3, double lcp);
+        void retrieveSource(double* source);
+#endif
+
 };
 
 /*weno scheme for computing advection term*/
@@ -380,6 +429,14 @@ extern void initWaterDrops(Front*);
 extern void compute_ice_particle_force(Front*,HYPER_SURF*,double, double*, double*);
 extern void CondensationPreAdvance(Front*);
 extern void ParticlePropagate(Front*);
+#ifdef __CUDA__
+extern void ParticlePropagate_CUDA(int num_drops, bool condensation, bool sedimentation, double rho0mu, double K, double dt, double gx, double gy, double gz);
+extern void ParticlePropagate_CUDA_1node(int num_drops, bool condensation, bool sedimentation, double rho0mu, double K, double dt, double gx, double gy, double gz, double Ux, double Lx, double Uy, double Ly, double Uz, double Lz);
+extern void initDeviceParticle();
+extern void clearDeviceParticle();
+extern void uploadParticle(int num_drops, PARTICLE* particles);
+extern void downloadParticle(int num_drops, PARTICLE* particles);
+#endif
 extern void setParticleGlobalIndex(PARTICLE*,int);
 extern void setParticleGroupIndex(PARTICLE*,int,int,int*,double*,double*);
 extern void read_CL_prob_type(Front*);
