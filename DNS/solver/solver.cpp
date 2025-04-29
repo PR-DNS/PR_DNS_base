@@ -377,6 +377,8 @@ void PETSc::Solve_withPureNeumann_HYPRE(void)
         PCSetType(pc,PCHYPRE);
         PCHYPRESetType(pc,"boomeramg");
         PetscOptionsSetValue(NULL, "-pc_hypre_boomeramg_strong_threshold", hypre_thres); 
+        PetscOptionsSetValue(NULL, "-pc_hypre_boomeramg_coarsen_type", "pmis"); 
+        PetscOptionsSetValue(NULL, "-pc_hypre_boomeramg_interp_type", "ext+i"); 
         KSPSetFromOptions(ksp);
         KSPSetUp(ksp);
 	stop_clock("HYPRE preconditioner");
@@ -385,7 +387,7 @@ void PETSc::Solve_withPureNeumann_HYPRE(void)
         stop_clock("Petsc Solve in pure neumann solver");
 	if (debugging("trace"))
 	printf("Leaving Solve_withPureNeumann_HYPRE()\n");
-
+	fclose(infile);//To avoid code freezing
 }
 
 void PETSc::Solve_withPureNeumann_BCGSL(void)

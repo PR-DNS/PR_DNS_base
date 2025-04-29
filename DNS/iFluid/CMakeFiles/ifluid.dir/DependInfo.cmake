@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tzhang/PR_DNS_base/DNS/iFluid/iFbasic.cpp" "iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o.d"
-  "/home/tzhang/PR_DNS_base/DNS/iFluid/iFcartsn2d.cpp" "iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o.d"
-  "/home/tzhang/PR_DNS_base/DNS/iFluid/iFcartsn3d.cpp" "iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o.d"
-  "/home/tzhang/PR_DNS_base/DNS/iFluid/iFinit.cpp" "iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o.d"
-  "/home/tzhang/PR_DNS_base/DNS/iFluid/iFsub.cpp" "iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o.d"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid/iFbasic.cpp" "iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o.d"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid/iFcartsn2d.cpp" "iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o.d"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid/iFcartsn3d.cpp" "iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o.d"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid/iFinit.cpp" "iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o.d"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid/iFsub.cpp" "iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o" "gcc" "iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/tzhang/PR_DNS_base/DNS/src/CMakeFiles/frontier.dir/DependInfo.cmake"
-  "/home/tzhang/PR_DNS_base/DNS/solver/CMakeFiles/solver.dir/DependInfo.cmake"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/src/CMakeFiles/frontier.dir/DependInfo.cmake"
+  "/pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/solver/CMakeFiles/solver.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
