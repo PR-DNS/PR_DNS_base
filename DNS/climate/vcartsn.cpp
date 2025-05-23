@@ -2451,6 +2451,9 @@ void VCARTESIAN::recordMixingLine()
     r0 = 0;
     nzeros = 0;
     size = 0;
+    
+    double tmp = 0;
+    
     for (i = 0; i < eqn_params->num_drops; i++)
     {
         radius_array[i] = particle_array[i].radius;
@@ -2462,8 +2465,11 @@ void VCARTESIAN::recordMixingLine()
         rv += pow(particle_array[i].radius, 3.0);
         r0 += pow(particle_array[i].R0, 3.0);
 
+        tmp += particle_array[i].R0;
         size++;
     }
+
+    printf("tzhang in recordMixingLine, mean of radius %f %d %e\n",tmp,size,tmp/size);
 
 #if defined __MPI__
     ReduceBuff[0] = rv;
@@ -3535,10 +3541,10 @@ void VCARTESIAN::initPresetParticles()
         // particle_array[count].radius_d = 0.1*1e-6; //when dry aerosol size is monodisperse
 
         // Should be used for evaporation study when input radii are different than dry radii
-        // particle_array[count].radius = gauss_center_limit((POINTER)&gauss_params,xsubi);
+        particle_array[count].radius = gauss_center_limit((POINTER)&gauss_params,xsubi);
 
         // Should be used for condensation study when input radii are same as dry radii
-        particle_array[count].radius = particle_array[count].radius_d;
+        //particle_array[count].radius = particle_array[count].radius_d;
 
         particle_array[count].R0 = particle_array[count].radius;
 
