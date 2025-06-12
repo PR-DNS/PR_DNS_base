@@ -1017,9 +1017,9 @@ void mergeDroplets(PARTICLE* a,PARTICLE* b){
     rNewVol = r1Vol + r2Vol;
 
     //position of barycenter
-    //a->center[0] = (a->center[0] * r1Vol + b->center[0] * r2Vol)/rNewVol;
-    //a->center[1] = (a->center[1] * r1Vol + b->center[1] * r2Vol)/rNewVol;
-    //a->center[2] = (a->center[2] * r1Vol + b->center[2] * r2Vol)/rNewVol;
+    a->center[0] = (a->center[0] * r1Vol + b->center[0] * r2Vol)/rNewVol;
+    a->center[1] = (a->center[1] * r1Vol + b->center[1] * r2Vol)/rNewVol;
+    a->center[2] = (a->center[2] * r1Vol + b->center[2] * r2Vol)/rNewVol;
 
     //velocity of barycentere
     a->vel[0] = (a->vel[0] * r1Vol + b->vel[0] * r2Vol)/rNewVol;
@@ -1050,7 +1050,7 @@ extern void collision_coalescence(Front *fr)
 
     //collision detection
    for (i = 0; i < eqn_params->num_drops; i++){
-       PARTICLE p1 = particle_array[i];  
+       auto p1 = particle_array[i];  
        auto neighbors = SHgrid.getNeighbors(p1);
 
        //disturbance flow
@@ -1081,24 +1081,17 @@ extern void collision_coalescence(Front *fr)
            int coll_flag = checkCollision(p1, p2);
            collisionCount += coll_flag;
            if(coll_flag) {
-               printf("before collision droplets %f %f\n",p1.radius, p2->radius);
                mergeDroplets(&p1,p2);
-               //printf("after collision droplets %f %f\n",p1.radius, p2->radius);
-               particle_array[i] = p1;
-               printf("after collision droplets %f %f\n",particle_array[i].radius, p2->radius);
-               printf("p1.center: %f, %f, %f\n", p1.center[0], p1.center[1], p1.center[2]);
+               printf("collision droplets %f %f\n",p1.radius, p2->radius);
            }
         }
    }
-
-
 
    printf("tzhang total collision Count %d\n", collisionCount); 
    MPI_Reduce(&collisionCount, &gCollisionCount, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
    if (pp_mynode() == 0)
        printf("tzhang gtotal collision Count %d\n", gCollisionCount);     
     
-    SHgrid.clear();
 }
 
 extern void ParticlePropagate(Front *fr)

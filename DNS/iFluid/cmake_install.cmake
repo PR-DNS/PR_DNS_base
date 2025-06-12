@@ -1,4 +1,4 @@
-# Install script for directory: /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid
+# Install script for directory: /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS/iFluid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

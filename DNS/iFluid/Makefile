@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS
+CMAKE_SOURCE_DIR = /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS
+CMAKE_BINARY_DIR = /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(CMAKE_COMMAND) -E cmake_progress_start /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/CMakeFiles /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/iFluid//CMakeFiles/progress.marks
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS/CMakeFiles 0
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(CMAKE_COMMAND) -E cmake_progress_start /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS/CMakeFiles /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS/iFluid//CMakeFiles/progress.marks
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/clean
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/preinstall
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/preinstall
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 iFluid/CMakeFiles/ifluid.dir/rule:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/CMakeFiles/ifluid.dir/rule
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iFluid/CMakeFiles/ifluid.dir/rule
 .PHONY : iFluid/CMakeFiles/ifluid.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ ifluid: iFluid/CMakeFiles/ifluid.dir/rule
 
 # fast build rule for target.
 ifluid/fast:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/build
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/build
 .PHONY : ifluid/fast
 
 iFbasic.o: iFbasic.cpp.o
@@ -135,7 +135,7 @@ iFbasic.o: iFbasic.cpp.o
 
 # target to build an object file
 iFbasic.cpp.o:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.o
 .PHONY : iFbasic.cpp.o
 
 iFbasic.i: iFbasic.cpp.i
@@ -143,7 +143,7 @@ iFbasic.i: iFbasic.cpp.i
 
 # target to preprocess a source file
 iFbasic.cpp.i:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.i
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.i
 .PHONY : iFbasic.cpp.i
 
 iFbasic.s: iFbasic.cpp.s
@@ -151,7 +151,7 @@ iFbasic.s: iFbasic.cpp.s
 
 # target to generate assembly for a file
 iFbasic.cpp.s:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.s
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFbasic.cpp.s
 .PHONY : iFbasic.cpp.s
 
 iFcartsn2d.o: iFcartsn2d.cpp.o
@@ -159,7 +159,7 @@ iFcartsn2d.o: iFcartsn2d.cpp.o
 
 # target to build an object file
 iFcartsn2d.cpp.o:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.o
 .PHONY : iFcartsn2d.cpp.o
 
 iFcartsn2d.i: iFcartsn2d.cpp.i
@@ -167,7 +167,7 @@ iFcartsn2d.i: iFcartsn2d.cpp.i
 
 # target to preprocess a source file
 iFcartsn2d.cpp.i:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.i
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.i
 .PHONY : iFcartsn2d.cpp.i
 
 iFcartsn2d.s: iFcartsn2d.cpp.s
@@ -175,7 +175,7 @@ iFcartsn2d.s: iFcartsn2d.cpp.s
 
 # target to generate assembly for a file
 iFcartsn2d.cpp.s:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.s
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn2d.cpp.s
 .PHONY : iFcartsn2d.cpp.s
 
 iFcartsn3d.o: iFcartsn3d.cpp.o
@@ -183,7 +183,7 @@ iFcartsn3d.o: iFcartsn3d.cpp.o
 
 # target to build an object file
 iFcartsn3d.cpp.o:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.o
 .PHONY : iFcartsn3d.cpp.o
 
 iFcartsn3d.i: iFcartsn3d.cpp.i
@@ -191,7 +191,7 @@ iFcartsn3d.i: iFcartsn3d.cpp.i
 
 # target to preprocess a source file
 iFcartsn3d.cpp.i:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.i
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.i
 .PHONY : iFcartsn3d.cpp.i
 
 iFcartsn3d.s: iFcartsn3d.cpp.s
@@ -199,7 +199,7 @@ iFcartsn3d.s: iFcartsn3d.cpp.s
 
 # target to generate assembly for a file
 iFcartsn3d.cpp.s:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.s
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFcartsn3d.cpp.s
 .PHONY : iFcartsn3d.cpp.s
 
 iFinit.o: iFinit.cpp.o
@@ -207,7 +207,7 @@ iFinit.o: iFinit.cpp.o
 
 # target to build an object file
 iFinit.cpp.o:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.o
 .PHONY : iFinit.cpp.o
 
 iFinit.i: iFinit.cpp.i
@@ -215,7 +215,7 @@ iFinit.i: iFinit.cpp.i
 
 # target to preprocess a source file
 iFinit.cpp.i:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.i
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.i
 .PHONY : iFinit.cpp.i
 
 iFinit.s: iFinit.cpp.s
@@ -223,7 +223,7 @@ iFinit.s: iFinit.cpp.s
 
 # target to generate assembly for a file
 iFinit.cpp.s:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.s
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFinit.cpp.s
 .PHONY : iFinit.cpp.s
 
 iFsub.o: iFsub.cpp.o
@@ -231,7 +231,7 @@ iFsub.o: iFsub.cpp.o
 
 # target to build an object file
 iFsub.cpp.o:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.o
 .PHONY : iFsub.cpp.o
 
 iFsub.i: iFsub.cpp.i
@@ -239,7 +239,7 @@ iFsub.i: iFsub.cpp.i
 
 # target to preprocess a source file
 iFsub.cpp.i:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.i
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.i
 .PHONY : iFsub.cpp.i
 
 iFsub.s: iFsub.cpp.s
@@ -247,7 +247,7 @@ iFsub.s: iFsub.cpp.s
 
 # target to generate assembly for a file
 iFsub.cpp.s:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.s
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(MAKE) $(MAKESILENT) -f iFluid/CMakeFiles/ifluid.dir/build.make iFluid/CMakeFiles/ifluid.dir/iFsub.cpp.s
 .PHONY : iFsub.cpp.s
 
 # Help Target
@@ -285,6 +285,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /pscratch/sd/z/zhangtao/PR_DNS/PR_DNS_CC/DNS && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /global/homes/z/zhangtao/tmp/PR_DNS_base/DNS && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
